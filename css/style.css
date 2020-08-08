@@ -474,7 +474,7 @@ body {
 #header-row {
 /* HHJ@20200711 */
 /* padding-top: 50px */
-  padding-top: 30vh;
+  padding-top: 27vh;
   text-align: center;
 }
 #logo {
@@ -626,9 +626,10 @@ body {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   font-weight: 400;
+  margin: 1em;
 }
 #header-title h2:hover {
-  letter-spacing: 5px;
+  letter-spacing: 8px;
 }
 #header-description {
   width: 600px;
