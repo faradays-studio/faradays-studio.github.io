@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SVG-TEST</title>
+     <!--
+    <script src="https://cdn.bootcss.com/svg.js/2.3.7/svg.min.js"></script>
+    <script src="https://cdn.bootcss.com/svg.js/2.4.0/svg.min.js"></script>
+    <script src="https://cdn.bootcss.com/svg.js/2.5.3/svg.min.js"></script>
+    <script src="https://cdn.bootcss.com/svg.js/2.6.6/svg.min.js"></script>
+    <script src="https://cdn.bootcss.com/svg.js/2.7.1/svg.min.js"></script>
+    <script src="https://cdn.bootcss.com/svg.js/3.0.11/svg.min.js"></script>
+    -->
+    <script src="https://cdn.bootcss.com/svg.js/3.0.11/svg.min.js"></script>
+    <!-- <script src="../../static/svg.min.js"></script>  <!--only for offline test-->
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="author" content="Faradays' Studio">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+</head>
+<body>
+  <div class="container">
+  <div class="row">
+    <!-- Creat some dom element, so you can use to dynamically modify data on your web page-->
+    <h1>1.  Create an SVG document with SVG.JS 3.x</h1>
+    <div>
+      <p class="lead">1.1  Code:</p>
+      <pre>
+        <h3>Style 1</h3>
+           &nbsp;&nbsp;&nbsp;&nbsp;DOM:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="drawing"&gt; &lt;/div&gt;
+           &nbsp;&nbsp;&nbsp;&nbsp;Script 1:  &nbsp;&nbsp;&nbsp;&nbsp;var draw = SVG().addTo('#drawing').size(1024,200);
+           or&nbsp;&nbsp;Script 2:  &nbsp;&nbsp;&nbsp;&nbsp;var draw = SVG().addTo('#drawing').size('100%', '100%');
+        <h3>Style 2</h3>
+           &nbsp;&nbsp;&nbsp;&nbsp;DOM:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="drawing"&gt; &lt;/div&gt;
+           &nbsp;&nbsp;&nbsp;&nbsp;Script 1:  &nbsp;&nbsp;&nbsp;&nbsp;var draw = SVG().addTo('.drawing').size(1024,200);
+           or&nbsp;&nbsp;Script 2:  &nbsp;&nbsp;&nbsp;&nbsp;var draw = SVG().addTo('.drawing').size('100%', '100%');
+        <h3>Style 3</h3>
+           &nbsp;&nbsp;&nbsp;&nbsp;DOM:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;svg id="drawing"&gt; &lt;/svg&gt;
+           &nbsp;&nbsp;&nbsp;&nbsp;Script 1:  &nbsp;&nbsp;&nbsp;&nbsp;var draw = SVG('#drawing').size(1024, 200);
+           or&nbsp;&nbsp;Script 2:  &nbsp;&nbsp;&nbsp;&nbsp;var draw = SVG('#drawing').size('100%', '100%');
+        <h3>Style 4 <small>(no need to offer dom element, but hard to control the position of svg document)</small></h3>
+          &nbsp;&nbsp;&nbsp;&nbsp;Script:  &nbsp;&nbsp;&nbsp;&nbsp;var draw = SVG().addTo('body').size(300, 300);
+      </pre>
+    </div>
+    <p class="lead">1.2  Result:</p>
+    <div id="drawing"></div>
+    <div class="div-container-c1"></div>
+    <svg id="svg-container-1"></svg>
+  </div>
+  <div class="row">
+    <h1>2. Create an SVG document with SVG.JS 2.x</h1>
+    <p class="lead">2.1  Code:</p>
+    <div>
+      <pre>
+        var draw = SVG('drawing').size(300, 300)
+        var rect = draw.rect(100, 100).attr({ fill: '#f06' })      </pre>
+    </div>
+    <p class="lead">2.2  Result:</p>
+    <div id="drawing2"></div>
+    <p>Oops, it does'nt work by default! You can save this page or download this file from <a href="https://github.com/faradays-studio/faradays-studio.github.io/blob/master/programming/test/svg-test-01-create%20an%20SVG%20document.html">Github</a> and change the SVG.js vertion to v2.x to make this svg document running!</p>
+  </div>
+</div>
+
+  <!-- Write your svg.js script here for dynamically modify-->
+  <script>
+      var draw1 = SVG().addTo('#drawing').size(1024, 100)
+      var rect1 = draw1.rect(100, 100).attr({ fill: '#f06' })
+
+      // const draw1 = SVG().addTo('#drawing').size(100, 100)
+      // let rect1 = draw1.rect(100, 100).attr({ fill: '#f06' })
+  </script>
+
+  <script>
+    var canvas2 = SVG().addTo('.div-container-c1').size('100%', '100%')
+    var rect2 = canvas2.rect(100, 100).move(100, 50).fill('#abc')
+  </script>
+
+  <script>
+    var canvas3 = SVG('#svg-container-1').size('100%', '100%');
+    var circle3 = canvas3.circle(100).attr({ fill: 'blue' });
+  </script>
+
+  <script>
+    var draw4 = SVG().addTo('body').size(300, 300)
+    // var rect4 = draw4.rect(100, 100).attr({ fill: '#f06' })  // comment for the bad position(bottom by default) it creating
+  </script>
+
+  <script>
+    var draw21 = SVG('drawing2').size(1024, 100)
+    var rect21 = draw21.rect(100, 100).attr({ fill: '#0f6' })
+    console.log("Work before v3.0");
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+    <meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#222">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="google-site-verification" content="5IoOHPeK1Gs6LKpb_pJOXhrUePDQUxzqf0hPjeAzdLo">
+
+<link href="https://cdn.bootcss.com/fancybox/3.5.6/jquery.fancybox.min.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!--
+<link href="../static/toc/main.css" rel="stylesheet">
+-->
+<link href="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+
+  <meta name="keywords" content="内网穿透,">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+
+
+  <title>Sakura frp--免费的高速内网穿透工具</title>
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+
+
+
+
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">返回主页</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+
+        <h1 class="site-subtitle" itemprop="description">yesterday you said tomorrow</h1>
+
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+
+
+
+    <ul id="menu" class="menu">
+
+
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+
+            首页
+          </a>
+        </li>
+
+
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+
+            标签
+          </a>
+        </li>
+
+
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+
+            分类
+          </a>
+        </li>
+
+
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+
+            归档
+          </a>
+        </li>
+
+
+
+    </ul>
+
+
+
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+
+
+  <div id="posts" class="posts-expand">
+
+
+
+
+
+
+
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+
+
+
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://jiayaoO3O.github.io/2019/03/01/Sakura-Frp-免费的高速内网穿透工具/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jiayao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://i.loli.net/2019/01/28/5c4f137ddd9fe.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jiayaoO3O's Blog">
+    </span>
+
+
+      <header class="post-header">
+
+
+
+          <h2 class="post-title" itemprop="name headline">Sakura frp--免费的高速内网穿透工具</h2>
+
+
+        <div class="post-meta">
+          <span class="post-time">
+
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+
+                <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-01T11:24:46+08:00">
+                2019-03-01
+              </time>
+
+
+
+
+
+          </span>
+
+
+            <span class="post-category">
+
+              <span class="post-meta-divider">|</span>
+
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+
+                <span class="post-meta-item-text">分类于</span>
+
+
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+
+
+
+            </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </header>
+
+
+
+
+
+    <div class="post-body" itemprop="articleBody">
+
+
+
+
+
+        <h1 id="什么是Sakurafrp"><a href="#什么是Sakurafrp" class="headerlink" title="什么是Sakurafrp?"></a>什么是Sakurafrp?</h1><p><a href="https://www.natfrp.org" target="_blank" rel="noopener">Skaura frp</a>是一款免费的,基于 <a href="https://github.com/fatedier/frp" target="_blank" rel="noopener">frp</a> 封装的可用于内网穿透的高性能的反向代理应用,通过frp,没有公网ip的用户也能够远程访问自己的电脑.</p>
+<h1 id="Sakurafrp的优点"><a href="#Sakurafrp的优点" class="headerlink" title="Sakurafrp的优点"></a>Sakurafrp的优点</h1><p>相对于传统的frp,Sakura frp有以下优点:</p>
+<ol>
+<li>最大的优点,Sakura frp免费提供了frp服务器给广大用户,使得用户不需要自己购买,维护公网服务器便能享受frp带来的便捷.</li>
+<li>Sakura frp在传统的frp程序上进行封装,不需要用户配置frp客户端,只要输入用户名和密码,选择适合自己的服务器即可,做到快捷上手,简单易用,门槛降低.</li>
+</ol>
+<h1 id="使用Sakurafrp进行远程桌面控制"><a href="#使用Sakurafrp进行远程桌面控制" class="headerlink" title="使用Sakurafrp进行远程桌面控制"></a>使用Sakurafrp进行远程桌面控制</h1><p>既然frp主打的功能是内网穿透,在这里就用windows的远程桌面来展示如何使用Sakura frp.</p>
+<h2 id="1-注册并登录Sakurafrp"><a href="#1-注册并登录Sakurafrp" class="headerlink" title="1.注册并登录Sakurafrp"></a>1.注册并登录Sakurafrp</h2><p>首先先在<a href="https://www.natfrp.org" target="_blank" rel="noopener">Sakurafrp</a>官网注册账号并登录</p>
+<p><img src="https://i.loli.net/2019/03/01/5c7951fdd3276.png" alt=""></p>
+<h2 id="2-创建内网穿透映射"><a href="#2-创建内网穿透映射" class="headerlink" title="2.创建内网穿透映射"></a>2.创建内网穿透映射</h2><p>登录之后,选择左边的映射列表,创建一个新的映射</p>
+<p><img src="https://i.loli.net/2019/03/01/5c795275e01ad.png" alt=""></p>
+<p>这里可以看到,Sakurafrp 已经内置了几种常用的内网穿透映射,这里点击远程桌面,注意远程端口要自己填一个数字,但是这个数字不能跟其他用户已经选择的数字冲突,所以可能要多试几个端口,直到成功为止.</p>
+<h2 id="3-下载Sakurafrp客户端"><a href="#3-下载Sakurafrp客户端" class="headerlink" title="3.下载Sakurafrp客户端"></a>3.下载Sakurafrp客户端</h2><p>创建成功之后,点击左侧的客户软件选择适合自己的客户端进行<a href="https://s1.tcotp.cn/cdn/SakurafrpClient-2.3/Sakura_frpc_windows_amd64.exe" target="_blank" rel="noopener">下载</a>,如果没有需求不需要下载图形版本.</p>
+<p><img src="https://i.loli.net/2019/03/01/5c79537c0ba50.png" alt=""></p>
+<h2 id="4-运行Sakurafrp客户端"><a href="#4-运行Sakurafrp客户端" class="headerlink" title="4.运行Sakurafrp客户端"></a>4.运行Sakurafrp客户端</h2><p>运行Sakurafrp客户端的方法有3种:</p>
+<ol>
+<li>直接双击下载的Sakurafrp,输入账号和密码,再输入服务器ID,选择合适自己的服务器</li>
+</ol>
+<p><img src="https://i.loli.net/2019/03/01/5c79555656732.png" alt=""></p>
+<p>就已经内网穿透成功了,其他电脑打开微软远程桌面,或者手机安装微软远程桌面app,电脑ip地址位置输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">所选服务器地址:远程端口号</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/03/02/5c795d2a2f194.png" alt=""></p>
+<p>例如你选了台湾百兆服务器,远程端口是10010,则输入:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s21.natfrp.org:10010</span><br></pre></td></tr></table></figure>
+<p>账号密码则输入运行了Sakurafrp的,被控制的电脑的账号与密码,点击连接,手机或者其他电脑就可以远程控制这台电脑了.</p>
+<p>这个方法适合临时使用Sakurafrp进行内网穿透,关闭软件窗口即断开连接服务器.</p>
+<ol start="2">
+<li><p>在powershell等终端软件中打开Sakurafrp,这种方法可以免去每次手动输入账户名,密码,服务器ID.只要在Sakurafrp客户端所在的文件夹中,按住Shift键,选择打开powershell,然后在powershell中输入:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./Sakura_frpc_windows_amd64.exe --su=&quot;你的用户名&quot; --sp=&quot;你的密码&quot; --sid=&quot;服务器ID&quot;</span><br></pre></td></tr></table></figure>
+<p>即可自动登录并且选择服务器.</p>
+</li>
+<li><p>开机自启动Sakurafrp.虽然上面两种方法可以使用,但是会在任务栏上显示出来,而且软件不能关闭,只要关闭就会断掉,所以第三种方法是将Sakurafrp放在后台,自动开机启动.</p>
+<p>首先在Sakurafrp所在的文件夹新建一个文本文件,命名为:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Sakura_frpc.bat</span><br></pre></td></tr></table></figure>
+<p>右键该文件,选择编辑,输入:</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Sakura_frpc_windows_amd64.exe --su=<span class="string">"你的用户名"</span> --sp=<span class="string">"你的密码"</span> --sid=<span class="string">"服务器ID"</span></span><br></pre></td></tr></table></figure>
+<p>并且保存.</p>
+<p>再在Sakurafrp所在的文件夹新建一个文本文件,命名为:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Sakura_frpc.vbs</span><br></pre></td></tr></table></figure>
+<p>右键该文件,选择编辑,输入:</p>
+<figure class="highlight vbscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> ws=WScript.<span class="built_in">CreateObject</span>(<span class="string">"WScript.Shell"</span>) </span><br><span class="line">ws.Run <span class="string">"Sakura_frpc.bat /start"</span>,<span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p>并且保存.</p>
+<p>这时,我们只要双击这个Sakura_frpc.vbs,软件就会在后台启动了,在任务栏是看不到的,但是在任务管理器中能够看到.</p>
+<p>此时,我们右键Sakura_frpc.vbs,选择创建快捷方式</p>
+<p>然后键盘Win+R键,输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shell:startup</span><br></pre></td></tr></table></figure>
+<p>打开开机启动文件夹,把快捷方式放进去.</p>
+<p>Sakurafrp就已经能够开机启动了.</p>
+</li>
+</ol>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>Sakurafrp是我昨天晚上无意中发现的一个项目,本来我用frp做内网穿透是用自己的腾讯云1M小水管用作公网服务器的,但是没想到Sakurafrp竟然这么良心,免费提供8M的服务器给别人使用,所以我觉得得写一个教程来感恩一下,感谢Sakurafrp,💉 💧 🐮 🍺</p>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <footer class="post-footer">
+
+        <div class="post-tags">
+
+            <a href="/tags/内网穿透/" rel="tag"># 内网穿透</a>
+
+        </div>
+
+
+
+
+
+
+
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+
+              <a href="/2019/01/30/windows下的软件管理神器-scoop/" rel="next" title="windows下的软件管理神器:scoop">
+                <i class="fa fa-chevron-left"></i> windows下的软件管理神器:scoop
+              </a>
+
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+
+              <a href="/2019/03/04/Windows10开启ssh服务器功能/" rel="prev" title="Windows10开启ssh服务器功能">
+                Windows10开启ssh服务器功能 <i class="fa fa-chevron-right"></i>
+              </a>
+
+          </div>
+        </div>
+
+
+
+
+    </footer>
+  </div>
+
+
+
+  </article>
+
+
+
+    <div class="post-spread">
+
+    </div>
+  </div>
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+
+    <div class="sidebar-inner">
+
+
+
+
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+
+              <img class="site-author-image" itemprop="image" src="https://i.loli.net/2019/01/28/5c4f137ddd9fe.png" alt="jiayao">
+
+              <p class="site-author-name" itemprop="name">jiayao</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+
+              <div class="site-state-item site-state-posts">
+
+                <a href="/archives/">
+
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+
+
+
+
+
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+
+
+
+
+
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+
+
+          </nav>
+
+
+
+
+            <div class="links-of-author motion-element">
+
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/jiayaoO3O" target="_blank" title="GitHub">
+
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+
+                  <span class="links-of-author-item">
+                    <a href="mailto:jiayao3.14@outlook.com" target="_blank" title="E-Mail">
+
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </section>
+
+
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+
+
+
+
+
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是Sakurafrp"><span class="nav-number">1.</span> <span class="nav-text">什么是Sakurafrp?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sakurafrp的优点"><span class="nav-number">2.</span> <span class="nav-text">Sakurafrp的优点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用Sakurafrp进行远程桌面控制"><span class="nav-number">3.</span> <span class="nav-text">使用Sakurafrp进行远程桌面控制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-注册并登录Sakurafrp"><span class="nav-number">3.1.</span> <span class="nav-text">1.注册并登录Sakurafrp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-创建内网穿透映射"><span class="nav-number">3.2.</span> <span class="nav-text">2.创建内网穿透映射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-下载Sakurafrp客户端"><span class="nav-number">3.3.</span> <span class="nav-text">3.下载Sakurafrp客户端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-运行Sakurafrp客户端"><span class="nav-number">3.4.</span> <span class="nav-text">4.运行Sakurafrp客户端</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+
+
+          </div>
+        </section>
+      <!--/noindex-->
+
+
+
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+
+            <span id="scrollpercent"><span>0</span>%</span>
+
+        </div>
+
+
+    </div>
+  </aside>
+
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jiayao</span>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+
+
+
+
+
+  </div>
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script src="https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
+<script src="https://cdn.bootcss.com/velocity/2.0.5/velocity.min.js"></script>
+<script src="https://cdn.bootcss.com/velocity/2.0.5/velocity.ui.min.js"></script>
+<script src="https://cdn.bootcss.com/fancybox/3.5.6/jquery.fancybox.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/motion.js/0.3.0/motion.min.js"></script>
+
+
+
+    <script src="../static/toc/post-details.js"</script>
+    <script src="../static/toc/utils.js"</script>
+
+
+<!--
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+-->
+
+
+
+
+
+</body>
+</html>

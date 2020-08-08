@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcom to Faradays' Studio!</title>
+    <meta charset="utf-8" />
+
+    <meta name="author" content="Faradays' Studio">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/svg.js/3.0.11/svg.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!--
+    <link href="../static/toc/main.css" rel="stylesheet">
+    -->
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <h1 class="bg-danger text-center" style="font-size:4em; padding-top:0.5em;padding-bottom:0.5em;">How to creat svg document with SVG.js</h1>
+      <p class="text-left" ><a href="../">Home</a></p>
+      <p class="text-right" ><a href="https://github.com/faradays-studio/faradays-studio.github.io">Get source code at Github</a></p>
+
+        <div class="post-toc">
+        <p>Content【目录】</p>
+        </div>
+    </div>
+    <div class="row">
+
+      <br/>
+      <p>A  few days ago, I got stuck in the mud of creating a svg dom with SVG.js. After many test and searching, I found out that someting is different from the official  manual.</p>
+      <p></p>
+      <h2>The "Uncaught TypeError" problem of using SVG.js</h2>
+      <strong>For example, we write some dom in <some_page>.html like this:</strong>
+        <pre>
+          &lt;!DOCTYPE html&gt; <br/>
+          &lt;html&gt; <br/>
+          &lt;head&gt; <br/>
+            &lt;title&gt;Creating SVG with SVG.js&lt;/title&gt; <br/>
+            &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt; <br/>
+            &lt;script src="https://cdn.bootcss.com/svg.js/3.0.11/svg.min.js"&gt;&lt;/script&gt; <br/>
+          &lt;/head&gt; <br/>
+          &lt;body&gt; <br/>
+            &lt;div id="drawing"&gt;&lt;/div&gt; <br/>
+            &lt;script&gt; <br/>
+             // write down your javascript here.. <br/>
+            &lt;/script&gt; <br/>
+          &lt;/body&gt; <br/>
+          &lt;/html&gt;        </pre>
+      <p>The <a href="https://svgjs.com/docs/3.0/getting-started/">official  manual</a> said that &lt;script&gt;...&lt;/script&gt; part like this:</p>
+        <pre>
+          var draw = SVG('drawing').size(300, 300) <br/>
+          var rect = draw.rect(100, 100).attr({ fill: '#f06' })        </pre>
+      <p>The script above pass throught on <a href="https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&utm_medium=embed&utm_campaign=wmtt8rkz">jsfiddle.net</a> test. However, it doesn't work on my case, no matter running on my msie 7.0 to 11.0 or chrome 58. It crashed like this:</p>
+        <pre class="text-danger">Uncaught TypeError: Cannot read property 'size' of null</pre>
+       <p>I felt so depressed that even could not got sleep for two whole days, then I found the official example only working under v3.0, such as v2.7.1.</p>
+
+      <h2>The way to write svg.js script and DOM</h2>
+      After many tests and searching, I found out that these code running on svg.js after v3.0: <br/>
+
+      <div class="col-xs-12 bg-info text-success" style="text-indent:4em">
+        <h3 style="text-indent:0em">Style 1</h3>
+           <p>&nbsp;&nbsp;&nbsp;&nbsp;DOM:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="drawing"&gt; &lt;/div&gt; </p>
+           <p>&nbsp;&nbsp;&nbsp;&nbsp;Script 1:  &nbsp;&nbsp;&nbsp;&nbsp;var draw = SVG().addTo('#drawing').size(1024,200);</p>
+           <p>or&nbsp;&nbsp;Script 2:  &nbsp;&nbsp;&nbsp;&nbsp;var draw = SVG().addTo('#drawing').size('100%', '100%');</p>
+        <h3 style="text-indent:0em">Style 2</h3>
+           <p>&nbsp;&nbsp;&nbsp;&nbsp;DOM:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="drawing"&gt; &lt;/div&gt; </p>
+           <p>&nbsp;&nbsp;&nbsp;&nbsp;Script 1:  &nbsp;&nbsp;&nbsp;&nbsp;var draw = SVG().addTo('.drawing').size(1024,200);</p>
+           <p>or&nbsp;&nbsp;Script 2:  &nbsp;&nbsp;&nbsp;&nbsp;var draw = SVG().addTo('.drawing').size('100%', '100%');</p>
+        <h3 style="text-indent:0em">Style 3</h3>
+           <p>&nbsp;&nbsp;&nbsp;&nbsp;DOM:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;svg id="drawing"&gt; &lt;/svg&gt; </p>
+           <p>&nbsp;&nbsp;&nbsp;&nbsp;Script 1:  &nbsp;&nbsp;&nbsp;&nbsp;var draw = SVG('#drawing').size(1024, 200);</p>
+           <p>or&nbsp;&nbsp;Script 2:  &nbsp;&nbsp;&nbsp;&nbsp;var draw = SVG('#drawing').size('100%', '100%');</p>
+        <p></p>
+      </div>
+      <div class="col-xs-12">
+        <br/>
+        <p class="lead">Read my code <a href="test/svg-test-01-create an SVG document.html">here</a>, you can get more by reading html source code.</p>
+        <br/>
+        <p class="lead">Done!!!</p>
+      </div>
+
+
+    </div>
+  </div>
+
+    <script src="../static/toc/post-details.js"</script>
+    <script src="../static/toc/motion.js"</script>
+    <script src="../static/toc/utils.js"</script>
+</body>
+</html>

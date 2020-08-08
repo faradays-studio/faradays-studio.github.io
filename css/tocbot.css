@@ -1,0 +1,54 @@
+.tocbot {
+  position: absolute;
+  left: 10px;
+  top: 7%;
+  max-width: 15%;
+  border-radius: 3px;
+  line-height: 1.7em;
+}
+.tocbot > .toc-list {
+  position: relative;
+  overflow: hidden;
+}
+.toc-list {
+  padding-left: 1rem;
+}
+a.toc-link {
+  height: 100%;
+  color: color-default;
+  text-decoration: none;
+}
+.is-collapsible {
+  max-height: 1000px;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+}
+.is-collapsed {
+  max-height: 0;
+}
+.is-position-fixed {
+  position: fixed !important;
+  top: 8%;
+  font-size: 80%;
+  color: color-default;
+  left: 10px;
+  background-color: rgba(88,88,88,0);
+  z-index: 996;
+}
+.toc-link::before {
+  background-color: color-grey;
+  content: ' ';
+  display: inline-block;
+  height: inherit;
+  left: 0;
+  margin-top: -1px;
+  position: absolute;
+  width: 2px;
+}
+.is-active-link::before {
+  background-color: main-color;
+}
+.is-active-link {
+  font-weight: 700;
+  background-color: main-color;
+}
