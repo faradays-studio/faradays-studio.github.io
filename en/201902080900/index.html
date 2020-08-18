@@ -11,13 +11,13 @@
   <meta name="description" content="A  few days ago, I got stuck in the mud of creating a svg dom with svg.js. After many test and searching, I found out that someting is different from the official  manual. The problem of using svg.jsF">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to creat svg document with svg.js">
-<meta property="og:url" content="https://faradays-studio.github.io/en/How-to-creat-svg-document-with-svg-js/index.html">
+<meta property="og:url" content="https://faradays-studio.github.io/en/201902080900/index.html">
 <meta property="og:site_name" content="Blog of Faradays&#39; Studio">
 <meta property="og:description" content="A  few days ago, I got stuck in the mud of creating a svg dom with svg.js. After many test and searching, I found out that someting is different from the official  manual. The problem of using svg.jsF">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-02-08T01:00:30.000Z">
 <meta property="article:modified_time" content="2019-02-10T13:51:52.000Z">
-<meta property="article:author" content="David Faraday">
+<meta property="article:author" content="John Doe">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="SVG">
 <meta name="twitter:card" content="summary">
@@ -55,7 +55,8 @@
         <div id="header-menu" class="header-menu-pos">
             <div class="header-menu-container">
                 <a href="/" class="left">
-                    <span class="site-title">Faradays&#39; Studio</span>
+                    <!-- HHJ@20200811���޸ı�����������  -->
+                    <span class="site-title">Blog of Faradays&#39; Studio</span>
                 </a>
                 <nav id="header-menu-nav" class="right">
                     
@@ -69,13 +70,18 @@
                         <span>Archives</span>
                     </a>
                     
+                    <a  href="/timeline">
+                        <i class="fa fa-history"></i>
+                        <span>timeline</span>
+                    </a>
+                    
                     <a  href="/static-index.html">
-                        <i class="fa fa-user"></i>
+                        <i class="fa fa-suitcase"></i>
                         <span>Static</span>
                     </a>
                     
-                    <a  href="/about">
-                        <i class="fa fa-user2"></i>
+                    <a  href="https://github.com/faradays-studio/faradays-studio.github.io/wiki/Home-%E9%A6%96%E9%A1%B5" target="_blank" rel="noopener">
+                        <i class="fa fa-exclamation-circle"></i>
                         <span>About</span>
                     </a>
                     
@@ -84,6 +90,7 @@
                     <i class="fa fa-bars"></i>
                 </a>
             </div>
+
         </div>
 
         <div id="header-description-post">  </div>
@@ -95,7 +102,7 @@
 
 
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-How-to-creat-svg-document-with-svg-js" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-2 How-to-creat-svg-document-with-svg-js" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -108,29 +115,55 @@
       <ul>
           
               <li>
-                  <i class="fa fa-book"></i>
+                  <i class="fa fa-code-fork"></i>
                   
-                      <a href="/categories/English/">English</a>
+                      <a href="/categories/English/">
+                      English
+                      </a>
                   
               </li>
           
-        <li>
-          <i class="fa fa-calendar"></i>  2019-02-08
-        </li>
+
         <li>
           <i class="fa fa-eye"></i>
           <span id="busuanzi_value_page_pv"></span>
         </li>
-        <!-- HHJ@20200806  -->
         <li>
-          <i class="fa fa-user"></i>
-          <a href="https://faradays-studio.github.io">
-            <!-- <img src="/images/f1.png" alt="David Faraday" width="20"> -->
-            David Faraday
-          </a>
+          <i class="fa fa-calendar-plus-o"></i>  2019-02-08
+        </li>
+
+        <!-- HHJ@20200815��������ģʽ  -->
+        <li>
+            <i class="fa fa-user-o"></i>
+            
+                David Faraday
+
+
+
+            
+        </li>
+
+
+        <!-- HHJ@20200812��20200815���� li ��ǩλ�ã��������ɿհ��ַ�  -->
+        
+        <li>
+                <i class="fa fa-copyright"></i>
+                100%
+        </li>
+        
+
+        <!-- HHJ@20200815��������������ͳ��  -->
+        <li><i class="fa fa-file-word-o"></i>
+            <span class="post-count">384 words</span>
+        </li>
+        <li><i class="fa fa-caret-square-o-right"></i>
+            <span class="post-count">2 min</span>
         </li>
       </ul>
+
+
     </div>
+
   
 
           
@@ -141,11 +174,11 @@
             
             <p>A  few days ago, I got stuck in the mud of creating a svg dom with svg.js. After many test and searching, I found out that someting is different from the official  manual.</p>
 <h2 id="The-problem-of-using-svg-js"><a href="#The-problem-of-using-svg-js" class="headerlink" title="The problem of using svg.js"></a>The problem of using svg.js</h2><p><strong>For example, we write some dom in <some_page>.html like this:</strong></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>Creating SVG with SVG.js<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge,chrome=1"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/svg.js/3.0.11/svg.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"drawing"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">  <span class="comment">// write down your javascript here..</span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Creating SVG with SVG.js<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">"X-UA-Compatible"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"IE=edge,chrome=1"</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.bootcss.com/svg.js/3.0.11/svg.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"drawing"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><br><span class="actionscript">  <span class="hljs-comment">// write down your javascript here..</span></span><br><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
 
 <p>The official  manual (refer to <a href="https://svgjs.com/docs/3.0/getting-started/" target="_blank" rel="noopener">https://svgjs.com/docs/3.0/getting-started/</a>) said that <code>&lt;script&gt;...&lt;/script&gt;</code>  part like this:</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> draw = SVG(<span class="string">'drawing'</span>).size(<span class="number">300</span>, <span class="number">300</span>)</span><br><span class="line"><span class="keyword">var</span> rect = draw.rect(<span class="number">100</span>, <span class="number">100</span>).attr(&#123; <span class="attr">fill</span>: <span class="string">'#f06'</span> &#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> draw = SVG(<span class="hljs-string">'drawing'</span>).size(<span class="hljs-number">300</span>, <span class="hljs-number">300</span>)<br><span class="hljs-keyword">var</span> rect = draw.rect(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>).attr(&#123; <span class="hljs-attr">fill</span>: <span class="hljs-string">'#f06'</span> &#125;)<br></code></pre></td></tr></table></figure>
 
 <p>The script above pass through on jsfiddle.net test (refer to <a href="https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz" target="_blank" rel="noopener">https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz</a> ). However, it doesn’t work on my case, no matter running on my MSIE 7.0 to 11.0 or Chrome 58. I felt so depressed that even could not got sleep for two whole days.</p>
 <h2 id="The-way-to-write-svg-js-script-and-DOM"><a href="#The-way-to-write-svg-js-script-and-DOM" class="headerlink" title="The way to write svg.js script and DOM"></a>The way to write svg.js script and DOM</h2><p>After many tests and searching, I found out that these code running: </p>
@@ -162,13 +195,32 @@
 <p>   or</p>
 <p>   Script 2: <code>var draw = SVG(&#39;#drawing&#39;).size(&#39;100%&#39;, &#39;100%&#39;);</code></p>
 <p>Done!</p>
-<p><br /><br /><br /></p>
 
             <div class="post-copyright">
     <div class="content">
+        <!-- HHJ@20200815 -->
+        <br /><br /><br />
+
         <p>最后更新： 2019年02月10日 21:51</p>
-        <p>作者： David Faraday</p>
-        <p>原始链接： <a class="post-url" href="/en/How-to-creat-svg-document-with-svg-js/" title="How to creat svg document with svg.js">https://faradays-studio.github.io/en/How-to-creat-svg-document-with-svg-js/</a></p>
+        <p>
+            
+                作者：
+            
+
+            
+                David Faraday
+            
+        </p>
+        <p>原始链接： <a class="post-url" href="/en/201902080900/" title="How to creat svg document with svg.js">https://faradays-studio.github.io/en/201902080900/</a>
+        </p>
+
+        <!-- HHJ@20200815 -->
+        
+            <p>
+            许可协议： <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>.
+            </p>
+        
+
         <footer>
         </footer>
     </div>
@@ -217,7 +269,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.github.io/en/How-to-creat-svg-document-with-svg-js/&title=《How to creat svg document with svg.js》 — Blog of Faradays' Studio&pic=https://faradays-studio.github.ioimages/logo-Faradays' Studio.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.github.io/en/201902080900/&title=《How to creat svg document with svg.js》 — Blog of Faradays' Studio&pic=https://faradays-studio.github.ioimages/logo-Faradays' Studio.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -227,22 +279,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://faradays-studio.github.io/en/How-to-creat-svg-document-with-svg-js/&title=《How to creat svg document with svg.js》 — Blog of Faradays' Studio&source=自信人生二百里，会当击水三千里！" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://faradays-studio.github.io/en/201902080900/&title=《How to creat svg document with svg.js》 — Blog of Faradays' Studio&source=自信人生二百里，会当击水三千里！" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://faradays-studio.github.io/en/How-to-creat-svg-document-with-svg-js/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://faradays-studio.github.io/en/201902080900/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《How to creat svg document with svg.js》 — Blog of Faradays' Studio&url=https://faradays-studio.github.io/en/How-to-creat-svg-document-with-svg-js/&via=https://faradays-studio.github.io" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《How to creat svg document with svg.js》 — Blog of Faradays' Studio&url=https://faradays-studio.github.io/en/201902080900/&via=https://faradays-studio.github.io" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://faradays-studio.github.io/en/How-to-creat-svg-document-with-svg-js/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://faradays-studio.github.io/en/201902080900/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -252,7 +304,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://faradays-studio.github.io/en/How-to-creat-svg-document-with-svg-js/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://faradays-studio.github.io/en/201902080900/" alt="微信分享二维码">
 </div>
 
 
@@ -289,10 +341,12 @@
 
 <nav id="article-nav">
   
-    <a href="/zh-CN/How-to-creat-svg-document-with-svg-js/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/zh-CN/201902090951/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        <!-- HHJ@20200812  -->
+        <!-- <i class="fa fa-hand-o-left" aria-hidden="true"></i>  -->
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
         
           如何使用 svg.js 创建 svg 文档
         
@@ -319,6 +373,9 @@
     <span id="busuanzi_container_site_pv" style='display:none'>
         总访问量：<span id="busuanzi_value_site_pv"></span>
     </span>
+
+    <!-- HHJ@20200815������վ������ͳ��  -->
+    &emsp;总文本数：<span class="post-count">1.6k</span>
 </p>
 
 
@@ -326,7 +383,8 @@
       <p>
         Powered by  <a href="http://hexo.io/" target="_blank">Hexo,   </a>
         with <a href="https://github.com/faradays-studio/faradays-studio.github.io" target="_blank">Faradays</a> theme.
-      &copy; 2020 David Faraday<br>
+      &copy; 2018-2020 Faradays&#39; Studio<br>
+      <!-- HHJ@20200809  -->
       </p>
     </div>
   </div>
@@ -378,7 +436,7 @@
 <script>
   var WebConfig = {
       root: "https://faradays-studio.github.io",
-      animate: true,
+      animate: false,
       isHome: false,
       share: true,
       reward: 1
@@ -401,7 +459,7 @@
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/English/">English</a><a class="category-link" href="/categories/%E7%B3%BB%E7%BB%9F/">系统</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+            <a class="category-link" href="/categories/English/">English</a><a class="category-link" href="/categories/sys/">系统</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
         </div>
         <div id="sidebar-menu-box-tags">
             <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a> <a href="/tags/%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">系统</a>
@@ -427,14 +485,20 @@
             </li>
             
             <li>
-                <a  href="/static-index.html">
-                    <i class="fa fa-user"></i><span>Static</span>
+                <a  href="/timeline">
+                    <i class="fa fa-history"></i><span>timeline</span>
                 </a>
             </li>
             
             <li>
-                <a  href="/about">
-                    <i class="fa fa-user2"></i><span>About</span>
+                <a  href="/static-index.html">
+                    <i class="fa fa-suitcase"></i><span>Static</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="https://github.com/faradays-studio/faradays-studio.github.io/wiki/Home-%E9%A6%96%E9%A1%B5" target="_blank" rel="noopener">
+                    <i class="fa fa-exclamation-circle"></i><span>About</span>
                 </a>
             </li>
             
@@ -481,14 +545,6 @@
 
 
 
-
-
-  
-<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
-
-  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
-  
-<script src="/js/animate.js"></script>
 
 
 
