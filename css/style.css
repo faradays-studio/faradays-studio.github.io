@@ -141,7 +141,7 @@ a.toc-link {
 .timeline2 {
   margin-left: 6rem;
   border-left: 0.05rem dashed #999;
-  padding-left: 3.15rem;
+  padding-left: 2.5rem;
 }
 .timeline2::after {
   content: "";
@@ -201,10 +201,19 @@ a:hover {
   top: 50%;
   left: -3.5rem;
   margin-top: -0.5rem;
-  width: 0.7rem;
-  height: 0.7rem;
-  border-radius: 1rem;
-  background-color: #999;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+  background-color: #ccc;
+}
+.timeline2-article-date .timeline2-num {
+  display: table-cell;
+  position: absolute;
+  text-align: center;
+  vertical-align: center;
+  top: 50%;
+  width: 2rem;
+  left: -3.5rem;
 }
 .timeline_x {
   margin: 0;
@@ -1108,13 +1117,22 @@ body {
   min-height: calc(100vh - 530px);
 }
 .article {
-  margin: 30px 0;
+  margin: -180px 0 0;
   background: #fff;
   border-radius: 0;
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
+.article-header-num {
+  margin: -60px 0 150px 0;
+  position: relative;
+  top: 105px;
+  left: -1em;
+  color: #ffa500;
+  font-size: 3em;
+}
 .article-inner {
   overflow: inherit;
+  margin-top: 230px;
 }
 .article-date {
   float: left;
@@ -2238,7 +2256,7 @@ pre .javascript .function {
     color: #fff;
   }
   .article {
-    margin: 10px 10px;
+    margin: -180px 10px 20px;
   }
   .article .article-img {
     display: none;
