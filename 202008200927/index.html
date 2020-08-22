@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Windows 批处理的字符运算 | Blog of Faradays&#39; Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Faradays' Studio, Blog, 编程, 思考, 文学作品, 实践, 总结" />
+  
+  <meta name="description" content="字符运算历来是编程中的重要内容，如何拼接字符，如何截取字符，如何判断字符是否存在，如何判断两个字符串是否相同，成为了编程任务中的重要环节。因此，我结合网络的资料和个人的实践经验来总结一下。 Windows 批处理中字符的基本常识 批处理中变量的赋值符号两侧不能包含空格，如 set str_date&#x3D;&#39;20200820&#39;，这与很多编程规范是相悖的。  批处理中的字符可以不添加双引号，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows 批处理的字符运算">
+<meta property="og:url" content="https://faradays-studio.github.io/202008200927/index.html">
+<meta property="og:site_name" content="Blog of Faradays&#39; Studio">
+<meta property="og:description" content="字符运算历来是编程中的重要内容，如何拼接字符，如何截取字符，如何判断字符是否存在，如何判断两个字符串是否相同，成为了编程任务中的重要环节。因此，我结合网络的资料和个人的实践经验来总结一下。 Windows 批处理中字符的基本常识 批处理中变量的赋值符号两侧不能包含空格，如 set str_date&#x3D;&#39;20200820&#39;，这与很多编程规范是相悖的。  批处理中的字符可以不添加双引号，">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-08-20T01:27:42.000Z">
+<meta property="article:modified_time" content="2020-08-20T01:27:42.000Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="批处理">
+<meta property="article:tag" content="字符运算">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <!-- HHJ@20200822�������ʽ�ļ��ĵ��ã�Ǩ���� head_more.ejs �ļ� -->
+  <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
+   <!-- �ο� https://hexo.io/zh-cn/docs/helpers ���˽�������ú������÷� -->
+
+
+    <!-- �﷨���� 20200821 ����������ҳ�������  -->
+    <!-- HHJ@20200821�����Ա���ϵͳ�� style.styl ���в�����ʽ��������¹���Ч����� -->
+    <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
+    <link rel="stylesheet" href="/css/github.min.css">
+    <!-- <link rel="stylesheet" href="/css/github.min.css"> -->
+    <!-- 
+<link rel="stylesheet" href="/css/github.min.css">
+ -->
+
+    <!-- �������ۣ�HHJ@20200822  -->
+    <!-- import 'gitalk/dist/gitalk.css' -->
+    <!-- import Gitalk from 'gitalk' -->
+
+
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/js/pace.min.js"></script>
+
+  
+
+  
+  
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
+</head>
+
+<body>
+  <div id="container">
+
+      <!-- HHJ@20200719  -->
+      
+
+      
+        <header id="header-post">
+    <div id="header-outer">
+
+        <!-- <div id="header-menu" class="header-menu-pos animated">  -->
+        <!-- HHJ@20200711 ɾ����̬Ч����ʵ�ֶ����̶�Ч��  -->
+        <div id="header-menu" class="header-menu-pos">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <!-- HHJ@20200811���޸ı�����������  -->
+                    <span class="site-title">Blog of Faradays&#39; Studio</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/timeline">
+                        <i class="fa fa-history"></i>
+                        <span>timeline</span>
+                    </a>
+                    
+                    <a  href="/static-index.html">
+                        <i class="fa fa-suitcase"></i>
+                        <span>Static</span>
+                    </a>
+                    
+                    <a  href="https://github.com/faradays-studio/faradays-studio.github.io/wiki/Home-%E9%A6%96%E9%A1%B5" target="_blank" rel="noopener">
+                        <i class="fa fa-exclamation-circle"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div id="header-description-post">  </div>
+
+    </div>
+</header>
+      
+
+
+
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-5-Windows-批处理的字符运算经验" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      Windows 批处理的字符运算
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-code-fork"></i>
+                  
+                      <a href="/categories/编程/">
+                      编程
+                      </a>
+                  
+              </li>
+          
+
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+        <li>
+          <i class="fa fa-calendar-plus-o"></i>  2020-08-20
+        </li>
+
+        <!-- HHJ@20200815��������ģʽ  -->
+        <li class="faradays-author">
+            <i class="fa fa-user-o"></i>
+            
+                David Faraday
+
+
+
+            
+        </li>
+
+
+        <!-- HHJ@20200812��20200815���� li ��ǩλ�ã��������ɿհ��ַ�  -->
+        
+        <li>
+                <i class="fa fa-copyright"></i>
+                20%
+        </li>
+        
+
+        <!-- HHJ@20200815��������������ͳ��  -->
+        <li><i class="fa fa-file-word-o"></i>
+            <span class="post-count">843 words</span>
+        </li>
+        <li><i class="fa fa-caret-square-o-right"></i>
+            <span class="post-count">3 min</span>
+        </li>
+      </ul>
+
+
+    </div>
+
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p>字符运算历来是编程中的重要内容，如何拼接字符，如何截取字符，如何判断字符是否存在，如何判断两个字符串是否相同，成为了编程任务中的重要环节。因此，我结合网络的资料和个人的实践经验来总结一下。</p>
+<h2 id="Windows-批处理中字符的基本常识"><a href="#Windows-批处理中字符的基本常识" class="headerlink" title="Windows 批处理中字符的基本常识"></a>Windows 批处理中字符的基本常识</h2><ol>
+<li><p>批处理中变量的赋值符号两侧不能包含空格，如 <code>set str_date=&#39;20200820&#39;</code>，这与很多编程规范是相悖的。</p>
+</li>
+<li><p>批处理中的字符可以不添加双引号，但是如果包含空格的话，必须使用引号，，如 <code>set str_name=&quot;20200820 Windows 批处理的字符运算经验总结&quot;</code>。</p>
+</li>
+<li><p>自定义变量使用 % 来包围来进行引用，即 <code>%变量%</code> ；而 Windows 内置变量（含文件路径变量扩展）则使用 % 符号来引导，即 <code>%内置变量</code> 。</p>
+</li>
+</ol>
+<h2 id="截取字符串"><a href="#截取字符串" class="headerlink" title="截取字符串"></a>截取字符串</h2><h3 id="一般性的字符截取"><a href="#一般性的字符截取" class="headerlink" title="一般性的字符截取"></a>一般性的字符截取</h3><ol>
+<li>基本语法： <code>%**变量名**:~**起点位置**,**截取数量|终点位置**%</code></li>
+</ol>
+<p><strong>起点位置</strong> ：如果为正数，那么就是从左往右截取，而如果为负数，那么就是说从右向左截取；不过无论为正还是为负，截取结果都是不包含处于 <strong>起点位置</strong> 的那个字符的。</p>
+<p><strong>截取数量|终点位置</strong> ：如果为正数，那么就是单纯的 <strong>截取数量</strong> ；如果为负数，那么应当表述为 <strong>终点位置</strong> ，而且，与 <strong>起点位置</strong> 对应，截取结果也是不包含该负数所对应的字符的，即上述的 -5 对应的是终点位置为右侧第 6 个字符截止。</p>
+<p>举例说明，如下：</p>
+<pre><code class="powershell">echo on
+set ifo=abcdefghijklmnopqrstuvwxyz0123456789
+echo %ifo%
+echo.
+echo 截取前4个字符：%ifo:~0,4%
+echo 截取年度：%date:~0,4%
+echo.
+echo 截取最后2个字符：%ifo:~-2%
+echo 截取星期：%date:~-2%
+echo.
+echo 截取第一个到倒数第6个字符：%ifo:~0,-5%
+echo 截取日期（含分隔符）：%date:~0,-3%
+echo.
+echo 从第5个字符开始，截取2个字符：%ifo:~4,2%
+echo 截取月份：%date:~5,2%
+echo 截取天数：%date:~8,2%
+echo.
+echo 从倒数第14个字符开始，截取5个字符：%ifo:~-14,5%
+echo 截取秒数：%time:~3,2%
+echo.
+echo 当前时间是：%time% 即 %time:~0,2%点%time:~3,2%分%time:~6,2%秒%time:~9,2%厘秒
+pause</code></pre>
+<p>当然，我最常用的就是对日期、时间等内置变量的操作。</p>
+<h3 id="文件路径字符的截取"><a href="#文件路径字符的截取" class="headerlink" title="文件路径字符的截取"></a>文件路径字符的截取</h3><p>主要依靠 Windows 内置的扩展变量用法来进行。</p>
+<p>执行 <code>for /?</code> 可以查看路径扩展的</p>
+<p>举例说明，如下（注意，需要另存为 test.bat 文件形式执行）：</p>
+<pre><code class="powershell">@echo off
+echo 当前路径的完整字符串：%0
+echo 当前路径的完整字符串（如被双引号包围，去除双引号）：%~0
+echo 当前路径的所在分区：%~d0
+echo 当前路径的目录：%~p0
+echo 文件名：%~n0
+echo 扩展名：%~x0
+echo 文件属性：%~a0
+echo 修改时间：%~t0
+echo 文件大小：%~z0
+pause</code></pre>
+<p>路径处理，往往都配合 for 函数进行操作。</p>
+<h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><h3 id="变更日志"><a href="#变更日志" class="headerlink" title="变更日志"></a>变更日志</h3><ol>
+<li>2020/08/20 10:49:23，初始版本。</li>
+</ol>
+<h3 id="参考索引"><a href="#参考索引" class="headerlink" title="参考索引"></a>参考索引</h3><ol>
+<li><strong>CharyGao</strong>.<code>DOS命令（cmd）批处理：替换字符串、截取字符串、扩充字符串、获取字符串长度</code>[EB/OL].<a href="https://www.cnblogs.com/Chary/p/No0000A4.html" target="_blank" rel="noopener">https://www.cnblogs.com/Chary/p/No0000A4.html</a>, 2020/08/20.</li>
+</ol>
+
+            <div class="post-copyright">
+    <div class="content">
+        <!-- HHJ@20200815 -->
+        <br /><br /><br />
+
+        <p>最后更新： 2020年08月20日 09:27</p>
+        <p>
+            
+                编者：
+            
+
+            
+                David Faraday
+            
+        </p>
+        <p>原始链接： <a class="post-url" href="/202008200927/" title="Windows 批处理的字符运算">https://faradays-studio.github.io/202008200927/</a>
+        </p>
+
+        <!-- HHJ@20200815 -->
+        
+
+        <footer>
+        </footer>
+    </div>
+</div>
+
+      
+    </div>
+    <footer class="article-footer">
+        <!-- HHJ@20200806������λ�� -->
+        
+            
+<div class="page-reward"  style="display: inline-block;">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        大方打赏，关爱永继~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        <div class="reward-code">
+            <!-- HHJ@20200806 ，取消图片预览，且两个图片同时显示，减少操作-->
+            <table style="float:center; margin:auto;"><tr>
+                <td><img src="/images/%E5%BE%AE%E4%BF%A1-%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="微信" border=0></td>
+                <td><img src="/images/%E6%94%AF%E4%BB%98%E5%AE%9D-%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="支付宝" border=0></td>
+                </tr>
+            </table>
+        </div>
+        <div class="reward-select">
+        </div>
+    </div>
+</div>
+
+
+        
+        
+        
+<div class="post-share">
+<!-- <div class="post-share" style="display: inline-block;"> -->
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.github.io/202008200927/&title=《Windows 批处理的字符运算》 — Blog of Faradays' Studio&pic=https://faradays-studio.github.ioimages/logo-Faradays' Studio.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://faradays-studio.github.io/202008200927/&title=《Windows 批处理的字符运算》 — Blog of Faradays' Studio&source=自信人生二百里，会当击水三千里！" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://faradays-studio.github.io/202008200927/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Windows 批处理的字符运算》 — Blog of Faradays' Studio&url=https://faradays-studio.github.io/202008200927/&via=https://faradays-studio.github.io" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://faradays-studio.github.io/202008200927/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://faradays-studio.github.io/202008200927/" alt="微信分享二维码">
+</div>
+
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/Windows/" class="color3">Windows</a>
+      
+    <a href="/tags/批处理/" class="color4">批处理</a>
+      
+    <a href="/tags/字符运算/" class="color5">字符运算</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+    
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <!-- <nav class="post-toc-wrap"> -->
+        <nav class="tocbot">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Windows-批处理中字符的基本常识"><span class="post-toc-text">Windows 批处理中字符的基本常识</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#截取字符串"><span class="post-toc-text">截取字符串</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一般性的字符截取"><span class="post-toc-text">一般性的字符截取</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件路径字符的截取"><span class="post-toc-text">文件路径字符的截取</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#版本说明"><span class="post-toc-text">版本说明</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#变更日志"><span class="post-toc-text">变更日志</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#参考索引"><span class="post-toc-text">参考索引</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+    
+<nav id="article-nav">
+  
+  
+    <a href="/202008092029/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Hello World</span>
+      <!-- <i class="fa fa-hand-o-right" aria-hidden="true"></i>  -->
+      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+        
+    <!-- HHJ@20200822 �������������� �� `themes\faradays\layout\head-more.ejs` ������-->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script> -->
+
+    <div id="gitalk-container">
+
+    </div>
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>&emsp;
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+
+    <!-- HHJ@20200815������վ������ͳ��  -->
+    &emsp;总文本数：<span class="post-count">2.5k</span>
+</p>
+
+
+      <p>All posts licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>. </p>
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo,   </a>
+        with <a href="https://github.com/faradays-studio/faradays-studio.github.io" target="_blank">Faradays</a> theme.
+      &copy; 2018-2020 Faradays&#39; Studio<br>
+      <!-- HHJ@20200809  -->
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- HHJ@20200719  -->
+<!-- �������µ�����20200821��Ǩ�Ƶ� more.ejs �ļ�  -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>  -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">  -->
+<!-- @import "css/tocbot.css"  -->
+
+<script src="/js/tocbot.js"></script>
+
+<!-- ���� div Ԫ���� post\toc.ejs �ļ����Ѿ�����  -->
+<!-- <div class="tocbot" style="position:absolute;left:3px;top:350px;max-width:15%;max-height:400px;border-radius:3px;line-height:23px;color:#111;background:rgba(88, 88, 88, 0)"></div>  -->
+<script>
+  // Tocbo  http://tscanlin.github.io/tocbot/
+</script>
+
+
+
+
+
+<script>
+  var WebConfig = {
+      root: "https://faradays-studio.github.io",
+      animate: false,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/English/">English</a><a class="category-link" href="/categories/Faradays-Studio/">Faradays' Studio</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/timeline">
+                    <i class="fa fa-history"></i><span>timeline</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/static-index.html">
+                    <i class="fa fa-suitcase"></i><span>Static</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="https://github.com/faradays-studio/faradays-studio.github.io/wiki/Home-%E9%A6%96%E9%A1%B5" target="_blank" rel="noopener">
+                    <i class="fa fa-exclamation-circle"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+
+<script src="/js/search.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+  
+<script src="/js/pop-img.js"></script>
+
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+
+    
+
+    <!-- HHJ@20200719�� ȡ���������µ������������������ļ�ĩ  -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>  -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">  -->
+    <!-- @import "css/tocbot.css"  -->
+    
+<script src="/js/tocbot.js"></script>
+
+    <!-- ���� div Ԫ���� post\toc.ejs �ļ����Ѿ�����  -->
+    <!-- <div class="tocbot" style="position:absolute;left:3px;top:350px;max-width:15%;max-height:400px;border-radius:3px;line-height:23px;color:#111;background:rgba(88, 88, 88, 0)"></div>  -->
+
+
+ <!-- �ο� https://hexo.io/zh-cn/docs/helpers ���˽�������ú������÷� -->
+
+
+    <!-- ���µ��� 20200821 ����������ҳ�������  -->
+    <script>
+      // Tocbo  http://tscanlin.github.io/tocbot/
+      tocbot.init({
+        tocSelector: '.tocbot',
+        contentSelector: '.article-inner',
+        headingSelector: 'h1, h2, h3, h4, h5, h6',
+        hasInnerContainers: true,
+
+        scrollSmooth: true,
+        // ���Ŀ¼ʱ��ҳ������һ�����루����̶������Ĳ˵��ڸǣ�����λΪ px
+        scrollSmoothOffset: -44,
+        // ���������ʾ����
+        headingsOffset: 47,
+
+        scrollContainer: 'main',
+        positionFixedSelector: '.tocbot',
+        positionFixedClass: 'is-position-fixed',
+
+
+        //�رն���Ч����һֱ��ʾ����Ҳû�и���ָʾ��
+        //skipRendering: true,
+        //disableTocScrollSync: false,
+
+        fixedSidebarOffset: 'auto'
+      });
+    </script>
+
+
+
+    <script>
+    // HHJ@20200822
+    const gitalk = new Gitalk({
+        clientID: '90b449ff273a263117ec',
+        clientSecret: '0a3ccea67a4d3f03cbff012eeac1a8547e367aad',
+        repo: 'faradays-studio.github.io',      // The repository of store comments,
+        owner: 'faradays-studio',
+        admin: ['faradays-studio'],
+        id: location.pathname, // Ҫ��Ψһ�������������� 50���� (location.pathname).substring(0,49)
+        labels: ['gitalk'],
+        perPage: 3,
+        distractionFreeMode: false  // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    </script>
+
+
+
+
+
+    <!-- <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script> -->
+    
+<script src="/js/highlight.min.js"></script>
+
+    <!-- 
+<script src="/js/highlight.min.js"></script>
+ -->
+
+    <script>
+    // highlight
+    hljs.initHighlightingOnLoad();
+    </script>
+
+
+
+  </div>
+</body>
+</html>

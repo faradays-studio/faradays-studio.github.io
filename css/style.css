@@ -374,6 +374,13 @@ body {
 .show {
   display: block;
 }
+.faradays-author:hover {
+  background-color: #ffa500;
+  color: #fff;
+  -webkit-box-shadow: 10px 10px 99px 6px #ffa500;
+  -moz-box-shadow: 10px 10px 99px 6px #ffa500;
+  box-shadow: 10px 10px 99px 6px #ffa500;
+}
 #wrap {
   height: 100%;
   width: 100%;
@@ -635,8 +642,7 @@ body {
   height: 44px;
 }
 #header-menu .header-menu-container {
-  max-width: 1100px;
-  margin: 0 auto;
+  margin: 0 2% 0 2%;
   line-height: 44px;
 }
 #header-menu .header-menu-container .site-title {
@@ -2004,10 +2010,10 @@ body {
   font-size: 1em;
 }
 .article-entry code {
-  color: #c7254e;
-  line-height: 1;
+  color: #c9863d;
+  line-height: 1.3em;
   margin: 0 4px;
-  font-size: 85%;
+  font-size: 1em;
   padding: 2px 4px;
   border: 1px solid #eee;
   border-radius: 2px;

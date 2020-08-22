@@ -27,6 +27,12 @@
     <link rel="icon" href="/favicon.ico">
   
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <!-- HHJ@20200822�������ʽ�ļ��ĵ��ã�Ǩ���� head_more.ejs �ļ� -->
+  <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
+   <!-- �ο� https://hexo.io/zh-cn/docs/helpers ���˽�������ú������÷� -->
+
+
   
 <link rel="stylesheet" href="/css/style.css">
 
@@ -52,8 +58,61 @@
 
 
       <div class="outer">
-        <section id="main" class="body-wrap"><!-- HHJ@20200817 -->
-<div style="font-size:37px; text-align:center;padding-top:0.7%;">存档</div>
+        <section id="main" class="body-wrap">
+<!-- HHJ@20200821 -->
+  <header id="header-post">
+    <div id="header-outer">
+
+        <!-- <div id="header-menu" class="header-menu-pos animated">  -->
+        <!-- HHJ@20200711 ɾ����̬Ч����ʵ�ֶ����̶�Ч��  -->
+        <div id="header-menu" class="header-menu-pos">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <!-- HHJ@20200811���޸ı�����������  -->
+                    <span class="site-title">Blog of Faradays&#39; Studio</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/timeline">
+                        <i class="fa fa-history"></i>
+                        <span>timeline</span>
+                    </a>
+                    
+                    <a  href="/static-index.html">
+                        <i class="fa fa-suitcase"></i>
+                        <span>Static</span>
+                    </a>
+                    
+                    <a  href="https://github.com/faradays-studio/faradays-studio.github.io/wiki/Home-%E9%A6%96%E9%A1%B5" target="_blank" rel="noopener">
+                        <i class="fa fa-exclamation-circle"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div id="header-description-post">  </div>
+
+    </div>
+</header>
+
+<!-- HHJ@20200817 -->
+<div style="font-size:37px; text-align:center;padding-top:47px;">存档</div>
 
 
 
@@ -73,13 +132,13 @@
     <article class="archive-article archive-type-post">
   <div class="archive-article-inner">
     <header class="archive-article-header">
-      <a href="/zh-CN/202006071600/" class="archive-article-date">
+      <a href="/202006071600/" class="archive-article-date">
   <time datetime="2020-06-07T08:00:50.000Z" itemprop="datePublished">06-07</time>
 </a>
       
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/zh-CN/202006071600/"  >
+      <a class="archive-article-title" href="/202006071600/"  >
       更新日志
       </a>
     </h1>
@@ -91,8 +150,6 @@
             
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
-      
-    <a href="/tags/系统/" class="color3">系统</a>
       
     <a href="/tags/日志/" class="color3">日志</a>
       
@@ -126,7 +183,7 @@
     </span>
 
     <!-- HHJ@20200815������վ������ͳ��  -->
-    &emsp;总文本数：<span class="post-count">1.6k</span>
+    &emsp;总文本数：<span class="post-count">2.5k</span>
 </p>
 
 
@@ -144,7 +201,7 @@
 <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 
 <!-- HHJ@20200719  -->
-<!-- �������µ���  -->
+<!-- �������µ�����20200821��Ǩ�Ƶ� more.ejs �ļ�  -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>  -->
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">  -->
 <!-- @import "css/tocbot.css"  -->
@@ -155,29 +212,6 @@
 <!-- <div class="tocbot" style="position:absolute;left:3px;top:350px;max-width:15%;max-height:400px;border-radius:3px;line-height:23px;color:#111;background:rgba(88, 88, 88, 0)"></div>  -->
 <script>
   // Tocbo  http://tscanlin.github.io/tocbot/
-  tocbot.init({
-    tocSelector: '.tocbot',
-    contentSelector: '.article-inner',
-    headingSelector: 'h1, h2, h3, h4, h5, h6',
-    hasInnerContainers: true,
-
-    scrollSmooth: true,
-    // ���Ŀ¼ʱ��ҳ������һ�����루����̶������Ĳ˵��ڸǣ�����λΪ px
-    scrollSmoothOffset: -44,
-    // ���������ʾ����
-    headingsOffset: 47,
-
-    scrollContainer: 'main',
-    positionFixedSelector: '.tocbot',
-    positionFixedClass: 'is-position-fixed',
-
-
-    //�رն���Ч����һֱ��ʾ����Ҳû�и���ָʾ��
-    //skipRendering: true,
-    //disableTocScrollSync: false,
-
-    fixedSidebarOffset: 'auto'
-  });
 </script>
 
 
@@ -210,10 +244,10 @@
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/English/">English</a><a class="category-link" href="/categories/sys/">系统</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+            <a class="category-link" href="/categories/English/">English</a><a class="category-link" href="/categories/Faradays-Studio/">Faradays' Studio</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a> <a href="/tags/%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">系统</a>
+            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -258,7 +292,7 @@
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a> <a href="/tags/%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">系统</a>
+            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
         </div>
     </div>
 </div>
@@ -305,6 +339,22 @@
   <script>
      $(".article-entry p img").popImg();
   </script>
+
+
+    
+
+    <!-- HHJ@20200719�� ȡ���������µ������������������ļ�ĩ  -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>  -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">  -->
+    <!-- @import "css/tocbot.css"  -->
+    
+<script src="/js/tocbot.js"></script>
+
+    <!-- ���� div Ԫ���� post\toc.ejs �ļ����Ѿ�����  -->
+    <!-- <div class="tocbot" style="position:absolute;left:3px;top:350px;max-width:15%;max-height:400px;border-radius:3px;line-height:23px;color:#111;background:rgba(88, 88, 88, 0)"></div>  -->
+
+
+ <!-- �ο� https://hexo.io/zh-cn/docs/helpers ���˽�������ú������÷� -->
 
   </div>
 </body>

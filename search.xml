@@ -2,36 +2,44 @@
 <search>
   <entry>
     <title>Hello World</title>
-    <url>/en/202006072043/</url>
+    <url>/202006072043/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">"My New Post"</span><br></code></pre></td></tr></table></figure>
-
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;</code></pre>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 ]]></content>
       <categories>
-        <category>系统</category>
+        <category>Faradays&#39; Studio</category>
       </categories>
   </entry>
   <entry>
     <title>How to creat svg document with svg.js</title>
-    <url>/en/201902080900/</url>
+    <url>/201902080900/</url>
     <content><![CDATA[<p>A  few days ago, I got stuck in the mud of creating a svg dom with svg.js. After many test and searching, I found out that someting is different from the official  manual.</p>
 <h2 id="The-problem-of-using-svg-js"><a href="#The-problem-of-using-svg-js" class="headerlink" title="The problem of using svg.js"></a>The problem of using svg.js</h2><p><strong>For example, we write some dom in <some_page>.html like this:</strong></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Creating SVG with SVG.js<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">"X-UA-Compatible"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"IE=edge,chrome=1"</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.bootcss.com/svg.js/3.0.11/svg.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"drawing"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><br><span class="actionscript">  <span class="hljs-comment">// write down your javascript here..</span></span><br><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Creating SVG with SVG.js&lt;/title&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
+&lt;script src=&quot;https://cdn.bootcss.com/svg.js/3.0.11/svg.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
 
-
+&lt;body&gt;
+&lt;div id=&quot;drawing&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+  // write down your javascript here..
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 <p>The official  manual (refer to <a href="https://svgjs.com/docs/3.0/getting-started/" target="_blank" rel="noopener">https://svgjs.com/docs/3.0/getting-started/</a>) said that <code>&lt;script&gt;...&lt;/script&gt;</code>  part like this:</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> draw = SVG(<span class="hljs-string">'drawing'</span>).size(<span class="hljs-number">300</span>, <span class="hljs-number">300</span>)<br><span class="hljs-keyword">var</span> rect = draw.rect(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>).attr(&#123; <span class="hljs-attr">fill</span>: <span class="hljs-string">'#f06'</span> &#125;)<br></code></pre></td></tr></table></figure>
-
+<pre><code class="javascript">var draw = SVG(&#39;drawing&#39;).size(300, 300)
+var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
 <p>The script above pass through on jsfiddle.net test (refer to <a href="https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz" target="_blank" rel="noopener">https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz</a> ). However, it doesn’t work on my case, no matter running on my MSIE 7.0 to 11.0 or Chrome 58. I felt so depressed that even could not got sleep for two whole days.</p>
 <h2 id="The-way-to-write-svg-js-script-and-DOM"><a href="#The-way-to-write-svg-js-script-and-DOM" class="headerlink" title="The way to write svg.js script and DOM"></a>The way to write svg.js script and DOM</h2><p>After many tests and searching, I found out that these code running: </p>
 <h3 id="1-Way-1"><a href="#1-Way-1" class="headerlink" title="1. Way 1:"></a>1. Way 1:</h3><p>   DOM: <code>&lt;div id=&quot;drawing&quot;&gt;&lt;/div&gt;</code> </p>
@@ -58,16 +66,16 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/zh-CN/202008092029/</url>
+    <url>/202008092029/</url>
     <content><![CDATA[<p>追求卓越！</p>
 ]]></content>
       <categories>
-        <category>系统</category>
+        <category>Faradays&#39; Studio</category>
       </categories>
   </entry>
   <entry>
     <title>更新日志</title>
-    <url>/zh-CN/202006071600/</url>
+    <url>/202006071600/</url>
     <content><![CDATA[<h2 id="TO-DO"><a href="#TO-DO" class="headerlink" title="TO-DO"></a>TO-DO</h2><ol>
 <li><p>配置评论系统，实现文章留言；</p>
 </li>
@@ -107,35 +115,48 @@
 </li>
 </ol>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li><p>cnblogs.Hexo主题开发[EB/OL].<a href="https://www.cnblogs.com/yyhh/p/11058985.html" target="_blank" rel="noopener">https://www.cnblogs.com/yyhh/p/11058985.html</a>, 2020/07/19.</p>
+<li><p>猴子请来的救兵.<code>Hexo主题开发</code>[EB/OL].<a href="https://www.cnblogs.com/yyhh/p/11058985.html" target="_blank" rel="noopener">https://www.cnblogs.com/yyhh/p/11058985.html</a>, 2020/07/19.</p>
 </li>
-<li><p>梅卫平.Hexo博客实现首页和子页面不同layout布局[EB/OL].<a href="https://my.oschina.net/u/3372900/blog/911534" target="_blank" rel="noopener">https://my.oschina.net/u/3372900/blog/911534</a>, 2020/07/19.</p>
+<li><p>梅卫平.<code>Hexo博客实现首页和子页面不同layout布局</code>[EB/OL].<a href="https://my.oschina.net/u/3372900/blog/911534" target="_blank" rel="noopener">https://my.oschina.net/u/3372900/blog/911534</a>, 2020/07/19.</p>
 </li>
-<li><p>MinHow.MiHo-主题安装和配置详情[EB/OL].<a href="https://blog.minhow.com/articles/blog/installation-configuration/" target="_blank" rel="noopener">https://blog.minhow.com/articles/blog/installation-configuration/</a>, 2020/07/19.</p>
+<li><p>MinHow.<code>MiHo-主题安装和配置详情</code>[EB/OL].<a href="https://blog.minhow.com/articles/blog/installation-configuration/" target="_blank" rel="noopener">https://blog.minhow.com/articles/blog/installation-configuration/</a>, 2020/07/19.</p>
 </li>
-<li><p>沈宇.Ayer中文说明[EB/OL].<a href="https://shen-yu.gitee.io/2019/ayer/" target="_blank" rel="noopener">https://shen-yu.gitee.io/2019/ayer/</a>, 2020/07/19.</p>
+<li><p>沈宇.<code>Ayer中文说明</code>[EB/OL].<a href="https://shen-yu.gitee.io/2019/ayer/" target="_blank" rel="noopener">https://shen-yu.gitee.io/2019/ayer/</a>, 2020/07/19.</p>
+</li>
+<li><p>MOxFIVE.<code>Yelee —— 简而不减 Hexo 双栏博客主题</code>[EB/OL].<a href="http://moxfive.xyz/yelee/" target="_blank" rel="noopener">http://moxfive.xyz/yelee/</a>, 2020/08/22.</p>
 </li>
 </ol>
 ]]></content>
       <categories>
-        <category>系统</category>
+        <category>Faradays&#39; Studio</category>
       </categories>
       <tags>
-        <tag>系统</tag>
         <tag>日志</tag>
       </tags>
   </entry>
   <entry>
     <title>如何使用 svg.js 创建 svg 文档</title>
-    <url>/zh-CN/201902090951/</url>
+    <url>/201902090951/</url>
     <content><![CDATA[<p>前段时间，我尝试了使用 svg.js 来创建 svg dom 文档时，并没有成功。经过反复多次的尝试，并网络检索了一些信息，初步确认为官方文档未及时更新，导致了编码错误。</p>
 <h2 id="使用-svg-js-遇到的问题"><a href="#使用-svg-js-遇到的问题" class="headerlink" title="使用 svg.js 遇到的问题"></a>使用 svg.js 遇到的问题</h2><p><strong>举个例子，dom 文档 <some_page>.html 的结构如下：</strong></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Creating SVG with SVG.js<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">"X-UA-Compatible"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"IE=edge,chrome=1"</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.bootcss.com/svg.js/3.0.11/svg.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"drawing"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><br><span class="actionscript">  <span class="hljs-comment">// write down your javascript here..</span></span><br><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Creating SVG with SVG.js&lt;/title&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
+&lt;script src=&quot;https://cdn.bootcss.com/svg.js/3.0.11/svg.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
 
-
+&lt;body&gt;
+&lt;div id=&quot;drawing&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+  // write down your javascript here..
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 <p>官方文档（见 <a href="https://svgjs.com/docs/3.0/getting-started/" target="_blank" rel="noopener">https://svgjs.com/docs/3.0/getting-started/</a> ）对于 JavaScript 脚本环节的部分 <code>&lt;script&gt;...&lt;/script&gt;</code> 是这样写的：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> draw = SVG(<span class="hljs-string">'drawing'</span>).size(<span class="hljs-number">300</span>, <span class="hljs-number">300</span>)<br><span class="hljs-keyword">var</span> rect = draw.rect(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>).attr(&#123; <span class="hljs-attr">fill</span>: <span class="hljs-string">'#f06'</span> &#125;)<br></code></pre></td></tr></table></figure>
-
+<pre><code class="javascript">var draw = SVG(&#39;drawing&#39;).size(300, 300)
+var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
 <p>上述脚本在 jsfiddle.net 网站中测试是无异常的，详见 <a href="https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz" target="_blank" rel="noopener">https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz</a> 。然而，无论我是在 IE 7.0 至 11.0，还是在 Chrome 58 内核的浏览器中，我的本地测试从未成功。因此，整整 2 天里，我都未能从试验的阴影中恢复过来，反反复复进行了无数次试验，均无果而终。</p>
 <h2 id="使用-svg-js-书写脚本和-DOM-的方法"><a href="#使用-svg-js-书写脚本和-DOM-的方法" class="headerlink" title="使用 svg.js 书写脚本和 DOM 的方法"></a>使用 svg.js 书写脚本和 DOM 的方法</h2><p>在无数次的一边尝试、一边网络搜索的过程中，我发现了以下可行的方法：</p>
 <h3 id="1-方法-1"><a href="#1-方法-1" class="headerlink" title="1. 方法 1"></a>1. 方法 1</h3><p>   DOM 文档： <code>&lt;div id=&quot;drawing&quot;&gt;&lt;/div&gt;</code> </p>
@@ -158,6 +179,78 @@
       <tags>
         <tag>JavaScript</tag>
         <tag>SVG</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows 批处理的字符运算</title>
+    <url>/202008200927/</url>
+    <content><![CDATA[<p>字符运算历来是编程中的重要内容，如何拼接字符，如何截取字符，如何判断字符是否存在，如何判断两个字符串是否相同，成为了编程任务中的重要环节。因此，我结合网络的资料和个人的实践经验来总结一下。</p>
+<h2 id="Windows-批处理中字符的基本常识"><a href="#Windows-批处理中字符的基本常识" class="headerlink" title="Windows 批处理中字符的基本常识"></a>Windows 批处理中字符的基本常识</h2><ol>
+<li><p>批处理中变量的赋值符号两侧不能包含空格，如 <code>set str_date=&#39;20200820&#39;</code>，这与很多编程规范是相悖的。</p>
+</li>
+<li><p>批处理中的字符可以不添加双引号，但是如果包含空格的话，必须使用引号，，如 <code>set str_name=&quot;20200820 Windows 批处理的字符运算经验总结&quot;</code>。</p>
+</li>
+<li><p>自定义变量使用 % 来包围来进行引用，即 <code>%变量%</code> ；而 Windows 内置变量（含文件路径变量扩展）则使用 % 符号来引导，即 <code>%内置变量</code> 。</p>
+</li>
+</ol>
+<h2 id="截取字符串"><a href="#截取字符串" class="headerlink" title="截取字符串"></a>截取字符串</h2><h3 id="一般性的字符截取"><a href="#一般性的字符截取" class="headerlink" title="一般性的字符截取"></a>一般性的字符截取</h3><ol>
+<li>基本语法： <code>%**变量名**:~**起点位置**,**截取数量|终点位置**%</code></li>
+</ol>
+<p><strong>起点位置</strong> ：如果为正数，那么就是从左往右截取，而如果为负数，那么就是说从右向左截取；不过无论为正还是为负，截取结果都是不包含处于 <strong>起点位置</strong> 的那个字符的。</p>
+<p><strong>截取数量|终点位置</strong> ：如果为正数，那么就是单纯的 <strong>截取数量</strong> ；如果为负数，那么应当表述为 <strong>终点位置</strong> ，而且，与 <strong>起点位置</strong> 对应，截取结果也是不包含该负数所对应的字符的，即上述的 -5 对应的是终点位置为右侧第 6 个字符截止。</p>
+<p>举例说明，如下：</p>
+<pre><code class="powershell">echo on
+set ifo=abcdefghijklmnopqrstuvwxyz0123456789
+echo %ifo%
+echo.
+echo 截取前4个字符：%ifo:~0,4%
+echo 截取年度：%date:~0,4%
+echo.
+echo 截取最后2个字符：%ifo:~-2%
+echo 截取星期：%date:~-2%
+echo.
+echo 截取第一个到倒数第6个字符：%ifo:~0,-5%
+echo 截取日期（含分隔符）：%date:~0,-3%
+echo.
+echo 从第5个字符开始，截取2个字符：%ifo:~4,2%
+echo 截取月份：%date:~5,2%
+echo 截取天数：%date:~8,2%
+echo.
+echo 从倒数第14个字符开始，截取5个字符：%ifo:~-14,5%
+echo 截取秒数：%time:~3,2%
+echo.
+echo 当前时间是：%time% 即 %time:~0,2%点%time:~3,2%分%time:~6,2%秒%time:~9,2%厘秒
+pause</code></pre>
+<p>当然，我最常用的就是对日期、时间等内置变量的操作。</p>
+<h3 id="文件路径字符的截取"><a href="#文件路径字符的截取" class="headerlink" title="文件路径字符的截取"></a>文件路径字符的截取</h3><p>主要依靠 Windows 内置的扩展变量用法来进行。</p>
+<p>执行 <code>for /?</code> 可以查看路径扩展的</p>
+<p>举例说明，如下（注意，需要另存为 test.bat 文件形式执行）：</p>
+<pre><code class="powershell">@echo off
+echo 当前路径的完整字符串：%0
+echo 当前路径的完整字符串（如被双引号包围，去除双引号）：%~0
+echo 当前路径的所在分区：%~d0
+echo 当前路径的目录：%~p0
+echo 文件名：%~n0
+echo 扩展名：%~x0
+echo 文件属性：%~a0
+echo 修改时间：%~t0
+echo 文件大小：%~z0
+pause</code></pre>
+<p>路径处理，往往都配合 for 函数进行操作。</p>
+<h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><h3 id="变更日志"><a href="#变更日志" class="headerlink" title="变更日志"></a>变更日志</h3><ol>
+<li>2020/08/20 10:49:23，初始版本。</li>
+</ol>
+<h3 id="参考索引"><a href="#参考索引" class="headerlink" title="参考索引"></a>参考索引</h3><ol>
+<li><strong>CharyGao</strong>.<code>DOS命令（cmd）批处理：替换字符串、截取字符串、扩充字符串、获取字符串长度</code>[EB/OL].<a href="https://www.cnblogs.com/Chary/p/No0000A4.html" target="_blank" rel="noopener">https://www.cnblogs.com/Chary/p/No0000A4.html</a>, 2020/08/20.</li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>批处理</tag>
+        <tag>字符运算</tag>
       </tags>
   </entry>
 </search>
