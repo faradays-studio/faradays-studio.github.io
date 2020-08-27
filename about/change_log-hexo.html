@@ -17,8 +17,8 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://faradays-studio.github.io/about/AGPLv3%E7%89%88%E6%9D%83%E5%86%85%E5%AE%B9%E6%A6%82%E8%BF%B0-HHJ-20200220.png">
 <meta property="og:image" content="https://faradays-studio.github.io/about/git.jpg">
-<meta property="article:published_time" content="2020-08-27T13:10:12.984Z">
-<meta property="article:modified_time" content="2020-08-27T13:10:12.984Z">
+<meta property="article:published_time" content="2020-08-27T13:33:19.404Z">
+<meta property="article:modified_time" content="2020-08-27T13:33:19.404Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="编程">
 <meta property="article:tag" content=" 思考">
@@ -153,7 +153,7 @@
 
         <!-- HHJ@20200815��������������ͳ��  -->
         <li><i class="fa fa-file-word-o"></i>
-            <span class="post-count">1.6k words</span>
+            <span class="post-count">1.8k words</span>
         </li>
         <li><i class="fa fa-caret-square-o-right"></i>
             <span class="post-count">7 min</span>
@@ -273,55 +273,7 @@
 </ol>
 <p>git checkout -b &lt;分支名&gt;<br>    git checkout -b blog</p>
 <p>从 服务器 下载更新到本地<br>    由于 hexo 更新后，本地会版本落后，因此需要更新<br>    git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;<br>    git pull origin master<br>        或 git pull origin master:master<br>    git pull origin blog:blog</p>
-<p>出现 <code>HEAD detached at 68e8065</code> 等错误的解决方法：<br>    git branch blog_temp1 blog      # 给 blog 起个 branch 名 blog_temp1<br>    git branch -a<br>    git checkout blog           # Head 指向实际使用的 branch，注意不是 origin/blog<br>    git merge blog_temp1             # 融合到当前 branch<br>        合并时存在问题，如果以本地为准 git  add，以服务器为准则 git  rm XXXX，然后 git commit<br>        再重新执行合并<br>    git branch -d blog_temp1         # 删除临时 branch</p>
-<p>删除特定 commit (# 由于 hexo 自身存在一个版本库，因此需要进行相应的处理)<br>    git log<br>    git rebase -i XXX       # 将需要删除的最早的提交之前的一次提交做基础<br>        将相关 commit 记录中的 pick 改为 drop，保存即实现本地删除。<br>    git push origin blog -f    # 强制提交本地版本到远程（实现远程删除）<br>    git status       # 查看状态<br>    git log –oneline<br>    git pull origin blog:blog<br>    git log –oneline</p>
-<pre><code>cd D:\WebSites\faradays-studio.hexo\.deploy_git
-执行上述过程，如出现 `HEAD detached ` 等报错，注意分支名称实际为 master，
-执行 hexo 同步至远程
-
-
-```Shell
-# 从 GitHub 下拉取版本库，确保本地文件为最新
-git pull origin blog:blog
-# 查看更新日志
-git log
-    相关 log 文件使用 VI 的形式打开，因此可以按 shift + G 跳转到底，按 q 退出修改。
-# 将需要删除的最早提交的前一次提交，设置为版本基础
-git rebase -i 982c78fc82a2a3804233e9ff7ef315fc21dc0822
-    在弹出文件中，将会展示在该提交之后的每个提交信息
-    将相关 commit 记录中的 pick 改为 drop，保存即实现本地删除。
-    出现 `HEAD detached at 982c78f` 报警
-
-    # 查看当前分支情况
-    git branch -a
-    # 将当前分支改名
-    git branch blog_temp1 blog
-    # 解决由于删除造成的版本 merge 报警
-    git rm -r about
-    git rm content.json
-    git rebase --continue
-    git commit
-    git push origin blog -f
-
-
-    # 合并分支
-    git merge blog_temp1
-    # 重新对 Head 指向 branch（测试表明该步骤不能执行）
-    # git checkout blog
-    # 删除临时的版本
-    git branch -d blog_temp1
-git log --oneline
-
-# git pull origin blog:blog 等命令无法对 hexo 的版本库进行更新
-git rebase -i 982c78fc82a2a3804233e9ff7ef315fc21dc0822
-# 查看状态
-git status
-git rm -r about
-git rm content.json
-git rebase --continue
-git log
-git log --oneline
-```</code></pre><p>$git clone &lt;远程Arepository&gt; #克隆你fork出来的分支<br>$git remote add &lt;远程B repository标签&gt; <a href="mailto:git@github.com">git@github.com</a>:XXXX/ceph.git #添加远程B repository标签<br>$git pull &lt;远程B厂库标签&gt; master:master  #从远程Brepository的master分支拉取最新objects合并到本地master分支<br>$git checkout YYYY #切换到要修改的分支上<br>$git branch develop; git checkout develop #在当前分支的基础上创建一个开发分支，并切换到该分支上，你将在该分支上coding</p>
+<p>$git clone &lt;远程Arepository&gt; #克隆你fork出来的分支<br>$git remote add &lt;远程B repository标签&gt; <a href="mailto:git@github.com">git@github.com</a>:XXXX/ceph.git #添加远程B repository标签<br>$git pull &lt;远程B厂库标签&gt; master:master  #从远程Brepository的master分支拉取最新objects合并到本地master分支<br>$git checkout YYYY #切换到要修改的分支上<br>$git branch develop; git checkout develop #在当前分支的基础上创建一个开发分支，并切换到该分支上，你将在该分支上coding</p>
 <p>coding…… #在工作区coding</p>
 <p>$git add .#将修改保存到索引区<br>$git commit -a #将修改提交到本地分区</p>
 <p>$git push origin my_test:my_test #将本地分支my_test提交到远程A repository的my_test分支上</p>
@@ -337,6 +289,90 @@ git log --oneline
 <li><p>Jack_Chao.<code>Git 快速使用 之 冲突 merge 快速解决</code>[EB/OL].<a href="https://www.jianshu.com/p/50ef88bda474" target="_blank" rel="noopener">https://www.jianshu.com/p/50ef88bda474</a>, 2020/08/26.</p>
 </li>
 <li><p>星辰之力.<code>git push &amp; git pull 推送/拉取分支</code>[EB/OL].<a href="https://www.cnblogs.com/zhujiabin/p/9641305.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhujiabin/p/9641305.html</a>, 2020/08/27.</p>
+</li>
+</ol>
+<h4 id="hexo-博客删除部分-commit-的操作实践"><a href="#hexo-博客删除部分-commit-的操作实践" class="headerlink" title="hexo 博客删除部分 commit 的操作实践"></a>hexo 博客删除部分 commit 的操作实践</h4><p>经过 2 天半的来回测试，终于删除了上传了隐藏文件 hid*.html 文件的提交。</p>
+<ol>
+<li><p>出现 <code>HEAD detached at 68e8065</code> 等错误的解决方法：</p>
+<pre><code class="Shell"> # 给 blog 起个 branch 名 blog_temp1
+ git branch blog_temp1 blog
+ git branch -a
+ # Head 指向实际使用的 branch，注意不是 origin/blog
+ git checkout blog
+ # 融合到当前 branch
+ git merge blog_temp1
+     合并时存在问题，如果以本地为准 git  add，以服务器为准则 git  rm XXXX，然后 git commit
+     再重新执行合并
+ # 删除临时 branch
+ git branch -d blog_temp1</code></pre>
+</li>
+<li><p>删除特定 commit (# 由于 hexo 自身存在一个版本库，因此需要进行相应的处理)</p>
+<pre><code class="Shell"> git log  
+ git rebase -i XXX       # 将需要删除的最早的提交之前的一次提交做基础 
+     将相关 commit 记录中的 pick 改为 drop，保存即实现本地删除。
+ git push origin blog -f    # 强制提交本地版本到远程（实现远程删除）
+ git status       # 查看状态
+ git log --oneline
+ git pull origin blog:blog
+ git log --oneline
+
+ cd D:\WebSites\faradays-studio.hexo\.deploy_git
+ 执行上述过程，如出现 `HEAD detached ` 等报错，注意分支名称实际为 master，
+ 执行 hexo 同步至远程</code></pre>
+</li>
+<li><p>具体的操作过程：</p>
+<pre><code class="Shell"> # 从 GitHub 下拉取版本库，确保本地文件为最新
+ git pull origin blog:blog
+ # 查看更新日志
+ git log
+     相关 log 文件使用 VI 的形式打开，因此可以按 shift + G 跳转到底，按 q 退出修改。
+ # 将需要删除的最早提交的前一次提交，设置为版本基础
+ git rebase -i 982c78fc82a2a3804233e9ff7ef315fc21dc0822
+     在弹出文件中，将会展示在该提交之后的每个提交信息
+     将相关 commit 记录中的 pick 改为 drop，保存即实现本地删除。
+     出现 `HEAD detached at 982c78f` 报警
+
+     # 查看当前分支情况
+     git branch -a
+     # 将当前分支改名
+     git branch blog_temp1 blog
+     # 解决由于删除造成的版本 merge 报警
+     git rm -r about
+     git rm content.json
+     git rebase --continue
+     git commit
+     git push origin blog -f
+
+     # 合并分支
+     #git merge blog_temp1
+     # 重新对 Head 指向 branch（测试表明该步骤不能执行）
+     # git checkout blog
+     # 删除临时的版本
+     git branch -d blog_temp1
+ git log --oneline
+
+ # git pull origin blog:blog 等命令无法对 hexo 的版本库进行更新，因此执行以下操作
+ # 猜测删除 .deploy_git 文件夹，重新建立版本库理论可行
+ git rebase -i 982c78fc82a2a3804233e9ff7ef315fc21dc0822
+ # 查看状态
+ git status
+ git rm -r about
+ git rm content.json
+ git rebase --continue
+ git log
+ git log --oneline
+
+ #至此，各个版本完成更新，可以使用 hexo 重新生成一次，确保删除的文件被生成
+ hexo -d g
+
+ # 查看本地版本日志
+ git log --oneline
+ # 解决由于前边删除文件导致的版本文件数量不一致的问题
+ git pull -r
+ # 下载网络更新到本地
+ git pull origin blog:blog
+ # 检查更新情况后的版本日志
+ git log --oneline</code></pre>
 </li>
 </ol>
 <h3 id="研究总结"><a href="#研究总结" class="headerlink" title="研究总结"></a>研究总结</h3><h4 id="独立页的功能测试"><a href="#独立页的功能测试" class="headerlink" title="独立页的功能测试"></a>独立页的功能测试</h4><ol>
@@ -357,7 +393,7 @@ git log --oneline
         <!-- HHJ@20200815 -->
         <br /><br /><br />
 
-        <p>最后更新： 2020/08/27 21:10:12</p>
+        <p>最后更新： 2020/08/27 21:33:19</p>
         <p>
 
                 
@@ -508,7 +544,7 @@ git log --oneline
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <!-- <nav class="post-toc-wrap"> -->
         <nav class="tocbot">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#项目概要"><span class="post-toc-text">项目概要</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hexo-基础知识"><span class="post-toc-text">hexo 基础知识</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Faradays-主题结构"><span class="post-toc-text">Faradays 主题结构</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用注意事项"><span class="post-toc-text">使用注意事项</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Git-命令集成"><span class="post-toc-text">Git 命令集成</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#研究总结"><span class="post-toc-text">研究总结</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#独立页的功能测试"><span class="post-toc-text">独立页的功能测试</span></a></li></ol></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#项目概要"><span class="post-toc-text">项目概要</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hexo-基础知识"><span class="post-toc-text">hexo 基础知识</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Faradays-主题结构"><span class="post-toc-text">Faradays 主题结构</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用注意事项"><span class="post-toc-text">使用注意事项</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Git-命令集成"><span class="post-toc-text">Git 命令集成</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#hexo-博客删除部分-commit-的操作实践"><span class="post-toc-text">hexo 博客删除部分 commit 的操作实践</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#研究总结"><span class="post-toc-text">研究总结</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#独立页的功能测试"><span class="post-toc-text">独立页的功能测试</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
     
@@ -545,7 +581,7 @@ git log --oneline
     </span>
 
     <!-- HHJ@20200815������վ������ͳ��  -->
-    &emsp;总文本数：<span class="post-count">2.6k</span>
+    &emsp;总文本数：<span class="post-count">3.3k</span>
 </p>
 
 
@@ -606,10 +642,10 @@ git log --oneline
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/English/">English</a><a class="category-link" href="/categories/Faradays-Studio/">Faradays' Studio</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+            <a class="category-link" href="/categories/English/">English</a><a class="category-link" href="/categories/Faradays-Studio/">Faradays' Studio</a><a class="category-link" href="/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/">电脑爱好者</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
+            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -654,7 +690,7 @@ git log --oneline
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
+            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
         </div>
     </div>
 </div>
