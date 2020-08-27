@@ -3,24 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>如何使用 svg.js 创建 svg 文档 | Blog of Faradays&#39; Studio</title>
+  <title>hexo 博客系统开发笔记 | Blog of Faradays&#39; Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="Faradays' Studio, Blog, 编程, 思考, 文学作品, 实践, 总结" />
   
-  <meta name="description" content="前段时间，我尝试了使用 svg.js 来创建 svg dom 文档时，并没有成功。经过反复多次的尝试，并网络检索了一些信息，初步确认为官方文档未及时更新，导致了编码错误。 使用 svg.js 遇到的问题举个例子，dom 文档 .html 的结构如下： &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;Creating SVG">
-<meta property="og:type" content="article">
-<meta property="og:title" content="如何使用 svg.js 创建 svg 文档">
-<meta property="og:url" content="https://faradays-studio.github.io/201902090951/index.html">
+  <meta name="description" content="项目概要 创建于: 2020&#x2F;07&#x2F;05 08:23:50   0.0.0  更新于: 2020&#x2F;08&#x2F;23 23:32:05   0.1.5  项目名称： Faradays 〔Ocean〕  设计理念：立足现在，放眼未来。  许可协议：请遵守 APGLv3 协议，侵权必究！   Licensed under  GNU APGLv3.   You may send your request to">
+<meta property="og:type" content="website">
+<meta property="og:title" content="hexo 博客系统开发笔记">
+<meta property="og:url" content="https://faradays-studio.github.io/about/change_log-hexo.html">
 <meta property="og:site_name" content="Blog of Faradays&#39; Studio">
-<meta property="og:description" content="前段时间，我尝试了使用 svg.js 来创建 svg dom 文档时，并没有成功。经过反复多次的尝试，并网络检索了一些信息，初步确认为官方文档未及时更新，导致了编码错误。 使用 svg.js 遇到的问题举个例子，dom 文档 .html 的结构如下： &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;Creating SVG">
+<meta property="og:description" content="项目概要 创建于: 2020&#x2F;07&#x2F;05 08:23:50   0.0.0  更新于: 2020&#x2F;08&#x2F;23 23:32:05   0.1.5  项目名称： Faradays 〔Ocean〕  设计理念：立足现在，放眼未来。  许可协议：请遵守 APGLv3 协议，侵权必究！   Licensed under  GNU APGLv3.   You may send your request to">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-02-09T01:51:30.000Z">
-<meta property="article:modified_time" content="2019-02-10T13:51:52.000Z">
+<meta property="og:image" content="https://faradays-studio.github.io/about/AGPLv3%E7%89%88%E6%9D%83%E5%86%85%E5%AE%B9%E6%A6%82%E8%BF%B0-HHJ-20200220.png">
+<meta property="og:image" content="https://faradays-studio.github.io/about/git.jpg">
+<meta property="article:published_time" content="2020-08-27T13:10:12.984Z">
+<meta property="article:modified_time" content="2020-08-27T13:10:12.984Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="JavaScript">
-<meta property="article:tag" content="SVG">
+<meta property="article:tag" content="编程">
+<meta property="article:tag" content=" 思考">
+<meta property="article:tag" content=" 文学作品">
+<meta property="article:tag" content=" 实践">
+<meta property="article:tag" content=" 总结">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://faradays-studio.github.io/about/AGPLv3%E7%89%88%E6%9D%83%E5%86%85%E5%AE%B9%E6%A6%82%E8%BF%B0-HHJ-20200220.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -30,21 +36,6 @@
   <!-- HHJ@20200822�������ʽ�ļ��ĵ��ã�Ǩ���� head_more.ejs �ļ� -->
   <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
    <!-- �ο� https://hexo.io/zh-cn/docs/helpers ���˽�������ú������÷� -->
-
-
-    <!-- �﷨���� 20200821 ����������ҳ�������  -->
-    <!-- HHJ@20200821�����Ա���ϵͳ�� style.styl ���в�����ʽ��������¹���Ч����� -->
-    <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
-    <link rel="stylesheet" href="/css/github.min.css">
-    <!-- <link rel="stylesheet" href="/css/github.min.css"> -->
-    <!-- 
-<link rel="stylesheet" href="/css/github.min.css">
- -->
-
-    <!-- �������ۣ�HHJ@20200822  -->
-    <!-- import 'gitalk/dist/gitalk.css' -->
-    <!-- import Gitalk from 'gitalk' -->
-
 
 
   
@@ -124,7 +115,7 @@
 
 
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-如何使用svg.js创建svg文档" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -132,20 +123,10 @@
         
   
     <h1 class="post-title" itemprop="name">
-      如何使用 svg.js 创建 svg 文档
+      hexo 博客系统开发笔记
     </h1>
     <div class="post-title-bar">
       <ul>
-          
-              <li>
-                  <i class="fa fa-code-fork"></i>
-                  <!-- HHJ@20200823�� forEach �޸�Ϊ each  -->
-                  
-                      <a href="/categories/编程/">
-                      编程
-                      </a>
-                  
-              </li>
           
 
         <li>
@@ -153,7 +134,7 @@
           <span id="busuanzi_value_page_pv"></span>
         </li>
         <li>
-          <i class="fa fa-calendar-plus-o"></i>  2019-02-09
+          <i class="fa fa-calendar-plus-o"></i>  2020-08-27
         </li>
 
         <!-- HHJ@20200825��������ģʽ  -->
@@ -161,17 +142,7 @@
             <i class="fa fa-user-o"></i>
             <span>
             
-                
-                
-                    <a href="https://faradays-studio.github.io/">David Faraday</a>
-
-                    
-
-                    
-
-                    
-                
-
+                <a href="https://faradays-studio.github.io/">David Faraday</a>
             
             </span>
         </li>
@@ -179,18 +150,13 @@
 
         <!-- HHJ@20200812��20200815���� li ��ǩλ�ã��������ɿհ��ַ�  -->
         
-        <li>
-                <i class="fa fa-copyright"></i>
-                100%
-        </li>
-        
 
         <!-- HHJ@20200815��������������ͳ��  -->
         <li><i class="fa fa-file-word-o"></i>
-            <span class="post-count">547 words</span>
+            <span class="post-count">1.6k words</span>
         </li>
         <li><i class="fa fa-caret-square-o-right"></i>
-            <span class="post-count">2 min</span>
+            <span class="post-count">7 min</span>
         </li>
       </ul>
 
@@ -207,59 +173,196 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <p>前段时间，我尝试了使用 svg.js 来创建 svg dom 文档时，并没有成功。经过反复多次的尝试，并网络检索了一些信息，初步确认为官方文档未及时更新，导致了编码错误。</p>
-<h2 id="使用-svg-js-遇到的问题"><a href="#使用-svg-js-遇到的问题" class="headerlink" title="使用 svg.js 遇到的问题"></a>使用 svg.js 遇到的问题</h2><p><strong>举个例子，dom 文档 <some_page>.html 的结构如下：</strong></p>
-<pre><code class="html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Creating SVG with SVG.js&lt;/title&gt;
-&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
-&lt;script src=&quot;https://cdn.bootcss.com/svg.js/3.0.11/svg.min.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
+            <h2 id="项目概要"><a href="#项目概要" class="headerlink" title="项目概要"></a>项目概要</h2><ul>
+<li><p>创建于: 2020/07/05 08:23:50   0.0.0</p>
+</li>
+<li><p>更新于: 2020/08/23 23:32:05   0.1.5</p>
+</li>
+<li><p>项目名称： Faradays 〔Ocean〕</p>
+</li>
+<li><p><strong>设计理念</strong>：立足现在，放眼未来。</p>
+</li>
+<li><p><strong>许可协议</strong>：请遵守 APGLv3 协议，侵权必究！</p>
+<p>  <strong>Licensed under  GNU APGLv3.</strong></p>
+<p>  You may send your request to <a href="mailto:imhhj@vip.qq.com">imhhj@vip.qq.com</a> and wait for your License Confirmation email.</p>
+<p>  See <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener">https://www.gnu.org/licenses/agpl-3.0.html</a> or <a href="https://choosealicense.com/licenses/agpl-3.0/" target="_blank" rel="noopener">https://choosealicense.com/licenses/agpl-3.0/</a> for the license details.</p>
+<p>  <img src="AGPLv3%E7%89%88%E6%9D%83%E5%86%85%E5%AE%B9%E6%A6%82%E8%BF%B0-HHJ-20200220.png" alt="AGPLv3版权内容概述-HHJ"></p>
+</li>
+</ul>
+<h2 id="hexo-基础知识"><a href="#hexo-基础知识" class="headerlink" title="hexo 基础知识"></a>hexo 基础知识</h2><p>hexo 内置变量 <a href="https://hexo.io/zh-cn/docs/variables.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/variables.html</a></p>
+<p>layout.ejs 是整个页面的入口，所有的页面都基于 layout.ejs生成</p>
+<h3 id="Faradays-主题结构"><a href="#Faradays-主题结构" class="headerlink" title="Faradays 主题结构"></a>Faradays 主题结构</h3><pre><code class="shell">layout 目录清单如下：
+│  archive.ejs
+│  category.ejs
+│  index.ejs        // 首页
+│  layout.ejs       // 布局（所有页）
+│  page.ejs
+│  post.ejs         // 文章页
+│  tag.ejs
+│  
+├─_partial
+│  │  after-footer.ejs
+│  │  archive-post.ejs
+│  │  archive.ejs
+│  │  article.ejs
+│  │  footer.ejs
+│  │  head.ejs
+│  │  header.ejs
+│  │  mobile-nav.ejs
+│  │  search.ejs
+│  │  sidebar.ejs
+│  │  
+│  ├─plugins
+│  │  ├─analytics
+│  │  │      baidu-analytics.ejs
+│  │  │      cnzz-analytics.ejs
+│  │  │      google-analytics.ejs
+│  │  │      
+│  │  ├─comments
+│  │  │      changyan.ejs
+│  │  │      gitment.ejs
+│  │  │      wangyiyun.ejs
+│  │  │      youyan.ejs
+│  │  │      
+│  │  └─sites
+│  │          visit.ejs
+│  │          
+│  └─post
+│          category.ejs
+│          copyright.ejs
+│          date.ejs
+│          gallery.ejs
+│          nav.ejs
+│          reward.ejs
+│          share.ejs
+│          tag.ejs
+│          title.ejs
+│          toc.ejs
+│          
+└─_widget
+        archive.ejs
+        category.ejs
+        recent_posts.ejs
+        tag.ejs
+        tagcloud.ejs</code></pre>
+<h3 id="使用注意事项"><a href="#使用注意事项" class="headerlink" title="使用注意事项"></a>使用注意事项</h3><ol>
+<li>Front-matter 中的数字应当使用引号包围，才能形成字符；如果需要转换为数字，可以使用相应的 JavaScript 转换函数。</li>
+</ol>
+<h3 id="Git-命令集成"><a href="#Git-命令集成" class="headerlink" title="Git 命令集成"></a>Git 命令集成</h3><p><img src="git.jpg" alt="Git基本使用方法示意图"></p>
+<ol>
+<li>测试 GitHub 可访问性<blockquote>
+<p>ssh -T <a href="mailto:git@github.com">git@github.com</a></p>
+</blockquote>
+</li>
+<li>更新主分支（下载更新）<blockquote>
+<p>D:   &amp;&amp;   D:\faradays-studio.github\faradays-studio.github.io   &amp;&amp;    git checkout</p>
+</blockquote>
+</li>
+<li>更新其他分支（下载更新）<blockquote>
+<p>git checkout -b blog origin/blog<br>git checkout -t      origin/blog</p>
+</blockquote>
+</li>
+<li>提交到本地<blockquote>
+<p>git commit -a -m u”pdate the website statement”</p>
+</blockquote>
+</li>
+<li>提交到GitHub<blockquote>
+<p>git push origin master</p>
+</blockquote>
+</li>
+</ol>
+<p>git checkout -b &lt;分支名&gt;<br>    git checkout -b blog</p>
+<p>从 服务器 下载更新到本地<br>    由于 hexo 更新后，本地会版本落后，因此需要更新<br>    git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;<br>    git pull origin master<br>        或 git pull origin master:master<br>    git pull origin blog:blog</p>
+<p>出现 <code>HEAD detached at 68e8065</code> 等错误的解决方法：<br>    git branch blog_temp1 blog      # 给 blog 起个 branch 名 blog_temp1<br>    git branch -a<br>    git checkout blog           # Head 指向实际使用的 branch，注意不是 origin/blog<br>    git merge blog_temp1             # 融合到当前 branch<br>        合并时存在问题，如果以本地为准 git  add，以服务器为准则 git  rm XXXX，然后 git commit<br>        再重新执行合并<br>    git branch -d blog_temp1         # 删除临时 branch</p>
+<p>删除特定 commit (# 由于 hexo 自身存在一个版本库，因此需要进行相应的处理)<br>    git log<br>    git rebase -i XXX       # 将需要删除的最早的提交之前的一次提交做基础<br>        将相关 commit 记录中的 pick 改为 drop，保存即实现本地删除。<br>    git push origin blog -f    # 强制提交本地版本到远程（实现远程删除）<br>    git status       # 查看状态<br>    git log –oneline<br>    git pull origin blog:blog<br>    git log –oneline</p>
+<pre><code>cd D:\WebSites\faradays-studio.hexo\.deploy_git
+执行上述过程，如出现 `HEAD detached ` 等报错，注意分支名称实际为 master，
+执行 hexo 同步至远程
 
-&lt;body&gt;
-&lt;div id=&quot;drawing&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
-  // write down your javascript here..
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<p>官方文档（见 <a href="https://svgjs.com/docs/3.0/getting-started/" target="_blank" rel="noopener">https://svgjs.com/docs/3.0/getting-started/</a> ）对于 JavaScript 脚本环节的部分 <code>&lt;script&gt;...&lt;/script&gt;</code> 是这样写的：</p>
-<pre><code class="javascript">var draw = SVG(&#39;drawing&#39;).size(300, 300)
-var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
-<p>上述脚本在 jsfiddle.net 网站中测试是无异常的，详见 <a href="https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz" target="_blank" rel="noopener">https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz</a> 。然而，无论我是在 IE 7.0 至 11.0，还是在 Chrome 58 内核的浏览器中，我的本地测试从未成功。因此，整整 2 天里，我都未能从试验的阴影中恢复过来，反反复复进行了无数次试验，均无果而终。</p>
-<h2 id="使用-svg-js-书写脚本和-DOM-的方法"><a href="#使用-svg-js-书写脚本和-DOM-的方法" class="headerlink" title="使用 svg.js 书写脚本和 DOM 的方法"></a>使用 svg.js 书写脚本和 DOM 的方法</h2><p>在无数次的一边尝试、一边网络搜索的过程中，我发现了以下可行的方法：</p>
-<h3 id="1-方法-1"><a href="#1-方法-1" class="headerlink" title="1. 方法 1"></a>1. 方法 1</h3><p>   DOM 文档： <code>&lt;div id=&quot;drawing&quot;&gt;&lt;/div&gt;</code> </p>
-<p>   脚本 1： <code>var draw = SVG().addTo(&#39;#drawing&#39;).size(1024,200);</code> </p>
-<p>   或采取以下脚本： </p>
-<p>   脚本 2： <code>var draw = SVG().addTo(&#39;#drawing&#39;).size(&#39;100%&#39;, &#39;100%&#39;);</code></p>
-<h3 id="2-方法-2"><a href="#2-方法-2" class="headerlink" title="2. 方法 2"></a>2. 方法 2</h3><p>   DOM 文档： <code>&lt;div class=&quot;drawing&quot;&gt;&lt;/div&gt;</code></p>
-<p>   脚本 1： <code>var draw = SVG().addTo(&#39;.drawing&#39;).size(1024,200);</code> </p>
-<p>   或采取以下脚本： </p>
-<p>   脚本 2： <code>var draw = SVG().addTo(&#39;.drawing&#39;).size(&#39;100%&#39;, &#39;100%&#39;);</code></p>
-<h3 id="3-方法-3"><a href="#3-方法-3" class="headerlink" title="3. 方法 3"></a>3. 方法 3</h3><p>   DOM 文档： <code>&lt;svg id=&quot;drawing&quot;&gt;&lt;/svg&gt;</code> </p>
-<p>   脚本 1： <code>var draw = SVG(&#39;#drawing&#39;).size(1024, 200);</code></p>
-<p>   或采取以下脚本：</p>
-<p>   脚本 2： <code>var draw = SVG(&#39;#drawing&#39;).size(&#39;100%&#39;, &#39;100%&#39;);</code></p>
-<p>收工完事！</p>
+
+```Shell
+# 从 GitHub 下拉取版本库，确保本地文件为最新
+git pull origin blog:blog
+# 查看更新日志
+git log
+    相关 log 文件使用 VI 的形式打开，因此可以按 shift + G 跳转到底，按 q 退出修改。
+# 将需要删除的最早提交的前一次提交，设置为版本基础
+git rebase -i 982c78fc82a2a3804233e9ff7ef315fc21dc0822
+    在弹出文件中，将会展示在该提交之后的每个提交信息
+    将相关 commit 记录中的 pick 改为 drop，保存即实现本地删除。
+    出现 `HEAD detached at 982c78f` 报警
+
+    # 查看当前分支情况
+    git branch -a
+    # 将当前分支改名
+    git branch blog_temp1 blog
+    # 解决由于删除造成的版本 merge 报警
+    git rm -r about
+    git rm content.json
+    git rebase --continue
+    git commit
+    git push origin blog -f
+
+
+    # 合并分支
+    git merge blog_temp1
+    # 重新对 Head 指向 branch（测试表明该步骤不能执行）
+    # git checkout blog
+    # 删除临时的版本
+    git branch -d blog_temp1
+git log --oneline
+
+# git pull origin blog:blog 等命令无法对 hexo 的版本库进行更新
+git rebase -i 982c78fc82a2a3804233e9ff7ef315fc21dc0822
+# 查看状态
+git status
+git rm -r about
+git rm content.json
+git rebase --continue
+git log
+git log --oneline
+```</code></pre><p>$git clone &lt;远程Arepository&gt; #克隆你fork出来的分支<br>$git remote add &lt;远程B repository标签&gt; <a href="mailto:git@github.com">git@github.com</a>:XXXX/ceph.git #添加远程B repository标签<br>$git pull &lt;远程B厂库标签&gt; master:master  #从远程Brepository的master分支拉取最新objects合并到本地master分支<br>$git checkout YYYY #切换到要修改的分支上<br>$git branch develop; git checkout develop #在当前分支的基础上创建一个开发分支，并切换到该分支上，你将在该分支上coding</p>
+<p>coding…… #在工作区coding</p>
+<p>$git add .#将修改保存到索引区<br>$git commit -a #将修改提交到本地分区</p>
+<p>$git push origin my_test:my_test #将本地分支my_test提交到远程A repository的my_test分支上</p>
+<p>查看分支<br>    git branch -a<br>    git branch -v<br>    git branch -r<br>查看最近的 commit 信息<br>    git show HEAD<br>        按 q 退出</p>
+<ol>
+<li><p>UniqueColor.<code>git chekout分支遇到问题：need merge</code>[EB/OL].<a href="https://www.cnblogs.com/UniqueColor/p/6594942.html" target="_blank" rel="noopener">https://www.cnblogs.com/UniqueColor/p/6594942.html</a>, 2020/08/26.</p>
+</li>
+<li><p>奔跑的小龙码.<code>git删除指定commit</code>[EB/OL].<a href="https://www.cnblogs.com/lwcode6/p/11809973.html" target="_blank" rel="noopener">https://www.cnblogs.com/lwcode6/p/11809973.html</a>, 2020/08/26.</p>
+<blockquote>
+<p>通过 add /rm 来指定本机处理措施，git commit -s，再 pull，再push</p>
+</blockquote>
+</li>
+<li><p>Jack_Chao.<code>Git 快速使用 之 冲突 merge 快速解决</code>[EB/OL].<a href="https://www.jianshu.com/p/50ef88bda474" target="_blank" rel="noopener">https://www.jianshu.com/p/50ef88bda474</a>, 2020/08/26.</p>
+</li>
+<li><p>星辰之力.<code>git push &amp; git pull 推送/拉取分支</code>[EB/OL].<a href="https://www.cnblogs.com/zhujiabin/p/9641305.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhujiabin/p/9641305.html</a>, 2020/08/27.</p>
+</li>
+</ol>
+<h3 id="研究总结"><a href="#研究总结" class="headerlink" title="研究总结"></a>研究总结</h3><h4 id="独立页的功能测试"><a href="#独立页的功能测试" class="headerlink" title="独立页的功能测试"></a>独立页的功能测试</h4><ol>
+<li><p>测试表明，独立页面使用 hexo 内置的渲染有以下特点（.md 文件直接放相应的目录下，不做任何特殊处理，系统原生使用 layout: page 渲染）：</p>
+<ul>
+<li>不支持标签、分类。</li>
+<li>生成的 .HTML 名称是 .md 文件名，与默认的 <strong>_post</strong> 目录下的文件按项目配置文件 <strong>_config.yml</strong> 中定义的 permalink 格式是有明显区别的。</li>
+<li>相关页面不会被索引到首页、归档页，也不会进入使用 site.posts 循环读取的时间轴页上。</li>
+<li>个人感觉：使用 hexo 的 Front-matter 指定的标题样式比使用 h1 配置要合适一点（因为默认的 h1 渲染出来的文字太大了！！！）</li>
+<li>独立页面中的链接的 .html 扩展名不能删除，也不会被裁减。</li>
+<li>在页面中定义 permalink 、 path 等均毫无意义，独立页仍然使用 <strong>:title（文件名）.html</strong> 作为连接名（实际上，个人还是喜欢这种形式的链接，名称固定，一目了然，而且只要不放出来，别人就不一定能够猜出来）</li>
+</ul>
+</li>
+</ol>
 
             <div class="post-copyright">
     <div class="content">
         <!-- HHJ@20200815 -->
         <br /><br /><br />
 
-        <p>最后更新： 2019/02/10 21:51:52</p>
+        <p>最后更新： 2020/08/27 21:10:12</p>
         <p>
 
                 
 
                 
-                    
-                        
-                            作者：
-                        
-                    <a href="https://faradays-studio.github.io/">David Faraday</a>
-                
 
                 
 
@@ -271,15 +374,17 @@ var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
 
         
         
+            <p>编著：
+                <a href="https://faradays-studio.github.io/">David Faraday</a>
+            </p>
+        
 
-        <p>原始链接： <a class="post-url" href="/201902090951/" title="如何使用 svg.js 创建 svg 文档">https://faradays-studio.github.io/201902090951/</a>
+        <p>原始链接： <a class="post-url" href="/about/change_log-hexo.html" title="hexo 博客系统开发笔记">https://faradays-studio.github.io/about/change_log-hexo.html</a>
         </p>
 
         <!-- HHJ@20200815 -->
         
-            <p>
-            许可协议： <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"  title="创作共用许可协议：署名-非商业性-相同方式共享" target="_blank">CC BY-NC-SA 4.0</a>.
-            </p>
+            <p>引用、演绎等请注明出处，共创和谐社会，谢谢你的合作！</p>
         
 
         <footer>
@@ -348,7 +453,7 @@ var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.github.io/201902090951/&title=《如何使用 svg.js 创建 svg 文档》 — Blog of Faradays' Studio&pic=https://faradays-studio.github.ioimages/logo-Faradays' Studio.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.github.io/about/change_log-hexo.html&title=《hexo 博客系统开发笔记》 — Blog of Faradays' Studio&pic=https://faradays-studio.github.ioimages/logo-Faradays' Studio.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -358,22 +463,22 @@ var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://faradays-studio.github.io/201902090951/&title=《如何使用 svg.js 创建 svg 文档》 — Blog of Faradays' Studio&source=自信人生二百里，会当击水三千里！" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://faradays-studio.github.io/about/change_log-hexo.html&title=《hexo 博客系统开发笔记》 — Blog of Faradays' Studio&source=自信人生二百里，会当击水三千里！" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://faradays-studio.github.io/201902090951/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://faradays-studio.github.io/about/change_log-hexo.html" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《如何使用 svg.js 创建 svg 文档》 — Blog of Faradays' Studio&url=https://faradays-studio.github.io/201902090951/&via=https://faradays-studio.github.io" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《hexo 博客系统开发笔记》 — Blog of Faradays' Studio&url=https://faradays-studio.github.io/about/change_log-hexo.html&via=https://faradays-studio.github.io" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://faradays-studio.github.io/201902090951/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://faradays-studio.github.io/about/change_log-hexo.html" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -383,7 +488,7 @@ var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://faradays-studio.github.io/201902090951/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://faradays-studio.github.io/about/change_log-hexo.html" alt="微信分享二维码">
 </div>
 
 
@@ -393,15 +498,6 @@ var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
         <ul class="article-footer-menu" style="margin-top:10px;">
             
             
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
-      
-    <a href="/tags/SVG/" class="color4">SVG</a>
-      
-  </li>
-
         </ul>
         
     </footer>
@@ -412,34 +508,11 @@ var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <!-- <nav class="post-toc-wrap"> -->
         <nav class="tocbot">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用-svg-js-遇到的问题"><span class="post-toc-text">使用 svg.js 遇到的问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用-svg-js-书写脚本和-DOM-的方法"><span class="post-toc-text">使用 svg.js 书写脚本和 DOM 的方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-方法-1"><span class="post-toc-text">1. 方法 1</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-方法-2"><span class="post-toc-text">2. 方法 2</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-方法-3"><span class="post-toc-text">3. 方法 3</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#项目概要"><span class="post-toc-text">项目概要</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hexo-基础知识"><span class="post-toc-text">hexo 基础知识</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Faradays-主题结构"><span class="post-toc-text">Faradays 主题结构</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用注意事项"><span class="post-toc-text">使用注意事项</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Git-命令集成"><span class="post-toc-text">Git 命令集成</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#研究总结"><span class="post-toc-text">研究总结</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#独立页的功能测试"><span class="post-toc-text">独立页的功能测试</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
     
     
-<nav id="article-nav">
-  
-    <a href="/202006071600/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <!-- HHJ@20200812  -->
-        <!-- <i class="fa fa-hand-o-left" aria-hidden="true"></i>  -->
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
-        
-          网站框架更新概要
-        
-      </span>
-    </a>
-  
-  
-    <a href="/201902080900/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">How to creat svg document with svg.js</span>
-      <!-- <i class="fa fa-hand-o-right" aria-hidden="true"></i>  -->
-      <i class="fa fa-arrow-right" aria-hidden="true"></i>
-    </a>
-  
-</nav>
-
 
 
     

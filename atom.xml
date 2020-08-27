@@ -48,11 +48,11 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://faradays-studio.github.io/202008092029/"/>
-    <id>https://faradays-studio.github.io/202008092029/</id>
-    <published>2020-08-09T12:29:04.724Z</published>
-    <updated>2020-08-20T01:34:32.823Z</updated>
+    <title>Hello World（世界，你好）</title>
+    <link href="https://faradays-studio.github.io/202008090000/"/>
+    <id>https://faradays-studio.github.io/202008090000/</id>
+    <published>2020-08-08T16:00:00.000Z</published>
+    <updated>2020-08-23T16:02:19.426Z</updated>
     
     <content type="html"><![CDATA[<p>追求卓越！</p>]]></content>
     
@@ -73,46 +73,22 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://faradays-studio.github.io/202006072043/"/>
-    <id>https://faradays-studio.github.io/202006072043/</id>
-    <published>2020-06-07T12:43:14.873Z</published>
-    <updated>2020-08-20T01:33:49.173Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
-    
-      <category term="Faradays&#39; Studio" scheme="https://faradays-studio.github.io/categories/Faradays-Studio/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>更新日志</title>
+    <title>网站框架更新概要</title>
     <link href="https://faradays-studio.github.io/202006071600/"/>
     <id>https://faradays-studio.github.io/202006071600/</id>
     <published>2020-06-07T08:00:50.000Z</published>
-    <updated>2020-08-22T15:42:22.303Z</updated>
+    <updated>2020-08-25T15:42:29.650Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="TO-DO"><a href="#TO-DO" class="headerlink" title="TO-DO"></a>TO-DO</h2><ol><li><p><del>配置评论系统，实现文章留言</del>；</p></li><li><p><del>解决网页加载缓慢，且链接跳转错误问题；</del></p><ul><li><p>由于 change-log 页访问正常且多次对照近期修改的参数确认无误，初步判断为 Markdown 文件渲染存在错误！2020/04/20 00:41:34，借助 <code>https://maxiang.io/</code> 网页编辑器解决一个文章的显示问题，但其他文章仍无法访问，有待检查处理。</p></li><li><p>2020-4-21 22:55:29，切换主题为 landscape 后，仍然无法通过链接访问其他文章，但是查看页面中文章已正常生成。</p></li><li><p>2020-4-21 23:09:12，修改 “D:\WebSites\faradays-studio.hexo_config.yml” 中的 URL 配置，结果发现全部文件均可展示！初步认为，使用 id 或 时间方式显示链接，可能存在问题。</p></li></ul></li><li><p>Markdown 文件添加脚本引用，并添加计数功能。</p></li></ol><h2 id="系统更新日志"><a href="#系统更新日志" class="headerlink" title="系统更新日志"></a>系统更新日志</h2><ol><li><p>2020/04/19 16:02:08，创建《更新日志》；</p></li><li><p>2020/04/19 21:47:44，整合原有静态网站，并入站点中可链接跳转。</p></li><li><p>2020/04/22 0:54:40，修改 URL 设置，修改《如何使用 svg.js 创建 svg 文档》文章内容为中文。</p></li><li><p>2020/04/22 21:50:16</p><ul><li>参考网友方法，纠正网页点击时变成了下载的 Bug，主要原因是 permalink 末尾没有添加 <code>/</code>符号，最终修改为 <code>permalink: :lang/:title/</code> 。</li><li>设置主题为 ayer ，初步测试可用。</li></ul></li><li><p>2020/04/25 22:56:19，修改为 miho 主题，修改 post 模板增加封面默认页。</p></li><li><p>2020/07/19 21:02:13，修改 miho 主题，重命名为 Faradays 主题。</p></li><li><p>2020/08/07 00:01:17，修改 Faradays 主题，调整文章页打赏、分享、目录导航、作者等内容布局样式。</p></li><li><p>2020/08/18 22:23:18，博客升级至 v0.1.3，主题增加时间轴、全站字数统计等功能，完成原创字段、图标等一系列更新。</p></li><li><p>增加 gitalk、代码高亮等功能，并根据个人意愿调整原创显示样式、URL格式（去除语言字段）等。</p></li></ol><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol><li><p>猴子请来的救兵.<code>Hexo主题开发</code>[EB/OL].<a href="https://www.cnblogs.com/yyhh/p/11058985.html" target="_blank" rel="noopener">https://www.cnblogs.com/yyhh/p/11058985.html</a>, 2020/07/19.</p></li><li><p>梅卫平.<code>Hexo博客实现首页和子页面不同layout布局</code>[EB/OL].<a href="https://my.oschina.net/u/3372900/blog/911534" target="_blank" rel="noopener">https://my.oschina.net/u/3372900/blog/911534</a>, 2020/07/19.</p></li><li><p>MinHow.<code>MiHo-主题安装和配置详情</code>[EB/OL].<a href="https://blog.minhow.com/articles/blog/installation-configuration/" target="_blank" rel="noopener">https://blog.minhow.com/articles/blog/installation-configuration/</a>, 2020/07/19.</p></li><li><p>沈宇.<code>Ayer中文说明</code>[EB/OL].<a href="https://shen-yu.gitee.io/2019/ayer/" target="_blank" rel="noopener">https://shen-yu.gitee.io/2019/ayer/</a>, 2020/07/19.</p></li><li><p>MOxFIVE.<code>Yelee —— 简而不减 Hexo 双栏博客主题</code>[EB/OL].<a href="http://moxfive.xyz/yelee/" target="_blank" rel="noopener">http://moxfive.xyz/yelee/</a>, 2020/08/22.</p></li><li><p>Tom-shushu.<code>一款超好用的第三方评论插件--GITALK</code>[EB/OL].<a href="https://www.cnblogs.com/Tom-shushu/p/10970526.html" target="_blank" rel="noopener">https://www.cnblogs.com/Tom-shushu/p/10970526.html</a>, 2020/08/22.</p></li><li><p>Tommy Chen.<code>hexo 变量</code>[EB/OL].<a href="https://hexo.io/zh-cn/docs/variables.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/variables.html</a>, 2020/08/22.</p></li><li><p>Tommy Chen.<code>hexo 辅助函数（Helpers）</code>[EB/OL].<a href="https://hexo.io/zh-cn/docs/helpers" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/helpers</a>, 2020/08/22.</p></li></ol>]]></content>
+    <content type="html"><![CDATA[<h2 id="TO-DO"><a href="#TO-DO" class="headerlink" title="TO-DO"></a>TO-DO</h2><ol><li><p><del>配置评论系统，实现文章留言；</del>；</p></li><li><p><del>解决链接跳转错误问题（累经数月间歇性反复测试，初步认为为编译时不支持 <strong>?</strong> 符号的使用）；</del></p></li><li><p>Markdown 文件添加脚本引用，并添加计数功能。</p></li></ol><h2 id="系统更新日志"><a href="#系统更新日志" class="headerlink" title="系统更新日志"></a>系统更新日志</h2><ol><li><p>2020/04/19 16:02:08，创建《更新日志》；</p></li><li><p>2020/04/19 21:47:44，整合原有静态网站，并入站点中跳转。</p></li><li><p>2020/04/22 0:54:40，修改 URL 设置，修改《如何使用 svg.js 创建 svg 文档》文章内容为中文。</p></li><li><p>2020/04/22 21:50:16，参考网友方法，纠正网页点击时变成了下载的 Bug，主要原因是 permalink 末尾没有添加 <code>/</code>符号，最终修改为 <code>permalink: :lang/:title/</code> 。</p></li><li><p>2020/04/25 22:56:19，修改 post 模板增加封面默认页。</p></li><li><p>2020/07/19 21:02:13，投入了大量的时间研究主题的定制，初步决定个性化修改后的主题名为 <strong>Faradays</strong> 。</p></li><li><p>2020/08/07 00:01:17，修改 Faradays 主题，调整文章页打赏、分享、目录导航、作者等内容布局样式。</p></li><li><p>2020/08/18 22:23:18，博客升级至 v0.1.3，主题增加时间轴、全站字数统计等功能，完成原创字段、图标等一系列更新。</p></li><li><p>2020/08/23 01:18:51，增加 gitalk评论、代码高亮、文章序号等功能，并调整原创显示样式、URL格式（去除语言字段）等。</p></li><li><p>2020/08/25 23:03:26，升级至 v0.1.5，开展独立页功能测试，增加多作者署名、文章页QQ联系博主、增加about页等功能，并调整了首页元素的 hover 样式、版权声明等内容。</p></li></ol><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol><li><p>猴子请来的救兵.<code>Hexo主题开发</code>[EB/OL].<a href="https://www.cnblogs.com/yyhh/p/11058985.html" target="_blank" rel="noopener">https://www.cnblogs.com/yyhh/p/11058985.html</a>, 2020/07/19.</p><blockquote><p>文章介绍的主题开发的内容，对于定制 Faradays 主题起了最初的启发意义。</p></blockquote></li><li><p>梅卫平.<code>Hexo博客实现首页和子页面不同layout布局</code>[EB/OL].<a href="https://my.oschina.net/u/3372900/blog/911534" target="_blank" rel="noopener">https://my.oschina.net/u/3372900/blog/911534</a>, 2020/07/19.</p></li><li><p>MinHow.<code>MiHo-主题安装和配置详情</code>[EB/OL].<a href="https://blog.minhow.com/articles/blog/installation-configuration/" target="_blank" rel="noopener">https://blog.minhow.com/articles/blog/installation-configuration/</a>, 2020/07/19.</p><blockquote><p>网站主题基于 MiHo 修改，揉入了 Ayer、3-hexo 等主题的特色。在此，特别提出感谢！</p></blockquote></li><li><p>沈宇.<code>Ayer中文说明</code>[EB/OL].<a href="https://shen-yu.gitee.io/2019/ayer/" target="_blank" rel="noopener">https://shen-yu.gitee.io/2019/ayer/</a>, 2020/07/19.</p><blockquote><p>网站主题参考了部分 Ayer 的设计思路。</p></blockquote></li><li><p>MOxFIVE.<code>Yelee —— 简而不减 Hexo 双栏博客主题</code>[EB/OL].<a href="http://moxfive.xyz/yelee/" target="_blank" rel="noopener">http://moxfive.xyz/yelee/</a>, 2020/08/22.</p></li><li><p>Tom-shushu.<code>一款超好用的第三方评论插件--GITALK</code>[EB/OL].<a href="https://www.cnblogs.com/Tom-shushu/p/10970526.html" target="_blank" rel="noopener">https://www.cnblogs.com/Tom-shushu/p/10970526.html</a>, 2020/08/22.</p></li><li><p>Tommy Chen, HEXO官方文档.<code>hexo 变量</code>[EB/OL].<a href="https://hexo.io/zh-cn/docs/variables.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/variables.html</a>, 2020/08/22.</p></li><li><p>Tommy Chen, HEXO官方文档.<code>hexo 辅助函数（Helpers）</code>[EB/OL].<a href="https://hexo.io/zh-cn/docs/helpers" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/helpers</a>, 2020/08/22.</p></li><li><p>菜鸟教程.<code>Font Awesome 参考手册</code>[EB/OL].<a href="https://www.runoob.com/font-awesome/fontawesome-reference.html" target="_blank" rel="noopener">https://www.runoob.com/font-awesome/fontawesome-reference.html</a>, 2020/08/23.</p></li><li><p>杨玉杰.<code>Hexo 主题 3-hexo</code>[EB/OL].<a href="https://yelog.org/2017/03/07/3-hexo/" target="_blank" rel="noopener">https://yelog.org/2017/03/07/3-hexo/</a>, 2020/08/23.</p></li><li><p>动力节点.<code>CSS八种让人眼前一亮的HOVER效果</code>[EB/OL].<a href="https://zhuanlan.zhihu.com/p/188620420" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/188620420</a>, 2020/08/23.</p></li></ol>]]></content>
     
     <summary type="html">
     
       
       
         &lt;h2 id=&quot;TO-DO&quot;&gt;&lt;a href=&quot;#TO-DO&quot; class=&quot;headerlink&quot; title=&quot;TO-DO&quot;&gt;&lt;/a&gt;TO-DO&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;del&gt;配置评论系统，实现文章留言&lt;/del&gt;；&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;del&gt;配置评论系统，实现文章留言；&lt;/del&gt;；&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;del&gt;解
+&lt;li&gt;&lt;p&gt;&lt;del&gt;
       
     
     </summary>
