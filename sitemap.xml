@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://faradays-studio.github.io/about/hide.html</loc>
+    
+    <lastmod>2020-08-28</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://faradays-studio.github.io/about/index.html</loc>
     
     <lastmod>2020-08-28</lastmod>
@@ -33,13 +40,6 @@
     <loc>https://faradays-studio.github.io/202008272141/</loc>
     
     <lastmod>2020-08-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://faradays-studio.github.io/about/hide.html</loc>
-    
-    <lastmod>2020-08-24</lastmod>
     
   </url>
   
