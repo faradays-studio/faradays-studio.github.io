@@ -5,9 +5,14 @@
   
   <title>Windows 批处理的字符运算 | Blog of Faradays&#39; Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- HHJ@20200828��HTML Ĭ�Ϲؼ����� _config.yml ���ø�Ϊ����ʹ�������ļ�ͷ keywords ���� -->
   
-    <meta name="keywords" content="Faradays' Studio, Blog, 编程, 思考, 文学作品, 实践, 总结" />
+    <meta name="keywords" content="批处理,Windows,字符,Faradays' Studio">
   
+
+
+
   <meta name="description" content="字符运算历来是编程中的重要内容，如何拼接字符，如何截取字符，如何判断字符是否存在，如何判断两个字符串是否相同，成为了编程任务中的重要环节。因此，我结合网络的资料和个人的实践经验来总结一下。 Windows 批处理中字符的基本常识 批处理中变量的赋值符号两侧不能包含空格，如 set str_date&#x3D;&#39;20200820&#39;，这与很多编程规范是相悖的。  批处理中的字符可以不添加双引号，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows 批处理的字符运算">
@@ -59,7 +64,7 @@
   
   
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
 </head>
 
 <body>
@@ -189,7 +194,7 @@
 
         <!-- HHJ@20200815��������������ͳ��  -->
         <li><i class="fa fa-file-word-o"></i>
-            <span class="post-count">843 words</span>
+            <span class="post-count">847 words</span>
         </li>
         <li><i class="fa fa-caret-square-o-right"></i>
             <span class="post-count">3 min</span>
@@ -262,18 +267,20 @@ echo 修改时间：%~t0
 echo 文件大小：%~z0
 pause</code></pre>
 <p>路径处理，往往都配合 for 函数进行操作。</p>
+<p><strong>未完待续…</strong></p>
 <h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><h3 id="变更日志"><a href="#变更日志" class="headerlink" title="变更日志"></a>变更日志</h3><ol>
-<li>2020/08/20 10:49:23，初始版本。</li>
+<li>2020/08/20 10:49:23，创建文章。</li>
 </ol>
 <h3 id="参考索引"><a href="#参考索引" class="headerlink" title="参考索引"></a>参考索引</h3><ol>
-<li><strong>CharyGao</strong>.<code>DOS命令（cmd）批处理：替换字符串、截取字符串、扩充字符串、获取字符串长度</code>[EB/OL].<a href="https://www.cnblogs.com/Chary/p/No0000A4.html" target="_blank" rel="noopener">https://www.cnblogs.com/Chary/p/No0000A4.html</a>, 2020/08/20.</li>
+<li><strong>CharyGao</strong>.<code>DOS命令（cmd）批处理：替换字符串、截取字符串、扩充字符串、获取字符串长度</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.cnblogs.com/Chary/p/No0000A4.html">https://www.cnblogs.com/Chary/p/No0000A4.html</a>, 2020/08/20.</li>
 </ol>
 
             <div class="post-copyright">
+
+    <!-- HHJ@20200815 -->
+    <br /><br /><br />
     <div class="content">
         <!-- HHJ@20200815 -->
-        <br /><br /><br />
-
         <p>最后更新： 2020/08/20 09:27:42</p>
         <p>
 
@@ -296,16 +303,28 @@ pause</code></pre>
         
         
 
-        <p>原始链接： <a class="post-url" href="/202008200927/" title="Windows 批处理的字符运算">https://faradays-studio.github.io/202008200927/</a>
+        <!-- HHJ@20200828，调整原始链接显示方式，并增加备用链接 -->
+        <p>原始链接：
+            
+                <a class="post-url" href="https://faradays-studio.github.io/202008200927/" title="Windows 批处理的字符运算">
+                https://faradays-studio.github.io/202008200927/
+                </a>
+            
         </p>
+
+        
+        <p>后备链接： <a class="post-url" target="_blank" rel="noopener" href="https://faradays-studio.gitee.io/202008200927/" title="Windows 批处理的字符运算">
+            https://faradays-studio.gitee.io/202008200927/</a>
+        </p>
+        
 
         <!-- HHJ@20200815 -->
         
             <p>引用、演绎等请注明出处，共创和谐社会，谢谢你的合作！</p>
         
 
-        <footer>
-        </footer>
+        <!-- <footer>        </footer> -->
+        <footer></footer>
     </div>
 </div>
 
@@ -436,7 +455,7 @@ pause</code></pre>
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <!-- <nav class="post-toc-wrap"> -->
         <nav class="tocbot">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Windows-批处理中字符的基本常识"><span class="post-toc-text">Windows 批处理中字符的基本常识</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#截取字符串"><span class="post-toc-text">截取字符串</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一般性的字符截取"><span class="post-toc-text">一般性的字符截取</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件路径字符的截取"><span class="post-toc-text">文件路径字符的截取</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#版本说明"><span class="post-toc-text">版本说明</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#变更日志"><span class="post-toc-text">变更日志</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#参考索引"><span class="post-toc-text">参考索引</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Windows-%E6%89%B9%E5%A4%84%E7%90%86%E4%B8%AD%E5%AD%97%E7%AC%A6%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%B8%B8%E8%AF%86"><span class="post-toc-text">Windows 批处理中字符的基本常识</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%88%AA%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="post-toc-text">截取字符串</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%80%E8%88%AC%E6%80%A7%E7%9A%84%E5%AD%97%E7%AC%A6%E6%88%AA%E5%8F%96"><span class="post-toc-text">一般性的字符截取</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E5%AD%97%E7%AC%A6%E7%9A%84%E6%88%AA%E5%8F%96"><span class="post-toc-text">文件路径字符的截取</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E"><span class="post-toc-text">版本说明</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8F%98%E6%9B%B4%E6%97%A5%E5%BF%97"><span class="post-toc-text">变更日志</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8F%82%E8%80%83%E7%B4%A2%E5%BC%95"><span class="post-toc-text">参考索引</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
@@ -450,7 +469,7 @@ pause</code></pre>
         <!-- <i class="fa fa-hand-o-left" aria-hidden="true"></i>  -->
         <i class="fa fa-arrow-left" aria-hidden="true"></i>
         
-          苹果笔记本MacbookPro重置密码的方法
+          苹果 Macbook Pro 笔记本从 U 盘启动以及重置开机密码的方法
         
       </span>
     </a>
@@ -560,7 +579,7 @@ pause</code></pre>
             <a class="category-link" href="/categories/English/">English</a><a class="category-link" href="/categories/Faradays-Studio/">Faradays' Studio</a><a class="category-link" href="/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/">电脑爱好者</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
+            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -605,7 +624,7 @@ pause</code></pre>
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
+            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
         </div>
     </div>
 </div>

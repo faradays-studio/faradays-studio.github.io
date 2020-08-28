@@ -3,22 +3,58 @@
 <head>
   <meta charset="utf-8">
   
-  <title>苹果笔记本MacbookPro重置密码的方法 | Blog of Faradays&#39; Studio</title>
+  <title>苹果 Macbook Pro 笔记本从 U 盘启动以及重置开机密码的方法 | Blog of Faradays&#39; Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- HHJ@20200828��HTML Ĭ�Ϲؼ����� _config.yml ���ø�Ϊ����ʹ�������ļ�ͷ keywords ���� -->
   
-    <meta name="keywords" content="Faradays' Studio, Blog, 编程, 思考, 文学作品, 实践, 总结" />
+    
+    
+        
+            
+        
+    
+        
+            Macbook
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+    <meta name="keywords" content="Macbook,MacOS,密码,操作系统,PE,U盘,Faradays' Studio">
   
-  <meta name="description" content="前几天，恰好有位老领导委托他人拿来了一台苹果笔记本，好像是 Macbook Pro 2018 吧，由于主机安装时候使用上的需要，安装了 Windows 系统，老是提示 C 盘容量不足报警。因此委托我进行容量调整。 距离当年在电脑城体验的苹果主机，转眼间已有了 10 年，领导说，如果可以安装双系统到时挺好的，我随手摘网上找了一下，果真是有一些资料，可是都比较零散，因此这里总结一下；也许对个别人来说，">
+
+
+
+  <meta name="description" content="前几天，有位老领导委托我对其苹果 Macbook Pro 2018 笔记本进行优化处理。由于网上的资料比较零散、挂一漏万，因此我也来总结一下操作经验。 配置 U盘启动或者切换系统的方法 Macbook 没有 BISO 等设置，所谓的进入 U盘 PE 或者切换双系统的方法是：按住 Option 键，然后按电源键开机，那么就会出现一个类似于 Windows 启动项的界面，从而用于实现改变启动方式的效果">
 <meta property="og:type" content="article">
-<meta property="og:title" content="苹果笔记本MacbookPro重置密码的方法">
+<meta property="og:title" content="苹果 Macbook Pro 笔记本从 U 盘启动以及重置开机密码的方法">
 <meta property="og:url" content="https://faradays-studio.github.io/202008272141/index.html">
 <meta property="og:site_name" content="Blog of Faradays&#39; Studio">
-<meta property="og:description" content="前几天，恰好有位老领导委托他人拿来了一台苹果笔记本，好像是 Macbook Pro 2018 吧，由于主机安装时候使用上的需要，安装了 Windows 系统，老是提示 C 盘容量不足报警。因此委托我进行容量调整。 距离当年在电脑城体验的苹果主机，转眼间已有了 10 年，领导说，如果可以安装双系统到时挺好的，我随手摘网上找了一下，果真是有一些资料，可是都比较零散，因此这里总结一下；也许对个别人来说，">
+<meta property="og:description" content="前几天，有位老领导委托我对其苹果 Macbook Pro 2018 笔记本进行优化处理。由于网上的资料比较零散、挂一漏万，因此我也来总结一下操作经验。 配置 U盘启动或者切换系统的方法 Macbook 没有 BISO 等设置，所谓的进入 U盘 PE 或者切换双系统的方法是：按住 Option 键，然后按电源键开机，那么就会出现一个类似于 Windows 启动项的界面，从而用于实现改变启动方式的效果">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://faradays-studio.github.io/202008272141/static/img/Macbook-%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%95%8C%E9%9D%A2-20200824.jpg">
 <meta property="og:image" content="https://faradays-studio.github.io/202008272141/static/img/Macbook-%E7%BB%B4%E6%8A%A4%E7%BB%88%E7%AB%AF-20200824.jpg">
 <meta property="og:image" content="https://faradays-studio.github.io/202008272141/static/img/Macbook-%E9%87%8D%E7%BD%AE%E5%AF%86%E7%A0%81%E7%A4%BA%E6%84%8F%E5%9B%BE-20200824.jpg">
 <meta property="article:published_time" content="2020-08-27T13:41:35.000Z">
-<meta property="article:modified_time" content="2020-08-27T14:37:10.661Z">
+<meta property="article:modified_time" content="2020-08-28T12:28:31.705Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Apple">
 <meta property="article:tag" content="Macbook">
@@ -26,8 +62,9 @@
 <meta property="article:tag" content="密码">
 <meta property="article:tag" content="操作系统">
 <meta property="article:tag" content="PE">
+<meta property="article:tag" content="U盘">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://faradays-studio.github.io/202008272141/static/img/Macbook-%E7%BB%B4%E6%8A%A4%E7%BB%88%E7%AB%AF-20200824.jpg">
+<meta name="twitter:image" content="https://faradays-studio.github.io/202008272141/static/img/Macbook-%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%95%8C%E9%9D%A2-20200824.jpg">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -65,7 +102,7 @@
   
   
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
 </head>
 
 <body>
@@ -131,7 +168,7 @@
 
 
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-苹果笔记本MacbookPro重置密码的方法" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-苹果MacbookPro笔记本U盘启动与重置开机密码的方法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -139,7 +176,7 @@
         
   
     <h1 class="post-title" itemprop="name">
-      苹果笔记本MacbookPro重置密码的方法
+      苹果 Macbook Pro 笔记本从 U 盘启动以及重置开机密码的方法
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -189,13 +226,13 @@
         
         <li>
                 <i class="fa fa-copyright"></i>
-                35%
+                40%
         </li>
         
 
         <!-- HHJ@20200815��������������ͳ��  -->
         <li><i class="fa fa-file-word-o"></i>
-            <span class="post-count">669 words</span>
+            <span class="post-count">608 words</span>
         </li>
         <li><i class="fa fa-caret-square-o-right"></i>
             <span class="post-count">2 min</span>
@@ -215,11 +252,19 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <p>前几天，恰好有位老领导委托他人拿来了一台苹果笔记本，好像是 Macbook Pro 2018 吧，由于主机安装时候使用上的需要，安装了 Windows 系统，老是提示 C 盘容量不足报警。因此委托我进行容量调整。</p>
-<p>距离当年在电脑城体验的苹果主机，转眼间已有了 10 年，领导说，如果可以安装双系统到时挺好的，我随手摘网上找了一下，果真是有一些资料，可是都比较零散，因此这里总结一下；也许对个别人来说，也许用得上。</p>
-<h2 id="配置-U盘启动或者切换系统的方法"><a href="#配置-U盘启动或者切换系统的方法" class="headerlink" title="配置 U盘启动或者切换系统的方法"></a>配置 U盘启动或者切换系统的方法</h2><p>经过检查，发现 Windows 系统中已经存在 Boot Camp 软件，输入“恢复”后找到相应的菜单即可进入。不过查了一下，Macbook 没有 BISO 等设置，所谓的进入 U盘 PE 或者苹果系统的方法是：按住 <kbd>Option</kbd> 键，然后按电源键开机，那么就会出现一个启动项界面，从而实现改变启动方式的功能。</p>
-<pre><code>![Macbook启动项界面-HHJ](static/img/Macbook-开机启动项界面-20200824.jpg)</code></pre><p>有意思的是，进入该界面后，再接入 U盘 PE，那么也能很快识别出来；跟我之前在 BISO 里边配置 U盘启动还是有明显差别的。</p>
-<h2 id="Macbook-重置密码的方法"><a href="#Macbook-重置密码的方法" class="headerlink" title="Macbook 重置密码的方法"></a>Macbook 重置密码的方法</h2><p>恰好领导也并不知道自己 MacOS 的系统开机密码，自己结合网络资料测试了一下，操作流程如下：</p>
+            <p>前几天，有位老领导委托我对其苹果 Macbook Pro 2018 笔记本进行优化处理。由于网上的资料比较零散、挂一漏万，因此我也来总结一下操作经验。</p>
+<h2 id="配置-U盘启动或者切换系统的方法"><a href="#配置-U盘启动或者切换系统的方法" class="headerlink" title="配置 U盘启动或者切换系统的方法"></a>配置 U盘启动或者切换系统的方法</h2><ul>
+<li><p>Macbook 没有 BISO 等设置，所谓的进入 U盘 PE 或者切换双系统的方法是：按住 <kbd>Option</kbd> 键，然后按电源键开机，那么就会出现一个类似于 Windows 启动项的界面，从而用于实现改变启动方式的效果。</p>
+<p>  <img src="static/img/Macbook-%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%95%8C%E9%9D%A2-20200824.jpg" alt="Macbook启动项界面-HHJ"></p>
+</li>
+</ul>
+<blockquote>
+<p>苹果电脑安装 Windows 系统，一般都是通过 Boot Camp 等软件来实现。对于双系统的主机，也可以在 Windows 系统中输入 <strong>“恢复”</strong> 找到相应的菜单进入切换启动盘的功能，不过具体功能我没有完整测试。</p>
+</blockquote>
+<blockquote>
+<p>有意思的是，进入 MacOS 的启动方式选择界面后，如果接入 U盘 PE，那么也能很快识别出来；跟我之前在 BISO 里边配置 U盘启动需要提前接入还是有明显差别的。</p>
+</blockquote>
+<h2 id="Macbook-重置密码的方法"><a href="#Macbook-重置密码的方法" class="headerlink" title="Macbook 重置密码的方法"></a>Macbook 重置密码的方法</h2><p>结合网络资料测试了一下，操作流程如下：</p>
 <ol>
 <li><p>按住 <kbd>Option</kbd> 键，然后按电源键开机；</p>
 </li>
@@ -235,21 +280,25 @@
 </li>
 </ol>
 <blockquote>
-<p>需要注意的是，上述方法应当使用在合法授权的电脑上，请勿滥用！践行社会主义核心价值观，人人有责！</p>
+<p>需要注意的是，上述方法仅应使用在合法授权的电脑上，请勿滥用！践行社会主义核心价值观，人人有责！</p>
 </blockquote>
 <h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
-<li>学知网.<code>苹果笔记本进入BIOS设置教程</code>[EB/OL].<a href="https://www.jmqz1000.com/dnzs/23488.html" target="_blank" rel="noopener">https://www.jmqz1000.com/dnzs/23488.html</a>, 2020/08/24.</li>
+<li>学知网.<code>苹果笔记本进入BIOS设置教程</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.jmqz1000.com/dnzs/23488.html">https://www.jmqz1000.com/dnzs/23488.html</a>, 2020/08/24.</li>
 </ol>
-<h3 id="变更说明"><a href="#变更说明" class="headerlink" title="变更说明"></a>变更说明</h3><ol>
-<li>2020/08/27 22:29:16，初始版本。</li>
-</ol>
+<h3 id="变更说明"><a href="#变更说明" class="headerlink" title="变更说明"></a>变更说明</h3><ul>
+<li><p>1.0.0，2020/08/27 22:29:16，初始版本。</p>
+</li>
+<li><p>1.0.1，2020/08/28 18:11:26，重新组织语言，去除一些自以为是的废话。</p>
+</li>
+</ul>
 
             <div class="post-copyright">
+
+    <!-- HHJ@20200815 -->
+    <br /><br /><br />
     <div class="content">
         <!-- HHJ@20200815 -->
-        <br /><br /><br />
-
-        <p>最后更新： 2020/08/27 22:37:10</p>
+        <p>最后更新： 2020/08/28 20:28:31</p>
         <p>
 
                 
@@ -273,16 +322,28 @@
         
         
 
-        <p>原始链接： <a class="post-url" href="/202008272141/" title="苹果笔记本MacbookPro重置密码的方法">https://faradays-studio.github.io/202008272141/</a>
+        <!-- HHJ@20200828，调整原始链接显示方式，并增加备用链接 -->
+        <p>原始链接：
+            
+                <a class="post-url" href="https://faradays-studio.github.io/202008272141/" title="苹果 Macbook Pro 笔记本从 U 盘启动以及重置开机密码的方法">
+                https://faradays-studio.github.io/202008272141/
+                </a>
+            
         </p>
+
+        
+        <p>后备链接： <a class="post-url" target="_blank" rel="noopener" href="https://faradays-studio.gitee.io/202008272141/" title="苹果 Macbook Pro 笔记本从 U 盘启动以及重置开机密码的方法">
+            https://faradays-studio.gitee.io/202008272141/</a>
+        </p>
+        
 
         <!-- HHJ@20200815 -->
         
             <p>引用、演绎等请注明出处，共创和谐社会，谢谢你的合作！</p>
         
 
-        <footer>
-        </footer>
+        <!-- <footer>        </footer> -->
+        <footer></footer>
     </div>
 </div>
 
@@ -347,7 +408,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.github.io/202008272141/&title=《苹果笔记本MacbookPro重置密码的方法》 — Blog of Faradays' Studio&pic=images/cover/.jpg" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.github.io/202008272141/&title=《苹果 Macbook Pro 笔记本从 U 盘启动以及重置开机密码的方法》 — Blog of Faradays' Studio&pic=images/cover/.jpg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -357,7 +418,7 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://faradays-studio.github.io/202008272141/&title=《苹果笔记本MacbookPro重置密码的方法》 — Blog of Faradays' Studio&source=自信人生二百里，会当击水三千里！" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://faradays-studio.github.io/202008272141/&title=《苹果 Macbook Pro 笔记本从 U 盘启动以及重置开机密码的方法》 — Blog of Faradays' Studio&source=自信人生二百里，会当击水三千里！" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
@@ -367,7 +428,7 @@
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《苹果笔记本MacbookPro重置密码的方法》 — Blog of Faradays' Studio&url=https://faradays-studio.github.io/202008272141/&via=https://faradays-studio.github.io" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《苹果 Macbook Pro 笔记本从 U 盘启动以及重置开机密码的方法》 — Blog of Faradays' Studio&url=https://faradays-studio.github.io/202008272141/&via=https://faradays-studio.github.io" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -407,6 +468,8 @@
       
     <a href="/tags/PE/" class="color3">PE</a>
       
+    <a href="/tags/U盘/" class="color3">U盘</a>
+      
   </li>
 
         </ul>
@@ -419,7 +482,7 @@
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <!-- <nav class="post-toc-wrap"> -->
         <nav class="tocbot">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置-U盘启动或者切换系统的方法"><span class="post-toc-text">配置 U盘启动或者切换系统的方法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Macbook-重置密码的方法"><span class="post-toc-text">Macbook 重置密码的方法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#版本说明"><span class="post-toc-text">版本说明</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#参考文献"><span class="post-toc-text">参考文献</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#变更说明"><span class="post-toc-text">变更说明</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%85%8D%E7%BD%AE-U%E7%9B%98%E5%90%AF%E5%8A%A8%E6%88%96%E8%80%85%E5%88%87%E6%8D%A2%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%96%B9%E6%B3%95"><span class="post-toc-text">配置 U盘启动或者切换系统的方法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Macbook-%E9%87%8D%E7%BD%AE%E5%AF%86%E7%A0%81%E7%9A%84%E6%96%B9%E6%B3%95"><span class="post-toc-text">Macbook 重置密码的方法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E"><span class="post-toc-text">版本说明</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="post-toc-text">参考文献</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8F%98%E6%9B%B4%E8%AF%B4%E6%98%8E"><span class="post-toc-text">变更说明</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
@@ -531,7 +594,7 @@
             <a class="category-link" href="/categories/English/">English</a><a class="category-link" href="/categories/Faradays-Studio/">Faradays' Studio</a><a class="category-link" href="/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/">电脑爱好者</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
+            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -576,7 +639,7 @@
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
+            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
         </div>
     </div>
 </div>

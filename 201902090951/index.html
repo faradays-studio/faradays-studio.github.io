@@ -5,9 +5,14 @@
   
   <title>如何使用 svg.js 创建 svg 文档 | Blog of Faradays&#39; Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- HHJ@20200828��HTML Ĭ�Ϲؼ����� _config.yml ���ø�Ϊ����ʹ�������ļ�ͷ keywords ���� -->
   
-    <meta name="keywords" content="Faradays' Studio, Blog, 编程, 思考, 文学作品, 实践, 总结" />
+    <meta name="keywords" content="SVG, JavaScript, svg.js, DOM,Faradays' Studio">
   
+
+
+
   <meta name="description" content="前段时间，我尝试了使用 svg.js 来创建 svg dom 文档时，并没有成功。经过反复多次的尝试，并网络检索了一些信息，初步确认为官方文档未及时更新，导致了编码错误。 使用 svg.js 遇到的问题举个例子，dom 文档 .html 的结构如下： &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;Creating SVG">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何使用 svg.js 创建 svg 文档">
@@ -58,7 +63,7 @@
   
   
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
 </head>
 
 <body>
@@ -187,7 +192,7 @@
 
         <!-- HHJ@20200815��������������ͳ��  -->
         <li><i class="fa fa-file-word-o"></i>
-            <span class="post-count">547 words</span>
+            <span class="post-count">549 words</span>
         </li>
         <li><i class="fa fa-caret-square-o-right"></i>
             <span class="post-count">2 min</span>
@@ -224,10 +229,10 @@
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<p>官方文档（见 <a href="https://svgjs.com/docs/3.0/getting-started/" target="_blank" rel="noopener">https://svgjs.com/docs/3.0/getting-started/</a> ）对于 JavaScript 脚本环节的部分 <code>&lt;script&gt;...&lt;/script&gt;</code> 是这样写的：</p>
+<p>官方文档（见 <a target="_blank" rel="noopener" href="https://svgjs.com/docs/3.0/getting-started/">https://svgjs.com/docs/3.0/getting-started/</a> ）对于 JavaScript 脚本环节的部分 <code>&lt;script&gt;...&lt;/script&gt;</code> 是这样写的：</p>
 <pre><code class="javascript">var draw = SVG(&#39;drawing&#39;).size(300, 300)
-var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
-<p>上述脚本在 jsfiddle.net 网站中测试是无异常的，详见 <a href="https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz" target="_blank" rel="noopener">https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz</a> 。然而，无论我是在 IE 7.0 至 11.0，还是在 Chrome 58 内核的浏览器中，我的本地测试从未成功。因此，整整 2 天里，我都未能从试验的阴影中恢复过来，反反复复进行了无数次试验，均无果而终。</p>
+var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></pre>
+<p>上述脚本在 jsfiddle.net 网站中测试是无异常的，详见 <a target="_blank" rel="noopener" href="https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz">https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz</a> 。然而，无论我是在 IE 7.0 至 11.0，还是在 Chrome 58 内核的浏览器中，我的本地测试从未成功。因此，整整 2 天里，我都未能从试验的阴影中恢复过来，反反复复进行了无数次试验，均无果而终。</p>
 <h2 id="使用-svg-js-书写脚本和-DOM-的方法"><a href="#使用-svg-js-书写脚本和-DOM-的方法" class="headerlink" title="使用 svg.js 书写脚本和 DOM 的方法"></a>使用 svg.js 书写脚本和 DOM 的方法</h2><p>在无数次的一边尝试、一边网络搜索的过程中，我发现了以下可行的方法：</p>
 <h3 id="1-方法-1"><a href="#1-方法-1" class="headerlink" title="1. 方法 1"></a>1. 方法 1</h3><p>   DOM 文档： <code>&lt;div id=&quot;drawing&quot;&gt;&lt;/div&gt;</code> </p>
 <p>   脚本 1： <code>var draw = SVG().addTo(&#39;#drawing&#39;).size(1024,200);</code> </p>
@@ -244,10 +249,11 @@ var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
 <p>收工完事！</p>
 
             <div class="post-copyright">
+
+    <!-- HHJ@20200815 -->
+    <br /><br /><br />
     <div class="content">
         <!-- HHJ@20200815 -->
-        <br /><br /><br />
-
         <p>最后更新： 2019/02/10 21:51:52</p>
         <p>
 
@@ -272,8 +278,20 @@ var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
         
         
 
-        <p>原始链接： <a class="post-url" href="/201902090951/" title="如何使用 svg.js 创建 svg 文档">https://faradays-studio.github.io/201902090951/</a>
+        <!-- HHJ@20200828，调整原始链接显示方式，并增加备用链接 -->
+        <p>原始链接：
+            
+                <a class="post-url" href="https://faradays-studio.github.io/201902090951/" title="如何使用 svg.js 创建 svg 文档">
+                https://faradays-studio.github.io/201902090951/
+                </a>
+            
         </p>
+
+        
+        <p>后备链接： <a class="post-url" target="_blank" rel="noopener" href="https://faradays-studio.gitee.io/201902090951/" title="如何使用 svg.js 创建 svg 文档">
+            https://faradays-studio.gitee.io/201902090951/</a>
+        </p>
+        
 
         <!-- HHJ@20200815 -->
         
@@ -282,8 +300,8 @@ var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
             </p>
         
 
-        <footer>
-        </footer>
+        <!-- <footer>        </footer> -->
+        <footer></footer>
     </div>
 </div>
 
@@ -412,7 +430,7 @@ var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <!-- <nav class="post-toc-wrap"> -->
         <nav class="tocbot">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用-svg-js-遇到的问题"><span class="post-toc-text">使用 svg.js 遇到的问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用-svg-js-书写脚本和-DOM-的方法"><span class="post-toc-text">使用 svg.js 书写脚本和 DOM 的方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-方法-1"><span class="post-toc-text">1. 方法 1</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-方法-2"><span class="post-toc-text">2. 方法 2</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-方法-3"><span class="post-toc-text">3. 方法 3</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BD%BF%E7%94%A8-svg-js-%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="post-toc-text">使用 svg.js 遇到的问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BD%BF%E7%94%A8-svg-js-%E4%B9%A6%E5%86%99%E8%84%9A%E6%9C%AC%E5%92%8C-DOM-%E7%9A%84%E6%96%B9%E6%B3%95"><span class="post-toc-text">使用 svg.js 书写脚本和 DOM 的方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E6%96%B9%E6%B3%95-1"><span class="post-toc-text">1. 方法 1</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E6%96%B9%E6%B3%95-2"><span class="post-toc-text">2. 方法 2</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E6%96%B9%E6%B3%95-3"><span class="post-toc-text">3. 方法 3</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
@@ -536,7 +554,7 @@ var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
             <a class="category-link" href="/categories/English/">English</a><a class="category-link" href="/categories/Faradays-Studio/">Faradays' Studio</a><a class="category-link" href="/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/">电脑爱好者</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
+            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -581,7 +599,7 @@ var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
+            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
         </div>
     </div>
 </div>

@@ -5,9 +5,24 @@
   
   <title>How to creat svg document with svg.js | Blog of Faradays&#39; Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- HHJ@20200828��HTML Ĭ�Ϲؼ����� _config.yml ���ø�Ϊ����ʹ�������ļ�ͷ keywords ���� -->
   
-    <meta name="keywords" content="Faradays' Studio, Blog, 编程, 思考, 文学作品, 实践, 总结" />
+    
+    
+        
+            
+        
+    
+        
+            SVG
+        
+    
+    <meta name="keywords" content="SVG,Faradays' Studio">
   
+
+
+
   <meta name="description" content="A  few days ago, I got stuck in the mud of creating a svg dom with svg.js. After many test and searching, I found out that someting is different from the official  manual. The problem of using svg.jsF">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to creat svg document with svg.js">
@@ -58,7 +73,7 @@
   
   
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
 </head>
 
 <body>
@@ -187,7 +202,7 @@
 
         <!-- HHJ@20200815��������������ͳ��  -->
         <li><i class="fa fa-file-word-o"></i>
-            <span class="post-count">394 words</span>
+            <span class="post-count">396 words</span>
         </li>
         <li><i class="fa fa-caret-square-o-right"></i>
             <span class="post-count">2 min</span>
@@ -224,10 +239,10 @@
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<p>The official  manual (refer to <a href="https://svgjs.com/docs/3.0/getting-started/" target="_blank" rel="noopener">https://svgjs.com/docs/3.0/getting-started/</a>) said that <code>&lt;script&gt;...&lt;/script&gt;</code>  part like this:</p>
+<p>The official  manual (refer to <a target="_blank" rel="noopener" href="https://svgjs.com/docs/3.0/getting-started/">https://svgjs.com/docs/3.0/getting-started/</a>) said that <code>&lt;script&gt;...&lt;/script&gt;</code>  part like this:</p>
 <pre><code class="javascript">var draw = SVG(&#39;drawing&#39;).size(300, 300)
-var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
-<p>The script above pass through on jsfiddle.net test (refer to <a href="https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz" target="_blank" rel="noopener">https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz</a> ). However, it doesn’t work on my case, no matter running on my MSIE 7.0 to 11.0 or Chrome 58. I felt so depressed that even could not got sleep for two whole days.</p>
+var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></pre>
+<p>The script above pass through on jsfiddle.net test (refer to <a target="_blank" rel="noopener" href="https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz">https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz</a> ). However, it doesn’t work on my case, no matter running on my MSIE 7.0 to 11.0 or Chrome 58. I felt so depressed that even could not got sleep for two whole days.</p>
 <h2 id="The-way-to-write-svg-js-script-and-DOM"><a href="#The-way-to-write-svg-js-script-and-DOM" class="headerlink" title="The way to write svg.js script and DOM"></a>The way to write svg.js script and DOM</h2><p>After many tests and searching, I found out that these code running: </p>
 <h3 id="1-Way-1"><a href="#1-Way-1" class="headerlink" title="1. Way 1:"></a>1. Way 1:</h3><p>   DOM: <code>&lt;div id=&quot;drawing&quot;&gt;&lt;/div&gt;</code> </p>
 <p>   Script 1: <code>var draw = SVG().addTo(&#39;#drawing&#39;).size(1024,200);</code> </p>
@@ -244,10 +259,11 @@ var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
 <p>Done!</p>
 
             <div class="post-copyright">
+
+    <!-- HHJ@20200815 -->
+    <br /><br /><br />
     <div class="content">
         <!-- HHJ@20200815 -->
-        <br /><br /><br />
-
         <p>最后更新： 2019/02/10 21:51:52</p>
         <p>
 
@@ -272,8 +288,20 @@ var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
         
         
 
-        <p>原始链接： <a class="post-url" href="/201902080900/" title="How to creat svg document with svg.js">https://faradays-studio.github.io/201902080900/</a>
+        <!-- HHJ@20200828，调整原始链接显示方式，并增加备用链接 -->
+        <p>原始链接：
+            
+                <a class="post-url" href="https://faradays-studio.github.io/201902080900/" title="How to creat svg document with svg.js">
+                https://faradays-studio.github.io/201902080900/
+                </a>
+            
         </p>
+
+        
+        <p>后备链接： <a class="post-url" target="_blank" rel="noopener" href="https://faradays-studio.gitee.io/201902080900/" title="How to creat svg document with svg.js">
+            https://faradays-studio.gitee.io/201902080900/</a>
+        </p>
+        
 
         <!-- HHJ@20200815 -->
         
@@ -282,8 +310,8 @@ var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
             </p>
         
 
-        <footer>
-        </footer>
+        <!-- <footer>        </footer> -->
+        <footer></footer>
     </div>
 </div>
 
@@ -531,7 +559,7 @@ var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
             <a class="category-link" href="/categories/English/">English</a><a class="category-link" href="/categories/Faradays-Studio/">Faradays' Studio</a><a class="category-link" href="/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/">电脑爱好者</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
+            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -576,7 +604,7 @@ var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
+            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
         </div>
     </div>
 </div>

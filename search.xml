@@ -20,10 +20,10 @@
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<p>The official  manual (refer to <a href="https://svgjs.com/docs/3.0/getting-started/" target="_blank" rel="noopener">https://svgjs.com/docs/3.0/getting-started/</a>) said that <code>&lt;script&gt;...&lt;/script&gt;</code>  part like this:</p>
+<p>The official  manual (refer to <a href="https://svgjs.com/docs/3.0/getting-started/">https://svgjs.com/docs/3.0/getting-started/</a>) said that <code>&lt;script&gt;...&lt;/script&gt;</code>  part like this:</p>
 <pre><code class="javascript">var draw = SVG(&#39;drawing&#39;).size(300, 300)
-var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
-<p>The script above pass through on jsfiddle.net test (refer to <a href="https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz" target="_blank" rel="noopener">https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz</a> ). However, it doesn’t work on my case, no matter running on my MSIE 7.0 to 11.0 or Chrome 58. I felt so depressed that even could not got sleep for two whole days.</p>
+var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></pre>
+<p>The script above pass through on jsfiddle.net test (refer to <a href="https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz">https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz</a> ). However, it doesn’t work on my case, no matter running on my MSIE 7.0 to 11.0 or Chrome 58. I felt so depressed that even could not got sleep for two whole days.</p>
 <h2 id="The-way-to-write-svg-js-script-and-DOM"><a href="#The-way-to-write-svg-js-script-and-DOM" class="headerlink" title="The way to write svg.js script and DOM"></a>The way to write svg.js script and DOM</h2><p>After many tests and searching, I found out that these code running: </p>
 <h3 id="1-Way-1"><a href="#1-Way-1" class="headerlink" title="1. Way 1:"></a>1. Way 1:</h3><p>   DOM: <code>&lt;div id=&quot;drawing&quot;&gt;&lt;/div&gt;</code> </p>
 <p>   Script 1: <code>var draw = SVG().addTo(&#39;#drawing&#39;).size(1024,200);</code> </p>
@@ -67,10 +67,10 @@ var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<p>官方文档（见 <a href="https://svgjs.com/docs/3.0/getting-started/" target="_blank" rel="noopener">https://svgjs.com/docs/3.0/getting-started/</a> ）对于 JavaScript 脚本环节的部分 <code>&lt;script&gt;...&lt;/script&gt;</code> 是这样写的：</p>
+<p>官方文档（见 <a href="https://svgjs.com/docs/3.0/getting-started/">https://svgjs.com/docs/3.0/getting-started/</a> ）对于 JavaScript 脚本环节的部分 <code>&lt;script&gt;...&lt;/script&gt;</code> 是这样写的：</p>
 <pre><code class="javascript">var draw = SVG(&#39;drawing&#39;).size(300, 300)
-var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
-<p>上述脚本在 jsfiddle.net 网站中测试是无异常的，详见 <a href="https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz" target="_blank" rel="noopener">https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz</a> 。然而，无论我是在 IE 7.0 至 11.0，还是在 Chrome 58 内核的浏览器中，我的本地测试从未成功。因此，整整 2 天里，我都未能从试验的阴影中恢复过来，反反复复进行了无数次试验，均无果而终。</p>
+var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></pre>
+<p>上述脚本在 jsfiddle.net 网站中测试是无异常的，详见 <a href="https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz">https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz</a> 。然而，无论我是在 IE 7.0 至 11.0，还是在 Chrome 58 内核的浏览器中，我的本地测试从未成功。因此，整整 2 天里，我都未能从试验的阴影中恢复过来，反反复复进行了无数次试验，均无果而终。</p>
 <h2 id="使用-svg-js-书写脚本和-DOM-的方法"><a href="#使用-svg-js-书写脚本和-DOM-的方法" class="headerlink" title="使用 svg.js 书写脚本和 DOM 的方法"></a>使用 svg.js 书写脚本和 DOM 的方法</h2><p>在无数次的一边尝试、一边网络搜索的过程中，我发现了以下可行的方法：</p>
 <h3 id="1-方法-1"><a href="#1-方法-1" class="headerlink" title="1. 方法 1"></a>1. 方法 1</h3><p>   DOM 文档： <code>&lt;div id=&quot;drawing&quot;&gt;&lt;/div&gt;</code> </p>
 <p>   脚本 1： <code>var draw = SVG().addTo(&#39;#drawing&#39;).size(1024,200);</code> </p>
@@ -128,38 +128,40 @@ var rect = draw.rect(100, 100).attr({ fill: &#39;#f06&#39; })</code></pre>
 </li>
 <li><p>2020/08/27 22:39:43，经过 5.66h 的尝试，删除部分不恰当的 commit，重新生成网址文件；对本地的 hexo 版本库和独立的 Git 文件库均进行了处理，确保版本一致、可用。</p>
 </li>
+<li><p>2020/08/28 21:53:51，升级至 v0.1.6，增加 sitemap、备用链接功能，调整署名、关键词设置。</p>
+</li>
 </ol>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li><p>猴子请来的救兵.<code>Hexo主题开发</code>[EB/OL].<a href="https://www.cnblogs.com/yyhh/p/11058985.html" target="_blank" rel="noopener">https://www.cnblogs.com/yyhh/p/11058985.html</a>, 2020/07/19.</p>
+<li><p>猴子请来的救兵.<code>Hexo主题开发</code>[EB/OL].<a href="https://www.cnblogs.com/yyhh/p/11058985.html">https://www.cnblogs.com/yyhh/p/11058985.html</a>, 2020/07/19.</p>
 <blockquote>
 <p>文章介绍的主题开发的内容，对于定制 Faradays 主题起了最初的启发意义。</p>
 </blockquote>
 </li>
-<li><p>梅卫平.<code>Hexo博客实现首页和子页面不同layout布局</code>[EB/OL].<a href="https://my.oschina.net/u/3372900/blog/911534" target="_blank" rel="noopener">https://my.oschina.net/u/3372900/blog/911534</a>, 2020/07/19.</p>
+<li><p>梅卫平.<code>Hexo博客实现首页和子页面不同layout布局</code>[EB/OL].<a href="https://my.oschina.net/u/3372900/blog/911534">https://my.oschina.net/u/3372900/blog/911534</a>, 2020/07/19.</p>
 </li>
-<li><p>MinHow.<code>MiHo-主题安装和配置详情</code>[EB/OL].<a href="https://blog.minhow.com/articles/blog/installation-configuration/" target="_blank" rel="noopener">https://blog.minhow.com/articles/blog/installation-configuration/</a>, 2020/07/19.</p>
+<li><p>MinHow.<code>MiHo-主题安装和配置详情</code>[EB/OL].<a href="https://blog.minhow.com/articles/blog/installation-configuration/">https://blog.minhow.com/articles/blog/installation-configuration/</a>, 2020/07/19.</p>
 <blockquote>
 <p>网站主题基于 MiHo 修改，揉入了 Ayer、3-hexo 等主题的特色。在此，特别提出感谢！</p>
 </blockquote>
 </li>
-<li><p>沈宇.<code>Ayer中文说明</code>[EB/OL].<a href="https://shen-yu.gitee.io/2019/ayer/" target="_blank" rel="noopener">https://shen-yu.gitee.io/2019/ayer/</a>, 2020/07/19.</p>
+<li><p>沈宇.<code>Ayer中文说明</code>[EB/OL].<a href="https://shen-yu.gitee.io/2019/ayer/">https://shen-yu.gitee.io/2019/ayer/</a>, 2020/07/19.</p>
 <blockquote>
 <p>网站主题参考了部分 Ayer 的设计思路。</p>
 </blockquote>
 </li>
-<li><p>MOxFIVE.<code>Yelee —— 简而不减 Hexo 双栏博客主题</code>[EB/OL].<a href="http://moxfive.xyz/yelee/" target="_blank" rel="noopener">http://moxfive.xyz/yelee/</a>, 2020/08/22.</p>
+<li><p>MOxFIVE.<code>Yelee —— 简而不减 Hexo 双栏博客主题</code>[EB/OL].<a href="http://moxfive.xyz/yelee/">http://moxfive.xyz/yelee/</a>, 2020/08/22.</p>
 </li>
-<li><p>Tom-shushu.<code>一款超好用的第三方评论插件--GITALK</code>[EB/OL].<a href="https://www.cnblogs.com/Tom-shushu/p/10970526.html" target="_blank" rel="noopener">https://www.cnblogs.com/Tom-shushu/p/10970526.html</a>, 2020/08/22.</p>
+<li><p>Tom-shushu.<code>一款超好用的第三方评论插件--GITALK</code>[EB/OL].<a href="https://www.cnblogs.com/Tom-shushu/p/10970526.html">https://www.cnblogs.com/Tom-shushu/p/10970526.html</a>, 2020/08/22.</p>
 </li>
-<li><p>Tommy Chen, HEXO官方文档.<code>hexo 变量</code>[EB/OL].<a href="https://hexo.io/zh-cn/docs/variables.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/variables.html</a>, 2020/08/22.</p>
+<li><p>Tommy Chen, HEXO官方文档.<code>hexo 变量</code>[EB/OL].<a href="https://hexo.io/zh-cn/docs/variables.html">https://hexo.io/zh-cn/docs/variables.html</a>, 2020/08/22.</p>
 </li>
-<li><p>Tommy Chen, HEXO官方文档.<code>hexo 辅助函数（Helpers）</code>[EB/OL].<a href="https://hexo.io/zh-cn/docs/helpers" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/helpers</a>, 2020/08/22.</p>
+<li><p>Tommy Chen, HEXO官方文档.<code>hexo 辅助函数（Helpers）</code>[EB/OL].<a href="https://hexo.io/zh-cn/docs/helpers">https://hexo.io/zh-cn/docs/helpers</a>, 2020/08/22.</p>
 </li>
-<li><p>菜鸟教程.<code>Font Awesome 参考手册</code>[EB/OL].<a href="https://www.runoob.com/font-awesome/fontawesome-reference.html" target="_blank" rel="noopener">https://www.runoob.com/font-awesome/fontawesome-reference.html</a>, 2020/08/23.</p>
+<li><p>菜鸟教程.<code>Font Awesome 参考手册</code>[EB/OL].<a href="https://www.runoob.com/font-awesome/fontawesome-reference.html">https://www.runoob.com/font-awesome/fontawesome-reference.html</a>, 2020/08/23.</p>
 </li>
-<li><p>杨玉杰.<code>Hexo 主题 3-hexo</code>[EB/OL].<a href="https://yelog.org/2017/03/07/3-hexo/" target="_blank" rel="noopener">https://yelog.org/2017/03/07/3-hexo/</a>, 2020/08/23.</p>
+<li><p>杨玉杰.<code>Hexo 主题 3-hexo</code>[EB/OL].<a href="https://yelog.org/2017/03/07/3-hexo/">https://yelog.org/2017/03/07/3-hexo/</a>, 2020/08/23.</p>
 </li>
-<li><p>动力节点.<code>CSS八种让人眼前一亮的HOVER效果</code>[EB/OL].<a href="https://zhuanlan.zhihu.com/p/188620420" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/188620420</a>, 2020/08/23.</p>
+<li><p>动力节点.<code>CSS八种让人眼前一亮的HOVER效果</code>[EB/OL].<a href="https://zhuanlan.zhihu.com/p/188620420">https://zhuanlan.zhihu.com/p/188620420</a>, 2020/08/23.</p>
 </li>
 </ol>
 ]]></content>
@@ -235,11 +237,12 @@ echo 修改时间：%~t0
 echo 文件大小：%~z0
 pause</code></pre>
 <p>路径处理，往往都配合 for 函数进行操作。</p>
+<p><strong>未完待续…</strong></p>
 <h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><h3 id="变更日志"><a href="#变更日志" class="headerlink" title="变更日志"></a>变更日志</h3><ol>
-<li>2020/08/20 10:49:23，初始版本。</li>
+<li>2020/08/20 10:49:23，创建文章。</li>
 </ol>
 <h3 id="参考索引"><a href="#参考索引" class="headerlink" title="参考索引"></a>参考索引</h3><ol>
-<li><strong>CharyGao</strong>.<code>DOS命令（cmd）批处理：替换字符串、截取字符串、扩充字符串、获取字符串长度</code>[EB/OL].<a href="https://www.cnblogs.com/Chary/p/No0000A4.html" target="_blank" rel="noopener">https://www.cnblogs.com/Chary/p/No0000A4.html</a>, 2020/08/20.</li>
+<li><strong>CharyGao</strong>.<code>DOS命令（cmd）批处理：替换字符串、截取字符串、扩充字符串、获取字符串长度</code>[EB/OL].<a href="https://www.cnblogs.com/Chary/p/No0000A4.html">https://www.cnblogs.com/Chary/p/No0000A4.html</a>, 2020/08/20.</li>
 </ol>
 ]]></content>
       <categories>
@@ -252,13 +255,21 @@ pause</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>苹果笔记本MacbookPro重置密码的方法</title>
+    <title>苹果 Macbook Pro 笔记本从 U 盘启动以及重置开机密码的方法</title>
     <url>/202008272141/</url>
-    <content><![CDATA[<p>前几天，恰好有位老领导委托他人拿来了一台苹果笔记本，好像是 Macbook Pro 2018 吧，由于主机安装时候使用上的需要，安装了 Windows 系统，老是提示 C 盘容量不足报警。因此委托我进行容量调整。</p>
-<p>距离当年在电脑城体验的苹果主机，转眼间已有了 10 年，领导说，如果可以安装双系统到时挺好的，我随手摘网上找了一下，果真是有一些资料，可是都比较零散，因此这里总结一下；也许对个别人来说，也许用得上。</p>
-<h2 id="配置-U盘启动或者切换系统的方法"><a href="#配置-U盘启动或者切换系统的方法" class="headerlink" title="配置 U盘启动或者切换系统的方法"></a>配置 U盘启动或者切换系统的方法</h2><p>经过检查，发现 Windows 系统中已经存在 Boot Camp 软件，输入“恢复”后找到相应的菜单即可进入。不过查了一下，Macbook 没有 BISO 等设置，所谓的进入 U盘 PE 或者苹果系统的方法是：按住 <kbd>Option</kbd> 键，然后按电源键开机，那么就会出现一个启动项界面，从而实现改变启动方式的功能。</p>
-<pre><code>![Macbook启动项界面-HHJ](static/img/Macbook-开机启动项界面-20200824.jpg)</code></pre><p>有意思的是，进入该界面后，再接入 U盘 PE，那么也能很快识别出来；跟我之前在 BISO 里边配置 U盘启动还是有明显差别的。</p>
-<h2 id="Macbook-重置密码的方法"><a href="#Macbook-重置密码的方法" class="headerlink" title="Macbook 重置密码的方法"></a>Macbook 重置密码的方法</h2><p>恰好领导也并不知道自己 MacOS 的系统开机密码，自己结合网络资料测试了一下，操作流程如下：</p>
+    <content><![CDATA[<p>前几天，有位老领导委托我对其苹果 Macbook Pro 2018 笔记本进行优化处理。由于网上的资料比较零散、挂一漏万，因此我也来总结一下操作经验。</p>
+<h2 id="配置-U盘启动或者切换系统的方法"><a href="#配置-U盘启动或者切换系统的方法" class="headerlink" title="配置 U盘启动或者切换系统的方法"></a>配置 U盘启动或者切换系统的方法</h2><ul>
+<li><p>Macbook 没有 BISO 等设置，所谓的进入 U盘 PE 或者切换双系统的方法是：按住 <kbd>Option</kbd> 键，然后按电源键开机，那么就会出现一个类似于 Windows 启动项的界面，从而用于实现改变启动方式的效果。</p>
+<p>  <img src="static/img/Macbook-%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%95%8C%E9%9D%A2-20200824.jpg" alt="Macbook启动项界面-HHJ"></p>
+</li>
+</ul>
+<blockquote>
+<p>苹果电脑安装 Windows 系统，一般都是通过 Boot Camp 等软件来实现。对于双系统的主机，也可以在 Windows 系统中输入 <strong>“恢复”</strong> 找到相应的菜单进入切换启动盘的功能，不过具体功能我没有完整测试。</p>
+</blockquote>
+<blockquote>
+<p>有意思的是，进入 MacOS 的启动方式选择界面后，如果接入 U盘 PE，那么也能很快识别出来；跟我之前在 BISO 里边配置 U盘启动需要提前接入还是有明显差别的。</p>
+</blockquote>
+<h2 id="Macbook-重置密码的方法"><a href="#Macbook-重置密码的方法" class="headerlink" title="Macbook 重置密码的方法"></a>Macbook 重置密码的方法</h2><p>结合网络资料测试了一下，操作流程如下：</p>
 <ol>
 <li><p>按住 <kbd>Option</kbd> 键，然后按电源键开机；</p>
 </li>
@@ -274,14 +285,17 @@ pause</code></pre>
 </li>
 </ol>
 <blockquote>
-<p>需要注意的是，上述方法应当使用在合法授权的电脑上，请勿滥用！践行社会主义核心价值观，人人有责！</p>
+<p>需要注意的是，上述方法仅应使用在合法授权的电脑上，请勿滥用！践行社会主义核心价值观，人人有责！</p>
 </blockquote>
 <h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
-<li>学知网.<code>苹果笔记本进入BIOS设置教程</code>[EB/OL].<a href="https://www.jmqz1000.com/dnzs/23488.html" target="_blank" rel="noopener">https://www.jmqz1000.com/dnzs/23488.html</a>, 2020/08/24.</li>
+<li>学知网.<code>苹果笔记本进入BIOS设置教程</code>[EB/OL].<a href="https://www.jmqz1000.com/dnzs/23488.html">https://www.jmqz1000.com/dnzs/23488.html</a>, 2020/08/24.</li>
 </ol>
-<h3 id="变更说明"><a href="#变更说明" class="headerlink" title="变更说明"></a>变更说明</h3><ol>
-<li>2020/08/27 22:29:16，初始版本。</li>
-</ol>
+<h3 id="变更说明"><a href="#变更说明" class="headerlink" title="变更说明"></a>变更说明</h3><ul>
+<li><p>1.0.0，2020/08/27 22:29:16，初始版本。</p>
+</li>
+<li><p>1.0.1，2020/08/28 18:11:26，重新组织语言，去除一些自以为是的废话。</p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>电脑爱好者</category>
@@ -293,6 +307,7 @@ pause</code></pre>
         <tag>密码</tag>
         <tag>操作系统</tag>
         <tag>PE</tag>
+        <tag>U盘</tag>
       </tags>
   </entry>
 </search>
