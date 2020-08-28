@@ -5,9 +5,9 @@
   <subtitle>照见五蕴皆空，度一切苦厄。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://faradays-studio.github.io/"/>
+  <link href="https://faradays-studio.gitee.io/"/>
   <updated>2020-08-28T12:28:31.705Z</updated>
-  <id>https://faradays-studio.github.io/</id>
+  <id>https://faradays-studio.gitee.io/</id>
   
   <author>
     <name>John Doe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>苹果 Macbook Pro 笔记本从 U 盘启动以及重置开机密码的方法</title>
-    <link href="https://faradays-studio.github.io/202008272141/"/>
-    <id>https://faradays-studio.github.io/202008272141/</id>
+    <link href="https://faradays-studio.gitee.io/202008272141/"/>
+    <id>https://faradays-studio.gitee.io/202008272141/</id>
     <published>2020-08-27T13:41:35.000Z</published>
     <updated>2020-08-28T12:28:31.705Z</updated>
     
@@ -36,29 +36,29 @@
     </summary>
     
     
-      <category term="电脑爱好者" scheme="https://faradays-studio.github.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
+      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
     
     
-      <category term="Apple" scheme="https://faradays-studio.github.io/tags/Apple/"/>
+      <category term="Apple" scheme="https://faradays-studio.gitee.io/tags/Apple/"/>
     
-      <category term="Macbook" scheme="https://faradays-studio.github.io/tags/Macbook/"/>
+      <category term="Macbook" scheme="https://faradays-studio.gitee.io/tags/Macbook/"/>
     
-      <category term="MacOS" scheme="https://faradays-studio.github.io/tags/MacOS/"/>
+      <category term="MacOS" scheme="https://faradays-studio.gitee.io/tags/MacOS/"/>
     
-      <category term="密码" scheme="https://faradays-studio.github.io/tags/%E5%AF%86%E7%A0%81/"/>
+      <category term="密码" scheme="https://faradays-studio.gitee.io/tags/%E5%AF%86%E7%A0%81/"/>
     
-      <category term="操作系统" scheme="https://faradays-studio.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+      <category term="操作系统" scheme="https://faradays-studio.gitee.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
-      <category term="PE" scheme="https://faradays-studio.github.io/tags/PE/"/>
+      <category term="PE" scheme="https://faradays-studio.gitee.io/tags/PE/"/>
     
-      <category term="U盘" scheme="https://faradays-studio.github.io/tags/U%E7%9B%98/"/>
+      <category term="U盘" scheme="https://faradays-studio.gitee.io/tags/U%E7%9B%98/"/>
     
   </entry>
   
   <entry>
     <title>Windows 批处理的字符运算</title>
-    <link href="https://faradays-studio.github.io/202008200927/"/>
-    <id>https://faradays-studio.github.io/202008200927/</id>
+    <link href="https://faradays-studio.gitee.io/202008200927/"/>
+    <id>https://faradays-studio.gitee.io/202008200927/</id>
     <published>2020-08-20T01:27:42.000Z</published>
     <updated>2020-08-20T01:27:42.000Z</updated>
     
@@ -75,21 +75,21 @@
     </summary>
     
     
-      <category term="编程" scheme="https://faradays-studio.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+      <category term="编程" scheme="https://faradays-studio.gitee.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
-      <category term="Windows" scheme="https://faradays-studio.github.io/tags/Windows/"/>
+      <category term="Windows" scheme="https://faradays-studio.gitee.io/tags/Windows/"/>
     
-      <category term="批处理" scheme="https://faradays-studio.github.io/tags/%E6%89%B9%E5%A4%84%E7%90%86/"/>
+      <category term="批处理" scheme="https://faradays-studio.gitee.io/tags/%E6%89%B9%E5%A4%84%E7%90%86/"/>
     
-      <category term="字符运算" scheme="https://faradays-studio.github.io/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/"/>
+      <category term="字符运算" scheme="https://faradays-studio.gitee.io/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/"/>
     
   </entry>
   
   <entry>
     <title>Hello World（世界，你好）</title>
-    <link href="https://faradays-studio.github.io/202008090000/"/>
-    <id>https://faradays-studio.github.io/202008090000/</id>
+    <link href="https://faradays-studio.gitee.io/202008090000/"/>
+    <id>https://faradays-studio.gitee.io/202008090000/</id>
     <published>2020-08-08T16:00:00.000Z</published>
     <updated>2020-08-23T16:02:19.426Z</updated>
     
@@ -106,15 +106,15 @@
     </summary>
     
     
-      <category term="Faradays&#39; Studio" scheme="https://faradays-studio.github.io/categories/Faradays-Studio/"/>
+      <category term="Faradays&#39; Studio" scheme="https://faradays-studio.gitee.io/categories/Faradays-Studio/"/>
     
     
   </entry>
   
   <entry>
     <title>网站框架更新概要</title>
-    <link href="https://faradays-studio.github.io/202006071600/"/>
-    <id>https://faradays-studio.github.io/202006071600/</id>
+    <link href="https://faradays-studio.gitee.io/202006071600/"/>
+    <id>https://faradays-studio.gitee.io/202006071600/</id>
     <published>2020-06-07T08:00:50.000Z</published>
     <updated>2020-08-28T13:55:38.448Z</updated>
     
@@ -133,17 +133,17 @@
     </summary>
     
     
-      <category term="Faradays&#39; Studio" scheme="https://faradays-studio.github.io/categories/Faradays-Studio/"/>
+      <category term="Faradays&#39; Studio" scheme="https://faradays-studio.gitee.io/categories/Faradays-Studio/"/>
     
     
-      <category term="日志" scheme="https://faradays-studio.github.io/tags/%E6%97%A5%E5%BF%97/"/>
+      <category term="日志" scheme="https://faradays-studio.gitee.io/tags/%E6%97%A5%E5%BF%97/"/>
     
   </entry>
   
   <entry>
     <title>如何使用 svg.js 创建 svg 文档</title>
-    <link href="https://faradays-studio.github.io/201902090951/"/>
-    <id>https://faradays-studio.github.io/201902090951/</id>
+    <link href="https://faradays-studio.gitee.io/201902090951/"/>
+    <id>https://faradays-studio.gitee.io/201902090951/</id>
     <published>2019-02-09T01:51:30.000Z</published>
     <updated>2019-02-10T13:51:52.000Z</updated>
     
@@ -160,19 +160,19 @@
     </summary>
     
     
-      <category term="编程" scheme="https://faradays-studio.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+      <category term="编程" scheme="https://faradays-studio.gitee.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
-      <category term="JavaScript" scheme="https://faradays-studio.github.io/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://faradays-studio.gitee.io/tags/JavaScript/"/>
     
-      <category term="SVG" scheme="https://faradays-studio.github.io/tags/SVG/"/>
+      <category term="SVG" scheme="https://faradays-studio.gitee.io/tags/SVG/"/>
     
   </entry>
   
   <entry>
     <title>How to creat svg document with svg.js</title>
-    <link href="https://faradays-studio.github.io/201902080900/"/>
-    <id>https://faradays-studio.github.io/201902080900/</id>
+    <link href="https://faradays-studio.gitee.io/201902080900/"/>
+    <id>https://faradays-studio.gitee.io/201902080900/</id>
     <published>2019-02-08T01:00:30.000Z</published>
     <updated>2019-02-10T13:51:52.000Z</updated>
     
@@ -188,12 +188,12 @@
     </summary>
     
     
-      <category term="English" scheme="https://faradays-studio.github.io/categories/English/"/>
+      <category term="English" scheme="https://faradays-studio.gitee.io/categories/English/"/>
     
     
-      <category term="JavaScript" scheme="https://faradays-studio.github.io/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://faradays-studio.gitee.io/tags/JavaScript/"/>
     
-      <category term="SVG" scheme="https://faradays-studio.github.io/tags/SVG/"/>
+      <category term="SVG" scheme="https://faradays-studio.gitee.io/tags/SVG/"/>
     
   </entry>
   
