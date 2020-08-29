@@ -3,40 +3,44 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Windows 批处理的字符运算 | Blog of Faradays&#39; Studio</title>
+  <title>
+    
+    Windows 批处理的字符运算 | 
+    Blog of Faradays&#39; Studio
+  </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- HHJ@20200828�����Ӱٶ�������Դƽ̨��֤���� -->
+  <!-- HHJ@20200828，首页增加百度搜索资源平台验证功能 -->
   
 
-  <!-- HHJ@20200828��HTML Ĭ�Ϲؼ����� _config.yml ���ø�Ϊ����ʹ�������ļ�ͷ keywords ���� -->
+  <!-- HHJ@20200828，HTML 默认关键词由 _config.yml 配置改为优先使用文章文件头 keywords 配置 -->
   
-    <meta name="keywords" content="批处理,Windows,字符,Faradays' Studio">
+    <meta name="keywords" content=",Faradays' Studio">
   
 
 
 
-  <meta name="description" content="字符运算历来是编程中的重要内容，如何拼接字符，如何截取字符，如何判断字符是否存在，如何判断两个字符串是否相同，成为了编程任务中的重要环节。因此，我结合网络的资料和个人的实践经验来总结一下。 Windows 批处理中字符的基本常识 批处理中变量的赋值符号两侧不能包含空格，如 set str_date&#x3D;&#39;20200820&#39;，这与很多编程规范是相悖的。  批处理中的字符可以不添加双引号，">
+  <meta name="description" content="编程, 思考, 文学作品, 实践, 总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows 批处理的字符运算">
 <meta property="og:url" content="https://faradays-studio.gitee.io/202008200927/index.html">
 <meta property="og:site_name" content="Blog of Faradays&#39; Studio">
-<meta property="og:description" content="字符运算历来是编程中的重要内容，如何拼接字符，如何截取字符，如何判断字符是否存在，如何判断两个字符串是否相同，成为了编程任务中的重要环节。因此，我结合网络的资料和个人的实践经验来总结一下。 Windows 批处理中字符的基本常识 批处理中变量的赋值符号两侧不能包含空格，如 set str_date&#x3D;&#39;20200820&#39;，这与很多编程规范是相悖的。  批处理中的字符可以不添加双引号，">
+<meta property="og:description" content="编程, 思考, 文学作品, 实践, 总结">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-20T01:27:42.000Z">
 <meta property="article:modified_time" content="2020-08-20T01:27:42.000Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="David">
 <meta property="article:tag" content="Windows">
 <meta property="article:tag" content="批处理">
 <meta property="article:tag" content="字符运算">
 <meta name="twitter:card" content="summary">
   
   
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/faradays.ico">
   
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-  <!-- HHJ@20200822�������ʽ�ļ��ĵ��ã�Ǩ���� head_more.ejs �ļ� -->
+  <!-- HHJ@20200822，相关样式文件的调用，迁移至 head_more.ejs 文件 -->
   <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
    <!-- �ο� https://hexo.io/zh-cn/docs/helpers ���˽�������ú������÷� -->
 
@@ -174,7 +178,7 @@
                 
                     
 
-                    , <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
+                    , <a target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/">David Faraday</a>
 
                     
 
@@ -275,7 +279,7 @@ pause</code></pre>
 <li>2020/08/20 10:49:23，创建文章。</li>
 </ol>
 <h3 id="参考索引"><a href="#参考索引" class="headerlink" title="参考索引"></a>参考索引</h3><ol>
-<li><strong>CharyGao</strong>.<code>DOS命令（cmd）批处理：替换字符串、截取字符串、扩充字符串、获取字符串长度</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.cnblogs.com/Chary/p/No0000A4.html">https://www.cnblogs.com/Chary/p/No0000A4.html</a>, 2020/08/20.</li>
+<li><strong>CharyGao</strong>.<code>DOS命令（cmd）批处理：替换字符串、截取字符串、扩充字符串、获取字符串长度</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.cnblogs.com/Chary/p/No0000A4.html">https://www.cnblogs.com/Chary/p/No0000A4.html</a>, 2020/08/20.</li>
 </ol>
 
             <div class="post-copyright">
@@ -301,7 +305,7 @@ pause</code></pre>
 
         
             <p>编者：
-                <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
+                <a target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/">David Faraday</a>
             </p>
         
         
@@ -309,7 +313,7 @@ pause</code></pre>
         <!-- HHJ@20200828，调整原始链接显示方式，并增加备用链接 -->
         <p>原始链接：
             
-                <a class="post-url" target="_blank" rel="noopener" href="https://faradays-studio.github.io/202008200927/" title="Windows 批处理的字符运算">
+                <a class="post-url" target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/202008200927/" title="Windows 批处理的字符运算">
                 https://faradays-studio.github.io/202008200927/
                 </a>
             
@@ -518,14 +522,14 @@ pause</code></pre>
     </span>
 
     <!-- HHJ@20200815������վ������ͳ��  -->
-    &emsp;总文本数：<span class="post-count">3.3k</span>
+    &emsp;总文本数：<span class="post-count">3.6k</span>
 </p>
 
 
-      <p>All posts licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" title="Creative Commons license: Attribution-Noncommercial-ShareAlike" target="_blank">CC BY-NC-SA 4.0</a>. </p>
+      <p>All posts licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" title="Creative Commons license: Attribution-Noncommercial-ShareAlike" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a>. </p>
       <p>
-        Powered by  <a href="http://hexo.io/" target="_blank">Hexo,   </a>
-        with <a href="https://github.com/faradays-studio/faradays-studio.github.io" target="_blank">Faradays</a> theme.
+        Powered by  <a href="http://hexo.io/" target="_blank" rel="external nofollow">Hexo,   </a>
+        with <a href="https://github.com/faradays-studio/faradays-studio.github.io" target="_blank" rel="external nofollow">Faradays</a> theme.
       &copy; 2018-2020 Faradays&#39; Studio<br>
       <!-- HHJ@20200809  -->
       </p>
@@ -668,6 +672,7 @@ pause</code></pre>
 
 
 
+
   
 <script src="/js/pop-img.js"></script>
 
@@ -759,6 +764,16 @@ pause</code></pre>
 
 
 
+
+
+
+<script>
+// HHJ@20200829，增加版权提示
+console.log("\nAll right reserved by Faradays' Studio.\n\n" + "Licensed under GNU GPLv3.\n"
+          + "Send your request to yvany@qq.com and wait for your LICENSE CONFIRMATION email.\n"
+          + "See https://www.gnu.org/licenses/gpl-3.0.html for the license details.\n\n"
+          + "Click https://faradays-studio.gitee.io for my recent developments...\n\n");
+</script>
   </div>
 </body>
 </html>
