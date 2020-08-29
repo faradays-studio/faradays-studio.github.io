@@ -206,7 +206,7 @@
     </span>
 
     <!-- HHJ@20200815������վ������ͳ��  -->
-    &emsp;总文本数：<span class="post-count">3.6k</span>
+    &emsp;总文本数：<span class="post-count">3.7k</span>
 </p>
 
 
@@ -391,6 +391,21 @@ console.log("\nAll right reserved by Faradays' Studio.\n\n" + "Licensed under GN
           + "Send your request to yvany@qq.com and wait for your LICENSE CONFIRMATION email.\n"
           + "See https://www.gnu.org/licenses/gpl-3.0.html for the license details.\n\n"
           + "Click https://faradays-studio.gitee.io for my recent developments...\n\n");
+</script>
+
+
+<script>
+// HHJ@20200829，自动推送百度功能（当新页面每次被浏览时，页面URL会自动推送给百度，无需站长汇总URL再进行主动推送操作。）
+(function(){
+    var bp = document.createElement('script');
+
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    // push.js 内容如下：
+    // !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
 </script>
   </div>
 </body>
