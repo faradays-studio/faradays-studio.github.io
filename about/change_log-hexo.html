@@ -46,6 +46,14 @@
    <!-- �ο� https://hexo.io/zh-cn/docs/helpers ���˽�������ú������÷� -->
 
 
+<script>
+// HHJ@20200830��ҳ�����ʱ��
+window.onload = function () {
+    var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart;
+    console.log('Page load time is '+ loadTime + ' ms');
+}
+</script>
+
   
 <link rel="stylesheet" href="/css/style.css">
 
@@ -55,6 +63,16 @@
   
 
   
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?83a082b3997bdb4ac31a097af3ea3ea9";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
   
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
@@ -150,6 +168,7 @@
             <i class="fa fa-user-o"></i>
             <span>
             
+            
                 <a target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/">David Faraday</a>
             
             </span>
@@ -199,60 +218,9 @@
 </ul>
 <h2 id="hexo-基础知识"><a href="#hexo-基础知识" class="headerlink" title="hexo 基础知识"></a>hexo 基础知识</h2><p>hexo 内置变量 <a target="_blank" rel="noopener norefferrer" href="https://hexo.io/zh-cn/docs/variables.html">https://hexo.io/zh-cn/docs/variables.html</a></p>
 <p>layout.ejs 是整个页面的入口，所有的页面都基于 layout.ejs生成</p>
-<h3 id="Faradays-主题结构"><a href="#Faradays-主题结构" class="headerlink" title="Faradays 主题结构"></a>Faradays 主题结构</h3><pre><code class="shell">layout 目录清单如下：
-│  archive.ejs
-│  category.ejs
-│  index.ejs        // 首页
-│  layout.ejs       // 布局（所有页）
-│  page.ejs
-│  post.ejs         // 文章页
-│  tag.ejs
-│  
-├─_partial
-│  │  after-footer.ejs
-│  │  archive-post.ejs
-│  │  archive.ejs
-│  │  article.ejs
-│  │  footer.ejs
-│  │  head.ejs
-│  │  header.ejs
-│  │  mobile-nav.ejs
-│  │  search.ejs
-│  │  sidebar.ejs
-│  │  
-│  ├─plugins
-│  │  ├─analytics
-│  │  │      baidu-analytics.ejs
-│  │  │      cnzz-analytics.ejs
-│  │  │      google-analytics.ejs
-│  │  │      
-│  │  ├─comments
-│  │  │      changyan.ejs
-│  │  │      gitment.ejs
-│  │  │      wangyiyun.ejs
-│  │  │      youyan.ejs
-│  │  │      
-│  │  └─sites
-│  │          visit.ejs
-│  │          
-│  └─post
-│          category.ejs
-│          copyright.ejs
-│          date.ejs
-│          gallery.ejs
-│          nav.ejs
-│          reward.ejs
-│          share.ejs
-│          tag.ejs
-│          title.ejs
-│          toc.ejs
-│          
-└─_widget
-        archive.ejs
-        category.ejs
-        recent_posts.ejs
-        tag.ejs
-        tagcloud.ejs</code></pre>
+<h3 id="Faradays-主题结构"><a href="#Faradays-主题结构" class="headerlink" title="Faradays 主题结构"></a>Faradays 主题结构</h3><figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">layout 目录清单如下：<br>│  archive.ejs<br>│  category.ejs<br>│  index.ejs        // 首页<br>│  layout.ejs       // 布局（所有页）<br>│  page.ejs<br>│  post.ejs         // 文章页<br>│  tag.ejs<br>│  <br>├─_partial<br>│  │  after-footer.ejs<br>│  │  archive-post.ejs<br>│  │  archive.ejs<br>│  │  article.ejs<br>│  │  footer.ejs<br>│  │  head.ejs<br>│  │  header.ejs<br>│  │  mobile-nav.ejs<br>│  │  search.ejs<br>│  │  sidebar.ejs<br>│  │  <br>│  ├─plugins<br>│  │  ├─analytics<br>│  │  │      baidu-analytics.ejs<br>│  │  │      cnzz-analytics.ejs<br>│  │  │      google-analytics.ejs<br>│  │  │      <br>│  │  ├─comments<br>│  │  │      changyan.ejs<br>│  │  │      gitment.ejs<br>│  │  │      wangyiyun.ejs<br>│  │  │      youyan.ejs<br>│  │  │      <br>│  │  └─sites<br>│  │          visit.ejs<br>│  │          <br>│  └─post<br>│          category.ejs<br>│          copyright.ejs<br>│          date.ejs<br>│          gallery.ejs<br>│          nav.ejs<br>│          reward.ejs<br>│          share.ejs<br>│          tag.ejs<br>│          title.ejs<br>│          toc.ejs<br>│          <br>└─_widget<br>        archive.ejs<br>        category.ejs<br>        recent_posts.ejs<br>        tag.ejs<br>        tagcloud.ejs<br></code></pre></td></tr></table></figure>
+
+
 <h3 id="使用注意事项"><a href="#使用注意事项" class="headerlink" title="使用注意事项"></a>使用注意事项</h3><ol>
 <li><p>Front-matter 中的数字应当使用引号包围，才能形成字符；如果需要转换为数字，可以使用相应的 JavaScript 转换函数。</p>
 </li>
@@ -293,122 +261,25 @@
 <li><p>查看分支<br>  git branch -a<br>  git branch -v<br>  git branch -r</p>
 </li>
 <li><p>查看最近的 commit 信息<br>  git show HEAD</p>
-<pre><code>  按 q 退出</code></pre></li>
+<pre><code>按 q 退出</code></pre></li>
 <li><p>git checkout -b &lt;分支名&gt;<br>  git checkout -b blog</p>
 </li>
 <li><p>从 服务器 下载更新到本地<br>  由于 hexo 更新后，本地会版本落后，因此需要更新<br>  git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;<br>  git pull origin master</p>
-<pre><code>  或 git pull origin master:master</code></pre><p>  git pull origin blog:blog</p>
+<pre><code>或 git pull origin master:master</code></pre><p>  git pull origin blog:blog</p>
 </li>
 </ul>
-<h4 id="使用流程示意"><a href="#使用流程示意" class="headerlink" title="使用流程示意"></a>使用流程示意</h4><pre><code>``` Shell
-#克隆你fork出来的分支
-$git clone &lt;远程Arepository&gt;
-
-#添加远程B repository标签
-$git remote add &lt;远程B repository标签&gt; git@github.com:XXXX/ceph.git
-
-#从远程Brepository的master分支拉取最新objects合并到本地master分支
-$git pull &lt;远程B厂库标签&gt; master:master
-
-#切换到要修改的分支上
-$git checkout YYYY
-
-#在当前分支的基础上创建一个开发分支，并切换到该分支上，你将在该分支上coding
-$git branch develop; git checkout develop
-
-#在工作区coding
-coding...... 
-
-#将修改保存到索引区
-$git add .
-
-#将修改提交到本地分区
-$git commit -a
-
-#将本地分支my_test提交到远程A repository的my_test分支上
-$git push origin my_test:my_test
-```</code></pre><h4 id="hexo-博客删除部分-commit-的操作实践"><a href="#hexo-博客删除部分-commit-的操作实践" class="headerlink" title="hexo 博客删除部分 commit 的操作实践"></a>hexo 博客删除部分 commit 的操作实践</h4><p>经过 2 天半的来回测试，终于删除了上传了隐藏文件 hid*.html 文件的提交。</p>
+<h4 id="使用流程示意"><a href="#使用流程示意" class="headerlink" title="使用流程示意"></a>使用流程示意</h4><pre><code><figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs Shell"><span class="hljs-meta">#</span><span class="bash">克隆你fork出来的分支</span><br><span class="hljs-meta">$</span><span class="bash">git <span class="hljs-built_in">clone</span> &lt;远程Arepository&gt;</span><br><br><span class="hljs-meta">#</span><span class="bash">添加远程B repository标签</span><br><span class="hljs-meta">$</span><span class="bash">git remote add &lt;远程B repository标签&gt; git@github.com:XXXX/ceph.git</span><br><br><span class="hljs-meta">#</span><span class="bash">从远程Brepository的master分支拉取最新objects合并到本地master分支</span><br><span class="hljs-meta">$</span><span class="bash">git pull &lt;远程B厂库标签&gt; master:master</span><br><br><span class="hljs-meta">#</span><span class="bash">切换到要修改的分支上</span><br><span class="hljs-meta">$</span><span class="bash">git checkout YYYY</span><br><br><span class="hljs-meta">#</span><span class="bash">在当前分支的基础上创建一个开发分支，并切换到该分支上，你将在该分支上coding</span><br><span class="hljs-meta">$</span><span class="bash">git branch develop; git checkout develop</span><br><br><span class="hljs-meta">#</span><span class="bash">在工作区coding</span><br>coding...... <br><br><span class="hljs-meta">#</span><span class="bash">将修改保存到索引区</span><br><span class="hljs-meta">$</span><span class="bash">git add .</span><br><br><span class="hljs-meta">#</span><span class="bash">将修改提交到本地分区</span><br><span class="hljs-meta">$</span><span class="bash">git commit -a</span><br><br><span class="hljs-meta">#</span><span class="bash">将本地分支my_test提交到远程A repository的my_test分支上</span><br><span class="hljs-meta">$</span><span class="bash">git push origin my_test:my_test</span><br></code></pre></td></tr></table></figure></code></pre><h4 id="hexo-博客删除部分-commit-的操作实践"><a href="#hexo-博客删除部分-commit-的操作实践" class="headerlink" title="hexo 博客删除部分 commit 的操作实践"></a>hexo 博客删除部分 commit 的操作实践</h4><p>经过 2 天半的来回测试，终于删除了上传了隐藏文件 hid*.html 文件的提交。</p>
 <ol>
 <li><p>出现 <code>HEAD detached at 68e8065</code> 等错误的解决方法：</p>
-<pre><code class="Shell"> # 给 blog 起个 branch 名 blog_temp1
- git branch blog_temp1 blog
- git branch -a
- # Head 指向实际使用的 branch，注意不是 origin/blog
- git checkout blog
- # 融合到当前 branch
- git merge blog_temp1
-     合并时存在问题，如果以本地为准 git  add，以服务器为准则 git  rm XXXX，然后 git commit
-     再重新执行合并
- # 删除临时 branch
- git branch -d blog_temp1</code></pre>
+ <figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs Shell"><span class="hljs-meta">#</span><span class="bash"> 给 blog 起个 branch 名 blog_temp1</span><br>git branch blog_temp1 blog<br>git branch -a<br><span class="hljs-meta">#</span><span class="bash"> Head 指向实际使用的 branch，注意不是 origin/blog</span><br>git checkout blog<br><span class="hljs-meta">#</span><span class="bash"> 融合到当前 branch</span><br>git merge blog_temp1<br>    合并时存在问题，如果以本地为准 git  add，以服务器为准则 git  rm XXXX，然后 git commit<br>    再重新执行合并<br><span class="hljs-meta">#</span><span class="bash"> 删除临时 branch</span><br>git branch -d blog_temp1<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>删除特定 commit (# 由于 hexo 自身存在一个版本库，因此需要进行相应的处理)</p>
-<pre><code class="Shell"> git log  
- git rebase -i XXX       # 将需要删除的最早的提交之前的一次提交做基础 
-     将相关 commit 记录中的 pick 改为 drop，保存即实现本地删除。
- git push origin blog -f    # 强制提交本地版本到远程（实现远程删除）
- git status       # 查看状态
- git log --oneline
- git pull origin blog:blog
- git log --oneline
-
- cd D:\WebSites\faradays-studio.hexo\.deploy_git
- 执行上述过程，如出现 `HEAD detached ` 等报错，注意分支名称实际为 master，
- 执行 hexo 同步至远程</code></pre>
+ <figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs Shell">git log  <br>git rebase -i XXX       # 将需要删除的最早的提交之前的一次提交做基础 <br>    将相关 commit 记录中的 pick 改为 drop，保存即实现本地删除。<br>git push origin blog -f    # 强制提交本地版本到远程（实现远程删除）<br>git status       # 查看状态<br>git log --oneline<br>git pull origin blog:blog<br>git log --oneline<br><br>cd D:\WebSites\faradays-studio.hexo\.deploy_git<br>执行上述过程，如出现 `HEAD detached ` 等报错，注意分支名称实际为 master，<br>执行 hexo 同步至远程<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>具体的操作过程：</p>
-<pre><code class="Shell"> # 从 GitHub 下拉取版本库，确保本地文件为最新
- git pull origin blog:blog
- # 查看更新日志
- git log
-     相关 log 文件使用 VI 的形式打开，因此可以按 shift + G 跳转到底，按 q 退出修改。
- # 将需要删除的最早提交的前一次提交，设置为版本基础
- git rebase -i 982c78fc82a2a3804233e9ff7ef315fc21dc0822
-     在弹出文件中，将会展示在该提交之后的每个提交信息
-     将相关 commit 记录中的 pick 改为 drop，保存即实现本地删除。
-     出现 `HEAD detached at 982c78f` 报警
+ <figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs Shell"><span class="hljs-meta">#</span><span class="bash"> 从 GitHub 下拉取版本库，确保本地文件为最新</span><br>git pull origin blog:blog<br><span class="hljs-meta">#</span><span class="bash"> 查看更新日志</span><br>git log<br>    相关 log 文件使用 VI 的形式打开，因此可以按 shift + G 跳转到底，按 q 退出修改。<br><span class="hljs-meta">#</span><span class="bash"> 将需要删除的最早提交的前一次提交，设置为版本基础</span><br>git rebase -i 982c78fc82a2a3804233e9ff7ef315fc21dc0822<br>    在弹出文件中，将会展示在该提交之后的每个提交信息<br>    将相关 commit 记录中的 pick 改为 drop，保存即实现本地删除。<br>    出现 `HEAD detached at 982c78f` 报警<br>    <br>    # 查看当前分支情况<br>    git branch -a<br>    # 将当前分支改名<br>    git branch blog_temp1 blog<br>    # 解决由于删除造成的版本 merge 报警<br>    git rm -r about<br>    git rm content.json<br>    git rebase --continue<br>    git commit<br>    git push origin blog -f<br>    <br>    # 合并分支<br>    #git merge blog_temp1<br>    # 重新对 Head 指向 branch（测试表明该步骤不能执行）<br>    # git checkout blog<br>    # 删除临时的版本<br>    git branch -d blog_temp1<br>git log --oneline<br><br><span class="hljs-meta">#</span><span class="bash"> git pull origin blog:blog 等命令无法对 hexo 的版本库进行更新，因此执行以下操作</span><br><span class="hljs-meta">#</span><span class="bash"> 删除 .deploy_git 文件夹，重新建立版本库理论可行。详见 https://github.com/hexojs/hexo-deployer-git 。</span><br>git rebase -i 982c78fc82a2a3804233e9ff7ef315fc21dc0822<br><span class="hljs-meta">#</span><span class="bash"> 查看状态</span><br>git status<br>git rm -r about<br>git rm content.json<br>git rebase --continue<br>git log<br>git log --oneline<br><br><span class="hljs-meta">#</span><span class="bash">至此，各个版本完成更新，可以使用 hexo 重新生成一次，确保删除的文件被生成</span><br>hexo -d g<br><br><span class="hljs-meta">#</span><span class="bash"> 查看本地版本日志</span><br>git log --oneline<br><span class="hljs-meta">#</span><span class="bash"> 解决由于前边删除文件导致的版本文件数量不一致的问题</span><br>git pull -r<br><span class="hljs-meta">#</span><span class="bash"> 下载网络更新到本地</span><br>git pull origin blog:blog<br><span class="hljs-meta">#</span><span class="bash"> 检查更新情况后的版本日志</span><br>git log --oneline<br></code></pre></td></tr></table></figure>
 
-     # 查看当前分支情况
-     git branch -a
-     # 将当前分支改名
-     git branch blog_temp1 blog
-     # 解决由于删除造成的版本 merge 报警
-     git rm -r about
-     git rm content.json
-     git rebase --continue
-     git commit
-     git push origin blog -f
 
-     # 合并分支
-     #git merge blog_temp1
-     # 重新对 Head 指向 branch（测试表明该步骤不能执行）
-     # git checkout blog
-     # 删除临时的版本
-     git branch -d blog_temp1
- git log --oneline
-
- # git pull origin blog:blog 等命令无法对 hexo 的版本库进行更新，因此执行以下操作
- # 删除 .deploy_git 文件夹，重新建立版本库理论可行。详见 https://github.com/hexojs/hexo-deployer-git 。
- git rebase -i 982c78fc82a2a3804233e9ff7ef315fc21dc0822
- # 查看状态
- git status
- git rm -r about
- git rm content.json
- git rebase --continue
- git log
- git log --oneline
-
- #至此，各个版本完成更新，可以使用 hexo 重新生成一次，确保删除的文件被生成
- hexo -d g
-
- # 查看本地版本日志
- git log --oneline
- # 解决由于前边删除文件导致的版本文件数量不一致的问题
- git pull -r
- # 下载网络更新到本地
- git pull origin blog:blog
- # 检查更新情况后的版本日志
- git log --oneline</code></pre>
 </li>
 </ol>
 <h3 id="研究总结"><a href="#研究总结" class="headerlink" title="研究总结"></a>研究总结</h3><h4 id="独立页的功能测试"><a href="#独立页的功能测试" class="headerlink" title="独立页的功能测试"></a>独立页的功能测试</h4><ol>
@@ -643,7 +514,7 @@ $git push origin my_test:my_test
     </span>
 
     <!-- HHJ@20200815������վ������ͳ��  -->
-    &emsp;总文本数：<span class="post-count">3.7k</span>
+    &emsp;总文本数：<span class="post-count">3.8k</span>
 </p>
 
 
@@ -898,17 +769,7 @@ console.log("\nAll right reserved by Faradays' Studio.\n\n" + "Licensed under GN
 
 
 <script>
-// HHJ@20200829，自动推送百度功能（当新页面每次被浏览时，页面URL会自动推送给百度，无需站长汇总URL再进行主动推送操作。）
-(function(){
-    var bp = document.createElement('script');
-
-    bp.src = '//push.zhanzhang.baidu.com/push.js';
-    // push.js 内容如下：
-    // !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
-
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
+    // HHJ@20200829，自动推送百度功能（当新页面每次被浏览时，页面URL会自动推送给百度，无需站长汇总URL再进行主动推送操作。）【已删除】
 </script>
   </div>
 </body>

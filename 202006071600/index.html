@@ -34,7 +34,7 @@
 <meta property="og:description" content="编程, 思考, 文学作品, 实践, 总结">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-06-07T08:00:50.000Z">
-<meta property="article:modified_time" content="2020-08-29T15:56:40.173Z">
+<meta property="article:modified_time" content="2020-08-30T07:35:28.006Z">
 <meta property="article:author" content="David">
 <meta property="article:tag" content="日志">
 <meta name="twitter:card" content="summary">
@@ -64,6 +64,14 @@
 
 
 
+<script>
+// HHJ@20200830��ҳ�����ʱ��
+window.onload = function () {
+    var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart;
+    console.log('Page load time is '+ loadTime + ' ms');
+}
+</script>
+
   
 <link rel="stylesheet" href="/css/style.css">
 
@@ -73,6 +81,16 @@
   
 
   
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?83a082b3997bdb4ac31a097af3ea3ea9";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
   
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
@@ -178,6 +196,7 @@
             <i class="fa fa-user-o"></i>
             <span>
             
+            
                 
                 
                     <a target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/">David Faraday</a>
@@ -204,7 +223,7 @@
 
         <!-- HHJ@20200815��������������ͳ��  -->
         <li><i class="fa fa-file-word-o"></i>
-            <span class="post-count">1.3k words</span>
+            <span class="post-count">1.4k words</span>
         </li>
         <li><i class="fa fa-caret-square-o-right"></i>
             <span class="post-count">5 min</span>
@@ -259,7 +278,9 @@
 </li>
 <li><p>2020/08/29 20:13:01，升级到 v0.1.7，主要是 SEO 适配方面的改进。包括调整 sitemap 生成结果，同时部署到 Gitee 、 GitHub 两个站点；更新站点 logo ，调整文件头的作者、关键词、描述等方面的设置，调整页脚引用的 ref 参数等。</p>
 </li>
-<li><p>2020/08/29 23:56:38，纠正某文章图片链接填写方式不正确的问题；增加百度自动推送的脚步。</p>
+<li><p>2020/08/29 23:56:38，纠正某文章图片链接填写方式不正确的问题；增加百度自动推送的脚本。</p>
+</li>
+<li><p>2020/08/30 11:20:03，增加页面加载计时、去除百度自动推送脚本，解决作者分隔符添加不当等问题。</p>
 </li>
 </ol>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
@@ -334,6 +355,21 @@
 <p>参照设置自动推送方法。</p>
 </blockquote>
 </li>
+<li><p>百度资源搜索平台.<code>平台工具使用帮助-链接提交</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://ziyuan.baidu.com/college/courseinfo?id=267&amp;page=2">https://ziyuan.baidu.com/college/courseinfo?id=267&amp;page=2</a>, 2020/08/29.</p>
+<blockquote>
+<p>文章提出，百度自动推送功能已暂停使用。</p>
+</blockquote>
+</li>
+<li><p>叶少翔.<code>js统计页面加载时间</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://blog.csdn.net/jiangzunshao/article/details/53040785">https://blog.csdn.net/jiangzunshao/article/details/53040785</a>, 2020/08/30.</p>
+<blockquote>
+<p>参照设置了了相应的脚步。</p>
+</blockquote>
+</li>
+<li><p>周思伟.<code>hexo-theme-yilia-plus</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://github.com/JoeyBling/hexo-theme-yilia-plus">https://github.com/JoeyBling/hexo-theme-yilia-plus</a>, 2020/08/30.</p>
+<blockquote>
+<p>这个主题关于组件的集成思路可以参考。</p>
+</blockquote>
+</li>
 </ol>
 
             <div class="post-copyright">
@@ -342,7 +378,7 @@
     <br /><br /><br />
     <div class="content">
         <!-- HHJ@20200815 -->
-        <p>最后更新： 2020/08/29 23:56:40</p>
+        <p>最后更新： 2020/08/30 15:35:28</p>
         <p>
 
                 
@@ -576,7 +612,7 @@
     </span>
 
     <!-- HHJ@20200815������վ������ͳ��  -->
-    &emsp;总文本数：<span class="post-count">3.7k</span>
+    &emsp;总文本数：<span class="post-count">3.8k</span>
 </p>
 
 
@@ -831,17 +867,7 @@ console.log("\nAll right reserved by Faradays' Studio.\n\n" + "Licensed under GN
 
 
 <script>
-// HHJ@20200829，自动推送百度功能（当新页面每次被浏览时，页面URL会自动推送给百度，无需站长汇总URL再进行主动推送操作。）
-(function(){
-    var bp = document.createElement('script');
-
-    bp.src = '//push.zhanzhang.baidu.com/push.js';
-    // push.js 内容如下：
-    // !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
-
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
+    // HHJ@20200829，自动推送百度功能（当新页面每次被浏览时，页面URL会自动推送给百度，无需站长汇总URL再进行主动推送操作。）【已删除】
 </script>
   </div>
 </body>

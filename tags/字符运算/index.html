@@ -41,6 +41,14 @@
    <!-- �ο� https://hexo.io/zh-cn/docs/helpers ���˽�������ú������÷� -->
 
 
+<script>
+// HHJ@20200830��ҳ�����ʱ��
+window.onload = function () {
+    var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart;
+    console.log('Page load time is '+ loadTime + ' ms');
+}
+</script>
+
   
 <link rel="stylesheet" href="/css/style.css">
 
@@ -50,6 +58,16 @@
   
 
   
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?83a082b3997bdb4ac31a097af3ea3ea9";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
   
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
@@ -198,7 +216,7 @@
     </span>
 
     <!-- HHJ@20200815������վ������ͳ��  -->
-    &emsp;总文本数：<span class="post-count">3.7k</span>
+    &emsp;总文本数：<span class="post-count">3.8k</span>
 </p>
 
 
@@ -387,17 +405,7 @@ console.log("\nAll right reserved by Faradays' Studio.\n\n" + "Licensed under GN
 
 
 <script>
-// HHJ@20200829，自动推送百度功能（当新页面每次被浏览时，页面URL会自动推送给百度，无需站长汇总URL再进行主动推送操作。）
-(function(){
-    var bp = document.createElement('script');
-
-    bp.src = '//push.zhanzhang.baidu.com/push.js';
-    // push.js 内容如下：
-    // !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
-
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
+    // HHJ@20200829，自动推送百度功能（当新页面每次被浏览时，页面URL会自动推送给百度，无需站长汇总URL再进行主动推送操作。）【已删除】
 </script>
   </div>
 </body>

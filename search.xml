@@ -5,24 +5,12 @@
     <url>/201902080900/</url>
     <content><![CDATA[<p>A  few days ago, I got stuck in the mud of creating a svg dom with svg.js. After many test and searching, I found out that someting is different from the official  manual.</p>
 <h2 id="The-problem-of-using-svg-js"><a href="#The-problem-of-using-svg-js" class="headerlink" title="The problem of using svg.js"></a>The problem of using svg.js</h2><p><strong>For example, we write some dom in <some_page>.html like this:</strong></p>
-<pre><code class="html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Creating SVG with SVG.js&lt;/title&gt;
-&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
-&lt;script src=&quot;https://cdn.bootcss.com/svg.js/3.0.11/svg.min.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Creating SVG with SVG.js<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;X-UA-Compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;IE=edge,chrome=1&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/svg.js/3.0.11/svg.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;drawing&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><br><span class="javascript">  <span class="hljs-comment">// write down your javascript here..</span></span><br><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
-&lt;body&gt;
-&lt;div id=&quot;drawing&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
-  // write down your javascript here..
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+
 <p>The official  manual (refer to <a href="https://svgjs.com/docs/3.0/getting-started/">https://svgjs.com/docs/3.0/getting-started/</a>) said that <code>&lt;script&gt;...&lt;/script&gt;</code>  part like this:</p>
-<pre><code class="javascript">var draw = SVG(&#39;drawing&#39;).size(300, 300)
-var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></pre>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> draw = SVG(<span class="hljs-string">&#x27;drawing&#x27;</span>).size(<span class="hljs-number">300</span>, <span class="hljs-number">300</span>)<br><span class="hljs-keyword">var</span> rect = draw.rect(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>).attr(&#123; <span class="hljs-attr">fill</span>: <span class="hljs-string">&#x27;#f06&#x27;</span> &#125;)<br></code></pre></td></tr></table></figure>
+
 <p>The script above pass through on jsfiddle.net test (refer to <a href="https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz">https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz</a> ). However, it doesn’t work on my case, no matter running on my MSIE 7.0 to 11.0 or Chrome 58. I felt so depressed that even could not got sleep for two whole days.</p>
 <h2 id="The-way-to-write-svg-js-script-and-DOM"><a href="#The-way-to-write-svg-js-script-and-DOM" class="headerlink" title="The way to write svg.js script and DOM"></a>The way to write svg.js script and DOM</h2><p>After many tests and searching, I found out that these code running: </p>
 <h3 id="1-Way-1"><a href="#1-Way-1" class="headerlink" title="1. Way 1:"></a>1. Way 1:</h3><p>   DOM: <code>&lt;div id=&quot;drawing&quot;&gt;&lt;/div&gt;</code> </p>
@@ -52,24 +40,12 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
     <url>/201902090951/</url>
     <content><![CDATA[<p>前段时间，我尝试了使用 svg.js 来创建 svg dom 文档时，并没有成功。经过反复多次的尝试，并网络检索了一些信息，初步确认为官方文档未及时更新，导致了编码错误。</p>
 <h2 id="使用-svg-js-遇到的问题"><a href="#使用-svg-js-遇到的问题" class="headerlink" title="使用 svg.js 遇到的问题"></a>使用 svg.js 遇到的问题</h2><p><strong>举个例子，dom 文档 <some_page>.html 的结构如下：</strong></p>
-<pre><code class="html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Creating SVG with SVG.js&lt;/title&gt;
-&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
-&lt;script src=&quot;https://cdn.bootcss.com/svg.js/3.0.11/svg.min.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Creating SVG with SVG.js<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;X-UA-Compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;IE=edge,chrome=1&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/svg.js/3.0.11/svg.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;drawing&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><br><span class="javascript">  <span class="hljs-comment">// write down your javascript here..</span></span><br><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
-&lt;body&gt;
-&lt;div id=&quot;drawing&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
-  // write down your javascript here..
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+
 <p>官方文档（见 <a href="https://svgjs.com/docs/3.0/getting-started/">https://svgjs.com/docs/3.0/getting-started/</a> ）对于 JavaScript 脚本环节的部分 <code>&lt;script&gt;...&lt;/script&gt;</code> 是这样写的：</p>
-<pre><code class="javascript">var draw = SVG(&#39;drawing&#39;).size(300, 300)
-var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></pre>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> draw = SVG(<span class="hljs-string">&#x27;drawing&#x27;</span>).size(<span class="hljs-number">300</span>, <span class="hljs-number">300</span>)<br><span class="hljs-keyword">var</span> rect = draw.rect(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>).attr(&#123; <span class="hljs-attr">fill</span>: <span class="hljs-string">&#x27;#f06&#x27;</span> &#125;)<br></code></pre></td></tr></table></figure>
+
 <p>上述脚本在 jsfiddle.net 网站中测试是无异常的，详见 <a href="https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz">https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz</a> 。然而，无论我是在 IE 7.0 至 11.0，还是在 Chrome 58 内核的浏览器中，我的本地测试从未成功。因此，整整 2 天里，我都未能从试验的阴影中恢复过来，反反复复进行了无数次试验，均无果而终。</p>
 <h2 id="使用-svg-js-书写脚本和-DOM-的方法"><a href="#使用-svg-js-书写脚本和-DOM-的方法" class="headerlink" title="使用 svg.js 书写脚本和 DOM 的方法"></a>使用 svg.js 书写脚本和 DOM 的方法</h2><p>在无数次的一边尝试、一边网络搜索的过程中，我发现了以下可行的方法：</p>
 <h3 id="1-方法-1"><a href="#1-方法-1" class="headerlink" title="1. 方法 1"></a>1. 方法 1</h3><p>   DOM 文档： <code>&lt;div id=&quot;drawing&quot;&gt;&lt;/div&gt;</code> </p>
@@ -132,7 +108,9 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
 </li>
 <li><p>2020/08/29 20:13:01，升级到 v0.1.7，主要是 SEO 适配方面的改进。包括调整 sitemap 生成结果，同时部署到 Gitee 、 GitHub 两个站点；更新站点 logo ，调整文件头的作者、关键词、描述等方面的设置，调整页脚引用的 ref 参数等。</p>
 </li>
-<li><p>2020/08/29 23:56:38，纠正某文章图片链接填写方式不正确的问题；增加百度自动推送的脚步。</p>
+<li><p>2020/08/29 23:56:38，纠正某文章图片链接填写方式不正确的问题；增加百度自动推送的脚本。</p>
+</li>
+<li><p>2020/08/30 11:20:03，增加页面加载计时、去除百度自动推送脚本，解决作者分隔符添加不当等问题。</p>
 </li>
 </ol>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
@@ -207,6 +185,21 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
 <p>参照设置自动推送方法。</p>
 </blockquote>
 </li>
+<li><p>百度资源搜索平台.<code>平台工具使用帮助-链接提交</code>[EB/OL].<a href="https://ziyuan.baidu.com/college/courseinfo?id=267&amp;page=2">https://ziyuan.baidu.com/college/courseinfo?id=267&amp;page=2</a>, 2020/08/29.</p>
+<blockquote>
+<p>文章提出，百度自动推送功能已暂停使用。</p>
+</blockquote>
+</li>
+<li><p>叶少翔.<code>js统计页面加载时间</code>[EB/OL].<a href="https://blog.csdn.net/jiangzunshao/article/details/53040785">https://blog.csdn.net/jiangzunshao/article/details/53040785</a>, 2020/08/30.</p>
+<blockquote>
+<p>参照设置了了相应的脚步。</p>
+</blockquote>
+</li>
+<li><p>周思伟.<code>hexo-theme-yilia-plus</code>[EB/OL].<a href="https://github.com/JoeyBling/hexo-theme-yilia-plus">https://github.com/JoeyBling/hexo-theme-yilia-plus</a>, 2020/08/30.</p>
+<blockquote>
+<p>这个主题关于组件的集成思路可以参考。</p>
+</blockquote>
+</li>
 </ol>
 ]]></content>
       <categories>
@@ -243,43 +236,14 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
 <p><strong>起点位置</strong> ：如果为正数，那么就是从左往右截取，而如果为负数，那么就是说从右向左截取；不过无论为正还是为负，截取结果都是不包含处于 <strong>起点位置</strong> 的那个字符的。</p>
 <p><strong>截取数量|终点位置</strong> ：如果为正数，那么就是单纯的 <strong>截取数量</strong> ；如果为负数，那么应当表述为 <strong>终点位置</strong> ，而且，与 <strong>起点位置</strong> 对应，截取结果也是不包含该负数所对应的字符的，即上述的 -5 对应的是终点位置为右侧第 6 个字符截止。</p>
 <p>举例说明，如下：</p>
-<pre><code class="powershell">echo on
-set ifo=abcdefghijklmnopqrstuvwxyz0123456789
-echo %ifo%
-echo.
-echo 截取前4个字符：%ifo:~0,4%
-echo 截取年度：%date:~0,4%
-echo.
-echo 截取最后2个字符：%ifo:~-2%
-echo 截取星期：%date:~-2%
-echo.
-echo 截取第一个到倒数第6个字符：%ifo:~0,-5%
-echo 截取日期（含分隔符）：%date:~0,-3%
-echo.
-echo 从第5个字符开始，截取2个字符：%ifo:~4,2%
-echo 截取月份：%date:~5,2%
-echo 截取天数：%date:~8,2%
-echo.
-echo 从倒数第14个字符开始，截取5个字符：%ifo:~-14,5%
-echo 截取秒数：%time:~3,2%
-echo.
-echo 当前时间是：%time% 即 %time:~0,2%点%time:~3,2%分%time:~6,2%秒%time:~9,2%厘秒
-pause</code></pre>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">echo</span> on<br><span class="hljs-built_in">set</span> ifo=abcdefghijklmnopqrstuvwxyz0123456789<br><span class="hljs-built_in">echo</span> %ifo%<br><span class="hljs-built_in">echo</span>.<br><span class="hljs-built_in">echo</span> 截取前<span class="hljs-number">4</span>个字符：%ifo:~<span class="hljs-number">0</span>,<span class="hljs-number">4</span>%<br><span class="hljs-built_in">echo</span> 截取年度：%date:~<span class="hljs-number">0</span>,<span class="hljs-number">4</span>%<br><span class="hljs-built_in">echo</span>.<br><span class="hljs-built_in">echo</span> 截取最后<span class="hljs-number">2</span>个字符：%ifo:~<span class="hljs-literal">-2</span>%<br><span class="hljs-built_in">echo</span> 截取星期：%date:~<span class="hljs-literal">-2</span>%<br><span class="hljs-built_in">echo</span>.<br><span class="hljs-built_in">echo</span> 截取第一个到倒数第<span class="hljs-number">6</span>个字符：%ifo:~<span class="hljs-number">0</span>,<span class="hljs-literal">-5</span>%<br><span class="hljs-built_in">echo</span> 截取日期（含分隔符）：%date:~<span class="hljs-number">0</span>,<span class="hljs-literal">-3</span>%<br><span class="hljs-built_in">echo</span>.<br><span class="hljs-built_in">echo</span> 从第<span class="hljs-number">5</span>个字符开始，截取<span class="hljs-number">2</span>个字符：%ifo:~<span class="hljs-number">4</span>,<span class="hljs-number">2</span>%<br><span class="hljs-built_in">echo</span> 截取月份：%date:~<span class="hljs-number">5</span>,<span class="hljs-number">2</span>%<br><span class="hljs-built_in">echo</span> 截取天数：%date:~<span class="hljs-number">8</span>,<span class="hljs-number">2</span>%<br><span class="hljs-built_in">echo</span>.<br><span class="hljs-built_in">echo</span> 从倒数第<span class="hljs-number">14</span>个字符开始，截取<span class="hljs-number">5</span>个字符：%ifo:~<span class="hljs-literal">-14</span>,<span class="hljs-number">5</span>%<br><span class="hljs-built_in">echo</span> 截取秒数：%time:~<span class="hljs-number">3</span>,<span class="hljs-number">2</span>%<br><span class="hljs-built_in">echo</span>.<br><span class="hljs-built_in">echo</span> 当前时间是：%time% 即 %time:~<span class="hljs-number">0</span>,<span class="hljs-number">2</span>%点%time:~<span class="hljs-number">3</span>,<span class="hljs-number">2</span>%分%time:~<span class="hljs-number">6</span>,<span class="hljs-number">2</span>%秒%time:~<span class="hljs-number">9</span>,<span class="hljs-number">2</span>%厘秒<br>pause<br></code></pre></td></tr></table></figure>
+
 <p>当然，我最常用的就是对日期、时间等内置变量的操作。</p>
 <h3 id="文件路径字符的截取"><a href="#文件路径字符的截取" class="headerlink" title="文件路径字符的截取"></a>文件路径字符的截取</h3><p>主要依靠 Windows 内置的扩展变量用法来进行。</p>
 <p>执行 <code>for /?</code> 可以查看路径扩展的</p>
 <p>举例说明，如下（注意，需要另存为 test.bat 文件形式执行）：</p>
-<pre><code class="powershell">@echo off
-echo 当前路径的完整字符串：%0
-echo 当前路径的完整字符串（如被双引号包围，去除双引号）：%~0
-echo 当前路径的所在分区：%~d0
-echo 当前路径的目录：%~p0
-echo 文件名：%~n0
-echo 扩展名：%~x0
-echo 文件属性：%~a0
-echo 修改时间：%~t0
-echo 文件大小：%~z0
-pause</code></pre>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><code class="hljs powershell">@<span class="hljs-built_in">echo</span> off<br><span class="hljs-built_in">echo</span> 当前路径的完整字符串：%<span class="hljs-number">0</span><br><span class="hljs-built_in">echo</span> 当前路径的完整字符串（如被双引号包围，去除双引号）：%~<span class="hljs-number">0</span><br><span class="hljs-built_in">echo</span> 当前路径的所在分区：%~d0<br><span class="hljs-built_in">echo</span> 当前路径的目录：%~p0<br><span class="hljs-built_in">echo</span> 文件名：%~n0<br><span class="hljs-built_in">echo</span> 扩展名：%~x0<br><span class="hljs-built_in">echo</span> 文件属性：%~a0<br><span class="hljs-built_in">echo</span> 修改时间：%~t0<br><span class="hljs-built_in">echo</span> 文件大小：%~z0<br>pause<br></code></pre></td></tr></table></figure>
+
 <p>路径处理，往往都配合 for 函数进行操作。</p>
 <p><strong>未完待续…</strong></p>
 <h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><h3 id="变更日志"><a href="#变更日志" class="headerlink" title="变更日志"></a>变更日志</h3><ol>
