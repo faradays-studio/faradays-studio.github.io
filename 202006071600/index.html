@@ -10,10 +10,19 @@
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- HHJ@20200828，首页增加百度搜索资源平台验证功能 -->
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit|ie-stand|ie-comp">
+
+<!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+    <script src="//cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+<![endif]-->
+
+  
   
 
-  <!-- HHJ@20200828，HTML 默认关键词由 _config.yml 配置改为优先使用文章文件头 keywords 配置 -->
+  
   
     
     
@@ -34,7 +43,7 @@
 <meta property="og:description" content="编程, 思考, 文学作品, 实践, 总结">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-06-07T08:00:50.000Z">
-<meta property="article:modified_time" content="2020-08-30T07:35:28.006Z">
+<meta property="article:modified_time" content="2020-09-06T16:07:47.937Z">
 <meta property="article:author" content="David">
 <meta property="article:tag" content="日志">
 <meta name="twitter:card" content="summary">
@@ -44,13 +53,13 @@
   
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-  <!-- HHJ@20200822，相关样式文件的调用，迁移至 head_more.ejs 文件 -->
+  
   <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
-   <!-- �ο� https://hexo.io/zh-cn/docs/helpers ���˽�������ú������÷� -->
+   
 
 
-    <!-- �﷨���� 20200821 ����������ҳ�������  -->
-    <!-- HHJ@20200821�����Ա���ϵͳ�� style.styl ���в�����ʽ��������¹���Ч����� -->
+    
+    
     <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
     <link rel="stylesheet" href="/css/github.min.css">
     <!-- <link rel="stylesheet" href="/css/github.min.css"> -->
@@ -58,7 +67,7 @@
 <link rel="stylesheet" href="/css/github.min.css">
  -->
 
-    <!-- �������ۣ�HHJ@20200822  -->
+    
     <!-- import 'gitalk/dist/gitalk.css' -->
     <!-- import Gitalk from 'gitalk' -->
 
@@ -93,26 +102,28 @@ window.onload = function () {
 
   
 
+
+
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
 </head>
 
-<body>
+<body onload="javascript:switchBackground()">
   <div id="container">
 
-      <!-- HHJ@20200719  -->
+      
       
 
-      <!-- HHJ@20200823������ҳ�������ҳ�棬��������ͬ�ı���  -->
+      
       
         <header id="header-post">
     <div id="header-outer">
 
         <!-- <div id="header-menu" class="header-menu-pos animated">  -->
-        <!-- HHJ@20200711 ɾ����̬Ч����ʵ�ֶ����̶�Ч��  -->
+        
         <div id="header-menu" class="header-menu-pos">
             <div class="header-menu-container">
                 <a href="/" class="left">
-                    <!-- HHJ@20200811���޸ı�����������  -->
+                    
                     <span class="site-title">Blog of Faradays&#39; Studio</span>
                 </a>
                 <nav id="header-menu-nav" class="right">
@@ -129,7 +140,7 @@ window.onload = function () {
                     
                     <a  href="/timeline">
                         <i class="fa fa-history"></i>
-                        <span>timeline</span>
+                        <span>Timeline</span>
                     </a>
                     
                     <a  href="/static-index.html">
@@ -159,11 +170,13 @@ window.onload = function () {
 
 
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-chang-log" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
+        <section id="main" class="body-wrap">
+
+    <article id="post-chang-log" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div id="article-inner-1" class="article-inner">
     
       <header class="article-header">
-
         
   
     <h1 class="post-title" itemprop="name">
@@ -174,10 +187,10 @@ window.onload = function () {
           
               <li>
                   <i class="fa fa-code-fork"></i>
-                  <!-- HHJ@20200823�� forEach �޸�Ϊ each  -->
                   
-                      <a href="/categories/Faradays&#39;Studio/">
-                      Faradays' Studio
+                  
+                      <a href="/categories/开发笔记/">
+                      开发笔记
                       </a>
                   
               </li>
@@ -191,7 +204,7 @@ window.onload = function () {
           <i class="fa fa-calendar-plus-o"></i>  2020-06-07
         </li>
 
-        <!-- HHJ@20200825��������ģʽ  -->
+        
         <li  class="faradays-author">
             <i class="fa fa-user-o"></i>
             <span>
@@ -213,7 +226,7 @@ window.onload = function () {
         </li>
 
 
-        <!-- HHJ@20200812��20200815���� li ��ǩλ�ã��������ɿհ��ַ�  -->
+        
         
         <li>
                 <i class="fa fa-copyright"></i>
@@ -221,12 +234,12 @@ window.onload = function () {
         </li>
         
 
-        <!-- HHJ@20200815��������������ͳ��  -->
+        
         <li><i class="fa fa-file-word-o"></i>
-            <span class="post-count">1.4k words</span>
+            <span class="post-count">1.9k words</span>
         </li>
         <li><i class="fa fa-caret-square-o-right"></i>
-            <span class="post-count">5 min</span>
+            <span class="post-count">8 min</span>
         </li>
       </ul>
 
@@ -235,13 +248,11 @@ window.onload = function () {
 
   
 
-          
       </header>
     
 
-    <!-- HHJ@20200823������ is_page  -->
-    <div class="article-entry post-content" itemprop="articleBody">
-      
+    
+    <div id="article-entry-1" class="article-entry post-content" itemprop="articleBody">
             
             <h2 id="TO-DO"><a href="#TO-DO" class="headerlink" title="TO-DO"></a>TO-DO</h2><ol>
 <li><p><del>配置评论系统，实现文章留言；</del>；</p>
@@ -281,6 +292,8 @@ window.onload = function () {
 <li><p>2020/08/29 23:56:38，纠正某文章图片链接填写方式不正确的问题；增加百度自动推送的脚本。</p>
 </li>
 <li><p>2020/08/30 11:20:03，增加页面加载计时、去除百度自动推送脚本，解决作者分隔符添加不当等问题。</p>
+</li>
+<li><p>2020/09/07 00:07:38，升级到 v0.2.0，实现主题的 layout 文件解耦升级、优化 IE 9+ 的兼容效果、增加夜间模式等重大功能升级，优化代码显示样式、首页/归档页/时间轴页内容居中、标签云、完善主题文档等功能。</p>
 </li>
 </ol>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
@@ -326,7 +339,10 @@ window.onload = function () {
 <p>参考调整部分图标。</p>
 </blockquote>
 </li>
-<li><p>杨玉杰.<code>Hexo 主题 3-hexo</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://yelog.org/2017/03/07/3-hexo/">https://yelog.org/2017/03/07/3-hexo/</a>, 2020/08/23.</p>
+<li><p><del>杨玉杰.<code>Hexo 主题 3-hexo</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://yelog.org/2017/03/07/3-hexo/">https://yelog.org/2017/03/07/3-hexo/</a>, 2020/08/23.</del></p>
+<blockquote>
+<p>作者也多年来进行了主题的研究，有空可以参照思考。</p>
+</blockquote>
 </li>
 <li><p>动力节点.<code>CSS八种让人眼前一亮的HOVER效果</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://zhuanlan.zhihu.com/p/188620420">https://zhuanlan.zhihu.com/p/188620420</a>, 2020/08/23.</p>
 <blockquote>
@@ -348,7 +364,10 @@ window.onload = function () {
 <p>设置文章过期等做法可以参考</p>
 </blockquote>
 </li>
-<li><p>Houmin.<code>Hexo NexT 添加多级相册功能</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://houmin.cc/posts/d487dd02/">https://houmin.cc/posts/d487dd02/</a>, 2020/08/29.</p>
+<li><p><del>Houmin.<code>Hexo NexT 添加多级相册功能</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://houmin.cc/posts/d487dd02/">https://houmin.cc/posts/d487dd02/</a>, 2020/08/29.</del></p>
+<blockquote>
+<p>文章提出了设置多级相册的方法，很有意思。</p>
+</blockquote>
 </li>
 <li><p>胖逆的嘟嘟.<code>hexo干货系列：（六）hexo提交搜索引擎（百度+谷歌）</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.cnblogs.com/tengj/p/5357879.html">https://www.cnblogs.com/tengj/p/5357879.html</a>, 2020/08/29.</p>
 <blockquote>
@@ -362,7 +381,7 @@ window.onload = function () {
 </li>
 <li><p>叶少翔.<code>js统计页面加载时间</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://blog.csdn.net/jiangzunshao/article/details/53040785">https://blog.csdn.net/jiangzunshao/article/details/53040785</a>, 2020/08/30.</p>
 <blockquote>
-<p>参照设置了了相应的脚步。</p>
+<p>参照设置了了页面加载的时间计算脚本。</p>
 </blockquote>
 </li>
 <li><p>周思伟.<code>hexo-theme-yilia-plus</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://github.com/JoeyBling/hexo-theme-yilia-plus">https://github.com/JoeyBling/hexo-theme-yilia-plus</a>, 2020/08/30.</p>
@@ -370,15 +389,45 @@ window.onload = function () {
 <p>这个主题关于组件的集成思路可以参考。</p>
 </blockquote>
 </li>
+<li><p>恶魔萝莉控.<code>给博客添加夜间模式</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://nocilol.me/archives/code/add-night-mode-to-blog/">https://nocilol.me/archives/code/add-night-mode-to-blog/</a>, 2020/09/05.</p>
+<blockquote>
+<p>参考这个设置了主题夜间模式的脚本。</p>
+</blockquote>
+</li>
+<li><p><del>crosschannel.cc.<code>面向小白的Hexo添加暗色模式教程</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://crosschannel.cc/daily/hexo%E6%B7%BB%E5%8A%A0%E6%9A%97%E8%89%B2%E6%A8%A1%E5%BC%8F.html">https://crosschannel.cc/daily/hexo%E6%B7%BB%E5%8A%A0%E6%9A%97%E8%89%B2%E6%A8%A1%E5%BC%8F.html</a>, 2020/09/05.</del></p>
+<blockquote>
+<p>该文章提出了使用媒体查询的方式来切换夜间模式，可以参考，下一步研究。</p>
+</blockquote>
+</li>
+<li><p><del>小康.<code>Hexo博客之butterfly主题优雅魔改系列（持续更新）</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.antmoe.com/posts/a811d614/index.html">https://www.antmoe.com/posts/a811d614/index.html</a>, 2020/09/05.</del></p>
+<blockquote>
+<p>作者的魔改主题，有空可以研究。</p>
+</blockquote>
+</li>
+<li><p><del>阳光派Plus.<code>hexo之Volantis添加暗黑模式</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.zyoushuo.cn/post/e8f5.html">https://www.zyoushuo.cn/post/e8f5.html</a>, 2020/09/05.</del></p>
+<blockquote>
+<p>　作者的切换模式的动画，很有特色。</p>
+</blockquote>
+</li>
+<li><p>菜鸟教程.<code>HTML DOM getElementsByClassName() 方法</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jsref/met-document-getelementsbyclassname.html">https://www.runoob.com/jsref/met-document-getelementsbyclassname.html</a>, 2020/09/06.</p>
+<blockquote>
+<p>通过该文章，学会对获取的元素进行长度处理，避免没有元素却执行 remove 的操作。</p>
+</blockquote>
+</li>
+<li><p>葵花点穴手.<code>div onload事件</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://blog.csdn.net/skylzc/article/details/79436336">https://blog.csdn.net/skylzc/article/details/79436336</a>, 2020/09/06.</p>
+<blockquote>
+<p>The onload event can only be used on the document(body) itself, frames, images, and scripts. In other words, it can be attached to only body and/or each external resource. The div is not an external resource and it’s loaded as part of the body, so the onload event doesn’t apply there.<br>onload event it only supports with few tags like listed below: <code>&lt;body&gt;, &lt;frame&gt;, &lt;iframe&gt;, &lt;img&gt;, &lt;input type=&quot;image&quot;&gt;, &lt;link&gt;, &lt;script&gt;, &lt;style&gt;</code> .<br>参考该文章，解决了灰暗模式的加载问题。</p>
+</blockquote>
+</li>
 </ol>
 
             <div class="post-copyright">
 
-    <!-- HHJ@20200815 -->
+    
     <br /><br /><br />
-    <div class="content">
-        <!-- HHJ@20200815 -->
-        <p>最后更新： 2020/08/30 15:35:28</p>
+    <div id="copyright-content" class="content">
+        
+        <p>最后更新： 2020/09/07 00:07:47</p>
         <p>
 
                 
@@ -402,7 +451,7 @@ window.onload = function () {
         
         
 
-        <!-- HHJ@20200828，调整原始链接显示方式，并增加备用链接 -->
+        
         <p>原始链接：
             
                 <a class="post-url" target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/202006071600/" title="网站框架更新概要">
@@ -417,22 +466,22 @@ window.onload = function () {
         </p>
         
 
-        <!-- HHJ@20200815 -->
+        
         
             <p>
             许可协议： <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"  title="创作共用许可协议：署名-非商业性-相同方式共享" target="_blank"  rel="external nofollow">CC BY-NC-SA 4.0</a>.
             </p>
         
 
-        <!-- <footer>        </footer> -->
+        
         <footer></footer>
     </div>
 </div>
 
-      
     </div>
+
     <footer class="article-footer">
-        <!-- HHJ@20200806������λ�� -->
+        
         
             
 <div class="page-reward"  style="display: inline-block;">
@@ -448,7 +497,7 @@ window.onload = function () {
     </span>
     <div class="reward-content">
         <div class="reward-code">
-            <!-- HHJ@20200806 ，取消图片预览，且两个图片同时显示，减少操作-->
+            
             <table style="float:center; margin:auto;"><tr>
                 <td><img src="/images/%E5%BE%AE%E4%BF%A1-%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="微信" border=0></td>
                 <td><img src="/images/%E6%94%AF%E4%BB%98%E5%AE%9D-%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="支付宝" border=0></td>
@@ -461,9 +510,9 @@ window.onload = function () {
 </div>
 
 
-            <!-- HHJ@20200823��������ϵ��ʽͼ�� -->
             
-<!-- HHJ@20200823，增加联系方式图标 -->
+            
+
 <div class="page-contact">
     
         <a title="QQ联系博主" href="http://wpa.qq.com/msgrd?v=3&uin=189392385&site=qq&menu=yes" target="_blank">
@@ -534,7 +583,6 @@ window.onload = function () {
         
         <ul class="article-footer-menu" style="margin-top:10px;">
             
-            
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
@@ -543,7 +591,6 @@ window.onload = function () {
   </li>
 
         </ul>
-        
     </footer>
   </div>
 </article>
@@ -562,7 +609,7 @@ window.onload = function () {
     <a href="/202008090000/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
-        <!-- HHJ@20200812  -->
+        
         <!-- <i class="fa fa-hand-o-left" aria-hidden="true"></i>  -->
         <i class="fa fa-arrow-left" aria-hidden="true"></i>
         
@@ -584,7 +631,7 @@ window.onload = function () {
 
     
         
-    <!-- HHJ@20200822 �������������� �� `themes\faradays\layout\head-more.ejs` ������-->
+    
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
@@ -599,8 +646,15 @@ window.onload = function () {
 </section>
         
       </div>
-      <footer id="footer">
-  <div class="outer">
+
+    
+    <footer id="footer">
+      
+        <div class="outer">
+      
+
+      
+
     <div id="footer-info" class="inner">
       
 <p>
@@ -611,34 +665,40 @@ window.onload = function () {
         总访问量：<span id="busuanzi_value_site_pv"></span>
     </span>
 
-    <!-- HHJ@20200815������վ������ͳ��  -->
-    &emsp;总文本数：<span class="post-count">3.8k</span>
+    
+    &emsp;总文本数：<span class="post-count">4.5k</span>
 </p>
 
 
       <p>All posts licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" title="Creative Commons license: Attribution-Noncommercial-ShareAlike" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a>. </p>
       <p>
         Powered by  <a href="http://hexo.io/" target="_blank" rel="external nofollow">Hexo,   </a>
-        with <a href="https://github.com/faradays-studio/faradays-studio.github.io" target="_blank" rel="external nofollow">Faradays</a> theme.
-      &copy; 2018-2020 Faradays&#39; Studio<br>
-      <!-- HHJ@20200809  -->
+        with <a href="https://github.com/faradays-studio/faradays-studio.github.io" target="_blank" rel="external nofollow">Faradays</a> theme.&emsp;
+      &copy; 2018-2020 <a href="https://faradays-studio.gitee.io/" target="_blank" rel="external nofollow">Faradays&#39; Studio</a><br>
+      
       </p>
     </div>
-  </div>
-</footer>
+
+
+
+      </div>
+    </footer>
+
+
+
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 
-<!-- HHJ@20200719  -->
-<!-- �������µ�����20200821��Ǩ�Ƶ� more.ejs �ļ�  -->
+
+
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>  -->
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">  -->
-<!-- @import "css/tocbot.css"  -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css"> -->
+<!-- @import "css/tocbot.css" -->
 
 <script src="/js/tocbot.js"></script>
 
-<!-- ���� div Ԫ���� post\toc.ejs �ļ����Ѿ�����  -->
-<!-- <div class="tocbot" style="position:absolute;left:3px;top:350px;max-width:15%;max-height:400px;border-radius:3px;line-height:23px;color:#111;background:rgba(88, 88, 88, 0)"></div>  -->
+
+<!-- <div class="tocbot" style="position:absolute;left:3px;top:350px;max-width:15%;max-height:400px;border-radius:3px;line-height:23px;color:#111;background:rgba(88, 88, 88, 0)"></div> -->
 <script>
   // Tocbo  http://tscanlin.github.io/tocbot/
 </script>
@@ -666,6 +726,9 @@ window.onload = function () {
     <div id="sidebar-tag" title="Tags">
         <i class="fa fa-tags"></i>
     </div>
+    <div id="sidebar-mode" title="Daylight" onClick="javascript:switchBackground(1)">
+        <i class="fa fa-sun-o"></i>
+    </div>
     <div id="sidebar-top">
         <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
     </div>
@@ -673,10 +736,10 @@ window.onload = function () {
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/English/">English</a><a class="category-link" href="/categories/Faradays-Studio/">Faradays' Studio</a><a class="category-link" href="/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/">电脑爱好者</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+            <a class="category-link" href="/categories/English/">English</a><a class="category-link" href="/categories/Faradays-Studio/">Faradays' Studio</a><a class="category-link" href="/categories/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">开发笔记</a><a class="category-link" href="/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/">电脑爱好者</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><a class="category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
+            <a href="/tags/2020/" style="font-size: 10px;">2020</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -700,7 +763,7 @@ window.onload = function () {
             
             <li>
                 <a  href="/timeline">
-                    <i class="fa fa-history"></i><span>timeline</span>
+                    <i class="fa fa-history"></i><span>Timeline</span>
                 </a>
             </li>
             
@@ -721,7 +784,7 @@ window.onload = function () {
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
+            <a href="/tags/2020/" style="font-size: 10px;">2020</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
         </div>
     </div>
 </div>
@@ -771,26 +834,208 @@ window.onload = function () {
   </script>
 
 
+
+
+<script>
+function switchBackground(type_1){
+    //console.log(Date.now() + "   切换背景色功能启动！");
+    var daylight = document.cookie.replace(/(?:(?:^|.*;\s*)daylight\s*\=\s*([^;]*).*$)|^.*$/, "$1");  // 获取本地 cookies 
+    //console.log(document.cookie);
+    //console.log("cookies值： " + daylight);
+
+    if (type_1 === undefined) {
+          type_1 = 0;  
+    } else {
+        
+        if(daylight == '1'){
+            daylight = '0';
+        } else {
+            daylight = '1';
+        }
+    }
+
+
+    var ele_1 = document.getElementById("container");  
+    //console.log(ele_1.innerHTML);
+
+    var ele_2 = document.getElementById("footer");  
+    var ele_3 = document.getElementsByClassName("article-entry");  
+    //console.log(ele_3);
+    var ele_4 = document.getElementsByClassName("article-inner");  
+    var ele_5 = document.getElementsByTagName("blockquote");  
+    var ele_6 = document.getElementsByClassName("hljs");  
+    var ele_7 = document.getElementsByClassName("highlight");  
+    var ele_10 = document.getElementsByTagName("pre");  
+    var ele_8 = document.getElementById("copyright-content");  
+    var ele_9 = document.getElementsByTagName("code");  
+    var ele_11 = document.getElementsByClassName("archive-article-inner");  
+
+    var ele_0 = document.getElementById("sidebar-mode");  
+    //console.log(ele_0.innerHTML);
+
+
+    
+    function darker(){
+        document.body.classList.add('night-1');
+
+        //ele_1.classList.add('night-2'); 
+
+        if(ele_2 != null){
+            ele_2.classList.add('night-1')
+        }
+
+        //console.log(daylight + " = 夜间模式");
+        if(ele_3.length > 0){
+            for (i = 0; i < ele_3.length; i++) {
+              ele_3[i].classList.add('night-2');
+              ele_4[i].classList.add('night-2');
+              //ele_3[i].style.backgroundColor = "red";
+            }
+        }
+
+        if(ele_5.length > 0){
+            for (i = 0; i < ele_5.length; i++) {
+              ele_5[i].classList.add('night-1');
+            }
+        }
+
+
+        if(ele_9.length > 0){
+            for (i = 0; i < ele_9.length; i++) {
+              ele_9[i].classList.add('night-2');
+            }
+        }
+
+        if(ele_6.length > 0){
+            for (i = 0; i < ele_6.length; i++) {
+              //ele_6[i].classList.remove('night-2');
+              ele_6[i].classList.add('night-3');  
+              //ele_7[i].classList.add('night-2');
+              ele_10[i].classList.add('night-2');
+            }
+        }
+
+        
+        if(ele_7.length > 0){
+            for (i = 0; i < ele_7.length; i++) {
+              ele_7[i].classList.add('night-2');
+            }
+        }
+
+        if(ele_8 != null){
+            ele_8.classList.add('night-1')
+        }
+
+        if(ele_11.length > 0){
+            for (i = 0; i < ele_11.length; i++) {
+              ele_11[i].classList.add('night-2');
+            }
+        }
+
+        ele_0.innerHTML = "<i class='fa fa-moon-o'></i>";  
+        //console.log(ele_0.innerHTML);
+        ele_0.setAttribute("title","Click to Daylight");
+
+        document.cookie = "daylight=0; path=/";
+        console.log('已切至夜间模式！');
+    }
+
+
+    
+    function lighter(){
+        document.body.classList.remove('night-1');
+
+        //ele_1.classList.remove('night-2');
+
+        if(ele_2 != null){
+            ele_2.classList.remove('night-1')
+        }
+
+        //console.log(daylight + " = 日间模式");
+        if(ele_3.length > 0){
+            for (i = 0; i < ele_3.length; i++) {
+              ele_3[i].classList.remove('night-2');
+              ele_4[i].classList.remove('night-2');
+            }
+        }
+
+        if(ele_5.length > 0){
+            for (i = 0; i < ele_5.length; i++) {
+              ele_5[i].classList.remove('night-1');
+            }
+        }
+
+        if(ele_6.length > 0){
+            for (i = 0; i < ele_6.length; i++) {
+              ele_6[i].classList.remove('night-3');
+              //ele_7[i].classList.remove('night-2');
+              ele_10[i].classList.remove('night-2');
+            }
+        }
+        if(ele_7.length > 0){
+            for (i = 0; i < ele_7.length; i++) {
+              ele_7[i].classList.remove('night-2');
+            }
+        }
+
+        if(ele_8 != null){
+            ele_8.classList.remove('night-1')
+        }
+
+        if(ele_9.length > 0){
+            for (i = 0; i < ele_9.length; i++) {
+              ele_9[i].classList.remove('night-2');
+            }
+        }
+
+        if(ele_11.length > 0){
+            for (i = 0; i < ele_11.length; i++) {
+              ele_11[i].classList.remove('night-2');
+            }
+        }
+
+        ele_0.innerHTML = "<i class='fa fa-sun-o'></i>";
+        //console.log(ele_0.innerHTML);
+        ele_0.setAttribute("title","Click to Nightlight");
+
+        document.cookie = "daylight=1; path=/";
+        console.log('已切至日间模式！');
+    }
+
+
+
+    
+    if(daylight == null){
+        lighter();
+    } else if(daylight == '0'){
+        darker();
+    }else{
+        lighter();
+    }
+    //console.log("cookies 最新值： " + daylight);
+}
+
+</script>
+
     
 
-    <!-- HHJ@20200719， 取消下述文章导航方法，调整至本文件末  -->
+    
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>  -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">  -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css"> -->
     <!-- @import "css/tocbot.css"  -->
     
 <script src="/js/tocbot.js"></script>
 
-    <!-- 以下 div 元素在 post\toc.ejs 文件中已经定义  -->
-    <!-- <div class="tocbot" style="position:absolute;left:3px;top:350px;max-width:15%;max-height:400px;border-radius:3px;line-height:23px;color:#111;background:rgba(88, 88, 88, 0)"></div>  -->
+    
+    <!-- <div class="tocbot" style="position:absolute;left:3px;top:350px;max-width:15%;max-height:400px;border-radius:3px;line-height:23px;color:#111;background:rgba(88, 88, 88, 0)"></div> -->
 
 
- <!-- 参考 https://hexo.io/zh-cn/docs/helpers ，了解更多内置函数的用法 -->
- <!-- HHJ@20200823，增加 is_page  -->
-
-
-    <!-- 文章导航 20200821 调整到非首页区域加载  -->
+  
+  
+  
+    
     <script>
-      // Tocbo  http://tscanlin.github.io/tocbot/
+      
       tocbot.init({
         tocSelector: '.tocbot',
         contentSelector: '.article-inner',
@@ -798,9 +1043,9 @@ window.onload = function () {
         hasInnerContainers: true,
 
         scrollSmooth: true,
-        // 点击目录时，页面下移一定距离（避免固定顶部的菜单遮盖），单位为 px
+        
         scrollSmoothOffset: -44,
-        // 避免高亮显示不当
+        
         headingsOffset: 47,
 
         scrollContainer: 'main',
@@ -808,7 +1053,7 @@ window.onload = function () {
         positionFixedClass: 'is-position-fixed',
 
 
-        //关闭动画效果（一直显示，但也没有高亮指示）
+        
         //skipRendering: true,
         //disableTocScrollSync: false,
 
@@ -819,17 +1064,17 @@ window.onload = function () {
 
 
     <script>
-    // HHJ@20200822
+    
     const gitalk = new Gitalk({
         clientID: '90b449ff273a263117ec',
         clientSecret: '0a3ccea67a4d3f03cbff012eeac1a8547e367aad',
-        repo: 'faradays-studio.github.io',      // The repository of store comments,
+        repo: 'faradays-studio.github.io',      
         owner: 'faradays-studio',
         admin: ['faradays-studio'],
-        id: location.pathname, // 要求唯一，且字数不超过 50；或 (location.pathname).substring(0,49)
+        id: location.pathname, 
         labels: ['gitalk', 'post-comment', '博客评论'],
         perPage: 3,
-        distractionFreeMode: false  // Facebook-like distraction free mode
+        distractionFreeMode: false  
         })
 
         gitalk.render('gitalk-container')
@@ -843,12 +1088,9 @@ window.onload = function () {
     
 <script src="/js/highlight.min.js"></script>
 
-    <!-- 
-<script src="/js/highlight.min.js"></script>
- -->
 
     <script>
-    // highlight
+     
     hljs.initHighlightingOnLoad();
     </script>
 
@@ -858,8 +1100,8 @@ window.onload = function () {
 
 
 <script>
-// HHJ@20200829，增加版权提示
-console.log("\nAll right reserved by Faradays' Studio.\n\n" + "Licensed under GNU GPLv3.\n"
+
+console.log("\nAll right reserved by Faradays' Studio.\n\n" + "All the codes licensed under GNU GPLv3.\n"
           + "Send your request to yvany@qq.com and wait for your LICENSE CONFIRMATION email.\n"
           + "See https://www.gnu.org/licenses/gpl-3.0.html for the license details.\n\n"
           + "Click https://faradays-studio.gitee.io for my recent developments...\n\n");
@@ -869,6 +1111,13 @@ console.log("\nAll right reserved by Faradays' Studio.\n\n" + "Licensed under GN
 <script>
     // HHJ@20200829，自动推送百度功能（当新页面每次被浏览时，页面URL会自动推送给百度，无需站长汇总URL再进行主动推送操作。）【已删除】
 </script>
+
+<!--[if lt IE 9]>
+<script type="text/JavaScript">
+    alert("请使用 IE9 或更高版本的浏览器，或谷歌浏览器、火狐浏览器，以便您浏览本站优质内容!");
+</script>
+<![endif]-->
+
   </div>
 </body>
 </html>

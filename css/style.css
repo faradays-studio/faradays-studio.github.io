@@ -339,6 +339,27 @@ body {
   -webkit-text-size-adjust: 100%;
   position: relative;
 }
+.night-1 {
+  background-color: #aaa !important;
+  color: #333;
+}
+.night-1 img {
+  filter: brightness(30%);
+}
+.night-2 {
+  background-color: #ccc !important;
+  color: #333;
+}
+.night-2 img {
+  filter: brightness(50%);
+}
+.night-3 {
+  background-color: #ccc !important;
+  color: #333;
+}
+.night-3 img {
+  filter: brightness(50%);
+}
 .outer {
   max-width: 1220px;
 /* HHJ@20200711，上 右 下 左 按顺时针排序，从右侧浮动、控制左侧空间用于目录 */
@@ -352,6 +373,20 @@ body {
   display: table;
 }
 .outer:after {
+  clear: both;
+}
+.outer-index {
+  max-width: 1220px;
+/* HHJ@20200906，首页每个文章居中放置 */
+  margin: 0 7% 0 8%;
+  padding: 0 20px;
+}
+.outer-index:before,
+.outer-index:after {
+  content: "";
+  display: table;
+}
+.outer-index:after {
   clear: both;
 }
 .inner {
@@ -1124,10 +1159,15 @@ body {
   border-radius: 0;
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
+.article-index {
+  margin: -240px 0 0;
+  background: #fff;
+  border-radius: 0;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
 .article-header-num {
-  margin: -60px 0 150px 0;
   position: relative;
-  top: 105px;
+  top: 45px;
   left: -1em;
   color: #ffa500;
   opacity: 0.37;
@@ -2013,7 +2053,7 @@ body {
   background: #f6f8fa;
   margin: 8px -15px;
   padding: 15px 15px;
-  border-style: solid;
+  border-style: none;
   border-color: #ddd;
   border-width: 1px 0;
   overflow: auto;
@@ -2036,7 +2076,6 @@ body {
   margin: 0 4px;
   font-size: 1em;
   padding: 2px 4px;
-  border: 1px solid #eee;
   border-radius: 2px;
   word-wrap: break-word;
   background-color: #f9f2f4;
@@ -2419,6 +2458,9 @@ pre .javascript .function {
   .outer {
     padding: 0;
   }
+  .outer-index {
+    padding: 0;
+  }
   .article-footer .post-share {
     right: 8px;
   }
@@ -2524,10 +2566,11 @@ pre .javascript .function {
 .sidebar div {
   display: block;
   cursor: pointer;
-  width: 48px;
-  height: 48px;
+/* HHJ@20200906���� 48px �޸�Ϊ 37px */
+  width: 37px;
+  height: 37px;
   text-align: center;
-  line-height: 48px;
+  line-height: 37px;
   border-radius: 50%;
   background: #ffa500;
   color: #fff;
@@ -2538,7 +2581,7 @@ pre .javascript .function {
 }
 .sidebar div i {
   font-size: 1.5em;
-  line-height: 2.45em;
+  line-height: 1.8em;
 }
 .sidebar div:hover {
   opacity: 0.8;
@@ -2762,6 +2805,12 @@ pre .javascript .function {
     display: none;
   }
 }
+.categories2-title {
+  display: inline-block;
+  color: #fff;
+  padding-left: 3px;
+  font-size: 1rem;
+}
 .categories2 {
   display: inline-block;
 }
@@ -2807,6 +2856,18 @@ pre .javascript .function {
   left: -18px;
   border: 9px solid transparent;
   border-right-color: #ffa500;
+}
+.tags2x {
+  display: block;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+.tags2x a {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 7px 10px 7px;
+  position: relative;
 }
 .post-title {
   text-align: center;

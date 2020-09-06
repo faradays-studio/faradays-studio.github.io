@@ -10,10 +10,19 @@
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- HHJ@20200828，首页增加百度搜索资源平台验证功能 -->
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit|ie-stand|ie-comp">
+
+<!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+    <script src="//cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+<![endif]-->
+
+  
   
 
-  <!-- HHJ@20200828，HTML 默认关键词由 _config.yml 配置改为优先使用文章文件头 keywords 配置 -->
+  
   
     <meta name="keywords" content="Faradays' Studio, Blog, 编程, 思考, 文学作品, 实践, 总结" />
  
@@ -36,9 +45,9 @@
   
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-  <!-- HHJ@20200822，相关样式文件的调用，迁移至 head_more.ejs 文件 -->
+  
   <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
-   <!-- �ο� https://hexo.io/zh-cn/docs/helpers ���˽�������ú������÷� -->
+   
 
 
 <script>
@@ -70,32 +79,34 @@ window.onload = function () {
 
   
 
+
+
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
 </head>
 
-<body>
+<body onload="javascript:switchBackground()">
   <div id="container">
 
-      <!-- HHJ@20200719  -->
+      
       
 
-      <!-- HHJ@20200823������ҳ�������ҳ�棬��������ͬ�ı���  -->
+      
       
 
 
 
-      <div class="outer">
+      <div class="outer-index">
         <section id="main" class="body-wrap">
-<!-- HHJ@20200821 -->
+  
   <header id="header-post">
     <div id="header-outer">
 
         <!-- <div id="header-menu" class="header-menu-pos animated">  -->
-        <!-- HHJ@20200711 ɾ����̬Ч����ʵ�ֶ����̶�Ч��  -->
+        
         <div id="header-menu" class="header-menu-pos">
             <div class="header-menu-container">
                 <a href="/" class="left">
-                    <!-- HHJ@20200811���޸ı�����������  -->
+                    
                     <span class="site-title">Blog of Faradays&#39; Studio</span>
                 </a>
                 <nav id="header-menu-nav" class="right">
@@ -112,7 +123,7 @@ window.onload = function () {
                     
                     <a  href="/timeline">
                         <i class="fa fa-history"></i>
-                        <span>timeline</span>
+                        <span>Timeline</span>
                     </a>
                     
                     <a  href="/static-index.html">
@@ -138,12 +149,13 @@ window.onload = function () {
     </div>
 </header>
 
-<!-- HHJ@20200817 ��2020/08/22�޶��ڷ���ҳ-->
+  
+  <div style="font-size:37px; text-align:center;padding-top:67px;">存档</div>
 
-    <div style="font-size:37px; text-align:center;padding-top:67px;">存档</div>
-
-
-
+  <div style="padding-top:33px;color:#999;">栏目</div>
+  <div class="tags2x" style="margin:13px 3px 53px 3px;">
+      <a href="/categories/English/" style="font-size: 13px; color: #00f">English</a> <a href="/categories/Faradays-Studio/" style="font-size: 13px; color: #00f">Faradays' Studio</a> <a href="/categories/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/" style="font-size: 13px; color: #00f">开发笔记</a> <a href="/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/" style="font-size: 13px; color: #00f">电脑爱好者</a> <a href="/categories/%E7%BC%96%E7%A8%8B/" style="font-size: 53px; color: #f00">编程</a> <a href="/categories/%E9%9A%8F%E7%AC%94/" style="font-size: 13px; color: #00f">随笔</a>
+  </div>
 
   
   
@@ -158,13 +170,15 @@ window.onload = function () {
         </div>
         <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/202008200927/" class="archive-article-date">
+
+
+    <article class="archive-article archive-type-index">
+      <div class="archive-article-inner">
+        <header class="archive-article-header">
+          <a href="/202008200927/" class="archive-article-date">
   <time datetime="2020-08-20T01:27:42.000Z" itemprop="datePublished">08-20</time>
 </a>
-      
+          
   
     <h1 itemprop="name">
       <a class="archive-article-title" href="/202008200927/"  >
@@ -173,10 +187,10 @@ window.onload = function () {
     </h1>
   
 
-    </header>
-      
-        <div class="archive-post-footer">
-            
+        </header>
+          
+            <div class="archive-post-footer">
+                
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
@@ -188,10 +202,11 @@ window.onload = function () {
       
   </li>
 
-        </div>
-      
-  </div>
-</article>
+            </div>
+          
+      </div>
+    </article>
+
 
   
   
@@ -200,11 +215,20 @@ window.onload = function () {
 
 
 
+
+
 </section>
         
       </div>
-      <footer id="footer">
-  <div class="outer">
+
+    
+    <footer id="footer">
+      
+        <div class="outer">
+      
+
+      
+
     <div id="footer-info" class="inner">
       
 <p>
@@ -215,34 +239,40 @@ window.onload = function () {
         总访问量：<span id="busuanzi_value_site_pv"></span>
     </span>
 
-    <!-- HHJ@20200815������վ������ͳ��  -->
-    &emsp;总文本数：<span class="post-count">3.8k</span>
+    
+    &emsp;总文本数：<span class="post-count">4.5k</span>
 </p>
 
 
       <p>All posts licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" title="Creative Commons license: Attribution-Noncommercial-ShareAlike" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a>. </p>
       <p>
         Powered by  <a href="http://hexo.io/" target="_blank" rel="external nofollow">Hexo,   </a>
-        with <a href="https://github.com/faradays-studio/faradays-studio.github.io" target="_blank" rel="external nofollow">Faradays</a> theme.
-      &copy; 2018-2020 Faradays&#39; Studio<br>
-      <!-- HHJ@20200809  -->
+        with <a href="https://github.com/faradays-studio/faradays-studio.github.io" target="_blank" rel="external nofollow">Faradays</a> theme.&emsp;
+      &copy; 2018-2020 <a href="https://faradays-studio.gitee.io/" target="_blank" rel="external nofollow">Faradays&#39; Studio</a><br>
+      
       </p>
     </div>
-  </div>
-</footer>
+
+
+
+      </div>
+    </footer>
+
+
+
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 
-<!-- HHJ@20200719  -->
-<!-- �������µ�����20200821��Ǩ�Ƶ� more.ejs �ļ�  -->
+
+
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>  -->
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">  -->
-<!-- @import "css/tocbot.css"  -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css"> -->
+<!-- @import "css/tocbot.css" -->
 
 <script src="/js/tocbot.js"></script>
 
-<!-- ���� div Ԫ���� post\toc.ejs �ļ����Ѿ�����  -->
-<!-- <div class="tocbot" style="position:absolute;left:3px;top:350px;max-width:15%;max-height:400px;border-radius:3px;line-height:23px;color:#111;background:rgba(88, 88, 88, 0)"></div>  -->
+
+<!-- <div class="tocbot" style="position:absolute;left:3px;top:350px;max-width:15%;max-height:400px;border-radius:3px;line-height:23px;color:#111;background:rgba(88, 88, 88, 0)"></div> -->
 <script>
   // Tocbo  http://tscanlin.github.io/tocbot/
 </script>
@@ -270,6 +300,9 @@ window.onload = function () {
     <div id="sidebar-tag" title="Tags">
         <i class="fa fa-tags"></i>
     </div>
+    <div id="sidebar-mode" title="Daylight" onClick="javascript:switchBackground(1)">
+        <i class="fa fa-sun-o"></i>
+    </div>
     <div id="sidebar-top">
         <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
     </div>
@@ -277,10 +310,10 @@ window.onload = function () {
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/English/">English</a><a class="category-link" href="/categories/Faradays-Studio/">Faradays' Studio</a><a class="category-link" href="/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/">电脑爱好者</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+            <a class="category-link" href="/categories/English/">English</a><a class="category-link" href="/categories/Faradays-Studio/">Faradays' Studio</a><a class="category-link" href="/categories/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">开发笔记</a><a class="category-link" href="/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/">电脑爱好者</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><a class="category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
+            <a href="/tags/2020/" style="font-size: 10px;">2020</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -304,7 +337,7 @@ window.onload = function () {
             
             <li>
                 <a  href="/timeline">
-                    <i class="fa fa-history"></i><span>timeline</span>
+                    <i class="fa fa-history"></i><span>Timeline</span>
                 </a>
             </li>
             
@@ -325,7 +358,7 @@ window.onload = function () {
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a>
+            <a href="/tags/2020/" style="font-size: 10px;">2020</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 20px;">SVG</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
         </div>
     </div>
 </div>
@@ -375,29 +408,212 @@ window.onload = function () {
   </script>
 
 
+
+
+<script>
+function switchBackground(type_1){
+    //console.log(Date.now() + "   切换背景色功能启动！");
+    var daylight = document.cookie.replace(/(?:(?:^|.*;\s*)daylight\s*\=\s*([^;]*).*$)|^.*$/, "$1");  // 获取本地 cookies 
+    //console.log(document.cookie);
+    //console.log("cookies值： " + daylight);
+
+    if (type_1 === undefined) {
+          type_1 = 0;  
+    } else {
+        
+        if(daylight == '1'){
+            daylight = '0';
+        } else {
+            daylight = '1';
+        }
+    }
+
+
+    var ele_1 = document.getElementById("container");  
+    //console.log(ele_1.innerHTML);
+
+    var ele_2 = document.getElementById("footer");  
+    var ele_3 = document.getElementsByClassName("article-entry");  
+    //console.log(ele_3);
+    var ele_4 = document.getElementsByClassName("article-inner");  
+    var ele_5 = document.getElementsByTagName("blockquote");  
+    var ele_6 = document.getElementsByClassName("hljs");  
+    var ele_7 = document.getElementsByClassName("highlight");  
+    var ele_10 = document.getElementsByTagName("pre");  
+    var ele_8 = document.getElementById("copyright-content");  
+    var ele_9 = document.getElementsByTagName("code");  
+    var ele_11 = document.getElementsByClassName("archive-article-inner");  
+
+    var ele_0 = document.getElementById("sidebar-mode");  
+    //console.log(ele_0.innerHTML);
+
+
+    
+    function darker(){
+        document.body.classList.add('night-1');
+
+        //ele_1.classList.add('night-2'); 
+
+        if(ele_2 != null){
+            ele_2.classList.add('night-1')
+        }
+
+        //console.log(daylight + " = 夜间模式");
+        if(ele_3.length > 0){
+            for (i = 0; i < ele_3.length; i++) {
+              ele_3[i].classList.add('night-2');
+              ele_4[i].classList.add('night-2');
+              //ele_3[i].style.backgroundColor = "red";
+            }
+        }
+
+        if(ele_5.length > 0){
+            for (i = 0; i < ele_5.length; i++) {
+              ele_5[i].classList.add('night-1');
+            }
+        }
+
+
+        if(ele_9.length > 0){
+            for (i = 0; i < ele_9.length; i++) {
+              ele_9[i].classList.add('night-2');
+            }
+        }
+
+        if(ele_6.length > 0){
+            for (i = 0; i < ele_6.length; i++) {
+              //ele_6[i].classList.remove('night-2');
+              ele_6[i].classList.add('night-3');  
+              //ele_7[i].classList.add('night-2');
+              ele_10[i].classList.add('night-2');
+            }
+        }
+
+        
+        if(ele_7.length > 0){
+            for (i = 0; i < ele_7.length; i++) {
+              ele_7[i].classList.add('night-2');
+            }
+        }
+
+        if(ele_8 != null){
+            ele_8.classList.add('night-1')
+        }
+
+        if(ele_11.length > 0){
+            for (i = 0; i < ele_11.length; i++) {
+              ele_11[i].classList.add('night-2');
+            }
+        }
+
+        ele_0.innerHTML = "<i class='fa fa-moon-o'></i>";  
+        //console.log(ele_0.innerHTML);
+        ele_0.setAttribute("title","Click to Daylight");
+
+        document.cookie = "daylight=0; path=/";
+        console.log('已切至夜间模式！');
+    }
+
+
+    
+    function lighter(){
+        document.body.classList.remove('night-1');
+
+        //ele_1.classList.remove('night-2');
+
+        if(ele_2 != null){
+            ele_2.classList.remove('night-1')
+        }
+
+        //console.log(daylight + " = 日间模式");
+        if(ele_3.length > 0){
+            for (i = 0; i < ele_3.length; i++) {
+              ele_3[i].classList.remove('night-2');
+              ele_4[i].classList.remove('night-2');
+            }
+        }
+
+        if(ele_5.length > 0){
+            for (i = 0; i < ele_5.length; i++) {
+              ele_5[i].classList.remove('night-1');
+            }
+        }
+
+        if(ele_6.length > 0){
+            for (i = 0; i < ele_6.length; i++) {
+              ele_6[i].classList.remove('night-3');
+              //ele_7[i].classList.remove('night-2');
+              ele_10[i].classList.remove('night-2');
+            }
+        }
+        if(ele_7.length > 0){
+            for (i = 0; i < ele_7.length; i++) {
+              ele_7[i].classList.remove('night-2');
+            }
+        }
+
+        if(ele_8 != null){
+            ele_8.classList.remove('night-1')
+        }
+
+        if(ele_9.length > 0){
+            for (i = 0; i < ele_9.length; i++) {
+              ele_9[i].classList.remove('night-2');
+            }
+        }
+
+        if(ele_11.length > 0){
+            for (i = 0; i < ele_11.length; i++) {
+              ele_11[i].classList.remove('night-2');
+            }
+        }
+
+        ele_0.innerHTML = "<i class='fa fa-sun-o'></i>";
+        //console.log(ele_0.innerHTML);
+        ele_0.setAttribute("title","Click to Nightlight");
+
+        document.cookie = "daylight=1; path=/";
+        console.log('已切至日间模式！');
+    }
+
+
+
+    
+    if(daylight == null){
+        lighter();
+    } else if(daylight == '0'){
+        darker();
+    }else{
+        lighter();
+    }
+    //console.log("cookies 最新值： " + daylight);
+}
+
+</script>
+
     
 
-    <!-- HHJ@20200719， 取消下述文章导航方法，调整至本文件末  -->
+    
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>  -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">  -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css"> -->
     <!-- @import "css/tocbot.css"  -->
     
 <script src="/js/tocbot.js"></script>
 
-    <!-- 以下 div 元素在 post\toc.ejs 文件中已经定义  -->
-    <!-- <div class="tocbot" style="position:absolute;left:3px;top:350px;max-width:15%;max-height:400px;border-radius:3px;line-height:23px;color:#111;background:rgba(88, 88, 88, 0)"></div>  -->
+    
+    <!-- <div class="tocbot" style="position:absolute;left:3px;top:350px;max-width:15%;max-height:400px;border-radius:3px;line-height:23px;color:#111;background:rgba(88, 88, 88, 0)"></div> -->
 
 
- <!-- 参考 https://hexo.io/zh-cn/docs/helpers ，了解更多内置函数的用法 -->
- <!-- HHJ@20200823，增加 is_page  -->
-
+  
+  
+  
 
 
 
 
 <script>
-// HHJ@20200829，增加版权提示
-console.log("\nAll right reserved by Faradays' Studio.\n\n" + "Licensed under GNU GPLv3.\n"
+
+console.log("\nAll right reserved by Faradays' Studio.\n\n" + "All the codes licensed under GNU GPLv3.\n"
           + "Send your request to yvany@qq.com and wait for your LICENSE CONFIRMATION email.\n"
           + "See https://www.gnu.org/licenses/gpl-3.0.html for the license details.\n\n"
           + "Click https://faradays-studio.gitee.io for my recent developments...\n\n");
@@ -407,6 +623,13 @@ console.log("\nAll right reserved by Faradays' Studio.\n\n" + "Licensed under GN
 <script>
     // HHJ@20200829，自动推送百度功能（当新页面每次被浏览时，页面URL会自动推送给百度，无需站长汇总URL再进行主动推送操作。）【已删除】
 </script>
+
+<!--[if lt IE 9]>
+<script type="text/JavaScript">
+    alert("请使用 IE9 或更高版本的浏览器，或谷歌浏览器、火狐浏览器，以便您浏览本站优质内容!");
+</script>
+<![endif]-->
+
   </div>
 </body>
 </html>
