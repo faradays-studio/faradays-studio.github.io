@@ -361,7 +361,6 @@ body {
   filter: brightness(50%);
 }
 .outer {
-  max-width: 1220px;
 /* HHJ@20200711，上 右 下 左 按顺时针排序，从右侧浮动、控制左侧空间用于目录 */
 /* margin: 0 auto */
   margin: 0 5% 0 15%;
@@ -376,7 +375,6 @@ body {
   clear: both;
 }
 .outer-index {
-  max-width: 1220px;
 /* HHJ@20200906，首页每个文章居中放置 */
   margin: 0 7% 0 8%;
   padding: 0 20px;
@@ -1441,6 +1439,7 @@ body {
 }
 .article-more-link {
   float: right;
+  margin: 3px;
   padding: 8px 20px;
   border: 0;
   border-radius: 0;
@@ -1461,7 +1460,7 @@ body {
 .article-footer {
   font-size: 1em;
   line-height: 1.6em;
-  padding: 15px;
+  padding: 7px;
   position: relative;
 }
 .article-footer:before,
@@ -2368,7 +2367,7 @@ pre .javascript .function {
     top: 0;
     right: 0;
     height: 100%;
-    background: rgba(0,0,0,0.17);
+    background: rgba(0,0,0,0.87);
     color: #fff;
     cursor: default;
     z-index: 1;
@@ -2457,9 +2456,11 @@ pre .javascript .function {
   }
   .outer {
     padding: 0;
+    margin: 0;
   }
   .outer-index {
     padding: 0;
+    margin: 0;
   }
   .article-footer .post-share {
     right: 8px;
@@ -2469,6 +2470,83 @@ pre .javascript .function {
   }
   .reward-title {
     font-size: 18px;
+  }
+  #logo {
+    display: none;
+  }
+  .article-more-link {
+    font-size: 12px;
+    padding: 5px;
+    box-shadow: none;
+    margin: 7px;
+  }
+  .article-header {
+    padding: 3px;
+    top: 0px;
+  }
+  .header-cate {
+    margin-top: -10px;
+    padding: 3px;
+    font-size: 12px;
+    top: 3px;
+  }
+  .article-footer {
+    padding: 3px;
+    height: auto;
+  }
+  .article-footer .article-footer-menu {
+    height: auto;
+  }
+  #sidebar-mode {
+    margin: 5px;
+    display: block;
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+    text-align: center;
+    line-height: 27px;
+    border-radius: 50%;
+    background: #ffa500;
+    color: #fff;
+  }
+  #sidebar-mode i {
+    font-size: 1.3rem;
+    line-height: 1.3em;
+  }
+  .article-nav-link-wrap {
+    margin-top: 13px;
+    font-size: 13px;
+    text-shadow: none;
+    text-align: none;
+  }
+  #article-nav-newer {
+    text-align: left;
+    margin-left: 1em;
+  }
+  #article-nav-older {
+    text-align: right;
+    margin-right: 1em;
+  }
+  .page-contact {
+    display: none;
+  }
+  .page-reward {
+    margin: 20px 13%;
+    position: absolute;
+  }
+  .reward-content {
+    max-width: 200px;
+  }
+  .reward-content .reward-code img {
+    max-height: 157px;
+    max-width: 157px;
+    display: inline-block;
+  }
+  .article-entry h2 {
+    font-size: 1.6rem;
+  }
+  .post-toc-pos {
+    display: none;
   }
 }
 @media screen and (min-width: 768px) {

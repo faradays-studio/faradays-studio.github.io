@@ -63,7 +63,7 @@
 <p>收工完事！</p>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>编程笔记</category>
       </categories>
       <tags>
         <tag>JavaScript</tag>
@@ -78,7 +78,7 @@
 </li>
 <li><p><del>解决链接跳转错误问题（累经数月间歇性反复测试，初步认为为编译时不支持 <strong>?</strong> 符号的使用）；</del></p>
 </li>
-<li><p>Markdown 文件添加脚本引用，并添加计数功能。</p>
+<li><p><del>夜间模式；</del></p>
 </li>
 </ol>
 <h2 id="系统更新日志"><a href="#系统更新日志" class="headerlink" title="系统更新日志"></a>系统更新日志</h2><ol>
@@ -113,6 +113,8 @@
 <li><p>2020/08/30 11:20:03，增加页面加载计时、去除百度自动推送脚本，解决作者分隔符添加不当等问题。</p>
 </li>
 <li><p>2020/09/07 00:07:38，升级到 v0.2.0，实现主题的 layout 文件解耦升级、优化 IE 9+ 的兼容效果、增加夜间模式等重大功能升级，优化代码显示样式、首页/归档页/时间轴页内容居中、标签云、完善主题文档等功能。</p>
+</li>
+<li><p>2020/09/07 23:09:03，升级至 v0.2.1，调整手机模式下的元素显示效果和 FHD 分辨率下的居中的效果，确保手机模式下也能使用夜间模式切换功能。</p>
 </li>
 </ol>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
@@ -292,7 +294,7 @@
 </ol>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>编程笔记</category>
       </categories>
       <tags>
         <tag>Windows</tag>
