@@ -361,6 +361,7 @@ body {
   filter: brightness(50%);
 }
 .outer {
+  max-width: 1320px;
 /* HHJ@20200711，上 右 下 左 按顺时针排序，从右侧浮动、控制左侧空间用于目录 */
 /* margin: 0 auto */
   margin: 0 5% 0 15%;
@@ -375,6 +376,7 @@ body {
   clear: both;
 }
 .outer-index {
+  max-width: 1400px;
 /* HHJ@20200906，首页每个文章居中放置 */
   margin: 0 7% 0 8%;
   padding: 0 20px;
@@ -2455,11 +2457,11 @@ pre .javascript .function {
     left: 2px;
   }
   .outer {
-    padding: 0;
+    padding: 1;
     margin: 0;
   }
   .outer-index {
-    padding: 0;
+    padding: 2;
     margin: 0;
   }
   .article-footer .post-share {
@@ -2880,6 +2882,11 @@ pre .javascript .function {
 }
 @media screen and (min-width: 768px) {
   .mobile-header-tag-container {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile-header-operation-container {
     display: none;
   }
 }

@@ -261,11 +261,26 @@ window.onload = function () {
             
             <p>A  few days ago, I got stuck in the mud of creating a svg dom with svg.js. After many test and searching, I found out that someting is different from the official  manual.</p>
 <h2 id="The-problem-of-using-svg-js"><a href="#The-problem-of-using-svg-js" class="headerlink" title="The problem of using svg.js"></a>The problem of using svg.js</h2><p><strong>For example, we write some dom in <some_page>.html like this:</strong></p>
-<figure class="highlight html"><table border="0" cellpadding="0" cellspacing="0"   frame="void" ><tr><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Creating SVG with SVG.js<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;X-UA-Compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;IE=edge,chrome=1&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/svg.js/3.0.11/svg.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;drawing&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><br><span class="javascript">  <span class="hljs-comment">// write down your javascript here..</span></span><br><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Creating SVG with SVG.js<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;X-UA-Compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;IE=edge,chrome=1&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/svg.js/3.0.11/svg.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;drawing&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>
+<span class="javascript">  <span class="hljs-comment">// write down your javascript here..</span></span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre>
 
 
 <p>The official  manual (refer to <a target="_blank" rel="noopener norefferrer" href="https://svgjs.com/docs/3.0/getting-started/">https://svgjs.com/docs/3.0/getting-started/</a>) said that <code>&lt;script&gt;...&lt;/script&gt;</code>  part like this:</p>
-<figure class="highlight javascript"><table border="0" cellpadding="0" cellspacing="0"   frame="void" ><tr><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> draw = SVG(<span class="hljs-string">&#x27;drawing&#x27;</span>).size(<span class="hljs-number">300</span>, <span class="hljs-number">300</span>)<br><span class="hljs-keyword">var</span> rect = draw.rect(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>).attr(&#123; <span class="hljs-attr">fill</span>: <span class="hljs-string">&#x27;#f06&#x27;</span> &#125;)<br></code></pre></td></tr></table></figure>
+<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> draw = SVG(<span class="hljs-string">&#x27;drawing&#x27;</span>).size(<span class="hljs-number">300</span>, <span class="hljs-number">300</span>)
+<span class="hljs-keyword">var</span> rect = draw.rect(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>).attr(&#123; <span class="hljs-attr">fill</span>: <span class="hljs-string">&#x27;#f06&#x27;</span> &#125;)</code></pre>
 
 <p>The script above pass through on jsfiddle.net test (refer to <a target="_blank" rel="noopener norefferrer" href="https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz">https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz</a> ). However, it doesn’t work on my case, no matter running on my MSIE 7.0 to 11.0 or Chrome 58. I felt so depressed that even could not got sleep for two whole days.</p>
 <h2 id="The-way-to-write-svg-js-script-and-DOM"><a href="#The-way-to-write-svg-js-script-and-DOM" class="headerlink" title="The way to write svg.js script and DOM"></a>The way to write svg.js script and DOM</h2><p>After many tests and searching, I found out that these code running: </p>
@@ -525,7 +540,7 @@ window.onload = function () {
     </span>
 
     
-    &emsp;总文本数：<span class="post-count">4.5k</span>
+    &emsp;总文本数：<span class="post-count">4.6k</span>
 </p>
 
 
@@ -647,9 +662,11 @@ window.onload = function () {
         </div>
     </div>
 
-    <span class="title">Operation</span>
-    <div id="sidebar-mode" title="Daylight" onClick="javascript:switchBackground(1)">
-        <i class="fa fa-lightbulb-o"></i>
+    <div class="mobile-header-operation-container">
+        <span class="title">Operation</span>
+        <div id="sidebar-mode" title="Daylight" onClick="javascript:switchBackground(1)">
+            <i class="fa fa-lightbulb-o"></i>
+        </div>
     </div>
 
 </div>

@@ -634,7 +634,11 @@ Windows 批处理中字符的基本常识
                   <a href="/201902090951/"  style="text-decoration: none;" >
                       前段时间，我尝试了使用 svg.js 来创建 svg dom 文档时，并没有成功。经过反复多次的尝试，并网络检索了一些信息，初步确认为官方文档未及时更新，导致了编码错误。
 使用 svg.js 遇到的问题举个例子，dom 文档 .html 的结构如下：
-&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;Creating SVG with SVG.js&lt;/title&gt;&lt;meta http-equiv=&quot;X-UA-Co...
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Creating SVG with SVG.js&lt;/title&gt;
+&lt;meta http-equiv=&quot;X-U...
                   </a>
                   </p>
               </div>
@@ -747,7 +751,7 @@ The problem of using svg.jsFor example, we write some dom in .html like this:
     </span>
 
     
-    &emsp;总文本数：<span class="post-count">4.5k</span>
+    &emsp;总文本数：<span class="post-count">4.6k</span>
 </p>
 
 
@@ -869,9 +873,11 @@ The problem of using svg.jsFor example, we write some dom in .html like this:
         </div>
     </div>
 
-    <span class="title">Operation</span>
-    <div id="sidebar-mode" title="Daylight" onClick="javascript:switchBackground(1)">
-        <i class="fa fa-lightbulb-o"></i>
+    <div class="mobile-header-operation-container">
+        <span class="title">Operation</span>
+        <div id="sidebar-mode" title="Daylight" onClick="javascript:switchBackground(1)">
+            <i class="fa fa-lightbulb-o"></i>
+        </div>
     </div>
 
 </div>
