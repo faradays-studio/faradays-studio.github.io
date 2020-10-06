@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://faradays-studio.gitee.io/"/>
-  <updated>2020-10-06T15:49:49.671Z</updated>
+  <updated>2020-10-06T15:56:43.409Z</updated>
   <id>https://faradays-studio.gitee.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://faradays-studio.gitee.io/202010052246/"/>
     <id>https://faradays-studio.gitee.io/202010052246/</id>
     <published>2020-10-05T14:46:45.000Z</published>
-    <updated>2020-10-06T15:49:49.671Z</updated>
+    <updated>2020-10-06T15:56:43.409Z</updated>
     
     <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>虽然已经 2020 年了，但是，对于非专业编程人士来说，使用 jQuery 仍然是一个不错的选择的。因为它是一个希望用户 <strong>写的少，做的多</strong> 的 JavaScript 库，并得到了广泛的使用。它具有以下功能：</p><ul><li>HTML 元素选取</li><li>HTML 元素操作</li><li>CSS 操作</li><li>HTML 事件函数</li><li>JavaScript 特效和动画</li><li>HTML DOM 遍历和修改</li><li>AJAX</li><li>Utilities</li></ul><h3 id="jQuery版本"><a href="#jQuery版本" class="headerlink" title="jQuery版本"></a>jQuery版本</h3><ol><li><p><strong>1.xx</strong> 的版兼容 IE 6/7/8，官方只做 BUG 维护，功能不再新增。最终版本：1.12.4 (2016年5月20日)</p></li><li><p><strong>2.xx</strong> 版本不兼容 IE 6/7/8，官方只做 BUG 维护，功能不再新增。</p></li><li><p><strong>3.xx</strong> 版本不兼容 IE 6/7/8，只支持最新的浏览器。并且很多老的jQuery插件不支持 3.x 版。目前该版本是官方主要更新维护的版本。</p></li></ol><blockquote><p>压缩版（mini,js）与未压缩版本的功能一致，区别只在于文件大小</p></blockquote><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol><li><p>张三帅.<code>jQuery</code>[EB/OL].<a href="https://www.cnblogs.com/mingkong-z/articles/9131866.html">https://www.cnblogs.com/mingkong-z/articles/9131866.html</a>, 2020/10/05.</p></li><li><p>老佐.<code>JavaScript及jQuery常用dom操作方法</code>[EB/OL].<a href="https://www.cnblogs.com/html5css3js/p/4550666.html">https://www.cnblogs.com/html5css3js/p/4550666.html</a>, 2020/10/05.</p></li><li><p>hemin.<code>jQuery 1.12.1 速查表</code>[EB/OL].<a href="http://hemin.cn/jq/">http://hemin.cn/jq/</a>, 2020/10/05.</p></li><li><p>minoz.<code>JQuery字符串的操作</code>[EB/OL].<a href="https://www.cnblogs.com/minozMin/p/8328028.html">https://www.cnblogs.com/minozMin/p/8328028.html</a>, 2020/10/05.</p></li></ol>]]></content>
     
@@ -37,6 +37,8 @@
     
       <category term="编程笔记" scheme="https://faradays-studio.gitee.io/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
     
+    
+      <category term="JavaScript" scheme="https://faradays-studio.gitee.io/tags/JavaScript/"/>
     
       <category term="jQuery" scheme="https://faradays-studio.gitee.io/tags/jQuery/"/>
     
