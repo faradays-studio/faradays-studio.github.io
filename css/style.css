@@ -378,7 +378,7 @@ body {
 .outer-index {
   max-width: 1400px;
 /* HHJ@20200906，首页每个文章居中放置 */
-  margin: 0 7% 0 8%;
+  margin: 0 10% 0 10%;
   padding: 0 20px;
 }
 .outer-index:before,
@@ -1463,6 +1463,7 @@ body {
   font-size: 1em;
   line-height: 1.6em;
   padding: 7px;
+  margin: 1px;
   position: relative;
 }
 .article-footer:before,
@@ -2467,12 +2468,6 @@ pre .javascript .function {
   .article-footer .post-share {
     right: 8px;
   }
-  .reward-lay {
-    max-width: calc(100vw - 60px);
-  }
-  .reward-title {
-    font-size: 18px;
-  }
   #logo {
     display: none;
   }
@@ -2495,6 +2490,7 @@ pre .javascript .function {
   .article-footer {
     padding: 3px;
     height: auto;
+    margin: 5px;
   }
   .article-footer .article-footer-menu {
     height: auto;
@@ -2536,12 +2532,16 @@ pre .javascript .function {
     margin: 20px 13%;
     position: absolute;
   }
+  .reward-title {
+    font-size: 12px;
+  }
   .reward-content {
-    max-width: 200px;
+    padding: 2px;
   }
   .reward-content .reward-code img {
-    max-height: 157px;
-    max-width: 157px;
+    max-height: 97px;
+    max-width: 97px;
+    vertical-align: middle;
     display: inline-block;
   }
   .article-entry h2 {
@@ -3501,13 +3501,12 @@ pre .javascript .function {
   right: 0;
 }
 .reward-lay {
-  width: 523px;
+  margin: 10px 30px 10px 30px;
 }
 .reward-content .reward-code img {
   max-height: 200px;
+  max-width: 200px;
   vertical-align: middle;
-  align: center;
-  border: 1;
   display: inline-block;
 }
 .reward-content .reward-select {

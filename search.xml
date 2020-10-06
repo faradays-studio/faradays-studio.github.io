@@ -291,7 +291,7 @@
       </categories>
   </entry>
   <entry>
-    <title>Windows 批处理的字符运算</title>
+    <title>Windows 批处理的字符运算（未完待续）</title>
     <url>/202008200927/</url>
     <content><![CDATA[<p>字符运算历来是编程中的重要内容，如何拼接字符，如何截取字符，如何判断字符是否存在，如何判断两个字符串是否相同，成为了编程任务中的重要环节。因此，我结合网络的资料和个人的实践经验来总结一下。</p>
 <h2 id="Windows-批处理中字符的基本常识"><a href="#Windows-批处理中字符的基本常识" class="headerlink" title="Windows 批处理中字符的基本常识"></a>Windows 批处理中字符的基本常识</h2><ol>
@@ -424,16 +424,355 @@ pause</code></pre>
   <entry>
     <title>2020年随笔</title>
     <url>/202009022111/</url>
-    <content><![CDATA[<h3 id="2020-09-02，明月"><a href="#2020-09-02，明月" class="headerlink" title="2020/09/02，明月"></a>2020/09/02，明月</h3><blockquote>
-<p>  凌晨将寝，看见一轮明月从百叶窗的缝隙中漏了出来。江天一色无纤尘，皎皎空中孤月轮，我想起来了我的老父亲，突然好一阵心酸。<br>  这世界就这一轮明月，父亲看到的明月，和我看到的是不是一样的呢？我无从得知，但是我知道他清澈的心底，应该也和这明月一样，明朗、简洁、孤独的挂在那里！我现在正在重构的 hexo 主题，是否也能和它一样明朗呢？</p>
+    <content><![CDATA[<h2 id="2020-09-02，明月"><a href="#2020-09-02，明月" class="headerlink" title="2020/09/02，明月"></a>2020/09/02，明月</h2><blockquote>
+<p>  凌晨将寝，看见一轮明月从百叶窗的缝隙中漏了出来。江天一色无纤尘，皎皎空中孤月轮，我想起来了我的老父亲，突然好一阵心酸。</p>
+<p>  这世界就这一轮明月，父亲看到的明月，和我看到的是不是一样的呢？我无从得知，但是我知道他清澈的心底，应该也和这明月一样，明朗、简洁、孤独的挂在那里！我现在正在重构的 hexo 主题，是否也能和它一样明朗呢？</p>
+</blockquote>
+<h2 id="2020-09-11，疲倦"><a href="#2020-09-11，疲倦" class="headerlink" title="2020/09/11，疲倦"></a>2020/09/11，疲倦</h2><blockquote>
+<p>今天颇为疲倦，那是种种摧残对生活热爱的力量。</p>
+<p>生活无望的摧残有之。生活压力太大，家庭收入有限，总是有种种债务要还，明明金额也不多，可是月月都是勉勉强强，总有一种秦琼卖马、穷途末路的感觉，既担不起风险去谋份新工作拼出路，也割舍不了那些缠缠绵绵的家庭责任。</p>
+<p>与人相处的困顿有之。我总以为自己是个文人，家国情怀、儿女情长；然而也不知道如何面对糟糠之妻，是勉励还是鞭策，是举案齐眉还是听之任之；也不知道如何面对幼年儿女，是宠爱还是严厉，是陪伴成长还是执鞭指导。看过不少教育理论和案例，也曾以自身做过很多试验，终究是了了，每一个方向都言之凿凿，然而都不曾看得到光明。一人独行的孤独，布满了天空。</p>
+<p>报国无门的失望有之。①得不到应有的回报：在单位里，也曾以一己之力，年年月月坚持去做了很多别人不想做、不能做的事情，但体制之下，来回调动，兜兜转转，始终只是棋子一枚。不少人长袖善舞、坑蒙拐骗，都获得了层层升迁，改善了生活，而我被所谓的工作需要调动等等排除在外，连每月的账单都要发愁。②官僚主义严重。每一个努力，总有领导说你先做，他先这样，长时间在电脑前做的优化工作也只是别人眼里的你只是在不知道在忙什么。企业年年亏损，只有人浮于事，形式主义，总是有很多人满为患的会议，但是工作的永远都只有少数的几个人，我都不知道我10多年来夜以继日做的实验做出来的成果到底有没有意义了！我从小在学校的贫困补助下获得了一些帮助，然而在年复一年的人治环境下失去挣扎的活力，台账记录、检查活动、宣传总结、表态发言，只有节点时期有人关心有没有成果，没有人关心日常应该怎么做提升效率、没有人有魄力面对上级的考核压力，更没有人具有规章制度里边要求的那些工作能力，制度永远只是规范下级、杀鸡儆猴的玩物。</p>
+</blockquote>
+<h2 id="2020-09-26，迷茫"><a href="#2020-09-26，迷茫" class="headerlink" title="2020/09/26，迷茫"></a>2020/09/26，迷茫</h2><blockquote>
+<p>昨日，在公司某部门那里被批评项目文件写的不清不楚。我的内容别人看不明白，因此需要修改；这本来也没啥，偏偏别人要告诉我他不是搞这个专业的，这让人有点难受。</p>
+<p>法国作家 John Collier 说过，If Youth Knew, If Age Could。我自己理解的意思就是，如果年轻人经验丰富，那么就不会栽在人情世故和盲目自大上；如果老年人能力充沛、能闯善干，那么就不会就不必利用特权来设置那么多莫名其妙的规则来限制或阻挡事物的发展。</p>
+<p>就事论事而言，我自己手上偶尔也直接参与不少重要的基础事务，那天的项目申请书和可行性研究报告都是一天之内匆匆写就的，而要花费一大笔钱，涉及不少未知的研究和探索，怎么不可能足够完善到内容足够清晰到一个非专业人员能够几分钟就读明白并作出投资决策的！所以，对于这些身居要位、日常看报的中老年专家，我是有看法的：他们平时或是好好先生、或是好为人师，遇到高层级的领导，以好意见为基调，遇到低层级的员工，以挑刺的眼光来看问题；对我们这样的打工仔造成的混乱也是难免的。他们作为从我们这样的基础工种提拔上去的技术管理人员，平时不指导和帮助我们，不率先垂范，却要求下层人员有所作为、还要求遵守一堆只有下层人员需要遵守的规则，何不食肉糜！</p>
+<p>我一度迷茫，本想纠正每一个专业术语上的错误，本想指出英雄伟人的同名出处而不是我异想天开，本想据理力争到底…然而，一念之间，放弃了这个念头，我们参与日常事务，希望企业兴旺、国家繁荣，那是我们自己主动参与实现的，不是等来的，如果我们退却了，旁观了，哪何来希望？！</p>
+<p>我指望着的人，是我自己一厢情愿的幻想——幻想这些被生活和工作刺破了梦想也熬不来高官厚禄的上级能够礼贤下士、推陈出新，然而谁何曾不想“仗剑走天涯”，谁料遭遇遍体鳞伤，至今怕蛇咬？他们不也和我现在一样吗？总以为自己作出了一点业绩就能睥睨天下，然后总是在等待组织去变好，总是在说生态被破坏，可是我自己又继续做了什么了呢？我自以为低微，不也有一些人说自己更低微，等待着我不要挑刺，给他们一个不着边际的认可吗？</p>
+<p>做自己能做的事吧！希望明天会好一点，希望“日行一善，积善成德；日行一善，功满三千”，时间自有定论。</p>
 </blockquote>
 ]]></content>
       <categories>
-        <category>随笔</category>
+        <category>随想录</category>
       </categories>
       <tags>
         <tag>2020</tag>
         <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在 Shell 中使用 printf 格式化输出语句</title>
+    <url>/202009292008/</url>
+    <content><![CDATA[<p>在使用 shell 编程的过程，难免要进行内容输出，我们一般情况下都使用 <code>echo</code> 命令进行输出，如 <code>echo &quot;Hello, World&quot;</code> ，不过功能比较有限；如果需要高级的格式化功能控制，那么应当使用 <code>printf</code> 命令。</p>
+<pre><code>printf 由 POSIX 标准所定义，是C语言 `printf()` 库函数的一个有限的变形（在语法上也有些不同），是 echo 命令的增强版。
+printf 不像 echo 那样会自动换行，必须显式添加换行符 `\n` 。</code></pre><h2 id="语法说明"><a href="#语法说明" class="headerlink" title="语法说明"></a>语法说明</h2><h3 id="printf-命令的语法"><a href="#printf-命令的语法" class="headerlink" title="printf 命令的语法"></a>printf 命令的语法</h3><pre><code>printf   &#123;format-string1 format-string2...&#125;   [arguments1 arguments2...]</code></pre><ol>
+<li><p><code>format-string</code> 为格式控制字符串（可以没有引号，但最好加上，单引号、双引号均可；多个格式字符使用空格进行分隔），按 <strong>%[标志][输出最小宽度][.精度][长度]类型</strong> 格式书写：</p>
+<ul>
+<li><p>标志：即正负号或进制符号的设定</p>
+<table>
+<thead>
+<tr>
+<th>标 志</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-</td>
+<td>结果左对齐，右边填空格</td>
+</tr>
+<tr>
+<td>+</td>
+<td>输出符号(正号或负号)</td>
+</tr>
+<tr>
+<td>空格</td>
+<td>输出值为正时冠以空格，为负时冠以负号</td>
+</tr>
+<tr>
+<td>#</td>
+<td>对c、s、d、u类无影响； 对o类，在输出时加前缀o； 对x类，在输出时加前缀0x； 对e、g、f 类当结果有小数时才给出小数点。</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>输出最小宽度：用十进制整数来表示输出的最少位数。若实际位数多于定义的宽度，则按实际位数输出，若实际位数少于定义的宽度则补以 <strong>空格</strong> 或 <code>0</code>。</p>
+</li>
+<li><p>精度：以 <code>.</code> 开头，后跟十进制整数。本项的意义是：如果输出数字，则表示小数的位数；如果输出的是字符，则表示输出字符的个数；若实际位数大于所定义的精度数，则截去超过的部分。</p>
+</li>
+<li><p>长度：格式符分为h、l两种， <code>h</code> 表示按短整型量输出，<code>l</code> 表示按长整型量输出。</p>
+</li>
+<li><p>类型：即输出数据的变量类型设定</p>
+<table>
+<thead>
+<tr>
+<th>格式字符</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>d</td>
+<td>以十进制形式输出带符号整数(正数不输出符号)</td>
+</tr>
+<tr>
+<td>o</td>
+<td>以八进制形式输出无符号整数(不输出前缀0)</td>
+</tr>
+<tr>
+<td>x,X</td>
+<td>以十六进制形式输出无符号整数(不输出前缀Ox)</td>
+</tr>
+<tr>
+<td>u</td>
+<td>以十进制形式输出无符号整数</td>
+</tr>
+<tr>
+<td>f</td>
+<td>以小数形式输出单、双精度实数</td>
+</tr>
+<tr>
+<td>e,E</td>
+<td>以指数形式输出单、双精度实数</td>
+</tr>
+<tr>
+<td>g,G</td>
+<td>以%f或%e中较短的输出宽度输出单、双精度实数</td>
+</tr>
+<tr>
+<td>c</td>
+<td>输出单个字符</td>
+</tr>
+<tr>
+<td>s</td>
+<td>输出字符串</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>举例</p>
+<ul>
+<li><code>%d</code> 表示按十进制整型输出；</li>
+<li><code>%ld</code> 表示按十进制长整型输出；</li>
+<li><code>%c</code> 表示按字符型输出等。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>arguments</code> 为参数列表（多个参数使用空格分隔，不用逗号；若 <code>arguments</code> 多于 <code>format-string</code> 时，<code>format-string</code> 将自动重用）。</p>
+<blockquote>
+<p>参数来自于前序程序段，也就是需要格式化输出的变量。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="printf-命令的转义序列"><a href="#printf-命令的转义序列" class="headerlink" title="printf 命令的转义序列"></a>printf 命令的转义序列</h3><p>由于部分控制字符并不含在变量（参数）中，也无法使用格式控制符导入，比如变量之间的连接符等等，因此需要使用转义字符来完善格式化功能。最常见的就是增加换行符和制表符等，如 <code>printf &quot;Hello, Shell\n&quot;</code> 。</p>
+<table>
+<thead>
+<tr>
+<th align="left">序列</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">\a</td>
+<td align="left">警告字符，通常为 ASCII 的 BEL 字符</td>
+</tr>
+<tr>
+<td align="left">\b</td>
+<td align="left">后退</td>
+</tr>
+<tr>
+<td align="left">\c</td>
+<td align="left">抑制（不显示）输出结果中任何结尾的换行字符（只在 %b 格式指示符控制下的参数字符串中有效），而且，任何留在参数里的字符、任何接下来的参数以及任何留在格式字符串中的字符，都被忽略</td>
+</tr>
+<tr>
+<td align="left">\f</td>
+<td align="left">换页（formfeed）</td>
+</tr>
+<tr>
+<td align="left">\n</td>
+<td align="left">换行</td>
+</tr>
+<tr>
+<td align="left">\r</td>
+<td align="left">回车（Carriage return）</td>
+</tr>
+<tr>
+<td align="left">\t</td>
+<td align="left">水平制表符</td>
+</tr>
+<tr>
+<td align="left">\v</td>
+<td align="left">垂直制表符</td>
+</tr>
+<tr>
+<td align="left">\</td>
+<td align="left">一个字面上的反斜杠字符</td>
+</tr>
+<tr>
+<td align="left">\ddd</td>
+<td align="left">表示 1 到 3 位数八进制值的字符。仅在格式字符串中有效</td>
+</tr>
+<tr>
+<td align="left">\0ddd</td>
+<td align="left">表示 1 到 3 位的八进制值字符</td>
+</tr>
+</tbody></table>
+<h2 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h2><ol>
+<li><p>示例1（shell 示例）</p>
+ <pre><div class="caption"><span>/home/user/test.sh</span></div><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash">!/bin/bash</span>
+<span class="hljs-meta">#</span><span class="bash"> author: david faraday</span>
+<span class="hljs-meta">#</span><span class="bash"> created: 2020/10/05 17:05:13</span>
+ 
+<span class="hljs-meta">#</span><span class="bash"> format-string为双引号</span>
+printf &quot;%d %s\n&quot; 1 &quot;abc&quot;
+
+<span class="hljs-meta">#</span><span class="bash"> 单引号与双引号效果一样 </span>
+printf &#x27;%d %s\n&#x27; 1 &quot;abc&quot; 
+
+<span class="hljs-meta">#</span><span class="bash"> 没有引号也可以输出</span>
+printf %s abcdef
+
+<span class="hljs-meta">#</span><span class="bash"> 格式只指定了一个参数，但多出的参数仍然会按照该格式输出，format-string 被重用</span>
+printf %s abc def
+
+printf &quot;%s\n&quot; abc def
+
+printf &quot;%s %s %s\n&quot; a b c d e f g h i j
+
+<span class="hljs-meta">#</span><span class="bash"> 如果没有 arguments，那么 %s 用NULL代替，%d 用 0 代替</span>
+printf &quot;%s and %d \n&quot;</code></pre>
+
+<p> 上述输出结果为：</p>
+<pre><code>1 abc
+1 abc
+abcdefabcdefabc
+def
+a b c
+d e f
+g h i
+j  
+ and 0</code></pre></li>
+<li><p>示例2：表格化输出</p>
+ <pre><div class="caption"><span>/home/user/test_2.sh</span></div><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash">!/bin/bash</span>
+<span class="hljs-meta">#</span><span class="bash"> author: david faraday</span>
+<span class="hljs-meta">#</span><span class="bash"> created: 2020/10/05 17:15:25</span>
+ 
+printf &quot;%-10s %-8s %-4s\n&quot; 姓名 性别 体重kg  
+printf &quot;%-10s %-8s %-4.2f\n&quot; 郭靖 男 66.1234 
+printf &quot;%-10s %-8s %-4.2f\n&quot; 杨过 男 48.6543 
+printf &quot;%-10s %-8s %-4.2f\n&quot; 郭芙 女 47.9876</code></pre>
+
+<blockquote>
+<p><code>%-10s</code> 指一个宽度为 10 个字符（ <code>-</code> 表示左对齐，没有则表示右对齐），任何字符都会被显示在 10 个字符宽的字符内，如果不足则自动以空格填充，超过也会将内容全部显示出来。<br><code>%-4.2f</code> 指格式化为小数，其中 <code>.2</code> 指保留 2 位小数。</p>
+</blockquote>
+<p> 执行脚本，输出结果如下所示：</p>
+<pre><code>姓名     性别   体重kg
+郭靖     男      66.12
+杨过     男      48.65
+郭芙     女      47.99</code></pre></li>
+<li><p>示例（C 语言示例）</p>
+ <pre><div class="caption"><span>/home/user/test.c 【注意，求值顺序虽是自右至左，但是输出顺序还是从左至右】</span></div><code class="hljs C"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>&#123;
+    <span class="hljs-keyword">int</span> i=<span class="hljs-number">8</span>;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;The raw value: i=%d\n&quot;</span>, i);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;++i=%d \n++i=%d \n--i=%d \n--i=%d\n&quot;</span>,++i,++i,--i,--i);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
+
+<p> 运行结果：</p>
+<pre><code>The raw value: i=8
+++i=8
+++i=7
+--i=6
+--i=7</code></pre></li>
+</ol>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h3><ul>
+<li>1.0.0，2020/10/05 21:51:03，初始版本。</li>
+</ul>
+<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
+<li><p>w3cschool编程狮.<code>Shell printf 命令</code>[EB/OL].<a href="https://www.w3cschool.cn/linux/linux-shell-printf.html">https://www.w3cschool.cn/linux/linux-shell-printf.html</a>, 2020/09/29.</p>
+</li>
+<li><p>C语言中文网.<code>shell printf命令：格式化输出语句</code>[EB/OL].<a href="http://c.biancheng.net/cpp/view/1499.html">http://c.biancheng.net/cpp/view/1499.html</a>, 2020/09/29.</p>
+</li>
+<li><p>C语言中文网.<code>C语言格式输出函数printf()详解</code>[EB/OL].<a href="http://c.biancheng.net/cpp/html/33.html">http://c.biancheng.net/cpp/html/33.html</a>, 2020/10/05.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程笔记</category>
+      </categories>
+      <tags>
+        <tag>Shell</tag>
+        <tag>printf</tag>
+        <tag>格式化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>评《Margin Call》：高个不挑担，世上永无光</title>
+    <url>/202010021008/</url>
+    <content><![CDATA[<blockquote>
+<p>直到落幕，我才意识到 《Margin Call》（商海通牒） 已经结束，可是对它的感悟我才刚刚开始…</p>
+<p>剧本 ☆☆☆☆<br>场景 ☆☆☆☆<br>演绎 ☆☆☆☆<br>综合 ☆☆☆☆</p>
+</blockquote>
+<h2 id="剧情"><a href="#剧情" class="headerlink" title="剧情"></a>剧情</h2><p>整个故事不复杂：一家公司正在大幅裁员，领导 Sam 带头鼓掌并发表了鼓舞人心的讲话，员工们纷纷加班至深夜；努力工作的新员工 Peter 在别人下班去娱乐的时候，发现了公司风险模型预测到未来走势将大幅下跌，光是一层楼 25% 的亏损将超过公司的市值，立即汇报领导 Will ，领导也汇报他的领导 Sam，最后二把手贾德·科恩也在凌晨 2 点乘坐直升机来到公司，并决策抛售公司资产、及时止损。</p>
+<p>整部电影一直都没有正面展开商业斗争的波谲云诡（bō jué yún guǐ），而是大量了使用了各种背景阐述，各种侧面语言动作渲染。电影的节奏一直比较缓慢，没有快步奔跑的员工，也没有大幅的悲伤情绪，即使大结局了，既没有看到行业动荡的场景，也没有被阴谋拖入破产骗局的投资人纷纷跳楼的场景；只见暗淡的月色底下，与会者深锁的眉头、凝重的表情，晦涩难懂、含糊不清的经营风险陈述，与员工们纸醉金迷的生活、老板来去直升机、投资人高大上言论形成鲜明的对比。</p>
+<p>Eric Dale （艾力克·戴尔）负责风险管理部门，工作了 19 年的员工，秋毫不觉就被即时辞退了。他希望在离职时将工作交接清楚，可是无论是人力资源部门主管还是自己的直属领导 Will Emerson，都没有人搭理他；在电梯门关闭之际，他将做了一半工作的资料U盘给了赶来告别的新员工 Peter，然后到了楼下工作手机就被公司关停了。</p>
+<p>发生问题后公司想请他说清楚以及对数据进行保密时，公司才发现已经联系不上他了，只能等到凌晨他妻子打来电话说他在家了，公司才决定去他家里找他、用每小时 17 万多美元的代价来要求他对公司的风险秘密予以保守一天。</p>
+<h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><h3 id="个人利益至上，屠龙少年终成恶龙"><a href="#个人利益至上，屠龙少年终成恶龙" class="headerlink" title="个人利益至上，屠龙少年终成恶龙"></a>个人利益至上，屠龙少年终成恶龙</h3><p>尽管行业性的经济危机将至，但只有一个镜头表现了 2008 年经济大动荡的可怕的之处——因年入 25 万美元而自豪不已的小员工 Seth （赛斯·布雷格曼）面对即将辞退困境，在卫生间里边痛哭失声，他十多分钟前还镇定自若地说，OK！</p>
+<p>公司的领导人 Sam 尽管工作了 34 年，积累了大量的财富，作为人性未泯的领导者，他依然无法放弃对利益的追逐。</p>
+<p>他是靠公司体制成功的领导者。他入职早，高高在上，做出英明的决策，英明地裁员、果断地抛售资产，然而公司的主要利润都是那些小员工辛辛苦苦赚来的，他甚至不知道的如何看明白预示着公司未来的曲线怎么看、指标是什么，他也记不住下层员工的名字，但是不影响他拿着公司基层无法企及、难以想象的高薪。他的狗生病了，每天都要花费一千美元治病，他太过于悲伤甚至于不觉得80%的下属被辞退了能怎么样，毕竟他早已从长期的人员流动中变得麻木不仁了！</p>
+<p>他来自基层，也拼搏过，因此他同情弱者、忧心行业，良心未泯。 Sam 的手下员工，不乏能力卓著的年轻人，比如说火箭科学家 Peter（彼得·苏利文）；也有出身不凡的得力下属，比如说桥梁工程师 Eric。因此，当二把手要求他出售资产时，他考虑到了对行业的影响以及年轻人的未来，他质疑何为老板毫无选择，他拒绝聆听风险评估，他嚎叫老板让开，他一次又一次地拒绝了二把手的要求，直到杰瑞开出了天价的报酬。</p>
+<p>他是利益追逐的一员，当首席风险评估分析师 Sarah（莎拉·罗伯森）等其他部门的人员被二把手说服后，他也自甘堕落，即使明知严重违反良知与诚信，明知 3/7 的人员还将被裁决，他仍然镇定自若地完成了所有下属的工作安排——在一天之内完成风险资产的全部抛售，那么是打六五折也可以。跟他的下属 Will 一样，渴望保留人性，但无法拒绝金钱利益的侵蚀—— Will 站在楼顶做出跳楼的假动作，他颤动地看着深渊，最终还是说“not today”，并向下属员工轻描淡写地描述了去年收入的 250 万美元是如何轻而易举地全部花完的！</p>
+<h3 id="遍身罗绮者，不是养蚕人"><a href="#遍身罗绮者，不是养蚕人" class="headerlink" title="遍身罗绮者，不是养蚕人"></a>遍身罗绮者，不是养蚕人</h3><blockquote>
+<p>评估员塞斯问长官威尔，这次的危机会给平常人带来的影响？</p>
+<p>威尔这样说：这些普通人，他们想要的生活就是香车豪宅，但是他们根本负担不起。这就是为什么我们这么重要，我们是他们豪华生活的根本原因。我们用手指在他们天平的一端压了一下，我们抽走手指，那时候才是真正的公平社会，但是他们马上就会不干。他们想要我们给的东西，但是又喜欢假装不知道这些东西是怎么来的。他们装伪君子比我强多了，去他们的吧！</p>
+</blockquote>
+<p>尽管二把手很年轻，但是手段非常老到，他左右拉拢员工，用尽方法；他信口开河，满是利益，让人毫无拒绝的可能性。是的，无论是 Sam 还是 Jerry，尽管技术能力平平，但是都心狠手辣，善于言谈，洞察人心，这是他们驱动那些比他们更有技术手段的人为他们卖命赚钱！</p>
+<p>更绝的是，最后的老大 John（约翰·图尔德），更是老手中的老手，他左一句你可以 <strong>保留</strong> 股份与分红，右一句 <strong>及时止损比整年焦头烂额更好</strong> 的深入分析，直接将 Sam 说服了。将相本无种，奈何无论人数如何变化，富贵与贫贱的比例永远不变，无论时间过去多长，名利的游戏将永存不朽，历史中的一次次经济危机游戏给了我们无限的启迪：</p>
+<blockquote>
+<p>1637年、1797年、1819年、1837年、1857年、1884年、1901年、1907年、1929年、1937年、1974年、1987年、1992年、1997年、2000年、还有这次，不管我们叫它什么，一样的缘故，一次又一次，我们挡都挡不住，我们还想阻止它，控制它，甚至放慢它，我们的本性一丁点都没变，我们仅仅是随机应变，如果对了就赚一大笔，如果错了就被晾到一边，这个世界上过去会有，将来也会有，同样比例的赢家和输家，得意洋洋者和垂头丧气者，撑的撑死，饿的饿死，今天像我们这样的人也许前所未有的多，但是那个比例，原封未动。</p>
+</blockquote>
+<p>历史总是存在输家和赢家，至此， Sam 完全被征服；他已毫不在乎之前是如何如何地一次次的痛苦挣扎， 唯余 “我只是不想事情发展到如此操蛋的地步！” 的感叹给观众去慢慢品味！</p>
+<p>夜晚， Sam 回到前妻的房前，埋葬了自己深爱的狗，也埋葬了自己的良心。从来都没有屠龙的英雄，有的都是最终都会皮毛并带角的怪兽！公平平等从来都不存在过，古今中外，资本逐利，2% 的头部资本家拥有绝对控股的资源，也许一部分人分到了羹汤成为了人上人，但始终不可能让广大底层人员享受到福利，从来如此，社会主义道路何其远哉！</p>
+]]></content>
+      <categories>
+        <category>坐井观天</category>
+      </categories>
+      <tags>
+        <tag>影评</tag>
+        <tag>Margin Call</tag>
+        <tag>商海通牒</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>jQuery 用法总结（未完成）</title>
+    <url>/202010052246/</url>
+    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>虽然已经 2020 年了，但是，对于非专业编程人士来说，使用 jQuery 仍然是一个不错的选择的。因为它是一个希望用户 <strong>写的少，做的多</strong> 的 JavaScript 库，并得到了广泛的使用。它具有以下功能：</p>
+<ul>
+<li>HTML 元素选取</li>
+<li>HTML 元素操作</li>
+<li>CSS 操作</li>
+<li>HTML 事件函数</li>
+<li>JavaScript 特效和动画</li>
+<li>HTML DOM 遍历和修改</li>
+<li>AJAX</li>
+<li>Utilities</li>
+</ul>
+<h3 id="jQuery版本"><a href="#jQuery版本" class="headerlink" title="jQuery版本"></a>jQuery版本</h3><ol>
+<li><p><strong>1.xx</strong> 的版兼容 IE 6/7/8，官方只做 BUG 维护，功能不再新增。最终版本：1.12.4 (2016年5月20日)</p>
+</li>
+<li><p><strong>2.xx</strong> 版本不兼容 IE 6/7/8，官方只做 BUG 维护，功能不再新增。</p>
+</li>
+<li><p><strong>3.xx</strong> 版本不兼容 IE 6/7/8，只支持最新的浏览器。并且很多老的jQuery插件不支持 3.x 版。目前该版本是官方主要更新维护的版本。</p>
+</li>
+</ol>
+<blockquote>
+<p>压缩版（mini,js）与未压缩版本的功能一致，区别只在于文件大小</p>
+</blockquote>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><p>张三帅.<code>jQuery</code>[EB/OL].<a href="https://www.cnblogs.com/mingkong-z/articles/9131866.html">https://www.cnblogs.com/mingkong-z/articles/9131866.html</a>, 2020/10/05.</p>
+</li>
+<li><p>老佐.<code>JavaScript及jQuery常用dom操作方法</code>[EB/OL].<a href="https://www.cnblogs.com/html5css3js/p/4550666.html">https://www.cnblogs.com/html5css3js/p/4550666.html</a>, 2020/10/05.</p>
+</li>
+<li><p>hemin.<code>jQuery 1.12.1 速查表</code>[EB/OL].<a href="http://hemin.cn/jq/">http://hemin.cn/jq/</a>, 2020/10/05.</p>
+</li>
+<li><p>minoz.<code>JQuery字符串的操作</code>[EB/OL].<a href="https://www.cnblogs.com/minozMin/p/8328028.html">https://www.cnblogs.com/minozMin/p/8328028.html</a>, 2020/10/05.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程笔记</category>
+      </categories>
+      <tags>
+        <tag>jQuery</tag>
       </tags>
   </entry>
 </search>
