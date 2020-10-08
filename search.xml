@@ -148,7 +148,9 @@
 </li>
 <li><p>2020/09/08 20:05:36，升级至 v0.2.2，修复主页和文章页在高分屏和手机屏下显示不佳问题。</p>
 </li>
-<li><p>2020/10/07 00:30:53，纠正 GitHub 的 sitemap 生成的 tag 、 category 站点地址不对问题。</p>
+<li><p>2020/10/07 00:30:53，纠正 GitHub 的 sitemap 生成的 tag 、 category 站点地址不对应问题。</p>
+</li>
+<li><p>2020/10/08 22:17:01，升级至 v0.2.3，增加站点横幅（文章横幅）、独立页目录、自定义404页等功能，优化实现百度自动推送功能为可设置、多级无序列表的前导符号可差异化设置，修复跨页未连续编号、HTML生成代码生成不必要的换行、sitemap 部分地址不当等问题。</p>
 </li>
 </ol>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
@@ -273,6 +275,13 @@
 <blockquote>
 <p>The onload event can only be used on the document(body) itself, frames, images, and scripts. In other words, it can be attached to only body and/or each external resource. The div is not an external resource and it’s loaded as part of the body, so the onload event doesn’t apply there.<br>onload event it only supports with few tags like listed below: <code>&lt;body&gt;, &lt;frame&gt;, &lt;iframe&gt;, &lt;img&gt;, &lt;input type=&quot;image&quot;&gt;, &lt;link&gt;, &lt;script&gt;, &lt;style&gt;</code> .<br>参考该文章，解决了灰暗模式的加载问题。</p>
 </blockquote>
+</li>
+<li><p>Mozilla.<code>list-style-type</code>[EB/OL].<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/list-style-type">https://developer.mozilla.org/zh-CN/docs/Web/CSS/list-style-type</a>, 2020/10/08.</p>
+<blockquote>
+<p>多级列表前导符号、数字的 list-style-type 属性。</p>
+</blockquote>
+</li>
+<li><p>腾讯寻人.<code>公益 404 页面介绍</code>[EB/OL].<a href="https://www.qq.com/404/">https://www.qq.com/404/</a>, 2020/10/08.</p>
 </li>
 </ol>
 ]]></content>
@@ -708,7 +717,7 @@ printf &quot;%-10s %-8s %-4.2f\n&quot; 郭芙 女 47.9876</code></pre>
 <p>整部电影一直都没有正面展开商业斗争的波谲云诡（bō jué yún guǐ），而是大量了使用了各种背景阐述，各种侧面语言动作渲染。电影的节奏一直比较缓慢，没有快步奔跑的员工，也没有大幅的悲伤情绪，即使大结局了，既没有看到行业动荡的场景，也没有被阴谋拖入破产骗局的投资人纷纷跳楼的场景；只见暗淡的月色底下，与会者深锁的眉头、凝重的表情，晦涩难懂、含糊不清的经营风险陈述，与员工们纸醉金迷的生活、老板来去直升机、投资人高大上言论形成鲜明的对比。</p>
 <p>Eric Dale （艾力克·戴尔）负责风险管理部门，工作了 19 年的员工，秋毫不觉就被即时辞退了。他希望在离职时将工作交接清楚，可是无论是人力资源部门主管还是自己的直属领导 Will Emerson，都没有人搭理他；在电梯门关闭之际，他将做了一半工作的资料U盘给了赶来告别的新员工 Peter，然后到了楼下工作手机就被公司关停了。</p>
 <p>发生问题后公司想请他说清楚以及对数据进行保密时，公司才发现已经联系不上他了，只能等到凌晨他妻子打来电话说他在家了，公司才决定去他家里找他、用每小时 17 万多美元的代价来要求他对公司的风险秘密予以保守一天。</p>
-<h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><h3 id="个人利益至上，屠龙少年终成恶龙"><a href="#个人利益至上，屠龙少年终成恶龙" class="headerlink" title="个人利益至上，屠龙少年终成恶龙"></a>个人利益至上，屠龙少年终成恶龙</h3><p>尽管行业性的经济危机将至，但只有一个镜头表现了 2008 年经济大动荡的可怕的之处——因年入 25 万美元而自豪不已的小员工 Seth （赛斯·布雷格曼）面对即将辞退困境，在卫生间里边痛哭失声，他十多分钟前还镇定自若地说，OK！</p>
+<h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><h3 id="个人利益至上，屠龙少年终成恶龙"><a href="#个人利益至上，屠龙少年终成恶龙" class="headerlink" title="个人利益至上，屠龙少年终成恶龙"></a>个人利益至上，屠龙少年终成恶龙</h3><p>尽管行业性的经济危机将至，但只有一个镜头表现了 2008 年经济大动荡的可怕的之处——因年入 25 万美元而自豪不已的小员工 Seth （赛斯·布雷格曼）面对即将辞退的困境，在卫生间里边痛哭失声，他十多分钟前还镇定自若地说，OK！</p>
 <p>公司的领导人 Sam 尽管工作了 34 年，积累了大量的财富，作为人性未泯的领导者，他依然无法放弃对利益的追逐。</p>
 <p>他是靠公司体制成功的领导者。他入职早，高高在上，做出英明的决策，英明地裁员、果断地抛售资产，然而公司的主要利润都是那些小员工辛辛苦苦赚来的，他甚至不知道的如何看明白预示着公司未来的曲线怎么看、指标是什么，他也记不住下层员工的名字，但是不影响他拿着公司基层无法企及、难以想象的高薪。他的狗生病了，每天都要花费一千美元治病，他太过于悲伤甚至于不觉得80%的下属被辞退了能怎么样，毕竟他早已从长期的人员流动中变得麻木不仁了！</p>
 <p>他来自基层，也拼搏过，因此他同情弱者、忧心行业，良心未泯。 Sam 的手下员工，不乏能力卓著的年轻人，比如说火箭科学家 Peter（彼得·苏利文）；也有出身不凡的得力下属，比如说桥梁工程师 Eric。因此，当二把手要求他出售资产时，他考虑到了对行业的影响以及年轻人的未来，他质疑何为老板毫无选择，他拒绝聆听风险评估，他嚎叫老板让开，他一次又一次地拒绝了二把手的要求，直到杰瑞开出了天价的报酬。</p>

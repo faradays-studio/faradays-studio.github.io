@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   
-  <title>
-    
-    Blog of Faradays&#39; Studio
-  </title>
+  <title>Blog of Faradays&#39; Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
@@ -54,7 +51,7 @@
 
 
 <script>
-// HHJ@20200830��ҳ�����ʱ��
+
 window.onload = function () {
     var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart;
     console.log('Page load time is '+ loadTime + ' ms');
@@ -262,7 +259,7 @@ window.onload = function () {
 
 
     
-    <div class="article-header-num">8 </div>
+    <div class="article-header-num">10</div>
 
     <article id="post-jQuery用法总结" class="article-index" itemscope itemprop="blogPost">
 
@@ -335,7 +332,7 @@ Utilities
     </article>
 
     
-    <div class="article-header-num">7 </div>
+    <div class="article-header-num">9</div>
 
     <article id="post-MarginCall影评-世界再无屠龙的少年" class="article-index" itemscope itemprop="blogPost">
 
@@ -402,7 +399,7 @@ Utilities
     </article>
 
     
-    <div class="article-header-num">6 </div>
+    <div class="article-header-num">8</div>
 
     <article id="post-在Shell中使用printf格式化输出语句" class="article-index" itemscope itemprop="blogPost">
 
@@ -467,7 +464,7 @@ printf 不像 echo 那样会自动换行，必须显式添加换行符 `\n` 。�
     </article>
 
     
-    <div class="article-header-num">5 </div>
+    <div class="article-header-num">7</div>
 
     <article id="post-2020年随笔" class="article-index" itemscope itemprop="blogPost">
 
@@ -534,7 +531,7 @@ printf 不像 echo 那样会自动换行，必须显式添加换行符 `\n` 。�
     </article>
 
     
-    <div class="article-header-num">4 </div>
+    <div class="article-header-num">6</div>
 
     <article id="post-苹果MacbookPro笔记本U盘启动与重置开机密码的方法" class="article-index" itemscope itemprop="blogPost">
 
@@ -612,7 +609,7 @@ Macbook 没有 BISO 等设置，所谓的进入 U盘 PE 或者切换双系统的
     </article>
 
     
-    <div class="article-header-num">3 </div>
+    <div class="article-header-num">5</div>
 
     <article id="post-Windows批处理的字符运算经验" class="article-index" itemscope itemprop="blogPost">
 
@@ -679,7 +676,7 @@ Windows 批处理中字符的基本常识
     </article>
 
     
-    <div class="article-header-num">2 </div>
+    <div class="article-header-num">4</div>
 
     <article id="post-世界，你好" class="article-index" itemscope itemprop="blogPost">
 
@@ -732,7 +729,7 @@ Windows 批处理中字符的基本常识
     </article>
 
     
-    <div class="article-header-num">1 </div>
+    <div class="article-header-num">3</div>
 
     <article id="post-chang-log" class="article-index" itemscope itemprop="blogPost">
 
@@ -808,7 +805,7 @@ Windows 批处理中字符的基本常识
 
 
   <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &gt;&gt;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">后页 &gt;&gt;</a>
   </nav>
 </section>
         
@@ -833,7 +830,7 @@ Windows 批处理中字符的基本常识
     </span>
 
     
-    &emsp;总文本数：<span class="post-count">12.2k</span>
+    &emsp;总文本数：<span class="post-count">12.4k</span>
 </p>
 
 
@@ -1197,6 +1194,10 @@ function switchBackground(type_1){
     
     <!-- <div class="tocbot" style="position:absolute;left:3px;top:350px;max-width:15%;max-height:400px;border-radius:3px;line-height:23px;color:#111;background:rgba(88, 88, 88, 0)"></div> -->
 
+<script>
+
+var today_1 = new Date();
+</script>
 
   
   
@@ -1216,18 +1217,23 @@ console.log("\nAll right reserved by Faradays' Studio.\n\n" + "All the codes lic
 
 <script>
     // HHJ@20200829，自动推送百度功能（当新页面每次被浏览时，页面URL会自动推送给百度，无需站长汇总URL再进行主动推送操作。）
-    // 因百度无法关联主体，无法使用；暂时删除代码
+    // https://ziyuan.baidu.com/college/courseinfo?id=267&page=2#h2_article_title18
+    if ( false ){
+
         (function(){
-        var bp = document.createElement('script');
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https'){
+               bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            } else{
+              bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
 
-        bp.src = '//push.zhanzhang.baidu.com/push.js';
-        // push.js 内容如下：
-        // !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
-
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-
+        console.log("已开启百度 “普通收录》自动推送” 功能\n");
+    }
 </script>
 
 <!--[if lt IE 9]>

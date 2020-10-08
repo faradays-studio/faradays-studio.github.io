@@ -86,7 +86,7 @@
   padding-bottom: 1rem;
 }
 .timeline2::before {
-  padding-top: 0.5rem;
+  padding-top: 2rem;
   content: "";
   display: table;
   clear: both;
@@ -136,7 +136,7 @@ a:hover {
   position: absolute;
   top: 50%;
   left: -3.5rem;
-  margin-top: -0.5rem;
+  margin-top: -1rem;
   width: 2rem;
   height: 2rem;
   border-radius: 2rem;
@@ -148,6 +148,7 @@ a:hover {
   text-align: center;
   vertical-align: center;
   top: 50%;
+  margin-top: -0.5rem;
   width: 2rem;
   left: -3.5rem;
 }

@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   
-  <title>
-    
-    2020年随笔 | 
-    Blog of Faradays&#39; Studio
-  </title>
+  <title>2020年随笔 | Blog of Faradays&#39; Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
@@ -69,7 +65,7 @@
 
 
 <script>
-// HHJ@20200830��ҳ�����ʱ��
+
 window.onload = function () {
     var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart;
     console.log('Page load time is '+ loadTime + ' ms');
@@ -170,13 +166,24 @@ window.onload = function () {
     <article id="post-2020年随笔" class="article article-type-post" itemscope itemprop="blogPost">
 
   <div id="article-inner-1" class="article-inner">
+
+    
+    
+    
+    
+    
+        <p class="banner">伟大的中华人民共和国万岁！伟大的中国共产党万岁！伟大的中国人民万岁！</p>
+    
+
     
       <header class="article-header">
         
   
-    <h1 class="post-title" itemprop="name">
-      2020年随笔
-    </h1>
+
+    
+    <h1 class="post-title" itemprop="name">2020年随笔</h1>
+
+    
     <div class="post-title-bar">
       <ul>
           
@@ -515,7 +522,7 @@ window.onload = function () {
     </span>
 
     
-    &emsp;总文本数：<span class="post-count">12.2k</span>
+    &emsp;总文本数：<span class="post-count">12.4k</span>
 </p>
 
 
@@ -886,6 +893,10 @@ function switchBackground(type_1){
     
     <!-- <div class="tocbot" style="position:absolute;left:3px;top:350px;max-width:15%;max-height:400px;border-radius:3px;line-height:23px;color:#111;background:rgba(88, 88, 88, 0)"></div> -->
 
+<script>
+
+var today_1 = new Date();
+</script>
 
   
   
@@ -967,18 +978,23 @@ console.log("\nAll right reserved by Faradays' Studio.\n\n" + "All the codes lic
 
 <script>
     // HHJ@20200829，自动推送百度功能（当新页面每次被浏览时，页面URL会自动推送给百度，无需站长汇总URL再进行主动推送操作。）
-    // 因百度无法关联主体，无法使用；暂时删除代码
+    // https://ziyuan.baidu.com/college/courseinfo?id=267&page=2#h2_article_title18
+    if ( false ){
+
         (function(){
-        var bp = document.createElement('script');
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https'){
+               bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            } else{
+              bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
 
-        bp.src = '//push.zhanzhang.baidu.com/push.js';
-        // push.js 内容如下：
-        // !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
-
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-
+        console.log("已开启百度 “普通收录》自动推送” 功能\n");
+    }
 </script>
 
 <!--[if lt IE 9]>
