@@ -485,7 +485,6 @@ a {
 }
 .article-entry h3,
 .widget h3,
-#header-description h3,
 #header-description-post h3 {
   font-size: 1.5rem;
 }
@@ -847,6 +846,7 @@ a {
   padding: 10px 0;
   color: #fff;
   letter-spacing: 5px;
+  font-size: 1.5rem;
 }
 .header-nav {
   cursor: pointer;
@@ -2373,7 +2373,7 @@ pre .javascript .function {
     background: rgba(0,0,0,0.87);
     color: #fff;
     cursor: default;
-    z-index: 1;
+    z-index: 50;
     visibility: hidden;
     border: none;
     width: 80%;
@@ -3278,7 +3278,7 @@ pre .javascript .function {
   position: absolute;
   right: 3%;
   top: -21px;
-  z-index: 2;
+  z-index: 30;
 }
 .post-share-fab {
   display: block;

@@ -192,34 +192,6 @@
   </url>
   
   <url>
-    <loc>https://faradays-studio.github.io/tags/%E5%BD%B1%E8%AF%84/</loc>
-    <lastmod>2020-10-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://faradays-studio.github.io/tags/Margin-Call/</loc>
-    <lastmod>2020-10-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://faradays-studio.github.io/tags/%E5%95%86%E6%B5%B7%E9%80%9A%E7%89%92/</loc>
-    <lastmod>2020-10-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://faradays-studio.github.io/tags/jQuery/</loc>
-    <lastmod>2020-10-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://faradays-studio.github.io/tags/2020/</loc>
     <lastmod>2020-10-12</lastmod>
     <changefreq>daily</changefreq>
@@ -249,6 +221,34 @@
   
   <url>
     <loc>https://faradays-studio.github.io/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/</loc>
+    <lastmod>2020-10-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://faradays-studio.github.io/tags/%E5%BD%B1%E8%AF%84/</loc>
+    <lastmod>2020-10-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://faradays-studio.github.io/tags/Margin-Call/</loc>
+    <lastmod>2020-10-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://faradays-studio.github.io/tags/%E5%95%86%E6%B5%B7%E9%80%9A%E7%89%92/</loc>
+    <lastmod>2020-10-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://faradays-studio.github.io/tags/jQuery/</loc>
     <lastmod>2020-10-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -292,14 +292,14 @@
   </url>
   
   <url>
-    <loc>https://faradays-studio.github.io/categories/%E5%9D%90%E4%BA%95%E8%A7%82%E5%A4%A9/</loc>
+    <loc>https://faradays-studio.github.io/categories/%E9%9A%8F%E6%83%B3%E5%BD%95/</loc>
     <lastmod>2020-10-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://faradays-studio.github.io/categories/%E9%9A%8F%E6%83%B3%E5%BD%95/</loc>
+    <loc>https://faradays-studio.github.io/categories/%E5%9D%90%E4%BA%95%E8%A7%82%E5%A4%A9/</loc>
     <lastmod>2020-10-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
