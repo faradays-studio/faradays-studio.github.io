@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   
   <title>Windows 批处理的字符运算（未完待续） | Blog of Faradays&#39; Studio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
 
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -99,6 +99,8 @@ window.onload = function () {
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
 </head>
 
+
+
 <body onload="javascript:switchBackground()">
   <div id="container">
 
@@ -182,7 +184,9 @@ window.onload = function () {
   
 
     
-    <h1 class="post-title" itemprop="name">Windows 批处理的字符运算（未完待续）</h1>
+    
+        <h1 class="post-title" id="typed2" itemprop="name"></h1>
+    
 
     
     <div class="post-title-bar">
@@ -253,6 +257,7 @@ window.onload = function () {
     </div>
 
   
+
 
       </header>
     
@@ -388,17 +393,14 @@ pause</code></pre>
 
 <div id="reward" class="post-modal reward-lay">
     <a class="close" href="javascript:;" id="reward-close">×</a>
-    <span class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        大方打赏，关爱永继~
-        <i class="icon icon-quote-right"></i>
-    </span>
+    <span class="reward-title">大方打赏，关爱永继~</span>
     <div class="reward-content">
         <div class="reward-code">
             
-            <table style="float:center; margin:auto;"><tr>
-                <td><img src="/images/%E5%BE%AE%E4%BF%A1-%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="微信" border=0></td>
-                <td><img src="/images/%E6%94%AF%E4%BB%98%E5%AE%9D-%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="支付宝" border=0></td>
+            <table style="float:center; margin:auto;" cellspacing="3">
+                <tr>
+                <td><img src="/images/%E5%BE%AE%E4%BF%A1-%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="微信"></td>
+                <td><img src="/images/%E6%94%AF%E4%BB%98%E5%AE%9D-%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="支付宝"></td>
                 </tr>
             </table>
         </div>
@@ -545,6 +547,22 @@ pause</code></pre>
     </div>
 
     
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+<script>
+    var typed2 = new Typed("#typed2", {
+    strings: ['Windows 批处理的字符运算（未完待续）'],
+    startDelay: 1678,
+    typeSpeed: 100,
+    loop: false,
+    backSpeed: 0,
+    showCursor: false
+    });
+</script>
 </section>
         
       </div>
@@ -568,7 +586,7 @@ pause</code></pre>
     </span>
 
     
-    &emsp;总文本数：<span class="post-count">12.4k</span>
+    &emsp;总文本数：<span class="post-count">12.5k</span>
 </p>
 
 
@@ -610,6 +628,7 @@ pause</code></pre>
 
 
 <script>
+  
   var WebConfig = {
       root: "https://faradays-studio.gitee.io",
       animate: false,
@@ -618,6 +637,7 @@ pause</code></pre>
       reward: 1
   }
 </script>
+
 <div class="sidebar">
     <div id="sidebar-search" title="Search">
         <i class="fa fa-search"></i>
@@ -691,11 +711,16 @@ pause</code></pre>
     </div>
 
     <div class="mobile-header-operation-container">
-        <span class="title">Operation</span>
-        <div id="sidebar-mode" title="Daylight" onClick="javascript:switchBackground(1)">
-            <i class="fa fa-lightbulb-o"></i>
-        </div>
+        <div class="title">Operation</div>
+
+        <span style="display:inline-block;" id="sidebar-mode" title="Daylight" onClick="javascript:switchBackground(1)">
+            <i class="fa fa-lightbulb-o"></i></span>
+
+        
+        <span class="cmd-logo" style="display:inline-block;"  title="Show/Hide TOC" onClick="javascript:showTocOrNot()">
+        <i class="fa fa-bookmark"></i></span>
     </div>
+
 
 </div>
 <div class="search-wrap">
@@ -927,6 +952,7 @@ function switchBackground(type_1){
 
 </script>
 
+
     
 
     
@@ -953,8 +979,11 @@ var today_1 = new Date();
       tocbot.init({
         tocSelector: '.tocbot',
         contentSelector: '.article-inner',
-        headingSelector: 'h1, h2, h3, h4, h5, h6',
+        headingSelector: 'h2, h3, h4, h5, h6',
         hasInnerContainers: true,
+
+        
+        collapseDepth: 3,
 
         scrollSmooth: true,
         
@@ -965,7 +994,6 @@ var today_1 = new Date();
         scrollContainer: 'main',
         positionFixedSelector: '.tocbot',
         positionFixedClass: 'is-position-fixed',
-
 
         
         //skipRendering: true,
@@ -1048,6 +1076,24 @@ console.log("\nAll right reserved by Faradays' Studio.\n\n" + "All the codes lic
     alert("请使用 IE9 或更高版本的浏览器，或谷歌浏览器、火狐浏览器，以便您浏览本站优质内容!");
 </script>
 <![endif]-->
+
+<script>
+
+function showTocOrNot(){
+    var dv = document.getElementById("post-toc");
+    console.log(dv.style.display);
+
+    if (dv.style.display === 'none'){
+        dv.style.display="block";
+    } else{
+        dv.style.display="none";
+    }
+}
+
+if (screen && screen.width < 760) {
+    console.log("访问终端为手机\n");
+}
+</script>
 
   </div>
 </body>

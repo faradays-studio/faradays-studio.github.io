@@ -9,6 +9,7 @@ $(function () {
             len = animationNames.length,
             randomAnimationName = animationNames[Math.ceil(Math.random() * len) - 1];
         window.sr = ScrollReveal();
+        
         //头部动画
         sr.reveal('#header-row', {
             duration: 0,
@@ -16,6 +17,7 @@ $(function () {
                 $(documentElement).addClass('animated ' + randomAnimationName);
             }
         });
+        
         //文章动画
         sr.reveal('.body-wrap > article', {
             duration: 0,

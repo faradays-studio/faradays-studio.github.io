@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   
   <title>归档: 2020/8 | Blog of Faradays&#39; Studio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
 
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -79,6 +79,8 @@ window.onload = function () {
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
 </head>
+
+
 
 <body onload="javascript:switchBackground()">
   <div id="container">
@@ -184,6 +186,7 @@ window.onload = function () {
     </h1>
   
 
+
         </header>
           
             <div class="archive-post-footer">
@@ -233,6 +236,7 @@ window.onload = function () {
     </h1>
   
 
+
         </header>
           
             <div class="archive-post-footer">
@@ -274,6 +278,7 @@ window.onload = function () {
     </h1>
   
 
+
         </header>
           
       </div>
@@ -312,7 +317,7 @@ window.onload = function () {
     </span>
 
     
-    &emsp;总文本数：<span class="post-count">12.4k</span>
+    &emsp;总文本数：<span class="post-count">12.5k</span>
 </p>
 
 
@@ -354,6 +359,7 @@ window.onload = function () {
 
 
 <script>
+  
   var WebConfig = {
       root: "https://faradays-studio.gitee.io",
       animate: false,
@@ -362,6 +368,7 @@ window.onload = function () {
       reward: 1
   }
 </script>
+
 <div class="sidebar">
     <div id="sidebar-search" title="Search">
         <i class="fa fa-search"></i>
@@ -435,11 +442,16 @@ window.onload = function () {
     </div>
 
     <div class="mobile-header-operation-container">
-        <span class="title">Operation</span>
-        <div id="sidebar-mode" title="Daylight" onClick="javascript:switchBackground(1)">
-            <i class="fa fa-lightbulb-o"></i>
-        </div>
+        <div class="title">Operation</div>
+
+        <span style="display:inline-block;" id="sidebar-mode" title="Daylight" onClick="javascript:switchBackground(1)">
+            <i class="fa fa-lightbulb-o"></i></span>
+
+        
+        <span class="cmd-logo" style="display:inline-block;"  title="Show/Hide TOC" onClick="javascript:showTocOrNot()">
+        <i class="fa fa-bookmark"></i></span>
     </div>
+
 
 </div>
 <div class="search-wrap">
@@ -671,6 +683,7 @@ function switchBackground(type_1){
 
 </script>
 
+
     
 
     
@@ -730,6 +743,24 @@ console.log("\nAll right reserved by Faradays' Studio.\n\n" + "All the codes lic
     alert("请使用 IE9 或更高版本的浏览器，或谷歌浏览器、火狐浏览器，以便您浏览本站优质内容!");
 </script>
 <![endif]-->
+
+<script>
+
+function showTocOrNot(){
+    var dv = document.getElementById("post-toc");
+    console.log(dv.style.display);
+
+    if (dv.style.display === 'none'){
+        dv.style.display="block";
+    } else{
+        dv.style.display="none";
+    }
+}
+
+if (screen && screen.width < 760) {
+    console.log("访问终端为手机\n");
+}
+</script>
 
   </div>
 </body>
