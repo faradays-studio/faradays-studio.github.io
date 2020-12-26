@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   
-  <title>hexo 博客系统开发笔记 | Blog of Faradays&#39; Studio</title>
+  <title>hexo-theme-faradays 主题概述 | Blog of Faradays&#39; Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
 
   
@@ -27,16 +27,15 @@
 
   <meta name="description" content="编程, 思考, 文学作品, 实践, 总结">
 <meta property="og:type" content="website">
-<meta property="og:title" content="hexo 博客系统开发笔记">
-<meta property="og:url" content="https://faradays-studio.gitee.io/about/change_log-hexo.html">
+<meta property="og:title" content="hexo-theme-faradays 主题概述">
+<meta property="og:url" content="https://faradays-studio.gitee.io/about/hexo-theme-faradays_summary.html">
 <meta property="og:site_name" content="Blog of Faradays&#39; Studio">
 <meta property="og:description" content="编程, 思考, 文学作品, 实践, 总结">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://faradays-studio.gitee.io/about/AGPLv3%E7%89%88%E6%9D%83%E5%86%85%E5%AE%B9%E6%A6%82%E8%BF%B0-HHJ-20200220.png">
 <meta property="og:image" content="https://faradays-studio.gitee.io/about/AGPLv3%E7%89%88%E6%9D%83%E5%86%85%E5%AE%B9%E6%A6%82%E8%BF%B0-HHJ-20200220.png">
-<meta property="og:image" content="https://faradays-studio.gitee.io/about/git.jpg">
-<meta property="article:published_time" content="2020-10-08T08:32:58.308Z">
-<meta property="article:modified_time" content="2020-10-08T08:32:58.308Z">
+<meta property="article:published_time" content="2020-12-26T09:28:08.895Z">
+<meta property="article:modified_time" content="2020-12-26T09:28:08.895Z">
 <meta property="article:author" content="David">
 <meta property="article:tag" content="编程, 思考, 文学作品, 实践, 总结">
 <meta name="twitter:card" content="summary">
@@ -71,10 +70,15 @@ window.onload = function () {
   
 	<script>
 	var _hmt = _hmt || [];
+	var hmt_site = window.location.host;
 	(function() {
 	  var hm = document.createElement("script");
-	  hm.src = "//hm.baidu.com/hm.js?83a082b3997bdb4ac31a097af3ea3ea9";
-	  var s = document.getElementsByTagName("script")[0]; 
+	  if ( hmt_site.indexOf("gitee") != -1) {
+        hm.src = "//hm.baidu.com/hm.js?83a082b3997bdb4ac31a097af3ea3ea9";
+	  } else {
+        hm.src = "//hm.baidu.com/hm.js?dae0d921cd647933e274acc38340fe61";
+	  }
+	  var s = document.getElementsByTagName("script")[0];
 	  s.parentNode.insertBefore(hm, s);
 	})();
 	</script>
@@ -162,7 +166,7 @@ window.onload = function () {
     
     
     
-        <p class="banner">伟大的中华人民共和国万岁！伟大的中国共产党万岁！伟大的中国人民万岁！</p>
+        
     
 
 
@@ -175,7 +179,7 @@ window.onload = function () {
         
   
     <h1 class="post-title" itemprop="name">
-      hexo 博客系统开发笔记
+      hexo-theme-faradays 主题概述
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -186,7 +190,7 @@ window.onload = function () {
           <span id="busuanzi_value_page_pv"></span>
         </li>
         <li>
-          <i class="fa fa-calendar-plus-o"></i>  2020-10-08
+          <i class="fa fa-calendar-plus-o"></i>  2020-12-26
         </li>
 
         
@@ -206,10 +210,10 @@ window.onload = function () {
 
         
         <li><i class="fa fa-file-word-o"></i>
-            <span class="post-count">4.1k words</span>
+            <span class="post-count">2.9k words</span>
         </li>
         <li><i class="fa fa-caret-square-o-right"></i>
-            <span class="post-count">17 min</span>
+            <span class="post-count">12 min</span>
         </li>
       </ul>
 
@@ -409,13 +413,13 @@ layout.swig  - uses Swig</code></pre>
 <li><p>在文章中插入链接，并自动给外部链接添加 target=”_blank” 属性： <code>&#123;% link text url [external] [title] %&#125;</code>。</p>
   <a href="" title="" target="">text url [external] [title]</a>
 </li>
-<li><p>引用其他文章的链接： <code>&#123;% post_path filename %&#125;</code> 或 <code>&#123;% post_link filename [title] [escape] %&#125;</code>。</p>
-  
+<li><p><del>引用其他文章的链接： <code>&#123;% post_path filename %&#125;</code> 或 <code>&#123;% post_link filename [title] [escape] %&#125;</code>。</del></p>
+  <a href="#">Post not found: zh-CN_20200607_chang-log</a>
 
 <ul>
 <li><p>在使用此标签时可以忽略文章文件所在的路径或者文章的永久链接信息、如语言、日期。</p>
 <blockquote>
-<p>例如，在文章中使用 <a href="#">Post not found: how-to-bake-a-cake</a> 时，只需有一个名为 how-to-bake-a-cake.md 的文章文件即可。即使这个文件位于站点文件夹的 source/posts/2015-02-my-family-holiday 目录下、或者文章的永久链接是 2018/en/how-to-bake-a-cake，都没有影响。</p>
+<p>例如，在文章中使用 <a href="#">Post not found: hexo-theme-faradays_summary</a> 时，只需有一个名为 <code>hexo-theme-faradays_summary.md</code> 的文章文件即可。即使这个文件位于站点文件夹的 <code>source/posts/hexo-theme-faradays_summary</code> 目录下、或者文章的永久链接是 <code>2018/zh-CN/hexo-theme-faradays_summary</code>，都没有影响。</p>
 </blockquote>
 </li>
 <li><p>默认链接文字是文章的标题，你也可以自定义要显示的文本。</p>
@@ -518,181 +522,14 @@ author_x:
   <span class="hljs-attr">monthly:</span> <span class="hljs-literal">true</span>
 
 <span class="hljs-attr">tag_generator:</span>
-  <span class="hljs-attr">per_page:</span> <span class="hljs-number">10</span></code></pre></code></pre><h2 id="Git-命令集成"><a href="#Git-命令集成" class="headerlink" title="Git 命令集成"></a>Git 命令集成</h2><p><img src="git.jpg" alt="Git基本使用方法示意图"></p>
-<ol>
-<li><p>测试 GitHub 可访问性</p>
-<blockquote>
-<p>ssh -T <a href="mailto:git@github.com">git@github.com</a></p>
-</blockquote>
-</li>
-<li><p>更新主分支（下载更新）</p>
-<blockquote>
-<p>D:   &amp;&amp;   D:\faradays-studio.github\faradays-studio.github.io   &amp;&amp;    git checkout</p>
-</blockquote>
-</li>
-<li><p>更新其他分支（下载更新）</p>
-<blockquote>
-<p>git checkout -b blog origin/blog<br>git checkout -t      origin/blog</p>
-</blockquote>
-</li>
-<li><p>提交到本地</p>
-<blockquote>
-<p>git commit -a -m u”pdate the website statement”</p>
-</blockquote>
-</li>
-<li><p>提交到GitHub</p>
-<blockquote>
-<p>git push origin master</p>
-</blockquote>
-</li>
-<li><p>基本用法说明</p>
-</li>
-</ol>
-<ul>
-<li><p>查看分支<br>  git branch -a<br>  git branch -v<br>  git branch -r</p>
-</li>
-<li><p>查看最近的 commit 信息<br>  git show HEAD</p>
-<pre><code>按 q 退出</code></pre></li>
-<li><p>git checkout -b &lt;分支名&gt;<br>  git checkout -b blog</p>
-</li>
-<li><p>从 服务器 下载更新到本地<br>  由于 hexo 更新后，本地会版本落后，因此需要更新<br>  git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;<br>  git pull origin master</p>
-<pre><code>或 git pull origin master:master</code></pre><p>  git pull origin blog:blog</p>
-</li>
-</ul>
-<h3 id="使用-git-管理主题的流程示意"><a href="#使用-git-管理主题的流程示意" class="headerlink" title="使用 git 管理主题的流程示意"></a>使用 git 管理主题的流程示意</h3><pre><code><pre><code class="hljs Shell"><span class="hljs-meta">#</span><span class="bash">克隆你fork出来的分支</span>
-<span class="hljs-meta">$</span><span class="bash">git <span class="hljs-built_in">clone</span> &lt;远程Arepository&gt;</span>
-
-<span class="hljs-meta">#</span><span class="bash">添加远程B repository标签</span>
-<span class="hljs-meta">$</span><span class="bash">git remote add &lt;远程B repository标签&gt; git@github.com:XXXX/ceph.git</span>
-
-<span class="hljs-meta">#</span><span class="bash">从远程Brepository的master分支拉取最新objects合并到本地master分支</span>
-<span class="hljs-meta">$</span><span class="bash">git pull &lt;远程B厂库标签&gt; master:master</span>
-
-<span class="hljs-meta">#</span><span class="bash">切换到要修改的分支上</span>
-<span class="hljs-meta">$</span><span class="bash">git checkout YYYY</span>
-
-<span class="hljs-meta">#</span><span class="bash">在当前分支的基础上创建一个开发分支，并切换到该分支上，你将在该分支上coding</span>
-<span class="hljs-meta">$</span><span class="bash">git branch develop; git checkout develop</span>
-
-<span class="hljs-meta">#</span><span class="bash">在工作区coding</span>
-coding...... 
-
-<span class="hljs-meta">#</span><span class="bash">将修改保存到索引区</span>
-<span class="hljs-meta">$</span><span class="bash">git add .</span>
-
-<span class="hljs-meta">#</span><span class="bash">将修改提交到本地分区</span>
-<span class="hljs-meta">$</span><span class="bash">git commit -a</span>
-
-<span class="hljs-meta">#</span><span class="bash">将本地分支my_test提交到远程A repository的my_test分支上</span>
-<span class="hljs-meta">$</span><span class="bash">git push origin my_test:my_test</span></code></pre></code></pre><h3 id="hexo-博客删除部分-commit-的操作实践"><a href="#hexo-博客删除部分-commit-的操作实践" class="headerlink" title="hexo 博客删除部分 commit 的操作实践"></a>hexo 博客删除部分 commit 的操作实践</h3><p>经过 2 天半的来回测试，终于删除了上传了隐藏文件 hid*.html 文件的提交。</p>
-<ol>
-<li><p>出现 <code>HEAD detached at 68e8065</code> 等错误的解决方法：</p>
- <pre><code class="hljs Shell"><span class="hljs-meta">#</span><span class="bash"> 给 blog 起个 branch 名 blog_temp1</span>
-git branch blog_temp1 blog
-git branch -a
-<span class="hljs-meta">#</span><span class="bash"> Head 指向实际使用的 branch，注意不是 origin/blog</span>
-git checkout blog
-<span class="hljs-meta">#</span><span class="bash"> 融合到当前 branch</span>
-git merge blog_temp1
-    合并时存在问题，如果以本地为准 git  add，以服务器为准则 git  rm XXXX，然后 git commit
-    再重新执行合并
-<span class="hljs-meta">#</span><span class="bash"> 删除临时 branch</span>
-git branch -d blog_temp1</code></pre>
-</li>
-<li><p>删除特定 commit (# 由于 hexo 自身存在一个版本库，因此需要进行相应的处理)</p>
- <pre><code class="hljs Shell">git log  
-git rebase -i XXX       # 将需要删除的最早的提交之前的一次提交做基础 
-    将相关 commit 记录中的 pick 改为 drop，保存即实现本地删除。
-git push origin blog -f    # 强制提交本地版本到远程（实现远程删除）
-git status       # 查看状态
-git log --oneline
-git pull origin blog:blog
-git log --oneline
-
-cd D:\WebSites\faradays-studio.hexo\.deploy_git
-执行上述过程，如出现 `HEAD detached ` 等报错，注意分支名称实际为 master，
-执行 hexo 同步至远程</code></pre>
-</li>
-<li><p>具体的操作过程：</p>
- <pre><code class="hljs Shell"><span class="hljs-meta">#</span><span class="bash"> 从 GitHub 下拉取版本库，确保本地文件为最新</span>
-git pull origin blog:blog
-<span class="hljs-meta">#</span><span class="bash"> 查看更新日志</span>
-git log
-    相关 log 文件使用 VI 的形式打开，因此可以按 shift + G 跳转到底，按 q 退出修改。
-<span class="hljs-meta">#</span><span class="bash"> 将需要删除的最早提交的前一次提交，设置为版本基础</span>
-git rebase -i 982c78fc82a2a3804233e9ff7ef315fc21dc0822
-    在弹出文件中，将会展示在该提交之后的每个提交信息
-    将相关 commit 记录中的 pick 改为 drop，保存即实现本地删除。
-    出现 `HEAD detached at 982c78f` 报警
-    
-    # 查看当前分支情况
-    git branch -a
-    # 将当前分支改名
-    git branch blog_temp1 blog
-    # 解决由于删除造成的版本 merge 报警
-    git rm -r about
-    git rm content.json
-    git rebase --continue
-    git commit
-    git push origin blog -f
-    
-    # 合并分支
-    #git merge blog_temp1
-    # 重新对 Head 指向 branch（测试表明该步骤不能执行）
-    # git checkout blog
-    # 删除临时的版本
-    git branch -d blog_temp1
-git log --oneline
-
-<span class="hljs-meta">#</span><span class="bash"> git pull origin blog:blog 等命令无法对 hexo 的版本库进行更新，因此执行以下操作</span>
-<span class="hljs-meta">#</span><span class="bash"> 删除 .deploy_git 文件夹，重新建立版本库理论可行。详见 https://github.com/hexojs/hexo-deployer-git 。</span>
-git rebase -i 982c78fc82a2a3804233e9ff7ef315fc21dc0822
-<span class="hljs-meta">#</span><span class="bash"> 查看状态</span>
-git status
-git rm -r about
-git rm content.json
-git rebase --continue
-git log
-git log --oneline
-
-<span class="hljs-meta">#</span><span class="bash">至此，各个版本完成更新，可以使用 hexo 重新生成一次，确保删除的文件被生成</span>
-hexo -d g
-
-<span class="hljs-meta">#</span><span class="bash"> 查看本地版本日志</span>
-git log --oneline
-<span class="hljs-meta">#</span><span class="bash"> 解决由于前边删除文件导致的版本文件数量不一致的问题</span>
-git pull -r
-<span class="hljs-meta">#</span><span class="bash"> 下载网络更新到本地</span>
-git pull origin blog:blog
-<span class="hljs-meta">#</span><span class="bash"> 检查更新情况后的版本日志</span>
-git log --oneline</code></pre>
-
-
-
-
-</li>
-</ol>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li><p>UniqueColor.<code>git chekout分支遇到问题：need merge</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.cnblogs.com/UniqueColor/p/6594942.html">https://www.cnblogs.com/UniqueColor/p/6594942.html</a>, 2020/08/26.</p>
-</li>
-<li><p>奔跑的小龙码.<code>git删除指定commit</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.cnblogs.com/lwcode6/p/11809973.html">https://www.cnblogs.com/lwcode6/p/11809973.html</a>, 2020/08/26.</p>
-<blockquote>
-<p>通过 add /rm 来指定本机处理措施，git commit -s，再 pull，再push</p>
-</blockquote>
-</li>
-<li><p>Jack_Chao.<code>Git 快速使用 之 冲突 merge 快速解决</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.jianshu.com/p/50ef88bda474">https://www.jianshu.com/p/50ef88bda474</a>, 2020/08/26.</p>
-</li>
-<li><p>星辰之力.<code>git push &amp; git pull 推送/拉取分支</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.cnblogs.com/zhujiabin/p/9641305.html">https://www.cnblogs.com/zhujiabin/p/9641305.html</a>, 2020/08/27.</p>
-</li>
-</ol>
-
+  <span class="hljs-attr">per_page:</span> <span class="hljs-number">10</span></code></pre></code></pre>
             <div class="post-copyright">
 
     
     <br /><br /><br />
     <div id="copyright-content" class="content">
         
-        <p>最后更新： 2020/10/08 16:32:58</p>
+        <p>最后更新： 2020/12/26 17:28:08</p>
         <p>
 
                 
@@ -717,15 +554,15 @@ git log --oneline</code></pre>
         
         <p>原始链接：
             
-                <a class="post-url" target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/about/change_log-hexo.html" title="hexo 博客系统开发笔记">
-                https://faradays-studio.github.io/about/change_log-hexo.html
+                <a class="post-url" target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/about/hexo-theme-faradays_summary.html" title="hexo-theme-faradays 主题概述">
+                https://faradays-studio.github.io/about/hexo-theme-faradays_summary.html
                 </a>
             
         </p>
 
         
-        <p>后备链接： <a class="post-url" href="https://faradays-studio.gitee.io/about/change_log-hexo.html" title="hexo 博客系统开发笔记">
-            https://faradays-studio.gitee.io/about/change_log-hexo.html</a>
+        <p>后备链接： <a class="post-url" href="https://faradays-studio.gitee.io/about/hexo-theme-faradays_summary.html" title="hexo-theme-faradays 主题概述">
+            https://faradays-studio.gitee.io/about/hexo-theme-faradays_summary.html</a>
         </p>
         
 
@@ -800,7 +637,7 @@ git log --oneline</code></pre>
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.gitee.io/about/change_log-hexo.html&title=《hexo 博客系统开发笔记》 — Blog of Faradays' Studio&pic=https://faradays-studio.gitee.ioimages/logo-Faradays' Studio.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.gitee.io/about/hexo-theme-faradays_summary.html&title=《hexo-theme-faradays 主题概述》 — Blog of Faradays' Studio&pic=https://faradays-studio.gitee.ioimages/logo-Faradays' Studio.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -810,7 +647,7 @@ git log --oneline</code></pre>
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://faradays-studio.gitee.io/about/change_log-hexo.html&title=《hexo 博客系统开发笔记》 — Blog of Faradays' Studio&source=项目概要
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://faradays-studio.gitee.io/about/hexo-theme-faradays_summary.html&title=《hexo-theme-faradays 主题概述》 — Blog of Faradays' Studio&source=项目概要
 创建于: 2020/07/05 08:23:50   0.0.0
 
 更新于: 2020/09/07 00:07:38  0.2.0
@@ -820,17 +657,17 @@ git log --oneline</code></pre>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://faradays-studio.gitee.io/about/change_log-hexo.html" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://faradays-studio.gitee.io/about/hexo-theme-faradays_summary.html" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《hexo 博客系统开发笔记》 — Blog of Faradays' Studio&url=https://faradays-studio.gitee.io/about/change_log-hexo.html&via=https://faradays-studio.gitee.io" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《hexo-theme-faradays 主题概述》 — Blog of Faradays' Studio&url=https://faradays-studio.gitee.io/about/hexo-theme-faradays_summary.html&via=https://faradays-studio.gitee.io" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://faradays-studio.gitee.io/about/change_log-hexo.html" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://faradays-studio.gitee.io/about/hexo-theme-faradays_summary.html" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -840,7 +677,7 @@ git log --oneline</code></pre>
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://faradays-studio.gitee.io/about/change_log-hexo.html" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://faradays-studio.gitee.io/about/hexo-theme-faradays_summary.html" alt="微信分享二维码">
 </div>
 
 
@@ -858,7 +695,7 @@ git log --oneline</code></pre>
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <!-- <nav class="post-toc-wrap"> -->
         <nav class="tocbot">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%A6%81"><span class="post-toc-text">项目概要</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hexo-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="post-toc-text">hexo 基础知识</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%A8%A1%E6%9D%BF%E5%AE%9A%E5%88%B6%E7%9A%84%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80"><span class="post-toc-text">模板定制的理论基础</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%A0%B7%E5%BC%8F%E5%AE%9A%E5%88%B6%E7%9A%84%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80"><span class="post-toc-text">样式定制的理论基础</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hexo-theme-faradays-%E4%B8%BB%E9%A2%98%E7%BB%93%E6%9E%84"><span class="post-toc-text">hexo-theme-faradays 主题结构</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Faradays-%E4%B8%BB%E9%A2%98%E7%9A%84%E6%A8%A1%E6%9D%BF"><span class="post-toc-text">Faradays 主题的模板</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Faradays-%E4%B8%BB%E9%A2%98%E7%9A%84%E6%A0%B7%E5%BC%8F"><span class="post-toc-text">Faradays 主题的样式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#hexo-%E6%96%87%E7%AB%A0%E7%9A%84%E4%B9%A6%E5%86%99"><span class="post-toc-text">hexo 文章的书写</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="post-toc-text">使用注意事项</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%A0%94%E7%A9%B6%E6%80%BB%E7%BB%93"><span class="post-toc-text">研究总结</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%8B%AC%E7%AB%8B%E9%A1%B5%E7%9A%84%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95"><span class="post-toc-text">独立页的功能测试</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%88%86%E9%A1%B5"><span class="post-toc-text">分页</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Git-%E5%91%BD%E4%BB%A4%E9%9B%86%E6%88%90"><span class="post-toc-text">Git 命令集成</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BD%BF%E7%94%A8-git-%E7%AE%A1%E7%90%86%E4%B8%BB%E9%A2%98%E7%9A%84%E6%B5%81%E7%A8%8B%E7%A4%BA%E6%84%8F"><span class="post-toc-text">使用 git 管理主题的流程示意</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#hexo-%E5%8D%9A%E5%AE%A2%E5%88%A0%E9%99%A4%E9%83%A8%E5%88%86-commit-%E7%9A%84%E6%93%8D%E4%BD%9C%E5%AE%9E%E8%B7%B5"><span class="post-toc-text">hexo 博客删除部分 commit 的操作实践</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="post-toc-text">参考文献</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%A6%81"><span class="post-toc-text">项目概要</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hexo-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="post-toc-text">hexo 基础知识</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%A8%A1%E6%9D%BF%E5%AE%9A%E5%88%B6%E7%9A%84%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80"><span class="post-toc-text">模板定制的理论基础</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%A0%B7%E5%BC%8F%E5%AE%9A%E5%88%B6%E7%9A%84%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80"><span class="post-toc-text">样式定制的理论基础</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hexo-theme-faradays-%E4%B8%BB%E9%A2%98%E7%BB%93%E6%9E%84"><span class="post-toc-text">hexo-theme-faradays 主题结构</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Faradays-%E4%B8%BB%E9%A2%98%E7%9A%84%E6%A8%A1%E6%9D%BF"><span class="post-toc-text">Faradays 主题的模板</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Faradays-%E4%B8%BB%E9%A2%98%E7%9A%84%E6%A0%B7%E5%BC%8F"><span class="post-toc-text">Faradays 主题的样式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#hexo-%E6%96%87%E7%AB%A0%E7%9A%84%E4%B9%A6%E5%86%99"><span class="post-toc-text">hexo 文章的书写</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="post-toc-text">使用注意事项</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%A0%94%E7%A9%B6%E6%80%BB%E7%BB%93"><span class="post-toc-text">研究总结</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%8B%AC%E7%AB%8B%E9%A1%B5%E7%9A%84%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95"><span class="post-toc-text">独立页的功能测试</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%88%86%E9%A1%B5"><span class="post-toc-text">分页</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
     
@@ -902,7 +739,7 @@ git log --oneline</code></pre>
     </span>
 
     
-    &emsp;总文本数：<span class="post-count">12.5k</span>
+    &emsp;总文本数：<span class="post-count">18.8k</span>
 </p>
 
 
@@ -974,10 +811,10 @@ git log --oneline</code></pre>
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/English/">English</a><a class="category-link" href="/categories/Faradays-Studio/">Faradays' Studio</a><a class="category-link" href="/categories/%E5%9D%90%E4%BA%95%E8%A7%82%E5%A4%A9/">坐井观天</a><a class="category-link" href="/categories/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">开发笔记</a><a class="category-link" href="/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/">电脑爱好者</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/">编程笔记</a><a class="category-link" href="/categories/%E9%9A%8F%E6%83%B3%E5%BD%95/">随想录</a>
+            <a class="category-link" href="/categories/English/">English</a><a class="category-link" href="/categories/%E5%9D%90%E4%BA%95%E8%A7%82%E5%A4%A9/">坐井观天</a><a class="category-link" href="/categories/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">开发笔记</a><a class="category-link" href="/categories/%E6%98%9F%E6%98%9F%E5%BF%83%E4%BA%8B/">星星心事</a><a class="category-link" href="/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/">电脑爱好者</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/">编程笔记</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/2020/" style="font-size: 10px;">2020</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/Margin-Call/" style="font-size: 10px;">Margin Call</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 15px;">SVG</a> <a href="/tags/Shell/" style="font-size: 10px;">Shell</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/printf/" style="font-size: 10px;">printf</a> <a href="/tags/%E5%95%86%E6%B5%B7%E9%80%9A%E7%89%92/" style="font-size: 10px;">商海通牒</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E5%BD%B1%E8%AF%84/" style="font-size: 10px;">影评</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a> <a href="/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/" style="font-size: 10px;">格式化</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
+            <a href="/tags/2020/" style="font-size: 10px;">2020</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/Arch/" style="font-size: 10px;">Arch</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/Manjaro/" style="font-size: 10px;">Manjaro</a> <a href="/tags/Margin-Call/" style="font-size: 10px;">Margin Call</a> <a href="/tags/Office/" style="font-size: 10px;">Office</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 15px;">SVG</a> <a href="/tags/Shell/" style="font-size: 10px;">Shell</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/Word/" style="font-size: 10px;">Word</a> <a href="/tags/bash/" style="font-size: 20px;">bash</a> <a href="/tags/csh/" style="font-size: 20px;">csh</a> <a href="/tags/faradays/" style="font-size: 10px;">faradays</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/pacman/" style="font-size: 10px;">pacman</a> <a href="/tags/printf/" style="font-size: 10px;">printf</a> <a href="/tags/shell/" style="font-size: 20px;">shell</a> <a href="/tags/%E4%BD%A0%E5%A5%BD/" style="font-size: 10px;">你好</a> <a href="/tags/%E5%88%86%E6%A0%8F/" style="font-size: 10px;">分栏</a> <a href="/tags/%E5%88%86%E9%9A%94%E7%AC%A6/" style="font-size: 10px;">分隔符</a> <a href="/tags/%E5%88%A4%E6%96%AD/" style="font-size: 15px;">判断</a> <a href="/tags/%E5%8F%98%E9%87%8F/" style="font-size: 10px;">变量</a> <a href="/tags/%E5%95%86%E6%B5%B7%E9%80%9A%E7%89%92/" style="font-size: 10px;">商海通牒</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E5%BD%B1%E8%AF%84/" style="font-size: 10px;">影评</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 15px;">日志</a> <a href="/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/" style="font-size: 10px;">格式化</a> <a href="/tags/%E8%84%9A%E6%B3%A8/" style="font-size: 10px;">脚注</a> <a href="/tags/%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 15px;">表达式</a> <a href="/tags/%E8%AE%BA%E6%96%87/" style="font-size: 10px;">论文</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 20px;">语法</a> <a href="/tags/%E8%BF%BD%E6%B1%82%E5%8D%93%E8%B6%8A/" style="font-size: 10px;">追求卓越</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -1022,7 +859,7 @@ git log --oneline</code></pre>
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/2020/" style="font-size: 10px;">2020</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/Margin-Call/" style="font-size: 10px;">Margin Call</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 15px;">SVG</a> <a href="/tags/Shell/" style="font-size: 10px;">Shell</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/printf/" style="font-size: 10px;">printf</a> <a href="/tags/%E5%95%86%E6%B5%B7%E9%80%9A%E7%89%92/" style="font-size: 10px;">商海通牒</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E5%BD%B1%E8%AF%84/" style="font-size: 10px;">影评</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a> <a href="/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/" style="font-size: 10px;">格式化</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
+            <a href="/tags/2020/" style="font-size: 10px;">2020</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/Arch/" style="font-size: 10px;">Arch</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/Manjaro/" style="font-size: 10px;">Manjaro</a> <a href="/tags/Margin-Call/" style="font-size: 10px;">Margin Call</a> <a href="/tags/Office/" style="font-size: 10px;">Office</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 15px;">SVG</a> <a href="/tags/Shell/" style="font-size: 10px;">Shell</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/Word/" style="font-size: 10px;">Word</a> <a href="/tags/bash/" style="font-size: 20px;">bash</a> <a href="/tags/csh/" style="font-size: 20px;">csh</a> <a href="/tags/faradays/" style="font-size: 10px;">faradays</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/pacman/" style="font-size: 10px;">pacman</a> <a href="/tags/printf/" style="font-size: 10px;">printf</a> <a href="/tags/shell/" style="font-size: 20px;">shell</a> <a href="/tags/%E4%BD%A0%E5%A5%BD/" style="font-size: 10px;">你好</a> <a href="/tags/%E5%88%86%E6%A0%8F/" style="font-size: 10px;">分栏</a> <a href="/tags/%E5%88%86%E9%9A%94%E7%AC%A6/" style="font-size: 10px;">分隔符</a> <a href="/tags/%E5%88%A4%E6%96%AD/" style="font-size: 15px;">判断</a> <a href="/tags/%E5%8F%98%E9%87%8F/" style="font-size: 10px;">变量</a> <a href="/tags/%E5%95%86%E6%B5%B7%E9%80%9A%E7%89%92/" style="font-size: 10px;">商海通牒</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E5%BD%B1%E8%AF%84/" style="font-size: 10px;">影评</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 15px;">日志</a> <a href="/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/" style="font-size: 10px;">格式化</a> <a href="/tags/%E8%84%9A%E6%B3%A8/" style="font-size: 10px;">脚注</a> <a href="/tags/%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 15px;">表达式</a> <a href="/tags/%E8%AE%BA%E6%96%87/" style="font-size: 10px;">论文</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 20px;">语法</a> <a href="/tags/%E8%BF%BD%E6%B1%82%E5%8D%93%E8%B6%8A/" style="font-size: 10px;">追求卓越</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
         </div>
     </div>
 
@@ -1284,6 +1121,30 @@ function switchBackground(type_1){
 <script>
 
 var today_1 = new Date();
+
+
+
+var day0 = today_1.toLocaleDateString().replace(/-/g,"").replace(/\//g,"");
+var day_start = 20210208;
+//console.log(day_start);
+var day_end = 20210217;
+//console.log(day_end);
+var banner1 = "";
+//console.log(banner1);
+var banner2 = "伟大的中华人民共和国万岁！伟大的中国共产党万岁！伟大的中国人民万岁！";
+//console.log(banner2);
+// test!="" && test!=null && test!=undefined
+var dv1 = document.getElementById("banner_x");
+if ( banner1 == "" ) {
+    if ( banner2 != ""  &&  day_start <= day0  &&  day_end >= day0 ) {
+        //console.log(dv1.innerHTML);
+        dv1.innerHTML = banner2;
+        //console.log(dv1.innerHTML);
+    } else {
+        dv1.style.display = "none";
+        //console.log("hide!\n");
+    }
+}
 </script>
 
   

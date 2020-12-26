@@ -69,10 +69,15 @@ window.onload = function () {
   
 	<script>
 	var _hmt = _hmt || [];
+	var hmt_site = window.location.host;
 	(function() {
 	  var hm = document.createElement("script");
-	  hm.src = "//hm.baidu.com/hm.js?83a082b3997bdb4ac31a097af3ea3ea9";
-	  var s = document.getElementsByTagName("script")[0]; 
+	  if ( hmt_site.indexOf("gitee") != -1) {
+        hm.src = "//hm.baidu.com/hm.js?83a082b3997bdb4ac31a097af3ea3ea9";
+	  } else {
+        hm.src = "//hm.baidu.com/hm.js?dae0d921cd647933e274acc38340fe61";
+	  }
+	  var s = document.getElementsByTagName("script")[0];
 	  s.parentNode.insertBefore(hm, s);
 	})();
 	</script>
@@ -182,13 +187,13 @@ window.onload = function () {
 
             <div class="categories2" style="margin:0 auto">
                 
-                <a class="category-link" href="/categories/English/">English</a><a class="category-link" href="/categories/Faradays-Studio/">Faradays' Studio</a><a class="category-link" href="/categories/%E5%9D%90%E4%BA%95%E8%A7%82%E5%A4%A9/">坐井观天</a><a class="category-link" href="/categories/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">开发笔记</a><a class="category-link" href="/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/">电脑爱好者</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/">编程笔记</a><a class="category-link" href="/categories/%E9%9A%8F%E6%83%B3%E5%BD%95/">随想录</a>
+                <a class="category-link" href="/categories/English/">English</a><a class="category-link" href="/categories/%E5%9D%90%E4%BA%95%E8%A7%82%E5%A4%A9/">坐井观天</a><a class="category-link" href="/categories/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">开发笔记</a><a class="category-link" href="/categories/%E6%98%9F%E6%98%9F%E5%BF%83%E4%BA%8B/">星星心事</a><a class="category-link" href="/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/">电脑爱好者</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/">编程笔记</a>
             </div>
 
             <div class="tags2">
                 
-                <!-- <a href="/tags/2020/" style="font-size: 13px;">2020</a> <a href="/tags/Apple/" style="font-size: 13px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 13px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 13px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 13px;">Macbook</a> <a href="/tags/Margin-Call/" style="font-size: 13px;">Margin Call</a> <a href="/tags/PE/" style="font-size: 13px;">PE</a> <a href="/tags/SVG/" style="font-size: 13px;">SVG</a> <a href="/tags/Shell/" style="font-size: 13px;">Shell</a> <a href="/tags/U%E7%9B%98/" style="font-size: 13px;">U盘</a> <a href="/tags/Windows/" style="font-size: 13px;">Windows</a> <a href="/tags/jQuery/" style="font-size: 13px;">jQuery</a> <a href="/tags/printf/" style="font-size: 13px;">printf</a> <a href="/tags/%E5%95%86%E6%B5%B7%E9%80%9A%E7%89%92/" style="font-size: 13px;">商海通牒</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 13px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 13px;">密码</a> <a href="/tags/%E5%BD%B1%E8%AF%84/" style="font-size: 13px;">影评</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 13px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 13px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 13px;">日志</a> <a href="/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/" style="font-size: 13px;">格式化</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 13px;">随笔</a>  -->
-                <!-- <a href="/tags/JavaScript/" style="font-size: 13px; color: #f00">JavaScript</a> <a href="/tags/SVG/" style="font-size: 13px; color: #cc0080">SVG</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 13px; color: #90f">日志</a> <a href="/tags/Windows/" style="font-size: 13px; color: #90f">Windows</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 13px; color: #90f">批处理</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 13px; color: #90f">字符运算</a> <a href="/tags/Apple/" style="font-size: 13px; color: #90f">Apple</a> <a href="/tags/Macbook/" style="font-size: 13px; color: #90f">Macbook</a> <a href="/tags/MacOS/" style="font-size: 13px; color: #90f">MacOS</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 13px; color: #90f">密码</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 13px; color: #90f">操作系统</a> <a href="/tags/PE/" style="font-size: 13px; color: #90f">PE</a> <a href="/tags/U%E7%9B%98/" style="font-size: 13px; color: #90f">U盘</a> <a href="/tags/2020/" style="font-size: 13px; color: #90f">2020</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 13px; color: #90f">随笔</a> <a href="/tags/Shell/" style="font-size: 13px; color: #90f">Shell</a> <a href="/tags/printf/" style="font-size: 13px; color: #90f">printf</a> <a href="/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/" style="font-size: 13px; color: #90f">格式化</a> <a href="/tags/%E5%BD%B1%E8%AF%84/" style="font-size: 13px; color: #90f">影评</a> <a href="/tags/Margin-Call/" style="font-size: 13px; color: #90f">Margin Call</a> <a href="/tags/%E5%95%86%E6%B5%B7%E9%80%9A%E7%89%92/" style="font-size: 13px; color: #90f">商海通牒</a> <a href="/tags/jQuery/" style="font-size: 13px; color: #90f">jQuery</a> -->
+                <!-- <a href="/tags/2020/" style="font-size: 13px;">2020</a> <a href="/tags/Apple/" style="font-size: 13px;">Apple</a> <a href="/tags/Arch/" style="font-size: 13px;">Arch</a> <a href="/tags/JavaScript/" style="font-size: 13px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 13px;">Linux</a> <a href="/tags/MacOS/" style="font-size: 13px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 13px;">Macbook</a> <a href="/tags/Manjaro/" style="font-size: 13px;">Manjaro</a> <a href="/tags/Margin-Call/" style="font-size: 13px;">Margin Call</a> <a href="/tags/Office/" style="font-size: 13px;">Office</a> <a href="/tags/PE/" style="font-size: 13px;">PE</a> <a href="/tags/SVG/" style="font-size: 13px;">SVG</a> <a href="/tags/Shell/" style="font-size: 13px;">Shell</a> <a href="/tags/U%E7%9B%98/" style="font-size: 13px;">U盘</a> <a href="/tags/Windows/" style="font-size: 13px;">Windows</a> <a href="/tags/Word/" style="font-size: 13px;">Word</a> <a href="/tags/bash/" style="font-size: 13px;">bash</a> <a href="/tags/csh/" style="font-size: 13px;">csh</a> <a href="/tags/faradays/" style="font-size: 13px;">faradays</a> <a href="/tags/git/" style="font-size: 13px;">git</a> <a href="/tags/hexo/" style="font-size: 13px;">hexo</a> <a href="/tags/jQuery/" style="font-size: 13px;">jQuery</a> <a href="/tags/pacman/" style="font-size: 13px;">pacman</a> <a href="/tags/printf/" style="font-size: 13px;">printf</a> <a href="/tags/shell/" style="font-size: 13px;">shell</a> <a href="/tags/%E4%BD%A0%E5%A5%BD/" style="font-size: 13px;">你好</a> <a href="/tags/%E5%88%86%E6%A0%8F/" style="font-size: 13px;">分栏</a> <a href="/tags/%E5%88%86%E9%9A%94%E7%AC%A6/" style="font-size: 13px;">分隔符</a> <a href="/tags/%E5%88%A4%E6%96%AD/" style="font-size: 13px;">判断</a> <a href="/tags/%E5%8F%98%E9%87%8F/" style="font-size: 13px;">变量</a> <a href="/tags/%E5%95%86%E6%B5%B7%E9%80%9A%E7%89%92/" style="font-size: 13px;">商海通牒</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 13px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 13px;">密码</a> <a href="/tags/%E5%BD%B1%E8%AF%84/" style="font-size: 13px;">影评</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 13px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 13px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 13px;">日志</a> <a href="/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/" style="font-size: 13px;">格式化</a> <a href="/tags/%E8%84%9A%E6%B3%A8/" style="font-size: 13px;">脚注</a> <a href="/tags/%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 13px;">表达式</a> <a href="/tags/%E8%AE%BA%E6%96%87/" style="font-size: 13px;">论文</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 13px;">语法</a> <a href="/tags/%E8%BF%BD%E6%B1%82%E5%8D%93%E8%B6%8A/" style="font-size: 13px;">追求卓越</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 13px;">随笔</a>  -->
+                <!-- <a href="/tags/JavaScript/" style="font-size: 13px; color: #f00">JavaScript</a> <a href="/tags/SVG/" style="font-size: 13px; color: #cc0080">SVG</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 13px; color: #cc0080">日志</a> <a href="/tags/%E4%BD%A0%E5%A5%BD/" style="font-size: 13px; color: #90f">你好</a> <a href="/tags/%E8%BF%BD%E6%B1%82%E5%8D%93%E8%B6%8A/" style="font-size: 13px; color: #90f">追求卓越</a> <a href="/tags/Windows/" style="font-size: 13px; color: #90f">Windows</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 13px; color: #90f">批处理</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 13px; color: #90f">字符运算</a> <a href="/tags/git/" style="font-size: 13px; color: #90f">git</a> <a href="/tags/hexo/" style="font-size: 13px; color: #90f">hexo</a> <a href="/tags/faradays/" style="font-size: 13px; color: #90f">faradays</a> <a href="/tags/Apple/" style="font-size: 13px; color: #90f">Apple</a> <a href="/tags/Macbook/" style="font-size: 13px; color: #90f">Macbook</a> <a href="/tags/MacOS/" style="font-size: 13px; color: #90f">MacOS</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 13px; color: #90f">密码</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 13px; color: #90f">操作系统</a> <a href="/tags/PE/" style="font-size: 13px; color: #90f">PE</a> <a href="/tags/U%E7%9B%98/" style="font-size: 13px; color: #90f">U盘</a> <a href="/tags/2020/" style="font-size: 13px; color: #90f">2020</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 13px; color: #90f">随笔</a> <a href="/tags/Shell/" style="font-size: 13px; color: #90f">Shell</a> <a href="/tags/printf/" style="font-size: 13px; color: #90f">printf</a> <a href="/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/" style="font-size: 13px; color: #90f">格式化</a> <a href="/tags/%E5%BD%B1%E8%AF%84/" style="font-size: 13px; color: #90f">影评</a> <a href="/tags/Margin-Call/" style="font-size: 13px; color: #90f">Margin Call</a> <a href="/tags/%E5%95%86%E6%B5%B7%E9%80%9A%E7%89%92/" style="font-size: 13px; color: #90f">商海通牒</a> <a href="/tags/jQuery/" style="font-size: 13px; color: #90f">jQuery</a> <a href="/tags/Arch/" style="font-size: 13px; color: #90f">Arch</a> <a href="/tags/Manjaro/" style="font-size: 13px; color: #90f">Manjaro</a> <a href="/tags/pacman/" style="font-size: 13px; color: #90f">pacman</a> <a href="/tags/Linux/" style="font-size: 13px; color: #90f">Linux</a> <a href="/tags/csh/" style="font-size: 13px; color: #f00">csh</a> <a href="/tags/bash/" style="font-size: 13px; color: #f00">bash</a> <a href="/tags/shell/" style="font-size: 13px; color: #f00">shell</a> <a href="/tags/%E5%8F%98%E9%87%8F/" style="font-size: 13px; color: #90f">变量</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 13px; color: #f00">语法</a> <a href="/tags/Word/" style="font-size: 13px; color: #90f">Word</a> <a href="/tags/Office/" style="font-size: 13px; color: #90f">Office</a> <a href="/tags/%E8%84%9A%E6%B3%A8/" style="font-size: 13px; color: #90f">脚注</a> <a href="/tags/%E8%AE%BA%E6%96%87/" style="font-size: 13px; color: #90f">论文</a> <a href="/tags/%E5%88%86%E6%A0%8F/" style="font-size: 13px; color: #90f">分栏</a> <a href="/tags/%E5%88%86%E9%9A%94%E7%AC%A6/" style="font-size: 13px; color: #90f">分隔符</a> <a href="/tags/%E5%88%A4%E6%96%AD/" style="font-size: 13px; color: #cc0080">判断</a> <a href="/tags/%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 13px; color: #cc0080">表达式</a> -->
             </div>
         </div>
 
@@ -259,7 +264,425 @@ window.onload = function () {
 
 
     
-    <div class="article-header-num">10</div>
+    <div class="article-header-num">16</div>
+
+    <article id="post-csh与bash的基础语法对照-循环" class="article-index" itemscope itemprop="blogPost">
+
+        <div class="article-inner">
+          
+            <header class="article-header">
+              
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/202012261733/"  >
+      csh 、 bash 的基础语法对照：循环表达式（未完待续）
+      </a>
+    </h1>
+  
+
+
+                
+                    <span class="header-cate">
+                      <i class="fa fa-map-marker"></i>
+                        
+                        <a href="/categories/编程笔记/">编程笔记</a>
+                        
+                    </span>
+                
+            </header>
+          
+
+          
+          <div class="article-entry" itemprop="articleBody">
+            
+              
+              <div class="article-feed">
+                  <p>
+                  <a href="/202012261733/"  style="text-decoration: none;" >
+                      while、foreach 循环的用法
+
+
+项目
+bash
+csh
+
+
+
+while
+
+while(expression)  commands  continue  breakend
+
+
+foreach
+
+foreach var (wordlist) commandsend
+
+
+姊妹篇
+csh 、 bash 的基础语法对照：变量
+
+csh 、 bash 的基础语法对照：判断表达式
+
+csh 、 bash 的基础语法对照：循环表达式
+
+
+
+                  </a>
+                  </p>
+              </div>
+            
+          </div>
+
+        <footer class="article-footer">
+            <ul class="article-footer-menu" style="margin-top:10px;">
+                <li><i class="fa fa-calendar"></i>2020-12-26</li>
+                
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/csh/" class="color4">csh</a>
+      
+    <a href="/tags/bash/" class="color5">bash</a>
+      
+    <a href="/tags/shell/" class="color1">shell</a>
+      
+    <a href="/tags/语法/" class="color3">语法</a>
+      
+    <a href="/tags/判断/" class="color3">判断</a>
+      
+    <a href="/tags/表达式/" class="color4">表达式</a>
+      
+  </li>
+
+            </ul>
+            <a href="/202012261733/#more" class="article-more-link" >more&gt;&gt;</a>
+        </footer>
+        </div>
+    </article>
+
+    
+    <div class="article-header-num">15</div>
+
+    <article id="post-csh与bash的基础语法对照_判断表达式" class="article-index" itemscope itemprop="blogPost">
+
+        <div class="article-inner">
+          
+            <header class="article-header">
+              
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/202012261636/"  >
+      csh 、 bash 的基础语法对照：判断表达式
+      </a>
+    </h1>
+  
+
+
+                
+                    <span class="header-cate">
+                      <i class="fa fa-map-marker"></i>
+                        
+                        <a href="/categories/编程笔记/">编程笔记</a>
+                        
+                    </span>
+                
+            </header>
+          
+
+          
+          <div class="article-entry" itemprop="articleBody">
+            
+              
+              <div class="article-feed">
+                  <p>
+                  <a href="/202012261636/"  style="text-decoration: none;" >
+                      判断表达式使用 test 进行文件、字符串、整数、正则判断
+test 基本用法
+
+test 判断的公式# 写法一 (不支持正则判断)
+test expression
+
+# 写法二(不支持正则判断)
+[ expression ]
+
+# 写法三 (支持正则判断)
+[[ expression ]]
+
+
+
+
+文件判断
+
+[ -a file ]：如果 file 存在，则为true。
+[ -b file ]：如果 file 存在并且是一个块（设备）文件，则为true。
+[ -c file ]：如果 file 存在并且...
+                  </a>
+                  </p>
+              </div>
+            
+          </div>
+
+        <footer class="article-footer">
+            <ul class="article-footer-menu" style="margin-top:10px;">
+                <li><i class="fa fa-calendar"></i>2020-12-26</li>
+                
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/csh/" class="color4">csh</a>
+      
+    <a href="/tags/bash/" class="color5">bash</a>
+      
+    <a href="/tags/shell/" class="color1">shell</a>
+      
+    <a href="/tags/语法/" class="color3">语法</a>
+      
+    <a href="/tags/判断/" class="color3">判断</a>
+      
+    <a href="/tags/表达式/" class="color4">表达式</a>
+      
+  </li>
+
+            </ul>
+            <a href="/202012261636/#more" class="article-more-link" >more&gt;&gt;</a>
+        </footer>
+        </div>
+    </article>
+
+    
+    <div class="article-header-num">14</div>
+
+    <article id="post-Word2016脚注格式的自定义方法" class="article-index" itemscope itemprop="blogPost">
+
+        <div class="article-inner">
+          
+            <header class="article-header">
+              
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/202012261300/"  >
+      Word 2016 脚注格式问题的处理
+      </a>
+    </h1>
+  
+
+
+                
+                    <span class="header-cate">
+                      <i class="fa fa-map-marker"></i>
+                        
+                        <a href="/categories/电脑爱好者/">电脑爱好者</a>
+                        
+                    </span>
+                
+            </header>
+          
+
+          
+          <div class="article-entry" itemprop="articleBody">
+            
+              
+              <div class="article-feed">
+                  <p>
+                  <a href="/202012261300/"  style="text-decoration: none;" >
+                      
+乖乖，这几天在 CNKI、VIP和万方上看论文，有几个比较熟悉的同事，不知不觉下就发了十多篇论文了。吓死宝宝，赶紧将 2 年前的未发表的论文拿出来修改。
+
+在修改论文的过程中，居然遇到了两个奇怪的问题，捣腾了好久才给解决了。以下总结一下操作方法：
+分栏内容从下一页起排版的问题
+论文分栏居然从下一页开始，果断不能忍！！！刚开始的时候，我以为是存在隐藏的分页符，来回删除、重新插入，无法解决；然后以为是分栏操作方法不对，来回修改各种分栏方式以及插入方式，均无法解决。偶然间，不小心删除脚注后，分页正常了；这一下...
+                  </a>
+                  </p>
+              </div>
+            
+          </div>
+
+        <footer class="article-footer">
+            <ul class="article-footer-menu" style="margin-top:10px;">
+                <li><i class="fa fa-calendar"></i>2020-12-26</li>
+                
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/Word/" class="color5">Word</a>
+      
+    <a href="/tags/Office/" class="color2">Office</a>
+      
+    <a href="/tags/脚注/" class="color3">脚注</a>
+      
+    <a href="/tags/论文/" class="color3">论文</a>
+      
+    <a href="/tags/分栏/" class="color3">分栏</a>
+      
+    <a href="/tags/分隔符/" class="color4">分隔符</a>
+      
+  </li>
+
+            </ul>
+            <a href="/202012261300/#more" class="article-more-link" >more&gt;&gt;</a>
+        </footer>
+        </div>
+    </article>
+
+    
+    <div class="article-header-num">13</div>
+
+    <article id="post-csh与bash的基础语法对照_变量" class="article-index" itemscope itemprop="blogPost">
+
+        <div class="article-inner">
+          
+            <header class="article-header">
+              
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/202012201125/"  >
+      csh 、 bash 的基础语法对照：变量
+      </a>
+    </h1>
+  
+
+
+                
+                    <span class="header-cate">
+                      <i class="fa fa-map-marker"></i>
+                        
+                        <a href="/categories/编程笔记/">编程笔记</a>
+                        
+                    </span>
+                
+            </header>
+          
+
+          
+          <div class="article-entry" itemprop="articleBody">
+            
+              
+              <div class="article-feed">
+                  <p>
+                  <a href="/202012201125/"  style="text-decoration: none;" >
+                      bash是现在很多Linux的发行版中默认的shell，它来自于 BSD Unix，语法非常类似于C语言，所以通常有 C/C++ 编程背景的开发人员最喜欢使用。不过我在工作中，一个主要系统的默认 shell 却是 csh 。因此我总结一下两种 shell 的语法特点。
+变量用户变量
+
+
+项目
+bash
+csh
+
+
+
+变量定义
+var 变量名称=&quot;变量Value&quot;
+set var
+
+
+变量引用
+$var$&#123;var&#125;
+$var$&#123;var&#125;
+
+
+内置用...
+                  </a>
+                  </p>
+              </div>
+            
+          </div>
+
+        <footer class="article-footer">
+            <ul class="article-footer-menu" style="margin-top:10px;">
+                <li><i class="fa fa-calendar"></i>2020-12-20</li>
+                
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/csh/" class="color4">csh</a>
+      
+    <a href="/tags/bash/" class="color5">bash</a>
+      
+    <a href="/tags/shell/" class="color1">shell</a>
+      
+    <a href="/tags/变量/" class="color3">变量</a>
+      
+    <a href="/tags/语法/" class="color3">语法</a>
+      
+  </li>
+
+            </ul>
+            <a href="/202012201125/#more" class="article-more-link" >more&gt;&gt;</a>
+        </footer>
+        </div>
+    </article>
+
+    
+    <div class="article-header-num">12</div>
+
+    <article id="post-Arch系Linux系统pacman用法概述" class="article-index" itemscope itemprop="blogPost">
+
+        <div class="article-inner">
+          
+            <header class="article-header">
+              
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/202011221004/"  >
+      pacman 包管理器的用法概述
+      </a>
+    </h1>
+  
+
+
+                
+                    <span class="header-cate">
+                      <i class="fa fa-map-marker"></i>
+                        
+                        <a href="/categories/电脑爱好者/">电脑爱好者</a>
+                        
+                    </span>
+                
+            </header>
+          
+
+          
+          <div class="article-entry" itemprop="articleBody">
+            
+              
+              <div class="article-feed">
+                  <p>
+                  <a href="/202011221004/"  style="text-decoration: none;" >
+                      pacman 是 Arch/Manjaro Linux 下的包管理软件。它将一个简单的二进制包格式和易用的构建系统结合了起来。不管软件包是来自官方的 Arch 库还是用户自己创建， pacman 都能方便得管理。
+pacman 基本用法-h 查看帮助pacman &#123;-h --help&#125;
+-V 查看版本pacman &#123;-V --version&#125;
+-D 管理数据库选项pacman &#123;-D --database&#125;    &lt;选项&gt;     &...
+                  </a>
+                  </p>
+              </div>
+            
+          </div>
+
+        <footer class="article-footer">
+            <ul class="article-footer-menu" style="margin-top:10px;">
+                <li><i class="fa fa-calendar"></i>2020-11-22</li>
+                
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/Arch/" class="color5">Arch</a>
+      
+    <a href="/tags/Manjaro/" class="color3">Manjaro</a>
+      
+    <a href="/tags/pacman/" class="color2">pacman</a>
+      
+    <a href="/tags/Linux/" class="color1">Linux</a>
+      
+  </li>
+
+            </ul>
+            <a href="/202011221004/#more" class="article-more-link" >more&gt;&gt;</a>
+        </footer>
+        </div>
+    </article>
+
+    
+    <div class="article-header-num">11</div>
 
     <article id="post-jQuery用法总结" class="article-index" itemscope itemprop="blogPost">
 
@@ -333,7 +756,7 @@ Utilities
     </article>
 
     
-    <div class="article-header-num">9</div>
+    <div class="article-header-num">10</div>
 
     <article id="post-MarginCall影评-世界再无屠龙的少年" class="article-index" itemscope itemprop="blogPost">
 
@@ -401,7 +824,7 @@ Utilities
     </article>
 
     
-    <div class="article-header-num">8</div>
+    <div class="article-header-num">9</div>
 
     <article id="post-在Shell中使用printf格式化输出语句" class="article-index" itemscope itemprop="blogPost">
 
@@ -466,350 +889,6 @@ printf 不像 echo 那样会自动换行，必须显式添加换行符 `\n` 。�
         </div>
     </article>
 
-    
-    <div class="article-header-num">7</div>
-
-    <article id="post-2020年随笔" class="article-index" itemscope itemprop="blogPost">
-
-        <div class="article-inner">
-          
-            <header class="article-header">
-              
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/202009022111/"  >
-      2020年随笔
-      </a>
-    </h1>
-  
-
-
-                
-                    <span class="header-cate">
-                      <i class="fa fa-map-marker"></i>
-                        
-                        <a href="/categories/随想录/">随想录</a>
-                        
-                    </span>
-                
-            </header>
-          
-
-          
-          <div class="article-entry" itemprop="articleBody">
-            
-              
-              <div class="article-feed">
-                  <p>
-                  <a href="/202009022111/"  style="text-decoration: none;" >
-                      2020/09/02，明月
-  凌晨将寝，看见一轮明月从百叶窗的缝隙中漏了出来。江天一色无纤尘，皎皎空中孤月轮，我想起来了我的老父亲，突然好一阵心酸。
-  这世界就这一轮明月，父亲看到的明月，和我看到的是不是一样的呢？我无从得知，但是我知道他清澈的心底，应该也和这明月一样，明朗、简洁、孤独的挂在那里！我现在正在重构的 hexo 主题，是否也能和它一样明朗呢？
-
-2020/09/11，疲倦
-今天颇为疲倦，那是种种摧残对生活热爱的力量。
-生活无望的摧残有之。生活压力太大，家庭收入有限，总是有种种债务要还，明明...
-                  </a>
-                  </p>
-              </div>
-            
-          </div>
-
-        <footer class="article-footer">
-            <ul class="article-footer-menu" style="margin-top:10px;">
-                <li><i class="fa fa-calendar"></i>2020-09-02</li>
-                
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/2020/" class="color5">2020</a>
-      
-    <a href="/tags/随笔/" class="color3">随笔</a>
-      
-  </li>
-
-            </ul>
-            <a href="/202009022111/#more" class="article-more-link" >more&gt;&gt;</a>
-        </footer>
-        </div>
-    </article>
-
-    
-    <div class="article-header-num">6</div>
-
-    <article id="post-苹果MacbookPro笔记本U盘启动与重置开机密码的方法" class="article-index" itemscope itemprop="blogPost">
-
-        <div class="article-inner">
-          
-            <header class="article-header">
-              
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/202008272141/"  >
-      苹果 Macbook Pro 笔记本从 U 盘启动以及重置开机密码的方法
-      </a>
-    </h1>
-  
-
-
-                
-                    <span class="header-cate">
-                      <i class="fa fa-map-marker"></i>
-                        
-                        <a href="/categories/电脑爱好者/">电脑爱好者</a>
-                        
-                    </span>
-                
-            </header>
-          
-
-          
-          <div class="article-entry" itemprop="articleBody">
-            
-              
-              <div class="article-feed">
-                  <p>
-                  <a href="/202008272141/"  style="text-decoration: none;" >
-                      前几天，有位老领导委托我对其苹果 Macbook Pro 2018 笔记本进行优化处理。由于网上的资料比较零散、挂一漏万，因此我也来总结一下操作经验。
-配置 U盘启动或者切换系统的方法
-Macbook 没有 BISO 等设置，所谓的进入 U盘 PE 或者切换双系统的方法是：按住 Option 键，然后按电源键开机，那么就会出现一个类似于 Windows 启动项的界面，从而用于实现改变启动方式的效果。
-  
-
-
-
-苹果电脑安装 Windows 系统，一般都是通过 Boot Camp 等软件来实现。对于双系统...
-                  </a>
-                  </p>
-              </div>
-            
-          </div>
-
-        <footer class="article-footer">
-            <ul class="article-footer-menu" style="margin-top:10px;">
-                <li><i class="fa fa-calendar"></i>2020-08-27</li>
-                
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/Apple/" class="color1">Apple</a>
-      
-    <a href="/tags/Macbook/" class="color3">Macbook</a>
-      
-    <a href="/tags/MacOS/" class="color1">MacOS</a>
-      
-    <a href="/tags/密码/" class="color3">密码</a>
-      
-    <a href="/tags/操作系统/" class="color5">操作系统</a>
-      
-    <a href="/tags/PE/" class="color3">PE</a>
-      
-    <a href="/tags/U盘/" class="color3">U盘</a>
-      
-  </li>
-
-            </ul>
-            <a href="/202008272141/#more" class="article-more-link" >more&gt;&gt;</a>
-        </footer>
-        </div>
-    </article>
-
-    
-    <div class="article-header-num">5</div>
-
-    <article id="post-Windows批处理的字符运算经验" class="article-index" itemscope itemprop="blogPost">
-
-        <div class="article-inner">
-          
-            <header class="article-header">
-              
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/202008200927/"  >
-      Windows 批处理的字符运算（未完待续）
-      </a>
-    </h1>
-  
-
-
-                
-                    <span class="header-cate">
-                      <i class="fa fa-map-marker"></i>
-                        
-                        <a href="/categories/编程笔记/">编程笔记</a>
-                        
-                    </span>
-                
-            </header>
-          
-
-          
-          <div class="article-entry" itemprop="articleBody">
-            
-              
-              <div class="article-feed">
-                  <p>
-                  <a href="/202008200927/"  style="text-decoration: none;" >
-                      字符运算历来是编程中的重要内容，如何拼接字符，如何截取字符，如何判断字符是否存在，如何判断两个字符串是否相同，成为了编程任务中的重要环节。因此，我结合网络的资料和个人的实践经验来总结一下。
-Windows 批处理中字符的基本常识
-批处理中变量的赋值符号两侧不能包含空格，如 set str_date=&#39;20200820&#39;，这与很多编程规范是相悖的。
-
-批处理中的字符可以不添加双引号，但是如果包含空格的话，必须使用引号，，如 set str_name=&quot;20200820 Window...
-                  </a>
-                  </p>
-              </div>
-            
-          </div>
-
-        <footer class="article-footer">
-            <ul class="article-footer-menu" style="margin-top:10px;">
-                <li><i class="fa fa-calendar"></i>2020-08-20</li>
-                
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/Windows/" class="color3">Windows</a>
-      
-    <a href="/tags/批处理/" class="color4">批处理</a>
-      
-    <a href="/tags/字符运算/" class="color5">字符运算</a>
-      
-  </li>
-
-            </ul>
-            <a href="/202008200927/#more" class="article-more-link" >more&gt;&gt;</a>
-        </footer>
-        </div>
-    </article>
-
-    
-    <div class="article-header-num">4</div>
-
-    <article id="post-世界，你好" class="article-index" itemscope itemprop="blogPost">
-
-        <div class="article-inner">
-          
-            <header class="article-header">
-              
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/202008090000/"  >
-      Hello World（世界，你好）
-      </a>
-    </h1>
-  
-
-
-                
-                    <span class="header-cate">
-                      <i class="fa fa-map-marker"></i>
-                        
-                        <a href="/categories/Faradays&#39;Studio/">Faradays' Studio</a>
-                        
-                    </span>
-                
-            </header>
-          
-
-          
-          <div class="article-entry" itemprop="articleBody">
-            
-              
-              <div class="article-feed">
-                  <p>
-                  <a href="/202008090000/"  style="text-decoration: none;" >
-                      追求卓越！
-
-                  </a>
-                  </p>
-              </div>
-            
-          </div>
-
-        <footer class="article-footer">
-            <ul class="article-footer-menu" style="margin-top:10px;">
-                <li><i class="fa fa-calendar"></i>2020-08-09</li>
-                
-            </ul>
-            <a href="/202008090000/#more" class="article-more-link" >more&gt;&gt;</a>
-        </footer>
-        </div>
-    </article>
-
-    
-    <div class="article-header-num">3</div>
-
-    <article id="post-chang-log" class="article-index" itemscope itemprop="blogPost">
-
-        <div class="article-inner">
-          
-            <header class="article-header">
-              
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/202006071600/"  >
-      网站框架更新概要
-      </a>
-    </h1>
-  
-
-
-                
-                    <span class="header-cate">
-                      <i class="fa fa-map-marker"></i>
-                        
-                        <a href="/categories/开发笔记/">开发笔记</a>
-                        
-                    </span>
-                
-            </header>
-          
-
-          
-          <div class="article-entry" itemprop="articleBody">
-            
-              
-              <div class="article-feed">
-                  <p>
-                  <a href="/202006071600/"  style="text-decoration: none;" >
-                      TO-DO
-配置评论系统，实现文章留言；；
-
-解决链接跳转错误问题（累经数月间歇性反复测试，初步认为为编译时不支持 ? 符号的使用）；
-
-夜间模式；
-
-
-系统更新日志
-2020/04/19 16:02:08，创建《更新日志》；
-
-2020/04/19 21:47:44，整合原有静态网站，并入站点中跳转。
-
-2020/04/22 0:54:40，修改 URL 设置，修改《如何使用 svg.js 创建 svg 文档》文章内容为中文。
-
-2020/04/22 21:50:16，参考网友方法，纠正网页点击时变成了...
-                  </a>
-                  </p>
-              </div>
-            
-          </div>
-
-        <footer class="article-footer">
-            <ul class="article-footer-menu" style="margin-top:10px;">
-                <li><i class="fa fa-calendar"></i>2020-06-07</li>
-                
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/日志/" class="color3">日志</a>
-      
-  </li>
-
-            </ul>
-            <a href="/202006071600/#more" class="article-more-link" >more&gt;&gt;</a>
-        </footer>
-        </div>
-    </article>
-
 
 
   <nav id="page-nav">
@@ -855,7 +934,7 @@ Windows 批处理中字符的基本常识
     </span>
 
     
-    &emsp;总文本数：<span class="post-count">12.5k</span>
+    &emsp;总文本数：<span class="post-count">18.8k</span>
 </p>
 
 
@@ -927,10 +1006,10 @@ Windows 批处理中字符的基本常识
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/English/">English</a><a class="category-link" href="/categories/Faradays-Studio/">Faradays' Studio</a><a class="category-link" href="/categories/%E5%9D%90%E4%BA%95%E8%A7%82%E5%A4%A9/">坐井观天</a><a class="category-link" href="/categories/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">开发笔记</a><a class="category-link" href="/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/">电脑爱好者</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/">编程笔记</a><a class="category-link" href="/categories/%E9%9A%8F%E6%83%B3%E5%BD%95/">随想录</a>
+            <a class="category-link" href="/categories/English/">English</a><a class="category-link" href="/categories/%E5%9D%90%E4%BA%95%E8%A7%82%E5%A4%A9/">坐井观天</a><a class="category-link" href="/categories/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">开发笔记</a><a class="category-link" href="/categories/%E6%98%9F%E6%98%9F%E5%BF%83%E4%BA%8B/">星星心事</a><a class="category-link" href="/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/">电脑爱好者</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/">编程笔记</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/2020/" style="font-size: 10px;">2020</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/Margin-Call/" style="font-size: 10px;">Margin Call</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 15px;">SVG</a> <a href="/tags/Shell/" style="font-size: 10px;">Shell</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/printf/" style="font-size: 10px;">printf</a> <a href="/tags/%E5%95%86%E6%B5%B7%E9%80%9A%E7%89%92/" style="font-size: 10px;">商海通牒</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E5%BD%B1%E8%AF%84/" style="font-size: 10px;">影评</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a> <a href="/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/" style="font-size: 10px;">格式化</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
+            <a href="/tags/2020/" style="font-size: 10px;">2020</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/Arch/" style="font-size: 10px;">Arch</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/Manjaro/" style="font-size: 10px;">Manjaro</a> <a href="/tags/Margin-Call/" style="font-size: 10px;">Margin Call</a> <a href="/tags/Office/" style="font-size: 10px;">Office</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 15px;">SVG</a> <a href="/tags/Shell/" style="font-size: 10px;">Shell</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/Word/" style="font-size: 10px;">Word</a> <a href="/tags/bash/" style="font-size: 20px;">bash</a> <a href="/tags/csh/" style="font-size: 20px;">csh</a> <a href="/tags/faradays/" style="font-size: 10px;">faradays</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/pacman/" style="font-size: 10px;">pacman</a> <a href="/tags/printf/" style="font-size: 10px;">printf</a> <a href="/tags/shell/" style="font-size: 20px;">shell</a> <a href="/tags/%E4%BD%A0%E5%A5%BD/" style="font-size: 10px;">你好</a> <a href="/tags/%E5%88%86%E6%A0%8F/" style="font-size: 10px;">分栏</a> <a href="/tags/%E5%88%86%E9%9A%94%E7%AC%A6/" style="font-size: 10px;">分隔符</a> <a href="/tags/%E5%88%A4%E6%96%AD/" style="font-size: 15px;">判断</a> <a href="/tags/%E5%8F%98%E9%87%8F/" style="font-size: 10px;">变量</a> <a href="/tags/%E5%95%86%E6%B5%B7%E9%80%9A%E7%89%92/" style="font-size: 10px;">商海通牒</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E5%BD%B1%E8%AF%84/" style="font-size: 10px;">影评</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 15px;">日志</a> <a href="/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/" style="font-size: 10px;">格式化</a> <a href="/tags/%E8%84%9A%E6%B3%A8/" style="font-size: 10px;">脚注</a> <a href="/tags/%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 15px;">表达式</a> <a href="/tags/%E8%AE%BA%E6%96%87/" style="font-size: 10px;">论文</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 20px;">语法</a> <a href="/tags/%E8%BF%BD%E6%B1%82%E5%8D%93%E8%B6%8A/" style="font-size: 10px;">追求卓越</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -975,7 +1054,7 @@ Windows 批处理中字符的基本常识
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/2020/" style="font-size: 10px;">2020</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/Margin-Call/" style="font-size: 10px;">Margin Call</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 15px;">SVG</a> <a href="/tags/Shell/" style="font-size: 10px;">Shell</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/printf/" style="font-size: 10px;">printf</a> <a href="/tags/%E5%95%86%E6%B5%B7%E9%80%9A%E7%89%92/" style="font-size: 10px;">商海通牒</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E5%BD%B1%E8%AF%84/" style="font-size: 10px;">影评</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 10px;">日志</a> <a href="/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/" style="font-size: 10px;">格式化</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
+            <a href="/tags/2020/" style="font-size: 10px;">2020</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/Arch/" style="font-size: 10px;">Arch</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/Manjaro/" style="font-size: 10px;">Manjaro</a> <a href="/tags/Margin-Call/" style="font-size: 10px;">Margin Call</a> <a href="/tags/Office/" style="font-size: 10px;">Office</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/SVG/" style="font-size: 15px;">SVG</a> <a href="/tags/Shell/" style="font-size: 10px;">Shell</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/Word/" style="font-size: 10px;">Word</a> <a href="/tags/bash/" style="font-size: 20px;">bash</a> <a href="/tags/csh/" style="font-size: 20px;">csh</a> <a href="/tags/faradays/" style="font-size: 10px;">faradays</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/pacman/" style="font-size: 10px;">pacman</a> <a href="/tags/printf/" style="font-size: 10px;">printf</a> <a href="/tags/shell/" style="font-size: 20px;">shell</a> <a href="/tags/%E4%BD%A0%E5%A5%BD/" style="font-size: 10px;">你好</a> <a href="/tags/%E5%88%86%E6%A0%8F/" style="font-size: 10px;">分栏</a> <a href="/tags/%E5%88%86%E9%9A%94%E7%AC%A6/" style="font-size: 10px;">分隔符</a> <a href="/tags/%E5%88%A4%E6%96%AD/" style="font-size: 15px;">判断</a> <a href="/tags/%E5%8F%98%E9%87%8F/" style="font-size: 10px;">变量</a> <a href="/tags/%E5%95%86%E6%B5%B7%E9%80%9A%E7%89%92/" style="font-size: 10px;">商海通牒</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E5%BD%B1%E8%AF%84/" style="font-size: 10px;">影评</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 10px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 15px;">日志</a> <a href="/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/" style="font-size: 10px;">格式化</a> <a href="/tags/%E8%84%9A%E6%B3%A8/" style="font-size: 10px;">脚注</a> <a href="/tags/%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 15px;">表达式</a> <a href="/tags/%E8%AE%BA%E6%96%87/" style="font-size: 10px;">论文</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 20px;">语法</a> <a href="/tags/%E8%BF%BD%E6%B1%82%E5%8D%93%E8%B6%8A/" style="font-size: 10px;">追求卓越</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
         </div>
     </div>
 
@@ -1230,6 +1309,30 @@ function switchBackground(type_1){
 <script>
 
 var today_1 = new Date();
+
+
+
+var day0 = today_1.toLocaleDateString().replace(/-/g,"").replace(/\//g,"");
+var day_start = 20210208;
+//console.log(day_start);
+var day_end = 20210217;
+//console.log(day_end);
+var banner1 = "";
+//console.log(banner1);
+var banner2 = "伟大的中华人民共和国万岁！伟大的中国共产党万岁！伟大的中国人民万岁！";
+//console.log(banner2);
+// test!="" && test!=null && test!=undefined
+var dv1 = document.getElementById("banner_x");
+if ( banner1 == "" ) {
+    if ( banner2 != ""  &&  day_start <= day0  &&  day_end >= day0 ) {
+        //console.log(dv1.innerHTML);
+        dv1.innerHTML = banner2;
+        //console.log(dv1.innerHTML);
+    } else {
+        dv1.style.display = "none";
+        //console.log("hide!\n");
+    }
+}
 </script>
 
   

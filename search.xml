@@ -101,24 +101,16 @@
       </tags>
   </entry>
   <entry>
-    <title>网站框架更新概要</title>
+    <title>Faradays&#39; Studio 站点更新概要</title>
     <url>/202006071600/</url>
-    <content><![CDATA[<h2 id="TO-DO"><a href="#TO-DO" class="headerlink" title="TO-DO"></a>TO-DO</h2><ol>
-<li><p><del>配置评论系统，实现文章留言；</del>；</p>
-</li>
-<li><p><del>解决链接跳转错误问题（累经数月间歇性反复测试，初步认为为编译时不支持 <strong>?</strong> 符号的使用）；</del></p>
-</li>
-<li><p><del>夜间模式；</del></p>
-</li>
-</ol>
-<h2 id="系统更新日志"><a href="#系统更新日志" class="headerlink" title="系统更新日志"></a>系统更新日志</h2><ol>
+    <content><![CDATA[<h2 id="系统更新日志"><a href="#系统更新日志" class="headerlink" title="系统更新日志"></a>系统更新日志</h2><ol>
 <li><p>2020/04/19 16:02:08，创建《更新日志》；</p>
 </li>
 <li><p>2020/04/19 21:47:44，整合原有静态网站，并入站点中跳转。</p>
 </li>
 <li><p>2020/04/22 0:54:40，修改 URL 设置，修改《如何使用 svg.js 创建 svg 文档》文章内容为中文。</p>
 </li>
-<li><p>2020/04/22 21:50:16，参考网友方法，纠正网页点击时变成了下载的 Bug，主要原因是 permalink 末尾没有添加 <code>/</code>符号，最终修改为 <code>permalink: :lang/:title/</code> 。</p>
+<li><p>2020/04/22 21:50:16，参考网友方法，纠正网页点击时变成了下载的 Bug，主要原因是 permalink 末尾没有添加 <code>/</code>符号（ <del>最终修改为 <code>permalink: :lang/:title/</code></del> ）。</p>
 </li>
 <li><p>2020/04/25 22:56:19，修改 post 模板增加封面默认页。</p>
 </li>
@@ -299,11 +291,18 @@
   <entry>
     <title>Hello World（世界，你好）</title>
     <url>/202008090000/</url>
-    <content><![CDATA[<p>追求卓越！</p>
+    <content><![CDATA[<p>世界，你好！我是一名低微到尘埃里的普通人，曾经幻想过成为一名科学家，为国家科技事业贡献力量，然后我并没有这样的超凡的智商；我成为了一名普通的工程师，我克服了很多很多的困难，在不同的岗位上也取得了一些成绩，然而，我的缺点和遇到的困难，仍然很多，有些时候，差点将我打倒了！</p>
+<p>同龄的同事，不少人获得了职务上的升迁，不少人获得了名誉上的进步，我也不想就这样放弃，不想放任自我，因此我也要在这里尝试发出我自己的声音，我要进步，我要追求卓越！</p>
+<p>世界，你好。社会，你好。我一直都很期盼见到明天的太阳，愿美好的生活终将来临！</p>
 ]]></content>
       <categories>
-        <category>Faradays&#39; Studio</category>
+        <category>星星心事</category>
       </categories>
+      <tags>
+        <tag>日志</tag>
+        <tag>你好</tag>
+        <tag>追求卓越</tag>
+      </tags>
   </entry>
   <entry>
     <title>Windows 批处理的字符运算（未完待续）</title>
@@ -381,6 +380,186 @@ pause</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>使用 Git 命令来管理 hexo 博客</title>
+    <url>/202008261600/</url>
+    <content><![CDATA[<h2 id="Git-命令集成"><a href="#Git-命令集成" class="headerlink" title="Git 命令集成"></a>Git 命令集成</h2><p><img src="/static/img/git.jpg" alt="Git基本使用方法示意图"></p>
+<ol>
+<li><p>测试 GitHub 可访问性</p>
+<blockquote>
+<p>ssh -T <a href="mailto:git@github.com">git@github.com</a></p>
+</blockquote>
+</li>
+<li><p>更新主分支（下载更新）</p>
+<blockquote>
+<p>D:   &amp;&amp;   D:\faradays-studio.github\faradays-studio.github.io   &amp;&amp;    git checkout</p>
+</blockquote>
+</li>
+<li><p>更新其他分支（下载更新）</p>
+<blockquote>
+<p>git checkout -b blog origin/blog<br>git checkout -t      origin/blog</p>
+</blockquote>
+</li>
+<li><p>提交到本地</p>
+<blockquote>
+<p>git commit -a -m u”pdate the website statement”</p>
+</blockquote>
+</li>
+<li><p>提交到GitHub</p>
+<blockquote>
+<p>git push origin master</p>
+</blockquote>
+</li>
+<li><p>基本用法说明</p>
+</li>
+</ol>
+<ul>
+<li><p>查看分支<br>  git branch -a<br>  git branch -v<br>  git branch -r</p>
+</li>
+<li><p>查看最近的 commit 信息<br>  git show HEAD</p>
+<pre><code>按 q 退出</code></pre></li>
+<li><p>git checkout -b &lt;分支名&gt;<br>  git checkout -b blog</p>
+</li>
+<li><p>从 服务器 下载更新到本地<br>  由于 hexo 更新后，本地会版本落后，因此需要更新<br>  git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;<br>  git pull origin master</p>
+<pre><code>或 git pull origin master:master</code></pre><p>  git pull origin blog:blog</p>
+</li>
+</ul>
+<h3 id="使用-git-管理主题的流程示意"><a href="#使用-git-管理主题的流程示意" class="headerlink" title="使用 git 管理主题的流程示意"></a>使用 git 管理主题的流程示意</h3><pre><code><pre><code class="hljs Shell"><span class="hljs-meta">#</span><span class="bash">克隆你fork出来的分支</span>
+<span class="hljs-meta">$</span><span class="bash">git <span class="hljs-built_in">clone</span> &lt;远程Arepository&gt;</span>
+
+<span class="hljs-meta">#</span><span class="bash">添加远程B repository标签</span>
+<span class="hljs-meta">$</span><span class="bash">git remote add &lt;远程B repository标签&gt; git@github.com:XXXX/ceph.git</span>
+
+<span class="hljs-meta">#</span><span class="bash">从远程Brepository的master分支拉取最新objects合并到本地master分支</span>
+<span class="hljs-meta">$</span><span class="bash">git pull &lt;远程B厂库标签&gt; master:master</span>
+
+<span class="hljs-meta">#</span><span class="bash">切换到要修改的分支上</span>
+<span class="hljs-meta">$</span><span class="bash">git checkout YYYY</span>
+
+<span class="hljs-meta">#</span><span class="bash">在当前分支的基础上创建一个开发分支，并切换到该分支上，你将在该分支上coding</span>
+<span class="hljs-meta">$</span><span class="bash">git branch develop; git checkout develop</span>
+
+<span class="hljs-meta">#</span><span class="bash">在工作区coding</span>
+coding...... 
+
+<span class="hljs-meta">#</span><span class="bash">将修改保存到索引区</span>
+<span class="hljs-meta">$</span><span class="bash">git add .</span>
+
+<span class="hljs-meta">#</span><span class="bash">将修改提交到本地分区</span>
+<span class="hljs-meta">$</span><span class="bash">git commit -a</span>
+
+<span class="hljs-meta">#</span><span class="bash">将本地分支my_test提交到远程A repository的my_test分支上</span>
+<span class="hljs-meta">$</span><span class="bash">git push origin my_test:my_test</span></code></pre></code></pre><h3 id="hexo-博客删除部分-commit-的操作实践"><a href="#hexo-博客删除部分-commit-的操作实践" class="headerlink" title="hexo 博客删除部分 commit 的操作实践"></a>hexo 博客删除部分 commit 的操作实践</h3><p>经过 2 天半的来回测试，终于删除了上传了隐藏文件 <code>hid*.html</code> 文件的提交。</p>
+<ol>
+<li><p>出现 <code>HEAD detached at 68e8065</code> 等错误的解决方法：</p>
+ <pre><code class="hljs Shell"><span class="hljs-meta">#</span><span class="bash"> 给 blog 起个 branch 名 blog_temp1</span>
+git branch blog_temp1 blog
+git branch -a
+<span class="hljs-meta">#</span><span class="bash"> Head 指向实际使用的 branch，注意不是 origin/blog</span>
+git checkout blog
+<span class="hljs-meta">#</span><span class="bash"> 融合到当前 branch</span>
+git merge blog_temp1
+    合并时存在问题，如果以本地为准 git  add，以服务器为准则 git  rm XXXX，然后 git commit
+    再重新执行合并
+<span class="hljs-meta">#</span><span class="bash"> 删除临时 branch</span>
+git branch -d blog_temp1</code></pre>
+</li>
+<li><p>删除特定 commit (# 由于 hexo 自身存在一个版本库，因此需要进行相应的处理)</p>
+ <pre><code class="hljs Shell">git log  
+git rebase -i XXX       # 将需要删除的最早的提交之前的一次提交做基础 
+    将相关 commit 记录中的 pick 改为 drop，保存即实现本地删除。
+git push origin blog -f    # 强制提交本地版本到远程（实现远程删除）
+git status       # 查看状态
+git log --oneline
+git pull origin blog:blog
+git log --oneline
+
+cd D:\WebSites\faradays-studio.hexo\.deploy_git
+执行上述过程，如出现 `HEAD detached ` 等报错，注意分支名称实际为 master，
+执行 hexo 同步至远程</code></pre>
+</li>
+<li><p>具体的操作过程：</p>
+ <pre><code class="hljs Shell"><span class="hljs-meta">#</span><span class="bash"> 从 GitHub 下拉取版本库，确保本地文件为最新</span>
+git pull origin blog:blog
+<span class="hljs-meta">#</span><span class="bash"> 查看更新日志</span>
+git log
+    相关 log 文件使用 VI 的形式打开，因此可以按 shift + G 跳转到底，按 q 退出修改。
+<span class="hljs-meta">#</span><span class="bash"> 将需要删除的最早提交的前一次提交，设置为版本基础</span>
+git rebase -i 982c78fc82a2a3804233e9ff7ef315fc21dc0822
+    在弹出文件中，将会展示在该提交之后的每个提交信息
+    将相关 commit 记录中的 pick 改为 drop，保存即实现本地删除。
+    出现 `HEAD detached at 982c78f` 报警
+    
+    # 查看当前分支情况
+    git branch -a
+    # 将当前分支改名
+    git branch blog_temp1 blog
+    # 解决由于删除造成的版本 merge 报警
+    git rm -r about
+    git rm content.json
+    git rebase --continue
+    git commit
+    git push origin blog -f
+    
+    # 合并分支
+    #git merge blog_temp1
+    # 重新对 Head 指向 branch（测试表明该步骤不能执行）
+    # git checkout blog
+    # 删除临时的版本
+    git branch -d blog_temp1
+git log --oneline
+
+<span class="hljs-meta">#</span><span class="bash"> git pull origin blog:blog 等命令无法对 hexo 的版本库进行更新，因此执行以下操作</span>
+<span class="hljs-meta">#</span><span class="bash"> 删除 .deploy_git 文件夹，重新建立版本库理论可行。详见 https://github.com/hexojs/hexo-deployer-git 。</span>
+git rebase -i 982c78fc82a2a3804233e9ff7ef315fc21dc0822
+<span class="hljs-meta">#</span><span class="bash"> 查看状态</span>
+git status
+git rm -r about
+git rm content.json
+git rebase --continue
+git log
+git log --oneline
+
+<span class="hljs-meta">#</span><span class="bash">至此，各个版本完成更新，可以使用 hexo 重新生成一次，确保删除的文件被生成</span>
+hexo -d g
+
+<span class="hljs-meta">#</span><span class="bash"> 查看本地版本日志</span>
+git log --oneline
+<span class="hljs-meta">#</span><span class="bash"> 解决由于前边删除文件导致的版本文件数量不一致的问题</span>
+git pull -r
+<span class="hljs-meta">#</span><span class="bash"> 下载网络更新到本地</span>
+git pull origin blog:blog
+<span class="hljs-meta">#</span><span class="bash"> 检查更新情况后的版本日志</span>
+git log --oneline</code></pre>
+
+
+
+
+</li>
+</ol>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><p>UniqueColor.<code>git chekout分支遇到问题：need merge</code>[EB/OL].<a href="https://www.cnblogs.com/UniqueColor/p/6594942.html">https://www.cnblogs.com/UniqueColor/p/6594942.html</a>, 2020/08/26.</p>
+</li>
+<li><p>奔跑的小龙码.<code>git删除指定commit</code>[EB/OL].<a href="https://www.cnblogs.com/lwcode6/p/11809973.html">https://www.cnblogs.com/lwcode6/p/11809973.html</a>, 2020/08/26.</p>
+<blockquote>
+<p>通过 add /rm 来指定本机处理措施，git commit -s，再 pull，再push</p>
+</blockquote>
+</li>
+<li><p>Jack_Chao.<code>Git 快速使用 之 冲突 merge 快速解决</code>[EB/OL].<a href="https://www.jianshu.com/p/50ef88bda474">https://www.jianshu.com/p/50ef88bda474</a>, 2020/08/26.</p>
+</li>
+<li><p>星辰之力.<code>git push &amp; git pull 推送/拉取分支</code>[EB/OL].<a href="https://www.cnblogs.com/zhujiabin/p/9641305.html">https://www.cnblogs.com/zhujiabin/p/9641305.html</a>, 2020/08/27.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>开发笔记</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>hexo</tag>
+        <tag>faradays</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>苹果 Macbook Pro 笔记本从 U 盘启动以及重置开机密码的方法</title>
     <url>/202008272141/</url>
     <content><![CDATA[<p>前几天，有位老领导委托我对其苹果 Macbook Pro 2018 笔记本进行优化处理。由于网上的资料比较零散、挂一漏万，因此我也来总结一下操作经验。</p>
@@ -447,19 +626,20 @@ pause</code></pre>
 <p>今天颇为疲倦，那是种种摧残对生活热爱的力量。</p>
 <p>生活无望的摧残有之。生活压力太大，家庭收入有限，总是有种种债务要还，明明金额也不多，可是月月都是勉勉强强，总有一种秦琼卖马、穷途末路的感觉，既担不起风险去谋份新工作拼出路，也割舍不了那些缠缠绵绵的家庭责任。</p>
 <p>与人相处的困顿有之。我总以为自己是个文人，家国情怀、儿女情长；然而也不知道如何面对糟糠之妻，是勉励还是鞭策，是举案齐眉还是听之任之；也不知道如何面对幼年儿女，是宠爱还是严厉，是陪伴成长还是执鞭指导。看过不少教育理论和案例，也曾以自身做过很多试验，终究是了了，每一个方向都言之凿凿，然而都不曾看得到光明。一人独行的孤独，布满了天空。</p>
-<p>报国无门的失望有之。①得不到应有的回报：在单位里，也曾以一己之力，年年月月坚持去做了很多别人不想做、不能做的事情，但体制之下，来回调动，兜兜转转，始终只是棋子一枚。不少人长袖善舞、坑蒙拐骗，都获得了层层升迁，改善了生活，而我被所谓的工作需要调动等等排除在外，连每月的账单都要发愁。②官僚主义严重。每一个努力，总有领导说你先做，他先这样，长时间在电脑前做的优化工作也只是别人眼里的你只是在不知道在忙什么。企业年年亏损，只有人浮于事，形式主义，总是有很多人满为患的会议，但是工作的永远都只有少数的几个人，我都不知道我10多年来夜以继日做的实验做出来的成果到底有没有意义了！我从小在学校的贫困补助下获得了一些帮助，然而在年复一年的人治环境下失去挣扎的活力，台账记录、检查活动、宣传总结、表态发言，只有节点时期有人关心有没有成果，没有人关心日常应该怎么做提升效率、没有人有魄力面对上级的考核压力，更没有人具有规章制度里边要求的那些工作能力，制度永远只是规范下级、杀鸡儆猴的玩物。</p>
+<p>报国无门的失望有之。①得不到应有的回报：在单位里，也曾以一己之力，年年月月坚持，做了很多别人不想做、不能做的事情，但体制之下，来回调动，兜兜转转，始终只是棋子一枚。不少人长袖善舞、坑蒙拐骗，却获得了多次升迁，改善了生活，而我被所谓的工作需要等原因排除在外，常常需要为家庭的每月的账单发愁很久。②官僚主义严重。对于自己，每一次努力改变工作局面，总有领导劝你多克服一下困难，总是有人说你不知道在忙什么；对于企业，有些人，总能罔顾年年亏损，形式主义，人浮于事，人满为患的会议永远在开着，落实工作的，永远都只有那么少数的几个人；好多人都拈轻怕重、装模作样，写计划时高瞻远瞩、侃侃而谈，谈落实时左右掣肘、漠视困难，没有人关心日常应该怎么做提升效率、没有人有魄力面对上级的考核压力，更没有人具有规章制度里边要求的那些工作能力，制度永远只是规范下级、杀鸡儆猴的玩物……我甚至不知道，我10多年来孜孜不倦地工作，到底有没有意义了？！我自小家里生活困顿，多次获得了学校的贫困补助和一些周边人的帮助，曾发誓要报效祖国、造福社会；然而，在年复一年的人治环境下，我几乎丧失去了再挣扎的动力。</p>
+<p>人，活的疲惫，不是因为事情太难做，而是因为适应社会不是一个容易的事情！</p>
 </blockquote>
 <h2 id="2020-09-26，迷茫"><a href="#2020-09-26，迷茫" class="headerlink" title="2020/09/26，迷茫"></a>2020/09/26，迷茫</h2><blockquote>
 <p>昨日，在公司某部门那里被批评项目文件写的不清不楚。我的内容别人看不明白，因此需要修改；这本来也没啥，偏偏别人要告诉我他不是搞这个专业的，这让人有点难受。</p>
-<p>法国作家 John Collier 说过，If Youth Knew, If Age Could。我自己理解的意思就是，如果年轻人经验丰富，那么就不会栽在人情世故和盲目自大上；如果老年人能力充沛、能闯善干，那么就不会就不必利用特权来设置那么多莫名其妙的规则来限制或阻挡事物的发展。</p>
-<p>就事论事而言，我自己手上偶尔也直接参与不少重要的基础事务，那天的项目申请书和可行性研究报告都是一天之内匆匆写就的，而要花费一大笔钱，涉及不少未知的研究和探索，怎么不可能足够完善到内容足够清晰到一个非专业人员能够几分钟就读明白并作出投资决策的！所以，对于这些身居要位、日常看报的中老年专家，我是有看法的：他们平时或是好好先生、或是好为人师，遇到高层级的领导，以好意见为基调，遇到低层级的员工，以挑刺的眼光来看问题；对我们这样的打工仔造成的混乱也是难免的。他们作为从我们这样的基础工种提拔上去的技术管理人员，平时不指导和帮助我们，不率先垂范，却要求下层人员有所作为、还要求遵守一堆只有下层人员需要遵守的规则，何不食肉糜！</p>
-<p>我一度迷茫，本想纠正每一个专业术语上的错误，本想指出英雄伟人的同名出处而不是我异想天开，本想据理力争到底…然而，一念之间，放弃了这个念头，我们参与日常事务，希望企业兴旺、国家繁荣，那是我们自己主动参与实现的，不是等来的，如果我们退却了，旁观了，哪何来希望？！</p>
-<p>我指望着的人，是我自己一厢情愿的幻想——幻想这些被生活和工作刺破了梦想也熬不来高官厚禄的上级能够礼贤下士、推陈出新，然而谁何曾不想“仗剑走天涯”，谁料遭遇遍体鳞伤，至今怕蛇咬？他们不也和我现在一样吗？总以为自己作出了一点业绩就能睥睨天下，然后总是在等待组织去变好，总是在说生态被破坏，可是我自己又继续做了什么了呢？我自以为低微，不也有一些人说自己更低微，等待着我不要挑刺，给他们一个不着边际的认可吗？</p>
-<p>做自己能做的事吧！希望明天会好一点，希望“日行一善，积善成德；日行一善，功满三千”，时间自有定论。</p>
+<p>法国作家 John Collier 说过，If Youth Knew, If Age Could。我自己理解的意思就是，如果年轻人经验丰富，那么就不会栽在人情世故和盲目自大上；如果老年人能力充沛、能闯善干，那么就不会、也不必利用特权来设置那么多莫名其妙的规则来限制或阻挡事物的发展。</p>
+<p>就事论事而言，我也直接参与不少重要的基础事务，天天都在赶任务似的。那天的项目申请书和可行性研究报告都是一天之内匆匆写就的，而且要花费一大笔钱，涉及不少未知的研究和探索，怎么可能足够完善、足够清晰到一个非专业人员能够在几分钟内读懂、并作出投资决策呢！所以，对于这些身居要位、日常看报的中老年专家，我是有看法的：他们平时或做好好先生、或好为人师，对领导阿谀奉承，对基层装腔作势；给我这样的基层打工仔造成种种混乱也是难免的——他们作为从我这样的基础工种提拔上去的技术管理人员，平时不指导和帮助我们，不率先垂范，却要求下层人员有所作为、还要遵守一堆只有下层人员才需要遵守的规则，真可谓“何不食肉糜”的典范！</p>
+<p>我一度迷茫，想去纠正他的每一个专业术语上的错误，想引经据典，想据理力争到底…然而，一念之间，竟放弃了这个念头——我们参与日常事务，希望企业兴旺、国家繁荣，那是我们自己主动参与实现的，不是等来的；如果我们再退却了，旁观了，又何来希望？！</p>
+<p>是我自己一厢情愿的幻想。我指望着的人——这些被生活和工作刺破了梦想、也熬不来高官厚禄的上级，我竟希望他们能够礼贤下士、推陈出新？！那也太为难人了！试想，谁何曾不想“仗剑走天涯”，谁又料到会在现实社会中遍体鳞伤、至今怕蛇咬？他们不也和我现在一样：总以为自己技术业绩很突出就能傲视群雄，学着别人的腔调说“生态就是被你们这些人搞坏的”——然后无所作为地等待着别人来改善组织的生态环境。可是，我自己不也是这样，没有担当和改革的意志吗？我低微到了尘埃里，可也有人说自己更低微，期盼着我不要在工作中给他们挑刺，帮他们协调解决哪些超出了能力的怪事吗？</p>
+<p>算了，做自己能做的事吧！希望明天会好一点，希望“日行一善，积善成德；日行一善，功满三千”，时间自有定论。</p>
 </blockquote>
 ]]></content>
       <categories>
-        <category>随想录</category>
+        <category>星星心事</category>
       </categories>
       <tags>
         <tag>2020</tag>
@@ -1125,6 +1305,1114 @@ $(<span class="hljs-string">&#x27;a~b&#x27;</span>); <span class="hljs-comment">
       <tags>
         <tag>JavaScript</tag>
         <tag>jQuery</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pacman 包管理器的用法概述</title>
+    <url>/202011221004/</url>
+    <content><![CDATA[<p>pacman 是 Arch/Manjaro Linux 下的包管理软件。它将一个简单的二进制包格式和易用的构建系统结合了起来。不管软件包是来自官方的 Arch 库还是用户自己创建， pacman 都能方便得管理。</p>
+<h2 id="pacman-基本用法"><a href="#pacman-基本用法" class="headerlink" title="pacman 基本用法"></a><code>pacman</code> 基本用法</h2><h3 id="h-查看帮助"><a href="#h-查看帮助" class="headerlink" title="-h 查看帮助"></a><code>-h</code> 查看帮助</h3><p><strong>pacman <code>&#123;-h --help&#125;</code></strong></p>
+<h3 id="V-查看版本"><a href="#V-查看版本" class="headerlink" title="-V 查看版本"></a><code>-V</code> 查看版本</h3><p><strong>pacman <code>&#123;-V --version&#125;</code></strong></p>
+<h3 id="D-管理数据库选项"><a href="#D-管理数据库选项" class="headerlink" title="-D 管理数据库选项"></a><code>-D</code> 管理数据库选项</h3><p><strong>pacman <code>&#123;-D --database&#125;</code>    <code>&lt;选项&gt;</code>     <code>&lt;软件包&gt;</code></strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">–asdeps</td>
+<td>标记为非单独指定安装的软件包</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">–asexplicit</td>
+<td>标记为单独指定安装的软件包</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">–config &lt;路径&gt;</td>
+<td>指定另外的配置文件</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">–logfile &lt;路径&gt;</td>
+<td>指定另外的日志文件</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">–noconfirm</td>
+<td>不询问确认</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">–noprogressbar</td>
+<td>下载文件时不显示进度条</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">–noscriptlet</td>
+<td>不执行安装小脚本</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">-v, –verbose</td>
+<td>循环执行</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">–debug</td>
+<td>显示除错信息</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">-r, –root &lt;路径&gt;</td>
+<td>指定另外的安装根目录</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">-b, –dbpath &lt;路径&gt;</td>
+<td>指定另外的数据库位置</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">–cachedir &lt;目录&gt;</td>
+<td>指定另外的软件包缓存位置</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">–arch &lt;架构&gt;</td>
+<td>设定另外的架构</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="Q-查询安装包"><a href="#Q-查询安装包" class="headerlink" title="-Q 查询安装包"></a><code>-Q</code> 查询安装包</h3><p><strong>pacman <code>&#123;-Q --query&#125;</code>    <code>[选项]</code>    <code>[软件包]</code></strong></p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-c, –changelog</td>
+<td>查看某软件包的更新日志</td>
+<td></td>
+</tr>
+<tr>
+<td>-d, –deps</td>
+<td>列出所有作为依赖关系安装的软件包 [过滤器]</td>
+<td></td>
+</tr>
+<tr>
+<td>-e, –explicit</td>
+<td>列出所有单独指定安装的软件包 [过滤器]</td>
+<td></td>
+</tr>
+<tr>
+<td>-g, –groups</td>
+<td>查看某软件包组所属的所有软件包</td>
+<td></td>
+</tr>
+<tr>
+<td>-i, –info</td>
+<td>查看软件包信息</td>
+<td><code>-ii</code>查看备份文件</td>
+</tr>
+<tr>
+<td>-k, –check</td>
+<td>检查该软件包拥有的文件是否存在</td>
+<td></td>
+</tr>
+<tr>
+<td>-l, –list</td>
+<td>列出被查询软件包的内容</td>
+<td></td>
+</tr>
+<tr>
+<td>-m, –foreign</td>
+<td>列出没有在同步数据库时找到的已安装软件包 [过滤器]</td>
+<td></td>
+</tr>
+<tr>
+<td>-o, –owns &lt;文件&gt;</td>
+<td>查询哪个软件包拥有 &lt;文件&gt;</td>
+<td></td>
+</tr>
+<tr>
+<td>-p, –file &lt;软件包&gt;</td>
+<td>从某个软件包而不是数据库查询</td>
+<td></td>
+</tr>
+<tr>
+<td>-s, –search<regex></td>
+<td>搜寻符合指定字符串的已安装本地的软件包</td>
+<td></td>
+</tr>
+<tr>
+<td>-t, –unrequired</td>
+<td>列出所有不被其他软件包要求的软件包 [过滤器]</td>
+<td></td>
+</tr>
+<tr>
+<td>-u, –upgrades</td>
+<td>列出所有可升级的软件包 [过滤器]</td>
+<td></td>
+</tr>
+<tr>
+<td>-q, –quiet</td>
+<td>在查询或搜索时显示较少的信息</td>
+<td></td>
+</tr>
+<tr>
+<td>–config &lt;路径&gt;</td>
+<td>指定另外的配置文件</td>
+<td></td>
+</tr>
+<tr>
+<td>–logfile &lt;路径&gt;</td>
+<td>指定另外的日志文件</td>
+<td></td>
+</tr>
+<tr>
+<td>–noconfirm</td>
+<td>不询问确认</td>
+<td></td>
+</tr>
+<tr>
+<td>–noprogressbar</td>
+<td>下载文件时不显示进度条</td>
+<td></td>
+</tr>
+<tr>
+<td>–noscriptlet</td>
+<td>不执行安装小脚本</td>
+<td></td>
+</tr>
+<tr>
+<td>-v, –verbose</td>
+<td>循环执行</td>
+<td></td>
+</tr>
+<tr>
+<td>–debug</td>
+<td>显示除错信息</td>
+<td></td>
+</tr>
+<tr>
+<td>-r, –root &lt;路径&gt;</td>
+<td>指定另外的安装根目录</td>
+<td></td>
+</tr>
+<tr>
+<td>-b, –dbpath &lt;路径&gt;</td>
+<td>指定另外的数据库位置</td>
+<td></td>
+</tr>
+<tr>
+<td>–cachedir &lt;目录&gt;</td>
+<td>指定另外的软件包缓存位置</td>
+<td></td>
+</tr>
+<tr>
+<td>–arch &lt;架构&gt;</td>
+<td>设定另外的架构</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="R-删除安装包"><a href="#R-删除安装包" class="headerlink" title="-R 删除安装包"></a><code>-R</code> 删除安装包</h3><p><strong>pacman <code>&#123;-R --remove&#125;</code>   <code>[选项]</code>     <code>&lt;软件包&gt;</code></strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>选项</strong></th>
+<th><strong>定义</strong></th>
+<th><strong>备注</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-c, –cascade</td>
+<td>删除软件包及所有的依赖于此的软件包</td>
+<td></td>
+</tr>
+<tr>
+<td>-d, –nodeps</td>
+<td>略过依赖关系检查</td>
+<td></td>
+</tr>
+<tr>
+<td>-k, –dbonly</td>
+<td>只删除数据库记录，不删除文件</td>
+<td></td>
+</tr>
+<tr>
+<td>-n, –nosave</td>
+<td>同时删除配置文件</td>
+<td></td>
+</tr>
+<tr>
+<td>-s, –recursive</td>
+<td>同时删除(不会破坏其他软件包的) 依赖关系</td>
+<td><code>-ss</code>·也包括单独指定安装的依赖关系</td>
+</tr>
+<tr>
+<td>-u, –unneeded</td>
+<td>同时删除不需要的(且不会破坏其他软件包的) 依赖关系</td>
+<td></td>
+</tr>
+<tr>
+<td>–print</td>
+<td>仅打印目标而不执行操作</td>
+<td></td>
+</tr>
+<tr>
+<td>–print-format</td>
+<td>&lt;字符串&gt;指定如何打印目标</td>
+<td></td>
+</tr>
+<tr>
+<td>–config  &lt;路径&gt;</td>
+<td>指定另外的配置文件</td>
+<td></td>
+</tr>
+<tr>
+<td>–logfile  &lt;路径&gt;</td>
+<td>指定另外的日志文件</td>
+<td></td>
+</tr>
+<tr>
+<td>–noconfirm</td>
+<td>不询问确认</td>
+<td></td>
+</tr>
+<tr>
+<td>–noprogressbar</td>
+<td>下载文件时不显示进度条</td>
+<td></td>
+</tr>
+<tr>
+<td>–noscriptlet</td>
+<td>不执行安装小脚本</td>
+<td></td>
+</tr>
+<tr>
+<td>-v, –verbose</td>
+<td>循环执行</td>
+<td></td>
+</tr>
+<tr>
+<td>–debug</td>
+<td>显示除错信息</td>
+<td></td>
+</tr>
+<tr>
+<td>-r, –root  &lt;路径&gt;</td>
+<td>指定另外的安装根目录</td>
+<td></td>
+</tr>
+<tr>
+<td>-b, –dbpath  &lt;路径&gt;</td>
+<td>指定另外的数据库位置</td>
+<td></td>
+</tr>
+<tr>
+<td>–cachedir  &lt;目录&gt;</td>
+<td>指定另外的软件包缓存位置</td>
+<td></td>
+</tr>
+<tr>
+<td>–arch &lt;架构&gt;</td>
+<td>设定另外的架构</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="S-安装安装包"><a href="#S-安装安装包" class="headerlink" title="-S 安装安装包"></a><code>-S</code> 安装安装包</h3><p><strong>pacman <code>&#123;-S --sync&#125;</code>     <code>[选项]</code>     <code>[软件包]</code></strong></p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>–asdeps</td>
+<td>作为非单独指定安装的软件包安装</td>
+<td></td>
+</tr>
+<tr>
+<td>–asexplicit</td>
+<td>作为单独指定安装的软件包安装</td>
+<td></td>
+</tr>
+<tr>
+<td>-c, –clean</td>
+<td>从缓存目录中删除旧软件包</td>
+<td><code>-cc</code>清除所有</td>
+</tr>
+<tr>
+<td>-d, –nodeps</td>
+<td>略过依赖关系检查</td>
+<td></td>
+</tr>
+<tr>
+<td>-f,  –force</td>
+<td>强制安装，覆盖存在冲突的文件</td>
+<td></td>
+</tr>
+<tr>
+<td>-g, –groups</td>
+<td>查看某软件包组所属的所有软件包</td>
+<td></td>
+</tr>
+<tr>
+<td>-i, –info</td>
+<td>查看软件包信息</td>
+<td></td>
+</tr>
+<tr>
+<td>-l, –list &lt;软件库&gt;</td>
+<td>查看在该软件库中的软件包清单</td>
+<td></td>
+</tr>
+<tr>
+<td>-s, –search &lt;regex表达式&gt;</td>
+<td>按照指定字符串查询远端软件库</td>
+<td></td>
+</tr>
+<tr>
+<td>-u, –sysupgrade</td>
+<td>升级所有已安装的软件包</td>
+<td><code>-uu</code>可启用降级</td>
+</tr>
+<tr>
+<td>-w, –downloadonly</td>
+<td>下载但不安装/升级软件包</td>
+<td></td>
+</tr>
+<tr>
+<td>-y, –refresh</td>
+<td>从服务器下载新的软件包数据库</td>
+<td></td>
+</tr>
+<tr>
+<td>–needed</td>
+<td>不重新安装已经为最新的软件包</td>
+<td></td>
+</tr>
+<tr>
+<td>–ignore &lt;软件包&gt;</td>
+<td>升级时忽略某个软件包 (可多次使用)</td>
+<td></td>
+</tr>
+<tr>
+<td>–ignoregroup</td>
+<td>&lt;软件包组&gt;升级时忽略某个软件包组 (可多次使用)</td>
+<td></td>
+</tr>
+<tr>
+<td>–print</td>
+<td>仅打印目标而不执行操作</td>
+<td></td>
+</tr>
+<tr>
+<td>–print-format</td>
+<td>&lt;字符串&gt;指定如何打印目标</td>
+<td></td>
+</tr>
+<tr>
+<td>-q, –quiet</td>
+<td>在查询或搜索时显示较少的信息</td>
+<td></td>
+</tr>
+<tr>
+<td>–config &lt;路径&gt;</td>
+<td>指定另外的配置文件</td>
+<td></td>
+</tr>
+<tr>
+<td>–logfile &lt;路径&gt;</td>
+<td>指定另外的日志文件</td>
+<td></td>
+</tr>
+<tr>
+<td>–noconfirm</td>
+<td>不询问确认</td>
+<td></td>
+</tr>
+<tr>
+<td>–noprogressbar</td>
+<td>下载文件时不显示进度条</td>
+<td></td>
+</tr>
+<tr>
+<td>–noscriptlet</td>
+<td>不执行安装小脚本</td>
+<td></td>
+</tr>
+<tr>
+<td>-v, –verbose</td>
+<td>循环执行</td>
+<td></td>
+</tr>
+<tr>
+<td>–debug</td>
+<td>显示除错信息</td>
+<td></td>
+</tr>
+<tr>
+<td>-r, –root &lt;路径&gt;</td>
+<td>指定另外的安装根目录</td>
+<td></td>
+</tr>
+<tr>
+<td>-b, –dbpath &lt;路径&gt;</td>
+<td>指定另外的数据库位置</td>
+<td></td>
+</tr>
+<tr>
+<td>–cachedir &lt;目录&gt;</td>
+<td>指定另外的软件包缓存位置</td>
+<td></td>
+</tr>
+<tr>
+<td>–arch &lt;架构&gt;</td>
+<td>设定另外的架构</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="U-更新安装包"><a href="#U-更新安装包" class="headerlink" title="-U 更新安装包"></a><code>-U</code> 更新安装包</h3><p><strong>pacman <code>&#123;-U --upgrade&#125;</code>     <code>[选项]</code>     <code>&lt;文件&gt;</code></strong></p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>–asdeps</td>
+<td>作为非单独指定安装的软件包安装</td>
+<td></td>
+</tr>
+<tr>
+<td>–asexplicit</td>
+<td>作为单独指定安装的软件包安装</td>
+<td></td>
+</tr>
+<tr>
+<td>-d, –nodeps</td>
+<td>略过依赖关系检查</td>
+<td></td>
+</tr>
+<tr>
+<td>-f, –force</td>
+<td>强制安装，覆盖存在冲突的文件</td>
+<td></td>
+</tr>
+<tr>
+<td>-k, –dbonly</td>
+<td>添加数据库记录，不安装或保持现存文件</td>
+<td></td>
+</tr>
+<tr>
+<td>–print</td>
+<td>仅打印目标而不执行操作</td>
+<td></td>
+</tr>
+<tr>
+<td>–print-format &lt;字符串&gt;</td>
+<td>指定如何打印目标</td>
+<td></td>
+</tr>
+<tr>
+<td>–config &lt;路径&gt;</td>
+<td>指定另外的配置文件</td>
+<td></td>
+</tr>
+<tr>
+<td>–logfile &lt;路径&gt;</td>
+<td>指定另外的日志文件</td>
+<td></td>
+</tr>
+<tr>
+<td>–noconfirm</td>
+<td>不询问确认</td>
+<td></td>
+</tr>
+<tr>
+<td>–noprogressbar</td>
+<td>下载文件时不显示进度条</td>
+<td></td>
+</tr>
+<tr>
+<td>–noscriptlet</td>
+<td>不执行安装小脚本</td>
+<td></td>
+</tr>
+<tr>
+<td>-v, –verbose</td>
+<td>循环执行</td>
+<td></td>
+</tr>
+<tr>
+<td>–debug</td>
+<td>显示除错信息</td>
+<td></td>
+</tr>
+<tr>
+<td>-r, –root &lt;路径&gt;</td>
+<td>指定另外的安装根目录</td>
+<td></td>
+</tr>
+<tr>
+<td>-b, –dbpath &lt;路径&gt;</td>
+<td>指定另外的数据库位置</td>
+<td></td>
+</tr>
+<tr>
+<td>–cachedir &lt;目录&gt;</td>
+<td>指定另外的软件包缓存位置</td>
+<td></td>
+</tr>
+<tr>
+<td>–arch &lt;架构&gt;</td>
+<td>设定另外的架构</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li>乌托邦2号.<code>pacman用法</code>[EB/OL].<a href="https://blog.csdn.net/taiyang1987912/article/details/41253533">https://blog.csdn.net/taiyang1987912/article/details/41253533</a>, 2020/11/22.</li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>Arch</tag>
+        <tag>Manjaro</tag>
+        <tag>pacman</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>csh 、 bash 的基础语法对照：变量</title>
+    <url>/202012201125/</url>
+    <content><![CDATA[<p>bash是现在很多Linux的发行版中默认的shell，它来自于 BSD Unix，语法非常类似于C语言，所以通常有 C/C++ 编程背景的开发人员最喜欢使用。不过我在工作中，一个主要系统的默认 shell 却是 csh 。因此我总结一下两种 shell 的语法特点。</p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="用户变量"><a href="#用户变量" class="headerlink" title="用户变量"></a>用户变量</h3><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>bash</th>
+<th>csh</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>变量定义</td>
+<td><code>var 变量名称=&quot;变量Value&quot;</code></td>
+<td><code>set var</code></td>
+</tr>
+<tr>
+<td>变量引用</td>
+<td><code>$var</code><br/><code>$&#123;var&#125;</code></td>
+<td><code>$var</code><br/><code>$&#123;var&#125;</code></td>
+</tr>
+<tr>
+<td>内置用法</td>
+<td></td>
+<td><code>$%x</code> 表示变量的值的长度<br/><code>$?x</code> 来判断变量x是否设置，如设置则为1，否则为0。</td>
+</tr>
+<tr>
+<td>示例</td>
+<td><code>a=&quot;abc&quot;</code> <br><code>echo $a</code></td>
+<td><code>set x = 7</code> <br/><code>echo $x</code></td>
+</tr>
+<tr>
+<td>注意事项</td>
+<td><code>=</code> 的两边不能有空格，否则shell解释成名称和命令参数。<br/>bash变量默认都是字符串类型的。</td>
+<td>使用 <code>setenv var value</code> 方式可以定义环境变量，所有子 shell 继承其变量值</td>
+</tr>
+</tbody></table>
+<blockquote>
+<ul>
+<li>Bash 变量名区分大小写，HOME和home是两个不同的变量。</li>
+<li>字母、数字和下划线字符组成。</li>
+<li>第一个字符必须是一个字母或一个下划线，不能是数字。</li>
+<li>不允许出现空格和标点符号。如果变量的值包含空格，则必须将值放在引号中。</li>
+<li>如果变量不存在，Bash 不会报错，而会输出空字符。</li>
+</ul>
+</blockquote>
+<p>同一行定义多个变量或执行多个语句，必须使用分号 <code>;</code> 分隔。</p>
+<h3 id="系统变量"><a href="#系统变量" class="headerlink" title="系统变量"></a>系统变量</h3><ul>
+<li><code>env</code>命令或<code>printenv</code>命令，可以显示所有环境变量；而且命令后面的变量名，不用加前缀$。如 <code>printenv PATH</code> 等同于 <code>echo $PATH</code>。</li>
+<li><code>set</code> 命令可以显示所有变量（包括环境变量和自定义变量），以及所有的 Bash 函数。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>定义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>$BASH</code></td>
+<td>Bash 程序的路径</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$BASH_VERSION</code></td>
+<td>系统Bash 版本号</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$EUID</code></td>
+<td>“有效” 用户 ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$UID</code></td>
+<td>用户 ID</td>
+<td><code>$UID</code> 是一个只读变量，不能在命令行或者脚本中修改它，在 /etc/passwd 文件中定义。</td>
+</tr>
+<tr>
+<td><code>$GROUPS</code></td>
+<td>用户组名</td>
+<td>在 /etc/passwd 文件中定义。</td>
+</tr>
+<tr>
+<td><code>$HOME</code></td>
+<td>用户主目录</td>
+<td>在 /etc/passwd 文件中定义。</td>
+</tr>
+<tr>
+<td><code>$PWD</code></td>
+<td>工作目录(当前目录)</td>
+<td>这与内置命令 <code>pwd</code> 的作用相同。</td>
+</tr>
+<tr>
+<td><code>$HOSTNAME</code></td>
+<td>主机名</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$IFS</code></td>
+<td>内部域分隔符</td>
+<td><code>$IFS</code> 默认为空白(空格, 制表符,和换行符)，可以通过赋值改变。 <code>$*</code> 就是使用的 <code>$IFS</code> 的第一个字符来分隔位置参数的。</td>
+</tr>
+<tr>
+<td><code>$PATH</code></td>
+<td>可执行文件的搜索路径</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$PS1</code></td>
+<td>主提示符</td>
+<td>普通用户默认提示符是 <code>$</code>，超级用户（root 用户）默认提示符是 <code>#</code>。</td>
+</tr>
+<tr>
+<td><code>$PS2</code></td>
+<td>第二提示符</td>
+<td>默认值为 <code>&gt;</code></td>
+</tr>
+<tr>
+<td><code>$PS4</code></td>
+<td>第二提示符</td>
+<td>使用 <code>-x</code> 选项来调用脚本时，这个提示符会出现在每行输出的开头，默认为 <code>+</code></td>
+</tr>
+</tbody></table>
+<ul>
+<li>在 GNU 指令中，如果单独使用 <code>-</code> 符号，不加任何该加的文件名称时，代表 <strong>标准输入</strong> 的意思。<ul>
+<li><code>cat -</code>：<ul>
+<li><code>cat - &gt; test.txt</code> 表示在屏幕里输入什么，都会在test.txt中输出。</li>
+<li><code>(cd /source/directory &amp;&amp; tar cf - . ) | (cd /dest/directory &amp;&amp; tar xpvf -)</code> ：压缩/source/directory下的文件，输出作为下一个命令的输入；更改当前目录到/dest/directory，解压文件</li>
+</ul>
+</li>
+<li><code>tar xpvf -</code>：标准输入读取资料并解压</li>
+<li><code>cd -</code>：切换到上次的工作目录</li>
+</ul>
+</li>
+</ul>
+<h3 id="函数的参数变量"><a href="#函数的参数变量" class="headerlink" title="函数的参数变量"></a>函数的参数变量</h3><table>
+<thead>
+<tr>
+<th>变量</th>
+<th>定义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>$0</code></td>
+<td>脚本的名称</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$1</code>, <code>$2</code>,…,<code>$&#123;n&#125;</code></td>
+<td><strong>位置</strong> 参数</td>
+<td>当 <strong>n&gt; 9</strong> 时，必须使用花括号 <code>&#123;&#125;</code> 包围数字 n。</td>
+</tr>
+<tr>
+<td><code>$#</code></td>
+<td>位置参数的个数</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$*</code>, <code>$@</code></td>
+<td>位置参数数组</td>
+<td><code>&quot;$*&quot;</code> 表示的是所有参数拼接成一个<strong>字符串</strong>，与 <code>$*</code>、<code>&quot;$@&quot;</code>、<code>$@</code> 表达的<strong>数组</strong>概念是不同的。</td>
+</tr>
+<tr>
+<td><code>$!</code></td>
+<td>运行在后台的 <strong>最后一个</strong> 作业的 PID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$$</code></td>
+<td>当前 bash 脚本的 PID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$PPID</code></td>
+<td>当前 bash 脚本父进程的 PID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$-</code></td>
+<td>当前 Shell 的启动参数</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$_</code></td>
+<td>命令的 <strong>最后一个</strong> 参数的值</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$?</code></td>
+<td>命令的退出状态码</td>
+<td>一般表示命令执行成功或失败： <strong>0 ** 表示成功，</strong>其它值** 表示错误。<br/>比如 cp 命令，退出状态码 <strong>1</strong> 表示文件没有找到，<strong>2</strong> 表示文件不可读，<strong>3</strong> 表示目标目录没有找到，<strong>4</strong> 表示目标目录不可写，<strong>5</strong> 表示一般性错误。</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>在为shell脚本传递的参数中如果包含空格，应该使用单引号或者双引号将该参数括起来，以便于脚本将这个参数作为整体来接收。</p>
+</blockquote>
+<h3 id="变量特性"><a href="#变量特性" class="headerlink" title="变量特性"></a>变量特性</h3><ul>
+<li><code>readonly</code>: 只读变量</li>
+<li><code>local</code>: 局部变量（仅在当前shell实例中有效，其他shell启动的程序不能访问局部变量。）。</li>
+<li><code>unset</code>：删除变量，如 <code>unset variable_name</code>。变量被删除后不能再次使用。unset 命令不能删除只读变量。</li>
+<li><code>let</code>：整数变量。</li>
+</ul>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><p>脚本之家网.<code>csh的基本语法介绍</code>[EB/OL].<a href="https://www.jb51.net/article/57770.htm">https://www.jb51.net/article/57770.htm</a>, 2020/12/21.</p>
+</li>
+<li><p>iTech.<code>csh 语法实例参考</code>[EB/OL].<a href="https://www.cnblogs.com/itech/archive/2012/08/15/2640811.html">https://www.cnblogs.com/itech/archive/2012/08/15/2640811.html</a>, 2020/12/21.</p>
+</li>
+<li><p>菜鸟教程.<code>Shell 变量</code>[EB/OL].<a href="https://www.runoob.com/linux/linux-shell-variable.html">https://www.runoob.com/linux/linux-shell-variable.html</a>, 2020/12/24.</p>
+</li>
+<li><p>sparkdev.<code>常见 Bash 内置变量介绍</code>[EB/OL].<a href="https://www.cnblogs.com/sparkdev/p/9934595.html">https://www.cnblogs.com/sparkdev/p/9934595.html</a>, 2020/12/24.</p>
+</li>
+</ol>
+<h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><ol>
+<li><p><a href="../202012201125">csh 、 bash 的基础语法对照：变量</a></p>
+</li>
+<li><p><a href="../202012261636">csh 、 bash 的基础语法对照：判断表达式</a></p>
+</li>
+<li><p><a href="../202012261733">csh 、 bash 的基础语法对照：循环表达式</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程笔记</category>
+      </categories>
+      <tags>
+        <tag>csh</tag>
+        <tag>bash</tag>
+        <tag>shell</tag>
+        <tag>变量</tag>
+        <tag>语法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Word 2016 脚注格式问题的处理</title>
+    <url>/202012261300/</url>
+    <content><![CDATA[<blockquote>
+<p>乖乖，这几天在 CNKI、VIP和万方上看论文，有几个比较熟悉的同事，不知不觉下就发了十多篇论文了。吓死宝宝，赶紧将 2 年前的未发表的论文拿出来修改。</p>
+</blockquote>
+<p>在修改论文的过程中，居然遇到了两个奇怪的问题，捣腾了好久才给解决了。以下总结一下操作方法：</p>
+<h2 id="分栏内容从下一页起排版的问题"><a href="#分栏内容从下一页起排版的问题" class="headerlink" title="分栏内容从下一页起排版的问题"></a>分栏内容从下一页起排版的问题</h2><blockquote>
+<p>论文分栏居然从下一页开始，果断不能忍！！！<br>刚开始的时候，我以为是存在隐藏的分页符，来回删除、重新插入，无法解决；然后以为是分栏操作方法不对，来回修改各种分栏方式以及插入方式，均无法解决。偶然间，不小心删除脚注后，分页正常了；这一下才找到解决问题的思路。</p>
+</blockquote>
+<p>解决方法是：<code>Word 选项</code>》<code>高级</code>》<code>兼容性选项</code>：勾选<code>按Word 6.x/95/97的方式安排脚注</code>，如下图所示：</p>
+<p><img src="/static/img/Word%E8%84%9A%E6%B3%A8%E5%AF%BC%E8%87%B4%E5%88%86%E6%A0%8F%E5%86%85%E5%AE%B9%E4%BB%8E%E4%B8%8B%E4%B8%80%E9%A1%B5%E8%B5%B7%E6%8E%92-20201226.png" alt="按Word 6.x/95/97的方式安排脚注"></p>
+<blockquote>
+<p>注意，在“高级”选项卡中须向下拖动滚动条才能显示该项配置</p>
+</blockquote>
+<h2 id="脚注内容前存在两个空行的问题"><a href="#脚注内容前存在两个空行的问题" class="headerlink" title="脚注内容前存在两个空行的问题"></a>脚注内容前存在两个空行的问题</h2><ul>
+<li><p>脚注默认的样式如下，存在两个空行，默认情况下无法编辑：</p>
+<p>  <img src="/static/img/Word%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%9A%E6%B3%A8%E6%A0%BC%E5%BC%8F%EF%BC%88%E4%BF%AE%E6%94%B9%E5%89%8D%EF%BC%89-20201226.png" alt="Word默认的脚注格式"></p>
+</li>
+<li><p>脚注格式的修改方法</p>
+<ul>
+<li><p>进入 <code>Web 版式视图</code> （点击下方快捷工具图标，或通过上方“视图”选项卡切换），点击 <code>引用</code> 选项卡下的 <code>显示备注</code>，初始界面如下：</p>
+<p>  <img src="/static/img/Word%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%9A%E6%B3%A8%E6%A0%BC%E5%BC%8F%EF%BC%88%E4%BF%AE%E6%94%B9%E5%89%8D%EF%BC%89-20201226.png" alt="Word默认的脚注格式"></p>
+</li>
+<li><p>在 <code>脚注</code> 下拉列表中选择 <code>脚注分隔符</code> ，对下方编辑框中的空行进行删除，上述操作流程如下：</p>
+<p>  <img src="/static/img/Word%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%9A%E6%B3%A8%E6%A0%BC%E5%BC%8F-%E4%BF%AE%E6%94%B9%E8%84%9A%E6%B3%A8%E5%88%86%E9%9A%94%E7%AC%A6%E6%A0%BC%E5%BC%8F-20201226.png" alt="修改Word脚注分隔符格式"></p>
+</li>
+<li><p>切回至 <code>页面视图</code>，保存即可完成修改。最终效果图如下：</p>
+<p>  <img src="/static/img/Word%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%9A%E6%B3%A8%E6%A0%BC%E5%BC%8F%EF%BC%88%E4%BF%AE%E6%94%B9%E5%90%8E%EF%BC%89-20201226.png" alt="Word脚注分隔符格式修改"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><p>飞飞.<code>WORD脚注和分栏冲突的解决办法</code>[EB/OL].<a href="http://blog.sina.com.cn/s/blog_5fe506110100f2y0.html">http://blog.sina.com.cn/s/blog_5fe506110100f2y0.html</a>, 2020/12/25.</p>
+</li>
+<li><p>赵晓锋.<code>Word教程：编辑脚注和尾注</code>[EB/OL].<a href="http://blog.sciencenet.cn/blog-285749-350946.html">http://blog.sciencenet.cn/blog-285749-350946.html</a>, 2020/12/25.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>Word</tag>
+        <tag>Office</tag>
+        <tag>脚注</tag>
+        <tag>论文</tag>
+        <tag>分栏</tag>
+        <tag>分隔符</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>csh 、 bash 的基础语法对照：循环表达式（未完待续）</title>
+    <url>/202012261733/</url>
+    <content><![CDATA[<h3 id="while、foreach-循环的用法"><a href="#while、foreach-循环的用法" class="headerlink" title="while、foreach 循环的用法"></a>while、foreach 循环的用法</h3><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>bash</th>
+<th>csh</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>while</td>
+<td></td>
+<td>while(expression)<br/>  commands<br/>  continue<br/>  break<br/>end</td>
+</tr>
+<tr>
+<td>foreach</td>
+<td></td>
+<td>foreach var (wordlist)<br/> commands<br/>end</td>
+</tr>
+</tbody></table>
+<h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><ol>
+<li><p><a href="../202012201125">csh 、 bash 的基础语法对照：变量</a></p>
+</li>
+<li><p><a href="../202012261636">csh 、 bash 的基础语法对照：判断表达式</a></p>
+</li>
+<li><p><a href="../202012261733">csh 、 bash 的基础语法对照：循环表达式</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程笔记</category>
+      </categories>
+      <tags>
+        <tag>csh</tag>
+        <tag>bash</tag>
+        <tag>shell</tag>
+        <tag>语法</tag>
+        <tag>判断</tag>
+        <tag>表达式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>csh 、 bash 的基础语法对照：判断表达式</title>
+    <url>/202012261636/</url>
+    <content><![CDATA[<h2 id="判断表达式"><a href="#判断表达式" class="headerlink" title="判断表达式"></a>判断表达式</h2><h3 id="使用-test-进行文件、字符串、整数、正则判断"><a href="#使用-test-进行文件、字符串、整数、正则判断" class="headerlink" title="使用 test 进行文件、字符串、整数、正则判断"></a>使用 test 进行文件、字符串、整数、正则判断</h3><ol>
+<li>test 基本用法</li>
+</ol>
+<pre><div class="caption"><span>test 判断的公式</span></div><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash"> 写法一 (不支持正则判断)</span>
+test expression
+
+<span class="hljs-meta">#</span><span class="bash"> 写法二(不支持正则判断)</span>
+[ expression ]
+
+<span class="hljs-meta">#</span><span class="bash"> 写法三 (支持正则判断)</span>
+[[ expression ]]</code></pre>
+
+
+
+<ol start="2">
+<li><p>文件判断</p>
+<ul>
+<li><code>[ -a file ]</code>：如果 file 存在，则为<code>true</code>。</li>
+<li><code>[ -b file ]</code>：如果 file 存在并且是一个块（设备）文件，则为<code>true</code>。</li>
+<li><code>[ -c file ]</code>：如果 file 存在并且是一个字符（设备）文件，则为<code>true</code>。</li>
+<li><code>[ -d file ]</code>：如果 file 存在并且是一个目录，则为<code>true</code>。</li>
+<li><code>[ -e file ]</code>：如果 file 存在，则为<code>true</code>。</li>
+<li><code>[ -f file ]</code>：如果 file 存在并且是一个普通文件，则为<code>true</code>。</li>
+<li><code>[ -g file ]</code>：如果 file 存在并且设置了组 ID，则为<code>true</code>。</li>
+<li><code>[ -G file ]</code>：如果 file 存在并且属于有效的组 ID，则为<code>true</code>。</li>
+<li><code>[ -h file ]</code>：如果 file 存在并且是符号链接，则为<code>true</code>。</li>
+<li><code>[ -k file ]</code>：如果 file 存在并且设置了它的“sticky bit”，则为<code>true</code>。</li>
+<li><code>[ -L file ]</code>：如果 file 存在并且是一个符号链接，则为<code>true</code>。</li>
+<li><code>[ -N file ]</code>：如果 file 存在并且自上次读取后已被修改，则为<code>true</code>。</li>
+<li><code>[ -O file ]</code>：如果 file 存在并且属于有效的用户 ID，则为<code>true</code>。</li>
+<li><code>[ -p file ]</code>：如果 file 存在并且是一个命名管道，则为<code>true</code>。</li>
+<li><code>[ -r file ]</code>：如果 file 存在并且可读（当前用户有可读权限），则为<code>true</code>。</li>
+<li><code>[ -s file ]</code>：如果 file 存在且其长度大于零，则为<code>true</code>。</li>
+<li><code>[ -S file ]</code>：如果 file 存在且是一个网络 socket，则为<code>true</code>。</li>
+<li><code>[ -t fd ]</code>：如果 fd 是一个文件描述符，并且重定向到终端，则为<code>true</code>。用于判断是否重定向了标准输入／输出／错误。</li>
+<li><code>[ -u file ]</code>：如果 file 存在并且设置了 setuid 位，则为<code>true</code>。</li>
+<li><code>[ -w file ]</code>：如果 file 存在并且可写（当前用户拥有可写权限），则为<code>true</code>。</li>
+<li><code>[ -x file ]</code>：如果 file 存在并且可执行（有效用户有执行／搜索权限），则为<code>true</code>。</li>
+<li><code>[ file1 -nt file2 ]</code>：如果 FILE1 比 FILE2 的更新时间最近，或者 FILE1 存在而 FILE2 不存在，则为<code>true</code>。</li>
+<li><code>[ file1 -ot file2 ]</code>：如果 FILE1 比 FILE2 的更新时间更旧，或者 FILE2 存在而 FILE1 不存在，则为<code>true</code>。</li>
+<li><code>[ FILE1 -ef FILE2 ]</code>：如果 FILE1 和 FILE2 引用相同的设备和 inode 编号，则为<code>true</code>。</li>
+</ul>
+</li>
+<li><p>字符串判断（<code>==</code>）</p>
+<ul>
+<li><p><code>[ string ]</code>：如果<code>string</code>不为空（长度大于0），则判断为真。</p>
+</li>
+<li><p><code>[ -n string ]</code>：如果字符串<code>string</code>的长度大于零，则判断为真。</p>
+</li>
+<li><p><code>[ -z string ]</code>：如果字符串<code>string</code>的长度为零，则判断为真。</p>
+</li>
+<li><p><code>[ string1 = string2 ]</code>：如果<code>string1</code>和<code>string2</code>相同，则判断为真。</p>
+</li>
+<li><p><code>[ string1 == string2 ]</code> 等同于<code>[ string1 = string2 ]</code>。</p>
+</li>
+<li><p><code>[ string1 != string2 ]</code>：如果<code>string1</code>和<code>string2</code>不相同，则判断为真。</p>
+</li>
+<li><p><code>[ string1 &#39;&gt;&#39; string2 ]</code>：如果按照字典顺序<code>string1</code>排列在<code>string2</code>之后，则判断为真。</p>
+</li>
+<li><p><code>[ string1 &#39;&lt;&#39; string2 ]</code>：如果按照字典顺序<code>string1</code>排列在<code>string2</code>之前，则判断为真。</p>
+<blockquote>
+<p>注意，<code>test</code>命令内部的<code>&gt;</code>和<code>&lt;</code>，必须用引号引起来（或者是用反斜杠转义）。否则，它们会被 shell 解释为重定向操作符。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>整数判断（<code>-eq</code>）</p>
+<ul>
+<li><code>[ n1 -eq n2 ]</code>：如果<code>n1</code>等于<code>n2</code>，则为<code>true</code>。</li>
+<li><code>[ n1 -ne n2 ]</code>：如果<code>n1</code>不等于<code>n2</code>，则为<code>true</code>。</li>
+<li><code>[ n1 -le n2 ]</code>：如果<code>n1</code>小于或等于<code>n2</code>，则为<code>true</code>。</li>
+<li><code>[ n1 -lt n2 ]</code>：如果<code>n1</code>小于<code>n2</code>，则为<code>true</code>。</li>
+<li><code>[ n1 -ge n2 ]</code>：如果<code>n1</code>大于或等于<code>n2</code>，则为<code>true</code>。</li>
+<li><code>[ n1 -gt n2 ]</code>：如果<code>n1</code>大于<code>n2</code>，则为<code>true</code>。</li>
+</ul>
+</li>
+<li><p>正则判断（<code>=~</code>）</p>
+</li>
+</ol>
+<pre><code><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash">!/bin/bash</span>
+
+INT=-5
+
+if [[ &quot;$INT&quot; =~ ^-?[0-9]+$ ]]; then
+  echo &quot;INT is an integer.&quot;
+  exit 0
+else
+  echo &quot;INT is not an integer.&quot; &gt;&amp;2
+  exit 1
+fi</code></pre></code></pre><h3 id="多条件逻辑运算"><a href="#多条件逻辑运算" class="headerlink" title="多条件逻辑运算"></a>多条件逻辑运算</h3><pre><code>- `AND`运算：符号`&amp;&amp;`，也可使用参数`-a`。
+- `OR`运算：符号`||`，也可使用参数`-o`。
+- `NOT`运算：符号`!`。</code></pre><h3 id="通过-进行算术运算判断"><a href="#通过-进行算术运算判断" class="headerlink" title="通过 ((...)) 进行算术运算判断"></a>通过 <code>((...))</code> 进行算术运算判断</h3><pre><code class="hljs apache"><span class="hljs-attribute">if</span> ((<span class="hljs-number">3</span> &gt; <span class="hljs-number">2</span>)); then
+  <span class="hljs-attribute">echo</span> <span class="hljs-string">&quot;true&quot;</span>
+<span class="hljs-attribute">fi</span></code></pre>
+
+
+
+
+<h2 id="if-配套-test-或-进行条件判断"><a href="#if-配套-test-或-进行条件判断" class="headerlink" title="if 配套 test 或 ((...)) 进行条件判断"></a>if 配套 <code>test</code> 或 <code>((...))</code> 进行条件判断</h2><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>bash</th>
+<th>csh</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>if</td>
+<td>if [ -f $a ];then <br/>        echo “hello world!” <br/>fi</td>
+<td>if(expression)then<br/> commands<br/>endif</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>if {(command)} then<br/> commands<br/>endif</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>if(expression) then<br/> commands<br/>else if(expression) then<br/> commands<br/>else<br/> commands<br/>endif</td>
+</tr>
+</tbody></table>
+<h2 id="case-的条件判断"><a href="#case-的条件判断" class="headerlink" title="case 的条件判断"></a>case 的条件判断</h2><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>bash</th>
+<th>csh</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>case</td>
+<td>case expression in<br/>  pattern )<br/>    commands ;;<br/>  pattern )<br/>    commands ;;<br/>  …<br/>esac</td>
+<td>switch(“$value”)<br/>case pattern1:<br/> commands<br/> breaksw<br/>case pattern2:<br/> commands<br/> breaksw<br/>default:<br/> commands<br/> breaksw<br/>endsw</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>bash 的<code>case</code>的匹配模式可以使用各种通配符，下面是一些例子。</p>
+<ul>
+<li><code>a)</code>：匹配<code>a</code>。</li>
+<li><code>a|b)</code>：匹配<code>a</code>或<code>b</code>。</li>
+<li><code>[[:alpha:]])</code>：匹配单个字母。</li>
+<li><code>???)</code>：匹配3个字符的单词。</li>
+<li><code>*.txt)</code>：匹配<code>.txt</code>结尾。</li>
+<li><code>*)</code>：匹配任意输入，通过作为<code>case</code>结构的最后一个模式。</li>
+</ul>
+</li>
+<li><p>Bash 4.0之前，case结构只能匹配一个条件，然后就会退出case结构。Bash 4.0之后，允许匹配多个条件，这时可以用;;&amp;终止每个条件块。</p>
+</li>
+</ul>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><p>脚本之家网.<code>csh的基本语法介绍</code>[EB/OL].<a href="https://www.jb51.net/article/57770.htm">https://www.jb51.net/article/57770.htm</a>, 2020/12/21.</p>
+</li>
+<li><p>iTech.<code>csh 语法实例参考</code>[EB/OL].<a href="https://www.cnblogs.com/itech/archive/2012/08/15/2640811.html">https://www.cnblogs.com/itech/archive/2012/08/15/2640811.html</a>, 2020/12/21.</p>
+</li>
+<li><p>阮一峰.<code>Bash 脚本教程</code>[EB/OL].<a href="https://wangdoc.com/bash">https://wangdoc.com/bash</a>, 2020/12/21.</p>
+<blockquote>
+<p>该教程的部分内容是比较完善的。</p>
+</blockquote>
+</li>
+<li><p>脚本之家.<code>shell中各种括号的作用详解()、(())、[]、[[]]、&#123;&#125;</code>[EB/OL].<a href="https://www.jb51.net/article/123081.htm">https://www.jb51.net/article/123081.htm</a>, 2020/12/24.</p>
+</li>
+</ol>
+<h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><ol>
+<li><p><a href="../202012201125">csh 、 bash 的基础语法对照：变量</a></p>
+</li>
+<li><p><a href="../202012261636">csh 、 bash 的基础语法对照：判断表达式</a></p>
+</li>
+<li><p><a href="../202012261733">csh 、 bash 的基础语法对照：循环表达式</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程笔记</category>
+      </categories>
+      <tags>
+        <tag>csh</tag>
+        <tag>bash</tag>
+        <tag>shell</tag>
+        <tag>语法</tag>
+        <tag>判断</tag>
+        <tag>表达式</tag>
       </tags>
   </entry>
 </search>

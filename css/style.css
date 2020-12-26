@@ -1330,8 +1330,8 @@ a {
 .article-entry table td {
   border: 1px solid #ddd;
   vertical-align: middle;
-  padding: 15px 0;
-  text-align: center;
+  padding: 3px 10px 3px 10px;
+  text-align: left;
 }
 .article-entry center {
   font-size: 1rem;
