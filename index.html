@@ -20,6 +20,11 @@
       
         <meta name="baidu-site-verification" content="YmNlECnn33" />
       
+
+      
+      
+        <meta name="sogou_site_verification" content="yrR3SzbveP" />
+      
   
 
   
@@ -275,7 +280,7 @@ window.onload = function () {
   
     <h1 itemprop="name">
       <a class="article-title" href="/202012261733/"  >
-      csh 、 bash 的基础语法对照：循环表达式（未完待续）
+      csh 、 bash 的基础语法对照：循环表达式
       </a>
     </h1>
   
@@ -299,7 +304,8 @@ window.onload = function () {
               <div class="article-feed">
                   <p>
                   <a href="/202012261733/"  style="text-decoration: none;" >
-                      while、foreach 循环的用法
+                      循环的中断Bash 提供了两个内部命令break和continue，用来在循环内部跳出循环。    - break命令立即终止循环，程序继续执行循环块之后的语句，即不再执行剩下的循环。    - continue命令立即终止本轮循环，开始执行下一轮循环。
+
 
 
 项目
@@ -308,25 +314,8 @@ csh
 
 
 
-while
-
-while(expression)  commands  continue  breakend
-
-
-foreach
-
-foreach var (wordlist) commandsend
-
-
-姊妹篇
-csh 、 bash 的基础语法对照：变量
-
-csh 、 bash 的基础语法对照：判断表达式
-
-csh 、 bash 的基础语法对照：循环表达式
-
-
-
+break
+#!/bin/bash  for number in 1 2 3 4 5 6 do   echo “number is $number”   if [ “$number” = “3” ]; then    ...
                   </a>
                   </p>
               </div>
@@ -396,10 +385,7 @@ csh 、 bash 的基础语法对照：循环表达式
               <div class="article-feed">
                   <p>
                   <a href="/202012261636/"  style="text-decoration: none;" >
-                      判断表达式使用 test 进行文件、字符串、整数、正则判断
-test 基本用法
-
-test 判断的公式# 写法一 (不支持正则判断)
+                      判断表达式使用 test 判断1. test 基本用法test 判断的公式# 写法一 (不支持正则判断)
 test expression
 
 # 写法二(不支持正则判断)
@@ -410,12 +396,10 @@ test expression
 
 
 
-
-文件判断
-
+2. 文件判断
 [ -a file ]：如果 file 存在，则为true。
 [ -b file ]：如果 file 存在并且是一个块（设备）文件，则为true。
-[ -c file ]：如果 file 存在并且...
+[ -c file ]：如果 file 存在并且是一个字符（设备）文件，则...
                   </a>
                   </p>
               </div>
@@ -758,7 +742,7 @@ Utilities
     
     <div class="article-header-num">10</div>
 
-    <article id="post-MarginCall影评-世界再无屠龙的少年" class="article-index" itemscope itemprop="blogPost">
+    <article id="post-MarginCall影评-世上再无屠龙的少年" class="article-index" itemscope itemprop="blogPost">
 
         <div class="article-inner">
           
@@ -793,9 +777,14 @@ Utilities
                   <a href="/202010021008/"  style="text-decoration: none;" >
                       
 直到落幕，我才意识到 《Margin Call》（商海通牒） 已经结束，可是对它的感悟我才刚刚开始…
-剧本 ☆☆☆☆场景 ☆☆☆☆演绎 ☆☆☆☆综合 ☆☆☆☆
 
-剧情整个故事不复杂：一家公司正在大幅裁员，领导 Sam 带头鼓掌并发表了鼓舞人心的讲话，员工们纷纷加班至深夜；努力工作的新员工 Peter 在别人下班去娱乐的时候，发现了公司风险模型预测到未来走势将大幅下跌，光是一层楼 25% 的亏损将超过公司的市值，立即汇报领导 Will ，领导也汇报他的领导 Sam，最后二把手贾德·科恩也在凌晨 2 点乘坐...
+
+剧本 ☆☆☆☆
+场景 ☆☆☆☆
+演绎 ☆☆☆☆
+综合 ☆☆☆☆
+
+剧情摘要整个故事不复杂：一家公司正在大幅裁员，领导 Sam 带头鼓掌并发表了鼓舞人心的讲话，员工们纷纷加班至深夜；努力工作的新员工 Peter 在别人下班去娱乐的时候，发现了公司风险模型预测到未来走势将大幅下跌，光是一层楼 25% 的亏损将超过公司的市值，立即汇报领导 Will ，领导也汇报他的领导 Sam，最后二把手贾德·科恩也在凌...
                   </a>
                   </p>
               </div>
@@ -934,7 +923,7 @@ printf 不像 echo 那样会自动换行，必须显式添加换行符 `\n` 。�
     </span>
 
     
-    &emsp;总文本数：<span class="post-count">18.8k</span>
+    &emsp;总文本数：<span class="post-count">19.4k</span>
 </p>
 
 
