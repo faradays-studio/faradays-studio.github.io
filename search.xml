@@ -286,10 +286,12 @@
 </ol>
 ]]></content>
       <categories>
-        <category>开发笔记</category>
+        <category>我和hexo有个约会</category>
       </categories>
       <tags>
         <tag>日志</tag>
+        <tag>hexo</tag>
+        <tag>hexo-theme-faradays</tag>
       </tags>
   </entry>
   <entry>
@@ -555,11 +557,11 @@ git log --oneline</code></pre>
 </ol>
 ]]></content>
       <categories>
-        <category>开发笔记</category>
+        <category>我和hexo有个约会</category>
       </categories>
       <tags>
-        <tag>git</tag>
         <tag>hexo</tag>
+        <tag>git</tag>
         <tag>faradays</tag>
       </tags>
   </entry>
@@ -2533,6 +2535,204 @@ fi</code></pre></code></pre><h3 id="多条件逻辑运算"><a href="#多条件�
         <tag>领导</tag>
         <tag>奋斗</tag>
         <tag>总结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VirtualBox 虚拟机磁盘压缩方法（已验证）</title>
+    <url>/202101101604/</url>
+    <content><![CDATA[<p>VirtualBox 虚拟机的容量会随着使用自动扩容，这本来是个好事；不过在实际使用过程中，由于系统错误日志疯狂写入等原因，也可能会导致系统容量被明显扩充变大。容量变大之后，无论是转换虚拟盘格式，还是导入导出，均不能减小容量。特别是做虚拟机备份导出时，白白浪费了大量的空间。因此，进行虚拟机磁盘容量的压缩，势在必行！</p>
+<p>以下两个系统我都用了很长时间，也都测试过方法的可行性，可供参考。</p>
+<h2 id="虚拟机磁盘格式转换"><a href="#虚拟机磁盘格式转换" class="headerlink" title="虚拟机磁盘格式转换"></a>虚拟机磁盘格式转换</h2><blockquote>
+<p>需要注意的是，虽然 VirtualBox 默认的磁盘格式为 vdi，可是经过导入、导出等一系列操作后，硬盘格式往往都是 wmdk；本文所讨论的磁盘压缩方法，只对 vdi 格式的磁盘有效；因此，磁盘压缩之前，往往都需要进行磁盘格式转换！</p>
+</blockquote>
+<ol>
+<li><p>在 VirtualBox 管理界面上，还需要重新删除原有的 vmdk 磁盘（否则 uuid 冲突导致无法导入 vdi 磁盘）、然后指定系统需要使用的磁盘为新的 vdi 磁盘（否则无法使用后续的磁盘压缩功能）。</p>
+<p> <img src="/static/img/20210108-virtualbox/0-%E9%87%8A%E6%94%BE%E3%80%81%E5%88%A0%E9%99%A4%E7%A1%AC%E7%9B%98-HHJ-20210108.png" alt="释放、删除硬盘"></p>
+</li>
+<li><p>转换虚拟机磁盘文件格式为 vdi </p>
+</li>
+</ol>
+<pre><code class="hljs shell">&quot;C:\Program Files\Oracle\VirtualBox\VBoxManage.exe&quot; clonehd &quot;e:\source.vmdk&quot; &quot;e:\target.vdi&quot; --format vdi</code></pre>
+
+<pre><code>![将VMDK硬盘转换为VDI格式](/static/img/20210108-virtualbox/1-将VMDK硬盘转换为VDI格式-2-HHJ-20210108.png)</code></pre><ol start="3">
+<li><p>将新磁盘关联到虚拟机中</p>
+<p> <img src="/static/img/20210108-virtualbox/2-%E5%B0%86VDI%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD%E5%88%B0%E7%B3%BB%E7%BB%9F%E4%B8%AD-HHJ-20210108.png" alt="将VDI硬盘挂载到系统中"></p>
+<p> <img src="/static/img/20210108-virtualbox/2-%E5%B0%86VDI%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD%E5%88%B0%E7%B3%BB%E7%BB%9F%E4%B8%AD-2-HHJ-20210108.png" alt="将VDI硬盘挂载到系统中"></p>
+</li>
+</ol>
+<h2 id="Windows-虚拟机磁盘的压缩"><a href="#Windows-虚拟机磁盘的压缩" class="headerlink" title="Windows 虚拟机磁盘的压缩"></a>Windows 虚拟机磁盘的压缩</h2><p>毫无疑问，Windows 平台的磁盘压缩比较简单，在主机系统中直接执行以下命令即可。</p>
+<pre><code class="hljs powershell"><span class="hljs-string">&quot;C:\Program Files\Oracle\VirtualBox\VBoxManage.exe&quot;</span> modifyhd <span class="hljs-string">&quot;e:\target.vdi&quot;</span> -<span class="hljs-literal">-compact</span></code></pre>
+
+<blockquote>
+<p>多年前，我曾进行过上述操作，并截图，可是现在找不到之前的截图了，有空再补了。</p>
+</blockquote>
+<h2 id="CentOS-虚拟机磁盘的压缩"><a href="#CentOS-虚拟机磁盘的压缩" class="headerlink" title="CentOS 虚拟机磁盘的压缩"></a>CentOS 虚拟机磁盘的压缩</h2><blockquote>
+<p>一开始，我尝试使用网上泛滥的手动将磁盘剩余空间写 0 的方法，可是，过了很久，不过没有看到磁盘空间变小，反而越来越大——我本来虚拟机才25GB，不到半个小时变成了 60 GB，本来主机硬盘容量就很小，吓得我赶紧终止了。</p>
+<blockquote>
+<pre><code class="hljs bash">dd  <span class="hljs-keyword">if</span>=/dev/zero   of=/empty    bs=1M
+<span class="hljs-comment">#dd if=/dev/zero   of=/dev/sda3</span>
+rm -f /empty</code></pre>
+</blockquote>
+</blockquote>
+<p>多天以后，做完了手上的工作，重新去外网上学习相应的处理方法，发现了有个叫做 zerofree 工作的做法没有尝试过，因此我重新导入了一个虚拟机进行尝试，结果成功了，过程如下：</p>
+<ol>
+<li><p>使用 yum 下载安装 zerofree 程序包</p>
+ <pre><code class="hljs shell">su
+yum -y install zerofree</code></pre>
+</li>
+<li><p>重新启动系统，并在系统 GRUB 启动菜单出现时点击 <code>Enter</code> 键进入编辑模式</p>
+<ul>
+<li><p>选择含有 <code>vmlinuz</code> 字样菜单行，按 <code>e</code> 进入内容编辑状态</p>
+<p><img src="/static/img/20210108-virtualbox/4-%E5%9C%A8GRUB%E8%8F%9C%E5%8D%95%E4%B8%AD%E9%80%89%E6%8B%A9%E5%90%AB%E6%9C%89vmlinuz%E5%AD%97%E6%A0%B7%E7%9A%84%E8%8F%9C%E5%8D%95%E8%BF%9B%E8%A1%8C%E7%BC%96%E8%BE%91-HHJ-20210108.png" alt="选择含有vmlinuz字样的菜单进行编辑"></p>
+</li>
+<li><p>在菜单末尾增加 <code>init=/bin/bash</code> 后 <code>Enter</code> 返回上级菜单</p>
+<p><img src="/static/img/20210108-virtualbox/5-%E5%9C%A8vmlinuz%E5%AD%97%E6%A0%B7%E7%9A%84%E8%8F%9C%E5%8D%95%E4%B8%AD%E7%BC%96%E8%BE%91%E5%A2%9E%E5%8A%A0init%E5%8F%82%E6%95%B0%EF%BC%88%E8%BF%9B%E5%85%A5%E6%95%91%E6%8F%B4%E6%A8%A1%E5%BC%8F%EF%BC%89-HHJ-20210108.png" alt="增加init参数以进入救援模式"></p>
+</li>
+<li><p>然后按 <code>b</code> 重新启动系统</p>
+<p><img src="/static/img/20210108-virtualbox/6-%E4%BF%AE%E6%94%B9%E8%8F%9C%E5%8D%95%E5%AE%8C%E6%88%90%E5%90%8E%E6%8C%89b%E5%AD%97%E7%AC%A6%E5%90%AF%E5%8A%A8%E8%BF%9B%E5%85%A5%E7%B3%BB%E7%BB%9F-HHJ-20210108.png" alt="按b字符启动进入系统"></p>
+</li>
+<li><p>进入救援模式初始界面</p>
+<p><img src="/static/img/20210108-virtualbox/7-%E6%95%91%E6%8F%B4%E6%A8%A1%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E7%95%8C%E9%9D%A2-HHJ-20210108.png" alt="救援模式初始界面"></p>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="3">
+<li><p>查看系统的磁盘名称</p>
+ <pre><code class="hljs shell">df</code></pre>
+</li>
+<li><p>执行清理（请根据前一步的查询结果进行确定需要清理的磁盘）</p>
+ <pre><code class="hljs shell">zerofree -v /dev/sda1
+zerofree -v /dev/sda3</code></pre>
+
+<p> <img src="/static/img/20210108-virtualbox/9-zerofree%E5%A1%AB%E5%85%85%E5%AE%8C%E6%AF%95-HHJ-20210108.png" alt="zerofree填充"></p>
+<p> 至此，虚拟机磁盘容量 已经明显变小。然后强制关机，重新进入系统。</p>
+<p> <img src="/static/img/20210108-virtualbox/10-%E6%95%91%E6%8F%B4%E6%A8%A1%E5%BC%8F%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E5%B8%B8%E8%A7%84%E5%85%B3%E6%9C%BA%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%8F%AA%E8%83%BD%E7%A1%AC%E4%BB%B6%E5%85%B3%E9%97%AD-HHJ-20210108.png" alt="无法使用常规关机命令，只能硬件关闭"></p>
+</li>
+<li><p>在宿主机中，打开命令行，笔者这里是Windows系统，如下执行</p>
+<pre><code class="hljs powershell"><span class="hljs-string">&quot;C:\Program Files\Oracle\VirtualBox\VBoxManage.exe&quot;</span> modifyhd <span class="hljs-string">&quot;e:\target.vdi&quot;</span> -<span class="hljs-literal">-compact</span></code></pre>
+
+
+</li>
+</ol>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><p>mowkeeper.<code>VirtualBox压缩vdi文件</code>[EB/OL].<a href="http://mowblog.com/virtualbox%E5%8E%8B%E7%BC%A9vdi%E6%96%87%E4%BB%B6/">http://mowblog.com/virtualbox%E5%8E%8B%E7%BC%A9vdi%E6%96%87%E4%BB%B6/</a>, 2021/01/08.</p>
+</li>
+<li><p>Canonical Ltd.<code>Ubuntu Manpage: zerofree — zero free blocks from ext2, ext3 and ext4 file-systems</code>[EB/OL].<a href="http://manpages.ubuntu.com/manpages/hirsute/en/man8/zerofree.8.html">http://manpages.ubuntu.com/manpages/hirsute/en/man8/zerofree.8.html</a>, 2021/01/10.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Linux</tag>
+        <tag>VirtualBox</tag>
+        <tag>虚拟机</tag>
+        <tag>压缩</tag>
+        <tag>zerofree</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 使用 pip 国内源实现加速下载</title>
+    <url>/202101171117/</url>
+    <content><![CDATA[<blockquote>
+<p>pip 是一个现代的，通用的 Python 包管理工具。提供了对 Python 包的查找、下载、安装、卸载的功能。</p>
+</blockquote>
+<p>使用 Python 多年了，一直都坚持使用官方源的做法，结果被现实打脸了，下载一个包往往一个小时都不一定能够成功，不得不放弃了使用 Python 的念头。后来，偶尔知道了 pip 有国内源，大大加快了组件的下载速度，必须严重推荐。</p>
+<p>听说曾经有以下这些国内源——</p>
+<blockquote>
+<p>清华  <a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a><br>阿里  <a href="https://mirrors.aliyun.com/pypi/simple/">https://mirrors.aliyun.com/pypi/simple/</a><br>豆瓣  <a href="https://pypi.doubanio.com/simple/">https://pypi.doubanio.com/simple/</a><br>中科大    <a href="https://mirrors.ustc.edu.cn/pypi/web/simple/">https://mirrors.ustc.edu.cn/pypi/web/simple/</a><br>官网  <a href="https://pypi.org/simple">https://pypi.org/simple</a><br>华中理工  <a href="http://pypi.hustunique.com/">http://pypi.hustunique.com/</a><br>山东理工  <a href="http://pypi.sdutlinux.org/">http://pypi.sdutlinux.org/</a></p>
+</blockquote>
+<p>2021年了，一些国内源已经不运营了，我也不习惯照抄网上的文章，所以这里是我的实践结果。</p>
+<h2 id="国内源的测评"><a href="#国内源的测评" class="headerlink" title="国内源的测评"></a>国内源的测评</h2><table>
+<thead>
+<tr>
+<th>源</th>
+<th>地址</th>
+<th>测试</th>
+<th>速度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>清华大学</td>
+<td><a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></td>
+<td>ping pypi.tuna.tsinghua.edu.cn</td>
+<td>62ms</td>
+</tr>
+<tr>
+<td>阿里云</td>
+<td><a href="https://mirrors.aliyun.com/pypi/simple/">https://mirrors.aliyun.com/pypi/simple/</a></td>
+<td>ping mirrors.aliyun.com</td>
+<td>8ms</td>
+</tr>
+<tr>
+<td>豆瓣</td>
+<td><a href="https://pypi.douban.com/simple/">https://pypi.douban.com/simple/</a></td>
+<td>ping pypi.douban.com</td>
+<td>52ms</td>
+</tr>
+</tbody></table>
+<p>综上，推荐选择阿里云，不是网友清一色的推荐清华大学源和豆瓣源。</p>
+<h2 id="临时源配置"><a href="#临时源配置" class="headerlink" title="临时源配置"></a>临时源配置</h2><ol>
+<li><p>普通环境下操作示例：</p>
+ <pre><code class="hljs shell">pipenv install &lt;package&gt;           -i &lt;URL&gt;
+pip install Django          -i https://pypi.doubanio.com/simple/</code></pre>
+</li>
+<li><p>虚拟环境下的操作示例</p>
+ <pre><code class="hljs shell">pipenv install &lt;package&gt;           --pypi-mirror &lt;URL&gt;
+pip install Django          --pypi-mirror https://mirrors.aliyun.com/pypi/simple/</code></pre>
+
+</li>
+</ol>
+<h2 id="永久源配置"><a href="#永久源配置" class="headerlink" title="永久源配置"></a>永久源配置</h2><ol>
+<li><p>Windows 平台：在 <code>%HOMEPATH%</code> 路径下创建 <strong>pip</strong> 文件夹，再创建 <code>pip.ini</code> 文件，内容如下：</p>
+ <pre><code class="hljs ini"><span class="hljs-section">[global]</span>
+<span class="hljs-attr">timeout</span> = <span class="hljs-number">6000</span>
+<span class="hljs-attr">index-url</span> = https://mirrors.aliyun.com/pypi/simple/
+<span class="hljs-comment">;清华大学：https://pypi.tuna.tsinghua.edu.cn/simple</span>
+<span class="hljs-comment">;阿里云：https://mirrors.aliyun.com/pypi/simple/</span>
+<span class="hljs-comment">;豆瓣：https://pypi.douban.com/simple/</span>
+
+<span class="hljs-section">[install]</span>
+<span class="hljs-comment">;use-mirrors = true</span>
+<span class="hljs-comment">;mirrors = https://pypi.tuna.tsinghua.edu.cn/simple</span>
+<span class="hljs-attr">trusted-host</span> = https://mirrors.aliyun.com</code></pre>
+</li>
+<li><p>Linux 平台：在 <code>~/.pip/pip.conf</code> 文件中增加上述内容。</p>
+</li>
+<li><p>pipenv 等虚拟环境，只需要在相应的 <code>Pipfile</code> 中修改相应的 URL 内容即可，举例如下：</p>
+ <pre><code class="hljs ini"><span class="hljs-section">[[source]]</span>
+<span class="hljs-attr">name</span> = <span class="hljs-string">&quot;pypi&quot;</span>
+<span class="hljs-comment">#修改源提高锁定速度</span>
+<span class="hljs-attr">url</span> = <span class="hljs-string">&quot;https://mirrors.aliyun.com/pypi/simple&quot;</span>
+
+<span class="hljs-section">[[source]]</span>
+<span class="hljs-attr">name</span> = <span class="hljs-string">&quot;aliyun&quot;</span>
+<span class="hljs-attr">url</span> = <span class="hljs-string">&quot;https://mirrors.aliyun.com/pypi/simple&quot;</span>
+<span class="hljs-attr">verify_ssl</span> = <span class="hljs-literal">true</span></code></pre>
+
+</li>
+</ol>
+<p>测试下载 <code>pip install pandas</code> 速度从 12kb/s 提升到 3Mb/s，妥妥地提升百倍以上速度不是梦！</p>
+<p>致敬阿里云、清华大学、豆瓣这些为开源共享力量的单位！</p>
+<blockquote>
+<p>上述内容，有些是三四年前梳理的，早忘了是参考了哪些文章了，有空再找找，然后补上来。<br>不过尴尬的是，天下文章一大抄，多数人都是乱写一通，不成体系，不辨真伪，实在是不堪入目！</p>
+</blockquote>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li>PyPA.<code>Installing Packages</code>[EB/OL].<a href="https://packaging.python.org/tutorials/installing-packages/">https://packaging.python.org/tutorials/installing-packages/</a>, 2021/01/17.</li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程笔记</category>
+      </categories>
+      <tags>
+        <tag>pip</tag>
+        <tag>国内源</tag>
+        <tag>Python</tag>
+        <tag>加速</tag>
+        <tag>下载</tag>
       </tags>
   </entry>
 </search>
