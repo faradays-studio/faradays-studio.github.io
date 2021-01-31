@@ -2730,9 +2730,9 @@ pip install Django          --pypi-mirror https://mirrors.aliyun.com/pypi/simple
       <tags>
         <tag>pip</tag>
         <tag>国内源</tag>
-        <tag>Python</tag>
         <tag>加速</tag>
         <tag>下载</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>

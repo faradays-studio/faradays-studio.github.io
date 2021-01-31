@@ -564,13 +564,6 @@
   </url>
   
   <url>
-    <loc>https://faradays-studio.github.io/tags/Python/</loc>
-    <lastmod>2021-01-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
     <loc>https://faradays-studio.github.io/tags/%E5%8A%A0%E9%80%9F/</loc>
     <lastmod>2021-01-31</lastmod>
     <changefreq>weekly</changefreq>
@@ -585,7 +578,7 @@
   </url>
   
   <url>
-    <loc>https://faradays-studio.github.io/tags/2021/</loc>
+    <loc>https://faradays-studio.github.io/tags/Python/</loc>
     <lastmod>2021-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -600,6 +593,13 @@
   
   <url>
     <loc>https://faradays-studio.github.io/tags/CentOS/</loc>
+    <lastmod>2021-01-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://faradays-studio.github.io/tags/2021/</loc>
     <lastmod>2021-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
