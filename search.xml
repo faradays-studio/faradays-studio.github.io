@@ -2635,6 +2635,86 @@ zerofree -v /dev/sda3</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>2021年随笔</title>
+    <url>/202101171157/</url>
+    <content><![CDATA[<h2 id="2021-01-28，辛苦"><a href="#2021-01-28，辛苦" class="headerlink" title="2021/01/28，辛苦"></a>2021/01/28，辛苦</h2><p>写论文凌晨，挺累的，有种长路漫漫之感。</p>
+]]></content>
+      <categories>
+        <category>星星心事</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>2021</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS 使用 yum 国内源实现加速下载</title>
+    <url>/202101171156/</url>
+    <content><![CDATA[<p>又是一年过去，忽然接到通知，要求更新一个之前做的展示系统，就想起来要更新一下系统。结果使用 <code>yum list kernel.x86_64</code> 提示 <code>Cannot find a valid baseurl for repo: base</code>。</p>
+<p>更换国内源也不行，看了<code>http://mirrors.163.com/centos/6.10/readme</code> 文件，发现官方自 2020/11/30 起就禁止 CentOS 6.x 更新了（文件被清空）。呜呜，真是后知后觉了！</p>
+<pre><code class="hljs shell">su
+cd /etc/yum.repos.d/
+cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.original
+    # 系统是根据 Base*.repo 来判别基础源的，因此备份的时候必须修改扩展名
+
+gedit CentOS-Base.repo
+    # 国外 http://vault.centos.org/6.10
+    # 国内 http://mirrors.aliyun.com/centos-vault/6.10/；
+
+mv epel.repo epel.original
+gedit epel.repo 
+    # 网址替换为 http://archives.fedoraproject.org/pub/archive/epel/6/x86_64/ 即可
+    # 国内（好像不行了） http://mirrors.aliyun.com/epel-archive/6/
+rm -f /var/run/yum.pid
+yum clean all
+yum makecache
+yum repolist</code></pre>
+
+<p>网友多喜欢用 vim ，我是普通人，我就是喜欢使用 gedit ，用上边提到的网址将文件中的网址替换一下就搞定了；如果可能需要滚动升级到下一个版本的，请参考修改一下网址的表达方式就行了。</p>
+<p>你问我怎么更换国内源，方法和上边是一样的——都是更换源嘛！至于国内源有哪些，可以了解一下清华、阿里云、网易、搜狐、中科大等源。当然，如果想简单一点的话，还可以</p>
+<pre><div class="caption"><span>下载新源文件并替换</span></div><code class="hljs shell">su
+
+<span class="hljs-meta">#</span><span class="bash"> 备份</span>
+mv /etc/yum.repos.d/CentOS-Base.repo/etc/yum.repos.d/CentOS-Base.repo.bck
+
+<span class="hljs-meta">#</span><span class="bash"> 下载替换源（依次为网易、阿里、中科大、搜狐）</span>
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.163.com/.help/CentOS7-Base-163.repo
+<span class="hljs-meta">#</span><span class="bash"> wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span>
+<span class="hljs-meta">#</span><span class="bash"> curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span>
+<span class="hljs-meta">#</span><span class="bash"> wget -O /etc/yum.repos.d/CentOS-Base.repo http://centos.ustc.edu.cn/CentOS-Base.repo</span>
+<span class="hljs-meta">#</span><span class="bash"> wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.sohu.com/<span class="hljs-built_in">help</span>/CentOS-Base-sohu.repo</span>
+
+<span class="hljs-meta">#</span><span class="bash"> 更新系统源数据库</span>
+yum clean all
+yum makecache
+yum repolist</code></pre>
+
+<p>当然，也可以用这种方法：</p>
+<pre><div class="caption"><span>使用命令修改网址，替换为清华yum源</span></div><code class="hljs shell">su
+sed -e &#x27;s|^mirrorlist=|#mirrorlist=|g&#x27; \
+         -e &#x27;s|^#baseurl=http://mirror.centos.org|baseurl=https://mirrors.tuna.tsinghua.edu.cn|g&#x27; \
+         -i.bak \
+         /etc/yum.repos.d/CentOS-*.repo</code></pre>
+
+
+
+<p>国内源是真的快，不用真的不知道！</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li>清华大学TUNA团队.<code>CentOS 镜像使用帮助</code>[EB/OL].<a href="https://mirrors.cnnic.cn/help/centos/">https://mirrors.cnnic.cn/help/centos/</a>, 2021/02/01.</li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>yum</tag>
+        <tag>国内源</tag>
+        <tag>CentOS</tag>
+        <tag>加速</tag>
+        <tag>下载</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python 使用 pip 国内源实现百倍加速下载</title>
     <url>/202101171117/</url>
     <content><![CDATA[<blockquote>
@@ -2728,68 +2808,17 @@ pip install Django          --pypi-mirror https://mirrors.aliyun.com/pypi/simple
         <category>编程笔记</category>
       </categories>
       <tags>
+        <tag>国内源</tag>
+        <tag>加速</tag>
+        <tag>下载</tag>
         <tag>pip</tag>
-        <tag>国内源</tag>
-        <tag>加速</tag>
-        <tag>下载</tag>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2021年随笔</title>
-    <url>/202101171157/</url>
-    <content><![CDATA[<h2 id="2021-01-28，辛苦"><a href="#2021-01-28，辛苦" class="headerlink" title="2021/01/28，辛苦"></a>2021/01/28，辛苦</h2><p>写论文凌晨，挺累的，有种长路漫漫之感。</p>
-]]></content>
-      <categories>
-        <category>星星心事</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-        <tag>2021</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CentOS 使用 yum 国内源实现加速下载</title>
-    <url>/202101171156/</url>
-    <content><![CDATA[<p>又是一年过去，忽然接到通知，要求更新一个之前做的展示系统，就想起来要更新一下系统。结果使用 <code>yum list kernel.x86_64</code> 提示 <code>Cannot find a valid baseurl for repo: base</code>。</p>
-<p>更换国内源也不行，看了<code>http://mirrors.163.com/centos/6.10/readme</code> 文件，发现官方自 2020/11/30 起就禁止 CentOS 6.x 更新了（文件被清空）。呜呜，真是后知后觉了！</p>
-<pre><code class="hljs shell">su
-cd /etc/yum.repos.d/
-cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.original
-    #系统是根据 Base*.repo 来判别基础源的，因此备份的时候必须修改扩展名
-
-gedit CentOS-Base.repo
-    #国外 http://vault.centos.org/6.10
-    #国内 http://mirrors.aliyun.com/centos-vault/6.10/；
-
-mv epel.repo epel.original
-gedit epel.repo 
-    #网址替换为 http://archives.fedoraproject.org/pub/archive/epel/6/x86_64/ 即可
-    # 国内（好像不行了） http://mirrors.aliyun.com/epel-archive/6/
-rm -f /var/run/yum.pid
-yum clean all
-yum makecache
-yum repolist</code></pre>
-
-<p>网友都喜欢用 vim ，我是普通人，我就是喜欢使用 gedit，替换一下上述文件就好了。</p>
-<p>你问我怎么更换国内源，方法就是上边这样了。至于国内源，可以了解一下清华、阿里云、网易、搜狐、中科大等，不再赘述了。</p>
-<p>国内源是真的快，不用真的不知道！</p>
-]]></content>
-      <categories>
-        <category>电脑爱好者</category>
-      </categories>
-      <tags>
-        <tag>国内源</tag>
-        <tag>加速</tag>
-        <tag>下载</tag>
-        <tag>yum</tag>
-        <tag>CentOS</tag>
       </tags>
   </entry>
   <entry>
     <title>写论文的苦你未必想尝一下</title>
     <url>/202101301128/</url>
-    <content><![CDATA[<p>最近 3 个星期，一直在忙着写论文，走路在想，吃饭在想，睡觉也在想，总感觉某个地方有个难关需要我去跨越，我到了附近，却一直没有发现，探索是很累的。</p>
+    <content><![CDATA[<p>最近 3 个星期，一直在忙着写论文，走路在想，吃饭在想，睡觉也在想，总感觉某个地方有个难关需要我去跨越，我到了附近，却一直没有发现；等到论文基本写出来后，发现写论文是挺辛苦的！</p>
 <h2 id="选题的苦"><a href="#选题的苦" class="headerlink" title="选题的苦"></a>选题的苦</h2><p>如果认真去做科研论文的话，选题是很苦的，因为是很难找到合适的题目的。</p>
 <p>我都工作快 10 年了，也就最近才有些灵感和题材。一个人很难独自拥有一些高大上的项目，我的工作是搬砖的，就很难去研究烧砖技术，更多的是考虑如何搬运、如何与人协作、如何做好工期管理等等。</p>
 <p>因此，好不容易在工作中，发挥了一些重要作用，在种种压力之下，准备去写论文；拟好了粗略的提纲，感觉去找一个知识数据库的账户，将同领域、同主题的文献找出来，一看，不好了，怎么这么多人都写了，多半只能放弃，就算不放弃，题材也很难写出新意来；水论文的人很多，可是自己扪心自问，那并不是我想要的，丢掉吧！</p>
@@ -2798,12 +2827,12 @@ yum repolist</code></pre>
 <h2 id="写作的苦"><a href="#写作的苦" class="headerlink" title="写作的苦"></a>写作的苦</h2><p>如果认真去做科研论文的话，写作的过程也是很苦的，因为写的东西不一定被人认可。</p>
 <p>工作的过程，事情做完就了事了；可是如果发论文，那么自己得将事情的来龙去脉、因果、主次、先后等等都弄明白。最近写的这个论文，是关于计算机技术的，在网络上、操作系统里、论文里，都有零零星星的表述，可是有些已经过期了，有些别人就写错了，有些别人提供的参数、程序、方法等等不适合实际情况，都得去一一验证，一一去比较，一一去部署，最近这两周，我的头一直很疼，因为有些试验尝试了十多次了，一次需要一两个小时；日常的工作仍然需要继续，家里儿女仍得操心，老家也有一些烦心事，新一年的工作仍然很迷茫，这一些都让我很为难。</p>
 <p>好不容易写出素材来了，还得修改文字；标题是否有吸引力，摘要是否清楚，翻译是否妥当，文章各级标题是否层次鲜明，各个段落的内容是否清楚明白、是否啰嗦繁杂、是否存在逻辑问题，得来回修改。</p>
-<p>感觉差不多了，得控制字数，不能太多，也不能太少；图片得自己去绘制，不然显示效果不好；图表得考虑，论文的相关指标能否让别人看得懂、评估得上等级。</p>
-<h2 id="发表的苦"><a href="#发表的苦" class="headerlink" title="发表的苦"></a>发表的苦</h2><p>好不容易有了内容，得开始寻找适当的杂志了。找了几个心仪的杂志，论文格式好好捯饬了一下，存了很多个版本格式，花了几天也完成了。</p>
+<p>感觉差不多了，得控制字数，不能太多，也不能太少；图片得自己去绘制，不然显示效果不好；图表得考虑，论文的相关指标能否让别人看得懂、评估得上等级。因此，各种修改也得耗好几个通宵！</p>
+<h2 id="发表的苦"><a href="#发表的苦" class="headerlink" title="发表的苦"></a>发表的苦</h2><p>如果认真去做科研论文的话，发表过程也是很辛苦的，因为得到好期刊的认可也是相当的困难的。好不容易有了内容，得开始寻找适当的杂志了。找了几个心仪的杂志，论文格式好好捯饬了一下，存了很多个版本格式，花了几天也完成了。</p>
 <p>自己一无人脉，二无平台，三无能力，核心期刊基本都很难；前一个论文我整整收了三年，投了多家期刊，有些是毫不客气的说水平不行，有些和和气气地说不符合杂志风格，有些啥也没说退稿回来。</p>
-<p>看着别人那么水，和自己发在同样的杂志上，并不知道自己来回倒腾是否有价值。其实杂志里边的论文多数都是过得去的，奈何偏偏有几个相熟的人凑了一些他从来没有弄清楚过的内容上去，也发表了，心里何其翻覆！</p>
-<p>这样一对比，再也不认为那些核心期刊里侃侃而谈的大家们徒有其表了，对比之下，自惭形秽不已。</p>
-<h2 id="成果的苦"><a href="#成果的苦" class="headerlink" title="成果的苦"></a>成果的苦</h2><p>很不容易地，论文发表了，可是好些平时不做事的同事，不知不觉地就发了好几篇论文，评选职称了，自己又显得落后了，这种苦真不是滋味！</p>
+<h2 id="成果的苦"><a href="#成果的苦" class="headerlink" title="成果的苦"></a>成果的苦</h2><p>如果认真去做科研论文的话，论文发表了也是很苦的，因为不是投入越大、回报越大。</p>
+<p>很不容易地，论文发表了，可是好些平时不做事的同事，不知不觉地就发了好几篇论文，评选职称了，自己又显得落后了，这种苦真不是滋味！</p>
+<p>看着别人那么水，和自己发在同样的杂志上，并不知道自己来回倒腾是否有价值。其实杂志里边的论文多数都是过得去的，奈何偏偏有几个相熟的人凑了一些他从来没有弄清楚过的内容上去，也发表了，心里何其翻覆！这样一对比，再也不认为那些核心期刊里侃侃而谈的大家们徒有其表了，而是自惭形秽不已。</p>
 <p>论文发表了，自己回忆起来，那个过程仍然是苦涩的，很长时间都挥之不去。可是，如果得到了认可，对别人也发挥了作用，那心里在很短的瞬间也是会有甘之如饴的愉悦的。</p>
 <p>其实，写论文不一定苦，苦的是放不下心里的结，随性一点的话，一切会好很多。春城冬暖，愿大家都能享受这美好的阳光。</p>
 ]]></content>
