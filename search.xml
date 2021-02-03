@@ -148,6 +148,8 @@
 </li>
 <li><p>2021/01/07 22:50:31，升级至 v0.2.5，增加搜狗站长收录、<code>hexo-generator-baidu-sitemap</code>  同时生成双站点地图的功能，调整百度统计脚本自动读取网站ID、通过JavaScript自动设置横幅的展示时间、表格内文本对齐样式、sitemap权值等功能。</p>
 </li>
+<li><p>2021/02/03 21:00:58，升级至 v0.2.6，增加Bing站长收录、<code>hexo-generator-baidu-sitemap</code>  站点地图增加 tags 、 categories 网址。</p>
+</li>
 </ol>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
 <li><p>﹏猴子请来的救兵.<code>Hexo主题开发</code>[EB/OL].<a href="https://www.cnblogs.com/yyhh/p/11058985.html">https://www.cnblogs.com/yyhh/p/11058985.html</a>, 2020/07/19.</p>
