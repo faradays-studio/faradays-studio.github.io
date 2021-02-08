@@ -46,7 +46,7 @@
 <meta property="og:description" content="编程, 思考, 文学作品, 实践, 总结">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-06-07T08:00:50.000Z">
-<meta property="article:modified_time" content="2021-02-03T13:01:50.040Z">
+<meta property="article:modified_time" content="2021-02-08T15:52:28.963Z">
 <meta property="article:author" content="David">
 <meta property="article:tag" content="日志">
 <meta property="article:tag" content="hexo">
@@ -78,7 +78,20 @@
 
 
 
+
 <script>
+
+
+var hmt_site = window.location.host;
+var isSite1 = 0;
+if ( hmt_site.indexOf("https://faradays-studio.gitee.io") != -1) {
+    isSite1 = 1;
+} else if ( hmt_site.indexOf("https://faradays-studio.github.io") != -1) {
+    isSite1 = 2;
+}
+
+
+
 
 window.onload = function () {
     var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart;
@@ -100,17 +113,21 @@ window.onload = function () {
 	var hmt_site = window.location.host;
 	(function() {
 	  var hm = document.createElement("script");
-	  if ( hmt_site.indexOf("gitee") != -1) {
+	  if (isSite1 == 1 && theme.site1.baidu.analytics ){
         hm.src = "//hm.baidu.com/hm.js?83a082b3997bdb4ac31a097af3ea3ea9";
-	  } else {
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      } else if (isSite1 == 2 && theme.site2.baidu.analytics ){
         hm.src = "//hm.baidu.com/hm.js?dae0d921cd647933e274acc38340fe61";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
 	  }
-	  var s = document.getElementsByTagName("script")[0];
-	  s.parentNode.insertBefore(hm, s);
 	})();
 	</script>
 
   
+
+
 
 
 
@@ -322,9 +339,11 @@ window.onload = function () {
 </li>
 <li><p>2021/02/03 21:00:58，升级至 v0.2.6，增加Bing站长收录、<code>hexo-generator-baidu-sitemap</code>  站点地图增加 tags 、 categories 网址。</p>
 </li>
+<li><p>2021/02/08 23:52:22，升级至 v0.2.7，增加 robots.txt ，实现主题文件配置主题色的功能，完善双站点判断及配置分离和部分布局细节。</p>
+</li>
 </ol>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li><p>﹏猴子请来的救兵.<code>Hexo主题开发</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.cnblogs.com/yyhh/p/11058985.html">https://www.cnblogs.com/yyhh/p/11058985.html</a>, 2020/07/19.</p>
+<li><p>\﹏猴子请来的救兵.<code>Hexo主题开发</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.cnblogs.com/yyhh/p/11058985.html">https://www.cnblogs.com/yyhh/p/11058985.html</a>, 2020/07/19.</p>
 <blockquote>
 <p>文章介绍的主题开发的内容，对于定制 Faradays 主题起了最初的启发意义。</p>
 </blockquote>
@@ -457,6 +476,8 @@ window.onload = function () {
 </li>
 <li><p>曾经沧海　云淡风轻.<code>SiteMap 提交，并使用正确的方式提交给搜索引擎</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.cnblogs.com/yifenghong/p/4418063.html">https://www.cnblogs.com/yifenghong/p/4418063.html</a>, 2021/01/03.</p>
 </li>
+<li><p>_好好编程_.``[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://blog.csdn.net/qw8880000/article/details/80235648">https://blog.csdn.net/qw8880000/article/details/80235648</a>, 2021/02/08.</p>
+</li>
 </ol>
 
             <div class="post-copyright">
@@ -465,11 +486,9 @@ window.onload = function () {
     <br /><br /><br />
     <div id="copyright-content" class="content">
         
-        <p>最后更新： 2021/02/03 21:01:50</p>
+        <p>最后更新： 2021/02/08 23:52:28</p>
         <p>
-
                 
-
                 
                     
                         
@@ -483,7 +502,6 @@ window.onload = function () {
                 
 
                 
-
         </p>
 
         
@@ -758,8 +776,6 @@ window.onload = function () {
 <script>
   // Tocbo  http://tscanlin.github.io/tocbot/
 </script>
-
-
 
 
 
@@ -1118,21 +1134,23 @@ var banner2 = "伟大的中华人民共和国万岁！伟大的中国共产党�
 //console.log(banner2);
 // test!="" && test!=null && test!=undefined
 var dv1 = document.getElementById("banner_x");
-if ( banner1 == "" ) {
-    if ( banner2 != ""  &&  day_start <= day0  &&  day_end >= day0 ) {
-        //console.log(dv1.innerHTML);
-        dv1.innerHTML = banner2;
-        //console.log(dv1.innerHTML);
-    } else {
-        dv1.style.display = "none";
-        //console.log("hide!\n");
+if ( dv1 != null ) {
+    if ( banner1 == "" ) {
+        if ( banner2 != ""  &&  day_start <= day0  &&  day_end >= day0 ) {
+            //console.log(dv1.innerHTML);
+            dv1.innerHTML = banner2;
+            //console.log(dv1.innerHTML);
+        } else {
+            dv1.style.display = "none";
+            //console.log("hide!\n");
+        }
     }
 }
 </script>
 
-  
-  
-  
+
+
+
     
     <script>
       
@@ -1203,18 +1221,23 @@ if ( banner1 == "" ) {
 
 <script>
 
-console.log("\nAll right reserved by Faradays' Studio.\n\n" + "All the codes licensed under GNU GPLv3.\n"
-          + "Send your request to yvany@qq.com and wait for your LICENSE CONFIRMATION email.\n"
-          + "See https://www.gnu.org/licenses/gpl-3.0.html for the license details.\n\n"
-          + "Click https://faradays-studio.gitee.io for my recent developments...\n\n");
-</script>
+
+if (isSite1 == 2){
+    console.log("\nAll right reserved by Faradays' Studio.\n\n" + "All the codes licensed under GNU GPLv3.\n"
+      + "Send your request to yvany@qq.com and wait for your LICENSE CONFIRMATION email.\n"
+      + "See https://www.gnu.org/licenses/gpl-3.0.html for the license details.\n\n"
+      + "Click https://faradays-studio.github.io for my recent developments...\n\n");
+} else {
+    console.log("\nAll right reserved by Faradays' Studio.\n\n" + "All the codes licensed under GNU GPLv3.\n"
+      + "Send your request to yvany@qq.com and wait for your LICENSE CONFIRMATION email.\n"
+      + "See https://www.gnu.org/licenses/gpl-3.0.html for the license details.\n\n"
+      + "Click https://faradays-studio.gitee.io for my recent developments...\n\n");
+}
 
 
-<script>
-    // HHJ@20200829，自动推送百度功能（当新页面每次被浏览时，页面URL会自动推送给百度，无需站长汇总URL再进行主动推送操作。）
-    // https://ziyuan.baidu.com/college/courseinfo?id=267&page=2#h2_article_title18
-    if ( false ){
-
+    console.log("站点ID号：" + isSite1);
+    if ((isSite1 == 1 && theme.site1.baidu.push)  || (isSite1 == 2 && theme.site2.baidu.push) ){
+        // https://ziyuan.baidu.com/college/courseinfo?id=267&page=2#h2_article_title18
         (function(){
             var bp = document.createElement('script');
             var curProtocol = window.location.protocol.split(':')[0];
@@ -1229,7 +1252,10 @@ console.log("\nAll right reserved by Faradays' Studio.\n\n" + "All the codes lic
 
         console.log("已开启百度 “普通收录》自动推送” 功能\n");
     }
+
+
 </script>
+
 
 <!--[if lt IE 9]>
 <script type="text/JavaScript">

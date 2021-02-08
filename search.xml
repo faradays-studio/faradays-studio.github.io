@@ -150,9 +150,11 @@
 </li>
 <li><p>2021/02/03 21:00:58，升级至 v0.2.6，增加Bing站长收录、<code>hexo-generator-baidu-sitemap</code>  站点地图增加 tags 、 categories 网址。</p>
 </li>
+<li><p>2021/02/08 23:52:22，升级至 v0.2.7，增加 robots.txt ，实现主题文件配置主题色的功能，完善双站点判断及配置分离和部分布局细节。</p>
+</li>
 </ol>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li><p>﹏猴子请来的救兵.<code>Hexo主题开发</code>[EB/OL].<a href="https://www.cnblogs.com/yyhh/p/11058985.html">https://www.cnblogs.com/yyhh/p/11058985.html</a>, 2020/07/19.</p>
+<li><p>\﹏猴子请来的救兵.<code>Hexo主题开发</code>[EB/OL].<a href="https://www.cnblogs.com/yyhh/p/11058985.html">https://www.cnblogs.com/yyhh/p/11058985.html</a>, 2020/07/19.</p>
 <blockquote>
 <p>文章介绍的主题开发的内容，对于定制 Faradays 主题起了最初的启发意义。</p>
 </blockquote>
@@ -284,6 +286,8 @@
 <li><p>wensonlee.<code>表格自动换行，避免撑开</code>[EB/OL].<a href="https://blog.csdn.net/wensonlee/article/details/83156892">https://blog.csdn.net/wensonlee/article/details/83156892</a>, 2020/10/09.</p>
 </li>
 <li><p>曾经沧海　云淡风轻.<code>SiteMap 提交，并使用正确的方式提交给搜索引擎</code>[EB/OL].<a href="https://www.cnblogs.com/yifenghong/p/4418063.html">https://www.cnblogs.com/yifenghong/p/4418063.html</a>, 2021/01/03.</p>
+</li>
+<li><p>_好好编程_.``[EB/OL].<a href="https://blog.csdn.net/qw8880000/article/details/80235648">https://blog.csdn.net/qw8880000/article/details/80235648</a>, 2021/02/08.</p>
 </li>
 </ol>
 ]]></content>
@@ -2818,7 +2822,7 @@ pip install Django          --pypi-mirror https://mirrors.aliyun.com/pypi/simple
       </tags>
   </entry>
   <entry>
-    <title>写论文的苦你未必想尝一下</title>
+    <title>写论文的苦，你未必想尝一下</title>
     <url>/202101301128/</url>
     <content><![CDATA[<p>最近 3 个星期，一直在忙着写论文，走路在想，吃饭在想，睡觉也在想，总感觉某个地方有个难关需要我去跨越，我到了附近，却一直没有发现；等到论文基本写出来后，发现写论文是挺辛苦的！</p>
 <h2 id="选题的苦"><a href="#选题的苦" class="headerlink" title="选题的苦"></a>选题的苦</h2><p>如果认真去做科研论文的话，选题是很苦的，因为是很难找到合适的题目的。</p>

@@ -1,0 +1,10 @@
+# Faradays' Studio
+User-agent: *
+Disallow:
+Disallow: /css/
+Disallow: /images/
+Disallow: /js/
+Disallow: /static/
+Disallow: /about/hid*.html
+Sitemap: https://faradays-studio.gitee.io/sitemap1.xml
+Sitemap: https://faradays-studio.github.io/sitemap2.xml
