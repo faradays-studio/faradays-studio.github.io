@@ -154,7 +154,7 @@
 </li>
 </ol>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li><p>\﹏猴子请来的救兵.<code>Hexo主题开发</code>[EB/OL].<a href="https://www.cnblogs.com/yyhh/p/11058985.html">https://www.cnblogs.com/yyhh/p/11058985.html</a>, 2020/07/19.</p>
+<li><p>﹏猴子请来的救兵.<code>Hexo主题开发</code>[EB/OL].<a href="https://www.cnblogs.com/yyhh/p/11058985.html">https://www.cnblogs.com/yyhh/p/11058985.html</a>, 2020/07/19.</p>
 <blockquote>
 <p>文章介绍的主题开发的内容，对于定制 Faradays 主题起了最初的启发意义。</p>
 </blockquote>
@@ -287,7 +287,12 @@
 </li>
 <li><p>曾经沧海　云淡风轻.<code>SiteMap 提交，并使用正确的方式提交给搜索引擎</code>[EB/OL].<a href="https://www.cnblogs.com/yifenghong/p/4418063.html">https://www.cnblogs.com/yifenghong/p/4418063.html</a>, 2021/01/03.</p>
 </li>
-<li><p>_好好编程_.``[EB/OL].<a href="https://blog.csdn.net/qw8880000/article/details/80235648">https://blog.csdn.net/qw8880000/article/details/80235648</a>, 2021/02/08.</p>
+<li><p><del>_好好编程_.<code>修改文章内链接样式 ｜ hexo</code>[EB/OL].<a href="https://blog.csdn.net/qw8880000/article/details/80235648">https://blog.csdn.net/qw8880000/article/details/80235648</a>, 2021/02/08.</del></p>
+</li>
+<li><p>Molunerfinn.<code>hexo-theme-melody：一个为Hexo打造的简洁、漂亮、快速的主题</code>[EB/OL].<a href="https://molunerfinn.com/hexo-theme-melody-doc/zh-Hans/">https://molunerfinn.com/hexo-theme-melody-doc/zh-Hans/</a>, 2021/02/08.~~</p>
+<blockquote>
+<p>这个主题写的挺好看，有空学习一下。</p>
+</blockquote>
 </li>
 </ol>
 ]]></content>
@@ -2125,6 +2130,12 @@ $(<span class="hljs-string">&#x27;a~b&#x27;</span>); <span class="hljs-comment">
 </li>
 <li><p>sparkdev.<code>常见 Bash 内置变量介绍</code>[EB/OL].<a href="https://www.cnblogs.com/sparkdev/p/9934595.html">https://www.cnblogs.com/sparkdev/p/9934595.html</a>, 2020/12/24.</p>
 </li>
+<li><p>361way.com.<code>ssh几个超时参数</code>[EB/OL].<a href="http://www.361way.com/ssh-autologout/4679.html">http://www.361way.com/ssh-autologout/4679.html</a>, 2020/12/24.</p>
+</li>
+<li><p>13070026王志东.<code>3种shell自动交互的方法</code>[EB/OL].<a href="https://www.cnblogs.com/evi10032/p/5455990.html">https://www.cnblogs.com/evi10032/p/5455990.html</a>, 2021/02/12.</p>
+</li>
+<li><p>Mykola Ulianytskyi.<code>Expect Download for Linux</code>[EB/OL].<a href="https://pkgs.org/download/expect">https://pkgs.org/download/expect</a>, 2021/02/12.</p>
+</li>
 </ol>
 <h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><ol>
 <li><p><a href="../202012201125">csh 、 bash 的基础语法对照：变量</a></p>
@@ -2561,6 +2572,8 @@ fi</code></pre></code></pre><h3 id="多条件逻辑运算"><a href="#多条件�
 
 <p> <img src="/static/img/20210108-virtualbox/1-%E5%B0%86VMDK%E7%A1%AC%E7%9B%98%E8%BD%AC%E6%8D%A2%E4%B8%BAVDI%E6%A0%BC%E5%BC%8F-2-HHJ-20210108.png" alt="将VMDK硬盘转换为VDI格式"></p>
 </li>
+</ol>
+<ol start="3">
 <li><p>将新磁盘关联到虚拟机中</p>
 <p> <img src="/static/img/20210108-virtualbox/2-%E5%B0%86VDI%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD%E5%88%B0%E7%B3%BB%E7%BB%9F%E4%B8%AD-HHJ-20210108.png" alt="将VDI硬盘挂载到系统中"></p>
 <p> <img src="/static/img/20210108-virtualbox/2-%E5%B0%86VDI%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD%E5%88%B0%E7%B3%BB%E7%BB%9F%E4%B8%AD-2-HHJ-20210108.png" alt="将VDI硬盘挂载到系统中"></p>
@@ -2593,6 +2606,35 @@ yum -y install zerofree</code></pre>
 </li>
 <li><p>在菜单末尾增加 <code>init=/bin/bash</code> 后 <code>Enter</code> 返回上级菜单</p>
 <p><img src="/static/img/20210108-virtualbox/5-%E5%9C%A8vmlinuz%E5%AD%97%E6%A0%B7%E7%9A%84%E8%8F%9C%E5%8D%95%E4%B8%AD%E7%BC%96%E8%BE%91%E5%A2%9E%E5%8A%A0init%E5%8F%82%E6%95%B0%EF%BC%88%E8%BF%9B%E5%85%A5%E6%95%91%E6%8F%B4%E6%A8%A1%E5%BC%8F%EF%BC%89-HHJ-20210108.png" alt="增加init参数以进入救援模式"></p>
+<table>
+<thead>
+<tr>
+<th>内核启动参数</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>init=/sbin/init</td>
+<td>告诉内核用 <code>/sbin/init</code> 作为它的 init 程序</td>
+<td></td>
+</tr>
+<tr>
+<td>init=/bin/bash</td>
+<td>只启动 bash，在紧急恢复时有用</td>
+<td>救援模式</td>
+</tr>
+<tr>
+<td>root=/dev/foo</td>
+<td>告诉内核用 <code>/dev/foo</code> 作为根设备</td>
+<td></td>
+</tr>
+<tr>
+<td>single</td>
+<td>引导进入单用户模式</td>
+<td>单用户模式</td>
+</tr>
+</tbody></table>
 </li>
 <li><p>然后按 <code>b</code> 重新启动系统</p>
 <p><img src="/static/img/20210108-virtualbox/6-%E4%BF%AE%E6%94%B9%E8%8F%9C%E5%8D%95%E5%AE%8C%E6%88%90%E5%90%8E%E6%8C%89b%E5%AD%97%E7%AC%A6%E5%90%AF%E5%8A%A8%E8%BF%9B%E5%85%A5%E7%B3%BB%E7%BB%9F-HHJ-20210108.png" alt="按b字符启动进入系统"></p>
@@ -2621,12 +2663,18 @@ zerofree -v /dev/sda3</code></pre>
 
 </li>
 </ol>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
 <li><p>mowkeeper.<code>VirtualBox压缩vdi文件</code>[EB/OL].<a href="http://mowblog.com/virtualbox%E5%8E%8B%E7%BC%A9vdi%E6%96%87%E4%BB%B6/">http://mowblog.com/virtualbox%E5%8E%8B%E7%BC%A9vdi%E6%96%87%E4%BB%B6/</a>, 2021/01/08.</p>
 </li>
 <li><p>Canonical Ltd.<code>Ubuntu Manpage: zerofree — zero free blocks from ext2, ext3 and ext4 file-systems</code>[EB/OL].<a href="http://manpages.ubuntu.com/manpages/hirsute/en/man8/zerofree.8.html">http://manpages.ubuntu.com/manpages/hirsute/en/man8/zerofree.8.html</a>, 2021/01/10.</p>
 </li>
 </ol>
+<h3 id="变更说明"><a href="#变更说明" class="headerlink" title="变更说明"></a>变更说明</h3><ul>
+<li><p>1.0.0，2021/01/19 20:55:03，初始版本。</p>
+</li>
+<li><p>1.0.1，2021/02/12 19:36:23，补充 Linux 内核启动参数表。</p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>电脑爱好者</category>
@@ -2706,7 +2754,10 @@ sed -e &#x27;s|^mirrorlist=|#mirrorlist=|g&#x27; \
 
 <p>国内源是真的快，不用真的不知道！</p>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li>清华大学TUNA团队.<code>CentOS 镜像使用帮助</code>[EB/OL].<a href="https://mirrors.cnnic.cn/help/centos/">https://mirrors.cnnic.cn/help/centos/</a>, 2021/02/01.</li>
+<li><p>清华大学TUNA团队.<code>CentOS 镜像使用帮助</code>[EB/OL].<a href="https://mirrors.cnnic.cn/help/centos/">https://mirrors.cnnic.cn/help/centos/</a>, 2021/02/01.</p>
+</li>
+<li><p>fogwu.<code>centos6 yum源失效，yum不可用处理方法及php环境搭建</code>[EB/OL].<a href="https://www.cnblogs.com/fogwang/p/14133970.html">https://www.cnblogs.com/fogwang/p/14133970.html</a>, 2021/02/01.</p>
+</li>
 </ol>
 ]]></content>
       <categories>
@@ -2850,6 +2901,77 @@ pip install Django          --pypi-mirror https://mirrors.aliyun.com/pypi/simple
         <tag>科研</tag>
         <tag>冷板凳</tag>
         <tag>苦</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux系统的多条件查询与匹配（待完善）</title>
+    <url>/202102122028/</url>
+    <content><![CDATA[<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>与</th>
+<th>或</th>
+<th>非</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>vim</td>
+<td>?<code>.*a</code>\&amp;<code>.*b</code></td>
+<td>?<code>a</code>\|<code>b</code></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>?<code>a</code>\&amp;<code>.*b</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>grep</td>
+<td>grep <code>&#39;pattern1&#39;</code> filename | grep <code>&#39;pattern2&#39;</code></td>
+<td>grep ‘<code>pattern1</code>\|<code>pattern2</code>‘ filename</td>
+<td>grep -v ‘<code>pattern</code>‘ filename</td>
+</tr>
+<tr>
+<td></td>
+<td>grep -E ‘<code>pattern1</code>.*<code>pattern2</code>‘ filename</td>
+<td>grep -E ‘<code>pattern1</code>|<code>pattern2</code>‘ filename</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>grep -E ‘<code>pattern1</code>.*<code>pattern2</code>|<code>pattern2</code>.*<code>pattern1</code>‘ filename</td>
+<td>grep -e ‘<code>pattern1</code> -e <code>pattern2</code>‘ filename</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>egrep ‘<code>pattern1</code>|<code>pattern2</code>‘ filename</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="使用案例"><a href="#使用案例" class="headerlink" title="使用案例"></a>使用案例</h2><ol>
+<li>查看 12 月份的错误信息：<code>grep</code> ‘<strong>error</strong>‘ /var/log/message <code>| grep</code> ‘<strong>Feb</strong> ‘</li>
+</ol>
+<p>待完善</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><p>夜之眷属.<code>vim中多条件查询</code>[EB/OL].<a href="https://blog.csdn.net/qq_28112995/article/details/106741835">https://blog.csdn.net/qq_28112995/article/details/106741835</a>, 2021/02/12.</p>
+</li>
+<li><p>stalin_.<code>Linux--使用grep命令进行多条件查询（AND，OR，NOT）</code>[EB/OL].<a href="https://blog.csdn.net/stalin_/article/details/81450633">https://blog.csdn.net/stalin_/article/details/81450633</a>, 2021/02/12.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+        <tag>Linux</tag>
+        <tag>多条件查询</tag>
+        <tag>vim</tag>
+        <tag>grep</tag>
       </tags>
   </entry>
 </search>

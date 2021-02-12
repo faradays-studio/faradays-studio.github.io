@@ -586,58 +586,63 @@ a {
 .mobile-header-tag-container #mobile-header-container-tags .color1:before,
 #sidebar-menu-box-tags .color1:before,
 #sidebar-menu-box-categories .color1:before {
+/* ����ɫ */
   border-right-color: #ffa500;
 }
 .article-footer-tags .color2,
 .mobile-header-tag-container #mobile-header-container-tags .color2,
 #sidebar-menu-box-tags .color2,
 #sidebar-menu-box-categories .color2 {
-  background: rgba(255,165,0,0.7);
+  background: rgba(255,165,0,0.8);
   opacity: 1;
 }
 .article-footer-tags .color2:before,
 .mobile-header-tag-container #mobile-header-container-tags .color2:before,
 #sidebar-menu-box-tags .color2:before,
 #sidebar-menu-box-categories .color2:before {
+/* ǳ�� */
   border-right-color: #ee6252;
 }
 .article-footer-tags .color3,
 .mobile-header-tag-container #mobile-header-container-tags .color3,
 #sidebar-menu-box-tags .color3,
 #sidebar-menu-box-categories .color3 {
-  background: #ffa500;
+  background: rgba(255,165,0,0.7);
   opacity: 1;
 }
 .article-footer-tags .color3:before,
 .mobile-header-tag-container #mobile-header-container-tags .color3:before,
 #sidebar-menu-box-tags .color3:before,
 #sidebar-menu-box-categories .color3:before {
+/* ��ɫ*/
   border-right-color: #4cae4c;
 }
 .article-footer-tags .color4,
 .mobile-header-tag-container #mobile-header-container-tags .color4,
 #sidebar-menu-box-tags .color4,
 #sidebar-menu-box-categories .color4 {
-  background: #ffa500;
+  background: rgba(255,165,0,0.6);
   opacity: 1;
 }
 .article-footer-tags .color4:before,
 .mobile-header-tag-container #mobile-header-container-tags .color4:before,
 #sidebar-menu-box-tags .color4:before,
 #sidebar-menu-box-categories .color4:before {
+/* ���ɫ */
   border-right-color: #e23794;
 }
 .article-footer-tags .color5,
 .mobile-header-tag-container #mobile-header-container-tags .color5,
 #sidebar-menu-box-tags .color5,
 #sidebar-menu-box-categories .color5 {
-  background: #ffa500;
+  background: rgba(255,165,0,0.5);
   opacity: 1;
 }
 .article-footer-tags .color5:before,
 .mobile-header-tag-container #mobile-header-container-tags .color5:before,
 #sidebar-menu-box-tags .color5:before,
 #sidebar-menu-box-categories .color5:before {
+/* ������ */
   border-right-color: #f0ad4e;
 }
 .article-title,
