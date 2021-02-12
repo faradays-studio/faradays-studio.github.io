@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	
 	<url>
+		<loc>https://faradays-studio.gitee.ioabout/hidden-change_log%E3%80%90hexo-theme-faradays%E3%80%91.html</loc>
+		<lastmod>2021-02-12</lastmod>
+		
+	</url>
+	
+	<url>
 		<loc>https://faradays-studio.gitee.io202102122028/</loc>
 		<lastmod>2021-02-12</lastmod>
 		
@@ -22,12 +28,6 @@
 	<url>
 		<loc>https://faradays-studio.gitee.io202101101604/</loc>
 		<lastmod>2021-02-12</lastmod>
-		
-	</url>
-	
-	<url>
-		<loc>https://faradays-studio.gitee.ioabout/hidden-change_log%E3%80%90hexo-theme-faradays%E3%80%91.html</loc>
-		<lastmod>2021-02-09</lastmod>
 		
 	</url>
 	

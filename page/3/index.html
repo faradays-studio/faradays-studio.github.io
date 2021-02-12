@@ -67,9 +67,9 @@
 
 var hmt_site = window.location.host;
 var isSite1 = 0;
-if ( hmt_site.indexOf("https://faradays-studio.gitee.io") != -1) {
+if ( hmt_site.indexOf( "https://faradays-studio.gitee.io".substr(8) ) != -1) {
     isSite1 = 1;
-} else if ( hmt_site.indexOf("https://faradays-studio.github.io") != -1) {
+} else if ( hmt_site.indexOf( "https://faradays-studio.github.io".substr(8) ) != -1) {
     isSite1 = 2;
 }
 
