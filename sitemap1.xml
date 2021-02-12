@@ -497,6 +497,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://faradays-studio.gitee.io/tags/svg-js/</loc>
+    <lastmod>2021/2/12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://faradays-studio.gitee.io/categories/English/</loc>
     <lastmod>2021/2/12</lastmod>
     <changefreq>weekly</changefreq>
