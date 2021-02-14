@@ -702,20 +702,38 @@ $git push origin my_test:my_test
 
     
     <script>
-    
-    const gitalk = new Gitalk({
-        clientID: '90b449ff273a263117ec',
-        clientSecret: '0a3ccea67a4d3f03cbff012eeac1a8547e367aad',
-        repo: 'faradays-studio.github.io',      
-        owner: 'faradays-studio',
-        admin: ['faradays-studio'],
-        id: location.pathname, 
-        labels: ['gitalk', 'post-comment', '博客评论'],
-        perPage: 3,
-        distractionFreeMode: false  
-        })
 
-        gitalk.render('gitalk-faradays')
+    if (isSite1 == 2){
+        // github 站
+        
+        const gitalk = new Gitalk({
+            clientID: '90b449ff273a263117ec',
+            clientSecret: '0a3ccea67a4d3f03cbff012eeac1a8547e367aad',
+            repo: 'faradays-studio.github.io',      
+            owner: 'faradays-studio',
+            admin: ['faradays-studio'],
+            id: location.pathname, 
+            labels: ['gitalk', 'post-comment', '博客评论'],
+            perPage: 3,
+            distractionFreeMode: false  
+            })
+    } else {
+        // gitee 站
+         
+        const gitalk = new Gitalk({
+            clientID: 'c2b078c0b4799f519b96',
+            clientSecret: 'fab5fe7470b3d790db0e90e4ac58d5b5aa3bda11',
+            repo: 'faradays-studio.github.io',      
+            owner: 'faradays-studio',
+            admin: ['faradays-studio'],
+            id: location.pathname, 
+            labels: ['gitalk', 'post-comment', '博客评论'],
+            perPage: 3,
+            distractionFreeMode: false  
+            })
+    }
+    gitalk.render('gitalk-faradays')
+
     </script>
     
     
