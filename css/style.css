@@ -166,14 +166,14 @@ a.toc-link {
   display: table-row;
 }
 .timeline2-article-header > a,
-.timeline2-article-header > h2 {
+.timeline2-article-header > h3 {
   display: table-cell;
 }
-.timeline2-article-header h2 {
+.timeline2-article-header h3 {
   margin: 0;
   padding-left: 3rem;
 }
-.timeline2-article-header h2 .timeline2-article-title {
+.timeline2-article-header h3 .timeline2-article-title {
   text-decoration: none;
   font-size: 1.3rem;
 }

@@ -38,15 +38,15 @@
 
 
 
-  <meta name="description" content="编程, 思考, 文学作品, 实践, 总结">
+  <meta name="description" content="系统更新日志 2020&#x2F;04&#x2F;19 16:02:08，创建《更新日志》；  2020&#x2F;04&#x2F;19 21:47:44，创建 hexo 站点，基于 MiHo 主题揉入 Ayer  主题定制博客主题；整合原有静态网站，并入站点中跳转。  2020&#x2F;04&#x2F;22 0:54:40，修改 URL 设置，修改《如何使用 svg.js 创建 svg 文档》文章内容为中文。  2020&#x2F;04&#x2F;22 21:50:16，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Faradays&#39; Studio 站点更新概要">
 <meta property="og:url" content="https://faradays-studio.gitee.io/202006071600/index.html">
 <meta property="og:site_name" content="Blog of Faradays&#39; Studio">
-<meta property="og:description" content="编程, 思考, 文学作品, 实践, 总结">
+<meta property="og:description" content="系统更新日志 2020&#x2F;04&#x2F;19 16:02:08，创建《更新日志》；  2020&#x2F;04&#x2F;19 21:47:44，创建 hexo 站点，基于 MiHo 主题揉入 Ayer  主题定制博客主题；整合原有静态网站，并入站点中跳转。  2020&#x2F;04&#x2F;22 0:54:40，修改 URL 设置，修改《如何使用 svg.js 创建 svg 文档》文章内容为中文。  2020&#x2F;04&#x2F;22 21:50:16，">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-06-07T08:00:50.000Z">
-<meta property="article:modified_time" content="2021-02-12T14:13:03.163Z">
+<meta property="article:modified_time" content="2021-02-14T13:58:20.544Z">
 <meta property="article:author" content="David">
 <meta property="article:tag" content="日志">
 <meta property="article:tag" content="hexo">
@@ -59,7 +59,6 @@
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
   
-  <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
    
 
 
@@ -67,10 +66,8 @@
     
     <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
     <link rel="stylesheet" href="/css/github.min.css">
-    <!-- <link rel="stylesheet" href="/css/github.min.css"> -->
-    <!-- 
-<link rel="stylesheet" href="/css/github.min.css">
- -->
+    
+
 
     
     <!-- import 'gitalk/dist/gitalk.css' -->
@@ -151,7 +148,7 @@ window.onload = function () {
 
 
 
-<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
 </head>
 
 
@@ -269,7 +266,7 @@ window.onload = function () {
             
                 
                 
-                    <a target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/">David Faraday</a>
+                    <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
 
                     
 
@@ -293,10 +290,10 @@ window.onload = function () {
 
         
         <li><i class="fa fa-file-word-o"></i>
-            <span class="post-count">2.6k words</span>
+            <span class="post-count">2.8k words</span>
         </li>
         <li><i class="fa fa-caret-square-o-right"></i>
-            <span class="post-count">10 min</span>
+            <span class="post-count">12 min</span>
         </li>
       </ul>
 
@@ -315,7 +312,7 @@ window.onload = function () {
             <h2 id="系统更新日志"><a href="#系统更新日志" class="headerlink" title="系统更新日志"></a>系统更新日志</h2><ol>
 <li><p>2020/04/19 16:02:08，创建《更新日志》；</p>
 </li>
-<li><p>2020/04/19 21:47:44，整合原有静态网站，并入站点中跳转。</p>
+<li><p>2020/04/19 21:47:44，创建 hexo 站点，基于 <a target="_blank" rel="noopener" href="https://github.com/WongMinHo/hexo-theme-miho">MiHo</a> 主题揉入 <a target="_blank" rel="noopener" href="https://github.com/Shen-Yu/hexo-theme-ayer">Ayer</a>  主题定制博客主题；整合原有静态网站，并入站点中跳转。</p>
 </li>
 <li><p>2020/04/22 0:54:40，修改 URL 设置，修改《如何使用 svg.js 创建 svg 文档》文章内容为中文。</p>
 </li>
@@ -363,146 +360,157 @@ window.onload = function () {
 </li>
 <li><p>2021/02/12 22:11:37，升级至 v0.2.8，增加 Bing 统计功能，纠正站点 ID 算法的不足（<strong>目前多站点分别统计的脚本生成功能仍不够完善，须下一步研究</strong>）。</p>
 </li>
+<li><p>2021/02/14 21:58:16，升级至 v0.2.9，增加 giteement 评论、时间轴页导航目录功能，调整gitalk 资源为本地版本以提高国内访问速率（可选）、highlight关闭hexo渲染而使用独立的js脚本以确保着色正确性（关闭hexo自身的语言检测功能将减少1s的文件加载时间）等功能。</p>
+</li>
 </ol>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li><p>﹏猴子请来的救兵.<code>Hexo主题开发</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.cnblogs.com/yyhh/p/11058985.html">https://www.cnblogs.com/yyhh/p/11058985.html</a>, 2020/07/19.</p>
+<li><p>﹏猴子请来的救兵.<code>Hexo主题开发</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.cnblogs.com/yyhh/p/11058985.html">https://www.cnblogs.com/yyhh/p/11058985.html</a>, 2020/07/19.</p>
 <blockquote>
 <p>文章介绍的主题开发的内容，对于定制 Faradays 主题起了最初的启发意义。</p>
 </blockquote>
 </li>
-<li><p>梅卫平.<code>Hexo博客实现首页和子页面不同layout布局</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://my.oschina.net/u/3372900/blog/911534">https://my.oschina.net/u/3372900/blog/911534</a>, 2020/07/19.</p>
+<li><p>梅卫平.<code>Hexo博客实现首页和子页面不同layout布局</code>[EB/OL].<a target="_blank" rel="noopener" href="https://my.oschina.net/u/3372900/blog/911534">https://my.oschina.net/u/3372900/blog/911534</a>, 2020/07/19.</p>
 <blockquote>
 <p>参考该文章，分离首页和文章页的样式。</p>
 </blockquote>
 </li>
-<li><p>MinHow.<code>MiHo-主题安装和配置详情</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://blog.minhow.com/articles/blog/installation-configuration/">https://blog.minhow.com/articles/blog/installation-configuration/</a>, 2020/07/19.</p>
+<li><p>MinHow.<code>MiHo-主题安装和配置详情</code>[EB/OL].<a target="_blank" rel="noopener" href="https://blog.minhow.com/articles/blog/installation-configuration/">https://blog.minhow.com/articles/blog/installation-configuration/</a>, 2020/07/19.</p>
 <blockquote>
 <p>网站主题基于 MiHo 修改，揉入了 Ayer、3-hexo 等主题的特色。在此，特别提出感谢！</p>
 </blockquote>
 </li>
-<li><p>沈宇.<code>Ayer中文说明</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://shen-yu.gitee.io/2019/ayer/">https://shen-yu.gitee.io/2019/ayer/</a>, 2020/07/19.</p>
+<li><p>沈宇.<code>Ayer中文说明</code>[EB/OL].<a target="_blank" rel="noopener" href="https://shen-yu.gitee.io/2019/ayer/">https://shen-yu.gitee.io/2019/ayer/</a>, 2020/07/19.</p>
 <blockquote>
 <p>网站主题参考了部分 Ayer 的设计思路。</p>
 </blockquote>
 </li>
-<li><p>MOxFIVE.<code>Yelee —— 简而不减 Hexo 双栏博客主题</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="http://moxfive.xyz/yelee/">http://moxfive.xyz/yelee/</a>, 2020/08/22.</p>
+<li><p>MOxFIVE.<code>Yelee —— 简而不减 Hexo 双栏博客主题</code>[EB/OL].<a target="_blank" rel="noopener" href="http://moxfive.xyz/yelee/">http://moxfive.xyz/yelee/</a>, 2020/08/22.</p>
 </li>
-<li><p>Tom-shushu.<code>一款超好用的第三方评论插件--GITALK</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.cnblogs.com/Tom-shushu/p/10970526.html">https://www.cnblogs.com/Tom-shushu/p/10970526.html</a>, 2020/08/22.</p>
+<li><p>Tom-shushu.<code>一款超好用的第三方评论插件--GITALK</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.cnblogs.com/Tom-shushu/p/10970526.html">https://www.cnblogs.com/Tom-shushu/p/10970526.html</a>, 2020/08/22.</p>
 <blockquote>
 <p>参考该文章完成 gitalk 配置。</p>
 </blockquote>
 </li>
-<li><p>Tommy Chen, HEXO官方文档.<code>hexo 变量</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://hexo.io/zh-cn/docs/variables.html">https://hexo.io/zh-cn/docs/variables.html</a>, 2020/08/22.</p>
+<li><p>Tommy Chen, HEXO官方文档.<code>hexo 变量</code>[EB/OL].<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/variables.html">https://hexo.io/zh-cn/docs/variables.html</a>, 2020/08/22.</p>
 <blockquote>
 <p>非常有意义的官方文章。</p>
 </blockquote>
 </li>
-<li><p>Tommy Chen, HEXO官方文档.<code>hexo 辅助函数（Helpers）</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://hexo.io/zh-cn/docs/helpers">https://hexo.io/zh-cn/docs/helpers</a>, 2020/08/22.</p>
+<li><p>Tommy Chen, HEXO官方文档.<code>hexo 辅助函数（Helpers）</code>[EB/OL].<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/helpers">https://hexo.io/zh-cn/docs/helpers</a>, 2020/08/22.</p>
 <blockquote>
 <p>非常有意义的官方文章。</p>
 </blockquote>
 </li>
-<li><p>菜鸟教程.<code>Font Awesome 参考手册</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/font-awesome/fontawesome-reference.html">https://www.runoob.com/font-awesome/fontawesome-reference.html</a>, 2020/08/23.</p>
+<li><p>菜鸟教程.<code>Font Awesome 参考手册</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.runoob.com/font-awesome/fontawesome-reference.html">https://www.runoob.com/font-awesome/fontawesome-reference.html</a>, 2020/08/23.</p>
 <blockquote>
 <p>参考调整部分图标。</p>
 </blockquote>
 </li>
-<li><p><del>杨玉杰.<code>Hexo 主题 3-hexo</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://yelog.org/2017/03/07/3-hexo/">https://yelog.org/2017/03/07/3-hexo/</a>, 2020/08/23.</del></p>
+<li><p><del>杨玉杰.<code>Hexo 主题 3-hexo</code>[EB/OL].<a target="_blank" rel="noopener" href="https://yelog.org/2017/03/07/3-hexo/">https://yelog.org/2017/03/07/3-hexo/</a>, 2020/08/23.</del></p>
 <blockquote>
 <p>作者也多年来进行了主题的研究，有空可以参照思考。</p>
 </blockquote>
 </li>
-<li><p>动力节点.<code>CSS八种让人眼前一亮的HOVER效果</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://zhuanlan.zhihu.com/p/188620420">https://zhuanlan.zhihu.com/p/188620420</a>, 2020/08/23.</p>
+<li><p>动力节点.<code>CSS八种让人眼前一亮的HOVER效果</code>[EB/OL].<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/188620420">https://zhuanlan.zhihu.com/p/188620420</a>, 2020/08/23.</p>
 <blockquote>
 <p>参考完成了霓虹效果。</p>
 </blockquote>
 </li>
-<li><p>chalkit.<code>修改hexo sitemap 生成插件中的链接模板</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.jianshu.com/p/7f7f81e3ab24">https://www.jianshu.com/p/7f7f81e3ab24</a>, 2020/08/28.</p>
+<li><p>chalkit.<code>修改hexo sitemap 生成插件中的链接模板</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/7f7f81e3ab24">https://www.jianshu.com/p/7f7f81e3ab24</a>, 2020/08/28.</p>
 <blockquote>
 <p>参考配置形成两个站点分别使用的 sitemap 文件。</p>
 </blockquote>
 </li>
-<li><p>ha_weii.<code>hexo文件参数及其相关说明</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.jianshu.com/p/d1dedae4d970">https://www.jianshu.com/p/d1dedae4d970</a>, 2020/08/28.</p>
+<li><p>ha_weii.<code>hexo文件参数及其相关说明</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/d1dedae4d970">https://www.jianshu.com/p/d1dedae4d970</a>, 2020/08/28.</p>
 <blockquote>
 <p>该文章提到的主题配置文件 <code>_config.yml</code> 的参数含义，可以后期研究一下，也与阅读官方部分功能说明时形成印证效果。</p>
 </blockquote>
 </li>
-<li><p>kobe1700.<code>hexo-theme-snippet</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://gitee.com/kobe1700/hexo-theme-snippet">https://gitee.com/kobe1700/hexo-theme-snippet</a>, 2020/08/29.</p>
+<li><p><del>kobe1700.<code>hexo-theme-snippet</code>[EB/OL].<a target="_blank" rel="noopener" href="https://gitee.com/kobe1700/hexo-theme-snippet">https://gitee.com/kobe1700/hexo-theme-snippet</a>, 2020/08/29.</del></p>
 <blockquote>
 <p>设置文章过期等做法可以参考</p>
 </blockquote>
 </li>
-<li><p><del>Houmin.<code>Hexo NexT 添加多级相册功能</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://houmin.cc/posts/d487dd02/">https://houmin.cc/posts/d487dd02/</a>, 2020/08/29.</del></p>
+<li><p><del>Houmin.<code>Hexo NexT 添加多级相册功能</code>[EB/OL].<a target="_blank" rel="noopener" href="https://houmin.cc/posts/d487dd02/">https://houmin.cc/posts/d487dd02/</a>, 2020/08/29.</del></p>
 <blockquote>
 <p>文章提出了设置多级相册的方法，很有意思。</p>
 </blockquote>
 </li>
-<li><p>胖逆的嘟嘟.<code>hexo干货系列：（六）hexo提交搜索引擎（百度+谷歌）</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.cnblogs.com/tengj/p/5357879.html">https://www.cnblogs.com/tengj/p/5357879.html</a>, 2020/08/29.</p>
+<li><p>胖逆的嘟嘟.<code>hexo干货系列：（六）hexo提交搜索引擎（百度+谷歌）</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.cnblogs.com/tengj/p/5357879.html">https://www.cnblogs.com/tengj/p/5357879.html</a>, 2020/08/29.</p>
 <blockquote>
 <p>参照设置自动推送方法。</p>
 </blockquote>
 </li>
-<li><p>百度资源搜索平台.<code>平台工具使用帮助-链接提交</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://ziyuan.baidu.com/college/courseinfo?id=267&amp;page=2">https://ziyuan.baidu.com/college/courseinfo?id=267&amp;page=2</a>, 2020/08/29.</p>
+<li><p>百度资源搜索平台.<code>平台工具使用帮助-链接提交</code>[EB/OL].<a target="_blank" rel="noopener" href="https://ziyuan.baidu.com/college/courseinfo?id=267&amp;page=2">https://ziyuan.baidu.com/college/courseinfo?id=267&amp;page=2</a>, 2020/08/29.</p>
 <blockquote>
 <p>文章提出，百度自动推送功能已暂停使用。</p>
 </blockquote>
 </li>
-<li><p>叶少翔.<code>js统计页面加载时间</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://blog.csdn.net/jiangzunshao/article/details/53040785">https://blog.csdn.net/jiangzunshao/article/details/53040785</a>, 2020/08/30.</p>
+<li><p>叶少翔.<code>js统计页面加载时间</code>[EB/OL].<a target="_blank" rel="noopener" href="https://blog.csdn.net/jiangzunshao/article/details/53040785">https://blog.csdn.net/jiangzunshao/article/details/53040785</a>, 2020/08/30.</p>
 <blockquote>
 <p>参照设置了了页面加载的时间计算脚本。</p>
 </blockquote>
 </li>
-<li><p>周思伟.<code>hexo-theme-yilia-plus</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://github.com/JoeyBling/hexo-theme-yilia-plus">https://github.com/JoeyBling/hexo-theme-yilia-plus</a>, 2020/08/30.</p>
+<li><p>周思伟.<code>hexo-theme-yilia-plus</code>[EB/OL].<a target="_blank" rel="noopener" href="https://github.com/JoeyBling/hexo-theme-yilia-plus">https://github.com/JoeyBling/hexo-theme-yilia-plus</a>, 2020/08/30.</p>
 <blockquote>
 <p>这个主题关于组件的集成思路可以参考。</p>
 </blockquote>
 </li>
-<li><p>恶魔萝莉控.<code>给博客添加夜间模式</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://nocilol.me/archives/code/add-night-mode-to-blog/">https://nocilol.me/archives/code/add-night-mode-to-blog/</a>, 2020/09/05.</p>
+<li><p>恶魔萝莉控.<code>给博客添加夜间模式</code>[EB/OL].<a target="_blank" rel="noopener" href="https://nocilol.me/archives/code/add-night-mode-to-blog/">https://nocilol.me/archives/code/add-night-mode-to-blog/</a>, 2020/09/05.</p>
 <blockquote>
 <p>参考这个设置了主题夜间模式的脚本。</p>
 </blockquote>
 </li>
-<li><p><del>crosschannel.cc.<code>面向小白的Hexo添加暗色模式教程</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://crosschannel.cc/daily/hexo%E6%B7%BB%E5%8A%A0%E6%9A%97%E8%89%B2%E6%A8%A1%E5%BC%8F.html">https://crosschannel.cc/daily/hexo%E6%B7%BB%E5%8A%A0%E6%9A%97%E8%89%B2%E6%A8%A1%E5%BC%8F.html</a>, 2020/09/05.</del></p>
+<li><p><del>crosschannel.cc.<code>面向小白的Hexo添加暗色模式教程</code>[EB/OL].<a target="_blank" rel="noopener" href="https://crosschannel.cc/daily/hexo%E6%B7%BB%E5%8A%A0%E6%9A%97%E8%89%B2%E6%A8%A1%E5%BC%8F.html">https://crosschannel.cc/daily/hexo%E6%B7%BB%E5%8A%A0%E6%9A%97%E8%89%B2%E6%A8%A1%E5%BC%8F.html</a>, 2020/09/05.</del></p>
 <blockquote>
 <p>该文章提出了使用媒体查询的方式来切换夜间模式，可以参考，下一步研究。</p>
 </blockquote>
 </li>
-<li><p><del>小康.<code>Hexo博客之butterfly主题优雅魔改系列（持续更新）</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.antmoe.com/posts/a811d614/index.html">https://www.antmoe.com/posts/a811d614/index.html</a>, 2020/09/05.</del></p>
+<li><p><del>小康.<code>Hexo博客之butterfly主题优雅魔改系列（持续更新）</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.antmoe.com/posts/a811d614/index.html">https://www.antmoe.com/posts/a811d614/index.html</a>, 2020/09/05.</del></p>
 <blockquote>
 <p>作者的魔改主题，有空可以研究。</p>
 </blockquote>
 </li>
-<li><p><del>阳光派Plus.<code>hexo之Volantis添加暗黑模式</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.zyoushuo.cn/post/e8f5.html">https://www.zyoushuo.cn/post/e8f5.html</a>, 2020/09/05.</del></p>
+<li><p><del>阳光派Plus.<code>hexo之Volantis添加暗黑模式</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.zyoushuo.cn/post/e8f5.html">https://www.zyoushuo.cn/post/e8f5.html</a>, 2020/09/05.</del></p>
 <blockquote>
 <p>　作者的切换模式的动画，很有特色。</p>
 </blockquote>
 </li>
-<li><p>菜鸟教程.<code>HTML DOM getElementsByClassName() 方法</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jsref/met-document-getelementsbyclassname.html">https://www.runoob.com/jsref/met-document-getelementsbyclassname.html</a>, 2020/09/06.</p>
+<li><p>菜鸟教程.<code>HTML DOM getElementsByClassName() 方法</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.runoob.com/jsref/met-document-getelementsbyclassname.html">https://www.runoob.com/jsref/met-document-getelementsbyclassname.html</a>, 2020/09/06.</p>
 <blockquote>
 <p>通过该文章，学会对获取的元素进行长度处理，避免没有元素却执行 remove 的操作。</p>
 </blockquote>
 </li>
-<li><p>葵花点穴手.<code>div onload事件</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://blog.csdn.net/skylzc/article/details/79436336">https://blog.csdn.net/skylzc/article/details/79436336</a>, 2020/09/06.</p>
+<li><p>葵花点穴手.<code>div onload事件</code>[EB/OL].<a target="_blank" rel="noopener" href="https://blog.csdn.net/skylzc/article/details/79436336">https://blog.csdn.net/skylzc/article/details/79436336</a>, 2020/09/06.</p>
 <blockquote>
 <p>The onload event can only be used on the document(body) itself, frames, images, and scripts. In other words, it can be attached to only body and/or each external resource. The div is not an external resource and it’s loaded as part of the body, so the onload event doesn’t apply there.<br>onload event it only supports with few tags like listed below: <code>&lt;body&gt;, &lt;frame&gt;, &lt;iframe&gt;, &lt;img&gt;, &lt;input type=&quot;image&quot;&gt;, &lt;link&gt;, &lt;script&gt;, &lt;style&gt;</code> .<br>参考该文章，解决了灰暗模式的加载问题。</p>
 </blockquote>
 </li>
-<li><p>Mozilla.<code>list-style-type</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/list-style-type">https://developer.mozilla.org/zh-CN/docs/Web/CSS/list-style-type</a>, 2020/10/08.</p>
+<li><p>Mozilla.<code>list-style-type</code>[EB/OL].<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/list-style-type">https://developer.mozilla.org/zh-CN/docs/Web/CSS/list-style-type</a>, 2020/10/08.</p>
 <blockquote>
 <p>多级列表前导符号、数字的 list-style-type 属性。</p>
 </blockquote>
 </li>
-<li><p>腾讯寻人.<code>公益 404 页面介绍</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.qq.com/404/">https://www.qq.com/404/</a>, 2020/10/08.</p>
+<li><p>腾讯寻人.<code>公益 404 页面介绍</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.qq.com/404/">https://www.qq.com/404/</a>, 2020/10/08.</p>
 </li>
-<li><p>wensonlee.<code>表格自动换行，避免撑开</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://blog.csdn.net/wensonlee/article/details/83156892">https://blog.csdn.net/wensonlee/article/details/83156892</a>, 2020/10/09.</p>
+<li><p>wensonlee.<code>表格自动换行，避免撑开</code>[EB/OL].<a target="_blank" rel="noopener" href="https://blog.csdn.net/wensonlee/article/details/83156892">https://blog.csdn.net/wensonlee/article/details/83156892</a>, 2020/10/09.</p>
 </li>
-<li><p>曾经沧海　云淡风轻.<code>SiteMap 提交，并使用正确的方式提交给搜索引擎</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.cnblogs.com/yifenghong/p/4418063.html">https://www.cnblogs.com/yifenghong/p/4418063.html</a>, 2021/01/03.</p>
+<li><p>曾经沧海　云淡风轻.<code>SiteMap 提交，并使用正确的方式提交给搜索引擎</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.cnblogs.com/yifenghong/p/4418063.html">https://www.cnblogs.com/yifenghong/p/4418063.html</a>, 2021/01/03.</p>
 </li>
-<li><p><del>_好好编程_.<code>修改文章内链接样式 ｜ hexo</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://blog.csdn.net/qw8880000/article/details/80235648">https://blog.csdn.net/qw8880000/article/details/80235648</a>, 2021/02/08.</del></p>
+<li><p><del>_好好编程_.<code>修改文章内链接样式 ｜ hexo</code>[EB/OL].<a target="_blank" rel="noopener" href="https://blog.csdn.net/qw8880000/article/details/80235648">https://blog.csdn.net/qw8880000/article/details/80235648</a>, 2021/02/08.</del></p>
 </li>
-<li><p>Molunerfinn.<code>hexo-theme-melody：一个为Hexo打造的简洁、漂亮、快速的主题</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://molunerfinn.com/hexo-theme-melody-doc/zh-Hans/">https://molunerfinn.com/hexo-theme-melody-doc/zh-Hans/</a>, 2021/02/08.~~</p>
+<li><p><del>Molunerfinn.<code>hexo-theme-melody：一个为Hexo打造的简洁、漂亮、快速的主题</code>[EB/OL].<a target="_blank" rel="noopener" href="https://molunerfinn.com/hexo-theme-melody-doc/zh-Hans/">https://molunerfinn.com/hexo-theme-melody-doc/zh-Hans/</a>, 2021/02/08.</del></p>
 <blockquote>
 <p>这个主题写的挺好看，有空学习一下。</p>
+</blockquote>
+</li>
+<li><p>試毅-思伟.<code>Hexo博客集成码云评论系统</code>[EB/OL].<a target="_blank" rel="noopener" href="https://zhousiwei.gitee.io/2019/07/25/Hexo%E5%8D%9A%E5%AE%A2%E9%9B%86%E6%88%90%E7%A0%81%E4%BA%91%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">https://zhousiwei.gitee.io/2019/07/25/Hexo%E5%8D%9A%E5%AE%A2%E9%9B%86%E6%88%90%E7%A0%81%E4%BA%91%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</a>, 2021/02/12.</p>
+</li>
+<li><p>搜狐公司.<code>（畅言云评）PC端 通用代码接入</code>[EB/OL].<a target="_blank" rel="noopener" href="http://changyan.kuaizhan.com/static/help/">http://changyan.kuaizhan.com/static/help/</a>, 2021/02/13.</p>
+</li>
+<li><p>魏蕊蕊@贝壳找房.<code>tocbot源码解读</code>[EB/OL].<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/ZWYgh7j_AvbgDcrL2kTG5Q">https://mp.weixin.qq.com/s/ZWYgh7j_AvbgDcrL2kTG5Q</a>, 2021/02/13.</p>
+<blockquote>
+<p>tocbot插件主要通过标签id属性实现跳转，如果标签中没有id属性或者id中包含中文字符，无法跳转。</p>
 </blockquote>
 </li>
 </ol>
@@ -513,7 +521,7 @@ window.onload = function () {
     <br /><br /><br />
     <div id="copyright-content" class="content">
         
-        <p>最后更新： 2021/02/12 22:13:03</p>
+        <p>最后更新： 2021/02/14 21:58:20</p>
         <p>
                 
                 
@@ -521,7 +529,7 @@ window.onload = function () {
                         
                             作者：
                         
-                    <a target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/">David Faraday</a>
+                    <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
                 
 
                 
@@ -545,7 +553,7 @@ window.onload = function () {
         </p>
 
         
-        <p>备用链接： <a class="post-url" target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/202006071600/" title="Faradays&#39; Studio 站点更新概要">
+        <p>备用链接： <a class="post-url" target="_blank" rel="noopener" href="https://faradays-studio.github.io/202006071600/" title="Faradays&#39; Studio 站点更新概要">
             https://faradays-studio.github.io/202006071600/</a>
         </p>
         
@@ -716,16 +724,32 @@ window.onload = function () {
 
     
         
+  <div id="giteement-faradays"></div>
+  
+    <link rel="stylesheet" href="/css/giteement-basic.css">
+    <link rel="stylesheet" href="/css/giteement-more.css">
+    <script src="/js/giteement-browser.js"></script>
+    <script src="/js/giteement-oauthcallback.js"></script>
+  
+  <script>
+  var giteement = new Giteement({
+    id: '20200607160050',
+    owner: 'faradays-studio',
+    repo: 'faradays-studio',
+    backcall_uri: 'https://faradays-studio.gitee.io/',
+    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
+    oauth: {
+      client_id: '5d879954ec69389f7085d21dbdbc3a2736ec5d756e181d85fcfc125a9e3fc737',
+      client_secret: 'af4ae7a6fddba1be20d9fc3ce1b8d9adfe28db1d9b31bc52e0eced79b40213be'
+    },
+  })
+  giteement.render('giteement-faradays')
+
     
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-    <!-- <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script> -->
+    Oauthcallback();
+  </script>
 
-    <div id="gitalk-container">
 
-    </div>
 
     
 
@@ -767,7 +791,7 @@ window.onload = function () {
     </span>
 
     
-    &emsp;总文本数：<span class="post-count">24.8k</span>
+    &emsp;总文本数：<span class="post-count">25k</span>
 </p>
 
 
@@ -1197,6 +1221,7 @@ if ( dv1 != null ) {
         headingsOffset: 47,
 
         scrollContainer: 'main',
+        
         positionFixedSelector: '.tocbot',
         positionFixedClass: 'is-position-fixed',
 
@@ -1210,34 +1235,12 @@ if ( dv1 != null ) {
 
 
 
-    <script>
+
     
-    const gitalk = new Gitalk({
-        clientID: '90b449ff273a263117ec',
-        clientSecret: '0a3ccea67a4d3f03cbff012eeac1a8547e367aad',
-        repo: 'faradays-studio.github.io',      
-        owner: 'faradays-studio',
-        admin: ['faradays-studio'],
-        id: location.pathname, 
-        labels: ['gitalk', 'post-comment', '博客评论'],
-        perPage: 3,
-        distractionFreeMode: false  
-        })
-
-        gitalk.render('gitalk-container')
-    </script>
-
-
-
-
-
-    <!-- <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script> -->
     
 <script src="/js/highlight.min.js"></script>
 
-
     <script>
-     
     hljs.initHighlightingOnLoad();
     </script>
 

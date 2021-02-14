@@ -34,15 +34,15 @@
 
 
 
-  <meta name="description" content="编程, 思考, 文学作品, 实践, 总结">
+  <meta name="description" content="概述虽然已经 2020 年了，但是，对于非专业编程人士来说，使用 jQuery 仍然是一个不错的选择的。因为它是一个希望用户 写的少，做的多 的 JavaScript 库，并得到了广泛的使用。它具有以下功能：  HTML 元素选取 HTML 元素操作 CSS 操作 HTML 事件函数 JavaScript 特效和动画 HTML DOM 遍历和修改 AJAX Utilities   我并非是职业写程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery 用法入门">
 <meta property="og:url" content="https://faradays-studio.gitee.io/202010052246/index.html">
 <meta property="og:site_name" content="Blog of Faradays&#39; Studio">
-<meta property="og:description" content="编程, 思考, 文学作品, 实践, 总结">
+<meta property="og:description" content="概述虽然已经 2020 年了，但是，对于非专业编程人士来说，使用 jQuery 仍然是一个不错的选择的。因为它是一个希望用户 写的少，做的多 的 JavaScript 库，并得到了广泛的使用。它具有以下功能：  HTML 元素选取 HTML 元素操作 CSS 操作 HTML 事件函数 JavaScript 特效和动画 HTML DOM 遍历和修改 AJAX Utilities   我并非是职业写程">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-10-05T14:46:45.000Z">
-<meta property="article:modified_time" content="2020-10-08T02:05:50.354Z">
+<meta property="article:modified_time" content="2021-02-14T13:26:34.577Z">
 <meta property="article:author" content="David">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="jQuery">
@@ -54,7 +54,6 @@
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
   
-  <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
    
 
 
@@ -62,10 +61,8 @@
     
     <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
     <link rel="stylesheet" href="/css/github.min.css">
-    <!-- <link rel="stylesheet" href="/css/github.min.css"> -->
-    <!-- 
-<link rel="stylesheet" href="/css/github.min.css">
- -->
+    
+
 
     
     <!-- import 'gitalk/dist/gitalk.css' -->
@@ -146,7 +143,7 @@ window.onload = function () {
 
 
 
-<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
 </head>
 
 
@@ -268,7 +265,7 @@ window.onload = function () {
 
                     
                     
-                    <a target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/">David Faraday</a>
+                    <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
 
                     
 
@@ -291,7 +288,7 @@ window.onload = function () {
 
         
         <li><i class="fa fa-file-word-o"></i>
-            <span class="post-count">2.5k words</span>
+            <span class="post-count">2.4k words</span>
         </li>
         <li><i class="fa fa-caret-square-o-right"></i>
             <span class="post-count">10 min</span>
@@ -338,27 +335,25 @@ window.onload = function () {
 <h3 id="引用-jQuery-到-HTML"><a href="#引用-jQuery-到-HTML" class="headerlink" title="引用 jQuery 到 HTML"></a>引用 jQuery 到 HTML</h3><p>在网页中引入 jQuery 库的方法有很多种，简单总结如下：</p>
 <ol>
 <li><p>本地引用</p>
- <pre><div class="caption"><span>basic.html</span></div><code class="hljs HTML"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;jquery-1.10.2.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></code></pre>
-
+<pre><code class="HTML"> &lt;head&gt;
+     &lt;script src=&quot;jquery-1.10.2.min.js&quot;&gt;&lt;/script&gt;
+ &lt;/head&gt;</code></pre>
 <blockquote>
 <p>JavaScript 是 HTML5 以及所有现代浏览器中的默认脚本语言！因此没有必要在 <code>&lt;script&gt;</code> 标签中使用 <code>type=&quot;text/javascript&quot;</code> 了。</p>
 </blockquote>
 </li>
 <li><p>CDN 引用</p>
- <pre><code class="hljs language">&lt;head&gt;
-    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.staticfile.org&#x2F;jquery&#x2F;1.10.2&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;
-    
-    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;apps.bdimg.com&#x2F;libs&#x2F;jquery&#x2F;2.1.4&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;
-    
-    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;upcdn.b0.upaiyun.com&#x2F;libs&#x2F;jquery&#x2F;jquery-2.0.2.min.js&quot;&gt;&lt;&#x2F;script&gt;
-    
-    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;lib.sinaapp.com&#x2F;js&#x2F;jquery&#x2F;2.0.2&#x2F;jquery-2.0.2.min.js&quot;&gt;&lt;&#x2F;script&gt;
-    
-    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;ajax.aspnetcdn.com&#x2F;ajax&#x2F;jquery&#x2F;jquery-1.9.0.min.js&quot;&gt;&lt;&#x2F;script&gt;
-&lt;&#x2F;head&gt;</code></pre>
+<pre><code class="language"> &lt;head&gt;
+     &lt;script src=&quot;https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;
 
+     &lt;script src=&quot;https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+     &lt;script src=&quot;https://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js&quot;&gt;&lt;/script&gt;
+
+     &lt;script src=&quot;https://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js&quot;&gt;&lt;/script&gt;
+
+     &lt;script src=&quot;https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js&quot;&gt;&lt;/script&gt;
+ &lt;/head&gt;</code></pre>
 <blockquote>
 <p><strong>使用 CDN 的原因</strong><br>许多用户在访问其他站点时，已经从百度、又拍云、新浪、谷歌或微软加载过 jQuery。所以结果是，当他们访问您的站点时，会从缓存中加载 jQuery，这样可以减少加载时间。同时，大多数 CDN 都可以确保当用户向其请求文件时，会从离用户最近的服务器上返回响应，这样也可以提高加载速度。</p>
 </blockquote>
@@ -371,16 +366,13 @@ window.onload = function () {
 </ul>
 <p>这两种我都用过，不过网上最常见的是第一种用法，后续也采用这种表述，字面上简洁一些。</p>
 <h3 id="入口函数"><a href="#入口函数" class="headerlink" title="入口函数"></a>入口函数</h3><p>为了确保 JavaScript 脚本能够正确执行，建议 jQuery 的编写如下：</p>
-<pre><div class="caption"><span>basic.html   一般脚本都放在 HTML 文件的末尾</span></div><code class="hljs JavaScript">&lt;script&gt;
-    
-    $(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;
-     
-       <span class="hljs-comment">// 开始写 jQuery 代码...</span>
-     
-    &#125;);
-    
-&lt;/script&gt;</code></pre>
+<pre><code class="html">&lt;script&gt;
+    $(function()&#123;
 
+       // 开始写 jQuery 代码...
+
+    &#125;);
+&lt;/script&gt;</code></pre>
 <blockquote>
 <p>这是为了防止文档在完全加载（就绪）之前运行 jQuery 代码，即在 DOM 加载完成后才可以对 DOM 进行操作。<br>上述方法可以对多个脚本片段进行加载。</p>
 </blockquote>
@@ -388,51 +380,49 @@ window.onload = function () {
 <li><p>选择符（selector）：需要 “查询”和”查找” HTML 元素</p>
 </li>
 <li><p>action()：执行对元素的操作</p>
-  <pre><div class="caption"><span>用法示例</span></div><code class="hljs JavaScript">$(<span class="hljs-built_in">this</span>).hide() - 隐藏当前元素
+<pre><code class="js">  $(this).hide() - 隐藏当前元素
 
-$(<span class="hljs-string">&quot;p&quot;</span>).hide() - 隐藏所有 &lt;p&gt; 元素
+  $(&quot;p&quot;).hide() - 隐藏所有 &lt;p&gt; 元素
 
-$(<span class="hljs-string">&quot;p.test&quot;</span>).hide() - 隐藏所有 <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;test&quot;</span> 的 &lt;p&gt; 元素
+  $(&quot;p.test&quot;).hide() - 隐藏所有 class=&quot;test&quot; 的 &lt;p&gt; 元素
 
-$(<span class="hljs-string">&quot;#test&quot;</span>).hide() - 隐藏 id=<span class="hljs-string">&quot;test&quot;</span> 的元素</code></pre>
-
-
+  $(&quot;#test&quot;).hide() - 隐藏 id=&quot;test&quot; 的元素</code></pre>
 </li>
 </ul>
 <h3 id="jQuery-选择器"><a href="#jQuery-选择器" class="headerlink" title="jQuery 选择器"></a>jQuery 选择器</h3><p>jQuery 选择器允许您对 HTML 元素组或单个元素进行操作。它基于已经存在的 CSS 选择器，实现对元素的 id、类、类型、属性、属性值等 “查找”（或选择）HTML 元素的功能。</p>
 <ol>
 <li><p>选择器的基本用法</p>
- <pre><code class="hljs JavaScript"><span class="hljs-comment">//id选择器</span>
-$(<span class="hljs-string">&quot;#ID值&quot;</span>);
+<pre><code class="js"> //id选择器
+ $(&quot;#ID值&quot;);
 
-<span class="hljs-comment">//标签选择器</span>
-$(<span class="hljs-string">&#x27;tagName&#x27;</span>);
+ //标签选择器
+ $(&#39;tagName&#39;);
 
-<span class="hljs-comment">//class类选择器</span>
-$(<span class="hljs-string">&#x27;.className&#x27;</span>);
+ //class类选择器
+ $(&#39;.className&#39;);
 
-<span class="hljs-comment">//交集选择器,选择两个条件同时成立的标签</span>
-$(<span class="hljs-string">&#x27;div.c1&#x27;</span>); <span class="hljs-comment">//选择class=c1的div标签</span>
+ //交集选择器,选择两个条件同时成立的标签
+ $(&#39;div.c1&#39;); //选择class=c1的div标签
 
-<span class="hljs-comment">//并集选择器，选择满足以下条件中任意一个的所有标签</span>
-$(<span class="hljs-string">&#x27;#d,.c1,p&#x27;</span>); <span class="hljs-comment">//选择id=d的标签，具有class=c1的标签，标签是p的标签。</span>
+ //并集选择器，选择满足以下条件中任意一个的所有标签
+ $(&#39;#d,.c1,p&#39;); //选择id=d的标签，具有class=c1的标签，标签是p的标签。
 
-<span class="hljs-comment">//所有元素选择器</span>
-$(<span class="hljs-string">&#x27;*&#x27;</span>); <span class="hljs-comment">//选择所有的标签</span></code></pre>
+ //所有元素选择器
+ $(&#39;*&#39;); //选择所有的标签</code></pre>
 </li>
 <li><p>多层匹配选择</p>
 <p> jQuery 的选择器不仅可以选择一个层级的元素，还可以像串珠子一样依次选择多个层级的元素，化简代码的处理逻辑，主要方法如下：</p>
- <pre><code class="hljs JavaScript"><span class="hljs-comment">//后代选择器</span>
-$(<span class="hljs-string">&#x27;a b&#x27;</span>); <span class="hljs-comment">//处于a标签级别下的所有b标签，用空格分开。</span>
+<pre><code class="js"> //后代选择器
+ $(&#39;a b&#39;); //处于a标签级别下的所有b标签，用空格分开。
 
-<span class="hljs-comment">//子类选择器</span>
-$(<span class="hljs-string">&#x27;a&gt;b&#x27;</span>); <span class="hljs-comment">//处于a标签级别下一级别的所有b标签。</span>
+ //子类选择器
+ $(&#39;a&gt;b&#39;); //处于a标签级别下一级别的所有b标签。
 
-<span class="hljs-comment">//毗邻单一弟弟选择器</span>
-$(<span class="hljs-string">&#x27;a+b&#x27;</span>); <span class="hljs-comment">//与a标签同一级别的紧挨着a标签的b标签。</span>
+ //毗邻单一弟弟选择器
+ $(&#39;a+b&#39;); //与a标签同一级别的紧挨着a标签的b标签。
 
-<span class="hljs-comment">//毗邻多个弟弟选择器</span>
-$(<span class="hljs-string">&#x27;a~b&#x27;</span>); <span class="hljs-comment">//与a标签同一级别的位于a标签之后的所有b标签。</span></code></pre>
+ //毗邻多个弟弟选择器
+ $(&#39;a~b&#39;); //与a标签同一级别的位于a标签之后的所有b标签。</code></pre>
 </li>
 <li><p>精确筛选元素</p>
 <p> 嗯，jQuery 还可以精确地筛选第 1 个、最后 1 个等元素，相当方便，如下：</p>
@@ -445,72 +435,72 @@ $(<span class="hljs-string">&#x27;a~b&#x27;</span>); <span class="hljs-comment">
 </tr>
 </thead>
 <tbody><tr>
-<td align="left"><a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/sel-first.html">:first</a></td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-first.html">:first</a></td>
 <td align="left">$(“p:first”)</td>
 <td align="left">第一个 <code>&lt;p&gt;</code> 元素</td>
 </tr>
 <tr>
-<td align="left"><a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/sel-last.html">:last</a></td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-last.html">:last</a></td>
 <td align="left">$(“p:last”)</td>
 <td align="left">最后一个 <code>&lt;p&gt;</code> 元素</td>
 </tr>
 <tr>
-<td align="left"><a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/sel-even.html">:even</a></td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-even.html">:even</a></td>
 <td align="left">$(“tr:even”)</td>
 <td align="left">所有偶数 <code>&lt;tr&gt;</code> 元素，索引值从 0 开始，第一个元素是偶数 (0)，第二个元素是奇数 (1)，以此类推。</td>
 </tr>
 <tr>
-<td align="left"><a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/sel-odd.html">:odd</a></td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-odd.html">:odd</a></td>
 <td align="left">$(“tr:odd”)</td>
 <td align="left">所有奇数 <code>&lt;tr&gt;</code> 元素，索引值从 0 开始，第一个元素是偶数 (0)，第二个元素是奇数 (1)，以此类推。</td>
 </tr>
 <tr>
-<td align="left"><a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/jq-sel-firstchild.html">:first-child</a></td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jq-sel-firstchild.html">:first-child</a></td>
 <td align="left">$(“p:first-child”)</td>
 <td align="left">属于其父元素的第一个子元素的所有 <code>&lt;p&gt;</code> 元素</td>
 </tr>
 <tr>
-<td align="left"><a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/sel-firstoftype.html">:first-of-type</a></td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-firstoftype.html">:first-of-type</a></td>
 <td align="left">$(“p:first-of-type”)</td>
 <td align="left">属于其父元素的第一个 <code>&lt;p&gt;</code> 元素的所有 <code>&lt;p&gt;</code> 元素</td>
 </tr>
 <tr>
-<td align="left"><a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/sel-lastchild.html">:last-child</a></td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-lastchild.html">:last-child</a></td>
 <td align="left">$(“p:last-child”)</td>
 <td align="left">属于其父元素的最后一个子元素的所有 <code>&lt;p&gt;</code> 元素</td>
 </tr>
 <tr>
-<td align="left"><a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/sel-lastoftype.html">:last-of-type</a></td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-lastoftype.html">:last-of-type</a></td>
 <td align="left">$(“p:last-of-type”)</td>
 <td align="left">属于其父元素的最后一个 <code>&lt;p&gt;</code> 元素的所有 <code>&lt;p&gt;</code> 元素</td>
 </tr>
 <tr>
-<td align="left"><a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/sel-nthchild.html">:nth-child(<em>n</em>)</a></td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-nthchild.html">:nth-child(<em>n</em>)</a></td>
 <td align="left">$(“p:nth-child(2)”)</td>
 <td align="left">属于其父元素的第二个子元素的所有 <code>&lt;p&gt;</code> 元素</td>
 </tr>
 <tr>
-<td align="left"><a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/sel-nthlastchild.html">:nth-last-child(<em>n</em>)</a></td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-nthlastchild.html">:nth-last-child(<em>n</em>)</a></td>
 <td align="left">$(“p:nth-last-child(2)”)</td>
 <td align="left">属于其父元素的第二个子元素的所有 <code>&lt;p&gt;</code> 元素，从最后一个子元素开始计数</td>
 </tr>
 <tr>
-<td align="left"><a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/sel-nthoftype.html">:nth-of-type(<em>n</em>)</a></td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-nthoftype.html">:nth-of-type(<em>n</em>)</a></td>
 <td align="left">$(“p:nth-of-type(2)”)</td>
 <td align="left">属于其父元素的第二个 <code>&lt;p&gt;</code> 元素的所有 <code>&lt;p&gt;</code> 元素</td>
 </tr>
 <tr>
-<td align="left"><a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/sel-nthlastoftype.html">:nth-last-of-type(<em>n</em>)</a></td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-nthlastoftype.html">:nth-last-of-type(<em>n</em>)</a></td>
 <td align="left">$(“p:nth-last-of-type(2)”)</td>
 <td align="left">属于其父元素的第二个 <code>&lt;p&gt;</code> 元素的所有 <code>&lt;p&gt;</code> 元素，从最后一个子元素开始计数</td>
 </tr>
 <tr>
-<td align="left"><a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/sel-onlychild.html">:only-child</a></td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-onlychild.html">:only-child</a></td>
 <td align="left">$(“p:only-child”)</td>
 <td align="left">属于其父元素的唯一子元素的所有 <code>&lt;p&gt;</code> 元素</td>
 </tr>
 <tr>
-<td align="left"><a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/sel-onlyoftype.html">:only-of-type</a></td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-onlyoftype.html">:only-of-type</a></td>
 <td align="left">$(“p:only-of-type”)</td>
 <td align="left">属于其父元素的特定类型的唯一子元素的所有 <code>&lt;p&gt;</code> 元素</td>
 </tr>
@@ -526,22 +516,22 @@ $(<span class="hljs-string">&#x27;a~b&#x27;</span>); <span class="hljs-comment">
 </tr>
 </thead>
 <tbody><tr>
-<td align="left"><a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/sel-parent-child.html">parent &gt; child</a></td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-parent-child.html">parent &gt; child</a></td>
 <td align="left">$(“div &gt; p”)</td>
 <td align="left"><code>&lt;div&gt;</code> 元素的直接子元素的所有 <code>&lt;p&gt;</code> 元素</td>
 </tr>
 <tr>
-<td align="left"><a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/sel-parent-descendant.html">parent descendant</a></td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-parent-descendant.html">parent descendant</a></td>
 <td align="left">$(“div p”)</td>
 <td align="left"><code>&lt;div&gt;</code> 元素的后代的所有 <code>&lt;p&gt;</code> 元素</td>
 </tr>
 <tr>
-<td align="left"><a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/sel-previous-next.html">element + next</a></td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-previous-next.html">element + next</a></td>
 <td align="left">$(“div + p”)</td>
 <td align="left">每个 <code>&lt;div&gt;</code> 元素相邻的下一个 <code>&lt;p&gt;</code> 元素</td>
 </tr>
 <tr>
-<td align="left"><a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/sel-previous-siblings.html">element ~ siblings</a></td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/sel-previous-siblings.html">element ~ siblings</a></td>
 <td align="left">$(“div ~ p”)</td>
 <td align="left"><code>&lt;div&gt;</code> 元素同级的所有 <code>&lt;p&gt;</code> 元素</td>
 </tr>
@@ -623,54 +613,54 @@ $(<span class="hljs-string">&#x27;a~b&#x27;</span>); <span class="hljs-comment">
 </ol>
 <h3 id="jQuery-的方法"><a href="#jQuery-的方法" class="headerlink" title="jQuery 的方法"></a>jQuery 的方法</h3><p>jQuery 方法涉及到事件的操作方法、元素的筛选方法以及元素的动态效果等等。由于该部分内容较为复杂，此处不再展开，详询参考文献 <a href="#refer-anchor-4"><sup>6-12</sup></a> 相关部分。</p>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li><p>张三帅.<code>jQuery</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.cnblogs.com/mingkong-z/articles/9131866.html">https://www.cnblogs.com/mingkong-z/articles/9131866.html</a>, 2020/10/05.</p>
+<li><p>张三帅.<code>jQuery</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.cnblogs.com/mingkong-z/articles/9131866.html">https://www.cnblogs.com/mingkong-z/articles/9131866.html</a>, 2020/10/05.</p>
 </li>
-<li><p>老佐.<code>JavaScript 及 jQuery 常用dom操作方法</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.cnblogs.com/html5css3js/p/4550666.html">https://www.cnblogs.com/html5css3js/p/4550666.html</a>, 2020/10/05.</p>
+<li><p>老佐.<code>JavaScript 及 jQuery 常用dom操作方法</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.cnblogs.com/html5css3js/p/4550666.html">https://www.cnblogs.com/html5css3js/p/4550666.html</a>, 2020/10/05.</p>
 </li>
-<li><p>hemin.<code>jQuery 1.12.1 速查表</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="http://hemin.cn/jq/">http://hemin.cn/jq/</a>, 2020/10/05.</p>
+<li><p>hemin.<code>jQuery 1.12.1 速查表</code>[EB/OL].<a target="_blank" rel="noopener" href="http://hemin.cn/jq/">http://hemin.cn/jq/</a>, 2020/10/05.</p>
 </li>
-<li><p>minoz.<code>JQuery字符串的操作</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.cnblogs.com/minozMin/p/8328028.html">https://www.cnblogs.com/minozMin/p/8328028.html</a>, 2020/10/05.</p>
+<li><p>minoz.<code>JQuery字符串的操作</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.cnblogs.com/minozMin/p/8328028.html">https://www.cnblogs.com/minozMin/p/8328028.html</a>, 2020/10/05.</p>
 </li>
 </ol>
 <div id="refer-anchor-4"></div>
 
 <ol start="5">
-<li>菜鸟教程.<code>jQuery 安装</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/jquery-install.html">https://www.runoob.com/jquery/jquery-install.html</a>, 2020/10/07.</li>
+<li>菜鸟教程.<code>jQuery 安装</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jquery-install.html">https://www.runoob.com/jquery/jquery-install.html</a>, 2020/10/07.</li>
 </ol>
 <div id="refer-anchor-5"></div>
 
 <ol start="6">
-<li>菜鸟教程.<code>jQuery 选择器</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/jquery-ref-selectors.html">https://www.runoob.com/jquery/jquery-ref-selectors.html</a>, 2020/10/07.</li>
+<li>菜鸟教程.<code>jQuery 选择器</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jquery-ref-selectors.html">https://www.runoob.com/jquery/jquery-ref-selectors.html</a>, 2020/10/07.</li>
 </ol>
 <div id="refer-anchor-6"></div>
 
 <ol start="7">
-<li>菜鸟教程.<code>jQuery 事件方法</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/jquery-ref-events.html">https://www.runoob.com/jquery/jquery-ref-events.html</a>, 2020/10/07.</li>
+<li>菜鸟教程.<code>jQuery 事件方法</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jquery-ref-events.html">https://www.runoob.com/jquery/jquery-ref-events.html</a>, 2020/10/07.</li>
 </ol>
 <div id="refer-anchor-7"></div>
 
 <ol start="8">
-<li>菜鸟教程.<code>jQuery 效果方法</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/jquery-ref-effects.html">https://www.runoob.com/jquery/jquery-ref-effects.html</a>, 2020/10/07.</li>
+<li>菜鸟教程.<code>jQuery 效果方法</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jquery-ref-effects.html">https://www.runoob.com/jquery/jquery-ref-effects.html</a>, 2020/10/07.</li>
 </ol>
 <div id="refer-anchor-8"></div>
 
 <ol start="9">
-<li>菜鸟教程.<code>jQuery HTML / CSS 方法</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/jquery-ref-html.html">https://www.runoob.com/jquery/jquery-ref-html.html</a>, 2020/10/07.</li>
+<li>菜鸟教程.<code>jQuery HTML / CSS 方法</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jquery-ref-html.html">https://www.runoob.com/jquery/jquery-ref-html.html</a>, 2020/10/07.</li>
 </ol>
 <div id="refer-anchor-9"></div>
 
 <ol start="10">
-<li>菜鸟教程.<code>jQuery 遍历 方法</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/jquery-ref-traversing.html">https://www.runoob.com/jquery/jquery-ref-traversing.html</a>, 2020/10/07.</li>
+<li>菜鸟教程.<code>jQuery 遍历 方法</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jquery-ref-traversing.html">https://www.runoob.com/jquery/jquery-ref-traversing.html</a>, 2020/10/07.</li>
 </ol>
 <div id="refer-anchor-10"></div>
 
 <ol start="11">
-<li>菜鸟教程.<code>jQuery AJAX 方法</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/jquery-ref-ajax.html">https://www.runoob.com/jquery/jquery-ref-ajax.html</a>, 2020/10/07.</li>
+<li>菜鸟教程.<code>jQuery AJAX 方法</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jquery-ref-ajax.html">https://www.runoob.com/jquery/jquery-ref-ajax.html</a>, 2020/10/07.</li>
 </ol>
 <div id="refer-anchor-11"></div>
 
 <ol start="12">
-<li>菜鸟教程.<code>jQuery 杂项方法</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.runoob.com/jquery/jquery-ref-misc.html">https://www.runoob.com/jquery/jquery-ref-misc.html</a>, 2020/10/07.</li>
+<li>菜鸟教程.<code>jQuery 杂项方法</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.runoob.com/jquery/jquery-ref-misc.html">https://www.runoob.com/jquery/jquery-ref-misc.html</a>, 2020/10/07.</li>
 </ol>
 <div id="refer-anchor-12"></div>
 
@@ -685,7 +675,7 @@ $(<span class="hljs-string">&#x27;a~b&#x27;</span>); <span class="hljs-comment">
     <br /><br /><br />
     <div id="copyright-content" class="content">
         
-        <p>最后更新： 2020/10/08 10:05:50</p>
+        <p>最后更新： 2021/02/14 21:26:34</p>
         <p>
                 
                 
@@ -699,7 +689,7 @@ $(<span class="hljs-string">&#x27;a~b&#x27;</span>); <span class="hljs-comment">
 
         
             <p>编者：
-                <a target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/">David Faraday</a>
+                <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
             </p>
         
         
@@ -715,7 +705,7 @@ $(<span class="hljs-string">&#x27;a~b&#x27;</span>); <span class="hljs-comment">
         </p>
 
         
-        <p>备用链接： <a class="post-url" target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/202010052246/" title="jQuery 用法入门">
+        <p>备用链接： <a class="post-url" target="_blank" rel="noopener" href="https://faradays-studio.github.io/202010052246/" title="jQuery 用法入门">
             https://faradays-studio.github.io/202010052246/</a>
         </p>
         
@@ -788,7 +778,7 @@ $(<span class="hljs-string">&#x27;a~b&#x27;</span>); <span class="hljs-comment">
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.gitee.io/202010052246/&title=《jQuery 用法入门》 — Blog of Faradays' Studio&pic=https://faradays-studio.gitee.ioimages/logo-Faradays' Studio.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.gitee.io/202010052246/&title=《jQuery 用法入门》 — Blog of Faradays' Studio&pic=https://faradays-studio.gitee.ioimages/faradays-A01.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -882,16 +872,32 @@ $(<span class="hljs-string">&#x27;a~b&#x27;</span>); <span class="hljs-comment">
 
     
         
+  <div id="giteement-faradays"></div>
+  
+    <link rel="stylesheet" href="/css/giteement-basic.css">
+    <link rel="stylesheet" href="/css/giteement-more.css">
+    <script src="/js/giteement-browser.js"></script>
+    <script src="/js/giteement-oauthcallback.js"></script>
+  
+  <script>
+  var giteement = new Giteement({
+    id: '20201005224645',
+    owner: 'faradays-studio',
+    repo: 'faradays-studio',
+    backcall_uri: 'https://faradays-studio.gitee.io/',
+    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
+    oauth: {
+      client_id: '5d879954ec69389f7085d21dbdbc3a2736ec5d756e181d85fcfc125a9e3fc737',
+      client_secret: 'af4ae7a6fddba1be20d9fc3ce1b8d9adfe28db1d9b31bc52e0eced79b40213be'
+    },
+  })
+  giteement.render('giteement-faradays')
+
     
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-    <!-- <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script> -->
+    Oauthcallback();
+  </script>
 
-    <div id="gitalk-container">
 
-    </div>
 
     
 
@@ -933,7 +939,7 @@ $(<span class="hljs-string">&#x27;a~b&#x27;</span>); <span class="hljs-comment">
     </span>
 
     
-    &emsp;总文本数：<span class="post-count">24.8k</span>
+    &emsp;总文本数：<span class="post-count">25k</span>
 </p>
 
 
@@ -1363,6 +1369,7 @@ if ( dv1 != null ) {
         headingsOffset: 47,
 
         scrollContainer: 'main',
+        
         positionFixedSelector: '.tocbot',
         positionFixedClass: 'is-position-fixed',
 
@@ -1376,34 +1383,12 @@ if ( dv1 != null ) {
 
 
 
-    <script>
+
     
-    const gitalk = new Gitalk({
-        clientID: '90b449ff273a263117ec',
-        clientSecret: '0a3ccea67a4d3f03cbff012eeac1a8547e367aad',
-        repo: 'faradays-studio.github.io',      
-        owner: 'faradays-studio',
-        admin: ['faradays-studio'],
-        id: location.pathname, 
-        labels: ['gitalk', 'post-comment', '博客评论'],
-        perPage: 3,
-        distractionFreeMode: false  
-        })
-
-        gitalk.render('gitalk-container')
-    </script>
-
-
-
-
-
-    <!-- <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script> -->
     
 <script src="/js/highlight.min.js"></script>
 
-
     <script>
-     
     hljs.initHighlightingOnLoad();
     </script>
 

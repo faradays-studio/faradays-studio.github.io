@@ -54,15 +54,15 @@
 
 
 
-  <meta name="description" content="编程, 思考, 文学作品, 实践, 总结">
+  <meta name="description" content="判断表达式使用 test 判断1. test 基本用法# 写法一 (不支持正则判断) test expression  # 写法二(不支持正则判断) [ expression ]  # 写法三 (支持正则判断) [[ expression ]] 2. 文件判断 [ -a file ]：如果 file 存在，则为true。 [ -b file ]：如果 file 存在并且是一个块（设备）文件，则为t">
 <meta property="og:type" content="article">
 <meta property="og:title" content="csh 、 bash 的基础语法对照：判断表达式">
 <meta property="og:url" content="https://faradays-studio.gitee.io/202012261636/index.html">
 <meta property="og:site_name" content="Blog of Faradays&#39; Studio">
-<meta property="og:description" content="编程, 思考, 文学作品, 实践, 总结">
+<meta property="og:description" content="判断表达式使用 test 判断1. test 基本用法# 写法一 (不支持正则判断) test expression  # 写法二(不支持正则判断) [ expression ]  # 写法三 (支持正则判断) [[ expression ]] 2. 文件判断 [ -a file ]：如果 file 存在，则为true。 [ -b file ]：如果 file 存在并且是一个块（设备）文件，则为t">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-12-26T08:36:00.000Z">
-<meta property="article:modified_time" content="2020-12-29T15:49:56.364Z">
+<meta property="article:modified_time" content="2021-02-14T11:31:22.153Z">
 <meta property="article:author" content="David">
 <meta property="article:tag" content="shell">
 <meta property="article:tag" content="Linux">
@@ -79,7 +79,6 @@
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
   
-  <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
    
 
 
@@ -87,10 +86,8 @@
     
     <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
     <link rel="stylesheet" href="/css/github.min.css">
-    <!-- <link rel="stylesheet" href="/css/github.min.css"> -->
-    <!-- 
-<link rel="stylesheet" href="/css/github.min.css">
- -->
+    
+
 
     
     <!-- import 'gitalk/dist/gitalk.css' -->
@@ -171,7 +168,7 @@ window.onload = function () {
 
 
 
-<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
 </head>
 
 
@@ -293,7 +290,7 @@ window.onload = function () {
 
                     
                     
-                    <a target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/">David Faraday</a>
+                    <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
 
                     
 
@@ -335,17 +332,14 @@ window.onload = function () {
     
     <div id="article-entry-1" class="article-entry post-content" itemprop="articleBody">
             
-            <h2 id="判断表达式"><a href="#判断表达式" class="headerlink" title="判断表达式"></a>判断表达式</h2><h3 id="使用-test-判断"><a href="#使用-test-判断" class="headerlink" title="使用 test 判断"></a>使用 test 判断</h3><h4 id="1-test-基本用法"><a href="#1-test-基本用法" class="headerlink" title="1. test 基本用法"></a>1. test 基本用法</h4><pre><div class="caption"><span>test 判断的公式</span></div><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash"> 写法一 (不支持正则判断)</span>
+            <h2 id="判断表达式"><a href="#判断表达式" class="headerlink" title="判断表达式"></a>判断表达式</h2><h3 id="使用-test-判断"><a href="#使用-test-判断" class="headerlink" title="使用 test 判断"></a>使用 test 判断</h3><h4 id="1-test-基本用法"><a href="#1-test-基本用法" class="headerlink" title="1. test 基本用法"></a>1. test 基本用法</h4><pre><code class="bash"># 写法一 (不支持正则判断)
 test expression
 
-<span class="hljs-meta">#</span><span class="bash"> 写法二(不支持正则判断)</span>
+# 写法二(不支持正则判断)
 [ expression ]
 
-<span class="hljs-meta">#</span><span class="bash"> 写法三 (支持正则判断)</span>
+# 写法三 (支持正则判断)
 [[ expression ]]</code></pre>
-
-
-
 <h4 id="2-文件判断"><a href="#2-文件判断" class="headerlink" title="2. 文件判断"></a>2. 文件判断</h4><ul>
 <li><code>[ -a file ]</code>：如果 file 存在，则为<code>true</code>。</li>
 <li><code>[ -b file ]</code>：如果 file 存在并且是一个块（设备）文件，则为<code>true</code>。</li>
@@ -393,7 +387,7 @@ test expression
 <li><code>[ n1 -ge n2 ]</code>：如果<code>n1</code>大于或等于<code>n2</code>，则为<code>true</code>。</li>
 <li><code>[ n1 -gt n2 ]</code>：如果<code>n1</code>大于<code>n2</code>，则为<code>true</code>。</li>
 </ul>
-<h4 id="5-正则判断（-）"><a href="#5-正则判断（-）" class="headerlink" title="5. 正则判断（=~）"></a>5. 正则判断（<code>=~</code>）</h4><pre><code><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash">!/bin/bash</span>
+<h4 id="5-正则判断（-）"><a href="#5-正则判断（-）" class="headerlink" title="5. 正则判断（=~）"></a>5. 正则判断（<code>=~</code>）</h4><pre><code class="bash">#!/bin/bash
 
 INT=-5
 
@@ -403,15 +397,15 @@ if [[ &quot;$INT&quot; =~ ^-?[0-9]+$ ]]; then
 else
   echo &quot;INT is not an integer.&quot; &gt;&amp;2
   exit 1
-fi</code></pre></code></pre><h3 id="多条件逻辑运算"><a href="#多条件逻辑运算" class="headerlink" title="多条件逻辑运算"></a>多条件逻辑运算</h3><pre><code>- `AND`运算：符号`&amp;&amp;`，也可使用参数`-a`。
-- `OR`运算：符号`||`，也可使用参数`-o`。
-- `NOT`运算：符号`!`。</code></pre><h3 id="通过-进行算术运算判断"><a href="#通过-进行算术运算判断" class="headerlink" title="通过 ((...)) 进行算术运算判断"></a>通过 <code>((...))</code> 进行算术运算判断</h3><pre><code class="hljs apache"><span class="hljs-attribute">if</span> ((<span class="hljs-number">3</span> &gt; <span class="hljs-number">2</span>)); then
-  <span class="hljs-attribute">echo</span> <span class="hljs-string">&quot;true&quot;</span>
-<span class="hljs-attribute">fi</span></code></pre>
-
-
-
-
+fi</code></pre>
+<h3 id="多条件逻辑运算"><a href="#多条件逻辑运算" class="headerlink" title="多条件逻辑运算"></a>多条件逻辑运算</h3><ul>
+<li><code>AND</code>运算：符号<code>&amp;&amp;</code>，也可使用参数<code>-a</code>。</li>
+<li><code>OR</code>运算：符号<code>||</code>，也可使用参数<code>-o</code>。</li>
+<li><code>NOT</code>运算：符号<code>!</code>。</li>
+</ul>
+<h3 id="通过-进行算术运算判断"><a href="#通过-进行算术运算判断" class="headerlink" title="通过 ((...)) 进行算术运算判断"></a>通过 <code>((...))</code> 进行算术运算判断</h3><pre><code class="bash">if ((3 &gt; 2)); then
+  echo &quot;true&quot;
+fi</code></pre>
 <h2 id="if-配套-test-或-进行条件判断"><a href="#if-配套-test-或-进行条件判断" class="headerlink" title="if 配套 test 或 ((...)) 进行条件判断"></a>if 配套 <code>test</code> 或 <code>((...))</code> 进行条件判断</h2><table>
 <thead>
 <tr>
@@ -465,16 +459,16 @@ fi</code></pre></code></pre><h3 id="多条件逻辑运算"><a href="#多条件�
 </li>
 </ul>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li><p>脚本之家网.<code>csh的基本语法介绍</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.jb51.net/article/57770.htm">https://www.jb51.net/article/57770.htm</a>, 2020/12/21.</p>
+<li><p>脚本之家网.<code>csh的基本语法介绍</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.jb51.net/article/57770.htm">https://www.jb51.net/article/57770.htm</a>, 2020/12/21.</p>
 </li>
-<li><p>iTech.<code>csh 语法实例参考</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.cnblogs.com/itech/archive/2012/08/15/2640811.html">https://www.cnblogs.com/itech/archive/2012/08/15/2640811.html</a>, 2020/12/21.</p>
+<li><p>iTech.<code>csh 语法实例参考</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.cnblogs.com/itech/archive/2012/08/15/2640811.html">https://www.cnblogs.com/itech/archive/2012/08/15/2640811.html</a>, 2020/12/21.</p>
 </li>
-<li><p>阮一峰.<code>Bash 脚本教程</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://wangdoc.com/bash">https://wangdoc.com/bash</a>, 2020/12/21.</p>
+<li><p>阮一峰.<code>Bash 脚本教程</code>[EB/OL].<a target="_blank" rel="noopener" href="https://wangdoc.com/bash">https://wangdoc.com/bash</a>, 2020/12/21.</p>
 <blockquote>
 <p>该教程的部分内容是比较完善的。</p>
 </blockquote>
 </li>
-<li><p>脚本之家.<code>shell中各种括号的作用详解()、(())、[]、[[]]、&#123;&#125;</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.jb51.net/article/123081.htm">https://www.jb51.net/article/123081.htm</a>, 2020/12/24.</p>
+<li><p>脚本之家.<code>shell中各种括号的作用详解()、(())、[]、[[]]、&#123;&#125;</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.jb51.net/article/123081.htm">https://www.jb51.net/article/123081.htm</a>, 2020/12/24.</p>
 </li>
 </ol>
 <h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><ol>
@@ -492,7 +486,7 @@ fi</code></pre></code></pre><h3 id="多条件逻辑运算"><a href="#多条件�
     <br /><br /><br />
     <div id="copyright-content" class="content">
         
-        <p>最后更新： 2020/12/29 23:49:56</p>
+        <p>最后更新： 2021/02/14 19:31:22</p>
         <p>
                 
                 
@@ -506,7 +500,7 @@ fi</code></pre></code></pre><h3 id="多条件逻辑运算"><a href="#多条件�
 
         
             <p>编者：
-                <a target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/">David Faraday</a>
+                <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
             </p>
         
         
@@ -522,7 +516,7 @@ fi</code></pre></code></pre><h3 id="多条件逻辑运算"><a href="#多条件�
         </p>
 
         
-        <p>备用链接： <a class="post-url" target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/202012261636/" title="csh 、 bash 的基础语法对照：判断表达式">
+        <p>备用链接： <a class="post-url" target="_blank" rel="noopener" href="https://faradays-studio.github.io/202012261636/" title="csh 、 bash 的基础语法对照：判断表达式">
             https://faradays-studio.github.io/202012261636/</a>
         </p>
         
@@ -595,7 +589,7 @@ fi</code></pre></code></pre><h3 id="多条件逻辑运算"><a href="#多条件�
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.gitee.io/202012261636/&title=《csh 、 bash 的基础语法对照：判断表达式》 — Blog of Faradays' Studio&pic=https://faradays-studio.gitee.ioimages/logo-Faradays' Studio.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.gitee.io/202012261636/&title=《csh 、 bash 的基础语法对照：判断表达式》 — Blog of Faradays' Studio&pic=https://faradays-studio.gitee.ioimages/faradays-A01.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -699,16 +693,32 @@ fi</code></pre></code></pre><h3 id="多条件逻辑运算"><a href="#多条件�
 
     
         
+  <div id="giteement-faradays"></div>
+  
+    <link rel="stylesheet" href="/css/giteement-basic.css">
+    <link rel="stylesheet" href="/css/giteement-more.css">
+    <script src="/js/giteement-browser.js"></script>
+    <script src="/js/giteement-oauthcallback.js"></script>
+  
+  <script>
+  var giteement = new Giteement({
+    id: '20201226163600',
+    owner: 'faradays-studio',
+    repo: 'faradays-studio',
+    backcall_uri: 'https://faradays-studio.gitee.io/',
+    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
+    oauth: {
+      client_id: '5d879954ec69389f7085d21dbdbc3a2736ec5d756e181d85fcfc125a9e3fc737',
+      client_secret: 'af4ae7a6fddba1be20d9fc3ce1b8d9adfe28db1d9b31bc52e0eced79b40213be'
+    },
+  })
+  giteement.render('giteement-faradays')
+
     
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-    <!-- <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script> -->
+    Oauthcallback();
+  </script>
 
-    <div id="gitalk-container">
 
-    </div>
 
     
 
@@ -750,7 +760,7 @@ fi</code></pre></code></pre><h3 id="多条件逻辑运算"><a href="#多条件�
     </span>
 
     
-    &emsp;总文本数：<span class="post-count">24.8k</span>
+    &emsp;总文本数：<span class="post-count">25k</span>
 </p>
 
 
@@ -1180,6 +1190,7 @@ if ( dv1 != null ) {
         headingsOffset: 47,
 
         scrollContainer: 'main',
+        
         positionFixedSelector: '.tocbot',
         positionFixedClass: 'is-position-fixed',
 
@@ -1193,34 +1204,12 @@ if ( dv1 != null ) {
 
 
 
-    <script>
+
     
-    const gitalk = new Gitalk({
-        clientID: '90b449ff273a263117ec',
-        clientSecret: '0a3ccea67a4d3f03cbff012eeac1a8547e367aad',
-        repo: 'faradays-studio.github.io',      
-        owner: 'faradays-studio',
-        admin: ['faradays-studio'],
-        id: location.pathname, 
-        labels: ['gitalk', 'post-comment', '博客评论'],
-        perPage: 3,
-        distractionFreeMode: false  
-        })
-
-        gitalk.render('gitalk-container')
-    </script>
-
-
-
-
-
-    <!-- <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script> -->
     
 <script src="/js/highlight.min.js"></script>
 
-
     <script>
-     
     hljs.initHighlightingOnLoad();
     </script>
 

@@ -38,16 +38,16 @@
 
 
 
-  <meta name="description" content="编程, 思考, 文学作品, 实践, 总结">
+  <meta name="description" content="Git 命令集成  测试 GitHub 可访问性  ssh -T git@github.com   更新主分支（下载更新）  D:   &amp;&amp;   D:\faradays-studio.github\faradays-studio.github.io   &amp;&amp;    git checkout   更新其他分支（下载更新）  git checkout -b blog o">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用 Git 命令来管理 hexo 博客">
 <meta property="og:url" content="https://faradays-studio.gitee.io/202008261600/index.html">
 <meta property="og:site_name" content="Blog of Faradays&#39; Studio">
-<meta property="og:description" content="编程, 思考, 文学作品, 实践, 总结">
+<meta property="og:description" content="Git 命令集成  测试 GitHub 可访问性  ssh -T git@github.com   更新主分支（下载更新）  D:   &amp;&amp;   D:\faradays-studio.github\faradays-studio.github.io   &amp;&amp;    git checkout   更新其他分支（下载更新）  git checkout -b blog o">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://faradays-studio.gitee.io/static/img/git.jpg">
 <meta property="article:published_time" content="2020-08-26T08:00:50.000Z">
-<meta property="article:modified_time" content="2021-01-17T03:23:43.010Z">
+<meta property="article:modified_time" content="2021-02-14T13:35:43.766Z">
 <meta property="article:author" content="David">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="git">
@@ -61,7 +61,6 @@
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
   
-  <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
    
 
 
@@ -69,10 +68,8 @@
     
     <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
     <link rel="stylesheet" href="/css/github.min.css">
-    <!-- <link rel="stylesheet" href="/css/github.min.css"> -->
-    <!-- 
-<link rel="stylesheet" href="/css/github.min.css">
- -->
+    
+
 
     
     <!-- import 'gitalk/dist/gitalk.css' -->
@@ -153,7 +150,7 @@ window.onload = function () {
 
 
 
-<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
 </head>
 
 
@@ -271,7 +268,7 @@ window.onload = function () {
             
                 
                 
-                    <a target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/">David Faraday</a>
+                    <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
 
                     
 
@@ -348,137 +345,135 @@ window.onload = function () {
 <li><p>查看分支<br>  git branch -a<br>  git branch -v<br>  git branch -r</p>
 </li>
 <li><p>查看最近的 commit 信息<br>  git show HEAD</p>
-<pre><code>按 q 退出</code></pre></li>
+<pre><code>  按 q 退出</code></pre></li>
 <li><p>git checkout -b &lt;分支名&gt;<br>  git checkout -b blog</p>
 </li>
 <li><p>从 服务器 下载更新到本地<br>  由于 hexo 更新后，本地会版本落后，因此需要更新<br>  git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;<br>  git pull origin master</p>
-<pre><code>或 git pull origin master:master</code></pre><p>  git pull origin blog:blog</p>
+<pre><code>  或 git pull origin master:master</code></pre><p>  git pull origin blog:blog</p>
 </li>
 </ul>
-<h3 id="使用-git-管理主题的流程示意"><a href="#使用-git-管理主题的流程示意" class="headerlink" title="使用 git 管理主题的流程示意"></a>使用 git 管理主题的流程示意</h3><pre><code><pre><code class="hljs Shell"><span class="hljs-meta">#</span><span class="bash">克隆你fork出来的分支</span>
-<span class="hljs-meta">$</span><span class="bash">git <span class="hljs-built_in">clone</span> &lt;远程Arepository&gt;</span>
+<h3 id="使用-git-管理主题的流程示意"><a href="#使用-git-管理主题的流程示意" class="headerlink" title="使用 git 管理主题的流程示意"></a>使用 git 管理主题的流程示意</h3><pre><code>``` sh
+#克隆你fork出来的分支
+$git clone &lt;远程Arepository&gt;
 
-<span class="hljs-meta">#</span><span class="bash">添加远程B repository标签</span>
-<span class="hljs-meta">$</span><span class="bash">git remote add &lt;远程B repository标签&gt; git@github.com:XXXX/ceph.git</span>
+#添加远程B repository标签
+$git remote add &lt;远程B repository标签&gt; git@github.com:XXXX/ceph.git
 
-<span class="hljs-meta">#</span><span class="bash">从远程Brepository的master分支拉取最新objects合并到本地master分支</span>
-<span class="hljs-meta">$</span><span class="bash">git pull &lt;远程B厂库标签&gt; master:master</span>
+#从远程Brepository的master分支拉取最新objects合并到本地master分支
+$git pull &lt;远程B厂库标签&gt; master:master
 
-<span class="hljs-meta">#</span><span class="bash">切换到要修改的分支上</span>
-<span class="hljs-meta">$</span><span class="bash">git checkout YYYY</span>
+#切换到要修改的分支上
+$git checkout YYYY
 
-<span class="hljs-meta">#</span><span class="bash">在当前分支的基础上创建一个开发分支，并切换到该分支上，你将在该分支上coding</span>
-<span class="hljs-meta">$</span><span class="bash">git branch develop; git checkout develop</span>
+#在当前分支的基础上创建一个开发分支，并切换到该分支上，你将在该分支上coding
+$git branch develop; git checkout develop
 
-<span class="hljs-meta">#</span><span class="bash">在工作区coding</span>
+#在工作区coding
 coding...... 
 
-<span class="hljs-meta">#</span><span class="bash">将修改保存到索引区</span>
-<span class="hljs-meta">$</span><span class="bash">git add .</span>
+#将修改保存到索引区
+$git add .
 
-<span class="hljs-meta">#</span><span class="bash">将修改提交到本地分区</span>
-<span class="hljs-meta">$</span><span class="bash">git commit -a</span>
+#将修改提交到本地分区
+$git commit -a
 
-<span class="hljs-meta">#</span><span class="bash">将本地分支my_test提交到远程A repository的my_test分支上</span>
-<span class="hljs-meta">$</span><span class="bash">git push origin my_test:my_test</span></code></pre></code></pre><h3 id="hexo-博客删除部分-commit-的操作实践"><a href="#hexo-博客删除部分-commit-的操作实践" class="headerlink" title="hexo 博客删除部分 commit 的操作实践"></a>hexo 博客删除部分 commit 的操作实践</h3><p>经过 2 天半的来回测试，终于删除了上传了隐藏文件 <code>hid*.html</code> 文件的提交。</p>
+#将本地分支my_test提交到远程A repository的my_test分支上
+$git push origin my_test:my_test
+```</code></pre><h3 id="hexo-博客删除部分-commit-的操作实践"><a href="#hexo-博客删除部分-commit-的操作实践" class="headerlink" title="hexo 博客删除部分 commit 的操作实践"></a>hexo 博客删除部分 commit 的操作实践</h3><p>经过 2 天半的来回测试，终于删除了上传了隐藏文件 <code>hid*.html</code> 文件的提交。</p>
 <ol>
 <li><p>出现 <code>HEAD detached at 68e8065</code> 等错误的解决方法：</p>
- <pre><code class="hljs Shell"><span class="hljs-meta">#</span><span class="bash"> 给 blog 起个 branch 名 blog_temp1</span>
-git branch blog_temp1 blog
-git branch -a
-<span class="hljs-meta">#</span><span class="bash"> Head 指向实际使用的 branch，注意不是 origin/blog</span>
-git checkout blog
-<span class="hljs-meta">#</span><span class="bash"> 融合到当前 branch</span>
-git merge blog_temp1
-    合并时存在问题，如果以本地为准 git  add，以服务器为准则 git  rm XXXX，然后 git commit
-    再重新执行合并
-<span class="hljs-meta">#</span><span class="bash"> 删除临时 branch</span>
-git branch -d blog_temp1</code></pre>
+<pre><code class="sh"> # 给 blog 起个 branch 名 blog_temp1
+ git branch blog_temp1 blog
+ git branch -a
+ # Head 指向实际使用的 branch，注意不是 origin/blog
+ git checkout blog
+ # 融合到当前 branch
+ git merge blog_temp1
+     合并时存在问题，如果以本地为准 git  add，以服务器为准则 git  rm XXXX，然后 git commit
+     再重新执行合并
+ # 删除临时 branch
+ git branch -d blog_temp1</code></pre>
 </li>
 <li><p>删除特定 commit (# 由于 hexo 自身存在一个版本库，因此需要进行相应的处理)</p>
- <pre><code class="hljs Shell">git log  
-git rebase -i XXX       # 将需要删除的最早的提交之前的一次提交做基础 
-    将相关 commit 记录中的 pick 改为 drop，保存即实现本地删除。
-git push origin blog -f    # 强制提交本地版本到远程（实现远程删除）
-git status       # 查看状态
-git log --oneline
-git pull origin blog:blog
-git log --oneline
+<pre><code class="sh"> git log  
+ git rebase -i XXX       # 将需要删除的最早的提交之前的一次提交做基础 
+     将相关 commit 记录中的 pick 改为 drop，保存即实现本地删除。
+ git push origin blog -f    # 强制提交本地版本到远程（实现远程删除）
+ git status       # 查看状态
+ git log --oneline
+ git pull origin blog:blog
+ git log --oneline
 
-cd D:\WebSites\faradays-studio.hexo\.deploy_git
-执行上述过程，如出现 `HEAD detached ` 等报错，注意分支名称实际为 master，
-执行 hexo 同步至远程</code></pre>
+ cd D:\WebSites\faradays-studio.hexo\.deploy_git
+ 执行上述过程，如出现 `HEAD detached ` 等报错，注意分支名称实际为 master，
+ 执行 hexo 同步至远程</code></pre>
 </li>
 <li><p>具体的操作过程：</p>
- <pre><code class="hljs Shell"><span class="hljs-meta">#</span><span class="bash"> 从 GitHub 下拉取版本库，确保本地文件为最新</span>
-git pull origin blog:blog
-<span class="hljs-meta">#</span><span class="bash"> 查看更新日志</span>
-git log
-    相关 log 文件使用 VI 的形式打开，因此可以按 shift + G 跳转到底，按 q 退出修改。
-<span class="hljs-meta">#</span><span class="bash"> 将需要删除的最早提交的前一次提交，设置为版本基础</span>
-git rebase -i 982c78fc82a2a3804233e9ff7ef315fc21dc0822
-    在弹出文件中，将会展示在该提交之后的每个提交信息
-    将相关 commit 记录中的 pick 改为 drop，保存即实现本地删除。
-    出现 `HEAD detached at 982c78f` 报警
-    
-    # 查看当前分支情况
-    git branch -a
-    # 将当前分支改名
-    git branch blog_temp1 blog
-    # 解决由于删除造成的版本 merge 报警
-    git rm -r about
-    git rm content.json
-    git rebase --continue
-    git commit
-    git push origin blog -f
-    
-    # 合并分支
-    #git merge blog_temp1
-    # 重新对 Head 指向 branch（测试表明该步骤不能执行）
-    # git checkout blog
-    # 删除临时的版本
-    git branch -d blog_temp1
-git log --oneline
+<pre><code class="sh"> # 从 GitHub 下拉取版本库，确保本地文件为最新
+ git pull origin blog:blog
+ # 查看更新日志
+ git log
+     相关 log 文件使用 VI 的形式打开，因此可以按 shift + G 跳转到底，按 q 退出修改。
+ # 将需要删除的最早提交的前一次提交，设置为版本基础
+ git rebase -i 982c78fc82a2a3804233e9ff7ef315fc21dc0822
+     在弹出文件中，将会展示在该提交之后的每个提交信息
+     将相关 commit 记录中的 pick 改为 drop，保存即实现本地删除。
+     出现 `HEAD detached at 982c78f` 报警
 
-<span class="hljs-meta">#</span><span class="bash"> git pull origin blog:blog 等命令无法对 hexo 的版本库进行更新，因此执行以下操作</span>
-<span class="hljs-meta">#</span><span class="bash"> 删除 .deploy_git 文件夹，重新建立版本库理论可行。详见 https://github.com/hexojs/hexo-deployer-git 。</span>
-git rebase -i 982c78fc82a2a3804233e9ff7ef315fc21dc0822
-<span class="hljs-meta">#</span><span class="bash"> 查看状态</span>
-git status
-git rm -r about
-git rm content.json
-git rebase --continue
-git log
-git log --oneline
+     # 查看当前分支情况
+     git branch -a
+     # 将当前分支改名
+     git branch blog_temp1 blog
+     # 解决由于删除造成的版本 merge 报警
+     git rm -r about
+     git rm content.json
+     git rebase --continue
+     git commit
+     git push origin blog -f
 
-<span class="hljs-meta">#</span><span class="bash">至此，各个版本完成更新，可以使用 hexo 重新生成一次，确保删除的文件被生成</span>
-hexo -d g
+     # 合并分支
+     #git merge blog_temp1
+     # 重新对 Head 指向 branch（测试表明该步骤不能执行）
+     # git checkout blog
+     # 删除临时的版本
+     git branch -d blog_temp1
+ git log --oneline
 
-<span class="hljs-meta">#</span><span class="bash"> 查看本地版本日志</span>
-git log --oneline
-<span class="hljs-meta">#</span><span class="bash"> 解决由于前边删除文件导致的版本文件数量不一致的问题</span>
-git pull -r
-<span class="hljs-meta">#</span><span class="bash"> 下载网络更新到本地</span>
-git pull origin blog:blog
-<span class="hljs-meta">#</span><span class="bash"> 检查更新情况后的版本日志</span>
-git log --oneline</code></pre>
+ # git pull origin blog:blog 等命令无法对 hexo 的版本库进行更新，因此执行以下操作
+ # 删除 .deploy_git 文件夹，重新建立版本库理论可行。详见 https://github.com/hexojs/hexo-deployer-git 。
+ git rebase -i 982c78fc82a2a3804233e9ff7ef315fc21dc0822
+ # 查看状态
+ git status
+ git rm -r about
+ git rm content.json
+ git rebase --continue
+ git log
+ git log --oneline
 
+ #至此，各个版本完成更新，可以使用 hexo 重新生成一次，确保删除的文件被生成
+ hexo -d g
 
-
-
+ # 查看本地版本日志
+ git log --oneline
+ # 解决由于前边删除文件导致的版本文件数量不一致的问题
+ git pull -r
+ # 下载网络更新到本地
+ git pull origin blog:blog
+ # 检查更新情况后的版本日志
+ git log --oneline</code></pre>
 </li>
 </ol>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li><p>UniqueColor.<code>git chekout分支遇到问题：need merge</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.cnblogs.com/UniqueColor/p/6594942.html">https://www.cnblogs.com/UniqueColor/p/6594942.html</a>, 2020/08/26.</p>
+<li><p>UniqueColor.<code>git chekout分支遇到问题：need merge</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.cnblogs.com/UniqueColor/p/6594942.html">https://www.cnblogs.com/UniqueColor/p/6594942.html</a>, 2020/08/26.</p>
 </li>
-<li><p>奔跑的小龙码.<code>git删除指定commit</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.cnblogs.com/lwcode6/p/11809973.html">https://www.cnblogs.com/lwcode6/p/11809973.html</a>, 2020/08/26.</p>
+<li><p>奔跑的小龙码.<code>git删除指定commit</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.cnblogs.com/lwcode6/p/11809973.html">https://www.cnblogs.com/lwcode6/p/11809973.html</a>, 2020/08/26.</p>
 <blockquote>
 <p>通过 add /rm 来指定本机处理措施，git commit -s，再 pull，再push</p>
 </blockquote>
 </li>
-<li><p>Jack_Chao.<code>Git 快速使用 之 冲突 merge 快速解决</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.jianshu.com/p/50ef88bda474">https://www.jianshu.com/p/50ef88bda474</a>, 2020/08/26.</p>
+<li><p>Jack_Chao.<code>Git 快速使用 之 冲突 merge 快速解决</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/50ef88bda474">https://www.jianshu.com/p/50ef88bda474</a>, 2020/08/26.</p>
 </li>
-<li><p>星辰之力.<code>git push &amp; git pull 推送/拉取分支</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.cnblogs.com/zhujiabin/p/9641305.html">https://www.cnblogs.com/zhujiabin/p/9641305.html</a>, 2020/08/27.</p>
+<li><p>星辰之力.<code>git push &amp; git pull 推送/拉取分支</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhujiabin/p/9641305.html">https://www.cnblogs.com/zhujiabin/p/9641305.html</a>, 2020/08/27.</p>
 </li>
 </ol>
 
@@ -488,7 +483,7 @@ git log --oneline</code></pre>
     <br /><br /><br />
     <div id="copyright-content" class="content">
         
-        <p>最后更新： 2021/01/17 11:23:43</p>
+        <p>最后更新： 2021/02/14 21:35:43</p>
         <p>
                 
                 
@@ -496,7 +491,7 @@ git log --oneline</code></pre>
                         
                             作者：
                         
-                    <a target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/">David Faraday</a>
+                    <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
                 
 
                 
@@ -520,7 +515,7 @@ git log --oneline</code></pre>
         </p>
 
         
-        <p>备用链接： <a class="post-url" target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/202008261600/" title="使用 Git 命令来管理 hexo 博客">
+        <p>备用链接： <a class="post-url" target="_blank" rel="noopener" href="https://faradays-studio.github.io/202008261600/" title="使用 Git 命令来管理 hexo 博客">
             https://faradays-studio.github.io/202008261600/</a>
         </p>
         
@@ -691,16 +686,32 @@ git log --oneline</code></pre>
 
     
         
+  <div id="giteement-faradays"></div>
+  
+    <link rel="stylesheet" href="/css/giteement-basic.css">
+    <link rel="stylesheet" href="/css/giteement-more.css">
+    <script src="/js/giteement-browser.js"></script>
+    <script src="/js/giteement-oauthcallback.js"></script>
+  
+  <script>
+  var giteement = new Giteement({
+    id: '20200826160050',
+    owner: 'faradays-studio',
+    repo: 'faradays-studio',
+    backcall_uri: 'https://faradays-studio.gitee.io/',
+    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
+    oauth: {
+      client_id: '5d879954ec69389f7085d21dbdbc3a2736ec5d756e181d85fcfc125a9e3fc737',
+      client_secret: 'af4ae7a6fddba1be20d9fc3ce1b8d9adfe28db1d9b31bc52e0eced79b40213be'
+    },
+  })
+  giteement.render('giteement-faradays')
+
     
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-    <!-- <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script> -->
+    Oauthcallback();
+  </script>
 
-    <div id="gitalk-container">
 
-    </div>
 
     
 
@@ -742,7 +753,7 @@ git log --oneline</code></pre>
     </span>
 
     
-    &emsp;总文本数：<span class="post-count">24.8k</span>
+    &emsp;总文本数：<span class="post-count">25k</span>
 </p>
 
 
@@ -1172,6 +1183,7 @@ if ( dv1 != null ) {
         headingsOffset: 47,
 
         scrollContainer: 'main',
+        
         positionFixedSelector: '.tocbot',
         positionFixedClass: 'is-position-fixed',
 
@@ -1185,34 +1197,12 @@ if ( dv1 != null ) {
 
 
 
-    <script>
+
     
-    const gitalk = new Gitalk({
-        clientID: '90b449ff273a263117ec',
-        clientSecret: '0a3ccea67a4d3f03cbff012eeac1a8547e367aad',
-        repo: 'faradays-studio.github.io',      
-        owner: 'faradays-studio',
-        admin: ['faradays-studio'],
-        id: location.pathname, 
-        labels: ['gitalk', 'post-comment', '博客评论'],
-        perPage: 3,
-        distractionFreeMode: false  
-        })
-
-        gitalk.render('gitalk-container')
-    </script>
-
-
-
-
-
-    <!-- <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script> -->
     
 <script src="/js/highlight.min.js"></script>
 
-
     <script>
-     
     hljs.initHighlightingOnLoad();
     </script>
 

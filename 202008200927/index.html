@@ -24,12 +24,12 @@
 
 
 
-  <meta name="description" content="编程, 思考, 文学作品, 实践, 总结">
+  <meta name="description" content="字符运算历来是编程中的重要内容，如何拼接字符，如何截取字符，如何判断字符是否存在，如何判断两个字符串是否相同，成为了编程任务中的重要环节。因此，我结合网络的资料和个人的实践经验来总结一下。 Windows 批处理中字符的基本常识 批处理中变量的赋值符号两侧不能包含空格，如 set str_date&#x3D;&#39;20200820&#39;，这与很多编程规范是相悖的。  批处理中的字符可以不添加双引号，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows 批处理的字符运算（未完待续）">
 <meta property="og:url" content="https://faradays-studio.gitee.io/202008200927/index.html">
 <meta property="og:site_name" content="Blog of Faradays&#39; Studio">
-<meta property="og:description" content="编程, 思考, 文学作品, 实践, 总结">
+<meta property="og:description" content="字符运算历来是编程中的重要内容，如何拼接字符，如何截取字符，如何判断字符是否存在，如何判断两个字符串是否相同，成为了编程任务中的重要环节。因此，我结合网络的资料和个人的实践经验来总结一下。 Windows 批处理中字符的基本常识 批处理中变量的赋值符号两侧不能包含空格，如 set str_date&#x3D;&#39;20200820&#39;，这与很多编程规范是相悖的。  批处理中的字符可以不添加双引号，">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-20T01:27:42.000Z">
 <meta property="article:modified_time" content="2020-08-20T01:27:42.000Z">
@@ -45,7 +45,6 @@
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
   
-  <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
    
 
 
@@ -53,10 +52,8 @@
     
     <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
     <link rel="stylesheet" href="/css/github.min.css">
-    <!-- <link rel="stylesheet" href="/css/github.min.css"> -->
-    <!-- 
-<link rel="stylesheet" href="/css/github.min.css">
- -->
+    
+
 
     
     <!-- import 'gitalk/dist/gitalk.css' -->
@@ -137,7 +134,7 @@ window.onload = function () {
 
 
 
-<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
 </head>
 
 
@@ -259,7 +256,7 @@ window.onload = function () {
 
                     
                     
-                    <a target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/">David Faraday</a>
+                    <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
 
                     
 
@@ -316,52 +313,50 @@ window.onload = function () {
 <p><strong>起点位置</strong> ：如果为正数，那么就是从左往右截取，而如果为负数，那么就是说从右向左截取；不过无论为正还是为负，截取结果都是不包含处于 <strong>起点位置</strong> 的那个字符的。</p>
 <p><strong>截取数量|终点位置</strong> ：如果为正数，那么就是单纯的 <strong>截取数量</strong> ；如果为负数，那么应当表述为 <strong>终点位置</strong> ，而且，与 <strong>起点位置</strong> 对应，截取结果也是不包含该负数所对应的字符的，即上述的 -5 对应的是终点位置为右侧第 6 个字符截止。</p>
 <p>举例说明，如下：</p>
-<pre><code class="hljs powershell"><span class="hljs-built_in">echo</span> on
-<span class="hljs-built_in">set</span> ifo=abcdefghijklmnopqrstuvwxyz0123456789
-<span class="hljs-built_in">echo</span> %ifo%
-<span class="hljs-built_in">echo</span>.
-<span class="hljs-built_in">echo</span> 截取前<span class="hljs-number">4</span>个字符：%ifo:~<span class="hljs-number">0</span>,<span class="hljs-number">4</span>%
-<span class="hljs-built_in">echo</span> 截取年度：%date:~<span class="hljs-number">0</span>,<span class="hljs-number">4</span>%
-<span class="hljs-built_in">echo</span>.
-<span class="hljs-built_in">echo</span> 截取最后<span class="hljs-number">2</span>个字符：%ifo:~<span class="hljs-literal">-2</span>%
-<span class="hljs-built_in">echo</span> 截取星期：%date:~<span class="hljs-literal">-2</span>%
-<span class="hljs-built_in">echo</span>.
-<span class="hljs-built_in">echo</span> 截取第一个到倒数第<span class="hljs-number">6</span>个字符：%ifo:~<span class="hljs-number">0</span>,<span class="hljs-literal">-5</span>%
-<span class="hljs-built_in">echo</span> 截取日期（含分隔符）：%date:~<span class="hljs-number">0</span>,<span class="hljs-literal">-3</span>%
-<span class="hljs-built_in">echo</span>.
-<span class="hljs-built_in">echo</span> 从第<span class="hljs-number">5</span>个字符开始，截取<span class="hljs-number">2</span>个字符：%ifo:~<span class="hljs-number">4</span>,<span class="hljs-number">2</span>%
-<span class="hljs-built_in">echo</span> 截取月份：%date:~<span class="hljs-number">5</span>,<span class="hljs-number">2</span>%
-<span class="hljs-built_in">echo</span> 截取天数：%date:~<span class="hljs-number">8</span>,<span class="hljs-number">2</span>%
-<span class="hljs-built_in">echo</span>.
-<span class="hljs-built_in">echo</span> 从倒数第<span class="hljs-number">14</span>个字符开始，截取<span class="hljs-number">5</span>个字符：%ifo:~<span class="hljs-literal">-14</span>,<span class="hljs-number">5</span>%
-<span class="hljs-built_in">echo</span> 截取秒数：%time:~<span class="hljs-number">3</span>,<span class="hljs-number">2</span>%
-<span class="hljs-built_in">echo</span>.
-<span class="hljs-built_in">echo</span> 当前时间是：%time% 即 %time:~<span class="hljs-number">0</span>,<span class="hljs-number">2</span>%点%time:~<span class="hljs-number">3</span>,<span class="hljs-number">2</span>%分%time:~<span class="hljs-number">6</span>,<span class="hljs-number">2</span>%秒%time:~<span class="hljs-number">9</span>,<span class="hljs-number">2</span>%厘秒
+<pre><code class="dos">echo on
+set ifo=abcdefghijklmnopqrstuvwxyz0123456789
+echo %ifo%
+echo.
+echo 截取前4个字符：%ifo:~0,4%
+echo 截取年度：%date:~0,4%
+echo.
+echo 截取最后2个字符：%ifo:~-2%
+echo 截取星期：%date:~-2%
+echo.
+echo 截取第一个到倒数第6个字符：%ifo:~0,-5%
+echo 截取日期（含分隔符）：%date:~0,-3%
+echo.
+echo 从第5个字符开始，截取2个字符：%ifo:~4,2%
+echo 截取月份：%date:~5,2%
+echo 截取天数：%date:~8,2%
+echo.
+echo 从倒数第14个字符开始，截取5个字符：%ifo:~-14,5%
+echo 截取秒数：%time:~3,2%
+echo.
+echo 当前时间是：%time% 即 %time:~0,2%点%time:~3,2%分%time:~6,2%秒%time:~9,2%厘秒
 pause</code></pre>
-
 <p>当然，我最常用的就是对日期、时间等内置变量的操作。</p>
 <h3 id="文件路径字符的截取"><a href="#文件路径字符的截取" class="headerlink" title="文件路径字符的截取"></a>文件路径字符的截取</h3><p>主要依靠 Windows 内置的扩展变量用法来进行。</p>
 <p>执行 <code>for /?</code> 可以查看路径扩展的</p>
 <p>举例说明，如下（注意，需要另存为 test.bat 文件形式执行）：</p>
-<pre><code class="hljs powershell">@<span class="hljs-built_in">echo</span> off
-<span class="hljs-built_in">echo</span> 当前路径的完整字符串：%<span class="hljs-number">0</span>
-<span class="hljs-built_in">echo</span> 当前路径的完整字符串（如被双引号包围，去除双引号）：%~<span class="hljs-number">0</span>
-<span class="hljs-built_in">echo</span> 当前路径的所在分区：%~d0
-<span class="hljs-built_in">echo</span> 当前路径的目录：%~p0
-<span class="hljs-built_in">echo</span> 文件名：%~n0
-<span class="hljs-built_in">echo</span> 扩展名：%~x0
-<span class="hljs-built_in">echo</span> 文件属性：%~a0
-<span class="hljs-built_in">echo</span> 修改时间：%~t0
-<span class="hljs-built_in">echo</span> 文件大小：%~z0
+<pre><code class="powershell">@echo off
+echo 当前路径的完整字符串：%0
+echo 当前路径的完整字符串（如被双引号包围，去除双引号）：%~0
+echo 当前路径的所在分区：%~d0
+echo 当前路径的目录：%~p0
+echo 文件名：%~n0
+echo 扩展名：%~x0
+echo 文件属性：%~a0
+echo 修改时间：%~t0
+echo 文件大小：%~z0
 pause</code></pre>
-
 <p>路径处理，往往都配合 for 函数进行操作。</p>
 <p><strong>未完待续…</strong></p>
 <h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><h3 id="变更日志"><a href="#变更日志" class="headerlink" title="变更日志"></a>变更日志</h3><ol>
 <li>2020/08/20 10:49:23，创建文章。</li>
 </ol>
 <h3 id="参考索引"><a href="#参考索引" class="headerlink" title="参考索引"></a>参考索引</h3><ol>
-<li><strong>CharyGao</strong>.<code>DOS命令（cmd）批处理：替换字符串、截取字符串、扩充字符串、获取字符串长度</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.cnblogs.com/Chary/p/No0000A4.html">https://www.cnblogs.com/Chary/p/No0000A4.html</a>, 2020/08/20.</li>
+<li><strong>CharyGao</strong>.<code>DOS命令（cmd）批处理：替换字符串、截取字符串、扩充字符串、获取字符串长度</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.cnblogs.com/Chary/p/No0000A4.html">https://www.cnblogs.com/Chary/p/No0000A4.html</a>, 2020/08/20.</li>
 </ol>
 
             <div class="post-copyright">
@@ -384,7 +379,7 @@ pause</code></pre>
 
         
             <p>编者：
-                <a target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/">David Faraday</a>
+                <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
             </p>
         
         
@@ -400,7 +395,7 @@ pause</code></pre>
         </p>
 
         
-        <p>备用链接： <a class="post-url" target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/202008200927/" title="Windows 批处理的字符运算（未完待续）">
+        <p>备用链接： <a class="post-url" target="_blank" rel="noopener" href="https://faradays-studio.github.io/202008200927/" title="Windows 批处理的字符运算（未完待续）">
             https://faradays-studio.github.io/202008200927/</a>
         </p>
         
@@ -473,7 +468,7 @@ pause</code></pre>
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.gitee.io/202008200927/&title=《Windows 批处理的字符运算（未完待续）》 — Blog of Faradays' Studio&pic=https://faradays-studio.gitee.ioimages/logo-Faradays' Studio.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.gitee.io/202008200927/&title=《Windows 批处理的字符运算（未完待续）》 — Blog of Faradays' Studio&pic=https://faradays-studio.gitee.ioimages/faradays-A01.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -569,16 +564,32 @@ pause</code></pre>
 
     
         
+  <div id="giteement-faradays"></div>
+  
+    <link rel="stylesheet" href="/css/giteement-basic.css">
+    <link rel="stylesheet" href="/css/giteement-more.css">
+    <script src="/js/giteement-browser.js"></script>
+    <script src="/js/giteement-oauthcallback.js"></script>
+  
+  <script>
+  var giteement = new Giteement({
+    id: '20200820092742',
+    owner: 'faradays-studio',
+    repo: 'faradays-studio',
+    backcall_uri: 'https://faradays-studio.gitee.io/',
+    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
+    oauth: {
+      client_id: '5d879954ec69389f7085d21dbdbc3a2736ec5d756e181d85fcfc125a9e3fc737',
+      client_secret: 'af4ae7a6fddba1be20d9fc3ce1b8d9adfe28db1d9b31bc52e0eced79b40213be'
+    },
+  })
+  giteement.render('giteement-faradays')
+
     
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-    <!-- <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script> -->
+    Oauthcallback();
+  </script>
 
-    <div id="gitalk-container">
 
-    </div>
 
     
 
@@ -620,7 +631,7 @@ pause</code></pre>
     </span>
 
     
-    &emsp;总文本数：<span class="post-count">24.8k</span>
+    &emsp;总文本数：<span class="post-count">25k</span>
 </p>
 
 
@@ -1050,6 +1061,7 @@ if ( dv1 != null ) {
         headingsOffset: 47,
 
         scrollContainer: 'main',
+        
         positionFixedSelector: '.tocbot',
         positionFixedClass: 'is-position-fixed',
 
@@ -1063,34 +1075,12 @@ if ( dv1 != null ) {
 
 
 
-    <script>
+
     
-    const gitalk = new Gitalk({
-        clientID: '90b449ff273a263117ec',
-        clientSecret: '0a3ccea67a4d3f03cbff012eeac1a8547e367aad',
-        repo: 'faradays-studio.github.io',      
-        owner: 'faradays-studio',
-        admin: ['faradays-studio'],
-        id: location.pathname, 
-        labels: ['gitalk', 'post-comment', '博客评论'],
-        perPage: 3,
-        distractionFreeMode: false  
-        })
-
-        gitalk.render('gitalk-container')
-    </script>
-
-
-
-
-
-    <!-- <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script> -->
     
 <script src="/js/highlight.min.js"></script>
 
-
     <script>
-     
     hljs.initHighlightingOnLoad();
     </script>
 

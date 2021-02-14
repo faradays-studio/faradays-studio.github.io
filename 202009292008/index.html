@@ -24,15 +24,15 @@
 
 
 
-  <meta name="description" content="编程, 思考, 文学作品, 实践, 总结">
+  <meta name="description" content="在使用 shell 编程的过程，难免要进行内容输出，我们一般情况下都使用 echo 命令进行输出，如 echo &quot;Hello, World&quot; ，不过功能比较有限；如果需要高级的格式化功能控制，那么应当使用 printf 命令。 printf 由 POSIX 标准所定义，是C语言 &#96;printf()&#96; 库函数的一个有限的变形（在语法上也有些不同），是 echo 命令的增强版。 p">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在 Shell 中使用 printf 格式化输出语句">
 <meta property="og:url" content="https://faradays-studio.gitee.io/202009292008/index.html">
 <meta property="og:site_name" content="Blog of Faradays&#39; Studio">
-<meta property="og:description" content="编程, 思考, 文学作品, 实践, 总结">
+<meta property="og:description" content="在使用 shell 编程的过程，难免要进行内容输出，我们一般情况下都使用 echo 命令进行输出，如 echo &quot;Hello, World&quot; ，不过功能比较有限；如果需要高级的格式化功能控制，那么应当使用 printf 命令。 printf 由 POSIX 标准所定义，是C语言 &#96;printf()&#96; 库函数的一个有限的变形（在语法上也有些不同），是 echo 命令的增强版。 p">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-29T12:08:22.000Z">
-<meta property="article:modified_time" content="2020-12-29T15:50:12.031Z">
+<meta property="article:modified_time" content="2021-02-14T13:34:18.400Z">
 <meta property="article:author" content="David">
 <meta property="article:tag" content="shell">
 <meta property="article:tag" content="printf">
@@ -46,7 +46,6 @@
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
   
-  <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
    
 
 
@@ -54,10 +53,8 @@
     
     <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
     <link rel="stylesheet" href="/css/github.min.css">
-    <!-- <link rel="stylesheet" href="/css/github.min.css"> -->
-    <!-- 
-<link rel="stylesheet" href="/css/github.min.css">
- -->
+    
+
 
     
     <!-- import 'gitalk/dist/gitalk.css' -->
@@ -138,7 +135,7 @@ window.onload = function () {
 
 
 
-<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
 </head>
 
 
@@ -260,7 +257,7 @@ window.onload = function () {
 
                     
                     
-                    <a target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/">David Faraday</a>
+                    <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
 
                     
 
@@ -283,7 +280,7 @@ window.onload = function () {
 
         
         <li><i class="fa fa-file-word-o"></i>
-            <span class="post-count">1.6k words</span>
+            <span class="post-count">1.5k words</span>
         </li>
         <li><i class="fa fa-caret-square-o-right"></i>
             <span class="post-count">6 min</span>
@@ -455,82 +452,85 @@ printf 不像 echo 那样会自动换行，必须显式添加换行符 `\n` 。<
 </tbody></table>
 <h2 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h2><ol>
 <li><p>示例1（shell 示例）</p>
- <pre><div class="caption"><span>/home/user/test.sh</span></div><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash">!/bin/bash</span>
-<span class="hljs-meta">#</span><span class="bash"> author: david faraday</span>
-<span class="hljs-meta">#</span><span class="bash"> created: 2020/10/05 17:05:13</span>
- 
-<span class="hljs-meta">#</span><span class="bash"> format-string为双引号</span>
-printf &quot;%d %s\n&quot; 1 &quot;abc&quot;
+<pre><code class="sh"> #!/bin/bash
+ # author: david faraday
+ # created: 2020/10/05 17:05:13
 
-<span class="hljs-meta">#</span><span class="bash"> 单引号与双引号效果一样 </span>
-printf &#x27;%d %s\n&#x27; 1 &quot;abc&quot; 
+ # format-string为双引号
+ printf &quot;%d %s\n&quot; 1 &quot;abc&quot;
 
-<span class="hljs-meta">#</span><span class="bash"> 没有引号也可以输出</span>
-printf %s abcdef
+ # 单引号与双引号效果一样 
+ printf &#39;%d %s\n&#39; 1 &quot;abc&quot; 
 
-<span class="hljs-meta">#</span><span class="bash"> 格式只指定了一个参数，但多出的参数仍然会按照该格式输出，format-string 被重用</span>
-printf %s abc def
+ # 没有引号也可以输出
+ printf %s abcdef
 
-printf &quot;%s\n&quot; abc def
+ # 格式只指定了一个参数，但多出的参数仍然会按照该格式输出，format-string 被重用
+ printf %s abc def
 
-printf &quot;%s %s %s\n&quot; a b c d e f g h i j
+ printf &quot;%s\n&quot; abc def
 
-<span class="hljs-meta">#</span><span class="bash"> 如果没有 arguments，那么 %s 用NULL代替，%d 用 0 代替</span>
-printf &quot;%s and %d \n&quot;</code></pre>
+ printf &quot;%s %s %s\n&quot; a b c d e f g h i j
 
+ # 如果没有 arguments，那么 %s 用NULL代替，%d 用 0 代替
+ printf &quot;%s and %d \n&quot; </code></pre>
 <p> 上述输出结果为：</p>
-<pre><code>1 abc
-1 abc
-abcdefabcdefabc
-def
-a b c
-d e f
-g h i
-j  
- and 0</code></pre></li>
+<pre><code class="shell"> 1 abc
+ 1 abc
+ abcdefabcdefabc
+ def
+ a b c
+ d e f
+ g h i
+ j  
+ and 0</code></pre>
+</li>
+</ol>
+<ol start="2">
 <li><p>示例2：表格化输出</p>
- <pre><div class="caption"><span>/home/user/test_2.sh</span></div><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash">!/bin/bash</span>
-<span class="hljs-meta">#</span><span class="bash"> author: david faraday</span>
-<span class="hljs-meta">#</span><span class="bash"> created: 2020/10/05 17:15:25</span>
- 
-printf &quot;%-10s %-8s %-4s\n&quot; 姓名 性别 体重kg  
-printf &quot;%-10s %-8s %-4.2f\n&quot; 郭靖 男 66.1234 
-printf &quot;%-10s %-8s %-4.2f\n&quot; 杨过 男 48.6543 
-printf &quot;%-10s %-8s %-4.2f\n&quot; 郭芙 女 47.9876</code></pre>
+<pre><code class="sh"> #!/bin/bash
+ # author: david faraday
+ # created: 2020/10/05 17:15:25
 
+ printf &quot;%-10s %-8s %-4s\n&quot; 姓名 性别 体重kg  
+ printf &quot;%-10s %-8s %-4.2f\n&quot; 郭靖 男 66.1234 
+ printf &quot;%-10s %-8s %-4.2f\n&quot; 杨过 男 48.6543 
+ printf &quot;%-10s %-8s %-4.2f\n&quot; 郭芙 女 47.9876 </code></pre>
 <blockquote>
 <p><code>%-10s</code> 指一个宽度为 10 个字符（ <code>-</code> 表示左对齐，没有则表示右对齐），任何字符都会被显示在 10 个字符宽的字符内，如果不足则自动以空格填充，超过也会将内容全部显示出来。<br><code>%-4.2f</code> 指格式化为小数，其中 <code>.2</code> 指保留 2 位小数。</p>
 </blockquote>
 <p> 执行脚本，输出结果如下所示：</p>
-<pre><code>姓名     性别   体重kg
-郭靖     男      66.12
-杨过     男      48.65
-郭芙     女      47.99</code></pre></li>
+<pre><code class="xls"> 姓名     性别   体重kg
+ 郭靖     男      66.12
+ 杨过     男      48.65
+ 郭芙     女      47.99</code></pre>
+</li>
+</ol>
+<ol start="3">
 <li><p>示例（C 语言示例）</p>
- <pre><div class="caption"><span>/home/user/test.c 【注意，求值顺序虽是自右至左，但是输出顺序还是从左至右】</span></div><code class="hljs C"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>&#123;
-    <span class="hljs-keyword">int</span> i=<span class="hljs-number">8</span>;
-    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;The raw value: i=%d\n&quot;</span>, i);
-    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;++i=%d \n++i=%d \n--i=%d \n--i=%d\n&quot;</span>,++i,++i,--i,--i);
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;</code></pre>
-
+<pre><code class="C"> #include &lt;stdio.h&gt;
+ int main(void)&#123;
+     int i=8;
+     printf(&quot;The raw value: i=%d\n&quot;, i);
+     printf(&quot;++i=%d \n++i=%d \n--i=%d \n--i=%d\n&quot;,++i,++i,--i,--i);
+     return 0;
+ &#125;</code></pre>
 <p> 运行结果：</p>
-<pre><code>The raw value: i=8
-++i=8
-++i=7
---i=6
---i=7</code></pre></li>
+<pre><code> The raw value: i=8
+ ++i=8
+ ++i=7
+ --i=6
+ --i=7</code></pre></li>
 </ol>
 <h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h3><ul>
 <li>1.0.0，2020/10/05 21:51:03，初始版本。</li>
 </ul>
 <h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
-<li><p>w3cschool编程狮.<code>Shell printf 命令</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="https://www.w3cschool.cn/linux/linux-shell-printf.html">https://www.w3cschool.cn/linux/linux-shell-printf.html</a>, 2020/09/29.</p>
+<li><p>w3cschool编程狮.<code>Shell printf 命令</code>[EB/OL].<a target="_blank" rel="noopener" href="https://www.w3cschool.cn/linux/linux-shell-printf.html">https://www.w3cschool.cn/linux/linux-shell-printf.html</a>, 2020/09/29.</p>
 </li>
-<li><p>C语言中文网.<code>shell printf命令：格式化输出语句</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="http://c.biancheng.net/cpp/view/1499.html">http://c.biancheng.net/cpp/view/1499.html</a>, 2020/09/29.</p>
+<li><p>C语言中文网.<code>shell printf命令：格式化输出语句</code>[EB/OL].<a target="_blank" rel="noopener" href="http://c.biancheng.net/cpp/view/1499.html">http://c.biancheng.net/cpp/view/1499.html</a>, 2020/09/29.</p>
 </li>
-<li><p>C语言中文网.<code>C语言格式输出函数printf()详解</code>[EB/OL].<a target="_blank" rel="noopener norefferrer" href="http://c.biancheng.net/cpp/html/33.html">http://c.biancheng.net/cpp/html/33.html</a>, 2020/10/05.</p>
+<li><p>C语言中文网.<code>C语言格式输出函数printf()详解</code>[EB/OL].<a target="_blank" rel="noopener" href="http://c.biancheng.net/cpp/html/33.html">http://c.biancheng.net/cpp/html/33.html</a>, 2020/10/05.</p>
 </li>
 </ol>
 
@@ -540,7 +540,7 @@ printf &quot;%-10s %-8s %-4.2f\n&quot; 郭芙 女 47.9876</code></pre>
     <br /><br /><br />
     <div id="copyright-content" class="content">
         
-        <p>最后更新： 2020/12/29 23:50:12</p>
+        <p>最后更新： 2021/02/14 21:34:18</p>
         <p>
                 
                 
@@ -554,7 +554,7 @@ printf &quot;%-10s %-8s %-4.2f\n&quot; 郭芙 女 47.9876</code></pre>
 
         
             <p>编者：
-                <a target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/">David Faraday</a>
+                <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
             </p>
         
         
@@ -570,7 +570,7 @@ printf &quot;%-10s %-8s %-4.2f\n&quot; 郭芙 女 47.9876</code></pre>
         </p>
 
         
-        <p>备用链接： <a class="post-url" target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/202009292008/" title="在 Shell 中使用 printf 格式化输出语句">
+        <p>备用链接： <a class="post-url" target="_blank" rel="noopener" href="https://faradays-studio.github.io/202009292008/" title="在 Shell 中使用 printf 格式化输出语句">
             https://faradays-studio.github.io/202009292008/</a>
         </p>
         
@@ -643,7 +643,7 @@ printf &quot;%-10s %-8s %-4.2f\n&quot; 郭芙 女 47.9876</code></pre>
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.gitee.io/202009292008/&title=《在 Shell 中使用 printf 格式化输出语句》 — Blog of Faradays' Studio&pic=https://faradays-studio.gitee.ioimages/logo-Faradays' Studio.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.gitee.io/202009292008/&title=《在 Shell 中使用 printf 格式化输出语句》 — Blog of Faradays' Studio&pic=https://faradays-studio.gitee.ioimages/faradays-A01.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -741,16 +741,32 @@ printf &quot;%-10s %-8s %-4.2f\n&quot; 郭芙 女 47.9876</code></pre>
 
     
         
+  <div id="giteement-faradays"></div>
+  
+    <link rel="stylesheet" href="/css/giteement-basic.css">
+    <link rel="stylesheet" href="/css/giteement-more.css">
+    <script src="/js/giteement-browser.js"></script>
+    <script src="/js/giteement-oauthcallback.js"></script>
+  
+  <script>
+  var giteement = new Giteement({
+    id: '20200929200822',
+    owner: 'faradays-studio',
+    repo: 'faradays-studio',
+    backcall_uri: 'https://faradays-studio.gitee.io/',
+    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
+    oauth: {
+      client_id: '5d879954ec69389f7085d21dbdbc3a2736ec5d756e181d85fcfc125a9e3fc737',
+      client_secret: 'af4ae7a6fddba1be20d9fc3ce1b8d9adfe28db1d9b31bc52e0eced79b40213be'
+    },
+  })
+  giteement.render('giteement-faradays')
+
     
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-    <!-- <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script> -->
+    Oauthcallback();
+  </script>
 
-    <div id="gitalk-container">
 
-    </div>
 
     
 
@@ -792,7 +808,7 @@ printf &quot;%-10s %-8s %-4.2f\n&quot; 郭芙 女 47.9876</code></pre>
     </span>
 
     
-    &emsp;总文本数：<span class="post-count">24.8k</span>
+    &emsp;总文本数：<span class="post-count">25k</span>
 </p>
 
 
@@ -1222,6 +1238,7 @@ if ( dv1 != null ) {
         headingsOffset: 47,
 
         scrollContainer: 'main',
+        
         positionFixedSelector: '.tocbot',
         positionFixedClass: 'is-position-fixed',
 
@@ -1235,34 +1252,12 @@ if ( dv1 != null ) {
 
 
 
-    <script>
+
     
-    const gitalk = new Gitalk({
-        clientID: '90b449ff273a263117ec',
-        clientSecret: '0a3ccea67a4d3f03cbff012eeac1a8547e367aad',
-        repo: 'faradays-studio.github.io',      
-        owner: 'faradays-studio',
-        admin: ['faradays-studio'],
-        id: location.pathname, 
-        labels: ['gitalk', 'post-comment', '博客评论'],
-        perPage: 3,
-        distractionFreeMode: false  
-        })
-
-        gitalk.render('gitalk-container')
-    </script>
-
-
-
-
-
-    <!-- <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script> -->
     
 <script src="/js/highlight.min.js"></script>
 
-
     <script>
-     
     hljs.initHighlightingOnLoad();
     </script>
 

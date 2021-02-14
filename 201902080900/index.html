@@ -38,12 +38,12 @@
 
 
 
-  <meta name="description" content="编程, 思考, 文学作品, 实践, 总结">
+  <meta name="description" content="A  few days ago, I got stuck in the mud of creating a svg dom with svg.js. After many test and searching, I found out that someting is different from the official  manual. The problem of using svg.jsF">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to creat svg document with svg.js">
 <meta property="og:url" content="https://faradays-studio.gitee.io/201902080900/index.html">
 <meta property="og:site_name" content="Blog of Faradays&#39; Studio">
-<meta property="og:description" content="编程, 思考, 文学作品, 实践, 总结">
+<meta property="og:description" content="A  few days ago, I got stuck in the mud of creating a svg dom with svg.js. After many test and searching, I found out that someting is different from the official  manual. The problem of using svg.jsF">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-02-08T01:00:30.000Z">
 <meta property="article:modified_time" content="2019-02-10T13:51:52.000Z">
@@ -59,7 +59,6 @@
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
   
-  <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
    
 
 
@@ -67,10 +66,8 @@
     
     <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
     <link rel="stylesheet" href="/css/github.min.css">
-    <!-- <link rel="stylesheet" href="/css/github.min.css"> -->
-    <!-- 
-<link rel="stylesheet" href="/css/github.min.css">
- -->
+    
+
 
     
     <!-- import 'gitalk/dist/gitalk.css' -->
@@ -151,7 +148,7 @@ window.onload = function () {
 
 
 
-<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
 </head>
 
 
@@ -269,7 +266,7 @@ window.onload = function () {
             
                 
                 
-                    <a target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/">David Faraday</a>
+                    <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
 
                     
 
@@ -314,28 +311,25 @@ window.onload = function () {
             
             <p>A  few days ago, I got stuck in the mud of creating a svg dom with svg.js. After many test and searching, I found out that someting is different from the official  manual.</p>
 <h2 id="The-problem-of-using-svg-js"><a href="#The-problem-of-using-svg-js" class="headerlink" title="The problem of using svg.js"></a>The problem of using svg.js</h2><p><strong>For example, we write some dom in <some_page>.html like this:</strong></p>
-<pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Creating SVG with SVG.js<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;X-UA-Compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;IE=edge,chrome=1&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/svg.js/3.0.11/svg.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Creating SVG with SVG.js&lt;/title&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
+&lt;script src=&quot;https://cdn.bootcss.com/svg.js/3.0.11/svg.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
 
-<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;drawing&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>
-<span class="javascript">  <span class="hljs-comment">// write down your javascript here..</span></span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre>
-
-
-<p>The official  manual (refer to <a target="_blank" rel="noopener norefferrer" href="https://svgjs.com/docs/3.0/getting-started/">https://svgjs.com/docs/3.0/getting-started/</a>) said that <code>&lt;script&gt;...&lt;/script&gt;</code>  part like this:</p>
-<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> draw = SVG(<span class="hljs-string">&#x27;drawing&#x27;</span>).size(<span class="hljs-number">300</span>, <span class="hljs-number">300</span>)
-<span class="hljs-keyword">var</span> rect = draw.rect(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>).attr(&#123; <span class="hljs-attr">fill</span>: <span class="hljs-string">&#x27;#f06&#x27;</span> &#125;)</code></pre>
-
-<p>The script above pass through on jsfiddle.net test (refer to <a target="_blank" rel="noopener norefferrer" href="https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz">https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz</a> ). However, it doesn’t work on my case, no matter running on my MSIE 7.0 to 11.0 or Chrome 58. I felt so depressed that even could not got sleep for two whole days.</p>
+&lt;body&gt;
+&lt;div id=&quot;drawing&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+  // write down your javascript here..
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>The official  manual (refer to <a target="_blank" rel="noopener" href="https://svgjs.com/docs/3.0/getting-started/">https://svgjs.com/docs/3.0/getting-started/</a>) said that <code>&lt;script&gt;...&lt;/script&gt;</code>  part like this:</p>
+<pre><code class="javascript">var draw = SVG(&#39;drawing&#39;).size(300, 300)
+var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></pre>
+<p>The script above pass through on jsfiddle.net test (refer to <a target="_blank" rel="noopener" href="https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz">https://jsfiddle.net/wout/wmtt8rkz/7/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=wmtt8rkz</a> ). However, it doesn’t work on my case, no matter running on my MSIE 7.0 to 11.0 or Chrome 58. I felt so depressed that even could not got sleep for two whole days.</p>
 <h2 id="The-way-to-write-svg-js-script-and-DOM"><a href="#The-way-to-write-svg-js-script-and-DOM" class="headerlink" title="The way to write svg.js script and DOM"></a>The way to write svg.js script and DOM</h2><p>After many tests and searching, I found out that these code running: </p>
 <h3 id="1-Way-1"><a href="#1-Way-1" class="headerlink" title="1. Way 1:"></a>1. Way 1:</h3><p>   DOM: <code>&lt;div id=&quot;drawing&quot;&gt;&lt;/div&gt;</code> </p>
 <p>   Script 1: <code>var draw = SVG().addTo(&#39;#drawing&#39;).size(1024,200);</code> </p>
@@ -365,7 +359,7 @@ window.onload = function () {
                         
                             作者：
                         
-                    <a target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/">David Faraday</a>
+                    <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
                 
 
                 
@@ -389,7 +383,7 @@ window.onload = function () {
         </p>
 
         
-        <p>备用链接： <a class="post-url" target="_blank" rel="noopener norefferrer" href="https://faradays-studio.github.io/201902080900/" title="How to creat svg document with svg.js">
+        <p>备用链接： <a class="post-url" target="_blank" rel="noopener" href="https://faradays-studio.github.io/201902080900/" title="How to creat svg document with svg.js">
             https://faradays-studio.github.io/201902080900/</a>
         </p>
         
@@ -464,7 +458,7 @@ window.onload = function () {
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.gitee.io/201902080900/&title=《How to creat svg document with svg.js》 — Blog of Faradays' Studio&pic=https://faradays-studio.gitee.ioimages/logo-Faradays' Studio.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.gitee.io/201902080900/&title=《How to creat svg document with svg.js》 — Blog of Faradays' Studio&pic=https://faradays-studio.gitee.ioimages/faradays-A01.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -555,16 +549,32 @@ window.onload = function () {
 
     
         
+  <div id="giteement-faradays"></div>
+  
+    <link rel="stylesheet" href="/css/giteement-basic.css">
+    <link rel="stylesheet" href="/css/giteement-more.css">
+    <script src="/js/giteement-browser.js"></script>
+    <script src="/js/giteement-oauthcallback.js"></script>
+  
+  <script>
+  var giteement = new Giteement({
+    id: '20190208090030',
+    owner: 'faradays-studio',
+    repo: 'faradays-studio',
+    backcall_uri: 'https://faradays-studio.gitee.io/',
+    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
+    oauth: {
+      client_id: '5d879954ec69389f7085d21dbdbc3a2736ec5d756e181d85fcfc125a9e3fc737',
+      client_secret: 'af4ae7a6fddba1be20d9fc3ce1b8d9adfe28db1d9b31bc52e0eced79b40213be'
+    },
+  })
+  giteement.render('giteement-faradays')
+
     
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">  -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-    <!-- <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script> -->
+    Oauthcallback();
+  </script>
 
-    <div id="gitalk-container">
 
-    </div>
 
     
 
@@ -606,7 +616,7 @@ window.onload = function () {
     </span>
 
     
-    &emsp;总文本数：<span class="post-count">24.8k</span>
+    &emsp;总文本数：<span class="post-count">25k</span>
 </p>
 
 
@@ -1036,6 +1046,7 @@ if ( dv1 != null ) {
         headingsOffset: 47,
 
         scrollContainer: 'main',
+        
         positionFixedSelector: '.tocbot',
         positionFixedClass: 'is-position-fixed',
 
@@ -1049,34 +1060,12 @@ if ( dv1 != null ) {
 
 
 
-    <script>
+
     
-    const gitalk = new Gitalk({
-        clientID: '90b449ff273a263117ec',
-        clientSecret: '0a3ccea67a4d3f03cbff012eeac1a8547e367aad',
-        repo: 'faradays-studio.github.io',      
-        owner: 'faradays-studio',
-        admin: ['faradays-studio'],
-        id: location.pathname, 
-        labels: ['gitalk', 'post-comment', '博客评论'],
-        perPage: 3,
-        distractionFreeMode: false  
-        })
-
-        gitalk.render('gitalk-container')
-    </script>
-
-
-
-
-
-    <!-- <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script> -->
     
 <script src="/js/highlight.min.js"></script>
 
-
     <script>
-     
     hljs.initHighlightingOnLoad();
     </script>
 
