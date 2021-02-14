@@ -766,33 +766,38 @@ window.onload = function () {
 
     
         
-  <div id="giteement-faradays"></div>
-  
-    <link rel="stylesheet" href="/css/giteement-basic.css">
-    <link rel="stylesheet" href="/css/giteement-more.css">
-    <script src="/js/giteement-browser.js"></script>
-    <script src="/js/giteement-oauthcallback.js"></script>
-  
-  <script>
-  var giteement = new Giteement({
-    id: '20201220112553',
-    owner: 'faradays-studio',
-    repo: 'faradays-studio',
-    backcall_uri: 'https://faradays-studio.gitee.io',
-    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
-    oauth: {
-      client_id: '5d879954ec69389f7085d21dbdbc3a2736ec5d756e181d85fcfc125a9e3fc737',
-      client_secret: 'af4ae7a6fddba1be20d9fc3ce1b8d9adfe28db1d9b31bc52e0eced79b40213be'
-    },
-  })
-  giteement.render('giteement-faradays')
+
 
     
-    Oauthcallback();
-  </script>
+    
+        <link rel="stylesheet" href="/css/gitalk.css">
+        <script src="/js/gitalk.min.js"></script>
+    
+
+    <div id="gitalk-faradays">
+
+    </div>
 
 
 
+    
+    <script>
+    
+    const gitalk = new Gitalk({
+        clientID: '90b449ff273a263117ec',
+        clientSecret: '0a3ccea67a4d3f03cbff012eeac1a8547e367aad',
+        repo: 'faradays-studio.github.io',      
+        owner: 'faradays-studio',
+        admin: ['faradays-studio'],
+        id: location.pathname, 
+        labels: ['gitalk', 'post-comment', '��������'],
+        perPage: 3,
+        distractionFreeMode: false  
+        })
+
+        gitalk.render('gitalk-faradays')
+    </script>
+    
     
 
 
