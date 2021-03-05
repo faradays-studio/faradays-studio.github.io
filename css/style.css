@@ -464,6 +464,7 @@ a {
   text-shadow: 0 1px #fff;
   font-weight: bold;
 }
+.article-inner-index,
 .article-inner,
 .archive-article-inner {
   background: #fff;
@@ -657,13 +658,18 @@ a {
   border-bottom: 1px solid #ddd;
   z-index: 1;
 }
-#header:before,
-#header:after {
+#header:before {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   height: 40px;
+}
+#header:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 #header-outer {
   height: 100%;
@@ -848,7 +854,6 @@ a {
   letter-spacing: 8px;
 }
 #header-description {
-  width: 600px;
   margin: 20px auto;
   padding: 10px 0;
   color: #fff;
@@ -1175,18 +1180,23 @@ a {
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 .article-index {
-  margin: -240px 0 0;
+  margin: 2;
   background: #fff;
   border-radius: 0;
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 .article-header-num {
+  margin: 2;
   position: relative;
   top: 45px;
   left: -1.5em;
   color: #ffa500;
   opacity: 0.37;
   font-size: 3em;
+}
+.article-inner-index {
+  overflow: inherit;
+  margin-top: 0px;
 }
 .article-inner {
   overflow: inherit;
@@ -2580,8 +2590,24 @@ pre .javascript .function {
     color: #fff;
   }
   #sidebar-mode i {
-    font-size: 1.3rem;
-    line-height: 1.3em;
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  .cmd-logo {
+    margin: 5px;
+    display: block;
+    cursor: pointer;
+    width: 23px;
+    height: 23px;
+    text-align: center;
+    line-height: 23px;
+    border-radius: 50%;
+    background: #ffa500;
+    color: #fff;
+  }
+  .cmd-logo i {
+    font-size: 1rem;
+    line-height: 1em;
   }
   .article-nav-link-wrap {
     margin-top: 13px;
@@ -2651,22 +2677,6 @@ pre .javascript .function {
     background: #f00;
     z-index: -2;
   }
-  .cmd-logo {
-    margin: 5px;
-    display: block;
-    cursor: pointer;
-    width: 23px;
-    height: 23px;
-    text-align: center;
-    line-height: 23px;
-    border-radius: 50%;
-    background: #ffa500;
-    color: #fff;
-  }
-  .cmd-logo i {
-    font-size: 1.3rem;
-    line-height: 1.3em;
-  }
   .post-modal .reward-lay {
     margin: 2px;
   }
@@ -2716,45 +2726,91 @@ pre .javascript .function {
   #mobile-header-menu-nav .mobile-header-tag-container {
     display: none;
   }
-}
-.post-copyright {
-  margin: 0;
-}
-.post-copyright .content {
-  margin-bottom: 1em;
-  word-break: break-all;
-  color: #727272;
-  background: #fffbf2;
-  border-radius: 10px;
-}
-.post-copyright .content p {
-  font-size: 10px;
-  line-height: 1rem;
-}
-.post-copyright footer {
-  float: right;
-}
-.post-copyright footer a {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  padding: 0 16px 0 35px;
-  height: 28px;
-  line-height: 28px;
-  color: #727272;
-  background: #fffbf2;
-  border-radius: 12px;
-}
-.post-copyright footer a:hover {
-  text-decoration: none;
-}
-.post-copyright footer img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 23px;
-  height: 23px;
-  border-radius: 50%;
+  .archive-article-inner .archive-post-footer {
+    display: none;
+  }
+  .archive-article-inner .archive-article-header .archive-article-title {
+    white-space: normal;
+  }
+  .timeline2 {
+    margin-left: 0rem;
+    padding-left: 2.5rem;
+  }
+  .timeline2::after {
+    padding-bottom: 1rem;
+  }
+  .timeline2::before {
+    padding-top: 3rem;
+  }
+  .timeline2-year-wrap .timeline2-year {
+    font-size: 1.2rem;
+    left: -1.3rem;
+    font-weight: 700;
+    color: #ffa500;
+    background: #888;
+  }
+  .timeline2-article .timeline2-article-header .timeline2-article-date {
+    width: 3rem;
+    left: 0;
+  }
+  .timeline2-article .timeline2-article-header .timeline2-article-date time {
+    left: -1rem;
+  }
+  .timeline2-article .timeline2-article-header .timeline2-article-date time .timeline2-num {
+    top: 50%;
+    margin-top: -0.5rem;
+    width: 2rem;
+    left: -3.5rem;
+  }
+  .timeline2-article .timeline2-article-header h3 {
+    margin: 0;
+    padding: 0rem;
+  }
+  .timeline2-article .timeline2-article-header h3 a {
+    font-size: 1rem;
+  }
+  .timeline2-article .timeline2-article-header h3 a .timeline2-article-title {
+    left: -8rem;
+  }
+  .post-copyright {
+    margin: 0;
+  }
+  .post-copyright .content {
+    margin-bottom: 1em;
+    word-break: break-all;
+    color: #727272;
+    background: #fffbf2;
+    border-radius: 10px;
+  }
+  .post-copyright .content p {
+    font-size: 10px;
+    line-height: 1rem;
+  }
+  .post-copyright footer {
+    float: right;
+  }
+  .post-copyright footer a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 0 16px 0 35px;
+    height: 28px;
+    line-height: 28px;
+    color: #727272;
+    background: #fffbf2;
+    border-radius: 12px;
+  }
+  .post-copyright footer a:hover {
+    text-decoration: none;
+  }
+  .post-copyright footer img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+  }
 }
 .categories2 a {
   font-size: 0.9rem;
@@ -2901,7 +2957,6 @@ pre .javascript .function {
 }
 #sidebar-menu-box-tags {
   display: inline-block;
-  max-height: 162px;
   overflow-y: auto;
 }
 #sidebar-menu-box-tags a {

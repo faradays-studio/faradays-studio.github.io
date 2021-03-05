@@ -102,7 +102,7 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
     <content><![CDATA[<h2 id="系统更新日志"><a href="#系统更新日志" class="headerlink" title="系统更新日志"></a>系统更新日志</h2><ol>
 <li><p>2020/06/07 16:02:08，开始 hexo 建站学习和尝试安装、确定最终选用的环境版本。</p>
 </li>
-<li><p>2020/06/07 21:47:44，创建 hexo 站点，基于 <a href="https://github.com/WongMinHo/hexo-theme-miho">MiHo</a> 主题揉入 <a href="https://github.com/Shen-Yu/hexo-theme-ayer">Ayer</a>  主题定制博客主题；整合原有静态网站，并入站点中跳转。</p>
+<li><p>2020/06/07 21:47:44，创建 hexo 站点，基于 <a href="https://github.com/WongMinHo/hexo-theme-miho">MiHo</a> 主题揉入 <a href="https://github.com/Shen-Yu/hexo-theme-ayer">Ayer</a>  部分元素定制博客主题；整合原有静态网站，并入站点中跳转。</p>
 </li>
 <li><p>2020/06/10 0:54:40，修改 URL 设置，修改《如何使用 svg.js 创建 svg 文档》文章内容为中文。</p>
 </li>
@@ -153,6 +153,8 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
 <li><p>2021/02/14 21:58:16，升级至 v0.2.9，增加 <del>giteement 评论（测试无法正常登陆回调）</del>、gitee站点评论也存储在github、时间轴页导航目录功能，调整gitalk 资源为本地版本以提高国内访问速率（可选）、highlight关闭hexo渲染而使用独立的js脚本以确保着色正确性（关闭hexo自身的语言检测功能将减少1s的文件加载时间）等功能。</p>
 </li>
 <li><p>2021/02/17 13:18:58，升级至 v0.2.10，主要调整手机模式的网页样式。</p>
+</li>
+<li><p>2021/03/06 02:17:18，升级至 v0.2.11，调整首页样式，不再显示文章分页清单；继续优化手机模式的存档页、时间轴页等样式；调整 typed.js 至本地加载。</p>
 </li>
 </ol>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
@@ -296,7 +298,10 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
 <p>这个主题写的挺好看，有空学习一下。</p>
 </blockquote>
 </li>
-<li><p>試毅-思伟.<code>Hexo博客集成码云评论系统</code>[EB/OL].<a href="https://zhousiwei.gitee.io/2019/07/25/Hexo%E5%8D%9A%E5%AE%A2%E9%9B%86%E6%88%90%E7%A0%81%E4%BA%91%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">https://zhousiwei.gitee.io/2019/07/25/Hexo%E5%8D%9A%E5%AE%A2%E9%9B%86%E6%88%90%E7%A0%81%E4%BA%91%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</a>, 2021/02/12.</p>
+<li><p><del>試毅-思伟.<code>Hexo博客集成码云评论系统</code>[EB/OL].<a href="https://zhousiwei.gitee.io/2019/07/25/Hexo%E5%8D%9A%E5%AE%A2%E9%9B%86%E6%88%90%E7%A0%81%E4%BA%91%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">https://zhousiwei.gitee.io/2019/07/25/Hexo%E5%8D%9A%E5%AE%A2%E9%9B%86%E6%88%90%E7%A0%81%E4%BA%91%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</a>, 2021/02/12.</del></p>
+<blockquote>
+<p>不确定，反正我没成功；放弃了使用 giteement 评论功能。</p>
+</blockquote>
 </li>
 <li><p>搜狐公司.<code>（畅言云评）PC端 通用代码接入</code>[EB/OL].<a href="http://changyan.kuaizhan.com/static/help/">http://changyan.kuaizhan.com/static/help/</a>, 2021/02/13.</p>
 </li>
@@ -304,6 +309,12 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
 <blockquote>
 <p>tocbot插件主要通过标签id属性实现跳转，如果标签中没有id属性或者id中包含中文字符，无法跳转。</p>
 </blockquote>
+</li>
+<li><p>TRHX • 鲍勃.<code>CSS 与其预处理语言 Sass、Less、Stylus 之间的转化</code>[EB/OL].<a href="https://blog.csdn.net/qq_36759224/article/details/91492651">https://blog.csdn.net/qq_36759224/article/details/91492651</a>, 2021/02/15.</p>
+</li>
+<li><p>W3School.<code>CSS white-space 属性</code>[EB/OL].<a href="https://www.w3school.com.cn/cssref/pr_text_white-space.asp">https://www.w3school.com.cn/cssref/pr_text_white-space.asp</a>, 2021/02/17.</p>
+</li>
+<li><p>璀璨星空.<code>Hexo分页设置的问题</code>[EB/OL].<a href="http://jerry011235.github.io/2015/05/18/Hexo%E5%88%86%E9%A1%B5%E8%AE%BE%E7%BD%AE%E7%9A%84%E9%97%AE%E9%A2%98/">http://jerry011235.github.io/2015/05/18/Hexo%E5%88%86%E9%A1%B5%E8%AE%BE%E7%BD%AE%E7%9A%84%E9%97%AE%E9%A2%98/</a>, 2021/03/06.</p>
 </li>
 </ol>
 ]]></content>
@@ -2535,6 +2546,9 @@ fi</code></pre>
 <p>2020年里，我除了有一两个月因为一些特别重大的事情低沉了好几个星期，从年初到年底，我实际上在工作上投入的时间并不比别人少。没错，我就是那种人——明明没人安排我，回到家里还在研究工作中的事情，去探索如何能够将工作做得效果更好、操作更智能化……</p>
 <p>2020年，也看着不少的同事，慢慢地领先到了前方，有些人成为了处级领导，有些人从副科转为了正科，甚至也有个别年轻人超到前方去成了副科级的领导了。我回想自己的这些年，工作付出不少，荣誉很多，业绩丰富，能力也不错，可是目前并未看到向上升迁的机会；心里不免是着急的，会盲目去比较，也会突然地爆出几句怨言来！</p>
 <p>工作中，看过太多的事情没做成——哪怕是高层领导牵头的事，没做成的也是一抓一大把。因此，我对自己“每一次都将别人没做成的事情做成了，将别人不愿意做的事情默默做出来了”这一点颇为骄傲，甚至有些得意忘形了！年终评选的时候，我常常列入上级荣誉的候选人，然而很多年里都止步于候选；不知道今年结果如何，反正公司推荐到集团的名单里，我也是排名靠后的——我都已经尽力地吹嘘自己了，可是也不见得每个领导都喜欢我！</p>
+<blockquote>
+<p>有意思的是，2020年的评选我魔幻般的拿了大满贯，所在部门的、区域的、集团的先进我全拿了！感谢领导！</p>
+</blockquote>
 <p>看着别人的宣传材料，都是将普通而平凡的事情做成了。我和别人的区别，无非是我的业绩更多是与计算机相关的，不容易可视化评估；而别人的业绩往往都是加了什么设备、修好了什么东西、帮助了多少穷人，即使是外行人也能评价出一二三来。所以，我还是挺无奈的：酒再香，也怕巷子太深！</p>
 <p>噢，不再说这些事情了，我还是向前看看吧，因为这些社会环境可不会自动适应我：工作上的岗位，不是我自己能定的；而我也不愿意去做一条咸鱼，哪怕可能会被一些人毫无底线地利用。因此，我，需要调整自我，不断去提升自我，与时俱进，开拓创新。</p>
 <p><strong>2020年，我是做了不少工作的。我自以为：我是一些工作成功开展的关键，因为我有决心、有能力、有行动去突破困难，让我的同事没有后顾之忧！可是，我也不是成功唯一的关键，我明白，我再厉害，如果厂家不配合、使用者不接纳，那么我做的成果，也只是一堆空洞的二进制符号的集合；厂家、用户都是靠我的上上级以及上上级的上上级去驱动的——没有领导的支持，就没有相应的硬件资源，就没有实施的基础，更没有应用、推广、完善的可能性！因此，关键领导的支持，也毫无疑问是成功的最关键。</strong></p>
@@ -2687,6 +2701,7 @@ rm -f /empty</code></pre>
     <title>2021年随笔</title>
     <url>/202101171157/</url>
     <content><![CDATA[<h2 id="2021-01-28，辛苦"><a href="#2021-01-28，辛苦" class="headerlink" title="2021/01/28，辛苦"></a>2021/01/28，辛苦</h2><p>写论文，又到凌晨，身心疲惫不已的，有种长路漫漫之感。</p>
+<h2 id="2021-03-03，愚钝"><a href="#2021-03-03，愚钝" class="headerlink" title="2021/03/03，愚钝"></a>2021/03/03，愚钝</h2><p>最近，母亲在老家里动作频频，自己工作上也是困难重重，好几天都无精打采的，文件也写不出来</p>
 ]]></content>
       <categories>
         <category>星星心事</category>
@@ -2892,58 +2907,95 @@ sed -e &#39;s|^mirrorlist=|#mirrorlist=|g&#39; \
       </tags>
   </entry>
   <entry>
-    <title>Linux系统的多条件查询与匹配（待完善）</title>
+    <title>Linux系统的多条件查询与匹配</title>
     <url>/202102122028/</url>
-    <content><![CDATA[<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><table>
+    <content><![CDATA[<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><ol>
+<li><p>vim 的多条件匹配</p>
+<table>
 <thead>
 <tr>
-<th>命令</th>
 <th>与</th>
 <th>或</th>
 <th>非</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>vim</td>
 <td>?<code>.*a</code>\&amp;<code>.*b</code></td>
 <td>?<code>a</code>\|<code>b</code></td>
 <td></td>
 </tr>
 <tr>
-<td></td>
 <td>?<code>a</code>\&amp;<code>.*b</code></td>
 <td></td>
 <td></td>
 </tr>
+</tbody></table>
+</li>
+<li><p>grep 的多条件匹配</p>
+<table>
+<thead>
 <tr>
-<td>grep</td>
+<th>与</th>
+<th>或</th>
+<th>非</th>
+</tr>
+</thead>
+<tbody><tr>
 <td>grep <code>&#39;pattern1&#39;</code> filename | grep <code>&#39;pattern2&#39;</code></td>
 <td>grep ‘<code>pattern1</code>\|<code>pattern2</code>‘ filename</td>
 <td>grep -v ‘<code>pattern</code>‘ filename</td>
 </tr>
 <tr>
-<td></td>
 <td>grep -E ‘<code>pattern1</code>.*<code>pattern2</code>‘ filename</td>
 <td>grep -E ‘<code>pattern1</code>|<code>pattern2</code>‘ filename</td>
 <td></td>
 </tr>
 <tr>
-<td></td>
 <td>grep -E ‘<code>pattern1</code>.*<code>pattern2</code>|<code>pattern2</code>.*<code>pattern1</code>‘ filename</td>
 <td>grep -e ‘<code>pattern1</code> -e <code>pattern2</code>‘ filename</td>
 <td></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td>egrep ‘<code>pattern1</code>|<code>pattern2</code>‘ filename</td>
 <td></td>
 </tr>
 </tbody></table>
-<h2 id="使用案例"><a href="#使用案例" class="headerlink" title="使用案例"></a>使用案例</h2><ol>
-<li>查看 12 月份的错误信息：<code>grep</code> ‘<strong>error</strong>‘ /var/log/message <code>| grep</code> ‘<strong>Feb</strong> ‘</li>
+</li>
 </ol>
-<p>待完善</p>
+<h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><h3 id="与-运算"><a href="#与-运算" class="headerlink" title="与 运算"></a><code>与</code> 运算</h3><ol>
+<li><p>查看 12 月份的错误信息：<code>grep</code> ‘<strong>error</strong>‘ /var/log/message <code>| grep</code> ‘<strong>Feb</strong> ‘；</p>
+</li>
+<li><p>查看用户下有无特定程序：</p>
+<p> ps -Af | <code>grep -E</code> ‘root’ | <code>grep</code> bash<br> ps -Af | <code>grep</code>  herc  |<code>grep</code> bash</p>
+</li>
+</ol>
+<blockquote>
+<p>在系统的日常维护中，应当应该配合上下文检索信息，例如匹配前3条、后1条： ausearch -f /etc/passwd   | <code>grep -B3 -A1</code> cat。</p>
+</blockquote>
+<ol start="3">
+<li><p>匹配文件中的两个字符串：</p>
+<p> 第一个关键词位于行首：/2021-1-18<code>\&amp;.*</code> d</p>
+<p> <img src="/static/img/20210224-vim/vim-%E5%A4%9A%E6%9D%A1%E4%BB%B6%E2%80%9C%E4%B8%8E%E2%80%9D%E8%BF%90%E7%AE%97-HHJ-20210224.png" alt="vim-多条件“与”运算"></p>
+<p> 第一个关键词位于行中： /<code>.*</code>9:23<code>\&amp;.*</code> d</p>
+<p> <img src="/static/img/20210224-vim/vim-%E5%A4%9A%E6%9D%A1%E4%BB%B6%E2%80%9C%E4%B8%8E%E2%80%9D%E8%BF%90%E7%AE%972-HHJ-20210224.png" alt="vim-多条件“与”运算2"></p>
+</li>
+</ol>
+<h3 id="或-运算"><a href="#或-运算" class="headerlink" title="或 运算"></a><code>或</code> 运算</h3><ol>
+<li><p>查看是否存在这些进程：ps -Af | <code>grep -E</code> ‘mysql<code>|</code>postgres<code>|</code>xinetd<code>|</code>amanda’；</p>
+</li>
+<li><p>查看相应程序是否开机运行的配置：chkconfig –list | <code>grep -E</code> ‘mysql<code>|</code>postgres<code>|</code>xinetd<code>|</code>amanda’。</p>
+</li>
+<li><p>匹配文件中的两个字符串： /<code>.*</code>Send<code>\|</code>83</p>
+<p> <img src="/static/img/20210224-vim/vim-%E5%A4%9A%E6%9D%A1%E4%BB%B6%E2%80%9C%E6%88%96%E2%80%9D%E8%BF%90%E7%AE%97-HHJ-20210224.png" alt="vim-多条件“与”运算"></p>
+</li>
+</ol>
+<h3 id="非-运算"><a href="#非-运算" class="headerlink" title="非 运算"></a><code>非</code> 运算</h3><ol>
+<li><p>查看非空密码用户：cat /etc/shadow |<code>grep -v</code> “!!“；</p>
+</li>
+<li><p>查看可以登录系统的用户：cat /etc/passwd |<code>grep -v</code> “nologin”。</p>
+</li>
+</ol>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
 <li><p>夜之眷属.<code>vim中多条件查询</code>[EB/OL].<a href="https://blog.csdn.net/qq_28112995/article/details/106741835">https://blog.csdn.net/qq_28112995/article/details/106741835</a>, 2021/02/12.</p>
 </li>
@@ -2960,6 +3012,223 @@ sed -e &#39;s|^mirrorlist=|#mirrorlist=|g&#39; \
         <tag>多条件查询</tag>
         <tag>vim</tag>
         <tag>grep</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS6 升级安装 MySQL 5.7</title>
+    <url>/202103031918/</url>
+    <content><![CDATA[<p>由于 CentOS6 自带的 MySQL 5.1 性能不行，使用过程中遇到了很多问题，<del>（误）最关键的是，都不支持 utf8mb4，后台去检查数据老是遇到乱码，烦死了！mysql 5.5.3+ 才支持 utf8mb4，（逃…）</del>因此我决定安装 MySQL 5.7 。</p>
+<h2 id="设置国内源"><a href="#设置国内源" class="headerlink" title="设置国内源"></a>设置国内源</h2><p>最近几年里，我给好几个系统安装过 MySQL，可是国外官网的速度实在是太瘆人了；后来才知道这软件居然也有国内源，用了之后心情都好很多了。</p>
+<p><code>gedit /etc/yum.repos.d/mysql-community.repo</code>，填入以下内容：</p>
+<pre><code class="ini">[mysql-connectors-community]
+name=MySQL Connectors Community
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/mysql/yum/mysql-connectors-community-el6-$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=https://repo.mysql.com/RPM-GPG-KEY-mysql
+
+[mysql-tools-community]
+name=MySQL Tools Community
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/mysql/yum/mysql-tools-community-el6-$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=https://repo.mysql.com/RPM-GPG-KEY-mysql
+
+[mysql-5.6-community]
+name=MySQL 5.6 Community Server
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/mysql/yum/mysql-5.6-community-el6-$basearch/
+enabled=0
+gpgcheck=1
+gpgkey=https://repo.mysql.com/RPM-GPG-KEY-mysql
+
+[mysql-5.7-community]
+name=MySQL 5.7 Community Server
+#baseurl=https://mirrors.tuna.tsinghua.edu.cn/mysql/yum/mysql-5.7-community-el6-$basearch/
+#baseurl=https://mirrors4.tuna.tsinghua.edu.cn/mysql/yum/mysql-5.7-community-el6-x86_64/
+baseurl=https://mirrors.ustc.edu.cn/mysql-repo/yum/mysql-5.7-community/el/6/x86_64/
+enabled=1
+gpgcheck=1
+gpgkey=https://repo.mysql.com/RPM-GPG-KEY-mysql
+
+[mysql-8.0-community]
+name=MySQL 8.0 Community Server
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/mysql/yum/mysql-8.0-community-el6-$basearch/
+enabled=0
+gpgcheck=1
+gpgkey=https://repo.mysql.com/RPM-GPG-KEY-mysql</code></pre>
+<h2 id="安装程序"><a href="#安装程序" class="headerlink" title="安装程序"></a>安装程序</h2><p>使用 yum 进行安装 MySQL</p>
+<pre><code class="sh">yum makecache
+yum install mysql-community-libs-compat*
+yum install mysql-community-server</code></pre>
+<p> 一般情况下，MySQL包括以下各个包：</p>
+<table>
+<thead>
+<tr>
+<th align="left">名字</th>
+<th align="left">摘要说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">mysql-community-client</td>
+<td align="left">MySQL客户端应用程序和工具</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">mysql-community-common</td>
+<td align="left">服务器和客户端库的通用文件</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">mysql-community-devel</td>
+<td align="left">MySQL数据库客户端应用程序的开发头文件和库</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">mysql-community-embedded-compat</td>
+<td align="left">MySQL服务器作为嵌入式库，与使用库版本18的应用程序兼容</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">mysql-community-libs</td>
+<td align="left">MySQL数据库客户端应用程序的共享库</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">mysql-community-libs-compat</td>
+<td align="left">以前的MySQL安装的共享兼容性库</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">mysql-community-server</td>
+<td align="left">数据库服务器和相关工具</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">mysql-community-server-debug</td>
+<td align="left">调试服务器和插件二进制文件</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">mysql-community-test</td>
+<td align="left">MySQL服务器的测试套件</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">mysql-community</td>
+<td align="left">RPM的源代码类似于mysql-community-8.0.20-1.el7.src.rpm，具体取决于所选的OS</td>
+<td></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>  安装还会在系统上创建一个名为的用户 mysql和一个名为的组 mysql。</p>
+</blockquote>
+<h2 id="MySQL-的初始化配置"><a href="#MySQL-的初始化配置" class="headerlink" title="MySQL 的初始化配置"></a>MySQL 的初始化配置</h2><h3 id="初始化配置"><a href="#初始化配置" class="headerlink" title="初始化配置"></a>初始化配置</h3><p><code>gedit /etc/my.cnf</code> 设定 MySQL 的编码参数以及默认端口</p>
+<pre><code class="ini">[mysqld]
+port    = 6033
+character-set-server=utf8mb4
+collation_server=utf8mb4_general_ci
+default-time-zone = &#39;+8:00&#39;
+explicit_defaults_for_timestamp=true
+
+[client]
+port    = 6033
+default-character-set=utf8mb4</code></pre>
+<h3 id="修改服务"><a href="#修改服务" class="headerlink" title="修改服务"></a>修改服务</h3><p>设定 MySQL 开机启动</p>
+<pre><code class="sh">su
+chkconfig --add mysqld
+chkconfig mysqld on
+
+# 启动 MySQL 服务
+service mysqld start</code></pre>
+<h3 id="账户和密码管理"><a href="#账户和密码管理" class="headerlink" title="账户和密码管理"></a>账户和密码管理</h3><ol>
+<li>查看 MySQL 默认密码</li>
+</ol>
+<pre><code class="sh">grep &quot;temporary password&quot; /var/log/mysqld.log</code></pre>
+<ol start="2">
+<li>设定 root 密码，并添加普通用户 david</li>
+</ol>
+<pre><code class="sh">mysql -uroot -p
+    # 本地
+    ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;fs@DB135&#39;;
+        # SET PASSWORD FOR &#39;root&#39;@&#39;localhost&#39; = PASSWORD(&#39;fs@DB135&#39;);   
+    # 远程
+    ALTER USER &#39;root&#39;@&#39;%&#39; IDENTIFIED BY &#39;fs@ABCD.135&#39;;
+
+    # 普通用户 david
+    CREATE USER &#39;david&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;dav#D2468&#39;;
+    CREATE USER &#39;david&#39;@&#39;%&#39; IDENTIFIED BY &#39;dav#D-124857&#39;;
+
+    # 查看用户
+    select user,host,password from mysql.user;
+
+    exit</code></pre>
+<blockquote>
+<p>如果由于默认的密码强度校验导致本地使用的简单密码无法通过，可以在 MySQL 中使用 <code>set global validate_password_policy=0;</code> 临时关闭，不过，应当谨慎使用哦!</p>
+</blockquote>
+<ol start="3">
+<li>如果在使用过程中，需要修改账户的本地、远方访问权限，示例如下：</li>
+</ol>
+<pre><code class="sh"># 局域网访问：主库
+grant replication slave on *.* to &#39;david&#39;@&#39;192.168.88.%&#39; identified by &#39;dav#D2468&#39; with grant option;
+# 局域网访问：从库（在对端主机配置）
+grant all privileges on *.* to &#39;david&#39;@&#39;192.168.88.%&#39; identified by &#39;dav#D2468&#39; with grant option;
+
+# 远程访问（db1、db2为系统中的数据库名）
+GRANT ALL PRIVILEGES ON db1.* TO &#39;david&#39;@&#39;%&#39; IDENTIFIED BY &#39;dav.D2468-fs1&#39; WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON db2.* TO &#39;david&#39;@&#39;%&#39; IDENTIFIED BY &#39;dav#D-124857&#39; WITH GRANT OPTION;
+
+# 本地访问（临时性修改密码策略，从而在保留原有授权的基础下，增加密码较为简单的访问）
+set global validate_password_policy=0;
+GRANT ALL ON db1.* TO &#39;david&#39;@&#39;localhost&#39;   IDENTIFIED BY &#39;david.1357&#39; WITH GRANT OPTION;
+GRANT ALL ON db2.* TO &#39;david&#39;@&#39;127.0.0.%&#39;   IDENTIFIED BY &#39;david.2468&#39; WITH GRANT OPTION;
+
+# 执行生效
+flush privileges;</code></pre>
+<ol start="4">
+<li>如果需要清除权限，示例如下：</li>
+</ol>
+<pre><code class="sh">mysql -u root -p
+    select user,host, authentication_string from mysql.user;
+
+    # 清除  delete 权限
+    REVOKE delete ON *.* FROM &#39;david&#39;@&#39;localhost&#39;;
+    revoke delete on *.* from &#39;david&#39;@&#39;%&#39;;
+
+    # 清除 all 权限
+    revoke all on *.* from &#39;david&#39;@&#39;localhost&#39;;
+    REVOKE ALL PRIVILEGES ON *.* FROM &#39;david&#39;@&#39;%&#39;;
+
+    # 执行生效
+    FLUSH PRIVILEGES;</code></pre>
+<ol start="5">
+<li>配套修改防火墙确保远程主机的访问，如下：</li>
+</ol>
+<pre><code class="sh">gedit /etc/sysconfig/iptables
+    -A INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT
+    #-A INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT
+    -A INPUT -m state --state NEW -m tcp -p tcp --dport 6033 -j ACCEPT
+    -A INPUT -j REJECT --reject-with icmp-host-prohibited
+service iptables restart</code></pre>
+<h3 id="安装故障排查"><a href="#安装故障排查" class="headerlink" title="安装故障排查"></a>安装故障排查</h3><p>查看错误日志是最直接有效的，如果不指定，文件名则为主机名（此处为 hhjos6 ），如：</p>
+<pre><code class="sh">tail -f /var/lib/mysql/hhjos6.err</code></pre>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><p>TUNA.<code>Mysql Community Edition 镜像使用帮助</code>[EB/OL].<a href="https://mirrors.cnnic.cn/help/mysql/">https://mirrors.cnnic.cn/help/mysql/</a>, 2021/03/05.</p>
+</li>
+<li><p>Oracle Corporation and/or its affiliates.<code>MySQL Product Archives</code>[EB/OL].<a href="https://downloads.mysql.com/archives/community/">https://downloads.mysql.com/archives/community/</a>, 2021/03/05.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程笔记</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>国内源</tag>
+        <tag>CentOS</tag>
+        <tag>MySQL</tag>
+        <tag>安装</tag>
+        <tag>配置</tag>
       </tags>
   </entry>
 </search>
