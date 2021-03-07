@@ -159,6 +159,8 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
 <p>Bing 收录真是快，而且全面。一个月不到， gitee 站点中文站已经收录 12 条、国际站已经收录 39 条了，意想不到！</p>
 </blockquote>
 </li>
+<li><p>2021/03/07 23:06:13，升级至 v0.2.11，首页增加最后的3篇文章显示。</p>
+</li>
 </ol>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
 <li><p>﹏猴子请来的救兵.<code>Hexo主题开发</code>[EB/OL].<a href="https://www.cnblogs.com/yyhh/p/11058985.html">https://www.cnblogs.com/yyhh/p/11058985.html</a>, 2020/07/19.</p>
@@ -3233,6 +3235,112 @@ service iptables restart</code></pre>
         <tag>MySQL</tag>
         <tag>安装</tag>
         <tag>配置</tag>
+        <tag>权限</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS 6.10 编译安装 GCC4.8.5</title>
+    <url>/202103072130/</url>
+    <content><![CDATA[<p>由于安装 python 3 的需要，需要升级 GCC；由于我的操作系统是 CentOS6.10，而且还需要考虑到工作软件系统的兼容，因此 GCC 版本暂时定为 4.8.5。测试表明，如果 Python 需要性能优化选项 <code>--enable-optimizations</code>，需要 GCC 8.2+ 以上的版本。</p>
+<h2 id="源码下载"><a href="#源码下载" class="headerlink" title="源码下载"></a>源码下载</h2><h3 id="GCC-源码下载"><a href="#GCC-源码下载" class="headerlink" title="GCC 源码下载"></a>GCC 源码下载</h3><pre><code class="sh">cd /home/common
+wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-4.8.5/gcc-4.8.5.tar.gz
+tar xzvf gcc-4.8.5.tar.gz
+
+# 源码权限根据实际需要设定，实际上编译完成后这个文件夹用不到，因此可以不操作此步骤
+chmod 777 -R gcc-4.8.5/</code></pre>
+<h3 id="依赖库源码下载"><a href="#依赖库源码下载" class="headerlink" title="依赖库源码下载"></a>依赖库源码下载</h3><pre><code class="sh"># 进入保存地址
+cd /home/common/gcc-4.8.5
+
+wget https://gmplib.org/download/gmp-6.1.2/gmp-6.1.2.tar.bz2
+tar xvf gmp-6.1.2.tar.bz2
+mv gmp-6.1.2 gmp
+
+wget https://ftp.gnu.org/gnu/mpfr/mpfr-3.1.6.tar.gz
+tar xzvf mpfr-3.1.6.tar.gz
+mv mpfr-3.1.6 mpfr
+
+wget https://ftp.gnu.org/gnu/mpc/mpc-1.0.3.tar.gz
+tar xzvf mpc-1.0.3.tar.gz
+mv mpc-1.0.3 mpc
+
+wget http://www.bastoul.net/cloog/pages/download/cloog-0.18.4.tar.gz
+tar xzvf cloog-0.18.4.tar.gz
+mv cloog-0.18.4 cloog
+
+wget http://isl.gforge.inria.fr/isl-0.14.tar.gz
+tar xzvf isl-0.14.tar.gz
+mv isl-0.14 isl</code></pre>
+<h2 id="编译安装-GCC"><a href="#编译安装-GCC" class="headerlink" title="编译安装 GCC"></a>编译安装 GCC</h2><h3 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h3><pre><code class="sh">#gcc4.4.7版本开始，官方推荐使用单独的目录，而不是在解压gcc源码后的目录中进行编译
+mkdir /home/common/gcc-build
+cd gcc-build
+
+../gcc-4.8.5/configure --enable-checking=release --enable-languages=c,c++ --disable-multilib
+    # --with-pkgversion=version ：指定一个标识你的包的字符串
+    # --enable-languages=c,c++：可以使用 all，default，ada，c，c++，fortran，go，jit，lto，objc，obj-c++。
+    # --disable-multilib：禁止生成多个平台的代码
+    # --enable-bootstrap：冗余的编译检查工作
+    # --enable-gather-detailed-mem-stats：允许通过 -fmem-report 选项来输出编译其它程序时的实时内存使用情况
+    # --with-long-double-128：指定long double类型的默认值是128位。
+    # --enable-threads=posix：C++ 异常能处理多线程代码
+    # --without-bash-malloc：禁用了 Bash 的内存分配函数(malloc)，Bash 将使用更为稳定的 Glibc 里的 malloc 函数。
+    # --enable-multibyte：支持使用多字节字符编码的文件
+
+    grep &quot;error&quot; config.log
+
+# 默认的make不加-j参数效率比较低，加上多线程参数 -j4 和-j8性能差距不大，-j16性能就比较差
+date +%T &amp;&amp; make -j4 &amp;&amp; date +%T
+    # make clean：清除上次的make命令所产生的object文件（后缀为“.o”的文件）及可执行文件。
+    # make distclean：包含make clean，同时也将configure生成的文件全部删除掉。感觉有点像在 gcc-build 中执行 rm -rf 的删减版一样。
+    lscpu |grep -A 1 &#39;Model name&#39;
+make install</code></pre>
+<h3 id="关联系统"><a href="#关联系统" class="headerlink" title="关联系统"></a>关联系统</h3><p>如果上述安装过程中指定了 gcc 的安装路径，那么需要关联系统。当然，我上一步并没有指定安装路径，而是直接替代了系统自带的 GCC 4.4.7。</p>
+<pre><code class="sh"># 更新环境
+echo &#39;/usr/local/gcc-4.8.5/lib64&#39; &gt; /etc/ld.so.conf.d/gcc4.8.5.conf
+ldconfig
+
+# 在自定义的全局配置文件中添加 PATH 变量
+vim /etc/profile.d/hhjos6.sh
+    PATH=/usr/local/gcc-4.8.5/bin:$PATH
+
+mv /usr/bin/gcc /usr/bin/gcc-4.4.7
+mv /usr/bin/g++ /usr/bin/g++-4.4.7
+mv /usr/bin/c++ /usr/bin/c++-4.4.7
+ln -s /usr/local/gcc/bin/gcc /usr/bin/gcc
+ln -s /usr/local/gcc/bin/c++ /usr/bin/c++
+ln -s /usr/local/gcc/bin/g++ /usr/bin/g++
+ln -s /usr/local/gcc/lib64/libstdc++.so.6.0.22 /usr/lib64/libstdc++.so.6</code></pre>
+<h3 id="版本检查"><a href="#版本检查" class="headerlink" title="版本检查"></a>版本检查</h3><pre><code class="sh">gcc -v
+    gcc -dumpversion
+    ll /usr/bin/cc
+    strings /usr/lib64/libstdc++.so.6 | grep GLIBC
+g++ -v
+    g++ -dumpversion
+    c++ -dumpversion</code></pre>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><blockquote>
+<p>如果还要尝试 <code>yum -y install centos-release-scl</code> 安装临时版本的 GCC ，那多数人并不会成功，毕竟 CentOS 6 在官方都是不支持的版本了。博主这次安装 GCC 4.8.5 花了很长时间，毕竟坑太多了，而且已有程序环境的兼容性也必须兼顾。因此虽然参考了以下这些文章，但是操作步骤上却有差异；就是一点点差异，我浪费了很多很多的时间！实际上，我看过的文章就不止这些了，但对我并没有提供任何的帮助。</p>
+</blockquote>
+<ol>
+<li><p>TUNA.<code>清华大学开源软件镜像站（GCC）</code>[EB/OL].<a href="https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc">https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc</a>, 2021/02/20.</p>
+</li>
+<li><p>peterpanzsy.<code>centos 6 升级gcc</code>[EB/OL].<a href="https://www.cnblogs.com/peterpanzsy/archive/2013/04/10/3006838.html">https://www.cnblogs.com/peterpanzsy/archive/2013/04/10/3006838.html</a>, 2021/02/20.</p>
+</li>
+<li><p>创小新.<code>LINUX CENTOS6.8编译安装GCC-6.3.0 升级GCC</code>[EB/OL].<a href="https://chuangxiao.xin/h-nd-87.html">https://chuangxiao.xin/h-nd-87.html</a>, 2021/02/20.</p>
+</li>
+<li><p>ljpwinxp.<code>Centos 6.9 编译安装gcc 4.8.5</code>[EB/OL].<a href="https://blog.51cto.com/191226139/2066137">https://blog.51cto.com/191226139/2066137</a>, 2021/02/20.</p>
+</li>
+<li><p>Free Software Foundation.<code>GCC 4.8 Release Series: Changes, New Features, and Fixes</code>[EB/OL].<a href="https://gcc.gnu.org/gcc-4.8/changes.html">https://gcc.gnu.org/gcc-4.8/changes.html</a>, 2021/02/20.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程笔记</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>CentOS</tag>
+        <tag>安装</tag>
+        <tag>GCC</tag>
+        <tag>编译</tag>
       </tags>
   </entry>
 </search>

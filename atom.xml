@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://faradays-studio.gitee.io/"/>
-  <updated>2021-03-05T14:06:14.078Z</updated>
+  <updated>2021-03-07T13:59:11.729Z</updated>
   <id>https://faradays-studio.gitee.io/</id>
   
   <author>
@@ -17,11 +17,45 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CentOS 6.10 编译安装 GCC4.8.5</title>
+    <link href="https://faradays-studio.gitee.io/202103072130/"/>
+    <id>https://faradays-studio.gitee.io/202103072130/</id>
+    <published>2021-03-07T13:30:40.000Z</published>
+    <updated>2021-03-07T13:59:11.729Z</updated>
+    
+    <content type="html"><![CDATA[<p>由于安装 python 3 的需要，需要升级 GCC；由于我的操作系统是 CentOS6.10，而且还需要考虑到工作软件系统的兼容，因此 GCC 版本暂时定为 4.8.5。测试表明，如果 Python 需要性能优化选项 <code>--enable-optimizations</code>，需要 GCC 8.2+ 以上的版本。</p><h2 id="源码下载"><a href="#源码下载" class="headerlink" title="源码下载"></a>源码下载</h2><h3 id="GCC-源码下载"><a href="#GCC-源码下载" class="headerlink" title="GCC 源码下载"></a>GCC 源码下载</h3><pre><code class="sh">cd /home/commonwget https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-4.8.5/gcc-4.8.5.tar.gztar xzvf gcc-4.8.5.tar.gz# 源码权限根据实际需要设定，实际上编译完成后这个文件夹用不到，因此可以不操作此步骤chmod 777 -R gcc-4.8.5/</code></pre><h3 id="依赖库源码下载"><a href="#依赖库源码下载" class="headerlink" title="依赖库源码下载"></a>依赖库源码下载</h3><pre><code class="sh"># 进入保存地址cd /home/common/gcc-4.8.5wget https://gmplib.org/download/gmp-6.1.2/gmp-6.1.2.tar.bz2tar xvf gmp-6.1.2.tar.bz2mv gmp-6.1.2 gmpwget https://ftp.gnu.org/gnu/mpfr/mpfr-3.1.6.tar.gztar xzvf mpfr-3.1.6.tar.gzmv mpfr-3.1.6 mpfrwget https://ftp.gnu.org/gnu/mpc/mpc-1.0.3.tar.gztar xzvf mpc-1.0.3.tar.gzmv mpc-1.0.3 mpcwget http://www.bastoul.net/cloog/pages/download/cloog-0.18.4.tar.gztar xzvf cloog-0.18.4.tar.gzmv cloog-0.18.4 cloogwget http://isl.gforge.inria.fr/isl-0.14.tar.gztar xzvf isl-0.14.tar.gzmv isl-0.14 isl</code></pre><h2 id="编译安装-GCC"><a href="#编译安装-GCC" class="headerlink" title="编译安装 GCC"></a>编译安装 GCC</h2><h3 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h3><pre><code class="sh">#gcc4.4.7版本开始，官方推荐使用单独的目录，而不是在解压gcc源码后的目录中进行编译mkdir /home/common/gcc-buildcd gcc-build../gcc-4.8.5/configure --enable-checking=release --enable-languages=c,c++ --disable-multilib    # --with-pkgversion=version ：指定一个标识你的包的字符串    # --enable-languages=c,c++：可以使用 all，default，ada，c，c++，fortran，go，jit，lto，objc，obj-c++。    # --disable-multilib：禁止生成多个平台的代码    # --enable-bootstrap：冗余的编译检查工作    # --enable-gather-detailed-mem-stats：允许通过 -fmem-report 选项来输出编译其它程序时的实时内存使用情况    # --with-long-double-128：指定long double类型的默认值是128位。    # --enable-threads=posix：C++ 异常能处理多线程代码    # --without-bash-malloc：禁用了 Bash 的内存分配函数(malloc)，Bash 将使用更为稳定的 Glibc 里的 malloc 函数。    # --enable-multibyte：支持使用多字节字符编码的文件    grep &quot;error&quot; config.log# 默认的make不加-j参数效率比较低，加上多线程参数 -j4 和-j8性能差距不大，-j16性能就比较差date +%T &amp;&amp; make -j4 &amp;&amp; date +%T    # make clean：清除上次的make命令所产生的object文件（后缀为“.o”的文件）及可执行文件。    # make distclean：包含make clean，同时也将configure生成的文件全部删除掉。感觉有点像在 gcc-build 中执行 rm -rf 的删减版一样。    lscpu |grep -A 1 &#39;Model name&#39;make install</code></pre><h3 id="关联系统"><a href="#关联系统" class="headerlink" title="关联系统"></a>关联系统</h3><p>如果上述安装过程中指定了 gcc 的安装路径，那么需要关联系统。当然，我上一步并没有指定安装路径，而是直接替代了系统自带的 GCC 4.4.7。</p><pre><code class="sh"># 更新环境echo &#39;/usr/local/gcc-4.8.5/lib64&#39; &gt; /etc/ld.so.conf.d/gcc4.8.5.confldconfig# 在自定义的全局配置文件中添加 PATH 变量vim /etc/profile.d/hhjos6.sh    PATH=/usr/local/gcc-4.8.5/bin:$PATHmv /usr/bin/gcc /usr/bin/gcc-4.4.7mv /usr/bin/g++ /usr/bin/g++-4.4.7mv /usr/bin/c++ /usr/bin/c++-4.4.7ln -s /usr/local/gcc/bin/gcc /usr/bin/gccln -s /usr/local/gcc/bin/c++ /usr/bin/c++ln -s /usr/local/gcc/bin/g++ /usr/bin/g++ln -s /usr/local/gcc/lib64/libstdc++.so.6.0.22 /usr/lib64/libstdc++.so.6</code></pre><h3 id="版本检查"><a href="#版本检查" class="headerlink" title="版本检查"></a>版本检查</h3><pre><code class="sh">gcc -v    gcc -dumpversion    ll /usr/bin/cc    strings /usr/lib64/libstdc++.so.6 | grep GLIBCg++ -v    g++ -dumpversion    c++ -dumpversion</code></pre><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><blockquote><p>如果还要尝试 <code>yum -y install centos-release-scl</code> 安装临时版本的 GCC ，那多数人并不会成功，毕竟 CentOS 6 在官方都是不支持的版本了。博主这次安装 GCC 4.8.5 花了很长时间，毕竟坑太多了，而且已有程序环境的兼容性也必须兼顾。因此虽然参考了以下这些文章，但是操作步骤上却有差异；就是一点点差异，我浪费了很多很多的时间！实际上，我看过的文章就不止这些了，但对我并没有提供任何的帮助。</p></blockquote><ol><li><p>TUNA.<code>清华大学开源软件镜像站（GCC）</code>[EB/OL].<a href="https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc">https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc</a>, 2021/02/20.</p></li><li><p>peterpanzsy.<code>centos 6 升级gcc</code>[EB/OL].<a href="https://www.cnblogs.com/peterpanzsy/archive/2013/04/10/3006838.html">https://www.cnblogs.com/peterpanzsy/archive/2013/04/10/3006838.html</a>, 2021/02/20.</p></li><li><p>创小新.<code>LINUX CENTOS6.8编译安装GCC-6.3.0 升级GCC</code>[EB/OL].<a href="https://chuangxiao.xin/h-nd-87.html">https://chuangxiao.xin/h-nd-87.html</a>, 2021/02/20.</p></li><li><p>ljpwinxp.<code>Centos 6.9 编译安装gcc 4.8.5</code>[EB/OL].<a href="https://blog.51cto.com/191226139/2066137">https://blog.51cto.com/191226139/2066137</a>, 2021/02/20.</p></li><li><p>Free Software Foundation.<code>GCC 4.8 Release Series: Changes, New Features, and Fixes</code>[EB/OL].<a href="https://gcc.gnu.org/gcc-4.8/changes.html">https://gcc.gnu.org/gcc-4.8/changes.html</a>, 2021/02/20.</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;由于安装 python 3 的需要，需要升级 GCC；由于我的操作系统是 CentOS6.10，而且还需要考虑到工作软件系统的兼容，因此 GCC 版本暂时定为 4.8.5。测试表明，如果 Python 需要性能优化选项 &lt;code&gt;--enable-optimization
+      
+    
+    </summary>
+    
+    
+      <category term="编程笔记" scheme="https://faradays-studio.gitee.io/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
+    
+      <category term="CentOS" scheme="https://faradays-studio.gitee.io/tags/CentOS/"/>
+    
+      <category term="安装" scheme="https://faradays-studio.gitee.io/tags/%E5%AE%89%E8%A3%85/"/>
+    
+      <category term="GCC" scheme="https://faradays-studio.gitee.io/tags/GCC/"/>
+    
+      <category term="编译" scheme="https://faradays-studio.gitee.io/tags/%E7%BC%96%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CentOS6 升级安装 MySQL 5.7</title>
     <link href="https://faradays-studio.gitee.io/202103031918/"/>
     <id>https://faradays-studio.gitee.io/202103031918/</id>
     <published>2021-03-03T11:18:21.000Z</published>
-    <updated>2021-03-05T14:06:14.078Z</updated>
+    <updated>2021-03-07T13:31:09.409Z</updated>
     
     <content type="html"><![CDATA[<p>由于 CentOS6 自带的 MySQL 5.1 性能不行，使用过程中遇到了很多问题，<del>（误）最关键的是，都不支持 utf8mb4，后台去检查数据老是遇到乱码，烦死了！mysql 5.5.3+ 才支持 utf8mb4，（逃…）</del>因此我决定安装 MySQL 5.7 。</p><h2 id="设置国内源"><a href="#设置国内源" class="headerlink" title="设置国内源"></a>设置国内源</h2><p>最近几年里，我给好几个系统安装过 MySQL，可是国外官网的速度实在是太瘆人了；后来才知道这软件居然也有国内源，用了之后心情都好很多了。</p><p><code>gedit /etc/yum.repos.d/mysql-community.repo</code>，填入以下内容：</p><pre><code class="ini">[mysql-connectors-community]name=MySQL Connectors Communitybaseurl=https://mirrors.tuna.tsinghua.edu.cn/mysql/yum/mysql-connectors-community-el6-$basearch/enabled=1gpgcheck=1gpgkey=https://repo.mysql.com/RPM-GPG-KEY-mysql[mysql-tools-community]name=MySQL Tools Communitybaseurl=https://mirrors.tuna.tsinghua.edu.cn/mysql/yum/mysql-tools-community-el6-$basearch/enabled=1gpgcheck=1gpgkey=https://repo.mysql.com/RPM-GPG-KEY-mysql[mysql-5.6-community]name=MySQL 5.6 Community Serverbaseurl=https://mirrors.tuna.tsinghua.edu.cn/mysql/yum/mysql-5.6-community-el6-$basearch/enabled=0gpgcheck=1gpgkey=https://repo.mysql.com/RPM-GPG-KEY-mysql[mysql-5.7-community]name=MySQL 5.7 Community Server#baseurl=https://mirrors.tuna.tsinghua.edu.cn/mysql/yum/mysql-5.7-community-el6-$basearch/#baseurl=https://mirrors4.tuna.tsinghua.edu.cn/mysql/yum/mysql-5.7-community-el6-x86_64/baseurl=https://mirrors.ustc.edu.cn/mysql-repo/yum/mysql-5.7-community/el/6/x86_64/enabled=1gpgcheck=1gpgkey=https://repo.mysql.com/RPM-GPG-KEY-mysql[mysql-8.0-community]name=MySQL 8.0 Community Serverbaseurl=https://mirrors.tuna.tsinghua.edu.cn/mysql/yum/mysql-8.0-community-el6-$basearch/enabled=0gpgcheck=1gpgkey=https://repo.mysql.com/RPM-GPG-KEY-mysql</code></pre><h2 id="安装程序"><a href="#安装程序" class="headerlink" title="安装程序"></a>安装程序</h2><p>使用 yum 进行安装 MySQL</p><pre><code class="sh">yum makecacheyum install mysql-community-libs-compat*yum install mysql-community-server</code></pre><p> 一般情况下，MySQL包括以下各个包：</p><table><thead><tr><th align="left">名字</th><th align="left">摘要说明</th><th>备注</th></tr></thead><tbody><tr><td align="left">mysql-community-client</td><td align="left">MySQL客户端应用程序和工具</td><td></td></tr><tr><td align="left">mysql-community-common</td><td align="left">服务器和客户端库的通用文件</td><td></td></tr><tr><td align="left">mysql-community-devel</td><td align="left">MySQL数据库客户端应用程序的开发头文件和库</td><td></td></tr><tr><td align="left">mysql-community-embedded-compat</td><td align="left">MySQL服务器作为嵌入式库，与使用库版本18的应用程序兼容</td><td></td></tr><tr><td align="left">mysql-community-libs</td><td align="left">MySQL数据库客户端应用程序的共享库</td><td></td></tr><tr><td align="left">mysql-community-libs-compat</td><td align="left">以前的MySQL安装的共享兼容性库</td><td></td></tr><tr><td align="left">mysql-community-server</td><td align="left">数据库服务器和相关工具</td><td></td></tr><tr><td align="left">mysql-community-server-debug</td><td align="left">调试服务器和插件二进制文件</td><td></td></tr><tr><td align="left">mysql-community-test</td><td align="left">MySQL服务器的测试套件</td><td></td></tr><tr><td align="left">mysql-community</td><td align="left">RPM的源代码类似于mysql-community-8.0.20-1.el7.src.rpm，具体取决于所选的OS</td><td></td></tr></tbody></table><blockquote><p>  安装还会在系统上创建一个名为的用户 mysql和一个名为的组 mysql。</p></blockquote><h2 id="MySQL-的初始化配置"><a href="#MySQL-的初始化配置" class="headerlink" title="MySQL 的初始化配置"></a>MySQL 的初始化配置</h2><h3 id="初始化配置"><a href="#初始化配置" class="headerlink" title="初始化配置"></a>初始化配置</h3><p><code>gedit /etc/my.cnf</code> 设定 MySQL 的编码参数以及默认端口</p><pre><code class="ini">[mysqld]port    = 6033character-set-server=utf8mb4collation_server=utf8mb4_general_cidefault-time-zone = &#39;+8:00&#39;explicit_defaults_for_timestamp=true[client]port    = 6033default-character-set=utf8mb4</code></pre><h3 id="修改服务"><a href="#修改服务" class="headerlink" title="修改服务"></a>修改服务</h3><p>设定 MySQL 开机启动</p><pre><code class="sh">suchkconfig --add mysqldchkconfig mysqld on# 启动 MySQL 服务service mysqld start</code></pre><h3 id="账户和密码管理"><a href="#账户和密码管理" class="headerlink" title="账户和密码管理"></a>账户和密码管理</h3><ol><li>查看 MySQL 默认密码</li></ol><pre><code class="sh">grep &quot;temporary password&quot; /var/log/mysqld.log</code></pre><ol start="2"><li>设定 root 密码，并添加普通用户 david</li></ol><pre><code class="sh">mysql -uroot -p    # 本地    ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;fs@DB135&#39;;        # SET PASSWORD FOR &#39;root&#39;@&#39;localhost&#39; = PASSWORD(&#39;fs@DB135&#39;);       # 远程    ALTER USER &#39;root&#39;@&#39;%&#39; IDENTIFIED BY &#39;fs@ABCD.135&#39;;    # 普通用户 david    CREATE USER &#39;david&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;dav#D2468&#39;;    CREATE USER &#39;david&#39;@&#39;%&#39; IDENTIFIED BY &#39;dav#D-124857&#39;;    # 查看用户    select user,host,password from mysql.user;    exit</code></pre><blockquote><p>如果由于默认的密码强度校验导致本地使用的简单密码无法通过，可以在 MySQL 中使用 <code>set global validate_password_policy=0;</code> 临时关闭，不过，应当谨慎使用哦!</p></blockquote><ol start="3"><li>如果在使用过程中，需要修改账户的本地、远方访问权限，示例如下：</li></ol><pre><code class="sh"># 局域网访问：主库grant replication slave on *.* to &#39;david&#39;@&#39;192.168.88.%&#39; identified by &#39;dav#D2468&#39; with grant option;# 局域网访问：从库（在对端主机配置）grant all privileges on *.* to &#39;david&#39;@&#39;192.168.88.%&#39; identified by &#39;dav#D2468&#39; with grant option;# 远程访问（db1、db2为系统中的数据库名）GRANT ALL PRIVILEGES ON db1.* TO &#39;david&#39;@&#39;%&#39; IDENTIFIED BY &#39;dav.D2468-fs1&#39; WITH GRANT OPTION;GRANT ALL PRIVILEGES ON db2.* TO &#39;david&#39;@&#39;%&#39; IDENTIFIED BY &#39;dav#D-124857&#39; WITH GRANT OPTION;# 本地访问（临时性修改密码策略，从而在保留原有授权的基础下，增加密码较为简单的访问）set global validate_password_policy=0;GRANT ALL ON db1.* TO &#39;david&#39;@&#39;localhost&#39;   IDENTIFIED BY &#39;david.1357&#39; WITH GRANT OPTION;GRANT ALL ON db2.* TO &#39;david&#39;@&#39;127.0.0.%&#39;   IDENTIFIED BY &#39;david.2468&#39; WITH GRANT OPTION;# 执行生效flush privileges;</code></pre><ol start="4"><li>如果需要清除权限，示例如下：</li></ol><pre><code class="sh">mysql -u root -p    select user,host, authentication_string from mysql.user;    # 清除  delete 权限    REVOKE delete ON *.* FROM &#39;david&#39;@&#39;localhost&#39;;    revoke delete on *.* from &#39;david&#39;@&#39;%&#39;;    # 清除 all 权限    revoke all on *.* from &#39;david&#39;@&#39;localhost&#39;;    REVOKE ALL PRIVILEGES ON *.* FROM &#39;david&#39;@&#39;%&#39;;    # 执行生效    FLUSH PRIVILEGES;</code></pre><ol start="5"><li>配套修改防火墙确保远程主机的访问，如下：</li></ol><pre><code class="sh">gedit /etc/sysconfig/iptables    -A INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT    #-A INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT    -A INPUT -m state --state NEW -m tcp -p tcp --dport 6033 -j ACCEPT    -A INPUT -j REJECT --reject-with icmp-host-prohibitedservice iptables restart</code></pre><h3 id="安装故障排查"><a href="#安装故障排查" class="headerlink" title="安装故障排查"></a>安装故障排查</h3><p>查看错误日志是最直接有效的，如果不指定，文件名则为主机名（此处为 hhjos6 ），如：</p><pre><code class="sh">tail -f /var/lib/mysql/hhjos6.err</code></pre><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol><li><p>TUNA.<code>Mysql Community Edition 镜像使用帮助</code>[EB/OL].<a href="https://mirrors.cnnic.cn/help/mysql/">https://mirrors.cnnic.cn/help/mysql/</a>, 2021/03/05.</p></li><li><p>Oracle Corporation and/or its affiliates.<code>MySQL Product Archives</code>[EB/OL].<a href="https://downloads.mysql.com/archives/community/">https://downloads.mysql.com/archives/community/</a>, 2021/03/05.</p></li></ol>]]></content>
     
@@ -49,6 +83,8 @@
       <category term="安装" scheme="https://faradays-studio.gitee.io/tags/%E5%AE%89%E8%A3%85/"/>
     
       <category term="配置" scheme="https://faradays-studio.gitee.io/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+      <category term="权限" scheme="https://faradays-studio.gitee.io/tags/%E6%9D%83%E9%99%90/"/>
     
   </entry>
   
@@ -671,37 +707,6 @@
       <category term="git" scheme="https://faradays-studio.gitee.io/tags/git/"/>
     
       <category term="faradays" scheme="https://faradays-studio.gitee.io/tags/faradays/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows 批处理的字符运算（未完待续）</title>
-    <link href="https://faradays-studio.gitee.io/202008200927/"/>
-    <id>https://faradays-studio.gitee.io/202008200927/</id>
-    <published>2020-08-20T01:27:42.000Z</published>
-    <updated>2020-08-20T01:27:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>字符运算历来是编程中的重要内容，如何拼接字符，如何截取字符，如何判断字符是否存在，如何判断两个字符串是否相同，成为了编程任务中的重要环节。因此，我结合网络的资料和个人的实践经验来总结一下。</p><h2 id="Windows-批处理中字符的基本常识"><a href="#Windows-批处理中字符的基本常识" class="headerlink" title="Windows 批处理中字符的基本常识"></a>Windows 批处理中字符的基本常识</h2><ol><li><p>批处理中变量的赋值符号两侧不能包含空格，如 <code>set str_date=&#39;20200820&#39;</code>，这与很多编程规范是相悖的。</p></li><li><p>批处理中的字符可以不添加双引号，但是如果包含空格的话，必须使用引号，，如 <code>set str_name=&quot;20200820 Windows 批处理的字符运算经验总结&quot;</code>。</p></li><li><p>自定义变量使用 % 来包围来进行引用，即 <code>%变量%</code> ；而 Windows 内置变量（含文件路径变量扩展）则使用 % 符号来引导，即 <code>%内置变量</code> 。</p></li></ol><h2 id="截取字符串"><a href="#截取字符串" class="headerlink" title="截取字符串"></a>截取字符串</h2><h3 id="一般性的字符截取"><a href="#一般性的字符截取" class="headerlink" title="一般性的字符截取"></a>一般性的字符截取</h3><ol><li>基本语法： <code>%**变量名**:~**起点位置**,**截取数量|终点位置**%</code></li></ol><p><strong>起点位置</strong> ：如果为正数，那么就是从左往右截取，而如果为负数，那么就是说从右向左截取；不过无论为正还是为负，截取结果都是不包含处于 <strong>起点位置</strong> 的那个字符的。</p><p><strong>截取数量|终点位置</strong> ：如果为正数，那么就是单纯的 <strong>截取数量</strong> ；如果为负数，那么应当表述为 <strong>终点位置</strong> ，而且，与 <strong>起点位置</strong> 对应，截取结果也是不包含该负数所对应的字符的，即上述的 -5 对应的是终点位置为右侧第 6 个字符截止。</p><p>举例说明，如下：</p><pre><code class="dos">echo onset ifo=abcdefghijklmnopqrstuvwxyz0123456789echo %ifo%echo.echo 截取前4个字符：%ifo:~0,4%echo 截取年度：%date:~0,4%echo.echo 截取最后2个字符：%ifo:~-2%echo 截取星期：%date:~-2%echo.echo 截取第一个到倒数第6个字符：%ifo:~0,-5%echo 截取日期（含分隔符）：%date:~0,-3%echo.echo 从第5个字符开始，截取2个字符：%ifo:~4,2%echo 截取月份：%date:~5,2%echo 截取天数：%date:~8,2%echo.echo 从倒数第14个字符开始，截取5个字符：%ifo:~-14,5%echo 截取秒数：%time:~3,2%echo.echo 当前时间是：%time% 即 %time:~0,2%点%time:~3,2%分%time:~6,2%秒%time:~9,2%厘秒pause</code></pre><p>当然，我最常用的就是对日期、时间等内置变量的操作。</p><h3 id="文件路径字符的截取"><a href="#文件路径字符的截取" class="headerlink" title="文件路径字符的截取"></a>文件路径字符的截取</h3><p>主要依靠 Windows 内置的扩展变量用法来进行。</p><p>执行 <code>for /?</code> 可以查看路径扩展的</p><p>举例说明，如下（注意，需要另存为 test.bat 文件形式执行）：</p><pre><code class="powershell">@echo offecho 当前路径的完整字符串：%0echo 当前路径的完整字符串（如被双引号包围，去除双引号）：%~0echo 当前路径的所在分区：%~d0echo 当前路径的目录：%~p0echo 文件名：%~n0echo 扩展名：%~x0echo 文件属性：%~a0echo 修改时间：%~t0echo 文件大小：%~z0pause</code></pre><p>路径处理，往往都配合 for 函数进行操作。</p><p><strong>未完待续…</strong></p><h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><h3 id="变更日志"><a href="#变更日志" class="headerlink" title="变更日志"></a>变更日志</h3><ol><li>2020/08/20 10:49:23，创建文章。</li></ol><h3 id="参考索引"><a href="#参考索引" class="headerlink" title="参考索引"></a>参考索引</h3><ol><li><strong>CharyGao</strong>.<code>DOS命令（cmd）批处理：替换字符串、截取字符串、扩充字符串、获取字符串长度</code>[EB/OL].<a href="https://www.cnblogs.com/Chary/p/No0000A4.html">https://www.cnblogs.com/Chary/p/No0000A4.html</a>, 2020/08/20.</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;字符运算历来是编程中的重要内容，如何拼接字符，如何截取字符，如何判断字符是否存在，如何判断两个字符串是否相同，成为了编程任务中的重要环节。因此，我结合网络的资料和个人的实践经验来总结一下。&lt;/p&gt;
-&lt;h2 id=&quot;Windows-批处理中字符的基本常识&quot;&gt;&lt;a href=&quot;
-      
-    
-    </summary>
-    
-    
-      <category term="编程笔记" scheme="https://faradays-studio.gitee.io/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="Windows" scheme="https://faradays-studio.gitee.io/tags/Windows/"/>
-    
-      <category term="批处理" scheme="https://faradays-studio.gitee.io/tags/%E6%89%B9%E5%A4%84%E7%90%86/"/>
-    
-      <category term="字符运算" scheme="https://faradays-studio.gitee.io/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/"/>
     
   </entry>
   

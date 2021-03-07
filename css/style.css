@@ -422,6 +422,17 @@ body {
 .faradays-author a:hover {
   font-size: 1.3rem;
 }
+.last-posts {
+  text-align: left;
+}
+.last-posts a {
+  text-decoration: none;
+  color: #808080;
+  line-height: 1.1rem;
+}
+.last-posts a:hover {
+  color: #ffa500;
+}
 #wrap {
   height: 100%;
   width: 100%;
@@ -2810,6 +2821,9 @@ pre .javascript .function {
     width: 23px;
     height: 23px;
     border-radius: 50%;
+  }
+  .last-posts {
+    display: none;
   }
 }
 .categories2 a {
