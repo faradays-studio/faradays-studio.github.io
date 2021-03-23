@@ -3,13 +3,25 @@
 	
 	<url>
 		<loc>https://faradays-studio.github.io/202006071600/</loc>
-		<lastmod>2021-03-07</lastmod>
+		<lastmod>2021-03-23</lastmod>
 		
 	</url>
 	
 	<url>
 		<loc>https://faradays-studio.github.io/about/hidden-change_log%E3%80%90hexo-theme-faradays%E3%80%91.html</loc>
-		<lastmod>2021-03-07</lastmod>
+		<lastmod>2021-03-23</lastmod>
+		
+	</url>
+	
+	<url>
+		<loc>https://faradays-studio.github.io/202103211734/</loc>
+		<lastmod>2021-03-21</lastmod>
+		
+	</url>
+	
+	<url>
+		<loc>https://faradays-studio.github.io/202010052246/</loc>
+		<lastmod>2021-03-08</lastmod>
 		
 	</url>
 	
@@ -32,7 +44,7 @@
 	</url>
 	
 	<url>
-		<loc>https://faradays-studio.github.io/timeline/page.html</loc>
+		<loc>https://faradays-studio.github.io/about/list.html</loc>
 		<lastmod>2021-03-05</lastmod>
 		
 	</url>
@@ -63,12 +75,6 @@
 	
 	<url>
 		<loc>https://faradays-studio.github.io/202009292008/</loc>
-		<lastmod>2021-02-14</lastmod>
-		
-	</url>
-	
-	<url>
-		<loc>https://faradays-studio.github.io/202010052246/</loc>
 		<lastmod>2021-02-14</lastmod>
 		
 	</url>
@@ -201,7 +207,7 @@
 	
 	<url>
 		<loc>https://faradays-studio.github.io/</loc>
-		<lastmod>2021-03-07</lastmod>
+		<lastmod>2021-03-23</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>

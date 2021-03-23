@@ -40,7 +40,7 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
 <p>Done!</p>
 ]]></content>
       <categories>
-        <category>English</category>
+        <category>编程笔记</category>
       </categories>
       <tags>
         <tag>JavaScript</tag>
@@ -159,7 +159,7 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
 <p>Bing 收录真是快，而且全面。一个月不到， gitee 站点中文站已经收录 12 条、国际站已经收录 39 条了，意想不到！</p>
 </blockquote>
 </li>
-<li><p>2021/03/07 23:06:13，升级至 v0.2.11，首页增加最后的3篇文章显示。</p>
+<li><p>2021/03/23 21:01:00，升级至 v0.2.12，首页增加最后的3篇文章显示，恢复手机模式的侧边栏并调整侧边栏的手机模式下的样式，调整手机模式的打赏样式。</p>
 </li>
 </ol>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
@@ -986,7 +986,7 @@ printf 不像 echo 那样会自动换行，必须显式添加换行符 `\n` 。<
 <li>Utilities</li>
 </ul>
 <blockquote>
-<p>我并非是职业写程序的，既没有完整的时间去学习，也没有那样的环境让我学习；只是偶尔由于工作需要使用编程工具，因此 jQuery 帮我快速地完成了网站菜单、网站 UI 等其他工具没有帮我完成的事情。因此即使在大量的批评意见之下，我仍然愿意为 jQuery 代言。</p>
+<p>我并非是职业写程序的，既没有完整的时间去学习，也没有那样的环境让我学习；只是偶尔由于工作需要使用编程工具，因此 jQuery 帮我快速地完成了网站菜单、网站 UI 等其他工具没有帮我完成的事情。因此，虽然知乎等网站上充斥着大量的批评jQuery的意见，我仍然愿意选用 jQuery 来帮我完成工作上的一些编程任务。</p>
 </blockquote>
 <h3 id="jQuery版本"><a href="#jQuery版本" class="headerlink" title="jQuery版本"></a>jQuery版本</h3><ol>
 <li><p><strong>1.xx</strong> 的版兼容 IE 6/7/8，官方只做 BUG 维护，功能不再新增。最终版本：1.12.4 (2016年5月20日)</p>
@@ -3341,6 +3341,36 @@ g++ -v
         <tag>安装</tag>
         <tag>GCC</tag>
         <tag>编译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS 6 编译安装 sqlite 3</title>
+    <url>/202103211734/</url>
+    <content><![CDATA[<p>由于安装 Python 环境的需要，需要对 Python 进行编译安装。</p>
+<h2 id="安装编译环境"><a href="#安装编译环境" class="headerlink" title="安装编译环境"></a>安装编译环境</h2><p>先安装必要的环境，博主的系统中默认其实已经包含了</p>
+<pre><code class="sh">yum install sqlite-devel</code></pre>
+<h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h2><pre><code class="sh">cd /home/common/
+wget https://www.sqlite.org/2020/sqlite-autoconf-3320300.tar.gz
+tar -xvzf sqlite-autoconf-3320300.tar.gz
+cd sqlite-autoconf-3320300/
+mkdir -p /usr/local/sqlite
+./configure --prefix=/usr/local/sqlite
+make -j4 &amp;&amp; make install</code></pre>
+<h2 id="关联系统"><a href="#关联系统" class="headerlink" title="关联系统"></a>关联系统</h2><pre><code class="sh">vim /etc/ld.so.conf.d/sqlite3.conf
+    # 可选
+    /usr/local/sqlite/lib
+ldconfig</code></pre>
+]]></content>
+      <categories>
+        <category>编程笔记</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>CentOS</tag>
+        <tag>Python</tag>
+        <tag>安装</tag>
+        <tag>编译</tag>
+        <tag>sqlite</tag>
       </tags>
   </entry>
 </search>

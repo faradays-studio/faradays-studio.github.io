@@ -29,7 +29,7 @@
         },
         setTags: function (tags) {
             var labels = tags.find("a");
-            labels.css({"font-size" : "15px"});
+            labels.css({"font-size" : "0.7rem"});
             for(var i = 0, len = labels.length; i < len; i++){
                 var num = labels.eq(i).html().length % 5 +1;
                 labels[i].className = "";
@@ -38,7 +38,7 @@
         },
         setCategories: function () {
             var labels = categories.find("a");
-            labels.css({"font-size" : "15px"});
+            labels.css({"font-size" : "0.8rem"});
             for(var i = 0, len = labels.length; i < len; i++){
                 var num = labels.eq(i).html().length % 5 +1;
                 labels[i].className = "";
