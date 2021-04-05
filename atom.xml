@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://faradays-studio.gitee.io/"/>
-  <updated>2021-03-29T11:41:37.104Z</updated>
+  <updated>2021-03-29T12:05:01.346Z</updated>
   <id>https://faradays-studio.gitee.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>CentOS6编译安装Python3</title>
+    <title>CentOS 6 编译安装 Python 3</title>
     <link href="https://faradays-studio.gitee.io/202103291935/"/>
     <id>https://faradays-studio.gitee.io/202103291935/</id>
     <published>2021-03-29T11:35:26.000Z</published>
-    <updated>2021-03-29T11:41:37.104Z</updated>
+    <updated>2021-03-29T12:05:01.346Z</updated>
     
     <content type="html"><![CDATA[<h2 id="依赖包的安装"><a href="#依赖包的安装" class="headerlink" title="依赖包的安装"></a>依赖包的安装</h2><ol><li>编译环境的安装（centos6 默认已具备）</li></ol><pre><code class="sh">yum -y groupinstall &quot;Development tools&quot;或yum -y install gcc gcc-c++ zlib zlib-devel    gcc-4.4.7-23    gcc-c++-4.4.7-23    zlib-devel-1.2.3-29yum install -y openssl-develyum install -y libffi-develyum install gcc gcc-c++ glibc-static</code></pre><ol start="2"><li>编译安装 openssl </li></ol><pre><code class="sh">wget http://www.openssl.org/source/openssl-1.1.1.tar.gztar -zxvf openssl-1.1.1.tar.gzcd openssl-1.1.1whereis openssl    # 系统自带版本为 1.0.1e-fips    # [root@hhjos6 lib]# whereis openssl    # openssl: /usr/bin/openssl /usr/lib64/openssl /usr/include/openssl /usr/local/openssl /usr/share/man/man1/openssl.1ssl.gzmkdir /usr/local/openssl./config --prefix=/usr/local/openssl shared zlibmake &amp;&amp; make installecho -e &quot;\nexport LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/openssl/lib&quot; &gt;&gt; /etc/profilesource /etc/profileln -s /usr/local/openssl/lib/libssl.so.1.1 /usr/lib64/libssl.so.1.1ln -s /usr/local/openssl/lib/libcrypto.so.1.1 /usr/lib64/libcrypto.so.1.1mv /usr/bin/openssl /usr/bin/openssl-1.0.1ln -s /usr/local/openssl/bin/openssl /usr/bin/opensslopenssl    version    exit    # 下个版本的说明 https://wiki.openssl.org/index.php/OpenSSL_3.0</code></pre><h2 id="程序的下载与编译"><a href="#程序的下载与编译" class="headerlink" title="程序的下载与编译"></a>程序的下载与编译</h2><ol start="3"><li>下载程序</li></ol><pre><code class="shell">mkdir -p /home/common/python3.8  &amp;&amp; cd /home/common/python3.8#测试表明，Python 并没有限制 sqlite 版本；不过关闭 --enable-loadable-sqlite-extensions 或者 --enable-optimizations 均能编译通过（虽然同样的报错还在）。wget https://www.python.org/ftp/python/3.8.7/Python-3.8.7.tgz    官方手册 https://docs.python.org/release/3.8.7    sqlite教程 https://docs.python.org/3.8/library/sqlite3.htmltar -xzvf Python-3.8.7.tgz</code></pre><ol start="4"><li>配套修改组件的编译配置（<a href="https://docs.python.org/3.8/whatsnew/changelog.html#changelog">https://docs.python.org/3.8/whatsnew/changelog.html#changelog</a> 链接中指明了 Windows、MacOS 中集成的 sqlite 版本号，但是 Linux 的 Python 3 并没有继承 sqlite，因此需要如下配置 sqlite 库）</li></ol><pre><code class="shell"># ModuleNotFoundError: No module named &#39;_sqlite3&#39;gedit /home/common/python3.8/Python-3.8.7/setup.py    sqlite_inc_paths        &#39;/usr/local/sqlite/include&#39;,        &#39;/usr/local/sqlite/include/sqlite3&#39;,#undefined symbol: __gcov_indirect_call_profiler# cd /home/common/python3.8/Python-3.8.7 &amp;&amp; ./python -E -S -m sysconfig --generate-posix-vars # 报错信息同上# 网友中有通过设置语言</code></pre><ol start="5"><li>编译</li></ol><pre><code class="shell">whereis pythonmkdir /usr/local/python3cd /home/common/python3.8/Python-3.8.7export CPPFLAGS=&quot; -Wno-error=coverage-mismatch&quot;  # 可选./configure  --prefix=/usr/local/python3 --with-openssl=/usr/local/openssl --enable-shared CFLAGS=-fPIC --enable-profiling --enable-loadable-sqlite-extensions    #LD_RUN_PATH=/usr/local/lib ./configure  --prefix=/usr/local/python3 --with-openssl=/usr/local/openssl --enable-shared CFLAGS=-fPIC --enable-optimizations --enable-profiling --enable-loadable-sqlite-extensions   |grep -v &quot;yes&quot;    LD_RUN_PATH=/usr/local/lib: 可选    --prefix 可把所有资源文件放在指定路径下，卸载软件或移植软件只需要对应的文件夹操作。        不指定的话，可执行文件默认放在/usr/local/bin，库文件默认放在/usr/local/lib，        配置文件默认放在/usr/local/etc，其它的资源文件放在/usr/local/share，比较凌乱        要卸载程序，也可以在原来的make目录下用一次make uninstall，但前提是make文件指定过uninstall，否则卸载要结合安装日志来进行逐一删除    --enable-optimizations 加上后性能有 10% 左右的优化，但会明显增加编译时间；        且 https://bugs.python.org/issue34112 提出 gcc 8.1 以下可能编译不过    --enable-shared CFLAGS=-fPIC  是使用 YCM、pyinstaller、caffe、mysqlclient 等一系列功能的需要(后者确保编译时使用相对路径)    --enable-profiling：let you profile the interpreter with gprof    --enable-loadable-sqlite-extensions：support loadable extensions in _sqlite module    # 查看帮助 ./configure --help 或  ./configure -h    # 在更改 ./configure 编译参数后必须清除生成的文件 make clean &amp;&amp; make distcleanmake -j4     #LD_RUN_PATH=/usr/local/lib make -j4     # 警告：‘/home/common/python3.8/Python-3.8.7/build/temp.linux-x86_64-3.8/home/common/python3.8/Python-3.8.7/Modules/resource.gcda’的版本是‘404R’，需要的版本‘408*’ [默认启用]    cd /home/common/python3.8/Python-3.8.7/build/lib.linux-x86_64-3.8    ls  |grep sqlitemake install &gt; py3-install-`date +%Y%m%d`.log</code></pre><h2 id="关联系统"><a href="#关联系统" class="headerlink" title="关联系统"></a>关联系统</h2><ul><li><p>添加到系统</p><pre><code class="sh"># 设置环境变量，也可以直接将 /usr/local/python3/bin 加入 /etc/profile 文件的环境变量 path 中ln -s /usr/local/python3/bin/python3 /usr/bin/python3    # 考虑到 yum 必须使用 python 2 因此，不能命名为 python，切记！    ln -s /usr/local/python3/bin/python3 /usr/bin/py3ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3ln -s /usr/local/python3/bin/python3-config /usr/bin/python3-configcp /usr/local/python3/lib/libpython3.8.so.1.0 /usr/lib64    #/usr/local/python3/bin/python3.8: error while loading shared libraries: libpython3.8.so.1.0: cannot open shared object file: No such file or directory    cd /usr/local/lib    ln -s libpython3.8.so.1.0 libpython3.8.so    cp /usr/local/python3/lib/libpython3.8.so.1.0 /usr/local/libldconfig -vpython -V    whereis python    whereis python3find / -name _sqlite*.sopython3    import sqlite3    Ctrl+ Dpip3 -V    # pip 21.0 将在 2021 年 1 月释出，将停止支持 Python 2.7（Python 2.x） 系列pip -V    #python 2</code></pre></li><li><p>修改 Python3环境变量</p><pre><code class="sh">vi ~/.bash_profile  将“PATH=$PATH:$HOME/bin”修改为“PATH=$PATH:$HOME/bin:/usr/local/python3/bin”    source ~/.bash_profile    # 关闭报警    export PIP_DISABLE_PIP_VERSION_CHECK=1</code></pre></li><li><p>修复Python2的关联</p><pre><code class="sh">vi /usr/bin/yumvi /usr/bin/yum-config-managervim /usr/libexec/urlgrabber-ext-downvi /usr/libexec/ibus-ui-gtkvi /usr/bin/ibus-setupvi /usr/libexec/ibus-engine-tablevi /usr/bin/gnome-tweak-tool</code></pre></li></ul>]]></content>
     
@@ -123,6 +123,28 @@
       <category term="GCC" scheme="https://faradays-studio.gitee.io/tags/GCC/"/>
     
       <category term="编译" scheme="https://faradays-studio.gitee.io/tags/%E7%BC%96%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文章导航</title>
+    <link href="https://faradays-studio.gitee.io/202103060055/"/>
+    <id>https://faradays-studio.gitee.io/202103060055/</id>
+    <published>2021-03-05T16:55:56.000Z</published>
+    <updated>2021-03-05T16:55:58.366Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="文章导航"><a href="#文章导航" class="headerlink" title="文章导航"></a>文章导航</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;文章导航&quot;&gt;&lt;a href=&quot;#文章导航&quot; class=&quot;headerlink&quot; title=&quot;文章导航&quot;&gt;&lt;/a&gt;文章导航&lt;/h1&gt;
+      
+    
+    </summary>
+    
+    
     
   </entry>
   
@@ -686,34 +708,6 @@
       <category term="格式化" scheme="https://faradays-studio.gitee.io/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
     
       <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2020年随笔</title>
-    <link href="https://faradays-studio.gitee.io/202009022111/"/>
-    <id>https://faradays-studio.gitee.io/202009022111/</id>
-    <published>2020-09-02T13:11:05.000Z</published>
-    <updated>2020-12-29T15:22:19.889Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="2020-09-02，明月"><a href="#2020-09-02，明月" class="headerlink" title="2020/09/02，明月"></a>2020/09/02，明月</h3><p>凌晨将寝，看见一轮明月从百叶窗的缝隙中漏了出来。江天一色无纤尘，皎皎空中孤月轮，我想起来了我的老父亲，突然好一阵心酸。</p><p>这世界就这一轮明月，父亲看到的明月，和我看到的是不是一样的呢？我无从得知，但是我知道他清澈的心底，应该也和这明月一样，明朗、简洁、孤独的挂在那里！我现在正在重构的 hexo 主题，是否也能和它一样明朗呢？</p><h3 id="2020-09-11，疲倦"><a href="#2020-09-11，疲倦" class="headerlink" title="2020/09/11，疲倦"></a>2020/09/11，疲倦</h3><p>今天颇为疲倦，那是种种摧残对生活热爱的力量。</p><p>生活无望的摧残有之。生活压力太大，家庭收入有限，总是有种种债务要还，明明金额也不多，可是月月都是勉勉强强，总有一种秦琼卖马、穷途末路的感觉，既担不起风险去谋份新工作拼出路，也割舍不了那些缠缠绵绵的家庭责任。</p><p>与人相处的困顿有之。我总以为自己是个文人，家国情怀、儿女情长；然而也不知道如何面对糟糠之妻，是勉励还是鞭策，是举案齐眉还是听之任之；也不知道如何面对幼年儿女，是宠爱还是严厉，是陪伴成长还是执鞭指导。看过不少教育理论和案例，也曾以自身做过很多试验，终究是了了，每一个方向都言之凿凿，然而都不曾看得到光明。一人独行的孤独，布满了天空。</p><p>报国无门的失望有之。①得不到应有的回报：在单位里，也曾以一己之力，年年月月坚持，做了很多别人不想做、不能做的事情，但体制之下，来回调动，兜兜转转，始终只是棋子一枚。不少人长袖善舞、坑蒙拐骗，却获得了多次升迁，改善了生活，而我被所谓的工作需要等原因排除在外，常常需要为家庭的每月的账单发愁很久。②官僚主义严重。对于自己，每一次努力改变工作局面，总有领导劝你多克服一下困难，总是有人说你不知道在忙什么；对于企业，有些人，总能罔顾年年亏损，形式主义，人浮于事，人满为患的会议永远在开着，落实工作的，永远都只有那么少数的几个人；好多人都拈轻怕重、装模作样，写计划时高瞻远瞩、侃侃而谈，谈落实时左右掣肘、漠视困难，没有人关心日常应该怎么做提升效率、没有人有魄力面对上级的考核压力，更没有人具有规章制度里边要求的那些工作能力，制度永远只是规范下级、杀鸡儆猴的玩物……我甚至不知道，我10多年来孜孜不倦地工作，到底有没有意义了？！我自小家里生活困顿，多次获得了学校的贫困补助和一些周边人的帮助，曾发誓要报效祖国、造福社会；然而，在年复一年的人治环境下，我几乎丧失去了再挣扎的动力。</p><p>人，活的疲惫，不是因为事情太难做，而是因为适应社会不是一个容易的事情！</p><h3 id="2020-09-26，迷茫"><a href="#2020-09-26，迷茫" class="headerlink" title="2020/09/26，迷茫"></a>2020/09/26，迷茫</h3><p>昨日，在公司某部门那里被批评项目文件写的不清不楚。我的内容别人看不明白，因此需要修改；这本来也没啥，偏偏别人要告诉我他不是搞这个专业的，这让人有点难受。</p><p>法国作家 John Collier 说过，If Youth Knew, If Age Could。我自己理解的意思就是，如果年轻人经验丰富，那么就不会栽在人情世故和盲目自大上；如果老年人能力充沛、能闯善干，那么就不会、也不必利用特权来设置那么多莫名其妙的规则来限制或阻挡事物的发展。</p><p>就事论事而言，我也直接参与不少重要的基础事务，天天都在赶任务似的。那天的项目申请书和可行性研究报告都是一天之内匆匆写就的，而且要花费一大笔钱，涉及不少未知的研究和探索，怎么可能足够完善、足够清晰到一个非专业人员能够在几分钟内读懂、并作出投资决策呢！所以，对于这些身居要位、日常看报的中老年专家，我是有看法的：他们平时或做好好先生、或好为人师，对领导阿谀奉承，对基层装腔作势；给我这样的基层打工仔造成种种混乱也是难免的——他们作为从我这样的基础工种提拔上去的技术管理人员，平时不指导和帮助我们，不率先垂范，却要求下层人员有所作为、还要遵守一堆只有下层人员才需要遵守的规则，真可谓“何不食肉糜”的典范！</p><p>我一度迷茫，想去纠正他的每一个专业术语上的错误，想引经据典，想据理力争到底…然而，一念之间，竟放弃了这个念头——我们参与日常事务，希望企业兴旺、国家繁荣，那是我们自己主动参与实现的，不是等来的；如果我们再退却了，旁观了，又何来希望？！</p><p>是我自己一厢情愿的幻想罢了。我指望着的人——他们早已被生活和工作刺破了梦想、也与高官厚禄无望，我竟希望他们能够礼贤下士、推陈出新？！那也太为难人了！试想，又有几个人不曾怀揣着“仗剑走天涯”的梦想，却偏偏在现实社会中得到遍体鳞伤、至今怕蛇咬？他们不正和我现在一样吗——总以为自己技术业绩很突出就能傲视群雄，甚至学着别人的腔调说“生态就是被你们这些人搞坏的”，然后无所作为地、等待着别人来改善生态环境。可是我做的就够了吗？我低微到了尘埃里，可也有人说自己更低微，期盼着我不要在工作中给他们挑刺，帮他们协调解决哪些超出了能力的怪事吗？</p><p>算了，做自己能做的事吧！希望明天会好一点，希望“日行一善，积善成德；日行一善，功满三千”，时间自有定论。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;2020-09-02，明月&quot;&gt;&lt;a href=&quot;#2020-09-02，明月&quot; class=&quot;headerlink&quot; title=&quot;2020/09/02，明月&quot;&gt;&lt;/a&gt;2020/09/02，明月&lt;/h3&gt;&lt;p&gt;凌晨将寝，看见一轮明月从百叶窗的缝隙中漏了出来。江天
-      
-    
-    </summary>
-    
-    
-      <category term="星星心事" scheme="https://faradays-studio.gitee.io/categories/%E6%98%9F%E6%98%9F%E5%BF%83%E4%BA%8B/"/>
-    
-    
-      <category term="2020" scheme="https://faradays-studio.gitee.io/tags/2020/"/>
-    
-      <category term="随笔" scheme="https://faradays-studio.gitee.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   

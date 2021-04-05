@@ -49,6 +49,11 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
       </tags>
   </entry>
   <entry>
+    <title>文章导航</title>
+    <url>/202103060055/</url>
+    <content><![CDATA[<h1 id="文章导航"><a href="#文章导航" class="headerlink" title="文章导航"></a>文章导航</h1>]]></content>
+  </entry>
+  <entry>
     <title>如何使用 svg.js 创建 svg 文档</title>
     <url>/201902090951/</url>
     <content><![CDATA[<p>前段时间，我尝试了使用 svg.js 来创建 svg dom 文档时，并没有成功。经过反复多次的尝试，并网络检索了一些信息，初步确认为官方文档未及时更新，导致了编码错误。</p>
@@ -3374,7 +3379,7 @@ ldconfig</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>CentOS6编译安装Python3</title>
+    <title>CentOS 6 编译安装 Python 3</title>
     <url>/202103291935/</url>
     <content><![CDATA[<h2 id="依赖包的安装"><a href="#依赖包的安装" class="headerlink" title="依赖包的安装"></a>依赖包的安装</h2><ol>
 <li>编译环境的安装（centos6 默认已具备）</li>
