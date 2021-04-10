@@ -2,14 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	
 	<url>
-		<loc>https://faradays-studio.github.io/about/hidden-change_log%E3%80%90hexo-theme-faradays%E3%80%91.html</loc>
-		<lastmod>2021-03-31</lastmod>
+		<loc>https://faradays-studio.github.io/202103291935/</loc>
+		<lastmod>2021-04-10</lastmod>
 		
 	</url>
 	
 	<url>
-		<loc>https://faradays-studio.github.io/202103291935/</loc>
-		<lastmod>2021-03-29</lastmod>
+		<loc>https://faradays-studio.github.io/202104102207/</loc>
+		<lastmod>2021-04-10</lastmod>
+		
+	</url>
+	
+	<url>
+		<loc>https://faradays-studio.github.io/about/hidden-change_log%E3%80%90hexo-theme-faradays%E3%80%91.html</loc>
+		<lastmod>2021-03-31</lastmod>
 		
 	</url>
 	
@@ -219,7 +225,7 @@
 	
 	<url>
 		<loc>https://faradays-studio.github.io/</loc>
-		<lastmod>2021-04-05</lastmod>
+		<lastmod>2021-04-10</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
