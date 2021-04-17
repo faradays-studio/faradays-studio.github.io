@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://faradays-studio.gitee.io/"/>
-  <updated>2021-04-10T14:13:32.331Z</updated>
+  <updated>2021-04-17T11:34:57.531Z</updated>
   <id>https://faradays-studio.gitee.io/</id>
   
   <author>
@@ -17,11 +17,46 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>zsh 环境的安装与配置</title>
+    <link href="https://faradays-studio.gitee.io/202104171931/"/>
+    <id>https://faradays-studio.gitee.io/202104171931/</id>
+    <published>2021-04-17T11:31:02.000Z</published>
+    <updated>2021-04-17T11:34:57.531Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>zsh 在 Linux 系统中是自带的，因此不这里并没有讨论 zsh 自身的安装方法，而是 zsh 插件的安装与配置方法。</p></blockquote><h2 id="zsh-的常用快捷键"><a href="#zsh-的常用快捷键" class="headerlink" title="zsh 的常用快捷键"></a>zsh 的常用快捷键</h2><ol><li><p>虽然网络上都宣称 zsh 和 bash 高度解决，不过我个人的理解，bash 的部分快捷键和 csh 倒是比较接近，而 zsh 并不接近。</p><table><thead><tr><th>项目</th><th>zsh</th><th>bash</th><th>备注</th></tr></thead><tbody><tr><td>光标移动到行首</td><td><code>Ctrl</code> + <code>A</code></td><td><code>Home</code></td><td></td></tr><tr><td>光标移动到行尾</td><td><code>Ctrl</code> + <code>E</code></td><td><code>End</code></td><td></td></tr><tr><td>光标后的字符串变为大写</td><td><code>Alt</code> + <code>U</code></td><td></td><td></td></tr><tr><td>当前字符串大写</td><td><code>Alt</code> + <code>C</code></td><td></td><td></td></tr><tr><td>光标后的字符串变为小写</td><td><code>Alt</code> + <code>L</code></td><td></td><td></td></tr><tr><td>删除光标<strong>后</strong>的<strong>所有</strong>字符</td><td><code>Clt</code> + <code>K</code></td><td></td><td></td></tr><tr><td>删除光标<strong>前</strong>的<strong>所有</strong>字符</td><td><code>Clt</code> + <code>H</code></td><td><code>Clt</code> + <code>U</code></td><td><code>Ctrl</code> + <code>U</code> 对 bash 来说是删除光标前的字符，而 zsh 是整行删除。</td></tr><tr><td>删除光标<strong>前</strong>的<strong>一个单词</strong></td><td><code>Ctrl</code> + <code>W</code></td><td></td><td></td></tr><tr><td>删除光标<strong>后</strong>的<strong>一个单词</strong></td><td><code>Alt</code> + <code>D</code></td><td></td><td></td></tr><tr><td>删除光标<strong>当前</strong>的<strong>一个字符</strong></td><td><code>Ctrl</code> + <code>D</code></td><td></td><td></td></tr></tbody></table></li><li><p><strong><code>CTRL + R</code></strong>: 搜索历史</p></li></ol><h2 id="插件的安装与配置"><a href="#插件的安装与配置" class="headerlink" title="插件的安装与配置"></a>插件的安装与配置</h2><ol><li><p>安装 <a href="https://github.com/zsh-users/zsh-syntax-highlighting">zsh-syntax-highlighting</a> 语法提示插件（当用户输入正确命令时指令会绿色高亮，错误时命令红色高亮）</p><pre><code class="shell">su - herccd ~/.zshgit clone git://github.com/zsh-users/zsh-syntax-highlighting.gitvim .zshrc    source /home/herc/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh</code></pre></li><li><p>安装 <strong><a href="https://github.com/zsh-users/zsh-autosuggestions">zsh-autosuggestions</a></strong> 命令历史自动提示插件</p><pre><code class="shell">zshsu - herccd ~/.zshmkdir .zshcd .zshbash --versionzsh --versiongit clone https://github.com/zsh-users/zsh-autosuggestionssource zsh-autosuggestions/zsh-autosuggestions.zsh    #完成该步骤后，即可对历史输入命令进行自动语法提示。    # 如果存在过多参数时，仍然可以使用 tab 强制提示。    # 系统内置的命令，如 tar 不能提示参数，不过 yum 可以提示参数、ls 需要强制 tab 才能提示参数</code></pre></li><li><p>安装 incr 系统目录自动提示插件</p><pre><code class="shell">su - herccd ~/.zshwget https://mimosa-pudica.net/src/incr-0.2.zshsource incr*.zsh    # 当前有效，配置到~/.zshrc则用户一直有效（ 使用时将自动以绿色表示提示词）    # 不过按回车就会输入绿色部分，网友说可以使用空格隔断或 delete 键删除，测试无效；建议使用 Ctrl + K 删除末尾后回车！</code></pre></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;zsh 在 Linux 系统中是自带的，因此不这里并没有讨论 zsh 自身的安装方法，而是 zsh 插件的安装与配置方法。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;zsh-的常用快捷键&quot;&gt;&lt;a href=&quot;#zsh-的常用快捷键&quot; cl
+      
+    
+    </summary>
+    
+    
+      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
+    
+    
+      <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
+    
+      <category term="安装" scheme="https://faradays-studio.gitee.io/tags/%E5%AE%89%E8%A3%85/"/>
+    
+      <category term="配置" scheme="https://faradays-studio.gitee.io/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+      <category term="zsh" scheme="https://faradays-studio.gitee.io/tags/zsh/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Powerline 插件的安装与配置</title>
     <link href="https://faradays-studio.gitee.io/202104102207/"/>
     <id>https://faradays-studio.gitee.io/202104102207/</id>
     <published>2021-04-10T14:07:19.000Z</published>
-    <updated>2021-04-10T14:13:32.331Z</updated>
+    <updated>2021-04-17T11:31:26.493Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Powerline-的安装"><a href="#Powerline-的安装" class="headerlink" title="Powerline 的安装"></a>Powerline 的安装</h2><ol><li><p>安装 <a href="https://github.com/powerline/powerline">Powerline</a></p><blockquote><p>  Powerline is a statusline plugin for vim, and provides statuslines and prompts for several other applications, including zsh, bash, fish, tmux, IPython, Awesome, i3 and Qtile.  </p><p>  进阶版本：<a href="https://github.com/b-ryan/powerline-shell">https://github.com/b-ryan/powerline-shell</a>  A beautiful and useful prompt generator for Bash, ZSH, Fish, and tcsh</p></blockquote><pre><code class="sh">pip3 install wheel powerline-status    #或 pip3 install git+git://github.com/powerline/powerline    # pip3 install git+git://gitee.com/mirrors/Powerline# 确认包路径pip3 show powerline-status    # /usr/local/python3/lib/python3.8/site-packages# 查看支持的终端ls /usr/local/python3/lib/python3.8/site-packages/powerline/bindings/    # awesome  bar  bash  config.py  fish  i3  ipython  lemonbar  pdb  qtile  rc  shell  tcsh  tmux  vim  wm  zsh# 查看本地配置gedit /usr/local/python3/lib/python3.8/site-packages/powerline/config_files/config.json</code></pre></li><li><p>安装配套字体，并修改终端界面的显示字体（才会生效）</p><pre><code class="sh">#git clone https://github.com/powerline/fonts.git --depth=1git clone https://gitee.com/efluent/fonts.git --depth=1# installcd fonts./install.sh    # 在相应的账户下安装，就安装到响应账户的文件夹中    /root/.local/share/fonts    /home/herc/.local/share/fontscp -pr fonts/ /usr/share/fonts/powerlinecd ..rm -rf fonts</code></pre><ul><li><p>以下方法测试未成功，原因不明</p><pre><code class="sh">#安装字体# cd /usr/share/fonts/SourceCodePro# chmod +x *.otfcp -pr SourceCodePro/ /usr/share/fontscd /usr/share/fontswget https://github.com/powerline/powerline/blob/develop/font/PowerlineSymbols.otfchmod +x PowerlineSymbols.otf# 下述方法无效#cd /etc/fonts/conf.d/#wget https://github.com/powerline/powerline/blob/develop/font/10-powerline-symbols.conf#wget https://github.com/justrajdeep/fonts/blob/master/10-powerline-symbols.confmkdir -p ~/.config/fontconfig/conf.dcd ~/.config/fontconfig/conf.dwget https://github.com/powerline/fonts/blob/master/fontconfig/50-enable-terminess-powerline.conf# 在各个用户下执行fc-cache -fv</code></pre></li><li><p>查看字体</p><pre><code class="sh"># 查看中文字体清单fc-list :lang=zh# 终端字体保存在find / -name  consolefontscd /lib/kbd/consolefontssetfont -h</code></pre></li><li><p>centos 6安装中文字体（不含文泉驿）</p><pre><code class="sh">yum install bitmap-fonts bitmap-fonts-cjk</code></pre></li></ul></li></ol><h2 id="Powerline-的配置"><a href="#Powerline-的配置" class="headerlink" title="Powerline 的配置"></a>Powerline 的配置</h2><ol><li><p>确认 Python 已关联到系统的各个 shell</p><pre><code class="sh"> # 添加到 Python 程序到系统中 #ln -s /usr/local/python3/bin/powerline /usr/local/bin #ln -s /usr/local/python3/bin/powerline-config /usr/local/bin #ln -s /usr/local/python3/bin/powerline-daemon /usr/local/bin echo &#39;export PATH=$PATH:/usr/local/python3/bin&#39; &gt;&gt; /etc/profile echo &#39;export PATH=$PATH:/usr/local/python3/bin&#39; &gt;&gt; /etc/zprofile</code></pre></li><li><p>bash开启 powerline（全局），参考 <a href="https://powerline.readthedocs.io/en/latest/usage/shell-prompts.html">https://powerline.readthedocs.io/en/latest/usage/shell-prompts.html</a></p><pre><code class="sh"> cd /usr/local/python3/lib/python3.8/site-packages/powerline gedit /etc/bashrc # 或 gedit /etc/profile.d/powerline.sh     # powerline，hhj-20210220     export PATH=$PATH:/usr/local/python3/bin     if [ -f &quot;`which powerline-daemon`&quot; ]; then       powerline-daemon -q       POWERLINE_BASH_CONTINUATION=1       POWERLINE_BASH_SELECT=1       . /usr/local/python3/lib/python3.8/site-packages/powerline/bindings/bash/powerline.sh     fi  . /etc/profile.d/powerline.sh     # 当前用户生效</code></pre></li><li><p>zsh 配置 powerline（全局）</p><pre><code class="sh"> cd /usr/local/python3/lib/python3.8/site-packages/powerline/bindings/zsh/ cp /etc/profile.d/powerline.sh /etc/profile.d/powerline.zsh gedit /etc/profile.d/powerline.zsh     # hhj-20210220     if [ -f &quot;`which powerline-daemon`&quot; ]; then       powerline-daemon -q       POWERLINE_BASH_CONTINUATION=1       POWERLINE_BASH_SELECT=1       . /usr/local/python3/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh     fi  . /etc/profile.d/powerline.zsh</code></pre></li><li><p>vim（全局配置）</p><pre><code class="sh"> vim /etc/vimrc     &quot; hhj-20210220     set  rtp+=/usr/local/python3/lib/python3.8/site-packages/powerline/bindings/vim/     set laststatus=2     set t_Co=256</code></pre></li><li><p>ipython 配置</p><pre><code class="sh"> gedit ~/.ipython/profile_default/ipython_config.py     from powerline.bindings.ipython.since_5 import PowerlinePrompts     c = get_config()     c.TerminalInteractiveShell.simple_prompt = False     c.TerminalInteractiveShell.prompts_class = PowerlinePrompts</code></pre></li><li><p>tmux 配置</p><pre><code class="sh"> gedit ~/.tmux.conf     source &quot;/usr/local/python3/lib/python3.8/site-packages/powerline/bindings/tmux/powerline.conf&quot;</code></pre></li></ol><ul><li><p>解决不能显示git分支问题（未配置）</p><pre><code class="sh">mkdir -p ~/.config/powerlinecat &lt;&lt;-&#39;EOF&#39; &gt; ~/.config/powerline/config.json&#123;    &quot;ext&quot;: &#123;        &quot;shell&quot;: &#123;            &quot;theme&quot;: &quot;default_leftonly&quot;        &#125;    &#125;&#125;EOFpowerline-daemon --replace</code></pre></li></ul><ul><li><p>csh 配置（<strong>不成功</strong>）</p><pre><code class="sh">gedit /etc/zprofile    export PATH=&quot;$PATH:/usr/local/python3/bin&quot;    . /usr/local/python3/lib/python3.8/site-packages/powerline/bindings/tcsh/powerline.tcsh</code></pre></li></ul><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>不记得了，之前安装的时候查阅了多个文档，改天补上来了！</p>]]></content>
     
@@ -665,42 +700,6 @@
       <category term="JavaScript" scheme="https://faradays-studio.gitee.io/tags/JavaScript/"/>
     
       <category term="jQuery" scheme="https://faradays-studio.gitee.io/tags/jQuery/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>评《Margin Call》：高个不挑担，世上永无光</title>
-    <link href="https://faradays-studio.gitee.io/202010021008/"/>
-    <id>https://faradays-studio.gitee.io/202010021008/</id>
-    <published>2020-10-02T02:08:23.000Z</published>
-    <updated>2020-12-26T10:22:53.919Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>直到落幕，我才意识到 《Margin Call》（商海通牒） 已经结束，可是对它的感悟我才刚刚开始…</p></blockquote><ul><li>剧本 ☆☆☆☆</li><li>场景 ☆☆☆☆</li><li>演绎 ☆☆☆☆</li><li>综合 ☆☆☆☆</li></ul><h2 id="剧情摘要"><a href="#剧情摘要" class="headerlink" title="剧情摘要"></a>剧情摘要</h2><p>整个故事不复杂：一家公司正在大幅裁员，领导 Sam 带头鼓掌并发表了鼓舞人心的讲话，员工们纷纷加班至深夜；努力工作的新员工 Peter 在别人下班去娱乐的时候，发现了公司风险模型预测到未来走势将大幅下跌，光是一层楼 25% 的亏损将超过公司的市值，立即汇报领导 Will ，领导也汇报他的领导 Sam，最后二把手贾德·科恩也在凌晨 2 点乘坐直升机来到公司，并决策抛售公司资产、及时止损。</p><p>整部电影一直都没有正面展开商业斗争的波谲云诡（bō jué yún guǐ），而是大量了使用了各种背景阐述，各种侧面语言动作渲染。电影的节奏一直比较缓慢，没有快步奔跑的员工，也没有大幅的悲伤情绪，即使大结局了，既没有看到行业动荡的场景，也没有被阴谋拖入破产骗局的投资人纷纷跳楼的场景；只见暗淡的月色底下，与会者深锁的眉头、凝重的表情，晦涩难懂、含糊不清的经营风险陈述，与员工们纸醉金迷的生活、老板来去直升机、投资人高大上言论形成鲜明的对比。</p><p>Eric Dale （艾力克·戴尔）负责风险管理部门，工作了 19 年的员工，秋毫不觉就被即时辞退了。他希望在离职时将工作交接清楚，可是无论是人力资源部门主管还是自己的直属领导 Will Emerson，都没有人搭理他；在电梯门关闭之际，他将做了一半工作的资料U盘给了赶来告别的新员工 Peter，然后到了楼下工作手机就被公司关停了。</p><p>发生问题后公司想请他说清楚以及对数据进行保密时，公司才发现已经联系不上他了，只能等到凌晨他妻子打来电话说他在家了，公司才决定去他家里找他、用每小时 17 万多美元的代价来要求他对公司的风险秘密予以保守一天。</p><h2 id="社会感悟"><a href="#社会感悟" class="headerlink" title="社会感悟"></a>社会感悟</h2><h3 id="个人利益至上，屠龙少年终成恶龙"><a href="#个人利益至上，屠龙少年终成恶龙" class="headerlink" title="个人利益至上，屠龙少年终成恶龙"></a>个人利益至上，屠龙少年终成恶龙</h3><p>尽管行业性的经济危机将至，但只有一个镜头表现了 2008 年经济大动荡的可怕的之处——因年入 25 万美元而自豪不已的小员工 Seth （赛斯·布雷格曼）面对即将辞退的困境，在卫生间里边痛哭失声，他十多分钟前还镇定自若地说，OK！</p><p>公司的领导人 Sam 尽管工作了 34 年，积累了大量的财富，作为人性未泯的领导者，他依然无法放弃对利益的追逐。</p><p>他是靠公司体制成功的领导者。他入职早，高高在上，做出英明的决策，英明地裁员、果断地抛售资产，然而公司的主要利润都是那些小员工辛辛苦苦赚来的，他甚至不知道的如何看明白预示着公司未来的曲线怎么看、指标是什么，他也记不住下层员工的名字，但是不影响他拿着公司基层无法企及、难以想象的高薪。他的狗生病了，每天都要花费一千美元治病，他太过于悲伤甚至于不觉得80%的下属被辞退了能怎么样，毕竟他早已从长期的人员流动中变得麻木不仁了！</p><p>他来自基层，也拼搏过，因此他同情弱者、忧心行业，良心未泯。 Sam 的手下员工，不乏能力卓著的年轻人，比如说火箭科学家 Peter（彼得·苏利文）；也有出身不凡的得力下属，比如说桥梁工程师 Eric。因此，当二把手要求他出售资产时，他考虑到了对行业的影响以及年轻人的未来，他质疑何为老板毫无选择，他拒绝聆听风险评估，他嚎叫老板让开，他一次又一次地拒绝了二把手的要求，直到杰瑞开出了天价的报酬。</p><p>他是利益追逐的一员，当首席风险评估分析师 Sarah（莎拉·罗伯森）等其他部门的人员被二把手说服后，他也自甘堕落，即使明知严重违反良知与诚信，明知 3/7 的人员还将被裁决，他仍然镇定自若地完成了所有下属的工作安排——在一天之内完成风险资产的全部抛售，那么是打六五折也可以。跟他的下属 Will 一样，渴望保留人性，但无法拒绝金钱利益的侵蚀—— Will 站在楼顶做出跳楼的假动作，他颤动地看着深渊，最终还是说“not today”，并向下属员工轻描淡写地描述了去年收入的 250 万美元是如何轻而易举地全部花完的！</p><h3 id="遍身罗绮者，不是养蚕人"><a href="#遍身罗绮者，不是养蚕人" class="headerlink" title="遍身罗绮者，不是养蚕人"></a>遍身罗绮者，不是养蚕人</h3><blockquote><p>评估员塞斯问长官威尔，这次的危机会给平常人带来的影响？</p><p>威尔这样说：这些普通人，他们想要的生活就是香车豪宅，但是他们根本负担不起。这就是为什么我们这么重要，我们是他们豪华生活的根本原因。我们用手指在他们天平的一端压了一下，我们抽走手指，那时候才是真正的公平社会，但是他们马上就会不干。他们想要我们给的东西，但是又喜欢假装不知道这些东西是怎么来的。他们装伪君子比我强多了，去他们的吧！</p></blockquote><p>尽管二把手很年轻，但是手段非常老到，他左右拉拢员工，用尽方法；他信口开河，满是利益，让人毫无拒绝的可能性。是的，无论是 Sam 还是 Jerry，尽管技术能力平平，但是都心狠手辣，善于言谈，洞察人心，这是他们驱动那些比他们更有技术手段的人为他们卖命赚钱！</p><p>更绝的是，最后的老大 John（约翰·图尔德），更是老手中的老手，他左一句你可以 <strong>保留</strong> 股份与分红，右一句 <strong>及时止损比整年焦头烂额更好</strong> 的深入分析，直接将 Sam 说服了。将相本无种，奈何无论人数如何变化，富贵与贫贱的比例永远不变，无论时间过去多长，名利的游戏将永存不朽，历史中的一次次经济危机游戏给了我们无限的启迪：</p><blockquote><p>1637年、1797年、1819年、1837年、1857年、1884年、1901年、1907年、1929年、1937年、1974年、1987年、1992年、1997年、2000年、还有这次，不管我们叫它什么，一样的缘故，一次又一次，我们挡都挡不住，我们还想阻止它，控制它，甚至放慢它，我们的本性一丁点都没变，我们仅仅是随机应变，如果对了就赚一大笔，如果错了就被晾到一边，这个世界上过去会有，将来也会有，同样比例的赢家和输家，得意洋洋者和垂头丧气者，撑的撑死，饿的饿死，今天像我们这样的人也许前所未有的多，但是那个比例，原封未动。</p></blockquote><p>历史总是存在输家和赢家，至此， Sam 完全被征服；他已毫不在乎之前是如何如何地一次次的痛苦挣扎， 唯余 “我只是不想事情发展到如此操蛋的地步！” 的感叹给观众去慢慢品味！</p><p>夜晚， Sam 回到前妻的房前，埋葬了自己深爱的狗，也埋葬了自己的良心。</p><p>从来都没有屠龙的英雄，有的都是最终都会皮毛并带角的怪兽！<strong>公平</strong>、<strong>平等</strong>一直都在头部玩家的口中，从来都不曾真正广泛存在过：古今中外，资本逐利，2% 的头部资本家拥有绝对控股的资源，也许一部分人分到了羹汤成为了人上人，但始终不可能让广大底层人员享受到福利，从来如此，社会主义建设之路何其远哉！</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;直到落幕，我才意识到 《Margin Call》（商海通牒） 已经结束，可是对它的感悟我才刚刚开始…&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;剧本 ☆☆☆☆&lt;/li&gt;
-&lt;li&gt;场景 ☆☆☆☆&lt;/li&gt;
-&lt;li&gt;演绎 ☆☆☆☆&lt;/li&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="坐井观天" scheme="https://faradays-studio.gitee.io/categories/%E5%9D%90%E4%BA%95%E8%A7%82%E5%A4%A9/"/>
-    
-    
-      <category term="影评" scheme="https://faradays-studio.gitee.io/tags/%E5%BD%B1%E8%AF%84/"/>
-    
-      <category term="Margin Call" scheme="https://faradays-studio.gitee.io/tags/Margin-Call/"/>
-    
-      <category term="商海通牒" scheme="https://faradays-studio.gitee.io/tags/%E5%95%86%E6%B5%B7%E9%80%9A%E7%89%92/"/>
     
   </entry>
   

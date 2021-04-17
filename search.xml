@@ -3677,4 +3677,129 @@ powerline-daemon --replace</code></pre>
         <tag>电脑爱好者</tag>
       </tags>
   </entry>
+  <entry>
+    <title>zsh 环境的安装与配置</title>
+    <url>/202104171931/</url>
+    <content><![CDATA[<blockquote>
+<p>zsh 在 Linux 系统中是自带的，因此不这里并没有讨论 zsh 自身的安装方法，而是 zsh 插件的安装与配置方法。</p>
+</blockquote>
+<h2 id="zsh-的常用快捷键"><a href="#zsh-的常用快捷键" class="headerlink" title="zsh 的常用快捷键"></a>zsh 的常用快捷键</h2><ol>
+<li><p>虽然网络上都宣称 zsh 和 bash 高度解决，不过我个人的理解，bash 的部分快捷键和 csh 倒是比较接近，而 zsh 并不接近。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>zsh</th>
+<th>bash</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>光标移动到行首</td>
+<td><code>Ctrl</code> + <code>A</code></td>
+<td><code>Home</code></td>
+<td></td>
+</tr>
+<tr>
+<td>光标移动到行尾</td>
+<td><code>Ctrl</code> + <code>E</code></td>
+<td><code>End</code></td>
+<td></td>
+</tr>
+<tr>
+<td>光标后的字符串变为大写</td>
+<td><code>Alt</code> + <code>U</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>当前字符串大写</td>
+<td><code>Alt</code> + <code>C</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>光标后的字符串变为小写</td>
+<td><code>Alt</code> + <code>L</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>删除光标<strong>后</strong>的<strong>所有</strong>字符</td>
+<td><code>Clt</code> + <code>K</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>删除光标<strong>前</strong>的<strong>所有</strong>字符</td>
+<td><code>Clt</code> + <code>H</code></td>
+<td><code>Clt</code> + <code>U</code></td>
+<td><code>Ctrl</code> + <code>U</code> 对 bash 来说是删除光标前的字符，而 zsh 是整行删除。</td>
+</tr>
+<tr>
+<td>删除光标<strong>前</strong>的<strong>一个单词</strong></td>
+<td><code>Ctrl</code> + <code>W</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>删除光标<strong>后</strong>的<strong>一个单词</strong></td>
+<td><code>Alt</code> + <code>D</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>删除光标<strong>当前</strong>的<strong>一个字符</strong></td>
+<td><code>Ctrl</code> + <code>D</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong><code>CTRL + R</code></strong>: 搜索历史</p>
+</li>
+</ol>
+<h2 id="插件的安装与配置"><a href="#插件的安装与配置" class="headerlink" title="插件的安装与配置"></a>插件的安装与配置</h2><ol>
+<li><p>安装 <a href="https://github.com/zsh-users/zsh-syntax-highlighting">zsh-syntax-highlighting</a> 语法提示插件（当用户输入正确命令时指令会绿色高亮，错误时命令红色高亮）</p>
+<pre><code class="shell">su - herc
+cd ~/.zsh
+git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+vim .zshrc
+    source /home/herc/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh</code></pre>
+</li>
+<li><p>安装 <strong><a href="https://github.com/zsh-users/zsh-autosuggestions">zsh-autosuggestions</a></strong> 命令历史自动提示插件</p>
+<pre><code class="shell">zsh
+su - herc
+cd ~/.zsh
+
+mkdir .zsh
+cd .zsh
+bash --version
+zsh --version
+git clone https://github.com/zsh-users/zsh-autosuggestions
+source zsh-autosuggestions/zsh-autosuggestions.zsh
+    #完成该步骤后，即可对历史输入命令进行自动语法提示。
+    # 如果存在过多参数时，仍然可以使用 tab 强制提示。
+    # 系统内置的命令，如 tar 不能提示参数，不过 yum 可以提示参数、ls 需要强制 tab 才能提示参数</code></pre>
+</li>
+<li><p>安装 incr 系统目录自动提示插件</p>
+<pre><code class="shell">su - herc
+cd ~/.zsh
+wget https://mimosa-pudica.net/src/incr-0.2.zsh
+source incr*.zsh
+    # 当前有效，配置到~/.zshrc则用户一直有效（ 使用时将自动以绿色表示提示词）
+    # 不过按回车就会输入绿色部分，网友说可以使用空格隔断或 delete 键删除，测试无效；建议使用 Ctrl + K 删除末尾后回车！</code></pre>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>安装</tag>
+        <tag>配置</tag>
+        <tag>zsh</tag>
+      </tags>
+  </entry>
 </search>

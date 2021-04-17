@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   
-  <title>Tag: U盘 | Blog of Faradays&#39; Studio</title>
+  <title>zsh 环境的安装与配置 | Blog of Faradays&#39; Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
 
   
@@ -18,8 +18,26 @@
 
   
   
-    <meta name="keywords" content="Faradays' Studio, Blog, 编程, 思考, 文学作品, 实践, 总结" />
- 
+    
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+    <meta name="keywords" content="安装,配置,zsh,Faradays' Studio">
+  
 
 
   
@@ -27,18 +45,36 @@
        
 
 
+    
+    
+    <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
+    <link rel="stylesheet" href="/css/github.min.css">
+    
+
+
+    
+    <!-- import 'gitalk/dist/gitalk.css' -->
+    <!-- import Gitalk from 'gitalk' -->
+
+
+
 
   
 
-  <meta name="description" content="自信人生二百里，会当击水三千里！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Blog of Faradays&#39; Studio">
-<meta property="og:url" content="https://faradays-studio.gitee.io/tags/U%E7%9B%98/index.html">
+  <meta name="description" content="zsh 在 Linux 系统中是自带的，因此不这里并没有讨论 zsh 自身的安装方法，而是 zsh 插件的安装与配置方法。  zsh 的常用快捷键 虽然网络上都宣称 zsh 和 bash 高度解决，不过我个人的理解，bash 的部分快捷键和 csh 倒是比较接近，而 zsh 并不接近。    项目 zsh bash 备注    光标移动到行首 Ctrl + A Home    光标移动到行尾 C">
+<meta property="og:type" content="article">
+<meta property="og:title" content="zsh 环境的安装与配置">
+<meta property="og:url" content="https://faradays-studio.gitee.io/202104171931/index.html">
 <meta property="og:site_name" content="Blog of Faradays&#39; Studio">
-<meta property="og:description" content="自信人生二百里，会当击水三千里！">
+<meta property="og:description" content="zsh 在 Linux 系统中是自带的，因此不这里并没有讨论 zsh 自身的安装方法，而是 zsh 插件的安装与配置方法。  zsh 的常用快捷键 虽然网络上都宣称 zsh 和 bash 高度解决，不过我个人的理解，bash 的部分快捷键和 csh 倒是比较接近，而 zsh 并不接近。    项目 zsh bash 备注    光标移动到行首 Ctrl + A Home    光标移动到行尾 C">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-04-17T11:31:02.000Z">
+<meta property="article:modified_time" content="2021-04-17T11:34:57.531Z">
 <meta property="article:author" content="David">
-<meta property="article:tag" content="编程, 思考, 文学作品, 实践, 总结">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="安装">
+<meta property="article:tag" content="配置">
+<meta property="article:tag" content="zsh">
 <meta name="twitter:card" content="summary">
   
   
@@ -173,86 +209,463 @@
       
 
 
-      <div class="outer-index">
+      <div class="outer">
         <section id="main"  class="body-wrap"  >
-  
-  <div style="font-size:37px; text-align:center;padding-top:67px;">存档</div>
 
-  <div style="padding-top:33px;color:#999;">栏目</div>
-  <div class="tags2x" style="margin:13px 3px 53px 3px;">
-      
-      <a href="/categories/%E5%9D%90%E4%BA%95%E8%A7%82%E5%A4%A9/" style="font-size: 26.33px; color: #774e00">坐井观天</a> <a href="/categories/%E6%88%91%E5%92%8Chexo%E6%9C%89%E4%B8%AA%E7%BA%A6%E4%BC%9A/" style="font-size: 13px; color: #320">我和hexo有个约会</a> <a href="/categories/%E6%98%9F%E6%98%9F%E5%BF%83%E4%BA%8B/" style="font-size: 26.33px; color: #774e00">星星心事</a> <a href="/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/" style="font-size: 39.67px; color: #bb7900">电脑爱好者</a> <a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" style="font-size: 53px; color: #ffa500">编程笔记</a>
-  </div>
+    <article id="post-zsh环境的安装与配置" class="article article-type-post" itemscope itemprop="blogPost">
 
+  <div id="article-inner-1" class="article-inner">
+
+    
+    <p class="banner" id="banner_x">
+
+    
+      <header class="article-header">
+        
   
-  
+
     
     
-      
-
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
+        <h1 class="post-title" id="typed2" itemprop="name"></h1>
     
 
-
-    <article class="archive-article archive-type-index">
-      <div class="archive-article-inner">
-        <header class="archive-article-header">
-          <a href="/202008272141/" class="archive-article-date">
-  <time datetime="2020-08-27T13:41:35.000Z" itemprop="datePublished">08-27</time>
-</a>
+    
+    <div class="post-title-bar">
+      <ul>
           
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/202008272141/"  >
-      苹果 Macbook Pro 笔记本从 U 盘启动以及重置开机密码的方法
-      </a>
-    </h1>
-  
-
-
-        </header>
+              <li>
+                  <i class="fa fa-code-fork"></i>
+                  
+                  
+                      <a href="/categories/电脑爱好者/">
+                      电脑爱好者
+                      </a>
+                  
+              </li>
           
-            <div class="archive-post-footer">
+
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+        <li>
+          <i class="fa fa-calendar-plus-o"></i>  2021-04-17
+        </li>
+
+        
+        <li  class="faradays-author">
+            <i class="fa fa-user-o"></i>
+            <span>
+            
+            
+                <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
+            
+            </span>
+        </li>
+
+
+        
+        
+
+        
+        <li><i class="fa fa-file-word-o"></i>
+            <span class="post-count">543 words</span>
+        </li>
+        <li><i class="fa fa-caret-square-o-right"></i>
+            <span class="post-count">2 min</span>
+        </li>
+      </ul>
+
+
+    </div>
+
+  
+
+
+      </header>
+    
+
+    
+    <div id="article-entry-1" class="article-entry post-content" itemprop="articleBody">
+            
+            <blockquote>
+<p>zsh 在 Linux 系统中是自带的，因此不这里并没有讨论 zsh 自身的安装方法，而是 zsh 插件的安装与配置方法。</p>
+</blockquote>
+<h2 id="zsh-的常用快捷键"><a href="#zsh-的常用快捷键" class="headerlink" title="zsh 的常用快捷键"></a>zsh 的常用快捷键</h2><ol>
+<li><p>虽然网络上都宣称 zsh 和 bash 高度解决，不过我个人的理解，bash 的部分快捷键和 csh 倒是比较接近，而 zsh 并不接近。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>zsh</th>
+<th>bash</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>光标移动到行首</td>
+<td><code>Ctrl</code> + <code>A</code></td>
+<td><code>Home</code></td>
+<td></td>
+</tr>
+<tr>
+<td>光标移动到行尾</td>
+<td><code>Ctrl</code> + <code>E</code></td>
+<td><code>End</code></td>
+<td></td>
+</tr>
+<tr>
+<td>光标后的字符串变为大写</td>
+<td><code>Alt</code> + <code>U</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>当前字符串大写</td>
+<td><code>Alt</code> + <code>C</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>光标后的字符串变为小写</td>
+<td><code>Alt</code> + <code>L</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>删除光标<strong>后</strong>的<strong>所有</strong>字符</td>
+<td><code>Clt</code> + <code>K</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>删除光标<strong>前</strong>的<strong>所有</strong>字符</td>
+<td><code>Clt</code> + <code>H</code></td>
+<td><code>Clt</code> + <code>U</code></td>
+<td><code>Ctrl</code> + <code>U</code> 对 bash 来说是删除光标前的字符，而 zsh 是整行删除。</td>
+</tr>
+<tr>
+<td>删除光标<strong>前</strong>的<strong>一个单词</strong></td>
+<td><code>Ctrl</code> + <code>W</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>删除光标<strong>后</strong>的<strong>一个单词</strong></td>
+<td><code>Alt</code> + <code>D</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>删除光标<strong>当前</strong>的<strong>一个字符</strong></td>
+<td><code>Ctrl</code> + <code>D</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong><code>CTRL + R</code></strong>: 搜索历史</p>
+</li>
+</ol>
+<h2 id="插件的安装与配置"><a href="#插件的安装与配置" class="headerlink" title="插件的安装与配置"></a>插件的安装与配置</h2><ol>
+<li><p>安装 <a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-syntax-highlighting">zsh-syntax-highlighting</a> 语法提示插件（当用户输入正确命令时指令会绿色高亮，错误时命令红色高亮）</p>
+<pre><code class="shell">su - herc
+cd ~/.zsh
+git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+vim .zshrc
+    source /home/herc/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh</code></pre>
+</li>
+<li><p>安装 <strong><a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-autosuggestions">zsh-autosuggestions</a></strong> 命令历史自动提示插件</p>
+<pre><code class="shell">zsh
+su - herc
+cd ~/.zsh
+
+mkdir .zsh
+cd .zsh
+bash --version
+zsh --version
+git clone https://github.com/zsh-users/zsh-autosuggestions
+source zsh-autosuggestions/zsh-autosuggestions.zsh
+    #完成该步骤后，即可对历史输入命令进行自动语法提示。
+    # 如果存在过多参数时，仍然可以使用 tab 强制提示。
+    # 系统内置的命令，如 tar 不能提示参数，不过 yum 可以提示参数、ls 需要强制 tab 才能提示参数</code></pre>
+</li>
+<li><p>安装 incr 系统目录自动提示插件</p>
+<pre><code class="shell">su - herc
+cd ~/.zsh
+wget https://mimosa-pudica.net/src/incr-0.2.zsh
+source incr*.zsh
+    # 当前有效，配置到~/.zshrc则用户一直有效（ 使用时将自动以绿色表示提示词）
+    # 不过按回车就会输入绿色部分，网友说可以使用空格隔断或 delete 键删除，测试无效；建议使用 Ctrl + K 删除末尾后回车！</code></pre>
+</li>
+</ol>
+
+            <div class="post-copyright">
+
+    
+    <br /><br /><br />
+    <div id="copyright-content" class="content">
+        
+        <p>最后更新： 2021/04/17 19:34:57</p>
+        <p>
                 
+                
+
+                
+
+                
+
+                
+        </p>
+
+        
+        
+            <p>编著：
+                <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
+            </p>
+        
+
+
+        
+        <p>主用链接：
+            
+                <a class="post-url" href="https://faradays-studio.gitee.io/202104171931/" title="zsh 环境的安装与配置">
+                https://faradays-studio.gitee.io/202104171931/
+                </a>
+            
+        </p>
+
+        
+        <p>备用链接： <a class="post-url" target="_blank" rel="noopener" href="https://faradays-studio.github.io/202104171931/" title="zsh 环境的安装与配置">
+            https://faradays-studio.github.io/202104171931/</a>
+        </p>
+        
+
+        
+        
+            <p>引用、演绎等请注明出处，共创和谐社会，谢谢你的合作！</p>
+        
+
+        
+        <footer></footer>
+    </div>
+</div>
+
+    </div>
+
+    <footer class="article-footer">
+        
+        
+            
+<div class="page-reward"  style="display: inline-block;">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">大方打赏，关爱永继~</span>
+    <div class="reward-content">
+        <div class="reward-code">
+            
+            <table style="float:center; margin:auto;" cellspacing="3">
+                <tr>
+                <td><img src="/images/%E5%BE%AE%E4%BF%A1-%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="微信"></td>
+                <td><img src="/images/%E6%94%AF%E4%BB%98%E5%AE%9D-%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="支付宝"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="reward-select">
+        </div>
+    </div>
+</div>
+
+
+            
+            
+
+<div class="page-contact">
+    
+        <a title="QQ联系博主" href="http://wpa.qq.com/msgrd?v=3&uin=189392385&site=qq&menu=yes" target="_blank">
+            <i class="fa fa-qq"></i>
+        </a>
+    
+
+    
+        <a title="邮件联系博主" href="mailto:yvany@qq.com" target="_blank">
+            <i class="fa fa-envelope"></i>
+        </a>
+    
+</div>
+
+        
+
+        
+        
+<div class="post-share">
+<!-- <div class="post-share" style="display: inline-block;"> -->
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.gitee.io/202104171931/&title=《zsh 环境的安装与配置》 — Blog of Faradays' Studio&pic=https://faradays-studio.gitee.ioimages/faradays-A01.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://faradays-studio.gitee.io/202104171931/&title=《zsh 环境的安装与配置》 — Blog of Faradays' Studio&source=自信人生二百里，会当击水三千里！" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://faradays-studio.gitee.io/202104171931/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《zsh 环境的安装与配置》 — Blog of Faradays' Studio&url=https://faradays-studio.gitee.io/202104171931/&via=https://faradays-studio.gitee.io" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://faradays-studio.gitee.io/202104171931/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://faradays-studio.gitee.io/202104171931/" alt="微信分享二维码">
+</div>
+
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu" >
+            
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/Apple/" class="color1">Apple</a>
+    <a href="/tags/Linux/" class="color1">Linux</a>
       
-    <a href="/tags/Macbook/" class="color3">Macbook</a>
+    <a href="/tags/安装/" class="color3">安装</a>
       
-    <a href="/tags/MacOS/" class="color1">MacOS</a>
+    <a href="/tags/配置/" class="color3">配置</a>
       
-    <a href="/tags/密码/" class="color3">密码</a>
-      
-    <a href="/tags/操作系统/" class="color5">操作系统</a>
-      
-    <a href="/tags/PE/" class="color3">PE</a>
-      
-    <a href="/tags/U盘/" class="color3">U盘</a>
+    <a href="/tags/zsh/" class="color4">zsh</a>
       
   </li>
 
-            </div>
-          
-      </div>
-    </article>
+        </ul>
+    </footer>
+  </div>
+</article>
 
-
+    
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <!-- <nav class="post-toc-wrap"> -->
+        <nav class="tocbot">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#zsh-%E7%9A%84%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="post-toc-text">zsh 的常用快捷键</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%8F%92%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="post-toc-text">插件的安装与配置</span></a></li></ol>
+        </nav>
+    </aside>
+    
+    
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/202104102207/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Powerline 插件的安装与配置</span>
+      <!-- <i class="fa fa-hand-o-right" aria-hidden="true"></i>  -->
+      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+    </a>
   
+</nav>
+
+
+
+    
+        
+
+
+    
+    
+        <link rel="stylesheet" href="/css/gitalk.css">
+        <script src="/js/gitalk.min.js"></script>
+    
+
+    <div id="gitalk-faradays">
+
+    </div>
+
+
+
+    
+    <script>
+
+    if (isSite1 == 2){
+        // github 站
+        
+        const gitalk = new Gitalk({
+            clientID: '90b449ff273a263117ec',
+            clientSecret: '0a3ccea67a4d3f03cbff012eeac1a8547e367aad',
+            repo: 'faradays-studio.github.io',      
+            owner: 'faradays-studio',
+            admin: ['faradays-studio'],
+            id: location.pathname, 
+            labels: ['gitalk', 'post-comment', '博客评论'],
+            perPage: 3,
+            distractionFreeMode: false  
+            });
+        gitalk.render('gitalk-faradays');
+    } else {
+        // gitee 站
+         
+        const gitalk = new Gitalk({
+            clientID: 'c2b078c0b4799f519b96',
+            clientSecret: 'fab5fe7470b3d790db0e90e4ac58d5b5aa3bda11',
+            repo: 'faradays-studio.github.io',      
+            owner: 'faradays-studio',
+            admin: ['faradays-studio'],
+            id: location.pathname, 
+            labels: ['gitalk', 'post-comment', '博客评论'],
+            perPage: 3,
+            distractionFreeMode: false  
+            });
+        gitalk.render('gitalk-faradays');
+    }
+
+    </script>
+    
+    
 
 
 
 
 
+    <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script> -->
+
+<script src="/js/typed.js"></script>
+
+<script>
+    var typed2 = new Typed("#typed2", {
+    strings: ['zsh 环境的安装与配置'],
+    startDelay: 168,
+    typeSpeed: 100,
+    loop: false,
+    backSpeed: 0,
+    showCursor: false
+    });
+</script>
 </section>
         
 
@@ -705,26 +1118,48 @@ if ( dv1 != null ) {
 
 
 
-
     
     <script>
+      
       tocbot.init({
         tocSelector: '.tocbot',
-        contentSelector: '.timeline_x',
-        headingSelector: 'h1, h2',
-        collapseDepth: 2,
-        linkClass: "toc-link",
-        // 无法解决高亮显示不对的问题时取消注释下一行
-        //activeLinkClass: "is-active-link2",
-        scrollSmoothOffset: -44,
-        headingsOffset: 47,
-        scrollContainer: 'main',
+        contentSelector: '.article-inner',
+        headingSelector: 'h2, h3, h4, h5, h6',
+        hasInnerContainers: true,
+
+        
+        collapseDepth: 3,
+
         scrollSmooth: true,
+        
+        scrollSmoothOffset: -44,
+        
+        headingsOffset: 47,
+
+        scrollContainer: 'main',
+        
         positionFixedSelector: '.tocbot',
         positionFixedClass: 'is-position-fixed',
+
+        
+        //skipRendering: true,
+        //disableTocScrollSync: false,
+
         fixedSidebarOffset: 'auto'
       });
     </script>
+
+
+
+
+    
+    
+<script src="/js/highlight.min.js"></script>
+
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
+
 
 
 
