@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   
-  <title>归档: 2020/9 | Blog of Faradays&#39; Studio</title>
+  <title>ag 的安装与配置 | Blog of Faradays&#39; Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
 
   
@@ -18,8 +18,26 @@
 
   
   
-    <meta name="keywords" content="Faradays' Studio, Blog, 编程, 思考, 文学作品, 实践, 总结" />
- 
+    
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+    <meta name="keywords" content="安装,配置,ag,Faradays' Studio">
+  
 
 
   
@@ -27,18 +45,36 @@
        
 
 
+    
+    
+    <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
+    <link rel="stylesheet" href="/css/github.min.css">
+    
+
+
+    
+    <!-- import 'gitalk/dist/gitalk.css' -->
+    <!-- import Gitalk from 'gitalk' -->
+
+
+
 
   
 
-  <meta name="description" content="自信人生二百里，会当击水三千里！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Blog of Faradays&#39; Studio">
-<meta property="og:url" content="https://faradays-studio.gitee.io/archives/2020/09/index.html">
+  <meta name="description" content="ag （https:&#x2F;&#x2F;github.com&#x2F;ggreer&#x2F;the_silver_searcher）比grep、ack更快的递归搜索文件内容（速度对比：&#96;ag&#96;&gt;&#96;ack&#96;&gt;&#96;grep&#96;） # centos 6+（epel） yum install the_silver_searcher  安装到 vim  安装 cd &#x2F;usr&#x2F;share&#x2F;vim&#x2F;vim74&#x2F;plugin #cd">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ag 的安装与配置">
+<meta property="og:url" content="https://faradays-studio.gitee.io/202104301929/index.html">
 <meta property="og:site_name" content="Blog of Faradays&#39; Studio">
-<meta property="og:description" content="自信人生二百里，会当击水三千里！">
+<meta property="og:description" content="ag （https:&#x2F;&#x2F;github.com&#x2F;ggreer&#x2F;the_silver_searcher）比grep、ack更快的递归搜索文件内容（速度对比：&#96;ag&#96;&gt;&#96;ack&#96;&gt;&#96;grep&#96;） # centos 6+（epel） yum install the_silver_searcher  安装到 vim  安装 cd &#x2F;usr&#x2F;share&#x2F;vim&#x2F;vim74&#x2F;plugin #cd">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-04-30T11:29:34.000Z">
+<meta property="article:modified_time" content="2021-04-30T11:31:08.962Z">
 <meta property="article:author" content="David">
-<meta property="article:tag" content="编程, 思考, 文学作品, 实践, 总结">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="安装">
+<meta property="article:tag" content="配置">
+<meta property="article:tag" content="ag">
 <meta name="twitter:card" content="summary">
   
   
@@ -173,120 +209,387 @@
       
 
 
-      <div class="outer-index">
+      <div class="outer">
         <section id="main"  class="body-wrap"  >
-  
-  <div style="font-size:37px; text-align:center;padding-top:67px;">存档</div>
 
-  <div style="padding-top:33px;color:#999;">栏目</div>
-  <div class="tags2x" style="margin:13px 3px 53px 3px;">
-      
-      <a href="/categories/%E5%9D%90%E4%BA%95%E8%A7%82%E5%A4%A9/" style="font-size: 26.33px; color: #774e00">坐井观天</a> <a href="/categories/%E6%88%91%E5%92%8Chexo%E6%9C%89%E4%B8%AA%E7%BA%A6%E4%BC%9A/" style="font-size: 13px; color: #320">我和hexo有个约会</a> <a href="/categories/%E6%98%9F%E6%98%9F%E5%BF%83%E4%BA%8B/" style="font-size: 26.33px; color: #774e00">星星心事</a> <a href="/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/" style="font-size: 39.67px; color: #bb7900">电脑爱好者</a> <a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" style="font-size: 53px; color: #ffa500">编程笔记</a>
-  </div>
+    <article id="post-ag-的安装与配置" class="article article-type-post" itemscope itemprop="blogPost">
 
+  <div id="article-inner-1" class="article-inner">
+
+    
+    <p class="banner" id="banner_x">
+
+    
+      <header class="article-header">
+        
   
-  
+
     
     
-      
-
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
+        <h1 class="post-title" id="typed2" itemprop="name"></h1>
     
 
-
-    <article class="archive-article archive-type-index">
-      <div class="archive-article-inner">
-        <header class="archive-article-header">
-          <a href="/202009292008/" class="archive-article-date">
-  <time datetime="2020-09-29T12:08:22.000Z" itemprop="datePublished">09-29</time>
-</a>
+    
+    <div class="post-title-bar">
+      <ul>
           
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/202009292008/"  >
-      在 Shell 中使用 printf 格式化输出语句
-      </a>
-    </h1>
-  
-
-
-        </header>
+              <li>
+                  <i class="fa fa-code-fork"></i>
+                  
+                  
+                      <a href="/categories/电脑爱好者/">
+                      电脑爱好者
+                      </a>
+                  
+              </li>
           
-            <div class="archive-post-footer">
+
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+        <li>
+          <i class="fa fa-calendar-plus-o"></i>  2021-04-30
+        </li>
+
+        
+        <li  class="faradays-author">
+            <i class="fa fa-user-o"></i>
+            <span>
+            
+            
                 
+                
+                    
+
+                    
+                    
+                    <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
+
+                    
+
+                    
+
+                
+
+            
+            </span>
+        </li>
+
+
+        
+        
+        <li>
+                <i class="fa fa-copyright"></i>
+                25%
+        </li>
+        
+
+        
+        <li><i class="fa fa-file-word-o"></i>
+            <span class="post-count">130 words</span>
+        </li>
+        <li><i class="fa fa-caret-square-o-right"></i>
+            <span class="post-count">1 min</span>
+        </li>
+      </ul>
+
+
+    </div>
+
+  
+
+
+      </header>
+    
+
+    
+    <div id="article-entry-1" class="article-entry post-content" itemprop="articleBody">
+            
+            <ol>
+<li><p><strong>ag</strong> （<a target="_blank" rel="noopener" href="https://github.com/ggreer/the_silver_searcher）比grep、ack更快的递归搜索文件内容（速度对比：`ag`&gt;`ack`&gt;`grep`）">https://github.com/ggreer/the_silver_searcher）比grep、ack更快的递归搜索文件内容（速度对比：`ag`&gt;`ack`&gt;`grep`）</a></p>
+<pre><code class="sh"># centos 6+（epel）
+yum install the_silver_searcher</code></pre>
+</li>
+<li><p>安装到 vim</p>
+<ul>
+<li><p>安装</p>
+<pre><code class="sh">cd /usr/share/vim/vim74/plugin
+#cd ~/.vim/plugin
+git clone https://github.com/rking/ag.vim ag</code></pre>
+</li>
+<li><p>全局配置 <code>vim /etc/vimrc</code></p>
+<pre><code class="sh">&quot; 自动缩进
+set autoindent
+
+&quot; ag 插件（请注意：默认为全局搜索，因此必须指明文件路径，不过支持正则表达式）
+set runtimepath^=/usr/share/vim/vim74/plugin/ag.vim
+let g:ag_prg=&quot;/usr/bin/ag --vimgrep&quot;
+let g:ag_working_path_mode=&quot;r&quot;</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+
+            <div class="post-copyright">
+
+    
+    <br /><br /><br />
+    <div id="copyright-content" class="content">
+        
+        <p>最后更新： 2021/04/30 19:31:08</p>
+        <p>
+                
+                
+
+                
+
+                
+
+                
+        </p>
+
+        
+            <p>编者：
+                <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
+            </p>
+        
+        
+
+
+        
+        <p>主用链接：
+            
+                <a class="post-url" href="https://faradays-studio.gitee.io/202104301929/" title="ag 的安装与配置">
+                https://faradays-studio.gitee.io/202104301929/
+                </a>
+            
+        </p>
+
+        
+        <p>备用链接： <a class="post-url" target="_blank" rel="noopener" href="https://faradays-studio.github.io/202104301929/" title="ag 的安装与配置">
+            https://faradays-studio.github.io/202104301929/</a>
+        </p>
+        
+
+        
+        
+            <p>引用、演绎等请注明出处，共创和谐社会，谢谢你的合作！</p>
+        
+
+        
+        <footer></footer>
+    </div>
+</div>
+
+    </div>
+
+    <footer class="article-footer">
+        
+        
+            
+<div class="page-reward"  style="display: inline-block;">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">大方打赏，关爱永继~</span>
+    <div class="reward-content">
+        <div class="reward-code">
+            
+            <table style="float:center; margin:auto;" cellspacing="3">
+                <tr>
+                <td><img src="/images/%E5%BE%AE%E4%BF%A1-%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="微信"></td>
+                <td><img src="/images/%E6%94%AF%E4%BB%98%E5%AE%9D-%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="支付宝"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="reward-select">
+        </div>
+    </div>
+</div>
+
+
+            
+            
+
+<div class="page-contact">
+    
+        <a title="QQ联系博主" href="http://wpa.qq.com/msgrd?v=3&uin=189392385&site=qq&menu=yes" target="_blank">
+            <i class="fa fa-qq"></i>
+        </a>
+    
+
+    
+        <a title="邮件联系博主" href="mailto:yvany@qq.com" target="_blank">
+            <i class="fa fa-envelope"></i>
+        </a>
+    
+</div>
+
+        
+
+        
+        
+<div class="post-share">
+<!-- <div class="post-share" style="display: inline-block;"> -->
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.gitee.io/202104301929/&title=《ag 的安装与配置》 — Blog of Faradays' Studio&pic=https://faradays-studio.gitee.ioimages/faradays-A01.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://faradays-studio.gitee.io/202104301929/&title=《ag 的安装与配置》 — Blog of Faradays' Studio&source=自信人生二百里，会当击水三千里！" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://faradays-studio.gitee.io/202104301929/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ag 的安装与配置》 — Blog of Faradays' Studio&url=https://faradays-studio.gitee.io/202104301929/&via=https://faradays-studio.gitee.io" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://faradays-studio.gitee.io/202104301929/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://faradays-studio.gitee.io/202104301929/" alt="微信分享二维码">
+</div>
+
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu" >
+            
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
-      
-    <a href="/tags/shell/" class="color1">shell</a>
-      
-    <a href="/tags/printf/" class="color2">printf</a>
-      
-    <a href="/tags/格式化/" class="color4">格式化</a>
       
     <a href="/tags/Linux/" class="color1">Linux</a>
       
+    <a href="/tags/安装/" class="color3">安装</a>
+      
+    <a href="/tags/配置/" class="color3">配置</a>
+      
+    <a href="/tags/ag/" class="color3">ag</a>
+      
   </li>
 
-            </div>
-          
-      </div>
-    </article>
+        </ul>
+    </footer>
+  </div>
+</article>
 
-
+    
+    
+<nav id="article-nav">
   
+  
+    <a href="/202104171931/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">zsh 环境的安装与配置</span>
+      <!-- <i class="fa fa-hand-o-right" aria-hidden="true"></i>  -->
+      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+        
+
+
+    
+    
+        <link rel="stylesheet" href="/css/gitalk.css">
+        <script src="/js/gitalk.min.js"></script>
+    
+
+    <div id="gitalk-faradays">
+
+    </div>
+
+
+
+    
+    <script>
+
+    if (isSite1 == 2){
+        // github 站
+        
+        const gitalk = new Gitalk({
+            clientID: '90b449ff273a263117ec',
+            clientSecret: '0a3ccea67a4d3f03cbff012eeac1a8547e367aad',
+            repo: 'faradays-studio.github.io',      
+            owner: 'faradays-studio',
+            admin: ['faradays-studio'],
+            id: location.pathname, 
+            labels: ['gitalk', 'post-comment', '博客评论'],
+            perPage: 3,
+            distractionFreeMode: false  
+            });
+        gitalk.render('gitalk-faradays');
+    } else {
+        // gitee 站
+         
+        const gitalk = new Gitalk({
+            clientID: 'c2b078c0b4799f519b96',
+            clientSecret: 'fab5fe7470b3d790db0e90e4ac58d5b5aa3bda11',
+            repo: 'faradays-studio.github.io',      
+            owner: 'faradays-studio',
+            admin: ['faradays-studio'],
+            id: location.pathname, 
+            labels: ['gitalk', 'post-comment', '博客评论'],
+            perPage: 3,
+            distractionFreeMode: false  
+            });
+        gitalk.render('gitalk-faradays');
+    }
+
+    </script>
     
     
 
 
-    <article class="archive-article archive-type-index">
-      <div class="archive-article-inner">
-        <header class="archive-article-header">
-          <a href="/202009022111/" class="archive-article-date">
-  <time datetime="2020-09-02T13:11:05.000Z" itemprop="datePublished">09-02</time>
-</a>
-          
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/202009022111/"  >
-      2020年随笔
-      </a>
-    </h1>
-  
-
-
-        </header>
-          
-            <div class="archive-post-footer">
-                
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/2020/" class="color5">2020</a>
-      
-    <a href="/tags/随笔/" class="color3">随笔</a>
-      
-  </li>
-
-            </div>
-          
-      </div>
-    </article>
-
-
-  
-  
-    </div></section>
-  
 
 
 
+    <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script> -->
 
+<script src="/js/typed.js"></script>
 
+<script>
+    var typed2 = new Typed("#typed2", {
+    strings: ['ag 的安装与配置'],
+    startDelay: 168,
+    typeSpeed: 100,
+    loop: false,
+    backSpeed: 0,
+    showCursor: false
+    });
+</script>
 </section>
         
 
@@ -297,7 +600,7 @@
     
       
       <footer id="footer">
-        <div class="outer-index">
+        <div class="outer">
         
 
     <div id="footer-info" class="inner">
@@ -739,26 +1042,48 @@ if ( dv1 != null ) {
 
 
 
-
     
     <script>
+      
       tocbot.init({
         tocSelector: '.tocbot',
-        contentSelector: '.timeline_x',
-        headingSelector: 'h1, h2',
-        collapseDepth: 2,
-        linkClass: "toc-link",
-        // 无法解决高亮显示不对的问题时取消注释下一行
-        //activeLinkClass: "is-active-link2",
-        scrollSmoothOffset: -44,
-        headingsOffset: 47,
-        scrollContainer: 'main',
+        contentSelector: '.article-inner',
+        headingSelector: 'h2, h3, h4, h5, h6',
+        hasInnerContainers: true,
+
+        
+        collapseDepth: 3,
+
         scrollSmooth: true,
+        
+        scrollSmoothOffset: -44,
+        
+        headingsOffset: 47,
+
+        scrollContainer: 'main',
+        
         positionFixedSelector: '.tocbot',
         positionFixedClass: 'is-position-fixed',
+
+        
+        //skipRendering: true,
+        //disableTocScrollSync: false,
+
         fixedSidebarOffset: 'auto'
       });
     </script>
+
+
+
+
+    
+    
+<script src="/js/highlight.min.js"></script>
+
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
+
 
 
 
