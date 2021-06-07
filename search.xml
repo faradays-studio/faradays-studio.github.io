@@ -3840,4 +3840,73 @@ let g:ag_working_path_mode=&quot;r&quot;</code></pre>
         <tag>ag</tag>
       </tags>
   </entry>
+  <entry>
+    <title>fzf 的安装与配置</title>
+    <url>/202106072338/</url>
+    <content><![CDATA[<h2 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h2><ol>
+<li><p>安装 <strong>fzf</strong>  （<a href="https://github.com/junegunn/fzf，输入模糊的关键词来定位文件或文件；**源代码就是安装程序**，因此需要选择好路径）">https://github.com/junegunn/fzf，输入模糊的关键词来定位文件或文件；**源代码就是安装程序**，因此需要选择好路径）</a></p>
+<pre><code class="sh">su
+cd /usr/local
+git clone --depth 1 https://github.com/junegunn/fzf.git
+./fzf/install</code></pre>
+</li>
+<li><p>关联系统（默认会自动关联，可以添加到个人自定义的<strong>全局设置</strong>文件 <code>vim /etc/profile.d/hhjos6.sh</code> 中）</p>
+<pre><code class="sh"># fzf
+    if [[ ! &quot;$PATH&quot; == */usr/local/fzf/bin* ]]; then
+      export PATH=&quot;$&#123;PATH:+$&#123;PATH&#125;:&#125;/usr/local/fzf/bin&quot;
+    fi
+    # Auto-completion
+[[ $- == *i* ]] &amp;&amp; source &quot;/usr/local/fzf/shell/completion.bash&quot; 2&gt; /dev/null
+    # Key bindings
+source &quot;/usr/local/fzf/shell/key-bindings.bash&quot;
+
+</code></pre>
+</li>
+</ol>
+<pre><code># fzf 其实底层是调用的 Unix 系统 `find` 命令，也可以使用 fd 或 ag 来代替
+# export FZF_DEFAULT_COMMAND=&quot;fd --exclude=&#123;.git,.idea,.vscode,.sass-cache,node_modules,build&#125; --type f&quot;
+export FZF_DEFAULT_COMMAND=&#39;ag --hidden --ignore .git -l -g &quot;&quot;&#39;
+
+# 界面展示
+export FZF_DEFAULT_OPTS=&quot;--height 30% --layout=reverse --preview &#39;(highlight -O ansi &#123;&#125; || cat &#123;&#125;) 2&gt; /dev/null | head -100&#39;&quot;
+
+# 触发命令行补全(默认是 **，一般不用修改)
+# FZF_COMPLETION_TRIGGER
+```</code></pre><blockquote>
+<p>更多用法见参考文献。</p>
+</blockquote>
+<ol start="3">
+<li><p>配置安装高亮插件</p>
+<ul>
+<li>yum install highlight</li>
+</ul>
+</li>
+<li><p>配置到 vim</p>
+<pre><code class="sh"># 裸装
+cp /usr/local/fzf/plugin/fzf.vim /usr/share/vim/vim74/plugin
+vim /etc/vimrc
+    set rtp+=/usr/local/fzf/
+
+# 基于 vim-plug 插件系统
+Plug &#39;/usr/local/fzf/bin/fzf&#39;
+Plug &#39;/usr/local/fzf/plugin/fzf.vim&#39;</code></pre>
+</li>
+</ol>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><p>junegunn.<code>fzf - a command-line fuzzy finder</code>[EB/OL].<a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, 2021/03/03.</p>
+</li>
+<li><p>Ein Verne.<code>每天学习一个命令：fzf 使用笔记</code>[EB/OL].<a href="http://einverne.github.io/post/2019/08/fzf-usage.html">http://einverne.github.io/post/2019/08/fzf-usage.html</a>, 2021/03/03.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>安装</tag>
+        <tag>配置</tag>
+        <tag>fzf</tag>
+      </tags>
+  </entry>
 </search>

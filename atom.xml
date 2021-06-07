@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://faradays-studio.gitee.io/"/>
-  <updated>2021-04-30T11:31:08.962Z</updated>
+  <updated>2021-06-07T15:46:59.026Z</updated>
   <id>https://faradays-studio.gitee.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>fzf 的安装与配置</title>
+    <link href="https://faradays-studio.gitee.io/202106072338/"/>
+    <id>https://faradays-studio.gitee.io/202106072338/</id>
+    <published>2021-06-07T15:38:59.000Z</published>
+    <updated>2021-06-07T15:46:59.026Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h2><ol><li><p>安装 <strong>fzf</strong>  （<a href="https://github.com/junegunn/fzf，输入模糊的关键词来定位文件或文件；**源代码就是安装程序**，因此需要选择好路径）">https://github.com/junegunn/fzf，输入模糊的关键词来定位文件或文件；**源代码就是安装程序**，因此需要选择好路径）</a></p><pre><code class="sh">sucd /usr/localgit clone --depth 1 https://github.com/junegunn/fzf.git./fzf/install</code></pre></li><li><p>关联系统（默认会自动关联，可以添加到个人自定义的<strong>全局设置</strong>文件 <code>vim /etc/profile.d/hhjos6.sh</code> 中）</p><pre><code class="sh"># fzf    if [[ ! &quot;$PATH&quot; == */usr/local/fzf/bin* ]]; then      export PATH=&quot;$&#123;PATH:+$&#123;PATH&#125;:&#125;/usr/local/fzf/bin&quot;    fi    # Auto-completion[[ $- == *i* ]] &amp;&amp; source &quot;/usr/local/fzf/shell/completion.bash&quot; 2&gt; /dev/null    # Key bindingssource &quot;/usr/local/fzf/shell/key-bindings.bash&quot;</code></pre></li></ol><pre><code># fzf 其实底层是调用的 Unix 系统 `find` 命令，也可以使用 fd 或 ag 来代替# export FZF_DEFAULT_COMMAND=&quot;fd --exclude=&#123;.git,.idea,.vscode,.sass-cache,node_modules,build&#125; --type f&quot;export FZF_DEFAULT_COMMAND=&#39;ag --hidden --ignore .git -l -g &quot;&quot;&#39;# 界面展示export FZF_DEFAULT_OPTS=&quot;--height 30% --layout=reverse --preview &#39;(highlight -O ansi &#123;&#125; || cat &#123;&#125;) 2&gt; /dev/null | head -100&#39;&quot;# 触发命令行补全(默认是 **，一般不用修改)# FZF_COMPLETION_TRIGGER```</code></pre><blockquote><p>更多用法见参考文献。</p></blockquote><ol start="3"><li><p>配置安装高亮插件</p><ul><li>yum install highlight</li></ul></li><li><p>配置到 vim</p><pre><code class="sh"># 裸装cp /usr/local/fzf/plugin/fzf.vim /usr/share/vim/vim74/pluginvim /etc/vimrc    set rtp+=/usr/local/fzf/# 基于 vim-plug 插件系统Plug &#39;/usr/local/fzf/bin/fzf&#39;Plug &#39;/usr/local/fzf/plugin/fzf.vim&#39;</code></pre></li></ol><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol><li><p>junegunn.<code>fzf - a command-line fuzzy finder</code>[EB/OL].<a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, 2021/03/03.</p></li><li><p>Ein Verne.<code>每天学习一个命令：fzf 使用笔记</code>[EB/OL].<a href="http://einverne.github.io/post/2019/08/fzf-usage.html">http://einverne.github.io/post/2019/08/fzf-usage.html</a>, 2021/03/03.</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;安装与配置&quot;&gt;&lt;a href=&quot;#安装与配置&quot; class=&quot;headerlink&quot; title=&quot;安装与配置&quot;&gt;&lt;/a&gt;安装与配置&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;安装 &lt;strong&gt;fzf&lt;/strong&gt;  （&lt;a href=&quot;https://github
+      
+    
+    </summary>
+    
+    
+      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
+    
+    
+      <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
+    
+      <category term="安装" scheme="https://faradays-studio.gitee.io/tags/%E5%AE%89%E8%A3%85/"/>
+    
+      <category term="配置" scheme="https://faradays-studio.gitee.io/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+      <category term="fzf" scheme="https://faradays-studio.gitee.io/tags/fzf/"/>
+    
+  </entry>
   
   <entry>
     <title>ag 的安装与配置</title>
@@ -672,39 +705,6 @@
       <category term="变量" scheme="https://faradays-studio.gitee.io/tags/%E5%8F%98%E9%87%8F/"/>
     
       <category term="语法" scheme="https://faradays-studio.gitee.io/tags/%E8%AF%AD%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pacman 包管理器的用法概述</title>
-    <link href="https://faradays-studio.gitee.io/202011221004/"/>
-    <id>https://faradays-studio.gitee.io/202011221004/</id>
-    <published>2020-11-22T02:04:14.000Z</published>
-    <updated>2020-12-29T15:49:42.548Z</updated>
-    
-    <content type="html"><![CDATA[<p>pacman 是 Arch/Manjaro Linux 下的包管理软件。它将一个简单的二进制包格式和易用的构建系统结合了起来。不管软件包是来自官方的 Arch 库还是用户自己创建， pacman 都能方便得管理。</p><h2 id="pacman-基本用法"><a href="#pacman-基本用法" class="headerlink" title="pacman 基本用法"></a><code>pacman</code> 基本用法</h2><h3 id="h-查看帮助"><a href="#h-查看帮助" class="headerlink" title="-h 查看帮助"></a><code>-h</code> 查看帮助</h3><p><strong>pacman <code>&#123;-h --help&#125;</code></strong></p><h3 id="V-查看版本"><a href="#V-查看版本" class="headerlink" title="-V 查看版本"></a><code>-V</code> 查看版本</h3><p><strong>pacman <code>&#123;-V --version&#125;</code></strong></p><h3 id="D-管理数据库选项"><a href="#D-管理数据库选项" class="headerlink" title="-D 管理数据库选项"></a><code>-D</code> 管理数据库选项</h3><p><strong>pacman <code>&#123;-D --database&#125;</code>    <code>&lt;选项&gt;</code>     <code>&lt;软件包&gt;</code></strong></p><table><thead><tr><th align="left">选项</th><th>含义</th><th>备注</th></tr></thead><tbody><tr><td align="left">–asdeps</td><td>标记为非单独指定安装的软件包</td><td></td></tr><tr><td align="left">–asexplicit</td><td>标记为单独指定安装的软件包</td><td></td></tr><tr><td align="left">–config &lt;路径&gt;</td><td>指定另外的配置文件</td><td></td></tr><tr><td align="left">–logfile &lt;路径&gt;</td><td>指定另外的日志文件</td><td></td></tr><tr><td align="left">–noconfirm</td><td>不询问确认</td><td></td></tr><tr><td align="left">–noprogressbar</td><td>下载文件时不显示进度条</td><td></td></tr><tr><td align="left">–noscriptlet</td><td>不执行安装小脚本</td><td></td></tr><tr><td align="left">-v, –verbose</td><td>循环执行</td><td></td></tr><tr><td align="left">–debug</td><td>显示除错信息</td><td></td></tr><tr><td align="left">-r, –root &lt;路径&gt;</td><td>指定另外的安装根目录</td><td></td></tr><tr><td align="left">-b, –dbpath &lt;路径&gt;</td><td>指定另外的数据库位置</td><td></td></tr><tr><td align="left">–cachedir &lt;目录&gt;</td><td>指定另外的软件包缓存位置</td><td></td></tr><tr><td align="left">–arch &lt;架构&gt;</td><td>设定另外的架构</td><td></td></tr></tbody></table><h3 id="Q-查询安装包"><a href="#Q-查询安装包" class="headerlink" title="-Q 查询安装包"></a><code>-Q</code> 查询安装包</h3><p><strong>pacman <code>&#123;-Q --query&#125;</code>    <code>[选项]</code>    <code>[软件包]</code></strong></p><table><thead><tr><th>选项</th><th>含义</th><th>备注</th></tr></thead><tbody><tr><td>-c, –changelog</td><td>查看某软件包的更新日志</td><td></td></tr><tr><td>-d, –deps</td><td>列出所有作为依赖关系安装的软件包 [过滤器]</td><td></td></tr><tr><td>-e, –explicit</td><td>列出所有单独指定安装的软件包 [过滤器]</td><td></td></tr><tr><td>-g, –groups</td><td>查看某软件包组所属的所有软件包</td><td></td></tr><tr><td>-i, –info</td><td>查看软件包信息</td><td><code>-ii</code>查看备份文件</td></tr><tr><td>-k, –check</td><td>检查该软件包拥有的文件是否存在</td><td></td></tr><tr><td>-l, –list</td><td>列出被查询软件包的内容</td><td></td></tr><tr><td>-m, –foreign</td><td>列出没有在同步数据库时找到的已安装软件包 [过滤器]</td><td></td></tr><tr><td>-o, –owns &lt;文件&gt;</td><td>查询哪个软件包拥有 &lt;文件&gt;</td><td></td></tr><tr><td>-p, –file &lt;软件包&gt;</td><td>从某个软件包而不是数据库查询</td><td></td></tr><tr><td>-s, –search<regex></td><td>搜寻符合指定字符串的已安装本地的软件包</td><td></td></tr><tr><td>-t, –unrequired</td><td>列出所有不被其他软件包要求的软件包 [过滤器]</td><td></td></tr><tr><td>-u, –upgrades</td><td>列出所有可升级的软件包 [过滤器]</td><td></td></tr><tr><td>-q, –quiet</td><td>在查询或搜索时显示较少的信息</td><td></td></tr><tr><td>–config &lt;路径&gt;</td><td>指定另外的配置文件</td><td></td></tr><tr><td>–logfile &lt;路径&gt;</td><td>指定另外的日志文件</td><td></td></tr><tr><td>–noconfirm</td><td>不询问确认</td><td></td></tr><tr><td>–noprogressbar</td><td>下载文件时不显示进度条</td><td></td></tr><tr><td>–noscriptlet</td><td>不执行安装小脚本</td><td></td></tr><tr><td>-v, –verbose</td><td>循环执行</td><td></td></tr><tr><td>–debug</td><td>显示除错信息</td><td></td></tr><tr><td>-r, –root &lt;路径&gt;</td><td>指定另外的安装根目录</td><td></td></tr><tr><td>-b, –dbpath &lt;路径&gt;</td><td>指定另外的数据库位置</td><td></td></tr><tr><td>–cachedir &lt;目录&gt;</td><td>指定另外的软件包缓存位置</td><td></td></tr><tr><td>–arch &lt;架构&gt;</td><td>设定另外的架构</td><td></td></tr></tbody></table><h3 id="R-删除安装包"><a href="#R-删除安装包" class="headerlink" title="-R 删除安装包"></a><code>-R</code> 删除安装包</h3><p><strong>pacman <code>&#123;-R --remove&#125;</code>   <code>[选项]</code>     <code>&lt;软件包&gt;</code></strong></p><table><thead><tr><th><strong>选项</strong></th><th><strong>定义</strong></th><th><strong>备注</strong></th></tr></thead><tbody><tr><td>-c, –cascade</td><td>删除软件包及所有的依赖于此的软件包</td><td></td></tr><tr><td>-d, –nodeps</td><td>略过依赖关系检查</td><td></td></tr><tr><td>-k, –dbonly</td><td>只删除数据库记录，不删除文件</td><td></td></tr><tr><td>-n, –nosave</td><td>同时删除配置文件</td><td></td></tr><tr><td>-s, –recursive</td><td>同时删除(不会破坏其他软件包的) 依赖关系</td><td><code>-ss</code>·也包括单独指定安装的依赖关系</td></tr><tr><td>-u, –unneeded</td><td>同时删除不需要的(且不会破坏其他软件包的) 依赖关系</td><td></td></tr><tr><td>–print</td><td>仅打印目标而不执行操作</td><td></td></tr><tr><td>–print-format</td><td>&lt;字符串&gt;指定如何打印目标</td><td></td></tr><tr><td>–config  &lt;路径&gt;</td><td>指定另外的配置文件</td><td></td></tr><tr><td>–logfile  &lt;路径&gt;</td><td>指定另外的日志文件</td><td></td></tr><tr><td>–noconfirm</td><td>不询问确认</td><td></td></tr><tr><td>–noprogressbar</td><td>下载文件时不显示进度条</td><td></td></tr><tr><td>–noscriptlet</td><td>不执行安装小脚本</td><td></td></tr><tr><td>-v, –verbose</td><td>循环执行</td><td></td></tr><tr><td>–debug</td><td>显示除错信息</td><td></td></tr><tr><td>-r, –root  &lt;路径&gt;</td><td>指定另外的安装根目录</td><td></td></tr><tr><td>-b, –dbpath  &lt;路径&gt;</td><td>指定另外的数据库位置</td><td></td></tr><tr><td>–cachedir  &lt;目录&gt;</td><td>指定另外的软件包缓存位置</td><td></td></tr><tr><td>–arch &lt;架构&gt;</td><td>设定另外的架构</td><td></td></tr></tbody></table><h3 id="S-安装安装包"><a href="#S-安装安装包" class="headerlink" title="-S 安装安装包"></a><code>-S</code> 安装安装包</h3><p><strong>pacman <code>&#123;-S --sync&#125;</code>     <code>[选项]</code>     <code>[软件包]</code></strong></p><table><thead><tr><th>选项</th><th>含义</th><th>备注</th></tr></thead><tbody><tr><td>–asdeps</td><td>作为非单独指定安装的软件包安装</td><td></td></tr><tr><td>–asexplicit</td><td>作为单独指定安装的软件包安装</td><td></td></tr><tr><td>-c, –clean</td><td>从缓存目录中删除旧软件包</td><td><code>-cc</code>清除所有</td></tr><tr><td>-d, –nodeps</td><td>略过依赖关系检查</td><td></td></tr><tr><td>-f,  –force</td><td>强制安装，覆盖存在冲突的文件</td><td></td></tr><tr><td>-g, –groups</td><td>查看某软件包组所属的所有软件包</td><td></td></tr><tr><td>-i, –info</td><td>查看软件包信息</td><td></td></tr><tr><td>-l, –list &lt;软件库&gt;</td><td>查看在该软件库中的软件包清单</td><td></td></tr><tr><td>-s, –search &lt;regex表达式&gt;</td><td>按照指定字符串查询远端软件库</td><td></td></tr><tr><td>-u, –sysupgrade</td><td>升级所有已安装的软件包</td><td><code>-uu</code>可启用降级</td></tr><tr><td>-w, –downloadonly</td><td>下载但不安装/升级软件包</td><td></td></tr><tr><td>-y, –refresh</td><td>从服务器下载新的软件包数据库</td><td></td></tr><tr><td>–needed</td><td>不重新安装已经为最新的软件包</td><td></td></tr><tr><td>–ignore &lt;软件包&gt;</td><td>升级时忽略某个软件包 (可多次使用)</td><td></td></tr><tr><td>–ignoregroup</td><td>&lt;软件包组&gt;升级时忽略某个软件包组 (可多次使用)</td><td></td></tr><tr><td>–print</td><td>仅打印目标而不执行操作</td><td></td></tr><tr><td>–print-format</td><td>&lt;字符串&gt;指定如何打印目标</td><td></td></tr><tr><td>-q, –quiet</td><td>在查询或搜索时显示较少的信息</td><td></td></tr><tr><td>–config &lt;路径&gt;</td><td>指定另外的配置文件</td><td></td></tr><tr><td>–logfile &lt;路径&gt;</td><td>指定另外的日志文件</td><td></td></tr><tr><td>–noconfirm</td><td>不询问确认</td><td></td></tr><tr><td>–noprogressbar</td><td>下载文件时不显示进度条</td><td></td></tr><tr><td>–noscriptlet</td><td>不执行安装小脚本</td><td></td></tr><tr><td>-v, –verbose</td><td>循环执行</td><td></td></tr><tr><td>–debug</td><td>显示除错信息</td><td></td></tr><tr><td>-r, –root &lt;路径&gt;</td><td>指定另外的安装根目录</td><td></td></tr><tr><td>-b, –dbpath &lt;路径&gt;</td><td>指定另外的数据库位置</td><td></td></tr><tr><td>–cachedir &lt;目录&gt;</td><td>指定另外的软件包缓存位置</td><td></td></tr><tr><td>–arch &lt;架构&gt;</td><td>设定另外的架构</td><td></td></tr></tbody></table><h3 id="U-更新安装包"><a href="#U-更新安装包" class="headerlink" title="-U 更新安装包"></a><code>-U</code> 更新安装包</h3><p><strong>pacman <code>&#123;-U --upgrade&#125;</code>     <code>[选项]</code>     <code>&lt;文件&gt;</code></strong></p><table><thead><tr><th>选项</th><th>含义</th><th>备注</th></tr></thead><tbody><tr><td>–asdeps</td><td>作为非单独指定安装的软件包安装</td><td></td></tr><tr><td>–asexplicit</td><td>作为单独指定安装的软件包安装</td><td></td></tr><tr><td>-d, –nodeps</td><td>略过依赖关系检查</td><td></td></tr><tr><td>-f, –force</td><td>强制安装，覆盖存在冲突的文件</td><td></td></tr><tr><td>-k, –dbonly</td><td>添加数据库记录，不安装或保持现存文件</td><td></td></tr><tr><td>–print</td><td>仅打印目标而不执行操作</td><td></td></tr><tr><td>–print-format &lt;字符串&gt;</td><td>指定如何打印目标</td><td></td></tr><tr><td>–config &lt;路径&gt;</td><td>指定另外的配置文件</td><td></td></tr><tr><td>–logfile &lt;路径&gt;</td><td>指定另外的日志文件</td><td></td></tr><tr><td>–noconfirm</td><td>不询问确认</td><td></td></tr><tr><td>–noprogressbar</td><td>下载文件时不显示进度条</td><td></td></tr><tr><td>–noscriptlet</td><td>不执行安装小脚本</td><td></td></tr><tr><td>-v, –verbose</td><td>循环执行</td><td></td></tr><tr><td>–debug</td><td>显示除错信息</td><td></td></tr><tr><td>-r, –root &lt;路径&gt;</td><td>指定另外的安装根目录</td><td></td></tr><tr><td>-b, –dbpath &lt;路径&gt;</td><td>指定另外的数据库位置</td><td></td></tr><tr><td>–cachedir &lt;目录&gt;</td><td>指定另外的软件包缓存位置</td><td></td></tr><tr><td>–arch &lt;架构&gt;</td><td>设定另外的架构</td><td></td></tr></tbody></table><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol><li>乌托邦2号.<code>pacman用法</code>[EB/OL].<a href="https://blog.csdn.net/taiyang1987912/article/details/41253533">https://blog.csdn.net/taiyang1987912/article/details/41253533</a>, 2020/11/22.</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;pacman 是 Arch/Manjaro Linux 下的包管理软件。它将一个简单的二进制包格式和易用的构建系统结合了起来。不管软件包是来自官方的 Arch 库还是用户自己创建， pacman 都能方便得管理。&lt;/p&gt;
-&lt;h2 id=&quot;pacman-基本用法&quot;&gt;&lt;a hr
-      
-    
-    </summary>
-    
-    
-      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
-    
-    
-      <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
-    
-      <category term="Arch" scheme="https://faradays-studio.gitee.io/tags/Arch/"/>
-    
-      <category term="Manjaro" scheme="https://faradays-studio.gitee.io/tags/Manjaro/"/>
-    
-      <category term="pacman" scheme="https://faradays-studio.gitee.io/tags/pacman/"/>
     
   </entry>
   
