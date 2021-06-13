@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   
-  <title>CentOS6 升级安装 MySQL 5.7 | Blog of Faradays&#39; Studio</title>
+  <title>Tag: aria2 | Blog of Faradays&#39; Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
 
   
@@ -18,38 +18,8 @@
 
   
   
-    
-    
-        
-            
-        
-    
-        
-            
-        
-    
-        
-            
-        
-    
-        
-            
-        
-    
-        
-            
-        
-    
-        
-            
-        
-    
-        
-            
-        
-    
-    <meta name="keywords" content="国内源,CentOS,MySQL,安装,配置,权限,Faradays' Studio">
-  
+    <meta name="keywords" content="Faradays' Studio, Blog, 编程, 思考, 文学作品, 实践, 总结" />
+ 
 
 
   
@@ -57,39 +27,18 @@
        
 
 
-    
-    
-    <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
-    <link rel="stylesheet" href="/css/github.min.css">
-    
-
-
-    
-    <!-- import 'gitalk/dist/gitalk.css' -->
-    <!-- import Gitalk from 'gitalk' -->
-
-
-
 
   
 
-  <meta name="description" content="由于 CentOS6 自带的 MySQL 5.1 性能不行，使用过程中遇到了很多问题，（误）最关键的是，都不支持 utf8mb4，后台去检查数据老是遇到乱码，烦死了！mysql 5.5.3+ 才支持 utf8mb4，（逃…）因此我决定安装 MySQL 5.7 。 设置国内源最近几年里，我给好几个系统安装过 MySQL，可是国外官网的速度实在是太瘆人了；后来才知道这软件居然也有国内源，用了之后心情都">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CentOS6 升级安装 MySQL 5.7">
-<meta property="og:url" content="https://faradays-studio.gitee.io/202103031918/index.html">
+  <meta name="description" content="自信人生二百里，会当击水三千里！">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog of Faradays&#39; Studio">
+<meta property="og:url" content="https://faradays-studio.gitee.io/tags/aria2/index.html">
 <meta property="og:site_name" content="Blog of Faradays&#39; Studio">
-<meta property="og:description" content="由于 CentOS6 自带的 MySQL 5.1 性能不行，使用过程中遇到了很多问题，（误）最关键的是，都不支持 utf8mb4，后台去检查数据老是遇到乱码，烦死了！mysql 5.5.3+ 才支持 utf8mb4，（逃…）因此我决定安装 MySQL 5.7 。 设置国内源最近几年里，我给好几个系统安装过 MySQL，可是国外官网的速度实在是太瘆人了；后来才知道这软件居然也有国内源，用了之后心情都">
+<meta property="og:description" content="自信人生二百里，会当击水三千里！">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-03T11:18:21.000Z">
-<meta property="article:modified_time" content="2021-03-07T13:31:09.409Z">
 <meta property="article:author" content="David">
-<meta property="article:tag" content="Linux">
-<meta property="article:tag" content="国内源">
-<meta property="article:tag" content="CentOS">
-<meta property="article:tag" content="MySQL">
-<meta property="article:tag" content="安装">
-<meta property="article:tag" content="配置">
-<meta property="article:tag" content="权限">
+<meta property="article:tag" content="编程, 思考, 文学作品, 实践, 总结">
 <meta name="twitter:card" content="summary">
   
   
@@ -224,590 +173,80 @@
       
 
 
-      <div class="outer">
+      <div class="outer-index">
         <section id="main"  class="body-wrap"  >
-
-    <article id="post-CentOS6编译安装MySQL5-7" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <div id="article-inner-1" class="article-inner">
-
-    
-    <p class="banner" id="banner_x">
-
-    
-      <header class="article-header">
-        
   
+  <div style="font-size:37px; text-align:center;padding-top:67px;">存档</div>
 
+  <div style="padding-top:33px;color:#999;">栏目</div>
+  <div class="tags2x" style="margin:13px 3px 53px 3px;">
+      
+      <a href="/categories/%E5%9D%90%E4%BA%95%E8%A7%82%E5%A4%A9/" style="font-size: 26.33px; color: #774e00">坐井观天</a> <a href="/categories/%E6%88%91%E5%92%8Chexo%E6%9C%89%E4%B8%AA%E7%BA%A6%E4%BC%9A/" style="font-size: 13px; color: #320">我和hexo有个约会</a> <a href="/categories/%E6%98%9F%E6%98%9F%E5%BF%83%E4%BA%8B/" style="font-size: 26.33px; color: #774e00">星星心事</a> <a href="/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/" style="font-size: 39.67px; color: #bb7900">电脑爱好者</a> <a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" style="font-size: 53px; color: #ffa500">编程笔记</a>
+  </div>
+
+  
+  
     
     
-        <h1 class="post-title" id="typed2" itemprop="name"></h1>
+      
+
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2021" class="archive-year">2021</a>
+        </div>
+        <div class="archives">
     
 
-    
-    <div class="post-title-bar">
-      <ul>
+
+    <article class="archive-article archive-type-index">
+      <div class="archive-article-inner">
+        <header class="archive-article-header">
+          <a href="/202106132011/" class="archive-article-date">
+  <time datetime="2021-06-13T12:11:05.000Z" itemprop="datePublished">06-13</time>
+</a>
           
-              <li>
-                  <i class="fa fa-code-fork"></i>
-                  
-                  
-                      <a href="/categories/编程笔记/">
-                      编程笔记
-                      </a>
-                  
-              </li>
-          
-
-        <li>
-          <i class="fa fa-eye"></i>
-          <span id="busuanzi_value_page_pv"></span>
-        </li>
-        <li>
-          <i class="fa fa-calendar-plus-o"></i>  2021-03-03
-        </li>
-
-        
-        <li  class="faradays-author">
-            <i class="fa fa-user-o"></i>
-            <span>
-            
-            
-                
-                
-                    <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
-
-                    
-
-                    
-
-                    
-                
-
-            
-            </span>
-        </li>
-
-
-        
-        
-        <li>
-                <i class="fa fa-copyright"></i>
-                55%
-        </li>
-        
-
-        
-        <li><i class="fa fa-file-word-o"></i>
-            <span class="post-count">1.4k words</span>
-        </li>
-        <li><i class="fa fa-caret-square-o-right"></i>
-            <span class="post-count">6 min</span>
-        </li>
-      </ul>
-
-
-    </div>
-
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/202106132011/"  >
+      aria2 的安装与配置
+      </a>
+    </h1>
   
 
 
-      </header>
-    
-
-    
-    <div id="article-entry-1" class="article-entry post-content" itemprop="articleBody">
-            
-            <p>由于 CentOS6 自带的 MySQL 5.1 性能不行，使用过程中遇到了很多问题，<del>（误）最关键的是，都不支持 utf8mb4，后台去检查数据老是遇到乱码，烦死了！mysql 5.5.3+ 才支持 utf8mb4，（逃…）</del>因此我决定安装 MySQL 5.7 。</p>
-<h2 id="设置国内源"><a href="#设置国内源" class="headerlink" title="设置国内源"></a>设置国内源</h2><p>最近几年里，我给好几个系统安装过 MySQL，可是国外官网的速度实在是太瘆人了；后来才知道这软件居然也有国内源，用了之后心情都好很多了。</p>
-<p><code>gedit /etc/yum.repos.d/mysql-community.repo</code>，填入以下内容：</p>
-<pre><code class="ini">[mysql-connectors-community]
-name=MySQL Connectors Community
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/mysql/yum/mysql-connectors-community-el6-$basearch/
-enabled=1
-gpgcheck=1
-gpgkey=https://repo.mysql.com/RPM-GPG-KEY-mysql
-
-[mysql-tools-community]
-name=MySQL Tools Community
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/mysql/yum/mysql-tools-community-el6-$basearch/
-enabled=1
-gpgcheck=1
-gpgkey=https://repo.mysql.com/RPM-GPG-KEY-mysql
-
-[mysql-5.6-community]
-name=MySQL 5.6 Community Server
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/mysql/yum/mysql-5.6-community-el6-$basearch/
-enabled=0
-gpgcheck=1
-gpgkey=https://repo.mysql.com/RPM-GPG-KEY-mysql
-
-[mysql-5.7-community]
-name=MySQL 5.7 Community Server
-#baseurl=https://mirrors.tuna.tsinghua.edu.cn/mysql/yum/mysql-5.7-community-el6-$basearch/
-#baseurl=https://mirrors4.tuna.tsinghua.edu.cn/mysql/yum/mysql-5.7-community-el6-x86_64/
-baseurl=https://mirrors.ustc.edu.cn/mysql-repo/yum/mysql-5.7-community/el/6/x86_64/
-enabled=1
-gpgcheck=1
-gpgkey=https://repo.mysql.com/RPM-GPG-KEY-mysql
-
-[mysql-8.0-community]
-name=MySQL 8.0 Community Server
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/mysql/yum/mysql-8.0-community-el6-$basearch/
-enabled=0
-gpgcheck=1
-gpgkey=https://repo.mysql.com/RPM-GPG-KEY-mysql</code></pre>
-<h2 id="安装程序"><a href="#安装程序" class="headerlink" title="安装程序"></a>安装程序</h2><p>使用 yum 进行安装 MySQL</p>
-<pre><code class="sh">yum makecache
-yum install mysql-community-libs-compat*
-yum install mysql-community-server</code></pre>
-<p> 一般情况下，MySQL包括以下各个包：</p>
-<table>
-<thead>
-<tr>
-<th align="left">名字</th>
-<th align="left">摘要说明</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">mysql-community-client</td>
-<td align="left">MySQL客户端应用程序和工具</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">mysql-community-common</td>
-<td align="left">服务器和客户端库的通用文件</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">mysql-community-devel</td>
-<td align="left">MySQL数据库客户端应用程序的开发头文件和库</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">mysql-community-embedded-compat</td>
-<td align="left">MySQL服务器作为嵌入式库，与使用库版本18的应用程序兼容</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">mysql-community-libs</td>
-<td align="left">MySQL数据库客户端应用程序的共享库</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">mysql-community-libs-compat</td>
-<td align="left">以前的MySQL安装的共享兼容性库</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">mysql-community-server</td>
-<td align="left">数据库服务器和相关工具</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">mysql-community-server-debug</td>
-<td align="left">调试服务器和插件二进制文件</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">mysql-community-test</td>
-<td align="left">MySQL服务器的测试套件</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">mysql-community</td>
-<td align="left">RPM的源代码类似于mysql-community-8.0.20-1.el7.src.rpm，具体取决于所选的OS</td>
-<td></td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>  安装还会在系统上创建一个名为的用户 mysql和一个名为的组 mysql。</p>
-</blockquote>
-<h2 id="MySQL-的初始化配置"><a href="#MySQL-的初始化配置" class="headerlink" title="MySQL 的初始化配置"></a>MySQL 的初始化配置</h2><h3 id="初始化配置"><a href="#初始化配置" class="headerlink" title="初始化配置"></a>初始化配置</h3><p><code>gedit /etc/my.cnf</code> 设定 MySQL 的编码参数以及默认端口</p>
-<pre><code class="ini">[mysqld]
-port    = 6033
-character-set-server=utf8mb4
-collation_server=utf8mb4_general_ci
-default-time-zone = &#39;+8:00&#39;
-explicit_defaults_for_timestamp=true
-
-[client]
-port    = 6033
-default-character-set=utf8mb4</code></pre>
-<h3 id="修改服务"><a href="#修改服务" class="headerlink" title="修改服务"></a>修改服务</h3><p>设定 MySQL 开机启动</p>
-<pre><code class="sh">su
-chkconfig --add mysqld
-chkconfig mysqld on
-
-# 启动 MySQL 服务
-service mysqld start</code></pre>
-<h3 id="账户和密码管理"><a href="#账户和密码管理" class="headerlink" title="账户和密码管理"></a>账户和密码管理</h3><ol>
-<li>查看 MySQL 默认密码</li>
-</ol>
-<pre><code class="sh">grep &quot;temporary password&quot; /var/log/mysqld.log</code></pre>
-<ol start="2">
-<li>设定 root 密码，并添加普通用户 david</li>
-</ol>
-<pre><code class="sh">mysql -uroot -p
-    # 本地
-    ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;fs@DB135&#39;;
-        # SET PASSWORD FOR &#39;root&#39;@&#39;localhost&#39; = PASSWORD(&#39;fs@DB135&#39;);   
-    # 远程
-    ALTER USER &#39;root&#39;@&#39;%&#39; IDENTIFIED BY &#39;fs@ABCD.135&#39;;
-
-    # 普通用户 david
-    CREATE USER &#39;david&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;dav#D2468&#39;;
-    CREATE USER &#39;david&#39;@&#39;%&#39; IDENTIFIED BY &#39;dav#D-124857&#39;;
-
-    # 查看用户
-    select user,host,password from mysql.user;
-
-    exit</code></pre>
-<blockquote>
-<p>如果由于默认的密码强度校验导致本地使用的简单密码无法通过，可以在 MySQL 中使用 <code>set global validate_password_policy=0;</code> 临时关闭，不过，应当谨慎使用哦!</p>
-</blockquote>
-<ol start="3">
-<li>如果在使用过程中，需要修改账户的本地、远方访问权限，示例如下：</li>
-</ol>
-<pre><code class="sh"># 局域网访问：主库
-grant replication slave on *.* to &#39;david&#39;@&#39;192.168.88.%&#39; identified by &#39;dav#D2468&#39; with grant option;
-# 局域网访问：从库（在对端主机配置）
-grant all privileges on *.* to &#39;david&#39;@&#39;192.168.88.%&#39; identified by &#39;dav#D2468&#39; with grant option;
-
-# 远程访问（db1、db2为系统中的数据库名）
-GRANT ALL PRIVILEGES ON db1.* TO &#39;david&#39;@&#39;%&#39; IDENTIFIED BY &#39;dav.D2468-fs1&#39; WITH GRANT OPTION;
-GRANT ALL PRIVILEGES ON db2.* TO &#39;david&#39;@&#39;%&#39; IDENTIFIED BY &#39;dav#D-124857&#39; WITH GRANT OPTION;
-
-# 本地访问（临时性修改密码策略，从而在保留原有授权的基础下，增加密码较为简单的访问）
-set global validate_password_policy=0;
-GRANT ALL ON db1.* TO &#39;david&#39;@&#39;localhost&#39;   IDENTIFIED BY &#39;david.1357&#39; WITH GRANT OPTION;
-GRANT ALL ON db2.* TO &#39;david&#39;@&#39;127.0.0.%&#39;   IDENTIFIED BY &#39;david.2468&#39; WITH GRANT OPTION;
-
-# 执行生效
-flush privileges;</code></pre>
-<ol start="4">
-<li>如果需要清除权限，示例如下：</li>
-</ol>
-<pre><code class="sh">mysql -u root -p
-    select user,host, authentication_string from mysql.user;
-
-    # 清除  delete 权限
-    REVOKE delete ON *.* FROM &#39;david&#39;@&#39;localhost&#39;;
-    revoke delete on *.* from &#39;david&#39;@&#39;%&#39;;
-
-    # 清除 all 权限
-    revoke all on *.* from &#39;david&#39;@&#39;localhost&#39;;
-    REVOKE ALL PRIVILEGES ON *.* FROM &#39;david&#39;@&#39;%&#39;;
-
-    # 执行生效
-    FLUSH PRIVILEGES;</code></pre>
-<ol start="5">
-<li>配套修改防火墙确保远程主机的访问，如下：</li>
-</ol>
-<pre><code class="sh">gedit /etc/sysconfig/iptables
-    -A INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT
-    #-A INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT
-    -A INPUT -m state --state NEW -m tcp -p tcp --dport 6033 -j ACCEPT
-    -A INPUT -j REJECT --reject-with icmp-host-prohibited
-service iptables restart</code></pre>
-<h3 id="安装故障排查"><a href="#安装故障排查" class="headerlink" title="安装故障排查"></a>安装故障排查</h3><p>查看错误日志是最直接有效的，如果不指定，文件名则为主机名（此处为 hhjos6 ），如：</p>
-<pre><code class="sh">tail -f /var/lib/mysql/hhjos6.err</code></pre>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li><p>TUNA.<code>Mysql Community Edition 镜像使用帮助</code>[EB/OL].<a target="_blank" rel="noopener" href="https://mirrors.cnnic.cn/help/mysql/">https://mirrors.cnnic.cn/help/mysql/</a>, 2021/03/05.</p>
-</li>
-<li><p>Oracle Corporation and/or its affiliates.<code>MySQL Product Archives</code>[EB/OL].<a target="_blank" rel="noopener" href="https://downloads.mysql.com/archives/community/">https://downloads.mysql.com/archives/community/</a>, 2021/03/05.</p>
-</li>
-</ol>
-
-            <div class="post-copyright">
-
-    
-    <br /><br /><br />
-    <div id="copyright-content" class="content">
-        
-        <p>最后更新： 2021/03/07 21:31:09</p>
-        <p>
+        </header>
+          
+            <div class="archive-post-footer">
                 
-                
-                    
-                        
-                            作者：
-                        
-                    <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
-                
-
-                
-
-                
-
-                
-        </p>
-
-        
-        
-
-
-        
-        <p>主用链接：
-            
-                <a class="post-url" href="https://faradays-studio.gitee.io/202103031918/" title="CentOS6 升级安装 MySQL 5.7">
-                https://faradays-studio.gitee.io/202103031918/
-                </a>
-            
-        </p>
-
-        
-        <p>备用链接： <a class="post-url" target="_blank" rel="noopener" href="https://faradays-studio.github.io/202103031918/" title="CentOS6 升级安装 MySQL 5.7">
-            https://faradays-studio.github.io/202103031918/</a>
-        </p>
-        
-
-        
-        
-            <p>
-            许可协议： <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"  title="创作共用许可协议：署名-非商业性-相同方式共享" target="_blank"  rel="external nofollow">CC BY-NC-SA 4.0</a>.
-            </p>
-        
-
-        
-        <footer></footer>
-    </div>
-</div>
-
-    </div>
-
-    <footer class="article-footer">
-        
-        
-            
-<div class="page-reward"  style="display: inline-block;">
-    <a id="rewardBtn" href="javascript:;">赏</a>
-</div>
-
-<div id="reward" class="post-modal reward-lay">
-    <a class="close" href="javascript:;" id="reward-close">×</a>
-    <span class="reward-title">大方打赏，关爱永继~</span>
-    <div class="reward-content">
-        <div class="reward-code">
-            
-            <table style="float:center; margin:auto;" cellspacing="3">
-                <tr>
-                <td><img src="/images/%E5%BE%AE%E4%BF%A1-%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="微信"></td>
-                <td><img src="/images/%E6%94%AF%E4%BB%98%E5%AE%9D-%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="支付宝"></td>
-                </tr>
-            </table>
-        </div>
-        <div class="reward-select">
-        </div>
-    </div>
-</div>
-
-
-            
-            
-
-<div class="page-contact">
-    
-        <a title="QQ联系博主" href="http://wpa.qq.com/msgrd?v=3&uin=189392385&site=qq&menu=yes" target="_blank">
-            <i class="fa fa-qq"></i>
-        </a>
-    
-
-    
-        <a title="邮件联系博主" href="mailto:yvany@qq.com" target="_blank">
-            <i class="fa fa-envelope"></i>
-        </a>
-    
-</div>
-
-        
-
-        
-        
-<div class="post-share">
-<!-- <div class="post-share" style="display: inline-block;"> -->
-    <a href="javascript:;" id="share-sub" class="post-share-fab">
-        <i class="fa fa-share-alt"></i>
-    </a>
-    <div class="post-share-list" id="share-list">
-        <ul class="share-icons">
-          <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.gitee.io/202103031918/&title=《CentOS6 升级安装 MySQL 5.7》 — Blog of Faradays' Studio&pic=https://faradays-studio.gitee.ioimages/faradays-A01.png" data-title="微博">
-              <i class="fa fa-weibo"></i>
-            </a>
-          </li>
-          <li>
-            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
-              <i class="fa fa-weixin"></i>
-            </a>
-          </li>
-          <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://faradays-studio.gitee.io/202103031918/&title=《CentOS6 升级安装 MySQL 5.7》 — Blog of Faradays' Studio&source=自信人生二百里，会当击水三千里！" data-title="QQ">
-              <i class="fa fa-qq"></i>
-            </a>
-          </li>
-          <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://faradays-studio.gitee.io/202103031918/" data-title="Facebook">
-              <i class="fa fa-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《CentOS6 升级安装 MySQL 5.7》 — Blog of Faradays' Studio&url=https://faradays-studio.gitee.io/202103031918/&via=https://faradays-studio.gitee.io" data-title="Twitter">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://faradays-studio.gitee.io/202103031918/" data-title="Google+">
-              <i class="fa fa-google-plus"></i>
-            </a>
-          </li>
-        </ul>
-     </div>
-</div>
-<div class="post-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;" id="wxShare-close">×</a>
-    <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://faradays-studio.gitee.io/202103031918/" alt="微信分享二维码">
-</div>
-
-
-<div class="mask"></div>
-
-        
-        <ul class="article-footer-menu" >
-            
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
     <a href="/tags/Linux/" class="color1">Linux</a>
       
-    <a href="/tags/国内源/" class="color4">国内源</a>
-      
-    <a href="/tags/CentOS/" class="color2">CentOS</a>
-      
-    <a href="/tags/MySQL/" class="color1">MySQL</a>
-      
     <a href="/tags/安装/" class="color3">安装</a>
       
     <a href="/tags/配置/" class="color3">配置</a>
       
-    <a href="/tags/权限/" class="color3">权限</a>
+    <a href="/tags/aria2/" class="color1">aria2</a>
       
   </li>
 
-        </ul>
-    </footer>
-  </div>
-</article>
+            </div>
+          
+      </div>
+    </article>
 
-    
-    <aside class="post-toc-pos post-toc-top" id="post-toc">
-        <!-- <nav class="post-toc-wrap"> -->
-        <nav class="tocbot">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%9B%BD%E5%86%85%E6%BA%90"><span class="post-toc-text">设置国内源</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F"><span class="post-toc-text">安装程序</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#MySQL-%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E9%85%8D%E7%BD%AE"><span class="post-toc-text">MySQL 的初始化配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E9%85%8D%E7%BD%AE"><span class="post-toc-text">初始化配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BF%AE%E6%94%B9%E6%9C%8D%E5%8A%A1"><span class="post-toc-text">修改服务</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%B4%A6%E6%88%B7%E5%92%8C%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86"><span class="post-toc-text">账户和密码管理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5"><span class="post-toc-text">安装故障排查</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="post-toc-text">参考文献</span></a></li></ol>
-        </nav>
-    </aside>
-    
-    
-<nav id="article-nav">
-  
-    <a href="/202103060055/" id="article-nav-newer" class="article-nav-link-wrap">
 
-      <span class="article-nav-title">
-        
-        <!-- <i class="fa fa-hand-o-left" aria-hidden="true"></i>  -->
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
-        
-          文章导航
-        
-      </span>
-    </a>
   
   
-    <a href="/202102122028/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">Linux系统的多条件查询与匹配</span>
-      <!-- <i class="fa fa-hand-o-right" aria-hidden="true"></i>  -->
-      <i class="fa fa-arrow-right" aria-hidden="true"></i>
-    </a>
+    </div></section>
   
-</nav>
-
-
-
-    
-        
-
-
-    
-    
-        <link rel="stylesheet" href="/css/gitalk.css">
-        <script src="/js/gitalk.min.js"></script>
-    
-
-    <div id="gitalk-faradays">
-
-    </div>
-
-
-
-    
-    <script>
-
-    if (isSite1 == 2){
-        // github 站
-        
-        const gitalk = new Gitalk({
-            clientID: '90b449ff273a263117ec',
-            clientSecret: '0a3ccea67a4d3f03cbff012eeac1a8547e367aad',
-            repo: 'faradays-studio.github.io',      
-            owner: 'faradays-studio',
-            admin: ['faradays-studio'],
-            id: location.pathname, 
-            labels: ['gitalk', 'post-comment', '博客评论'],
-            perPage: 3,
-            distractionFreeMode: false  
-            });
-        gitalk.render('gitalk-faradays');
-    } else {
-        // gitee 站
-         
-        const gitalk = new Gitalk({
-            clientID: 'c2b078c0b4799f519b96',
-            clientSecret: 'fab5fe7470b3d790db0e90e4ac58d5b5aa3bda11',
-            repo: 'faradays-studio.github.io',      
-            owner: 'faradays-studio',
-            admin: ['faradays-studio'],
-            id: location.pathname, 
-            labels: ['gitalk', 'post-comment', '博客评论'],
-            perPage: 3,
-            distractionFreeMode: false  
-            });
-        gitalk.render('gitalk-faradays');
-    }
-
-    </script>
-    
-    
 
 
 
 
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script> -->
-
-<script src="/js/typed.js"></script>
-
-<script>
-    var typed2 = new Typed("#typed2", {
-    strings: ['CentOS6 升级安装 MySQL 5.7'],
-    startDelay: 168,
-    typeSpeed: 100,
-    loop: false,
-    backSpeed: 0,
-    showCursor: false
-    });
-</script>
 </section>
         
 
@@ -1260,48 +699,26 @@ if ( dv1 != null ) {
 
 
 
+
     
     <script>
-      
       tocbot.init({
         tocSelector: '.tocbot',
-        contentSelector: '.article-inner',
-        headingSelector: 'h2, h3, h4, h5, h6',
-        hasInnerContainers: true,
-
-        
-        collapseDepth: 3,
-
-        scrollSmooth: true,
-        
+        contentSelector: '.timeline_x',
+        headingSelector: 'h1, h2',
+        collapseDepth: 2,
+        linkClass: "toc-link",
+        // 无法解决高亮显示不对的问题时取消注释下一行
+        //activeLinkClass: "is-active-link2",
         scrollSmoothOffset: -44,
-        
         headingsOffset: 47,
-
         scrollContainer: 'main',
-        
+        scrollSmooth: true,
         positionFixedSelector: '.tocbot',
         positionFixedClass: 'is-position-fixed',
-
-        
-        //skipRendering: true,
-        //disableTocScrollSync: false,
-
         fixedSidebarOffset: 'auto'
       });
     </script>
-
-
-
-
-    
-    
-<script src="/js/highlight.min.js"></script>
-
-    <script>
-    hljs.initHighlightingOnLoad();
-    </script>
-
 
 
 

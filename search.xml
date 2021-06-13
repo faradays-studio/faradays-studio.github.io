@@ -3909,4 +3909,46 @@ Plug &#39;/usr/local/fzf/plugin/fzf.vim&#39;</code></pre>
         <tag>fzf</tag>
       </tags>
   </entry>
+  <entry>
+    <title>aria2 的安装与配置</title>
+    <url>/202106132011/</url>
+    <content><![CDATA[<ol>
+<li>下载（安装 <a href="https://github.com/aria2/aria2">aria2</a> 程序包（下载器）：aria2 is a lightweight multi-protocol &amp; multi-source, cross platform download utility operated in command-line. It supports HTTP/HTTPS, FTP, BitTorrent and Metalink ）</li>
+</ol>
+<pre><code>cd /usr/local/src
+git clone https://gitee.com/mirrors/aria2.git</code></pre><ol start="2">
+<li>安装 gettext 依赖包（不成功，暂时不开展）</li>
+</ol>
+<pre><code class="sh">su
+cd /home/common
+wget https://mirrors.aliyun.com/gnu/gettext/gettext-0.18.3.2.tar.gz
+tar -zxvf gettext-0.18.3.2.tar.gz
+cd gettext-0.18.3.2
+./configure
+make -j4
+    # could not find libjava.so
+    # Could not find Java SE Runtime Environment.
+make install
+
+ln /usr/local/bin/xgettext /bin/xgettext
+ln /usr/local/bin/msguniq /bin/msguniq
+ln /usr/local/bin/msgmerge /bin/msgmerge</code></pre>
+<ol start="3">
+<li>编译安装</li>
+</ol>
+<pre><code class="sh">autoreconf -i
+./configure
+#./configure ARIA2_STATIC=yes
+make</code></pre>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>安装</tag>
+        <tag>配置</tag>
+        <tag>aria2</tag>
+      </tags>
+  </entry>
 </search>
