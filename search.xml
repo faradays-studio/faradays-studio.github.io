@@ -3951,4 +3951,45 @@ make</code></pre>
         <tag>aria2</tag>
       </tags>
   </entry>
+  <entry>
+    <title>tmux 的编译安装</title>
+    <url>/202106281924/</url>
+    <content><![CDATA[<ol>
+<li><p>正常情况下，直接使用 <code>yum install tmux</code> 即可完成安装。</p>
+</li>
+<li><p>安装支持环境</p>
+<pre><code class="shell">yum -y install libtermcap-devel ncurses-devel libevent-devel readline-devel
+
+# tmux depends on libevent 2.x(系统安装的版本为 1.4.13)
+git clone https://gitee.com/mirrors/libevent.git
+cd libevent
+./configure
+make
+make verify   # (optional)
+make install</code></pre>
+</li>
+<li><p>下载源码</p>
+<pre><code class="shell">cd /home/common
+git clone https://gitee.com/mirrors/tmux.git
+#git clone https://github.com/tmux/tmux.git</code></pre>
+</li>
+<li><p>编译安装</p>
+<pre><code class="sh">cd tmux
+sh autogen.sh
+./configure
+make
+make install</code></pre>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>安装</tag>
+        <tag>编译</tag>
+        <tag>tmux</tag>
+      </tags>
+  </entry>
 </search>
