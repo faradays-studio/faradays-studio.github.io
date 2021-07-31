@@ -3992,4 +3992,59 @@ make install</code></pre>
         <tag>tmux</tag>
       </tags>
   </entry>
+  <entry>
+    <title>google-authenticator 双因子验证</title>
+    <url>/202107312039/</url>
+    <content><![CDATA[<blockquote>
+<p>日常工作中，经常有人问系统开启双因子验证没有；奈何人穷志短，从网上看到 google-authenticator 支持免费的双因子验证，只要电脑端安装和配置 google-authenticator，就可以通过手机端安装的 Google 身份验证器提供相应的验证码来校验登录访问行为。</p>
+</blockquote>
+<h3 id="程序安装"><a href="#程序安装" class="headerlink" title="程序安装"></a>程序安装</h3><pre><code class="sh">  yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+  yum list google-auth*
+  yum -y install google-authenticator
+  vim /etc/pam.d/sshd
+      # auth        required    pam_sepermit.so
+      auth required pam_google_authenticator.so
+  vim /etc/ssh/sshd_config
+      ChallengeResponseAuthentication yes
+      # ChallengeResponseAuthentication no
+      UsePAM yes
+
+      AuthenticationMethods publickey,password publickey,keyboard-interactive</code></pre>
+<h3 id="账户验证码功能的配置"><a href="#账户验证码功能的配置" class="headerlink" title="账户验证码功能的配置"></a>账户验证码功能的配置</h3><ol>
+<li><p>生成 root 账户验证码</p>
+<pre><code class="sh">[root@hhjos6 herc]# google-authenticator</code></pre>
+<blockquote>
+<p>  <a href="https://www.google.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth://totp/root@hhjos6%3Fsecret%3D">https://www.google.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth://totp/root@hhjos6%3Fsecret%3D</a>…<br>  Your new secret key is:<br>  此处省略若干字符<br>  Do you want me to update your “~/.google_authenticator” file (y/n) <strong>y</strong></p>
+<p>  Do you want to disallow multiple uses of the same authentication<br>  token? This restricts you to one login about every 30s, but it increases<br>  your chances to notice or even prevent man-in-the-middle attacks (y/n) <strong>y</strong></p>
+<p>  By default, tokens are good for 30 seconds and in order to compensate for<br>  possible time-skew between the client and the server, we allow an extra<br>  token before and after the current time. If you experience problems with poor<br>  time synchronization, you can increase the window from its default<br>  size of 1:30min to about 4min. Do you want to do so (y/n) <strong>y</strong></p>
+<p>  If the computer that you are logging into isn’t hardened against brute-force<br>  login attempts, you can enable rate-limiting for the authentication module.<br>  By default, this limits attackers to no more than 3 login attempts every 30s.<br>  Do you want to enable rate-limiting (y/n) <strong>y</strong><br>  [root@hhjos6 herc]# </p>
+</blockquote>
+</li>
+<li><p>生成 herc 账户验证码</p>
+<blockquote>
+<p>  hhjos6:/home/herc&gt; <strong>google-authenticator</strong><br>  <a href="https://www.google.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth://totp/herc@hhjos6%3Fsecret%">https://www.google.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth://totp/herc@hhjos6%3Fsecret%</a>…<br>  Your new secret key is:<br>  此处省略若干字符<br>  ​       Do you want me to update your “/home/username/.google_authenticator” file (y/n) <strong>y</strong><br>  ​       (是否重新生成登录配置文件？)</p>
+<p>  ​       Do you want to disallow multiple uses of the same authentication<br>  ​       token? This restricts you to one login about every 30s, but it increases<br>  ​       your chances to notice or even prevent man-in-the-middle attacks (y/n) <strong>y</strong><br>  ​       (是否拒绝多次重复使用相同的令牌？这将限制你每30s仅能登录一次，但会提醒/阻止中间人攻击。)<br>  ​<br>  ​       By default, tokens are good for 30 seconds and in order to compensate for<br>  ​       possible time-skew between the client and the server, we allow an extra<br>  ​       token before and after the current time. If you experience problems with poor<br>  ​       time synchronization, you can increase the window from its default<br>  ​       size of 1:30min to about 4min. Do you want to do so (y/n) <strong>n</strong><br>  ​       (是否将窗口时间由1分30秒增加到约4分钟？这将缓解时间同步问题。)<br>  ​<br>  ​       If the computer that you are logging into is not hardened against brute-force<br>  ​       login attempts, you can enable rate-limiting for the authentication module.<br>  ​       By default, this limits attackers to no more than 3 login attempts every 30s.<br>  ​       Do you want to enable rate-limiting (y/n) <strong>y</strong><br>  ​       (是否启用此模块的登录频率限制，登录者将会被限制为最多在30秒内登录3次。)<br>  ​    hhjos6:/home/herc&gt; </p>
+</blockquote>
+</li>
+<li><p>注意事项</p>
+<ul>
+<li>配置问题排查： <code>tail -40f /var/log/secure</code></li>
+<li>输入android 客户端的验证码（注意控制时间）后，再输入账户密码即可登录。</li>
+</ul>
+</li>
+</ol>
+<h3 id="重启进程生效"><a href="#重启进程生效" class="headerlink" title="重启进程生效"></a>重启进程生效</h3><pre><code class="sh">service sshd restart</code></pre>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>安装</tag>
+        <tag>配置</tag>
+        <tag>authenticator</tag>
+        <tag>google</tag>
+        <tag>双因子</tag>
+        <tag>网络安全</tag>
+      </tags>
+  </entry>
 </search>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://faradays-studio.gitee.io/"/>
-  <updated>2021-06-28T11:26:22.086Z</updated>
+  <updated>2021-07-31T14:51:50.330Z</updated>
   <id>https://faradays-studio.gitee.io/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>google-authenticator 双因子验证</title>
+    <link href="https://faradays-studio.gitee.io/202107312039/"/>
+    <id>https://faradays-studio.gitee.io/202107312039/</id>
+    <published>2021-07-31T12:39:26.000Z</published>
+    <updated>2021-07-31T14:51:50.330Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>日常工作中，经常有人问系统开启双因子验证没有；奈何人穷志短，从网上看到 google-authenticator 支持免费的双因子验证，只要电脑端安装和配置 google-authenticator，就可以通过手机端安装的 Google 身份验证器提供相应的验证码来校验登录访问行为。</p></blockquote><h3 id="程序安装"><a href="#程序安装" class="headerlink" title="程序安装"></a>程序安装</h3><pre><code class="sh">  yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm  yum list google-auth*  yum -y install google-authenticator  vim /etc/pam.d/sshd      # auth        required    pam_sepermit.so      auth required pam_google_authenticator.so  vim /etc/ssh/sshd_config      ChallengeResponseAuthentication yes      # ChallengeResponseAuthentication no      UsePAM yes      AuthenticationMethods publickey,password publickey,keyboard-interactive</code></pre><h3 id="账户验证码功能的配置"><a href="#账户验证码功能的配置" class="headerlink" title="账户验证码功能的配置"></a>账户验证码功能的配置</h3><ol><li><p>生成 root 账户验证码</p><pre><code class="sh">[root@hhjos6 herc]# google-authenticator</code></pre><blockquote><p>  <a href="https://www.google.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth://totp/root@hhjos6%3Fsecret%3D">https://www.google.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth://totp/root@hhjos6%3Fsecret%3D</a>…<br>  Your new secret key is:<br>  此处省略若干字符<br>  Do you want me to update your “~/.google_authenticator” file (y/n) <strong>y</strong></p><p>  Do you want to disallow multiple uses of the same authentication<br>  token? This restricts you to one login about every 30s, but it increases<br>  your chances to notice or even prevent man-in-the-middle attacks (y/n) <strong>y</strong></p><p>  By default, tokens are good for 30 seconds and in order to compensate for<br>  possible time-skew between the client and the server, we allow an extra<br>  token before and after the current time. If you experience problems with poor<br>  time synchronization, you can increase the window from its default<br>  size of 1:30min to about 4min. Do you want to do so (y/n) <strong>y</strong></p><p>  If the computer that you are logging into isn’t hardened against brute-force<br>  login attempts, you can enable rate-limiting for the authentication module.<br>  By default, this limits attackers to no more than 3 login attempts every 30s.<br>  Do you want to enable rate-limiting (y/n) <strong>y</strong><br>  [root@hhjos6 herc]# </p></blockquote></li><li><p>生成 herc 账户验证码</p><blockquote><p>  hhjos6:/home/herc&gt; <strong>google-authenticator</strong><br>  <a href="https://www.google.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth://totp/herc@hhjos6%3Fsecret%">https://www.google.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth://totp/herc@hhjos6%3Fsecret%</a>…<br>  Your new secret key is:<br>  此处省略若干字符<br>  ​       Do you want me to update your “/home/username/.google_authenticator” file (y/n) <strong>y</strong><br>  ​       (是否重新生成登录配置文件？)</p><p>  ​       Do you want to disallow multiple uses of the same authentication<br>  ​       token? This restricts you to one login about every 30s, but it increases<br>  ​       your chances to notice or even prevent man-in-the-middle attacks (y/n) <strong>y</strong><br>  ​       (是否拒绝多次重复使用相同的令牌？这将限制你每30s仅能登录一次，但会提醒/阻止中间人攻击。)<br>  ​<br>  ​       By default, tokens are good for 30 seconds and in order to compensate for<br>  ​       possible time-skew between the client and the server, we allow an extra<br>  ​       token before and after the current time. If you experience problems with poor<br>  ​       time synchronization, you can increase the window from its default<br>  ​       size of 1:30min to about 4min. Do you want to do so (y/n) <strong>n</strong><br>  ​       (是否将窗口时间由1分30秒增加到约4分钟？这将缓解时间同步问题。)<br>  ​<br>  ​       If the computer that you are logging into is not hardened against brute-force<br>  ​       login attempts, you can enable rate-limiting for the authentication module.<br>  ​       By default, this limits attackers to no more than 3 login attempts every 30s.<br>  ​       Do you want to enable rate-limiting (y/n) <strong>y</strong><br>  ​       (是否启用此模块的登录频率限制，登录者将会被限制为最多在30秒内登录3次。)<br>  ​    hhjos6:/home/herc&gt; </p></blockquote></li><li><p>注意事项</p><ul><li>配置问题排查： <code>tail -40f /var/log/secure</code></li><li>输入android 客户端的验证码（注意控制时间）后，再输入账户密码即可登录。</li></ul></li></ol><h3 id="重启进程生效"><a href="#重启进程生效" class="headerlink" title="重启进程生效"></a>重启进程生效</h3><pre><code class="sh">service sshd restart</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;日常工作中，经常有人问系统开启双因子验证没有；奈何人穷志短，从网上看到 google-authenticator 支持免费的双因子验证，只要电脑端安装和配置 google-authenticator，就可以通过手机端安装的 Google 身份验证器
+      
+    
+    </summary>
+    
+    
+      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
+    
+    
+      <category term="安装" scheme="https://faradays-studio.gitee.io/tags/%E5%AE%89%E8%A3%85/"/>
+    
+      <category term="配置" scheme="https://faradays-studio.gitee.io/tags/%E9%85%8D%E7%BD%AE/"/>
+    
+      <category term="authenticator" scheme="https://faradays-studio.gitee.io/tags/authenticator/"/>
+    
+      <category term="google" scheme="https://faradays-studio.gitee.io/tags/google/"/>
+    
+      <category term="双因子" scheme="https://faradays-studio.gitee.io/tags/%E5%8F%8C%E5%9B%A0%E5%AD%90/"/>
+    
+      <category term="网络安全" scheme="https://faradays-studio.gitee.io/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>tmux 的编译安装</title>
@@ -640,44 +677,6 @@
       
       
         &lt;h1 id=&quot;循环的中断&quot;&gt;&lt;a href=&quot;#循环的中断&quot; class=&quot;headerlink&quot; title=&quot;循环的中断&quot;&gt;&lt;/a&gt;循环的中断&lt;/h1&gt;&lt;p&gt;Bash 提供了两个内部命令&lt;code&gt;break&lt;/code&gt;和&lt;code&gt;continue&lt;/code&gt;，用来在
-      
-    
-    </summary>
-    
-    
-      <category term="编程笔记" scheme="https://faradays-studio.gitee.io/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="shell" scheme="https://faradays-studio.gitee.io/tags/shell/"/>
-    
-      <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
-    
-      <category term="csh" scheme="https://faradays-studio.gitee.io/tags/csh/"/>
-    
-      <category term="bash" scheme="https://faradays-studio.gitee.io/tags/bash/"/>
-    
-      <category term="语法" scheme="https://faradays-studio.gitee.io/tags/%E8%AF%AD%E6%B3%95/"/>
-    
-      <category term="判断" scheme="https://faradays-studio.gitee.io/tags/%E5%88%A4%E6%96%AD/"/>
-    
-      <category term="表达式" scheme="https://faradays-studio.gitee.io/tags/%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>csh 、 bash 的基础语法对照：判断表达式</title>
-    <link href="https://faradays-studio.gitee.io/202012261636/"/>
-    <id>https://faradays-studio.gitee.io/202012261636/</id>
-    <published>2020-12-26T08:36:00.000Z</published>
-    <updated>2021-02-14T11:31:22.153Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="判断表达式"><a href="#判断表达式" class="headerlink" title="判断表达式"></a>判断表达式</h2><h3 id="使用-test-判断"><a href="#使用-test-判断" class="headerlink" title="使用 test 判断"></a>使用 test 判断</h3><h4 id="1-test-基本用法"><a href="#1-test-基本用法" class="headerlink" title="1. test 基本用法"></a>1. test 基本用法</h4><pre><code class="bash"># 写法一 (不支持正则判断)test expression# 写法二(不支持正则判断)[ expression ]# 写法三 (支持正则判断)[[ expression ]]</code></pre><h4 id="2-文件判断"><a href="#2-文件判断" class="headerlink" title="2. 文件判断"></a>2. 文件判断</h4><ul><li><code>[ -a file ]</code>：如果 file 存在，则为<code>true</code>。</li><li><code>[ -b file ]</code>：如果 file 存在并且是一个块（设备）文件，则为<code>true</code>。</li><li><code>[ -c file ]</code>：如果 file 存在并且是一个字符（设备）文件，则为<code>true</code>。</li><li><code>[ -d file ]</code>：如果 file 存在并且是一个目录，则为<code>true</code>。</li><li><code>[ -e file ]</code>：如果 file 存在，则为<code>true</code>。</li><li><code>[ -f file ]</code>：如果 file 存在并且是一个普通文件，则为<code>true</code>。</li><li><code>[ -g file ]</code>：如果 file 存在并且设置了组 ID，则为<code>true</code>。</li><li><code>[ -G file ]</code>：如果 file 存在并且属于有效的组 ID，则为<code>true</code>。</li><li><code>[ -h file ]</code>：如果 file 存在并且是符号链接，则为<code>true</code>。</li><li><code>[ -k file ]</code>：如果 file 存在并且设置了它的“sticky bit”，则为<code>true</code>。</li><li><code>[ -L file ]</code>：如果 file 存在并且是一个符号链接，则为<code>true</code>。</li><li><code>[ -N file ]</code>：如果 file 存在并且自上次读取后已被修改，则为<code>true</code>。</li><li><code>[ -O file ]</code>：如果 file 存在并且属于有效的用户 ID，则为<code>true</code>。</li><li><code>[ -p file ]</code>：如果 file 存在并且是一个命名管道，则为<code>true</code>。</li><li><code>[ -r file ]</code>：如果 file 存在并且可读（当前用户有可读权限），则为<code>true</code>。</li><li><code>[ -s file ]</code>：如果 file 存在且其长度大于零，则为<code>true</code>。</li><li><code>[ -S file ]</code>：如果 file 存在且是一个网络 socket，则为<code>true</code>。</li><li><code>[ -t fd ]</code>：如果 fd 是一个文件描述符，并且重定向到终端，则为<code>true</code>。用于判断是否重定向了标准输入／输出／错误。</li><li><code>[ -u file ]</code>：如果 file 存在并且设置了 setuid 位，则为<code>true</code>。</li><li><code>[ -w file ]</code>：如果 file 存在并且可写（当前用户拥有可写权限），则为<code>true</code>。</li><li><code>[ -x file ]</code>：如果 file 存在并且可执行（有效用户有执行／搜索权限），则为<code>true</code>。</li><li><code>[ file1 -nt file2 ]</code>：如果 FILE1 比 FILE2 的更新时间最近，或者 FILE1 存在而 FILE2 不存在，则为<code>true</code>。</li><li><code>[ file1 -ot file2 ]</code>：如果 FILE1 比 FILE2 的更新时间更旧，或者 FILE2 存在而 FILE1 不存在，则为<code>true</code>。</li><li><code>[ FILE1 -ef FILE2 ]</code>：如果 FILE1 和 FILE2 引用相同的设备和 inode 编号，则为<code>true</code>。</li></ul><h4 id="3-字符串判断（-）"><a href="#3-字符串判断（-）" class="headerlink" title="3. 字符串判断（==）"></a>3. 字符串判断（<code>==</code>）</h4><ul><li><code>[ string ]</code>：如果<code>string</code>不为空（长度大于0），则判断为真。</li><li><code>[ -n string ]</code>：如果字符串<code>string</code>的长度大于零，则判断为真。</li><li><code>[ -z string ]</code>：如果字符串<code>string</code>的长度为零，则判断为真。</li><li><code>[ string1 = string2 ]</code>：如果<code>string1</code>和<code>string2</code>相同，则判断为真。</li><li><code>[ string1 == string2 ]</code> 等同于<code>[ string1 = string2 ]</code>。</li><li><code>[ string1 != string2 ]</code>：如果<code>string1</code>和<code>string2</code>不相同，则判断为真。</li><li><code>[ string1 &#39;&gt;&#39; string2 ]</code>：如果按照字典顺序<code>string1</code>排列在<code>string2</code>之后，则判断为真。</li><li><code>[ string1 &#39;&lt;&#39; string2 ]</code>：如果按照字典顺序<code>string1</code>排列在<code>string2</code>之前，则判断为真。</li></ul><blockquote><p>注意，<code>test</code>命令内部的<code>&gt;</code>和<code>&lt;</code>，必须用引号引起来（或者是用反斜杠转义）。否则，它们会被 shell 解释为重定向操作符。</p></blockquote><h4 id="4-整数判断（-eq）"><a href="#4-整数判断（-eq）" class="headerlink" title="4. 整数判断（-eq）"></a>4. 整数判断（<code>-eq</code>）</h4><ul><li><code>[ n1 -eq n2 ]</code>：如果<code>n1</code>等于<code>n2</code>，则为<code>true</code>。</li><li><code>[ n1 -ne n2 ]</code>：如果<code>n1</code>不等于<code>n2</code>，则为<code>true</code>。</li><li><code>[ n1 -le n2 ]</code>：如果<code>n1</code>小于或等于<code>n2</code>，则为<code>true</code>。</li><li><code>[ n1 -lt n2 ]</code>：如果<code>n1</code>小于<code>n2</code>，则为<code>true</code>。</li><li><code>[ n1 -ge n2 ]</code>：如果<code>n1</code>大于或等于<code>n2</code>，则为<code>true</code>。</li><li><code>[ n1 -gt n2 ]</code>：如果<code>n1</code>大于<code>n2</code>，则为<code>true</code>。</li></ul><h4 id="5-正则判断（-）"><a href="#5-正则判断（-）" class="headerlink" title="5. 正则判断（=~）"></a>5. 正则判断（<code>=~</code>）</h4><pre><code class="bash">#!/bin/bashINT=-5if [[ &quot;$INT&quot; =~ ^-?[0-9]+$ ]]; then  echo &quot;INT is an integer.&quot;  exit 0else  echo &quot;INT is not an integer.&quot; &gt;&amp;2  exit 1fi</code></pre><h3 id="多条件逻辑运算"><a href="#多条件逻辑运算" class="headerlink" title="多条件逻辑运算"></a>多条件逻辑运算</h3><ul><li><code>AND</code>运算：符号<code>&amp;&amp;</code>，也可使用参数<code>-a</code>。</li><li><code>OR</code>运算：符号<code>||</code>，也可使用参数<code>-o</code>。</li><li><code>NOT</code>运算：符号<code>!</code>。</li></ul><h3 id="通过-进行算术运算判断"><a href="#通过-进行算术运算判断" class="headerlink" title="通过 ((...)) 进行算术运算判断"></a>通过 <code>((...))</code> 进行算术运算判断</h3><pre><code class="bash">if ((3 &gt; 2)); then  echo &quot;true&quot;fi</code></pre><h2 id="if-配套-test-或-进行条件判断"><a href="#if-配套-test-或-进行条件判断" class="headerlink" title="if 配套 test 或 ((...)) 进行条件判断"></a>if 配套 <code>test</code> 或 <code>((...))</code> 进行条件判断</h2><table><thead><tr><th>项目</th><th>bash</th><th>csh</th></tr></thead><tbody><tr><td>if</td><td>if [ -f $a ];then <br/>        echo “hello world!” <br/>fi</td><td>if(expression)then<br/> commands<br/>endif</td></tr><tr><td></td><td></td><td>if {(command)} then<br/> commands<br/>endif</td></tr><tr><td></td><td></td><td>if(expression) then<br/> commands<br/>else if(expression) then<br/> commands<br/>else<br/> commands<br/>endif</td></tr></tbody></table><h2 id="case-的条件判断"><a href="#case-的条件判断" class="headerlink" title="case 的条件判断"></a>case 的条件判断</h2><table><thead><tr><th>项目</th><th>bash</th><th>csh</th></tr></thead><tbody><tr><td>case</td><td>case expression in<br/>  pattern )<br/>    commands ;;<br/>  pattern )<br/>    commands ;;<br/>  …<br/>esac</td><td>switch(“$value”)<br/>case pattern1:<br/> commands<br/> breaksw<br/>case pattern2:<br/> commands<br/> breaksw<br/>default:<br/> commands<br/> breaksw<br/>endsw</td></tr></tbody></table><ul><li><p>bash 的<code>case</code>的匹配模式可以使用各种通配符，下面是一些例子。</p><ul><li><code>a)</code>：匹配<code>a</code>。</li><li><code>a|b)</code>：匹配<code>a</code>或<code>b</code>。</li><li><code>[[:alpha:]])</code>：匹配单个字母。</li><li><code>???)</code>：匹配3个字符的单词。</li><li><code>*.txt)</code>：匹配<code>.txt</code>结尾。</li><li><code>*)</code>：匹配任意输入，通过作为<code>case</code>结构的最后一个模式。</li></ul></li><li><p>Bash 4.0之前，case结构只能匹配一个条件，然后就会退出case结构。Bash 4.0之后，允许匹配多个条件，这时可以用;;&amp;终止每个条件块。</p></li></ul><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol><li><p>脚本之家网.<code>csh的基本语法介绍</code>[EB/OL].<a href="https://www.jb51.net/article/57770.htm">https://www.jb51.net/article/57770.htm</a>, 2020/12/21.</p></li><li><p>iTech.<code>csh 语法实例参考</code>[EB/OL].<a href="https://www.cnblogs.com/itech/archive/2012/08/15/2640811.html">https://www.cnblogs.com/itech/archive/2012/08/15/2640811.html</a>, 2020/12/21.</p></li><li><p>阮一峰.<code>Bash 脚本教程</code>[EB/OL].<a href="https://wangdoc.com/bash">https://wangdoc.com/bash</a>, 2020/12/21.</p><blockquote><p>该教程的部分内容是比较完善的。</p></blockquote></li><li><p>脚本之家.<code>shell中各种括号的作用详解()、(())、[]、[[]]、&#123;&#125;</code>[EB/OL].<a href="https://www.jb51.net/article/123081.htm">https://www.jb51.net/article/123081.htm</a>, 2020/12/24.</p></li></ol><h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><ol><li><p><a href="../202012201125">csh 、 bash 的基础语法对照：变量</a></p></li><li><p><a href="../202012261636">csh 、 bash 的基础语法对照：判断表达式</a></p></li><li><p><a href="../202012261733">csh 、 bash 的基础语法对照：循环表达式</a></p></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;判断表达式&quot;&gt;&lt;a href=&quot;#判断表达式&quot; class=&quot;headerlink&quot; title=&quot;判断表达式&quot;&gt;&lt;/a&gt;判断表达式&lt;/h2&gt;&lt;h3 id=&quot;使用-test-判断&quot;&gt;&lt;a href=&quot;#使用-test-判断&quot; class=&quot;headerlink&quot; 
       
     
     </summary>
