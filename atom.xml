@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://faradays-studio.gitee.io/"/>
-  <updated>2021-07-31T14:51:50.330Z</updated>
+  <updated>2021-08-27T12:51:56.229Z</updated>
   <id>https://faradays-studio.gitee.io/</id>
   
   <author>
@@ -15,6 +15,79 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Solaris 远程访问 IP 限制方法</title>
+    <link href="https://faradays-studio.gitee.io/202108251958/"/>
+    <id>https://faradays-studio.gitee.io/202108251958/</id>
+    <published>2021-08-25T11:58:25.000Z</published>
+    <updated>2021-08-27T12:51:56.229Z</updated>
+    
+    <content type="html"><![CDATA[<p>本来想在网上找一个可以限制远程 IP 访问的脚本，结果一个都不能用；因此，花了几天一边改脚本，一边看 Oracle 的官网手册，最后终于写了，测试过了，真的能用！</p><pre><code class="sh">#!/usr/bin/bash# 执行  bash /etc/block_ssh.sh## TO-DO## 1.0.1        8/19 21:49## 1.0.0   2021/08/01 22:24:48-2021/08/01 22:37:30#       根据 /etc/block_ssh.csh 改编，相应日志文件为#           tail -f /var/adm/messages#           tail -f  /var/log/alarm_`hostname`.log#           tail -f  /usr/tmp/remote.log# 获取 tty 值tmn=`who am i | awk &#39;&#123;print $2;&#125;&#39;`# 获取当前 IP# who am i| awk &#39;&#123;print $2,$6;&#125;&#39;#login_ip=`finger |grep $tmn | awk &#39;&#123;print $6;&#125;&#39;`login_ip=` who -um | awk &#39;&#123;print $8;&#125;&#39; | sed -e &#39;s/(//g; s/)//g&#39; `# bash 去除前缀 $&#123;login_ip#*(&#125; 和后缀 $&#123;login_ip%*)&#125;echo $login_ip# 获取当前 PID 值login_pid=`who -um | awk &#39;&#123;print $7;&#125;&#39;`login_name=`echo $LOGNAME`if [ &quot;$login_ip&quot; = &quot;&quot; -o &quot;$login_ip&quot; = &quot;:0&quot; -o &quot;$login_ip&quot; = &quot;:0.0&quot; ]; then    type_x=&quot;local&quot;else    type_x=&quot;remote&quot;fi# chmod 622 /usr/tmp/remote.logecho -e &quot;`date +%Y-%m-%d\ %H:%M:%S` \t $login_name \t $login_ip&quot; &gt;&gt; /usr/tmp/remote.logecho $type_xtrap 1 2 3 9 15if [ &quot;$type_x&quot; = &quot;local&quot; -o &quot;$login_ip&quot; = &quot;10.0.2.2&quot; ]; then    echo &quot;   Welcome......&quot;    logger -p user.info  &quot;Someone has logined in: $login_ip \!&quot;else    echo &quot;   Warning&quot;    # 需要转义：英文叹号    logger -i -p user.err -t SSH &quot;Remote IP is login: $login_ip \!&quot;    logger -ip user.alert &quot;Unauthorized remote IP is login: $login_ip \!&quot;    #logger -p user.warning  &#39;Unknown IP is login&#39;    # 测试表明，上述报警同时在 系统日志和用户日志中存储    # kill remote ssh link    pkill -9 -t $tmn    #kill -9 $login_pidfi</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;本来想在网上找一个可以限制远程 IP 访问的脚本，结果一个都不能用；因此，花了几天一边改脚本，一边看 Oracle 的官网手册，最后终于写了，测试过了，真的能用！&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;#!/usr/bin/bash
+
+# 执行  bash /
+      
+    
+    </summary>
+    
+    
+      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
+    
+    
+      <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
+    
+      <category term="Solaris" scheme="https://faradays-studio.gitee.io/tags/Solaris/"/>
+    
+      <category term="IP" scheme="https://faradays-studio.gitee.io/tags/IP/"/>
+    
+      <category term="远程" scheme="https://faradays-studio.gitee.io/tags/%E8%BF%9C%E7%A8%8B/"/>
+    
+      <category term="限制" scheme="https://faradays-studio.gitee.io/tags/%E9%99%90%E5%88%B6/"/>
+    
+      <category term="Bash" scheme="https://faradays-studio.gitee.io/tags/Bash/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>中国专利信息的查询方法</title>
+    <link href="https://faradays-studio.gitee.io/202108082250/"/>
+    <id>https://faradays-studio.gitee.io/202108082250/</id>
+    <published>2021-08-08T14:50:18.000Z</published>
+    <updated>2021-08-27T13:10:59.022Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>最近，由于工作的需要，委托代理公司开展专利申报工作；可是又很关心专利申报流程执行得怎么样了，因此就学习一下如何查询专利。</p></blockquote><ol><li><p>首先，在 <a href="http://cpquery.cnipa.gov.cn/">http://cpquery.cnipa.gov.cn/</a> 网站上注册一个账户（注册公众查询账户就行；我考虑到以后工作的需要，申请了电子申请账户，它也具有公众查询功能）</p><p> <img src="/static/img/CHIPA-%E4%B8%93%E5%88%A9%E5%AE%A1%E6%9F%A5%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2%E7%B3%BB%E7%BB%9F-%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2.png" alt="专利查询系统的登录界面"></p></li><li><p>登陆系统后，输入相关信息就可以查询专利喽！（当然，系统很奇葩，专利号中的点号需要删除；如 <code>202110465388.2</code> 的查询值为 <code>2021104653882</code> ）</p><p> <img src="/static/img/CHIPA-%E4%B8%93%E5%88%A9%E6%A3%80%E7%B4%A2-1-%E6%9F%A5%E8%AF%A2%E6%9D%A1%E4%BB%B6%E8%BE%93%E5%85%A5.png" alt="专利查询系统的查询内容输入"></p><p> <img src="/static/img/CHIPA-%E4%B8%93%E5%88%A9%E6%A3%80%E7%B4%A2-2-%E7%94%B3%E8%AF%B7%E5%86%85%E5%AE%B9%E8%AF%A6%E6%83%85.png" alt="专利查询系统的专利详情示意"></p></li></ol><blockquote><ul><li>上述系统也可以申请专利，不过很多单位都是委托第三方去处理，也许流程太复杂了吧。</li></ul></blockquote><blockquote><ul><li>从专利检索的角度来说，使用 <a href="http://www.soopat.com/Home/Index">http://www.soopat.com/Home/Index</a> 来检索更为便利一些，毕竟，很多时候，你不知道你要找到的是什么专利！</li></ul></blockquote><blockquote><p>  <img src="/static/img/soopat-%E4%B8%93%E5%88%A9%E6%A3%80%E7%B4%A2%EF%BC%88%E7%A4%BA%E4%BE%8B%EF%BC%89.png" alt="soopat专利查询系统"></p></blockquote><blockquote><ul><li>悄悄地告诉你，如果需要下载专利，可以从这里下载 <a href="https://www.drugfuture.com/cnpat/cn_patent.asp">https://www.drugfuture.com/cnpat/cn_patent.asp</a> 或者 <a href="https://www.patent9.com/">https://www.patent9.com/</a> 。</li></ul></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;最近，由于工作的需要，委托代理公司开展专利申报工作；可是又很关心专利申报流程执行得怎么样了，因此就学习一下如何查询专利。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;首先，在 &lt;a href=&quot;http://cpquery.cnip
+      
+    
+    </summary>
+    
+    
+      <category term="办事指南" scheme="https://faradays-studio.gitee.io/categories/%E5%8A%9E%E4%BA%8B%E6%8C%87%E5%8D%97/"/>
+    
+    
+      <category term="专利" scheme="https://faradays-studio.gitee.io/tags/%E4%B8%93%E5%88%A9/"/>
+    
+      <category term="查询" scheme="https://faradays-studio.gitee.io/tags/%E6%9F%A5%E8%AF%A2/"/>
+    
+      <category term="方法" scheme="https://faradays-studio.gitee.io/tags/%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>google-authenticator 双因子验证</title>
@@ -623,81 +696,6 @@
       <category term="压缩" scheme="https://faradays-studio.gitee.io/tags/%E5%8E%8B%E7%BC%A9/"/>
     
       <category term="zerofree" scheme="https://faradays-studio.gitee.io/tags/zerofree/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>什么才是事业成功的关键？</title>
-    <link href="https://faradays-studio.gitee.io/202101031051/"/>
-    <id>https://faradays-studio.gitee.io/202101031051/</id>
-    <published>2021-01-03T02:51:25.000Z</published>
-    <updated>2021-02-17T05:30:39.718Z</updated>
-    
-    <content type="html"><![CDATA[<p>2021 年元旦，休假在家。偶然间，会想起自己2020年里工作上的点点滴滴：这一年，我投入了不少精力，取得了一定的业绩，有点骄傲、有点遗憾、也有点不满。</p><p>2020年里，我除了有一两个月因为一些特别重大的事情低沉了好几个星期，从年初到年底，我实际上在工作上投入的时间并不比别人少。没错，我就是那种人——明明没人安排我，回到家里还在研究工作中的事情，去探索如何能够将工作做得效果更好、操作更智能化……</p><p>2020年，也看着不少的同事，慢慢地领先到了前方，有些人成为了处级领导，有些人从副科转为了正科，甚至也有个别年轻人超到前方去成了副科级的领导了。我回想自己的这些年，工作付出不少，荣誉很多，业绩丰富，能力也不错，可是目前并未看到向上升迁的机会；心里不免是着急的，会盲目去比较，也会突然地爆出几句怨言来！</p><p>工作中，看过太多的事情没做成——哪怕是高层领导牵头的事，没做成的也是一抓一大把。因此，我对自己“每一次都将别人没做成的事情做成了，将别人不愿意做的事情默默做出来了”这一点颇为骄傲，甚至有些得意忘形了！年终评选的时候，我常常列入上级荣誉的候选人，然而很多年里都止步于候选；不知道今年结果如何，反正公司推荐到集团的名单里，我也是排名靠后的——我都已经尽力地吹嘘自己了，可是也不见得每个领导都喜欢我！</p><blockquote><p>有意思的是，2020年的评选我魔幻般的拿了大满贯，所在部门的、区域的、集团的先进我全拿了！感谢领导！</p></blockquote><p>看着别人的宣传材料，都是将普通而平凡的事情做成了。我和别人的区别，无非是我的业绩更多是与计算机相关的，不容易可视化评估；而别人的业绩往往都是加了什么设备、修好了什么东西、帮助了多少穷人，即使是外行人也能评价出一二三来。所以，我还是挺无奈的：酒再香，也怕巷子太深！</p><p>噢，不再说这些事情了，我还是向前看看吧，因为这些社会环境可不会自动适应我：工作上的岗位，不是我自己能定的；而我也不愿意去做一条咸鱼，哪怕可能会被一些人毫无底线地利用。因此，我，需要调整自我，不断去提升自我，与时俱进，开拓创新。</p><p><strong>2020年，我是做了不少工作的。我自以为：我是一些工作成功开展的关键，因为我有决心、有能力、有行动去突破困难，让我的同事没有后顾之忧！可是，我也不是成功唯一的关键，我明白，我再厉害，如果厂家不配合、使用者不接纳，那么我做的成果，也只是一堆空洞的二进制符号的集合；厂家、用户都是靠我的上上级以及上上级的上上级去驱动的——没有领导的支持，就没有相应的硬件资源，就没有实施的基础，更没有应用、推广、完善的可能性！因此，关键领导的支持，也毫无疑问是成功的最关键。</strong></p><p>《荀子·劝学》中提出：<code>君子生非异也，善假于物也</code>。我认为，一个事情不是我一个人做成的，并不丢人。我分析，事业成功的关键，在于<strong>资源完备</strong>、<strong>方法完整</strong>、<strong>执行到位</strong> 都落实到位了。一个人是做不成大事业的，需要集体的支持；集团未必就能长期稳健，需要个人的奋斗创新；两者相辅相成、缺一不可。</p><p>春城经冬，乍暖还寒。2020年已经过去，我感激领导的支持和信任，感谢同事和陌生人的帮助和支援，感恩妻子儿女默默的支撑，也点赞自己，栉风沐雨，永不放弃！</p><p>2021年，你好！文字前的读者，也祝你未来一切越来越好！</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;2021 年元旦，休假在家。偶然间，会想起自己2020年里工作上的点点滴滴：这一年，我投入了不少精力，取得了一定的业绩，有点骄傲、有点遗憾、也有点不满。&lt;/p&gt;
-&lt;p&gt;2020年里，我除了有一两个月因为一些特别重大的事情低沉了好几个星期，从年初到年底，我实际上在工作上投入的
-      
-    
-    </summary>
-    
-    
-      <category term="坐井观天" scheme="https://faradays-studio.gitee.io/categories/%E5%9D%90%E4%BA%95%E8%A7%82%E5%A4%A9/"/>
-    
-    
-      <category term="随笔" scheme="https://faradays-studio.gitee.io/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="成功" scheme="https://faradays-studio.gitee.io/tags/%E6%88%90%E5%8A%9F/"/>
-    
-      <category term="关键" scheme="https://faradays-studio.gitee.io/tags/%E5%85%B3%E9%94%AE/"/>
-    
-      <category term="领导" scheme="https://faradays-studio.gitee.io/tags/%E9%A2%86%E5%AF%BC/"/>
-    
-      <category term="奋斗" scheme="https://faradays-studio.gitee.io/tags/%E5%A5%8B%E6%96%97/"/>
-    
-      <category term="总结" scheme="https://faradays-studio.gitee.io/tags/%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>csh 、 bash 的基础语法对照：循环表达式</title>
-    <link href="https://faradays-studio.gitee.io/202012261733/"/>
-    <id>https://faradays-studio.gitee.io/202012261733/</id>
-    <published>2020-12-26T09:33:40.000Z</published>
-    <updated>2020-12-29T15:49:50.395Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="循环的中断"><a href="#循环的中断" class="headerlink" title="循环的中断"></a>循环的中断</h1><p>Bash 提供了两个内部命令<code>break</code>和<code>continue</code>，用来在循环内部跳出循环。<br>    - <code>break</code>命令立即终止循环，程序继续执行循环块之后的语句，即不再执行剩下的循环。<br>    - <code>continue</code>命令立即终止本轮循环，开始执行下一轮循环。</p><table><thead><tr><th>项目</th><th>bash</th><th>csh</th></tr></thead><tbody><tr><td>break</td><td>#!/bin/bash<br/>  for number in 1 2 3 4 5 6 do<br/>   echo “number is $number”<br/>   if [ “$number” = “3” ]; then<br/>    break<br/>   fi<br/> done</td><td></td></tr><tr><td>continue</td><td>#!/bin/bash<br/>  while read -p “What file do you want to test?” filename do<br/>   if [ ! -e “$filename” ]; then<br/>     echo “The file does not exist.”<br/>     continue<br/>   fi<br/>    echo “You entered a valid file..”<br/> done</td><td></td></tr></tbody></table><h2 id="while-循环的用法"><a href="#while-循环的用法" class="headerlink" title="while 循环的用法"></a>while 循环的用法</h2><p><code>while</code>循环有一个判断条件，只要符合条件，就不断循环执行指定的语句。</p><table><thead><tr><th>项目</th><th>bash</th><th>csh</th></tr></thead><tbody><tr><td>while</td><td>while expression; do<br/>   commands<br/> done</td><td>while(expression)<br/>  commands<br/>  continue<br/>  break<br/>end</td></tr><tr><td>示例</td><td>#关键字<code>do</code>可以跟<code>while</code>不在同一行，这时两者之间不需要使用分号分隔。<br/><code>while</code> true <br/>do<br/>   echo ‘Hi, while looping …’; <br/>done</td><td></td></tr><tr><td></td><td>#while循环写成一行，也是可以的<br/>while true; do echo ‘Hi, while looping …’; done</td><td></td></tr></tbody></table><h2 id="until-循环的用法"><a href="#until-循环的用法" class="headerlink" title="until 循环的用法"></a>until 循环的用法</h2><p><code>until</code>循环与<code>while</code>循环恰好相反，只要不符合判断条件（判断条件失败），就不断循环执行指定的语句。一旦符合判断条件，就退出循环。</p><table><thead><tr><th>项目</th><th>bash</th><th>csh</th></tr></thead><tbody><tr><td>while</td><td>until condition; do<br/>   commands<br/> done</td><td></td></tr><tr><td>示例</td><td>#!/bin/bash<br/>  number=0<br/> until [ “$number” -ge 10 ]; do<br/>   echo “Number = $number”<br/>   number=$((number + 1))<br/> done</td><td></td></tr></tbody></table><h2 id="for…in-循环"><a href="#for…in-循环" class="headerlink" title="for…in 循环"></a>for…in 循环</h2><p><code>for...in</code>循环用于遍历列表的每一项。</p><p><code>for</code>循环会依次从<code>list</code>列表中取出一项，作为变量<code>variable</code>，然后在循环体中进行处理。</p><table><thead><tr><th>项目</th><th>bash</th><th>csh</th></tr></thead><tbody><tr><td>for…in</td><td>for variable in list do<br/>   commands<br/> done</td><td></td></tr><tr><td>示例</td><td>#!/bin/bash<br/>  for i in word1 word2 word3; do<br/>   echo $i <br/>done</td><td></td></tr><tr><td>列表由通配符产生</td><td>for i in *.png; do<br/>   ls -l $i<br/> done</td><td></td></tr><tr><td>列表通过子命令产生</td><td>#!/bin/bash<br/>  count=0<br/> for i in $(cat ~/.bash_profile); do<br/>   count=$((count + 1))<br/>   echo “Word $count ($i) contains $(echo -n $i | wc -c) characters”<br/> done</td><td></td></tr></tbody></table><h2 id="for"><a href="#for" class="headerlink" title="for"></a>for</h2><table><thead><tr><th>项目</th><th>bash</th><th>csh</th></tr></thead><tbody><tr><td>for</td><td>for (( expression1; expression2; expression3 )); do<br/>   commands<br/> done</td><td></td></tr><tr><td>示例</td><td>for (( i=0; i&lt;5; i=i+1 )); do<br/>   echo $i<br/> done</td><td></td></tr><tr><td></td><td>#直到用户输入了一个点（<code>.</code>）为止，才会跳出循环<br/>for ((;;)) do<br/>   read var<br/>   if [ “$var” = “.” ]; then<br/>    break<br/>   fi<br/> done</td><td></td></tr></tbody></table><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol><li>阮一峰.<code>Bash 脚本教程</code>[EB/OL].<a href="https://wangdoc.com/bash">https://wangdoc.com/bash</a>, 2020/12/21.<blockquote><p>该教程的部分内容是比较完善的。</p></blockquote></li></ol><h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><ol><li><p><a href="../202012201125">csh 、 bash 的基础语法对照：变量</a></p></li><li><p><a href="../202012261636">csh 、 bash 的基础语法对照：判断表达式</a></p></li><li><p><a href="../202012261733">csh 、 bash 的基础语法对照：循环表达式</a></p></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;循环的中断&quot;&gt;&lt;a href=&quot;#循环的中断&quot; class=&quot;headerlink&quot; title=&quot;循环的中断&quot;&gt;&lt;/a&gt;循环的中断&lt;/h1&gt;&lt;p&gt;Bash 提供了两个内部命令&lt;code&gt;break&lt;/code&gt;和&lt;code&gt;continue&lt;/code&gt;，用来在
-      
-    
-    </summary>
-    
-    
-      <category term="编程笔记" scheme="https://faradays-studio.gitee.io/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="shell" scheme="https://faradays-studio.gitee.io/tags/shell/"/>
-    
-      <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
-    
-      <category term="csh" scheme="https://faradays-studio.gitee.io/tags/csh/"/>
-    
-      <category term="bash" scheme="https://faradays-studio.gitee.io/tags/bash/"/>
-    
-      <category term="语法" scheme="https://faradays-studio.gitee.io/tags/%E8%AF%AD%E6%B3%95/"/>
-    
-      <category term="判断" scheme="https://faradays-studio.gitee.io/tags/%E5%88%A4%E6%96%AD/"/>
-    
-      <category term="表达式" scheme="https://faradays-studio.gitee.io/tags/%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
   </entry>
   

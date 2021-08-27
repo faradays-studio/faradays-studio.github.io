@@ -1953,7 +1953,7 @@ printf 不像 echo 那样会自动换行，必须显式添加换行符 `\n` 。<
 </thead>
 <tbody><tr>
 <td>变量定义</td>
-<td><code>var 变量名称=&quot;变量Value&quot;</code></td>
+<td><code>变量var名称=&quot;变量Value&quot;</code></td>
 <td><code>set var</code></td>
 </tr>
 <tr>
@@ -4045,6 +4045,124 @@ make install</code></pre>
         <tag>google</tag>
         <tag>双因子</tag>
         <tag>网络安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>中国专利信息的查询方法</title>
+    <url>/202108082250/</url>
+    <content><![CDATA[<blockquote>
+<p>最近，由于工作的需要，委托代理公司开展专利申报工作；可是又很关心专利申报流程执行得怎么样了，因此就学习一下如何查询专利。</p>
+</blockquote>
+<ol>
+<li><p>首先，在 <a href="http://cpquery.cnipa.gov.cn/">http://cpquery.cnipa.gov.cn/</a> 网站上注册一个账户（注册公众查询账户就行；我考虑到以后工作的需要，申请了电子申请账户，它也具有公众查询功能）</p>
+<p> <img src="/static/img/CHIPA-%E4%B8%93%E5%88%A9%E5%AE%A1%E6%9F%A5%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2%E7%B3%BB%E7%BB%9F-%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2.png" alt="专利查询系统的登录界面"></p>
+</li>
+<li><p>登陆系统后，输入相关信息就可以查询专利喽！（当然，系统很奇葩，专利号中的点号需要删除；如 <code>202110465388.2</code> 的查询值为 <code>2021104653882</code> ）</p>
+<p> <img src="/static/img/CHIPA-%E4%B8%93%E5%88%A9%E6%A3%80%E7%B4%A2-1-%E6%9F%A5%E8%AF%A2%E6%9D%A1%E4%BB%B6%E8%BE%93%E5%85%A5.png" alt="专利查询系统的查询内容输入"></p>
+<p> <img src="/static/img/CHIPA-%E4%B8%93%E5%88%A9%E6%A3%80%E7%B4%A2-2-%E7%94%B3%E8%AF%B7%E5%86%85%E5%AE%B9%E8%AF%A6%E6%83%85.png" alt="专利查询系统的专利详情示意"></p>
+</li>
+</ol>
+<blockquote>
+<ul>
+<li>上述系统也可以申请专利，不过很多单位都是委托第三方去处理，也许流程太复杂了吧。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>从专利检索的角度来说，使用 <a href="http://www.soopat.com/Home/Index">http://www.soopat.com/Home/Index</a> 来检索更为便利一些，毕竟，很多时候，你不知道你要找到的是什么专利！</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>  <img src="/static/img/soopat-%E4%B8%93%E5%88%A9%E6%A3%80%E7%B4%A2%EF%BC%88%E7%A4%BA%E4%BE%8B%EF%BC%89.png" alt="soopat专利查询系统"></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>悄悄地告诉你，如果需要下载专利，可以从这里下载 <a href="https://www.drugfuture.com/cnpat/cn_patent.asp">https://www.drugfuture.com/cnpat/cn_patent.asp</a> 或者 <a href="https://www.patent9.com/">https://www.patent9.com/</a> 。</li>
+</ul>
+</blockquote>
+]]></content>
+      <categories>
+        <category>办事指南</category>
+      </categories>
+      <tags>
+        <tag>专利</tag>
+        <tag>查询</tag>
+        <tag>方法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Solaris 远程访问 IP 限制方法</title>
+    <url>/202108251958/</url>
+    <content><![CDATA[<p>本来想在网上找一个可以限制远程 IP 访问的脚本，结果一个都不能用；因此，花了几天一边改脚本，一边看 Oracle 的官网手册，最后终于写了，测试过了，真的能用！</p>
+<pre><code class="sh">#!/usr/bin/bash
+
+# 执行  bash /etc/block_ssh.sh
+#
+# TO-DO
+#
+# 1.0.1        8/19 21:49
+#
+# 1.0.0   2021/08/01 22:24:48-2021/08/01 22:37:30
+#       根据 /etc/block_ssh.csh 改编，相应日志文件为
+#           tail -f /var/adm/messages
+#           tail -f  /var/log/alarm_`hostname`.log
+#           tail -f  /usr/tmp/remote.log
+
+
+
+# 获取 tty 值
+tmn=`who am i | awk &#39;&#123;print $2;&#125;&#39;`
+
+# 获取当前 IP
+# who am i| awk &#39;&#123;print $2,$6;&#125;&#39;
+#login_ip=`finger |grep $tmn | awk &#39;&#123;print $6;&#125;&#39;`
+login_ip=` who -um | awk &#39;&#123;print $8;&#125;&#39; | sed -e &#39;s/(//g; s/)//g&#39; `
+# bash 去除前缀 $&#123;login_ip#*(&#125; 和后缀 $&#123;login_ip%*)&#125;
+echo $login_ip
+
+# 获取当前 PID 值
+login_pid=`who -um | awk &#39;&#123;print $7;&#125;&#39;`
+
+login_name=`echo $LOGNAME`
+if [ &quot;$login_ip&quot; = &quot;&quot; -o &quot;$login_ip&quot; = &quot;:0&quot; -o &quot;$login_ip&quot; = &quot;:0.0&quot; ]; then
+    type_x=&quot;local&quot;
+else
+    type_x=&quot;remote&quot;
+fi
+
+# chmod 622 /usr/tmp/remote.log
+echo -e &quot;`date +%Y-%m-%d\ %H:%M:%S` \t $login_name \t $login_ip&quot; &gt;&gt; /usr/tmp/remote.log
+echo $type_x
+
+trap 1 2 3 9 15
+if [ &quot;$type_x&quot; = &quot;local&quot; -o &quot;$login_ip&quot; = &quot;10.0.2.2&quot; ]; then
+    echo &quot;   Welcome......&quot;
+    logger -p user.info  &quot;Someone has logined in: $login_ip \!&quot;
+else
+    echo &quot;   Warning&quot;
+    # 需要转义：英文叹号
+    logger -i -p user.err -t SSH &quot;Remote IP is login: $login_ip \!&quot;
+    logger -ip user.alert &quot;Unauthorized remote IP is login: $login_ip \!&quot;
+    #logger -p user.warning  &#39;Unknown IP is login&#39;
+    # 测试表明，上述报警同时在 系统日志和用户日志中存储
+
+    # kill remote ssh link
+    pkill -9 -t $tmn
+    #kill -9 $login_pid
+
+fi
+</code></pre>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Solaris</tag>
+        <tag>IP</tag>
+        <tag>远程</tag>
+        <tag>限制</tag>
+        <tag>Bash</tag>
       </tags>
   </entry>
 </search>

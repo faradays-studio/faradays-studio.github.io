@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://faradays-studio.gitee.io/202108082250/</loc>
+    <lastmod>2021-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/202012201125/</loc>
+    <lastmod>2021-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/202108251958/</loc>
+    <lastmod>2021-08-27</lastmod>
+  </url>
+  <url>
     <loc>https://faradays-studio.gitee.io/202107312039/</loc>
     <lastmod>2021-07-31</lastmod>
   </url>
@@ -91,10 +103,6 @@
   <url>
     <loc>https://faradays-studio.gitee.io/202012261636/</loc>
     <lastmod>2021-02-14</lastmod>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/202012201125/</loc>
-    <lastmod>2021-02-12</lastmod>
   </url>
   <url>
     <loc>https://faradays-studio.gitee.io/202101301128/</loc>
