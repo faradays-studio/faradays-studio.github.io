@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	
 	<url>
+		<loc>https://faradays-studio.gitee.io202101171157/</loc>
+		<lastmod>2021-08-27</lastmod>
+		
+	</url>
+	
+	<url>
 		<loc>https://faradays-studio.gitee.io202108082250/</loc>
 		<lastmod>2021-08-27</lastmod>
 		
@@ -100,12 +106,6 @@
 	<url>
 		<loc>https://faradays-studio.gitee.io202103031918/</loc>
 		<lastmod>2021-03-07</lastmod>
-		
-	</url>
-	
-	<url>
-		<loc>https://faradays-studio.gitee.io202101171157/</loc>
-		<lastmod>2021-03-05</lastmod>
 		
 	</url>
 	
