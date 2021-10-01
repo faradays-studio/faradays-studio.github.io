@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://faradays-studio.gitee.io/"/>
-  <updated>2021-08-27T12:51:56.229Z</updated>
+  <updated>2021-10-01T02:16:44.502Z</updated>
   <id>https://faradays-studio.gitee.io/</id>
   
   <author>
@@ -17,22 +17,59 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Solaris 远程访问 IP 限制方法</title>
-    <link href="https://faradays-studio.gitee.io/202108251958/"/>
-    <id>https://faradays-studio.gitee.io/202108251958/</id>
-    <published>2021-08-25T11:58:25.000Z</published>
-    <updated>2021-08-27T12:51:56.229Z</updated>
+    <title>一种软件著作权代码合并的批处理脚本</title>
+    <link href="https://faradays-studio.gitee.io/202110011009/"/>
+    <id>https://faradays-studio.gitee.io/202110011009/</id>
+    <published>2021-10-01T02:09:39.000Z</published>
+    <updated>2021-10-01T02:16:44.502Z</updated>
     
-    <content type="html"><![CDATA[<p>本来想在网上找一个可以限制远程 IP 访问的脚本，结果一个都不能用；因此，花了几天一边改脚本，一边看 Oracle 的官网手册，最后终于写了，测试过了，真的能用！</p><pre><code class="sh">#!/usr/bin/bash# 执行  bash /etc/block_ssh.sh## TO-DO## 1.0.1        8/19 21:49## 1.0.0   2021/08/01 22:24:48-2021/08/01 22:37:30#       根据 /etc/block_ssh.csh 改编，相应日志文件为#           tail -f /var/adm/messages#           tail -f  /var/log/alarm_`hostname`.log#           tail -f  /usr/tmp/remote.log# 获取 tty 值tmn=`who am i | awk &#39;&#123;print $2;&#125;&#39;`# 获取当前 IP# who am i| awk &#39;&#123;print $2,$6;&#125;&#39;#login_ip=`finger |grep $tmn | awk &#39;&#123;print $6;&#125;&#39;`login_ip=` who -um | awk &#39;&#123;print $8;&#125;&#39; | sed -e &#39;s/(//g; s/)//g&#39; `# bash 去除前缀 $&#123;login_ip#*(&#125; 和后缀 $&#123;login_ip%*)&#125;echo $login_ip# 获取当前 PID 值login_pid=`who -um | awk &#39;&#123;print $7;&#125;&#39;`login_name=`echo $LOGNAME`if [ &quot;$login_ip&quot; = &quot;&quot; -o &quot;$login_ip&quot; = &quot;:0&quot; -o &quot;$login_ip&quot; = &quot;:0.0&quot; ]; then    type_x=&quot;local&quot;else    type_x=&quot;remote&quot;fi# chmod 622 /usr/tmp/remote.logecho -e &quot;`date +%Y-%m-%d\ %H:%M:%S` \t $login_name \t $login_ip&quot; &gt;&gt; /usr/tmp/remote.logecho $type_xtrap 1 2 3 9 15if [ &quot;$type_x&quot; = &quot;local&quot; -o &quot;$login_ip&quot; = &quot;10.0.2.2&quot; ]; then    echo &quot;   Welcome......&quot;    logger -p user.info  &quot;Someone has logined in: $login_ip \!&quot;else    echo &quot;   Warning&quot;    # 需要转义：英文叹号    logger -i -p user.err -t SSH &quot;Remote IP is login: $login_ip \!&quot;    logger -ip user.alert &quot;Unauthorized remote IP is login: $login_ip \!&quot;    #logger -p user.warning  &#39;Unknown IP is login&#39;    # 测试表明，上述报警同时在 系统日志和用户日志中存储    # kill remote ssh link    pkill -9 -t $tmn    #kill -9 $login_pidfi</code></pre>]]></content>
+    <content type="html"><![CDATA[<p>最近在忙着工作上的事情，很长一段时间没有写过文章了。前几周申请了一项软件著作权，涉及到代码需要合并的事情，要求前1500行 + 后1500行组成鉴定材料。因此我花了一点时间写了一个批处理的脚本，如下：</p><pre><code class="bat">REM 指定需要处理的文件类型set /p file_filter=&quot;输入代码文件扩展名，空格分隔，如 *.aspx *.cs *.js *.css *.master *.config *.asax &quot;IF not defined file_filter set file_filter=*.aspx *.cs hhj.js *.masterREM 指定输出文件SET current_date=%date:~0,4%%date:~5,2%%date:~8,2%_%time:~0,2%%time:~3,2%%time:~6,2%    :: 0 点是出现兼容性问题（时的第一位不会补零）    SET current_date=%date:~0,4%%date:~5,2%%date:~8,2%.%time:~3,2%%time:~6,2%set output_file=_codes-%current_date%-%computername%.txtset file_list=_files-%current_date%-%computername%.txtREM 指定代码目录，并切换过去（使用 /d 参数）set /p src_dir=&quot;输入代码根目录，如 I:\VirtualBox\vb_share\WebSites\Sis-1.0 ：&quot;    :: 设定初始值，不能带双引号    IF &quot;%src_dir%&quot;==&quot;&quot; set src_dir=I:\VirtualBox\vb_share\WebSites\Sis-1.0:: 跨驱动器切换路径cd /d &quot;%src_dir%&quot;REM 先清空文件，然后后将代码目录中的所有相关文件导入:: 首个代码文件set /p first_file=&quot;输入首个代码文件的相对路径，不区分大小写（如 Default.aspx ）： &quot;    :: 设定初始值，不能带双引号    IF &quot;%first_file%&quot;==&quot;&quot; set first_file=Default.aspx:: 添加根目录set first_file=%src_dir%\%first_file%    :: 不需要双引号扩住，否则会原样输出双引号；末尾也不能添加空格，否则也原样输出    echo %first_file% &gt; %file_list%    :: 将首个代码文件内容添加到目标文件中    echo.&gt; %output_file%type %first_file%&gt;&gt; %output_file%:: 合并当前路径中的代码for /F %%i in (&#39;dir /b/s/a:-d %file_filter%&#39;) do (    :: 追加代码文本内容（比较可以使用 equ 或 == 符号，i 参数表示不区分大小写）    IF /i &quot;%%i&quot;==&quot;%first_file%&quot; (        :: 首个代码文件（切记，括号中不允许只有一个语句、且不支持使用语句与注释交差，即只能第一行为注释！）        echo.&gt;&gt; %output_file%        echo.&gt;&gt; %output_file%        echo.&gt;&gt; %file_list%    ) ELSE (        :: 写入文件清单        echo %%i&gt;&gt; %file_list%        :: 其他代码文件        echo.&gt;&gt; %output_file%        type %%i &gt;&gt; %output_file%    ))echo finish！REM 打开目标文件夹，以便直接拷贝合成文本start explorer %src_dir%::pause</code></pre><p>上述代码是按 ASP.NET 来选择代码文件的，在实际应用时 file_filter 的具体值应该根据你的代码文件的扩展名来设定。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;本来想在网上找一个可以限制远程 IP 访问的脚本，结果一个都不能用；因此，花了几天一边改脚本，一边看 Oracle 的官网手册，最后终于写了，测试过了，真的能用！&lt;/p&gt;
+        &lt;p&gt;最近在忙着工作上的事情，很长一段时间没有写过文章了。前几周申请了一项软件著作权，涉及到代码需要合并的事情，要求前1500行 + 后1500行组成鉴定材料。因此我花了一点时间写了一个批处理的脚本，如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;bat&quot;&gt;REM 指定需要处
+      
+    
+    </summary>
+    
+    
+      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
+    
+    
+      <category term="Windows" scheme="https://faradays-studio.gitee.io/tags/Windows/"/>
+    
+      <category term="批处理" scheme="https://faradays-studio.gitee.io/tags/%E6%89%B9%E5%A4%84%E7%90%86/"/>
+    
+      <category term="bat" scheme="https://faradays-studio.gitee.io/tags/bat/"/>
+    
+      <category term="脚本" scheme="https://faradays-studio.gitee.io/tags/%E8%84%9A%E6%9C%AC/"/>
+    
+      <category term="软著" scheme="https://faradays-studio.gitee.io/tags/%E8%BD%AF%E8%91%97/"/>
+    
+      <category term="代码" scheme="https://faradays-studio.gitee.io/tags/%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Solaris 远程访问 IP 限制方法</title>
+    <link href="https://faradays-studio.gitee.io/202108251958/"/>
+    <id>https://faradays-studio.gitee.io/202108251958/</id>
+    <published>2021-08-25T11:58:25.000Z</published>
+    <updated>2021-10-01T02:08:41.502Z</updated>
+    
+    <content type="html"><![CDATA[<p>本来想在网上找一个可以限制远程 IP 访问的脚本，结果一个都不能用；因此，花了几天一边改脚本，一边看 Oracle 的官网手册，最后测试通过了！</p><pre><code class="sh">#!/usr/bin/bash# 执行  bash /etc/block_ssh.sh## TO-DO## 1.0.1        8/19 21:49## 1.0.0   2021/08/01 22:24:48-2021/08/01 22:37:30#       根据 /etc/block_ssh.csh 改编，相应日志文件为#           tail -f /var/adm/messages#           tail -f  /var/log/alarm_`hostname`.log#           tail -f  /usr/tmp/remote.log# 获取 tty 值tmn=`who am i | awk &#39;&#123;print $2;&#125;&#39;`# 获取当前 IP# who am i| awk &#39;&#123;print $2,$6;&#125;&#39;#login_ip=`finger |grep $tmn | awk &#39;&#123;print $6;&#125;&#39;`login_ip=` who -um | awk &#39;&#123;print $8;&#125;&#39; | sed -e &#39;s/(//g; s/)//g&#39; `# bash 去除前缀 $&#123;login_ip#*(&#125; 和后缀 $&#123;login_ip%*)&#125;echo $login_ip# 获取当前 PID 值login_pid=`who -um | awk &#39;&#123;print $7;&#125;&#39;`login_name=`echo $LOGNAME`if [ &quot;$login_ip&quot; = &quot;&quot; -o &quot;$login_ip&quot; = &quot;:0&quot; -o &quot;$login_ip&quot; = &quot;:0.0&quot; ]; then    type_x=&quot;local&quot;else    type_x=&quot;remote&quot;fi# chmod 622 /usr/tmp/remote.logecho -e &quot;`date +%Y-%m-%d\ %H:%M:%S` \t $login_name \t $login_ip&quot; &gt;&gt; /usr/tmp/remote.logecho $type_xtrap 1 2 3 9 15if [ &quot;$type_x&quot; = &quot;local&quot; -o &quot;$login_ip&quot; = &quot;10.0.2.2&quot; ]; then    echo &quot;   Welcome......&quot;    logger -p user.info  &quot;Someone has logined in: $login_ip \!&quot;else    echo &quot;   Warning&quot;    # 需要转义：英文叹号    logger -i -p user.err -t SSH &quot;Remote IP is login: $login_ip \!&quot;    logger -ip user.alert &quot;Unauthorized remote IP is login: $login_ip \!&quot;    #logger -p user.warning  &#39;Unknown IP is login&#39;    # 测试表明，上述报警同时在 系统日志和用户日志中存储    # kill remote ssh link    pkill -9 -t $tmn    #kill -9 $login_pidfi</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;本来想在网上找一个可以限制远程 IP 访问的脚本，结果一个都不能用；因此，花了几天一边改脚本，一边看 Oracle 的官网手册，最后测试通过了！&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;#!/usr/bin/bash
 
-# 执行  bash /
+# 执行  bash /etc/block
       
     
     </summary>
@@ -660,42 +697,6 @@
       <category term="pip" scheme="https://faradays-studio.gitee.io/tags/pip/"/>
     
       <category term="Python" scheme="https://faradays-studio.gitee.io/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VirtualBox 虚拟机磁盘压缩方法（已验证）</title>
-    <link href="https://faradays-studio.gitee.io/202101101604/"/>
-    <id>https://faradays-studio.gitee.io/202101101604/</id>
-    <published>2021-01-10T08:04:54.000Z</published>
-    <updated>2021-02-14T13:24:07.101Z</updated>
-    
-    <content type="html"><![CDATA[<p>VirtualBox 虚拟机的容量会随着使用自动扩容，这本来是个好事；不过在实际使用过程中，由于系统错误日志疯狂写入等原因，也可能会导致系统容量被明显扩充变大。容量变大之后，无论是转换虚拟盘格式，还是导入导出，均不能减小容量。特别是做虚拟机备份导出时，白白浪费了大量的空间。因此，进行虚拟机磁盘容量的压缩，势在必行！</p><p>以下两个系统我都用了很长时间，也都测试过方法的可行性，可供参考。</p><h2 id="虚拟机磁盘格式转换"><a href="#虚拟机磁盘格式转换" class="headerlink" title="虚拟机磁盘格式转换"></a>虚拟机磁盘格式转换</h2><blockquote><p>需要注意的是，虽然 VirtualBox 默认的磁盘格式为 vdi，可是经过导入、导出等一系列操作后，硬盘格式往往都是 wmdk；本文所讨论的磁盘压缩方法，只对 vdi 格式的磁盘有效；因此，磁盘压缩之前，往往都需要进行磁盘格式转换！</p></blockquote><ol><li><p>在 VirtualBox 管理界面上，还需要重新删除原有的 vmdk 磁盘（否则 uuid 冲突导致无法导入 vdi 磁盘）、然后指定系统需要使用的磁盘为新的 vdi 磁盘（否则无法使用后续的磁盘压缩功能）。</p><p> <img src="/static/img/20210108-virtualbox/0-%E9%87%8A%E6%94%BE%E3%80%81%E5%88%A0%E9%99%A4%E7%A1%AC%E7%9B%98-HHJ-20210108.png" alt="释放、删除硬盘"></p></li><li><p>转换虚拟机磁盘文件格式为 vdi </p><pre><code class="cmd"> cd &quot;C:\Program Files\Oracle\VirtualBox\&quot; &quot;VBoxManage.exe&quot; clonehd &quot;e:\source.vmdk&quot; &quot;e:\target.vdi&quot; --format vdi</code></pre><p> <img src="/static/img/20210108-virtualbox/1-%E5%B0%86VMDK%E7%A1%AC%E7%9B%98%E8%BD%AC%E6%8D%A2%E4%B8%BAVDI%E6%A0%BC%E5%BC%8F-2-HHJ-20210108.png" alt="将VMDK硬盘转换为VDI格式"></p></li></ol><ol start="3"><li><p>将新磁盘关联到虚拟机中</p><p> <img src="/static/img/20210108-virtualbox/2-%E5%B0%86VDI%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD%E5%88%B0%E7%B3%BB%E7%BB%9F%E4%B8%AD-HHJ-20210108.png" alt="将VDI硬盘挂载到系统中"></p><p> <img src="/static/img/20210108-virtualbox/2-%E5%B0%86VDI%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD%E5%88%B0%E7%B3%BB%E7%BB%9F%E4%B8%AD-2-HHJ-20210108.png" alt="将VDI硬盘挂载到系统中"></p></li></ol><h2 id="Windows-虚拟机磁盘的压缩"><a href="#Windows-虚拟机磁盘的压缩" class="headerlink" title="Windows 虚拟机磁盘的压缩"></a>Windows 虚拟机磁盘的压缩</h2><p>毫无疑问，Windows 平台的磁盘压缩比较简单，在主机系统中直接执行以下命令即可。</p><pre><code class="ps"> &quot;C:\Program Files\Oracle\VirtualBox\VBoxManage.exe&quot; modifyhd &quot;e:\target.vdi&quot; --compact</code></pre><blockquote><p>多年前，我曾进行过上述操作，并截图，可是现在找不到之前的截图了，有空再补了。</p></blockquote><h2 id="CentOS-虚拟机磁盘的压缩"><a href="#CentOS-虚拟机磁盘的压缩" class="headerlink" title="CentOS 虚拟机磁盘的压缩"></a>CentOS 虚拟机磁盘的压缩</h2><blockquote><p>一开始，我尝试使用网上泛滥的手动将磁盘剩余空间写 0 的方法，可是，过了很久，不过没有看到磁盘空间变小，反而越来越大——我本来虚拟机才25GB，不到半个小时变成了 60 GB，本来主机硬盘容量就很小，吓得我赶紧终止了。</p><blockquote><pre><code class="bash">dd  if=/dev/zero   of=/empty    bs=1M#dd if=/dev/zero   of=/dev/sda3rm -f /empty</code></pre></blockquote></blockquote><p>多天以后，做完了手上的工作，重新去外网上学习相应的处理方法，发现了有个叫做 zerofree 工作的做法没有尝试过，因此我重新导入了一个虚拟机进行尝试，结果成功了，过程如下：</p><ol><li><p>使用 yum 下载安装 zerofree 程序包</p><pre><code class="sh"> su yum -y install zerofree</code></pre></li><li><p>重新启动系统，并在系统 GRUB 启动菜单出现时点击 <code>Enter</code> 键进入编辑模式</p><ul><li><p>选择含有 <code>vmlinuz</code> 字样菜单行，按 <code>e</code> 进入内容编辑状态</p><p><img src="/static/img/20210108-virtualbox/4-%E5%9C%A8GRUB%E8%8F%9C%E5%8D%95%E4%B8%AD%E9%80%89%E6%8B%A9%E5%90%AB%E6%9C%89vmlinuz%E5%AD%97%E6%A0%B7%E7%9A%84%E8%8F%9C%E5%8D%95%E8%BF%9B%E8%A1%8C%E7%BC%96%E8%BE%91-HHJ-20210108.png" alt="选择含有vmlinuz字样的菜单进行编辑"></p></li><li><p>在菜单末尾增加 <code>init=/bin/bash</code> 后 <code>Enter</code> 返回上级菜单</p><p><img src="/static/img/20210108-virtualbox/5-%E5%9C%A8vmlinuz%E5%AD%97%E6%A0%B7%E7%9A%84%E8%8F%9C%E5%8D%95%E4%B8%AD%E7%BC%96%E8%BE%91%E5%A2%9E%E5%8A%A0init%E5%8F%82%E6%95%B0%EF%BC%88%E8%BF%9B%E5%85%A5%E6%95%91%E6%8F%B4%E6%A8%A1%E5%BC%8F%EF%BC%89-HHJ-20210108.png" alt="增加init参数以进入救援模式"></p><table><thead><tr><th>内核启动参数</th><th>含义</th><th>备注</th></tr></thead><tbody><tr><td>init=/sbin/init</td><td>告诉内核用 <code>/sbin/init</code> 作为它的 init 程序</td><td></td></tr><tr><td>init=/bin/bash</td><td>只启动 bash，在紧急恢复时有用</td><td>救援模式</td></tr><tr><td>root=/dev/foo</td><td>告诉内核用 <code>/dev/foo</code> 作为根设备</td><td></td></tr><tr><td>single</td><td>引导进入单用户模式</td><td>单用户模式</td></tr></tbody></table></li><li><p>然后按 <code>b</code> 重新启动系统</p><p><img src="/static/img/20210108-virtualbox/6-%E4%BF%AE%E6%94%B9%E8%8F%9C%E5%8D%95%E5%AE%8C%E6%88%90%E5%90%8E%E6%8C%89b%E5%AD%97%E7%AC%A6%E5%90%AF%E5%8A%A8%E8%BF%9B%E5%85%A5%E7%B3%BB%E7%BB%9F-HHJ-20210108.png" alt="按b字符启动进入系统"></p></li><li><p>进入救援模式初始界面</p><p><img src="/static/img/20210108-virtualbox/7-%E6%95%91%E6%8F%B4%E6%A8%A1%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E7%95%8C%E9%9D%A2-HHJ-20210108.png" alt="救援模式初始界面"></p></li></ul></li></ol><ol start="3"><li><p>查看系统的磁盘名称</p><pre><code class="bash"> df</code></pre></li><li><p>执行清理（请根据前一步的查询结果进行确定需要清理的磁盘）</p><pre><code class="bash"> zerofree -v /dev/sda1 zerofree -v /dev/sda3</code></pre><p> <img src="/static/img/20210108-virtualbox/9-zerofree%E5%A1%AB%E5%85%85%E5%AE%8C%E6%AF%95-HHJ-20210108.png" alt="zerofree填充"></p><p> 至此，虚拟机磁盘容量 已经明显变小。然后强制关机，重新进入系统。</p><p> <img src="/static/img/20210108-virtualbox/10-%E6%95%91%E6%8F%B4%E6%A8%A1%E5%BC%8F%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E5%B8%B8%E8%A7%84%E5%85%B3%E6%9C%BA%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%8F%AA%E8%83%BD%E7%A1%AC%E4%BB%B6%E5%85%B3%E9%97%AD-HHJ-20210108.png" alt="无法使用常规关机命令，只能硬件关闭"></p></li><li><p>在宿主机中，打开命令行，笔者这里是Windows系统，如下执行</p><pre><code class="ps"> &quot;C:\Program Files\Oracle\VirtualBox\VBoxManage.exe&quot; modifyhd &quot;e:\target.vdi&quot; --compact</code></pre></li></ol><h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol><li><p>mowkeeper.<code>VirtualBox压缩vdi文件</code>[EB/OL].<a href="http://mowblog.com/virtualbox%E5%8E%8B%E7%BC%A9vdi%E6%96%87%E4%BB%B6/">http://mowblog.com/virtualbox%E5%8E%8B%E7%BC%A9vdi%E6%96%87%E4%BB%B6/</a>, 2021/01/08.</p></li><li><p>Canonical Ltd.<code>Ubuntu Manpage: zerofree — zero free blocks from ext2, ext3 and ext4 file-systems</code>[EB/OL].<a href="http://manpages.ubuntu.com/manpages/hirsute/en/man8/zerofree.8.html">http://manpages.ubuntu.com/manpages/hirsute/en/man8/zerofree.8.html</a>, 2021/01/10.</p></li></ol><h3 id="变更说明"><a href="#变更说明" class="headerlink" title="变更说明"></a>变更说明</h3><ul><li><p>1.0.0，2021/01/19 20:55:03，初始版本。</p></li><li><p>1.0.1，2021/02/12 19:36:23，补充 Linux 内核启动参数表。</p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;VirtualBox 虚拟机的容量会随着使用自动扩容，这本来是个好事；不过在实际使用过程中，由于系统错误日志疯狂写入等原因，也可能会导致系统容量被明显扩充变大。容量变大之后，无论是转换虚拟盘格式，还是导入导出，均不能减小容量。特别是做虚拟机备份导出时，白白浪费了大量的空间。
-      
-    
-    </summary>
-    
-    
-      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
-    
-    
-      <category term="Windows" scheme="https://faradays-studio.gitee.io/tags/Windows/"/>
-    
-      <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
-    
-      <category term="VirtualBox" scheme="https://faradays-studio.gitee.io/tags/VirtualBox/"/>
-    
-      <category term="虚拟机" scheme="https://faradays-studio.gitee.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    
-      <category term="压缩" scheme="https://faradays-studio.gitee.io/tags/%E5%8E%8B%E7%BC%A9/"/>
-    
-      <category term="zerofree" scheme="https://faradays-studio.gitee.io/tags/zerofree/"/>
     
   </entry>
   

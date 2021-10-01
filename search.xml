@@ -4096,7 +4096,7 @@ make install</code></pre>
   <entry>
     <title>Solaris 远程访问 IP 限制方法</title>
     <url>/202108251958/</url>
-    <content><![CDATA[<p>本来想在网上找一个可以限制远程 IP 访问的脚本，结果一个都不能用；因此，花了几天一边改脚本，一边看 Oracle 的官网手册，最后终于写了，测试过了，真的能用！</p>
+    <content><![CDATA[<p>本来想在网上找一个可以限制远程 IP 访问的脚本，结果一个都不能用；因此，花了几天一边改脚本，一边看 Oracle 的官网手册，最后测试通过了！</p>
 <pre><code class="sh">#!/usr/bin/bash
 
 # 执行  bash /etc/block_ssh.sh
@@ -4166,6 +4166,81 @@ fi
         <tag>远程</tag>
         <tag>限制</tag>
         <tag>Bash</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一种软件著作权代码合并的批处理脚本</title>
+    <url>/202110011009/</url>
+    <content><![CDATA[<p>最近在忙着工作上的事情，很长一段时间没有写过文章了。前几周申请了一项软件著作权，涉及到代码需要合并的事情，要求前1500行 + 后1500行组成鉴定材料。因此我花了一点时间写了一个批处理的脚本，如下：</p>
+<pre><code class="bat">REM 指定需要处理的文件类型
+set /p file_filter=&quot;输入代码文件扩展名，空格分隔，如 *.aspx *.cs *.js *.css *.master *.config *.asax &quot;
+IF not defined file_filter set file_filter=*.aspx *.cs hhj.js *.master
+
+REM 指定输出文件
+SET current_date=%date:~0,4%%date:~5,2%%date:~8,2%_%time:~0,2%%time:~3,2%%time:~6,2%
+    :: 0 点是出现兼容性问题（时的第一位不会补零）
+    SET current_date=%date:~0,4%%date:~5,2%%date:~8,2%.%time:~3,2%%time:~6,2%
+set output_file=_codes-%current_date%-%computername%.txt
+set file_list=_files-%current_date%-%computername%.txt
+
+REM 指定代码目录，并切换过去（使用 /d 参数）
+set /p src_dir=&quot;输入代码根目录，如 I:\VirtualBox\vb_share\WebSites\Sis-1.0 ：&quot;
+    :: 设定初始值，不能带双引号
+    IF &quot;%src_dir%&quot;==&quot;&quot; set src_dir=I:\VirtualBox\vb_share\WebSites\Sis-1.0
+
+:: 跨驱动器切换路径
+cd /d &quot;%src_dir%&quot;
+
+
+
+REM 先清空文件，然后后将代码目录中的所有相关文件导入
+:: 首个代码文件
+set /p first_file=&quot;输入首个代码文件的相对路径，不区分大小写（如 Default.aspx ）： &quot;
+    :: 设定初始值，不能带双引号
+    IF &quot;%first_file%&quot;==&quot;&quot; set first_file=Default.aspx
+
+:: 添加根目录
+set first_file=%src_dir%\%first_file%
+    :: 不需要双引号扩住，否则会原样输出双引号；末尾也不能添加空格，否则也原样输出
+    echo %first_file% &gt; %file_list%
+    :: 将首个代码文件内容添加到目标文件中
+    echo.&gt; %output_file%
+type %first_file%&gt;&gt; %output_file%
+
+:: 合并当前路径中的代码
+for /F %%i in (&#39;dir /b/s/a:-d %file_filter%&#39;) do (
+
+    :: 追加代码文本内容（比较可以使用 equ 或 == 符号，i 参数表示不区分大小写）
+    IF /i &quot;%%i&quot;==&quot;%first_file%&quot; (
+        :: 首个代码文件（切记，括号中不允许只有一个语句、且不支持使用语句与注释交差，即只能第一行为注释！）
+        echo.&gt;&gt; %output_file%
+        echo.&gt;&gt; %output_file%
+        echo.&gt;&gt; %file_list%
+    ) ELSE (
+        :: 写入文件清单
+        echo %%i&gt;&gt; %file_list%
+        :: 其他代码文件
+        echo.&gt;&gt; %output_file%
+        type %%i &gt;&gt; %output_file%
+    )
+)
+
+echo finish！
+REM 打开目标文件夹，以便直接拷贝合成文本
+start explorer %src_dir%
+::pause</code></pre>
+<p>上述代码是按 ASP.NET 来选择代码文件的，在实际应用时 file_filter 的具体值应该根据你的代码文件的扩展名来设定。</p>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>批处理</tag>
+        <tag>bat</tag>
+        <tag>脚本</tag>
+        <tag>软著</tag>
+        <tag>代码</tag>
       </tags>
   </entry>
 </search>
