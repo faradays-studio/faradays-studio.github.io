@@ -1157,10 +1157,13 @@ var today_1 = new Date();
 
 
 
-var day0 = today_1.toLocaleDateString().replace(/-/g,"").replace(/\//g,"");
-var day_start = 20210208;
+//var day0 = today_1.toLocaleDateString().replace(/-/g,"").replace(/\//g,""); // 输出 2021101，而不是20211001
+//var day0 = today_1.toISOString().replace(/-/g,"").replace(/\//g,"");  // IE8+，格式为: YYYY-MM-DDTHH:mm:ss.sssZ
+var day0 = (new Date()).getTime();
+//console.log(day0);
+var day_start = (new Date()).setFullYear(2021,06,30);
 //console.log(day_start);
-var day_end = 20211031;
+var day_end = (new Date()).setFullYear(2021,10,31);
 //console.log(day_end);
 var banner1 = "";
 //console.log(banner1);
