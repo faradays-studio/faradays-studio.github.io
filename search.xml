@@ -4281,14 +4281,16 @@ stop_list = stopwords[&#39;stopword&#39;].tolist()
 
 # TXT文件特征：事先已由 ANSI 转换为 UTF-8 格式,分隔符是 \t，默认无标题
 # 加载TXT文件（header=None, names 表示添加标题、数量与 tab 数量相当；设置index_col=0避免首列被当做索引）；read_table、read_csv 等效
-f1=pd.read_csv(&#39;./EventTxt/EVENT20200627.txt&#39;, sep=&#39;\t&#39;, encoding=&#39;utf_8_sig&#39;, index_col=0, header=None, names=[&#39;序号&#39;,&#39;时间&#39;,&#39;路径&#39;,&#39;描述&#39;,&#39;操作信息&#39;,&#39;补充信息&#39;,&#39;主机&#39;,&#39;备注&#39;])
+f1=pd.read_csv(&#39;./EventTxt/EVENT20200627.txt&#39;, sep=&#39;\t&#39;, encoding=&#39;utf_8_sig&#39;, \
+                index_col=0, header=None, \
+                names=[&#39;序号&#39;,&#39;时间&#39;,&#39;路径&#39;,&#39;描述&#39;,&#39;操作信息&#39;,&#39;补充信息&#39;,&#39;主机&#39;,&#39;备注&#39;])
 
 # 生成分词
 f1[&#39;分词&#39;] =  f1[&#39;描述&#39;].apply(lambda x : [i for i in jieba.cut(x) if i not in stop_list])  # 去除停用词
 # print(stop_list[10])
 
 # 保存处理后的文件
-f1.to_csv(&quot;./t4-EventCsv/t4_&quot; + str(count) + &quot;_&quot; + EVENT20200627 + &quot;.csv&quot;, encoding=&#39;utf_8_sig&#39;)  # 第 1 列没有列头，为自动添加的从 0 开始的序号列
+f1.to_csv(&quot;./t4-EventCsv/t4_&quot; + str(count) + &quot;_&quot; + EVENT20200627 + &quot;.csv&quot;, encoding=&#39;utf_8_sig&#39;)
 
 # 显示行列数量
 rowNum=f1.shape[0] #不包括表头
