@@ -164,7 +164,9 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
 <p>Bing 收录真是快，而且全面。一个月不到， gitee 站点中文站已经收录 12 条、国际站已经收录 39 条了，意想不到！</p>
 </blockquote>
 </li>
-<li><p>2021/03/23 21:01:00，升级至 v0.2.12，首页增加最后的3篇文章显示，恢复手机模式的侧边栏并调整侧边栏的手机模式下的样式，调整手机模式的打赏样式。</p>
+<li><p>2021/03/23 21:01:00，升级至 v0.2.12，首页增加最后的3篇文章显示，恢复手机模式的侧边栏并调整其样式，调整手机模式的打赏样式。</p>
+</li>
+<li><p>2021/10/07 22:46:06，升级至 v0.2.13，首页的最后3篇文章增加超链接，修复网站初次切换夜间模式失效、页面横幅中日期转换受本地格式影响失0而失效等问题。</p>
 </li>
 </ol>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
@@ -4094,10 +4096,10 @@ make install</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>Solaris 远程访问 IP 限制方法</title>
+    <title>用 bash 对 Solaris 远程访问 IP 进行限制</title>
     <url>/202108251958/</url>
     <content><![CDATA[<p>本来想在网上找一个可以限制远程 IP 访问的脚本，结果一个都不能用；因此，花了几天一边改脚本，一边看 Oracle 的官网手册，最后测试通过了！</p>
-<pre><code class="sh">#!/usr/bin/bash
+<h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><pre><code class="sh">#!/usr/bin/bash
 
 # 执行  bash /etc/block_ssh.sh
 #
@@ -4155,17 +4157,20 @@ else
 
 fi
 </code></pre>
+<h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><ul>
+<li><a href="../202202121227">用 csh 对 Solaris 远程访问 IP 进行限制</a></li>
+</ul>
 ]]></content>
       <categories>
         <category>电脑爱好者</category>
       </categories>
       <tags>
         <tag>Linux</tag>
+        <tag>bash</tag>
         <tag>Solaris</tag>
         <tag>IP</tag>
         <tag>远程</tag>
         <tag>限制</tag>
-        <tag>Bash</tag>
       </tags>
   </entry>
   <entry>
@@ -4390,6 +4395,229 @@ print(str(round(tm_cost,3)) + &quot; s.&quot;)</code></pre>
         <tag>Jieba</tag>
         <tag>词频</tag>
         <tag>分词</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Django ORM 数据库查询的all、filter、exclude方法</title>
+    <url>/202202121135/</url>
+    <content><![CDATA[<p><strong>Object Relational Mapping(关系对象映射)</strong>，简称为 ORM；对于 Django 框架，指的是Django通过内部的处理函数，实现了多种数据库统一的访问方法，从而可以非常方便地实现软件系统的开发，无须针对不同的数据库进行 SQL 语句的编写；对于非职业开发人员而言，这是一种非常大的优势。</p>
+<p>在开发中小型网站时，使用 Django 确实能够带来了很多的方便。</p>
+<h2 id="Django-orm-用法概述"><a href="#Django-orm-用法概述" class="headerlink" title="Django orm 用法概述"></a>Django orm 用法概述</h2><p>在 ORM 中，查询是更新、删除的基础，查询到相应的QuerySet对象后，可以执行特定字段的设值或者删除操作，如下：</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>示例</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>查询</strong></td>
+<td>test1 = Test.objects.<strong>get</strong>(id=1)</td>
+<td>数据表名=TEST，字段名= id</td>
+</tr>
+<tr>
+<td><strong>更新</strong></td>
+<td>test1<strong>.name</strong> = ‘Google’ <br> test1<strong>.save()</strong></td>
+<td>name 为`字段名</td>
+</tr>
+<tr>
+<td><strong>删除</strong></td>
+<td>test1.<strong>delete()</strong></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="Django-的-filter、exclude"><a href="#Django-的-filter、exclude" class="headerlink" title="Django 的 filter、exclude"></a>Django 的 <strong>filter</strong>、exclude</h2><p>Django的查询方法有很多，基本公式是 <strong><code>数据库名</code>.object.<code>ORM访问方法</code>(<code>字段名</code>__<code>字段控制参数</code>=<code>查询条件</code>)</strong> 。</p>
+<p>除了 <code>get</code> 方法外，最常见的就是 <code>all</code>、<code>filter</code>、<code>exclude</code> 方法了。这里做了表格化的总结：</p>
+<ol>
+<li><p><strong>all</strong> 方法</p>
+<table>
+<thead>
+<tr>
+<th><strong>公式</strong></th>
+<th><strong>备注</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>数据表名</code>.objects.<strong>all</strong>()</td>
+<td>查询所有</td>
+</tr>
+<tr>
+<td><code>数据表名</code>.objects.<strong>all</strong>()[:10]</td>
+<td>切片 （前10条）</td>
+</tr>
+<tr>
+<td><code>数据表名</code>.objects.<strong>all</strong>().reverse()[:2]</td>
+<td>反向切片 （最后两条）</td>
+</tr>
+<tr>
+<td><code>数据表名</code>.objects.<strong>all</strong>().reverse()[0]</td>
+<td>最后一条</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>filter</strong> 方法</p>
+<table>
+<thead>
+<tr>
+<th>公式</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>=”<code>查询内容</code>“)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>=”<code>查询内容</code>“)<br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__exact=”<code>查询内容</code>“) <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__iexact=”<code>查询内容</code>“)</td>
+<td>精确查询（<u><code>i</code> 开头，表示不区分大小写，下同</u>）</td>
+</tr>
+<tr>
+<td><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__contains=”<code>查询内容</code>“)<br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__icontains=”<code>查询内容</code>“)</td>
+<td>包含文本</td>
+</tr>
+<tr>
+<td><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__in=[“<code>查询1</code>“, “<code>查询2</code>“, <code>…</code>, “<code>查询n</code>“ ])</td>
+<td>范围检索（任1）</td>
+</tr>
+<tr>
+<td><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__range=(<code>最小值</code>, <code>最大值</code>))</td>
+<td><code>数字区域检索</code>__range=(‘2005-01-01 00:00:00’, ‘2005-03-31  00:00:00’)</td>
+</tr>
+<tr>
+<td><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__gt=<code>查询数字</code>)<br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__gte=<code>查询数字</code>)<br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__lt=<code>查询数字</code>)<br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__lte=<code>查询数字</code>)</td>
+<td>数值比较（支持与日期/时间参数串接）</td>
+</tr>
+<tr>
+<td><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__date=’<code>YYYY-mm-dd</code>‘)<br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__year=<code>年份数字</code>)<br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__iso_year=<code>年份数字</code>)<br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__month=<code>月份数值</code>)<br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__day=<code>日数值</code>)<br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__week=<code>周数</code>) <br> <code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__week_day=<code>星期几数</code>)  <u><em># 星期日=1</em></u>  <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__iso_week_day=<code>星期几数</code>) <u><em># 星期一=1</em></u>  <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__quarter=<code>季节数</code>) # 新历  <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__time=”<code>HH:MM</code>“)  <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__hour=<code>小时数</code>)  <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__minute=<code>分钟数</code>) <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__second=<code>秒数</code>)</td>
+<td><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__date=’2022-01-00’)  <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__year=2022)  <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__iso_year=2022)  <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__month=2)  <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__day=10)  <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__week=52)  <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__week_day=1)  <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__iso_week_day=1)  <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__quarter=2)  <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__time=datetime.time(14,  30))  <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__hour=22)  <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__minute=59)  <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__second=59)</td>
+</tr>
+<tr>
+<td><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__startswith=”<code>查询内容</code>“)  <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__istartswith=”<code>查询内容</code>“)  <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__endswith=”<code>查询内容</code>“)  <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__iendswith=”<code>查询内容</code>“)</td>
+<td>匹配开头/结尾检索</td>
+</tr>
+<tr>
+<td><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__regex=”<code>查询内容</code>“)  <br><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__iregex=”<code>查询内容</code>“)</td>
+<td>正则表达式查询</td>
+</tr>
+<tr>
+<td><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段名</code>__isnull=<code>布尔值</code>)</td>
+<td>数据<code>null</code>检索</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>exclude</strong>方法</p>
+<p><strong>exclude</strong> 的用法和  <strong>filter</strong> 基本相同，此处省略。</p>
+</li>
+</ol>
+<h2 id="Django的链式查询"><a href="#Django的链式查询" class="headerlink" title="Django的链式查询"></a>Django的链式查询</h2><ol>
+<li><p>两种参数形成链式查询</p>
+<table>
+<thead>
+<tr>
+<th>公式</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>数据表名</code>.objects.filter(<code>字段名</code>__<strong>year</strong>__<strong>gte</strong>=<code>年份数字</code>)</td>
+<td>日期时间查询支持串接比较参数</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>两种方法形成链式查询</p>
+<table>
+<thead>
+<tr>
+<th>公式</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>数据表名</code>.objects.<strong>filter</strong>(<code>字段1</code>__contains=”<code>查询1</code>“).<strong>exclude</strong>(<code>字段2</code>=”<code>查询2</code>“)</td>
+<td>链式查询（支持多个 <strong>filter</strong>/<strong>exclude</strong>串接）</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li>涂伟忠.<a href="https://code.ziqiangxuetang.com/django/django-queryset-api.html">Django QuerySet API</a>[EB/OL].<a href="https://code.ziqiangxuetang.com/django">https://code.ziqiangxuetang.com/django</a>, 2022/02/12.</li>
+<li>涂伟忠.<a href="https://code.ziqiangxuetang.com/django/django-queryset-advance.html">Django QuerySet 进阶</a>[EB/OL].<a href="https://code.ziqiangxuetang.com/django">https://code.ziqiangxuetang.com/django</a>, 2022/02/12.</li>
+<li>菜鸟教程.<a href="https://www.runoob.com/django/django-model.html">Django 模型</a>[EB/OL].<a href="https://www.runoob.com/django/django-model.html">https://www.runoob.com/django/django-model.html</a>, 2022/02/12.</li>
+<li>Django Software Foundation.<a href="https://docs.djangoproject.com/en/dev/ref/models/querysets/">QuerySet API reference</a>[EB/OL].<a href="https://docs.djangoproject.com/en/dev/ref/models/querysets/">https://docs.djangoproject.com/en/dev/ref/models/querysets/</a>, 2022/02/12.</li>
+<li>Django Software Foundation.<a href="https://docs.djangoproject.com/en/2.2/ref/models/fields/">Model field reference</a>[EB/OL].<a href="https://docs.djangoproject.com/en/2.2/ref/models/fields/">https://docs.djangoproject.com/en/2.2/ref/models/fields/</a>, 2022/02/12.</li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程笔记</category>
+      </categories>
+      <tags>
+        <tag>查询</tag>
+        <tag>Django</tag>
+        <tag>all</tag>
+        <tag>filter</tag>
+        <tag>exclude</tag>
+        <tag>数据库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用 csh 对 Solaris 远程访问 IP 进行限制</title>
+    <url>/202202121227/</url>
+    <content><![CDATA[<p>最早测试这个的时候，花了一些时间，直接看代码吧</p>
+<h2 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h2><pre><code class="sh">
+#!/usr/bin/csh
+
+# 执行  csh /etc/block_ssh.csh
+#
+
+# 获取 tty 值
+set tmn = `who am i | awk &#39;&#123;print $2;&#125;&#39;`
+
+# 获取当前 IP
+set login_ip = ` who -um | awk &#39;&#123;print $8;&#125;&#39; | sed -e &#39;s/(//g; s/)//g&#39; `
+
+# 获取当前 PID 值
+set login_pid = `who -um | awk &#39;&#123;print $7;&#125;&#39;`
+
+set login_name = `echo $LOGNAME`
+if ( &quot;$login_ip&quot; == &quot;&quot; || &quot;$login_ip&quot; == &quot;:0&quot; || &quot;$login_ip&quot; == &quot;:0.0&quot;) then
+    set type_x = &quot;local&quot;
+else
+    set type_x = &quot;remote&quot;
+endif
+echo &quot;`date +%Y-%m-%d\ %H:%M:%S`   \t $login_name $login_ip \n&quot;  &gt;&gt; /usr/tmp/remote.log
+#echo -e &quot;`date +%Y-%m-%d\ %H:%M:%S` \t $login_ip \n&quot; &gt;&gt; /tmp/remote.log # bash
+echo $type_x
+
+#trap 1 2 3 9 15
+if ( &quot;$type_x&quot; == &quot;local&quot; || &quot;$login_ip&quot; == &quot;10.0.2.2&quot; ) then
+    echo &quot;Welcome......&quot;
+    logger -p user.info  &quot;Someone has logined in: $login_ip \!&quot;
+else
+    echo &quot;  sys log&quot;
+    # 需要转义：英文叹号
+    logger -i -p user.err -t SSH &quot;Remote IP is login: $login_ip \!&quot;
+
+    echo &quot;  user log&quot;
+    logger -ip user.alert &quot;Unauthorized remote IP is login: $login_ip \!&quot;
+    # 测试表明，上述报警同时在 系统日志和用户日志中存储
+
+
+    # kill remote ssh link
+    pkill -9 -t $tmn
+
+endif
+</code></pre>
+<h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><ul>
+<li><a href="../202108251958">用 bash 对 Solaris 远程访问 IP 进行限制</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>csh</tag>
+        <tag>Solaris</tag>
+        <tag>IP</tag>
+        <tag>远程</tag>
+        <tag>限制</tag>
       </tags>
   </entry>
 </search>
