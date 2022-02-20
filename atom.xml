@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://faradays-studio.gitee.io/"/>
-  <updated>2022-02-12T04:44:04.260Z</updated>
+  <updated>2022-02-20T12:38:45.172Z</updated>
   <id>https://faradays-studio.gitee.io/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>chattr 的用法</title>
+    <link href="https://faradays-studio.gitee.io/202202202033/"/>
+    <id>https://faradays-studio.gitee.io/202202202033/</id>
+    <published>2022-02-20T12:33:10.000Z</published>
+    <updated>2022-02-20T12:38:45.172Z</updated>
+    
+    <content type="html"><![CDATA[<p>在网络安全的管理中，需要对一些重要的系统文件进行锁定，比如说 <code>/etc/resolv.conf</code>、<code>/etc/hosts</code>，通过锁定，可以避免文件被误修改或者入侵者滥用。</p><pre><code class="sh">chattr +i  文件名     //锁定文件（无法修改、删除等）chattr -i  文件名      //解锁文件chattr +a  文件       //锁定后文件仅可追加chattr -a  文件名     //解锁文件lsattr 文件名           //查看文件特殊属性</code></pre><p>测试情况如下：</p><ol><li>进行文件属性修改</li></ol><pre><code># chattr +i /etc/resolv.conf## chattr +a /etc/resolv.conf## lsattr /etc/resolv.conf----ia---------- /etc/resolv.conf</code></pre><ol start="2"><li>尝试文件的修改</li></ol><pre><code># rm -rf /etc/resolv.confrm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作# echo xyz &gt; /etc/resolv.conf-bash: resolv.conf: 权限不够</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在网络安全的管理中，需要对一些重要的系统文件进行锁定，比如说 &lt;code&gt;/etc/resolv.conf&lt;/code&gt;、&lt;code&gt;/etc/hosts&lt;/code&gt;，通过锁定，可以避免文件被误修改或者入侵者滥用。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;ch
+      
+    
+    </summary>
+    
+    
+      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
+    
+    
+      <category term="shell" scheme="https://faradays-studio.gitee.io/tags/shell/"/>
+    
+      <category term="chattr" scheme="https://faradays-studio.gitee.io/tags/chattr/"/>
+    
+      <category term="锁定" scheme="https://faradays-studio.gitee.io/tags/%E9%94%81%E5%AE%9A/"/>
+    
+  </entry>
+  
+  <entry>
     <title>用 csh 对 Solaris 远程访问 IP 进行限制</title>
     <link href="https://faradays-studio.gitee.io/202202121227/"/>
     <id>https://faradays-studio.gitee.io/202202121227/</id>
     <published>2022-02-12T04:27:47.000Z</published>
-    <updated>2022-02-12T04:44:04.260Z</updated>
+    <updated>2022-02-20T12:33:32.740Z</updated>
     
     <content type="html"><![CDATA[<p>最早测试这个的时候，花了一些时间，直接看代码吧</p><h2 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h2><pre><code class="sh">#!/usr/bin/csh# 执行  csh /etc/block_ssh.csh## 获取 tty 值set tmn = `who am i | awk &#39;&#123;print $2;&#125;&#39;`# 获取当前 IPset login_ip = ` who -um | awk &#39;&#123;print $8;&#125;&#39; | sed -e &#39;s/(//g; s/)//g&#39; `# 获取当前 PID 值set login_pid = `who -um | awk &#39;&#123;print $7;&#125;&#39;`set login_name = `echo $LOGNAME`if ( &quot;$login_ip&quot; == &quot;&quot; || &quot;$login_ip&quot; == &quot;:0&quot; || &quot;$login_ip&quot; == &quot;:0.0&quot;) then    set type_x = &quot;local&quot;else    set type_x = &quot;remote&quot;endifecho &quot;`date +%Y-%m-%d\ %H:%M:%S`   \t $login_name $login_ip \n&quot;  &gt;&gt; /usr/tmp/remote.log#echo -e &quot;`date +%Y-%m-%d\ %H:%M:%S` \t $login_ip \n&quot; &gt;&gt; /tmp/remote.log # bashecho $type_x#trap 1 2 3 9 15if ( &quot;$type_x&quot; == &quot;local&quot; || &quot;$login_ip&quot; == &quot;10.0.2.2&quot; ) then    echo &quot;Welcome......&quot;    logger -p user.info  &quot;Someone has logined in: $login_ip \!&quot;else    echo &quot;  sys log&quot;    # 需要转义：英文叹号    logger -i -p user.err -t SSH &quot;Remote IP is login: $login_ip \!&quot;    echo &quot;  user log&quot;    logger -ip user.alert &quot;Unauthorized remote IP is login: $login_ip \!&quot;    # 测试表明，上述报警同时在 系统日志和用户日志中存储    # kill remote ssh link    pkill -9 -t $tmnendif</code></pre><h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><ul><li><a href="../202108251958">用 bash 对 Solaris 远程访问 IP 进行限制</a></li></ul>]]></content>
     
@@ -36,6 +67,8 @@
     
     </summary>
     
+    
+      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
     
     
       <category term="csh" scheme="https://faradays-studio.gitee.io/tags/csh/"/>
@@ -672,39 +705,6 @@
       <category term="vim" scheme="https://faradays-studio.gitee.io/tags/vim/"/>
     
       <category term="grep" scheme="https://faradays-studio.gitee.io/tags/grep/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>写论文的苦，你未必想尝一下</title>
-    <link href="https://faradays-studio.gitee.io/202101301128/"/>
-    <id>https://faradays-studio.gitee.io/202101301128/</id>
-    <published>2021-01-30T03:28:55.000Z</published>
-    <updated>2021-02-03T14:36:15.266Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近 3 个星期，一直在忙着写论文，走路在想，吃饭在想，睡觉也在想，总感觉某个地方有个难关需要我去跨越，我到了附近，却一直没有发现；等到论文基本写出来后，发现写论文是挺辛苦的！</p><h2 id="选题的苦"><a href="#选题的苦" class="headerlink" title="选题的苦"></a>选题的苦</h2><p>如果认真去做科研论文的话，选题是很苦的，因为是很难找到合适的题目的。</p><p>我都工作快 10 年了，也就最近才有些灵感和题材。一个人很难独自拥有一些高大上的项目，我的工作是搬砖的，就很难去研究烧砖技术，更多的是考虑如何搬运、如何与人协作、如何做好工期管理等等。</p><p>因此，好不容易在工作中，发挥了一些重要作用，在种种压力之下，准备去写论文；拟好了粗略的提纲，感觉去找一个知识数据库的账户，将同领域、同主题的文献找出来，一看，不好了，怎么这么多人都写了，多半只能放弃，就算不放弃，题材也很难写出新意来；水论文的人很多，可是自己扪心自问，那并不是我想要的，丢掉吧！</p><p>由于工作繁忙以及自己心里的这一丝丝骄傲，我好长时间都没有写出论文来，明明我业绩最多、贡献最大，可是我比不少按部就班的同事晚了 2 年。有些时日里，我焦虑得不行，不肯将就，也没有天降福利，在两个单位里边都被关心我的大领导约谈了…</p><p>好不容易能够选了一个题目，能够勉强说有创新性、实用价值的，又得在诸多先行者的背影里，寻找空间，作出差异化来，不然，自己就真的是水论文了。</p><h2 id="写作的苦"><a href="#写作的苦" class="headerlink" title="写作的苦"></a>写作的苦</h2><p>如果认真去做科研论文的话，写作的过程也是很苦的，因为写的东西不一定被人认可。</p><p>工作的过程，事情做完就了事了；可是如果发论文，那么自己得将事情的来龙去脉、因果、主次、先后等等都弄明白。最近写的这个论文，是关于计算机技术的，在网络上、操作系统里、论文里，都有零零星星的表述，可是有些已经过期了，有些别人就写错了，有些别人提供的参数、程序、方法等等不适合实际情况，都得去一一验证，一一去比较，一一去部署，最近这两周，我的头一直很疼，因为有些试验尝试了十多次了，一次需要一两个小时；日常的工作仍然需要继续，家里儿女仍得操心，老家也有一些烦心事，新一年的工作仍然很迷茫，这一些都让我很为难。</p><p>好不容易写出素材来了，还得修改文字；标题是否有吸引力，摘要是否清楚，翻译是否妥当，文章各级标题是否层次鲜明，各个段落的内容是否清楚明白、是否啰嗦繁杂、是否存在逻辑问题，得来回修改。</p><p>感觉差不多了，得控制字数，不能太多，也不能太少；图片得自己去绘制，不然显示效果不好；图表得考虑，论文的相关指标能否让别人看得懂、评估得上等级。因此，各种修改也得耗好几个通宵！</p><h2 id="发表的苦"><a href="#发表的苦" class="headerlink" title="发表的苦"></a>发表的苦</h2><p>如果认真去做科研论文的话，发表过程也是很辛苦的，因为得到好期刊的认可也是相当的困难的。好不容易有了内容，得开始寻找适当的杂志了。找了几个心仪的杂志，论文格式好好捯饬了一下，存了很多个版本格式，花了几天也完成了。</p><p>自己一无人脉，二无平台，三无能力，核心期刊基本都很难；前一个论文我整整收了三年，投了多家期刊，有些是毫不客气的说水平不行，有些和和气气地说不符合杂志风格，有些啥也没说退稿回来。</p><h2 id="成果的苦"><a href="#成果的苦" class="headerlink" title="成果的苦"></a>成果的苦</h2><p>如果认真去做科研论文的话，论文发表了也是很苦的，因为不是投入越大、回报越大。</p><p>很不容易地，论文发表了，可是好些平时不做事的同事，不知不觉地就发了好几篇论文，评选职称了，自己又显得落后了，这种苦真不是滋味！</p><p>看着别人那么水，和自己发在同样的杂志上，并不知道自己来回倒腾是否有价值。其实杂志里边的论文多数都是过得去的，奈何偏偏有几个相熟的人凑了一些他从来没有弄清楚过的内容上去，也发表了，心里何其翻覆！这样一对比，再也不认为那些核心期刊里侃侃而谈的大家们徒有其表了，而是自惭形秽不已。</p><p>论文发表了，自己回忆起来，那个过程仍然是苦涩的，很长时间都挥之不去。可是，如果得到了认可，对别人也发挥了作用，那心里在很短的瞬间也是会有甘之如饴的愉悦的。</p><p>其实，写论文不一定苦，苦的是放不下心里的结，随性一点的话，一切会好很多。春城冬暖，愿大家都能享受这美好的阳光。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;最近 3 个星期，一直在忙着写论文，走路在想，吃饭在想，睡觉也在想，总感觉某个地方有个难关需要我去跨越，我到了附近，却一直没有发现；等到论文基本写出来后，发现写论文是挺辛苦的！&lt;/p&gt;
-&lt;h2 id=&quot;选题的苦&quot;&gt;&lt;a href=&quot;#选题的苦&quot; class=&quot;headerl
-      
-    
-    </summary>
-    
-    
-      <category term="坐井观天" scheme="https://faradays-studio.gitee.io/categories/%E5%9D%90%E4%BA%95%E8%A7%82%E5%A4%A9/"/>
-    
-    
-      <category term="论文" scheme="https://faradays-studio.gitee.io/tags/%E8%AE%BA%E6%96%87/"/>
-    
-      <category term="科研" scheme="https://faradays-studio.gitee.io/tags/%E7%A7%91%E7%A0%94/"/>
-    
-      <category term="冷板凳" scheme="https://faradays-studio.gitee.io/tags/%E5%86%B7%E6%9D%BF%E5%87%B3/"/>
-    
-      <category term="苦" scheme="https://faradays-studio.gitee.io/tags/%E8%8B%A6/"/>
     
   </entry>
   

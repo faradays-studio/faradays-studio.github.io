@@ -1955,7 +1955,7 @@ printf 不像 echo 那样会自动换行，必须显式添加换行符 `\n` 。<
 </thead>
 <tbody><tr>
 <td>变量定义</td>
-<td><code>变量var名称=&quot;变量Value&quot;</code></td>
+<td><code>变量名称=&quot;变量值&quot;</code></td>
 <td><code>set var</code></td>
 </tr>
 <tr>
@@ -2182,6 +2182,7 @@ printf 不像 echo 那样会自动换行，必须显式添加换行符 `\n` 。<
         <tag>bash</tag>
         <tag>变量</tag>
         <tag>语法</tag>
+        <tag>$</tag>
       </tags>
   </entry>
   <entry>
@@ -2385,6 +2386,8 @@ printf 不像 echo 那样会自动换行，必须显式添加换行符 `\n` 。<
         <tag>语法</tag>
         <tag>判断</tag>
         <tag>表达式</tag>
+        <tag>while</tag>
+        <tag>for</tag>
       </tags>
   </entry>
   <entry>
@@ -2513,7 +2516,7 @@ fi</code></pre>
 <li><code>*)</code>：匹配任意输入，通过作为<code>case</code>结构的最后一个模式。</li>
 </ul>
 </li>
-<li><p>Bash 4.0之前，case结构只能匹配一个条件，然后就会退出case结构。Bash 4.0之后，允许匹配多个条件，这时可以用;;&amp;终止每个条件块。</p>
+<li><p>Bash 4.0之前，case结构只能匹配一个条件，然后就会退出case结构。Bash 4.0之后，允许匹配多个条件，这时可以用 <code>;;&amp;</code> 终止每个条件块。</p>
 </li>
 </ul>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
@@ -2549,6 +2552,7 @@ fi</code></pre>
         <tag>语法</tag>
         <tag>判断</tag>
         <tag>表达式</tag>
+        <tag>if</tag>
       </tags>
   </entry>
   <entry>
@@ -4612,12 +4616,49 @@ endif
 <li><a href="../202108251958">用 bash 对 Solaris 远程访问 IP 进行限制</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
       <tags>
         <tag>csh</tag>
         <tag>Solaris</tag>
         <tag>IP</tag>
         <tag>远程</tag>
         <tag>限制</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>chattr 的用法</title>
+    <url>/202202202033/</url>
+    <content><![CDATA[<p>在网络安全的管理中，需要对一些重要的系统文件进行锁定，比如说 <code>/etc/resolv.conf</code>、<code>/etc/hosts</code>，通过锁定，可以避免文件被误修改或者入侵者滥用。</p>
+<pre><code class="sh">chattr +i  文件名     //锁定文件（无法修改、删除等）
+chattr -i  文件名      //解锁文件
+chattr +a  文件       //锁定后文件仅可追加
+chattr -a  文件名     //解锁文件
+lsattr 文件名           //查看文件特殊属性</code></pre>
+<p>测试情况如下：</p>
+<ol>
+<li>进行文件属性修改</li>
+</ol>
+<pre><code># chattr +i /etc/resolv.conf
+#
+# chattr +a /etc/resolv.conf
+#
+# lsattr /etc/resolv.conf
+----ia---------- /etc/resolv.conf</code></pre><ol start="2">
+<li>尝试文件的修改</li>
+</ol>
+<pre><code># rm -rf /etc/resolv.conf
+rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
+# echo xyz &gt; /etc/resolv.conf
+-bash: resolv.conf: 权限不够</code></pre>]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+        <tag>chattr</tag>
+        <tag>锁定</tag>
       </tags>
   </entry>
 </search>
