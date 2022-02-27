@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://faradays-studio.gitee.io/"/>
-  <updated>2022-02-20T12:38:45.172Z</updated>
+  <updated>2022-02-27T13:17:46.774Z</updated>
   <id>https://faradays-studio.gitee.io/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用iptables管理防火墙策略</title>
+    <link href="https://faradays-studio.gitee.io/202202272114/"/>
+    <id>https://faradays-studio.gitee.io/202202272114/</id>
+    <published>2022-02-27T13:14:57.000Z</published>
+    <updated>2022-02-27T13:17:46.774Z</updated>
+    
+    <content type="html"><![CDATA[<p>iptables 是 CentOS 等系统中管理防火墙策略的工具。通过防火墙的配置，可以增强系统的安全性。</p><p><code>iptables -I</code> : 新加一条规则链<br><code>iptables -A</code> ：增加一条规则链</p><p>一般地，<code>iptables -I</code> 添加的规则放在现有规则的<strong>最前面</strong>，<code>iptables -A</code> 放在现有规则的<strong>最后面</strong>。</p><table><thead><tr><th>参数</th><th>说明</th><th>示例</th></tr></thead><tbody><tr><td>-F</td><td>清空规则链</td><td>iptables -F</td></tr><tr><td>-L</td><td>查看规则链</td><td>iptables -L</td></tr><tr><td>-A</td><td>追加规则</td><td>iptables -A INPUT</td></tr><tr><td>-D</td><td>删除规则</td><td>iptables -D INPUT 1</td></tr><tr><td>-R</td><td>修改规则</td><td>iptable -R INPUT 1 -s 192.168.120.0 -j  DROP</td></tr><tr><td>-I</td><td>在头部插入规则</td><td>iptables -I INPUT 1 –dport 80 -j  ACCEPT</td></tr><tr><td>-L</td><td>查看规则</td><td>iptables -L INPUT</td></tr><tr><td>-N</td><td>新的规则</td><td>iptables -N allowed</td></tr><tr><td>-V</td><td>查看iptables版本</td><td>iptables -V</td></tr><tr><td>-p</td><td>协议（tcp/udp/icmp）</td><td>iptables -A INPUT -p tcp</td></tr><tr><td>-s</td><td>匹配原地址，加” ! “表示除这个IP外</td><td>iptables -A INPUT -s 192.168.1.1</td></tr><tr><td>-d</td><td>匹配目的地址</td><td>iptables -A INPUT -d 192.168.12.1</td></tr><tr><td>–sport</td><td>匹配源端口流入的数据</td><td>iptables -A INPUT -p tcp –sport 22</td></tr><tr><td>–dport</td><td>匹配目的端口流出的数据</td><td>iptables -A INPUT -p tcp –dport 22</td></tr><tr><td>-i</td><td>匹配入口网卡流入的数据</td><td>iptables -A INPUT -i eth0</td></tr><tr><td>-o</td><td>匹配出口网卡流出的数据</td><td>iptables -A FORWARD -o eth0</td></tr><tr><td>-j</td><td>要进行的处理动作:DROP(丢弃)，REJECT(拒绝)，ACCEPT(接受)，SANT(基于原地址的转换)</td><td>iptable -A INPUT 1 -s 192.168.120.0 -j  DROP</td></tr><tr><td>–to-source</td><td>指定SANT转换后的地址</td><td>iptables -t nat -A POSTROUTING -s  192.168.10.0/24 -j SANT –to-source 172.16.100.1</td></tr><tr><td>-t</td><td>表名(raw、mangle、nat、filter)</td><td>iptables -t nat</td></tr><tr><td>-m</td><td>使用扩展模块来进行数据包的匹配(multiport/tcp/state/addrtype)</td><td>iptables -m multiport</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;iptables 是 CentOS 等系统中管理防火墙策略的工具。通过防火墙的配置，可以增强系统的安全性。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;iptables -I&lt;/code&gt; : 新加一条规则链&lt;br&gt;&lt;code&gt;iptables -A&lt;/code&gt; ：增加一条规则链&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
+    
+    
+      <category term="shell" scheme="https://faradays-studio.gitee.io/tags/shell/"/>
+    
+      <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
+    
+      <category term="CentOS" scheme="https://faradays-studio.gitee.io/tags/CentOS/"/>
+    
+      <category term="iptables" scheme="https://faradays-studio.gitee.io/tags/iptables/"/>
+    
+      <category term="防火墙" scheme="https://faradays-studio.gitee.io/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
+    
+  </entry>
   
   <entry>
     <title>chattr 的用法</title>
@@ -665,46 +701,6 @@
       <category term="配置" scheme="https://faradays-studio.gitee.io/tags/%E9%85%8D%E7%BD%AE/"/>
     
       <category term="权限" scheme="https://faradays-studio.gitee.io/tags/%E6%9D%83%E9%99%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux系统的多条件查询与匹配</title>
-    <link href="https://faradays-studio.gitee.io/202102122028/"/>
-    <id>https://faradays-studio.gitee.io/202102122028/</id>
-    <published>2021-02-12T12:28:32.000Z</published>
-    <updated>2021-02-24T12:22:14.431Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><ol><li><p>vim 的多条件匹配</p><table><thead><tr><th>与</th><th>或</th><th>非</th></tr></thead><tbody><tr><td>?<code>.*a</code>\&amp;<code>.*b</code></td><td>?<code>a</code>\|<code>b</code></td><td></td></tr><tr><td>?<code>a</code>\&amp;<code>.*b</code></td><td></td><td></td></tr></tbody></table></li><li><p>grep 的多条件匹配</p><table><thead><tr><th>与</th><th>或</th><th>非</th></tr></thead><tbody><tr><td>grep <code>&#39;pattern1&#39;</code> filename | grep <code>&#39;pattern2&#39;</code></td><td>grep ‘<code>pattern1</code>\|<code>pattern2</code>‘ filename</td><td>grep -v ‘<code>pattern</code>‘ filename</td></tr><tr><td>grep -E ‘<code>pattern1</code>.*<code>pattern2</code>‘ filename</td><td>grep -E ‘<code>pattern1</code>|<code>pattern2</code>‘ filename</td><td></td></tr><tr><td>grep -E ‘<code>pattern1</code>.*<code>pattern2</code>|<code>pattern2</code>.*<code>pattern1</code>‘ filename</td><td>grep -e ‘<code>pattern1</code> -e <code>pattern2</code>‘ filename</td><td></td></tr><tr><td></td><td>egrep ‘<code>pattern1</code>|<code>pattern2</code>‘ filename</td><td></td></tr></tbody></table></li></ol><h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><h3 id="与-运算"><a href="#与-运算" class="headerlink" title="与 运算"></a><code>与</code> 运算</h3><ol><li><p>查看 12 月份的错误信息：<code>grep</code> ‘<strong>error</strong>‘ /var/log/message <code>| grep</code> ‘<strong>Feb</strong> ‘；</p></li><li><p>查看用户下有无特定程序：</p><p> ps -Af | <code>grep -E</code> ‘root’ | <code>grep</code> bash<br> ps -Af | <code>grep</code>  herc  |<code>grep</code> bash</p></li></ol><blockquote><p>在系统的日常维护中，应当应该配合上下文检索信息，例如匹配前3条、后1条： ausearch -f /etc/passwd   | <code>grep -B3 -A1</code> cat。</p></blockquote><ol start="3"><li><p>匹配文件中的两个字符串：</p><p> 第一个关键词位于行首：/2021-1-18<code>\&amp;.*</code> d</p><p> <img src="/static/img/20210224-vim/vim-%E5%A4%9A%E6%9D%A1%E4%BB%B6%E2%80%9C%E4%B8%8E%E2%80%9D%E8%BF%90%E7%AE%97-HHJ-20210224.png" alt="vim-多条件“与”运算"></p><p> 第一个关键词位于行中： /<code>.*</code>9:23<code>\&amp;.*</code> d</p><p> <img src="/static/img/20210224-vim/vim-%E5%A4%9A%E6%9D%A1%E4%BB%B6%E2%80%9C%E4%B8%8E%E2%80%9D%E8%BF%90%E7%AE%972-HHJ-20210224.png" alt="vim-多条件“与”运算2"></p></li></ol><h3 id="或-运算"><a href="#或-运算" class="headerlink" title="或 运算"></a><code>或</code> 运算</h3><ol><li><p>查看是否存在这些进程：ps -Af | <code>grep -E</code> ‘mysql<code>|</code>postgres<code>|</code>xinetd<code>|</code>amanda’；</p></li><li><p>查看相应程序是否开机运行的配置：chkconfig –list | <code>grep -E</code> ‘mysql<code>|</code>postgres<code>|</code>xinetd<code>|</code>amanda’。</p></li><li><p>匹配文件中的两个字符串： /<code>.*</code>Send<code>\|</code>83</p><p> <img src="/static/img/20210224-vim/vim-%E5%A4%9A%E6%9D%A1%E4%BB%B6%E2%80%9C%E6%88%96%E2%80%9D%E8%BF%90%E7%AE%97-HHJ-20210224.png" alt="vim-多条件“与”运算"></p></li></ol><h3 id="非-运算"><a href="#非-运算" class="headerlink" title="非 运算"></a><code>非</code> 运算</h3><ol><li><p>查看非空密码用户：cat /etc/shadow |<code>grep -v</code> “!!“；</p></li><li><p>查看可以登录系统的用户：cat /etc/passwd |<code>grep -v</code> “nologin”。</p></li></ol><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol><li><p>夜之眷属.<code>vim中多条件查询</code>[EB/OL].<a href="https://blog.csdn.net/qq_28112995/article/details/106741835">https://blog.csdn.net/qq_28112995/article/details/106741835</a>, 2021/02/12.</p></li><li><p>stalin_.<code>Linux--使用grep命令进行多条件查询（AND，OR，NOT）</code>[EB/OL].<a href="https://blog.csdn.net/stalin_/article/details/81450633">https://blog.csdn.net/stalin_/article/details/81450633</a>, 2021/02/12.</p></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;基本用法&quot;&gt;&lt;a href=&quot;#基本用法&quot; class=&quot;headerlink&quot; title=&quot;基本用法&quot;&gt;&lt;/a&gt;基本用法&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;vim 的多条件匹配&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;与&lt;/th&gt;
-&lt;th&gt;或&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
-    
-    
-      <category term="shell" scheme="https://faradays-studio.gitee.io/tags/shell/"/>
-    
-      <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
-    
-      <category term="多条件查询" scheme="https://faradays-studio.gitee.io/tags/%E5%A4%9A%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/"/>
-    
-      <category term="vim" scheme="https://faradays-studio.gitee.io/tags/vim/"/>
-    
-      <category term="grep" scheme="https://faradays-studio.gitee.io/tags/grep/"/>
     
   </entry>
   

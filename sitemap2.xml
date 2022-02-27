@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://faradays-studio.github.io/202202272114/</loc>
+    <lastmod>2022-02-27</lastmod>
+  </url>
+  <url>
     <loc>https://faradays-studio.github.io/202202202033/</loc>
     <lastmod>2022-02-20</lastmod>
   </url>
@@ -845,6 +849,18 @@
   </url>
   <url>
     <loc>https://faradays-studio.github.io/tags/%E9%94%81%E5%AE%9A/</loc>
+    <lastmod>2022/2/27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.github.io/tags/iptables/</loc>
+    <lastmod>2022/2/27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.github.io/tags/%E9%98%B2%E7%81%AB%E5%A2%99/</loc>
     <lastmod>2022/2/27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

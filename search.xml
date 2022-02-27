@@ -4661,4 +4661,131 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
         <tag>锁定</tag>
       </tags>
   </entry>
+  <entry>
+    <title>用iptables管理防火墙策略</title>
+    <url>/202202272114/</url>
+    <content><![CDATA[<p>iptables 是 CentOS 等系统中管理防火墙策略的工具。通过防火墙的配置，可以增强系统的安全性。</p>
+<p><code>iptables -I</code> : 新加一条规则链<br><code>iptables -A</code> ：增加一条规则链</p>
+<p>一般地，<code>iptables -I</code> 添加的规则放在现有规则的<strong>最前面</strong>，<code>iptables -A</code> 放在现有规则的<strong>最后面</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-F</td>
+<td>清空规则链</td>
+<td>iptables -F</td>
+</tr>
+<tr>
+<td>-L</td>
+<td>查看规则链</td>
+<td>iptables -L</td>
+</tr>
+<tr>
+<td>-A</td>
+<td>追加规则</td>
+<td>iptables -A INPUT</td>
+</tr>
+<tr>
+<td>-D</td>
+<td>删除规则</td>
+<td>iptables -D INPUT 1</td>
+</tr>
+<tr>
+<td>-R</td>
+<td>修改规则</td>
+<td>iptable -R INPUT 1 -s 192.168.120.0 -j  DROP</td>
+</tr>
+<tr>
+<td>-I</td>
+<td>在头部插入规则</td>
+<td>iptables -I INPUT 1 –dport 80 -j  ACCEPT</td>
+</tr>
+<tr>
+<td>-L</td>
+<td>查看规则</td>
+<td>iptables -L INPUT</td>
+</tr>
+<tr>
+<td>-N</td>
+<td>新的规则</td>
+<td>iptables -N allowed</td>
+</tr>
+<tr>
+<td>-V</td>
+<td>查看iptables版本</td>
+<td>iptables -V</td>
+</tr>
+<tr>
+<td>-p</td>
+<td>协议（tcp/udp/icmp）</td>
+<td>iptables -A INPUT -p tcp</td>
+</tr>
+<tr>
+<td>-s</td>
+<td>匹配原地址，加” ! “表示除这个IP外</td>
+<td>iptables -A INPUT -s 192.168.1.1</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>匹配目的地址</td>
+<td>iptables -A INPUT -d 192.168.12.1</td>
+</tr>
+<tr>
+<td>–sport</td>
+<td>匹配源端口流入的数据</td>
+<td>iptables -A INPUT -p tcp –sport 22</td>
+</tr>
+<tr>
+<td>–dport</td>
+<td>匹配目的端口流出的数据</td>
+<td>iptables -A INPUT -p tcp –dport 22</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>匹配入口网卡流入的数据</td>
+<td>iptables -A INPUT -i eth0</td>
+</tr>
+<tr>
+<td>-o</td>
+<td>匹配出口网卡流出的数据</td>
+<td>iptables -A FORWARD -o eth0</td>
+</tr>
+<tr>
+<td>-j</td>
+<td>要进行的处理动作:DROP(丢弃)，REJECT(拒绝)，ACCEPT(接受)，SANT(基于原地址的转换)</td>
+<td>iptable -A INPUT 1 -s 192.168.120.0 -j  DROP</td>
+</tr>
+<tr>
+<td>–to-source</td>
+<td>指定SANT转换后的地址</td>
+<td>iptables -t nat -A POSTROUTING -s  192.168.10.0/24 -j SANT –to-source 172.16.100.1</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>表名(raw、mangle、nat、filter)</td>
+<td>iptables -t nat</td>
+</tr>
+<tr>
+<td>-m</td>
+<td>使用扩展模块来进行数据包的匹配(multiport/tcp/state/addrtype)</td>
+<td>iptables -m multiport</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+        <tag>Linux</tag>
+        <tag>CentOS</tag>
+        <tag>iptables</tag>
+        <tag>防火墙</tag>
+      </tags>
+  </entry>
 </search>
