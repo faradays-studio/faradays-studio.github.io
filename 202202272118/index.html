@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  
+  <title>用华为手机克隆快速实现数据的导入导出 | Blog of Faradays&#39; Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
+
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit|ie-stand|ie-comp">
+
+<!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+    <script src="//cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+<![endif]-->
+
+
+  
+  
+    
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+    <meta name="keywords" content="手机,克隆,导入,导出,QQ同步助手,Faradays' Studio">
+  
+
+
+  
+      
+       
+
+
+    
+    
+    <!-- <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css"> -->
+    <link rel="stylesheet" href="/css/github.min.css">
+    
+
+
+    
+    <!-- import 'gitalk/dist/gitalk.css' -->
+    <!-- import Gitalk from 'gitalk' -->
+
+
+
+
+  
+
+  <meta name="description" content="概述华为的手机克隆功能非常强大，通过该功能，可以实现两部手机之间包括通信录、通话记录、短信、APP等功能的快速迁移。 最近10多年中，我用了多种手机操作系统的手机，更换手机的时候，最困难的事情就是各种资料的同步：  通讯录同步：我用过 QQ同步助手、豌豆荚、SIM卡信息导出+Excel整理、刷机软件等各种工具，QQ同步助手、QQ邮箱同步等功能在一些版本的手机上出现了重大兼容性问题，SIM卡信息导入">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用华为手机克隆快速实现数据的导入导出">
+<meta property="og:url" content="https://faradays-studio.gitee.io/202202272118/index.html">
+<meta property="og:site_name" content="Blog of Faradays&#39; Studio">
+<meta property="og:description" content="概述华为的手机克隆功能非常强大，通过该功能，可以实现两部手机之间包括通信录、通话记录、短信、APP等功能的快速迁移。 最近10多年中，我用了多种手机操作系统的手机，更换手机的时候，最困难的事情就是各种资料的同步：  通讯录同步：我用过 QQ同步助手、豌豆荚、SIM卡信息导出+Excel整理、刷机软件等各种工具，QQ同步助手、QQ邮箱同步等功能在一些版本的手机上出现了重大兼容性问题，SIM卡信息导入">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://faradays-studio.gitee.io/static/img/20220227-手机克隆/1搜索应用.jpg">
+<meta property="og:image" content="https://faradays-studio.gitee.io/static/img/20220227-手机克隆/2选择设备.jpg">
+<meta property="og:image" content="https://faradays-studio.gitee.io/static/img/20220227-手机克隆/2.1新设备-（选择手机类型后）.jpg">
+<meta property="og:image" content="https://faradays-studio.gitee.io/static/img/20220227-手机克隆/3发送数据中.jpg">
+<meta property="og:image" content="https://faradays-studio.gitee.io/static/img/20220227-手机克隆/4接收数据中.jpg">
+<meta property="og:image" content="https://faradays-studio.gitee.io/static/img/20220227-手机克隆/5发送完成.jpg">
+<meta property="og:image" content="https://faradays-studio.gitee.io/static/img/20220227-手机克隆/6迁移完成.jpg">
+<meta property="article:published_time" content="2022-02-27T13:18:58.000Z">
+<meta property="article:modified_time" content="2022-03-07T13:15:37.664Z">
+<meta property="article:author" content="David">
+<meta property="article:tag" content="华为">
+<meta property="article:tag" content="手机">
+<meta property="article:tag" content="克隆">
+<meta property="article:tag" content="导入">
+<meta property="article:tag" content="导出">
+<meta property="article:tag" content="QQ同步助手">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://faradays-studio.gitee.io/static/img/20220227-手机克隆/1搜索应用.jpg">
+  
+  
+    <link rel="icon" href="/faradays.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/js/pace.min.js"></script>
+
+
+  <script>
+    
+    var hmt_site = window.location.host;
+    var isSite1 = 0;
+    if ( hmt_site.indexOf( "https://faradays-studio.gitee.io".substr(8) ) != -1) {
+        isSite1 = 1;
+    } else if ( hmt_site.indexOf( "https://faradays-studio.github.io".substr(8) ) != -1) {
+        isSite1 = 2;
+    }
+  </script>
+
+  
+
+  
+	<script>
+	var _hmt = _hmt || [];
+	var hmt_site = window.location.host;
+	(function() {
+	  var hm = document.createElement("script");
+	  if (isSite1 == 1 && true ){
+        hm.src = "//hm.baidu.com/hm.js?83a082b3997bdb4ac31a097af3ea3ea9";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      } else if (isSite1 == 2 && true ){
+        hm.src = "//hm.baidu.com/hm.js?dae0d921cd647933e274acc38340fe61";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+	  }
+	})();
+	</script>
+
+  
+
+
+
+  
+      <script type="text/javascript">
+        if ( isSite1 == 1 && true ){
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "5c9sqtgmtm");
+        } else if (isSite1 == 2 && false ){
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "");
+        }
+    </script>
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Blog of Faradays' Studio" type="application/atom+xml">
+</head>
+
+
+
+<body onload="javascript:switchBackground(1)">
+  <div id="container">
+
+      
+      
+        
+        <header id="header-post">
+    <div id="header-outer">
+
+        <!-- <div id="header-menu" class="header-menu-pos animated">  -->
+        
+        <div id="header-menu" class="header-menu-pos">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    
+                    <span class="site-title">Blog of Faradays&#39; Studio</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/timeline">
+                        <i class="fa fa-history"></i>
+                        <span>Timeline</span>
+                    </a>
+                    
+                    <a  href="/static-index.html">
+                        <i class="fa fa-suitcase"></i>
+                        <span>Static</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-exclamation-circle"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- <div id="header-description-post"></div> -->
+
+    </div>
+</header>
+      
+
+
+      <div class="outer">
+        <section id="main"  class="body-wrap"  >
+
+    <article id="post-用华为手机克隆功能快速实现手机数据的导入导出" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div id="article-inner-1" class="article-inner">
+
+    
+    <p class="banner" id="banner_x">
+
+    
+      <header class="article-header">
+        
+  
+
+    
+    
+        <h1 class="post-title" id="typed2" itemprop="name"></h1>
+    
+
+    
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-code-fork"></i>
+                  
+                  
+                      <a href="/categories/电脑爱好者/">
+                      电脑爱好者
+                      </a>
+                  
+              </li>
+          
+
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+        <li>
+          <i class="fa fa-calendar-plus-o"></i>  2022-02-27
+        </li>
+
+        
+        <li  class="faradays-author">
+            <i class="fa fa-user-o"></i>
+            <span>
+            
+            
+                
+                
+                    <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
+
+                    
+
+                    
+
+                    
+                
+
+            
+            </span>
+        </li>
+
+
+        
+        
+        <li>
+                <i class="fa fa-copyright"></i>
+                90%
+        </li>
+        
+
+        
+        <li><i class="fa fa-file-word-o"></i>
+            <span class="post-count">710 words</span>
+        </li>
+        <li><i class="fa fa-caret-square-o-right"></i>
+            <span class="post-count">2 min</span>
+        </li>
+      </ul>
+
+
+    </div>
+
+  
+
+
+      </header>
+    
+
+    
+    <div id="article-entry-1" class="article-entry post-content" itemprop="articleBody">
+            
+            <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>华为的手机克隆功能非常强大，通过该功能，可以实现两部手机之间包括通信录、通话记录、短信、APP等功能的快速迁移。</p>
+<p>最近10多年中，我用了多种手机操作系统的手机，更换手机的时候，最困难的事情就是各种资料的同步：</p>
+<ol>
+<li>通讯录同步：我用过 QQ同步助手、豌豆荚、SIM卡信息导出+Excel整理、刷机软件等各种工具，QQ同步助手、QQ邮箱同步等功能在一些版本的手机上出现了重大兼容性问题，SIM卡信息导入导出非常费精神，豌豆荚也一般般。综合比较下来，还是华为手机克隆功能最稳定，基本无须再进行更多的干预，特别是华为手机之间的信息同步，比手机自身携带的导入导出 VCard 功能还好用。</li>
+<li>程序配置同步：目前我并不了解程序配置同步的方法；只能盲目地整体拷贝手机整个目录。</li>
+<li>系统配置同步：华为等多家手机系统具备账户同步功能。</li>
+</ol>
+<p>因此，一个“华为手机克隆”功能完成上述诉求，还是挺不错的。</p>
+<p>操作过程如下：</p>
+<h2 id="打开-WIFI"><a href="#打开-WIFI" class="headerlink" title="打开 WIFI"></a>打开 WIFI</h2><ol>
+<li>分别开启 2 台手机的 WiFi 功能；</li>
+</ol>
+<h2 id="打开应用"><a href="#打开应用" class="headerlink" title="打开应用"></a>打开应用</h2><ol start="2">
+<li><p>通过搜索功能，快速找到 <code>手机克隆</code> 应用，对于非华为手机，可能需要人为安装该应用程序；</p>
+ <center><img src="/static/img/20220227-手机克隆/1搜索应用.jpg" width="30%"></center>
+
+</li>
+</ol>
+<h2 id="选择设备类型"><a href="#选择设备类型" class="headerlink" title="选择设备类型"></a>选择设备类型</h2><ol start="3">
+<li><p>搜索打开“手机克隆”，根据实际情况选择 <code>这是新设备</code>、<code>这是旧设备</code>，如左图；</p>
+<ul>
+<li><p>对于新设备，根据实际选择手机品牌，并出现一个二维码界面，如右图：</p>
+</li>
+<li><p>对于老设备，选择后进入扫描窗口，用该扫描窗口去扫描新设备的二维码，等待1分钟左右完成系统关联。</p>
+<center><img src="/static/img/20220227-手机克隆/2选择设备.jpg" width="30%">
+  &emsp;→&emsp;<img src="/static/img/20220227-手机克隆/2.1新设备-（选择手机类型后）.jpg" width="30%">
+</center>
+
+
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="选择数据"><a href="#选择数据" class="headerlink" title="选择数据"></a>选择数据</h2><ol start="4">
+<li>选择需要同步的数据；</li>
+</ol>
+<h2 id="执行同步"><a href="#执行同步" class="headerlink" title="执行同步"></a>执行同步</h2><ol start="5">
+<li>等待同步同步完成，如下（数据同步速度还非常快的！）：</li>
+</ol>
+<center><figure>
+    <img src="/static/img/20220227-手机克隆/3发送数据中.jpg" width="30%">
+    &emsp;&emsp;<img src="/static/img/20220227-手机克隆/4接收数据中.jpg" width="30%">
+</figure></center>
+
+<h2 id="同步后自动导入"><a href="#同步后自动导入" class="headerlink" title="同步后自动导入"></a>同步后自动导入</h2><ol start="6">
+<li><p>同步完成，新手机会自动执行导入操作（比如通话录音、照片等等）：</p>
+<ul>
+<li><p>旧设备显示完成，如左图</p>
+</li>
+<li><p>新设备文件拷贝完成后，自动进行导入操作，如右图：</p>
+  <center>
+      <img src="/static/img/20220227-手机克隆/5发送完成.jpg" width="30%">
+      &emsp;&emsp;<img src="/static/img/20220227-手机克隆/6迁移完成.jpg" width="30%">
+  </center>
+
+</li>
+</ul>
+</li>
+</ol>
+<p>同步完成后，新手机就可以直接使用了，除了微信、QQ、网银等部分账户需要重新登录外，部分应用甚至都不需要重新登录… 克隆至此完成。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><p>点亮～黑夜. <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41010198/article/details/86639739">Markdwon中多张图片的并排显示</a> [EB/OL]. <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41010198/article/details/86639739">https://blog.csdn.net/weixin_41010198/article/details/86639739</a>, 2022/03/07.</p>
+</li>
+<li><p>jerry谁便看看. <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/c37f200c0d9c">markdown技巧-图片并排</a> [EB/OL]. <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/c37f200c0d9c">https://www.jianshu.com/p/c37f200c0d9c</a>, 2022/03/07.</p>
+</li>
+</ol>
+
+            <div class="post-copyright">
+
+    
+    <br /><br /><br />
+    <div id="copyright-content" class="content">
+        
+        <p>最后更新： 2022/03/07 21:15:37</p>
+        <p>
+                
+                
+                    
+                        
+                            作者：
+                        
+                    <a target="_blank" rel="noopener" href="https://faradays-studio.github.io/">David Faraday</a>
+                
+
+                
+
+                
+
+                
+        </p>
+
+        
+        
+
+
+        
+        <p>主用链接：
+            
+                <a class="post-url" href="https://faradays-studio.gitee.io/202202272118/" title="用华为手机克隆快速实现数据的导入导出">
+                https://faradays-studio.gitee.io/202202272118/
+                </a>
+            
+        </p>
+
+        
+        <p>备用链接： <a class="post-url" target="_blank" rel="noopener" href="https://faradays-studio.github.io/202202272118/" title="用华为手机克隆快速实现数据的导入导出">
+            https://faradays-studio.github.io/202202272118/</a>
+        </p>
+        
+
+        
+        
+            <p>
+            许可协议： <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"  title="创作共用许可协议：署名-非商业性-相同方式共享" target="_blank"  rel="external nofollow">CC BY-NC-SA 4.0</a>.
+            </p>
+        
+
+        
+        <footer></footer>
+    </div>
+</div>
+
+    </div>
+
+    <footer class="article-footer">
+        
+        
+            
+<div class="page-reward"  style="display: inline-block;">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">大方打赏，关爱永继~</span>
+    <div class="reward-content">
+        <div class="reward-code">
+            
+            <table style="float:center; margin:auto;" cellspacing="3">
+                <tr>
+                <td><img src="/images/%E5%BE%AE%E4%BF%A1-%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="微信"></td>
+                <td><img src="/images/%E6%94%AF%E4%BB%98%E5%AE%9D-%E6%94%B6%E6%AC%BE%E7%A0%81.jpg" alt="支付宝"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="reward-select">
+        </div>
+    </div>
+</div>
+
+
+            
+            
+
+<div class="page-contact">
+    
+        <a title="QQ联系博主" href="http://wpa.qq.com/msgrd?v=3&uin=189392385&site=qq&menu=yes" target="_blank">
+            <i class="fa fa-qq"></i>
+        </a>
+    
+
+    
+        <a title="邮件联系博主" href="mailto:yvany@qq.com" target="_blank">
+            <i class="fa fa-envelope"></i>
+        </a>
+    
+</div>
+
+        
+
+        
+        
+<div class="post-share">
+<!-- <div class="post-share" style="display: inline-block;"> -->
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://faradays-studio.gitee.io/202202272118/&title=《用华为手机克隆快速实现数据的导入导出》 — Blog of Faradays' Studio&pic=https://faradays-studio.gitee.ioimages/faradays-A01.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://faradays-studio.gitee.io/202202272118/&title=《用华为手机克隆快速实现数据的导入导出》 — Blog of Faradays' Studio&source=自信人生二百里，会当击水三千里！" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://faradays-studio.gitee.io/202202272118/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《用华为手机克隆快速实现数据的导入导出》 — Blog of Faradays' Studio&url=https://faradays-studio.gitee.io/202202272118/&via=https://faradays-studio.gitee.io" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://faradays-studio.gitee.io/202202272118/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://faradays-studio.gitee.io/202202272118/" alt="微信分享二维码">
+</div>
+
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu" >
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/华为/" class="color3">华为</a>
+      
+    <a href="/tags/手机/" class="color3">手机</a>
+      
+    <a href="/tags/克隆/" class="color3">克隆</a>
+      
+    <a href="/tags/导入/" class="color3">导入</a>
+      
+    <a href="/tags/导出/" class="color3">导出</a>
+      
+    <a href="/tags/QQ同步助手/" class="color2">QQ同步助手</a>
+      
+  </li>
+
+        </ul>
+    </footer>
+  </div>
+</article>
+
+    
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <!-- <nav class="post-toc-wrap"> -->
+        <nav class="tocbot">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="post-toc-text">概述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%89%93%E5%BC%80-WIFI"><span class="post-toc-text">打开 WIFI</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%89%93%E5%BC%80%E5%BA%94%E7%94%A8"><span class="post-toc-text">打开应用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%80%89%E6%8B%A9%E8%AE%BE%E5%A4%87%E7%B1%BB%E5%9E%8B"><span class="post-toc-text">选择设备类型</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%80%89%E6%8B%A9%E6%95%B0%E6%8D%AE"><span class="post-toc-text">选择数据</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%89%A7%E8%A1%8C%E5%90%8C%E6%AD%A5"><span class="post-toc-text">执行同步</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%90%8C%E6%AD%A5%E5%90%8E%E8%87%AA%E5%8A%A8%E5%AF%BC%E5%85%A5"><span class="post-toc-text">同步后自动导入</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="post-toc-text">参考文献</span></a></li></ol>
+        </nav>
+    </aside>
+    
+    
+<nav id="article-nav">
+  
+  
+    <a href="/202202272114/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">用iptables管理防火墙策略</span>
+      <!-- <i class="fa fa-hand-o-right" aria-hidden="true"></i>  -->
+      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+        
+
+
+    
+    
+        <link rel="stylesheet" href="/css/gitalk.css">
+        <script src="/js/gitalk.min.js"></script>
+    
+
+    <div id="gitalk-faradays">
+
+    </div>
+
+
+
+    
+    <script>
+
+    if (isSite1 == 2){
+        // github 站
+        
+        const gitalk = new Gitalk({
+            clientID: '90b449ff273a263117ec',
+            clientSecret: '0a3ccea67a4d3f03cbff012eeac1a8547e367aad',
+            repo: 'faradays-studio.github.io',      
+            owner: 'faradays-studio',
+            admin: ['faradays-studio'],
+            id: location.pathname, 
+            labels: ['gitalk', 'post-comment', '博客评论'],
+            perPage: 3,
+            distractionFreeMode: false  
+            });
+        gitalk.render('gitalk-faradays');
+    } else {
+        // gitee 站
+         
+        const gitalk = new Gitalk({
+            clientID: 'c2b078c0b4799f519b96',
+            clientSecret: 'fab5fe7470b3d790db0e90e4ac58d5b5aa3bda11',
+            repo: 'faradays-studio.github.io',      
+            owner: 'faradays-studio',
+            admin: ['faradays-studio'],
+            id: location.pathname, 
+            labels: ['gitalk', 'post-comment', '博客评论'],
+            perPage: 3,
+            distractionFreeMode: false  
+            });
+        gitalk.render('gitalk-faradays');
+    }
+
+    </script>
+    
+    
+
+
+
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script> -->
+
+<script src="/js/typed.min.js"></script>
+
+<script>
+    var typed2 = new Typed("#typed2", {
+    strings: ['用华为手机克隆快速实现数据的导入导出'],
+    startDelay: 168,
+    typeSpeed: 100,
+    loop: false,
+    backSpeed: 0,
+    showCursor: false
+    });
+</script>
+</section>
+        
+
+        
+        
+      </div>
+
+    
+      
+      <footer id="footer">
+        <div class="outer">
+        
+
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>&emsp;
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+
+    
+    &emsp;总文本数：<span class="post-count">38.6k</span>
+</p>
+
+
+      <p>All posts licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" title="Creative Commons license: Attribution-Noncommercial-ShareAlike" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a>. </p>
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank" rel="external nofollow">Hexo,   </a>
+        with <a href="https://github.com/faradays-studio/faradays-studio.github.io" target="_blank" rel="external nofollow">Faradays</a> <span style="font-size:8px;"><a href="/202006071600/" target="_blank">v0.2.13</a></span>. &copy; 2018-2022 <a href="https://faradays-studio.gitee.io" target="_blank" rel="external nofollow">Faradays&#39; Studio</a><br>
+      
+      </p>
+    </div>
+
+
+        </div>
+      </footer>
+      
+
+    <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>  -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css"> -->
+<!-- @import "css/tocbot.css" -->
+
+<script src="/js/tocbot.js"></script>
+
+
+<!-- <div class="tocbot" style="position:absolute;left:3px;top:350px;max-width:15%;max-height:400px;border-radius:3px;line-height:23px;color:#111;background:rgba(88, 88, 88, 0)"></div> -->
+<script>
+  // Tocbo  http://tscanlin.github.io/tocbot/
+</script>
+
+
+
+<script>
+  
+  var WebConfig = {
+      root: "https://faradays-studio.gitee.io",
+      animate: false,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-mode" title="Daylight" onClick="javascript:switchBackground(1)">
+        <i class="fa fa-sun-o"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/%E5%8A%9E%E4%BA%8B%E6%8C%87%E5%8D%97/">办事指南</a><a class="category-link" href="/categories/%E5%9D%90%E4%BA%95%E8%A7%82%E5%A4%A9/">坐井观天</a><a class="category-link" href="/categories/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E9%AD%94%E6%B3%95/">工作中的魔法</a><a class="category-link" href="/categories/%E6%88%91%E5%92%8Chexo%E6%9C%89%E4%B8%AA%E7%BA%A6%E4%BC%9A/">我和hexo有个约会</a><a class="category-link" href="/categories/%E6%98%9F%E6%98%9F%E5%BF%83%E4%BA%8B/">星星心事</a><a class="category-link" href="/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/">电脑爱好者</a><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/">编程笔记</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/" style="font-size: 10px;">$</a> <a href="/tags/2020/" style="font-size: 10px;">2020</a> <a href="/tags/2021/" style="font-size: 10px;">2021</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/Arch/" style="font-size: 10px;">Arch</a> <a href="/tags/CentOS/" style="font-size: 15.71px;">CentOS</a> <a href="/tags/Django/" style="font-size: 10px;">Django</a> <a href="/tags/GCC/" style="font-size: 10px;">GCC</a> <a href="/tags/IP/" style="font-size: 11.43px;">IP</a> <a href="/tags/JavaScript/" style="font-size: 12.86px;">JavaScript</a> <a href="/tags/Jieba/" style="font-size: 10px;">Jieba</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/Manjaro/" style="font-size: 10px;">Manjaro</a> <a href="/tags/Margin-Call/" style="font-size: 10px;">Margin Call</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/Office/" style="font-size: 10px;">Office</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/Python/" style="font-size: 14.29px;">Python</a> <a href="/tags/QQ%E5%90%8C%E6%AD%A5%E5%8A%A9%E6%89%8B/" style="font-size: 10px;">QQ同步助手</a> <a href="/tags/SVG/" style="font-size: 11.43px;">SVG</a> <a href="/tags/Solaris/" style="font-size: 11.43px;">Solaris</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/VirtualBox/" style="font-size: 10px;">VirtualBox</a> <a href="/tags/Windows/" style="font-size: 12.86px;">Windows</a> <a href="/tags/Word/" style="font-size: 10px;">Word</a> <a href="/tags/WordCloud/" style="font-size: 10px;">WordCloud</a> <a href="/tags/ag/" style="font-size: 10px;">ag</a> <a href="/tags/all/" style="font-size: 10px;">all</a> <a href="/tags/aria2/" style="font-size: 10px;">aria2</a> <a href="/tags/authenticator/" style="font-size: 10px;">authenticator</a> <a href="/tags/bash/" style="font-size: 14.29px;">bash</a> <a href="/tags/bat/" style="font-size: 10px;">bat</a> <a href="/tags/chattr/" style="font-size: 10px;">chattr</a> <a href="/tags/csh/" style="font-size: 14.29px;">csh</a> <a href="/tags/exclude/" style="font-size: 10px;">exclude</a> <a href="/tags/faradays/" style="font-size: 10px;">faradays</a> <a href="/tags/filter/" style="font-size: 10px;">filter</a> <a href="/tags/for/" style="font-size: 10px;">for</a> <a href="/tags/fzf/" style="font-size: 10px;">fzf</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/google/" style="font-size: 10px;">google</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/hexo/" style="font-size: 11.43px;">hexo</a> <a href="/tags/hexo-theme-faradays/" style="font-size: 10px;">hexo-theme-faradays</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/iptables/" style="font-size: 10px;">iptables</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/pacman/" style="font-size: 10px;">pacman</a> <a href="/tags/pandas/" style="font-size: 10px;">pandas</a> <a href="/tags/pip/" style="font-size: 10px;">pip</a> <a href="/tags/printf/" style="font-size: 10px;">printf</a> <a href="/tags/shell/" style="font-size: 17.14px;">shell</a> <a href="/tags/sqlite/" style="font-size: 11.43px;">sqlite</a> <a href="/tags/svg-js/" style="font-size: 11.43px;">svg.js</a> <a href="/tags/tmux/" style="font-size: 10px;">tmux</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/while/" style="font-size: 10px;">while</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/zerofree/" style="font-size: 10px;">zerofree</a> <a href="/tags/zsh/" style="font-size: 10px;">zsh</a> <a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 11.43px;">下载</a> <a href="/tags/%E4%B8%93%E5%88%A9/" style="font-size: 10px;">专利</a> <a href="/tags/%E4%BB%A3%E7%A0%81/" style="font-size: 10px;">代码</a> <a href="/tags/%E4%BD%A0%E5%A5%BD/" style="font-size: 10px;">你好</a> <a href="/tags/%E5%85%8B%E9%9A%86/" style="font-size: 10px;">克隆</a> <a href="/tags/%E5%85%B3%E9%94%AE/" style="font-size: 10px;">关键</a> <a href="/tags/%E5%86%B7%E6%9D%BF%E5%87%B3/" style="font-size: 10px;">冷板凳</a> <a href="/tags/%E5%88%86%E6%A0%8F/" style="font-size: 10px;">分栏</a> <a href="/tags/%E5%88%86%E8%AF%8D/" style="font-size: 10px;">分词</a> <a href="/tags/%E5%88%86%E9%9A%94%E7%AC%A6/" style="font-size: 10px;">分隔符</a> <a href="/tags/%E5%88%A4%E6%96%AD/" style="font-size: 11.43px;">判断</a> <a href="/tags/%E5%8A%A0%E9%80%9F/" style="font-size: 11.43px;">加速</a> <a href="/tags/%E5%8D%8E%E4%B8%BA/" style="font-size: 10px;">华为</a> <a href="/tags/%E5%8E%8B%E7%BC%A9/" style="font-size: 10px;">压缩</a> <a href="/tags/%E5%8F%8C%E5%9B%A0%E5%AD%90/" style="font-size: 10px;">双因子</a> <a href="/tags/%E5%8F%98%E9%87%8F/" style="font-size: 10px;">变量</a> <a href="/tags/%E5%95%86%E6%B5%B7%E9%80%9A%E7%89%92/" style="font-size: 10px;">商海通牒</a> <a href="/tags/%E5%9B%BD%E5%86%85%E6%BA%90/" style="font-size: 12.86px;">国内源</a> <a href="/tags/%E5%A4%9A%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/" style="font-size: 10px;">多条件查询</a> <a href="/tags/%E5%A5%8B%E6%96%97/" style="font-size: 10px;">奋斗</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AE%89%E8%A3%85/" style="font-size: 18.57px;">安装</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E5%AF%BC%E5%85%A5/" style="font-size: 10px;">导入</a> <a href="/tags/%E5%AF%BC%E5%87%BA/" style="font-size: 10px;">导出</a> <a href="/tags/%E5%BD%B1%E8%AF%84/" style="font-size: 10px;">影评</a> <a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 10px;">总结</a> <a href="/tags/%E6%88%90%E5%8A%9F/" style="font-size: 10px;">成功</a> <a href="/tags/%E6%89%8B%E6%9C%BA/" style="font-size: 10px;">手机</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 11.43px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 10px;">数据库</a> <a href="/tags/%E6%96%B9%E6%B3%95/" style="font-size: 10px;">方法</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 11.43px;">日志</a> <a href="/tags/%E6%9D%83%E9%99%90/" style="font-size: 10px;">权限</a> <a href="/tags/%E6%9F%A5%E8%AF%A2/" style="font-size: 11.43px;">查询</a> <a href="/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/" style="font-size: 10px;">格式化</a> <a href="/tags/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/" style="font-size: 10px;">电脑爱好者</a> <a href="/tags/%E7%A7%91%E7%A0%94/" style="font-size: 10px;">科研</a> <a href="/tags/%E7%BC%96%E8%AF%91/" style="font-size: 14.29px;">编译</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 10px;">网络安全</a> <a href="/tags/%E8%84%9A%E6%9C%AC/" style="font-size: 10px;">脚本</a> <a href="/tags/%E8%84%9A%E6%B3%A8/" style="font-size: 10px;">脚注</a> <a href="/tags/%E8%8B%A6/" style="font-size: 10px;">苦</a> <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 10px;">虚拟机</a> <a href="/tags/%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 11.43px;">表达式</a> <a href="/tags/%E8%AE%BA%E6%96%87/" style="font-size: 11.43px;">论文</a> <a href="/tags/%E8%AF%8D%E4%BA%91%E5%9B%BE/" style="font-size: 10px;">词云图</a> <a href="/tags/%E8%AF%8D%E9%A2%91/" style="font-size: 10px;">词频</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 12.86px;">语法</a> <a href="/tags/%E8%BD%AF%E8%91%97/" style="font-size: 10px;">软著</a> <a href="/tags/%E8%BF%9C%E7%A8%8B/" style="font-size: 11.43px;">远程</a> <a href="/tags/%E8%BF%BD%E6%B1%82%E5%8D%93%E8%B6%8A/" style="font-size: 10px;">追求卓越</a> <a href="/tags/%E9%85%8D%E7%BD%AE/" style="font-size: 15.71px;">配置</a> <a href="/tags/%E9%94%81%E5%AE%9A/" style="font-size: 10px;">锁定</a> <a href="/tags/%E9%98%B2%E7%81%AB%E5%A2%99/" style="font-size: 10px;">防火墙</a> <a href="/tags/%E9%99%90%E5%88%B6/" style="font-size: 11.43px;">限制</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 12.86px;">随笔</a> <a href="/tags/%E9%A2%86%E5%AF%BC/" style="font-size: 10px;">领导</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/timeline">
+                    <i class="fa fa-history"></i><span>Timeline</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/static-index.html">
+                    <i class="fa fa-suitcase"></i><span>Static</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-exclamation-circle"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/" style="font-size: 10px;">$</a> <a href="/tags/2020/" style="font-size: 10px;">2020</a> <a href="/tags/2021/" style="font-size: 10px;">2021</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/Arch/" style="font-size: 10px;">Arch</a> <a href="/tags/CentOS/" style="font-size: 15.71px;">CentOS</a> <a href="/tags/Django/" style="font-size: 10px;">Django</a> <a href="/tags/GCC/" style="font-size: 10px;">GCC</a> <a href="/tags/IP/" style="font-size: 11.43px;">IP</a> <a href="/tags/JavaScript/" style="font-size: 12.86px;">JavaScript</a> <a href="/tags/Jieba/" style="font-size: 10px;">Jieba</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/MacOS/" style="font-size: 10px;">MacOS</a> <a href="/tags/Macbook/" style="font-size: 10px;">Macbook</a> <a href="/tags/Manjaro/" style="font-size: 10px;">Manjaro</a> <a href="/tags/Margin-Call/" style="font-size: 10px;">Margin Call</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/Office/" style="font-size: 10px;">Office</a> <a href="/tags/PE/" style="font-size: 10px;">PE</a> <a href="/tags/Python/" style="font-size: 14.29px;">Python</a> <a href="/tags/QQ%E5%90%8C%E6%AD%A5%E5%8A%A9%E6%89%8B/" style="font-size: 10px;">QQ同步助手</a> <a href="/tags/SVG/" style="font-size: 11.43px;">SVG</a> <a href="/tags/Solaris/" style="font-size: 11.43px;">Solaris</a> <a href="/tags/U%E7%9B%98/" style="font-size: 10px;">U盘</a> <a href="/tags/VirtualBox/" style="font-size: 10px;">VirtualBox</a> <a href="/tags/Windows/" style="font-size: 12.86px;">Windows</a> <a href="/tags/Word/" style="font-size: 10px;">Word</a> <a href="/tags/WordCloud/" style="font-size: 10px;">WordCloud</a> <a href="/tags/ag/" style="font-size: 10px;">ag</a> <a href="/tags/all/" style="font-size: 10px;">all</a> <a href="/tags/aria2/" style="font-size: 10px;">aria2</a> <a href="/tags/authenticator/" style="font-size: 10px;">authenticator</a> <a href="/tags/bash/" style="font-size: 14.29px;">bash</a> <a href="/tags/bat/" style="font-size: 10px;">bat</a> <a href="/tags/chattr/" style="font-size: 10px;">chattr</a> <a href="/tags/csh/" style="font-size: 14.29px;">csh</a> <a href="/tags/exclude/" style="font-size: 10px;">exclude</a> <a href="/tags/faradays/" style="font-size: 10px;">faradays</a> <a href="/tags/filter/" style="font-size: 10px;">filter</a> <a href="/tags/for/" style="font-size: 10px;">for</a> <a href="/tags/fzf/" style="font-size: 10px;">fzf</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/google/" style="font-size: 10px;">google</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/hexo/" style="font-size: 11.43px;">hexo</a> <a href="/tags/hexo-theme-faradays/" style="font-size: 10px;">hexo-theme-faradays</a> <a href="/tags/if/" style="font-size: 10px;">if</a> <a href="/tags/iptables/" style="font-size: 10px;">iptables</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/pacman/" style="font-size: 10px;">pacman</a> <a href="/tags/pandas/" style="font-size: 10px;">pandas</a> <a href="/tags/pip/" style="font-size: 10px;">pip</a> <a href="/tags/printf/" style="font-size: 10px;">printf</a> <a href="/tags/shell/" style="font-size: 17.14px;">shell</a> <a href="/tags/sqlite/" style="font-size: 11.43px;">sqlite</a> <a href="/tags/svg-js/" style="font-size: 11.43px;">svg.js</a> <a href="/tags/tmux/" style="font-size: 10px;">tmux</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/while/" style="font-size: 10px;">while</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a> <a href="/tags/zerofree/" style="font-size: 10px;">zerofree</a> <a href="/tags/zsh/" style="font-size: 10px;">zsh</a> <a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 11.43px;">下载</a> <a href="/tags/%E4%B8%93%E5%88%A9/" style="font-size: 10px;">专利</a> <a href="/tags/%E4%BB%A3%E7%A0%81/" style="font-size: 10px;">代码</a> <a href="/tags/%E4%BD%A0%E5%A5%BD/" style="font-size: 10px;">你好</a> <a href="/tags/%E5%85%8B%E9%9A%86/" style="font-size: 10px;">克隆</a> <a href="/tags/%E5%85%B3%E9%94%AE/" style="font-size: 10px;">关键</a> <a href="/tags/%E5%86%B7%E6%9D%BF%E5%87%B3/" style="font-size: 10px;">冷板凳</a> <a href="/tags/%E5%88%86%E6%A0%8F/" style="font-size: 10px;">分栏</a> <a href="/tags/%E5%88%86%E8%AF%8D/" style="font-size: 10px;">分词</a> <a href="/tags/%E5%88%86%E9%9A%94%E7%AC%A6/" style="font-size: 10px;">分隔符</a> <a href="/tags/%E5%88%A4%E6%96%AD/" style="font-size: 11.43px;">判断</a> <a href="/tags/%E5%8A%A0%E9%80%9F/" style="font-size: 11.43px;">加速</a> <a href="/tags/%E5%8D%8E%E4%B8%BA/" style="font-size: 10px;">华为</a> <a href="/tags/%E5%8E%8B%E7%BC%A9/" style="font-size: 10px;">压缩</a> <a href="/tags/%E5%8F%8C%E5%9B%A0%E5%AD%90/" style="font-size: 10px;">双因子</a> <a href="/tags/%E5%8F%98%E9%87%8F/" style="font-size: 10px;">变量</a> <a href="/tags/%E5%95%86%E6%B5%B7%E9%80%9A%E7%89%92/" style="font-size: 10px;">商海通牒</a> <a href="/tags/%E5%9B%BD%E5%86%85%E6%BA%90/" style="font-size: 12.86px;">国内源</a> <a href="/tags/%E5%A4%9A%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/" style="font-size: 10px;">多条件查询</a> <a href="/tags/%E5%A5%8B%E6%96%97/" style="font-size: 10px;">奋斗</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E8%BF%90%E7%AE%97/" style="font-size: 10px;">字符运算</a> <a href="/tags/%E5%AE%89%E8%A3%85/" style="font-size: 18.57px;">安装</a> <a href="/tags/%E5%AF%86%E7%A0%81/" style="font-size: 10px;">密码</a> <a href="/tags/%E5%AF%BC%E5%85%A5/" style="font-size: 10px;">导入</a> <a href="/tags/%E5%AF%BC%E5%87%BA/" style="font-size: 10px;">导出</a> <a href="/tags/%E5%BD%B1%E8%AF%84/" style="font-size: 10px;">影评</a> <a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 10px;">总结</a> <a href="/tags/%E6%88%90%E5%8A%9F/" style="font-size: 10px;">成功</a> <a href="/tags/%E6%89%8B%E6%9C%BA/" style="font-size: 10px;">手机</a> <a href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" style="font-size: 11.43px;">批处理</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 10px;">数据库</a> <a href="/tags/%E6%96%B9%E6%B3%95/" style="font-size: 10px;">方法</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 11.43px;">日志</a> <a href="/tags/%E6%9D%83%E9%99%90/" style="font-size: 10px;">权限</a> <a href="/tags/%E6%9F%A5%E8%AF%A2/" style="font-size: 11.43px;">查询</a> <a href="/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/" style="font-size: 10px;">格式化</a> <a href="/tags/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/" style="font-size: 10px;">电脑爱好者</a> <a href="/tags/%E7%A7%91%E7%A0%94/" style="font-size: 10px;">科研</a> <a href="/tags/%E7%BC%96%E8%AF%91/" style="font-size: 14.29px;">编译</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 10px;">网络安全</a> <a href="/tags/%E8%84%9A%E6%9C%AC/" style="font-size: 10px;">脚本</a> <a href="/tags/%E8%84%9A%E6%B3%A8/" style="font-size: 10px;">脚注</a> <a href="/tags/%E8%8B%A6/" style="font-size: 10px;">苦</a> <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 10px;">虚拟机</a> <a href="/tags/%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 11.43px;">表达式</a> <a href="/tags/%E8%AE%BA%E6%96%87/" style="font-size: 11.43px;">论文</a> <a href="/tags/%E8%AF%8D%E4%BA%91%E5%9B%BE/" style="font-size: 10px;">词云图</a> <a href="/tags/%E8%AF%8D%E9%A2%91/" style="font-size: 10px;">词频</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 12.86px;">语法</a> <a href="/tags/%E8%BD%AF%E8%91%97/" style="font-size: 10px;">软著</a> <a href="/tags/%E8%BF%9C%E7%A8%8B/" style="font-size: 11.43px;">远程</a> <a href="/tags/%E8%BF%BD%E6%B1%82%E5%8D%93%E8%B6%8A/" style="font-size: 10px;">追求卓越</a> <a href="/tags/%E9%85%8D%E7%BD%AE/" style="font-size: 15.71px;">配置</a> <a href="/tags/%E9%94%81%E5%AE%9A/" style="font-size: 10px;">锁定</a> <a href="/tags/%E9%98%B2%E7%81%AB%E5%A2%99/" style="font-size: 10px;">防火墙</a> <a href="/tags/%E9%99%90%E5%88%B6/" style="font-size: 11.43px;">限制</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 12.86px;">随笔</a> <a href="/tags/%E9%A2%86%E5%AF%BC/" style="font-size: 10px;">领导</a>
+        </div>
+    </div>
+
+    <div class="mobile-header-operation-container">
+        <div class="title">Operation</div>
+
+        <span style="display:inline-block;" id="sidebar-mode" title="Daylight" onClick="javascript:switchBackground(1)">
+            <i class="fa fa-lightbulb-o"></i></span>
+
+        
+        <span class="cmd-logo" style="display:inline-block;"  title="Show/Hide TOC" onClick="javascript:showTocOrNot()">
+        <i class="fa fa-bookmark"></i></span>
+    </div>
+
+
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+
+<script src="/js/search.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+<script>
+function switchBackground(type_1){
+    //console.log(Date.now() + "   切换背景色功能启动！");
+    var daylight = document.cookie.replace(/(?:(?:^|.*;\s*)daylight\s*\=\s*([^;]*).*$)|^.*$/, "$1");  // 获取本地 cookies 
+    //console.log(document.cookie);
+    //console.log("cookies值： " + daylight);
+
+    if (type_1 === undefined) {
+          type_1 = 0;  
+    } else {
+        
+        if(daylight == '1'){
+            daylight = '0';
+        } else {
+            daylight = '1';
+        }
+    }
+
+
+    var ele_1 = document.getElementById("container");  
+    //console.log(ele_1.innerHTML);
+
+    var ele_2 = document.getElementById("footer");  
+    var ele_3 = document.getElementsByClassName("article-entry");  
+    //console.log(ele_3);
+    var ele_4 = document.getElementsByClassName("article-inner");  
+    var ele_5 = document.getElementsByTagName("blockquote");  
+    var ele_6 = document.getElementsByClassName("hljs");  
+    var ele_7 = document.getElementsByClassName("highlight");  
+    var ele_10 = document.getElementsByTagName("pre");  
+    var ele_8 = document.getElementById("copyright-content");  
+    var ele_9 = document.getElementsByTagName("code");  
+    var ele_11 = document.getElementsByClassName("archive-article-inner");  
+
+    var ele_0 = document.getElementById("sidebar-mode");  
+    //console.log(ele_0.innerHTML);
+
+
+    
+    function darker(){
+        document.body.classList.add('night-1');
+
+        //ele_1.classList.add('night-2'); 
+
+        if(ele_2 != null){
+            ele_2.classList.add('night-1')
+        }
+
+        //console.log(daylight + " = 夜间模式");
+        if(ele_3.length > 0){
+            for (i = 0; i < ele_3.length; i++) {
+              ele_3[i].classList.add('night-2');
+              ele_4[i].classList.add('night-2');
+              //ele_3[i].style.backgroundColor = "red";
+            }
+        }
+
+        if(ele_5.length > 0){
+            for (i = 0; i < ele_5.length; i++) {
+              ele_5[i].classList.add('night-1');
+            }
+        }
+
+
+        if(ele_9.length > 0){
+            for (i = 0; i < ele_9.length; i++) {
+              ele_9[i].classList.add('night-2');
+            }
+        }
+
+        if(ele_6.length > 0){
+            for (i = 0; i < ele_6.length; i++) {
+              //ele_6[i].classList.remove('night-2');
+              ele_6[i].classList.add('night-3');  
+              //ele_7[i].classList.add('night-2');
+              ele_10[i].classList.add('night-2');
+            }
+        }
+
+        
+        if(ele_7.length > 0){
+            for (i = 0; i < ele_7.length; i++) {
+              ele_7[i].classList.add('night-2');
+            }
+        }
+
+        if(ele_8 != null){
+            ele_8.classList.add('night-1')
+        }
+
+        if(ele_11.length > 0){
+            for (i = 0; i < ele_11.length; i++) {
+              ele_11[i].classList.add('night-2');
+            }
+        }
+
+        ele_0.innerHTML = "<i class='fa fa-moon-o'></i>";  
+        //console.log(ele_0.innerHTML);
+        ele_0.setAttribute("title","Click to Daylight");
+
+        document.cookie = "daylight=0; path=/";
+        console.log('已切至夜间模式！');
+    }
+
+
+    
+    function lighter(){
+        document.body.classList.remove('night-1');
+
+        //ele_1.classList.remove('night-2');
+
+        if(ele_2 != null){
+            ele_2.classList.remove('night-1')
+        }
+
+        //console.log(daylight + " = 日间模式");
+        if(ele_3.length > 0){
+            for (i = 0; i < ele_3.length; i++) {
+              ele_3[i].classList.remove('night-2');
+              ele_4[i].classList.remove('night-2');
+            }
+        }
+
+        if(ele_5.length > 0){
+            for (i = 0; i < ele_5.length; i++) {
+              ele_5[i].classList.remove('night-1');
+            }
+        }
+
+        if(ele_6.length > 0){
+            for (i = 0; i < ele_6.length; i++) {
+              ele_6[i].classList.remove('night-3');
+              //ele_7[i].classList.remove('night-2');
+              ele_10[i].classList.remove('night-2');
+            }
+        }
+        if(ele_7.length > 0){
+            for (i = 0; i < ele_7.length; i++) {
+              ele_7[i].classList.remove('night-2');
+            }
+        }
+
+        if(ele_8 != null){
+            ele_8.classList.remove('night-1')
+        }
+
+        if(ele_9.length > 0){
+            for (i = 0; i < ele_9.length; i++) {
+              ele_9[i].classList.remove('night-2');
+            }
+        }
+
+        if(ele_11.length > 0){
+            for (i = 0; i < ele_11.length; i++) {
+              ele_11[i].classList.remove('night-2');
+            }
+        }
+
+        ele_0.innerHTML = "<i class='fa fa-sun-o'></i>";
+        //console.log(ele_0.innerHTML);
+        ele_0.setAttribute("title","Click to Nightlight");
+
+        document.cookie = "daylight=1; path=/";
+        console.log('已切至日间模式！');
+    }
+
+
+
+    
+    if(daylight == null){
+        lighter();
+    } else if(daylight == '0'){
+        darker();
+    }else{
+        lighter();
+    }
+    //console.log("cookies 最新值： " + daylight);
+}
+
+</script>
+
+
+
+<script>
+  
+  window.onload = function () {
+      var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart;
+      console.log('Page load time is '+ loadTime + ' ms');
+  }
+</script>
+
+    
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+
+
+  
+<script src="/js/pop-img.js"></script>
+
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+
+
+
+
+    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>  -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css"> -->
+    <!-- @import "css/tocbot.css"  -->
+    
+<script src="/js/tocbot.js"></script>
+
+    
+    <!-- <div class="tocbot" style="position:absolute;left:3px;top:350px;max-width:15%;max-height:400px;border-radius:3px;line-height:23px;color:#111;background:rgba(88, 88, 88, 0)"></div> -->
+
+<script>
+
+var today_1 = new Date();
+
+
+
+//var day0 = today_1.toLocaleDateString().replace(/-/g,"").replace(/\//g,""); // 输出 2021101，而不是20211001
+//var day0 = today_1.toISOString().replace(/-/g,"").replace(/\//g,"");  // IE8+，格式为: YYYY-MM-DDTHH:mm:ss.sssZ
+var day0 = (new Date()).getTime();
+//console.log(day0);
+var day_start = (new Date()).setFullYear(2021,06,30);
+//console.log(day_start);
+var day_end = (new Date()).setFullYear(2021,10,31);
+//console.log(day_end);
+var banner1 = "";
+//console.log(banner1);
+var banner2 = "伟大的中华人民共和国万岁！伟大的中国共产党万岁！伟大的中国人民万岁！";
+//console.log(banner2);
+// test!="" && test!=null && test!=undefined
+var dv1 = document.getElementById("banner_x");
+if ( dv1 != null ) {
+    if ( banner1 == "" ) {
+        if ( banner2 != ""  &&  day_start <= day0  &&  day_end >= day0 ) {
+            //console.log(dv1.innerHTML);
+            dv1.innerHTML = banner2;
+            //console.log(dv1.innerHTML);
+        } else {
+            dv1.style.display = "none";
+            //console.log("hide!\n");
+        }
+    }
+}
+</script>
+
+
+
+
+    
+    <script>
+      
+      tocbot.init({
+        tocSelector: '.tocbot',
+        contentSelector: '.article-inner',
+        headingSelector: 'h2, h3, h4, h5, h6',
+        hasInnerContainers: true,
+
+        
+        collapseDepth: 3,
+
+        scrollSmooth: true,
+        
+        scrollSmoothOffset: -44,
+        
+        headingsOffset: 47,
+
+        scrollContainer: 'main',
+        
+        positionFixedSelector: '.tocbot',
+        positionFixedClass: 'is-position-fixed',
+
+        
+        //skipRendering: true,
+        //disableTocScrollSync: false,
+
+        fixedSidebarOffset: 'auto'
+      });
+    </script>
+
+
+
+
+    
+    
+<script src="/js/highlight.min.js"></script>
+
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
+
+
+
+
+
+
+<script>
+
+
+if (isSite1 == 2){
+    console.log("\nAll right reserved by Faradays' Studio.\n\n" + "All the codes licensed under GNU GPLv3.\n"
+      + "Send your request to yvany@qq.com and wait for your LICENSE CONFIRMATION email.\n"
+      + "See https://www.gnu.org/licenses/gpl-3.0.html for the license details.\n\n"
+      + "Click https://faradays-studio.github.io for my recent developments...\n\n");
+} else {
+    console.log("\nAll right reserved by Faradays' Studio.\n\n" + "All the codes licensed under GNU GPLv3.\n"
+      + "Send your request to yvany@qq.com and wait for your LICENSE CONFIRMATION email.\n"
+      + "See https://www.gnu.org/licenses/gpl-3.0.html for the license details.\n\n"
+      + "Click https://faradays-studio.gitee.io for my recent developments...\n\n");
+}
+
+
+    console.log("站点ID号：" + isSite1);
+    if ((isSite1 == 1 && false)  || (isSite1 == 2 && false) ){
+        // https://ziyuan.baidu.com/college/courseinfo?id=267&page=2#h2_article_title18
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https'){
+               bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            } else{
+              bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+
+        console.log("已开启百度 “普通收录》自动推送” 功能\n");
+    }
+
+
+</script>
+
+
+<!--[if lt IE 9]>
+<script type="text/JavaScript">
+    alert("请使用 IE9 或更高版本的浏览器，或谷歌浏览器、火狐浏览器，以便您浏览本站优质内容!");
+</script>
+<![endif]-->
+
+<script>
+
+function showTocOrNot(){
+    var dv = document.getElementById("post-toc");
+    console.log(dv.style.display);
+
+    if (dv.style.display === 'none'){
+        dv.style.display="block";
+    } else{
+        dv.style.display="none";
+    }
+}
+
+if (screen && screen.width < 760) {
+    console.log("访问终端为手机\n");
+}
+</script>
+
+    
+  </div>
+</body>
+</html>
