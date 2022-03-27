@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://faradays-studio.gitee.io/"/>
-  <updated>2022-03-21T12:31:02.677Z</updated>
+  <updated>2022-03-27T02:04:53.195Z</updated>
   <id>https://faradays-studio.gitee.io/</id>
   
   <author>
@@ -17,13 +17,48 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>用Excel绘制正态分布图</title>
+    <link href="https://faradays-studio.gitee.io/202203270925/"/>
+    <id>https://faradays-studio.gitee.io/202203270925/</id>
+    <published>2022-03-27T01:25:44.000Z</published>
+    <updated>2022-03-27T02:04:53.195Z</updated>
+    
+    <content type="html"><![CDATA[<p>在前一篇文章中，尝试了使用 <a href="../202203211952">Q-Q 图</a> 来验证数据是否符合正态分布的特点，这一次就针对正态分布的数据，进行绘图，用于展示数据的特点。</p><h2 id="生成数据"><a href="#生成数据" class="headerlink" title="生成数据"></a>生成数据</h2><ol><li>首先对原始数据进行排序，如下：</li></ol><p><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/1%E6%8C%89%E6%95%B0%E5%80%BC%E6%8E%92%E5%BA%8F.png" alt="原始数据排序"></p><ol start="2"><li>增加正态分布密度计算列，如 F2=<code>=NORMDIST(B2,AVERAGE(B:B),STDEV(B:B),0)</code>：</li></ol><p><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/2%E8%AE%A1%E7%AE%97%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E5%AF%86%E5%BA%A6.png" alt="密度计算"></p><h2 id="插入图形"><a href="#插入图形" class="headerlink" title="插入图形"></a>插入图形</h2><ol start="3"><li>选中正态密度数据列，选择 <code>插入</code>（选项卡）→<code>插入柱形图或条形图</code>，如下：</li></ol><p><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/3%E6%8F%92%E5%85%A5%E5%9B%BE%E5%BD%A2.png" alt="插入图形"></p><ol start="4"><li>根据需要可以添加 <strong>趋势线</strong> 等元素，并进行外观选项的定制，如：</li></ol><p><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/5%E5%9B%BE%E8%A1%A8-%E8%B6%8B%E5%8A%BF%E7%BA%BF-%E9%80%89%E9%A1%B9.png" alt="添加辅助元素"></p><h2 id="调整图形外观"><a href="#调整图形外观" class="headerlink" title="调整图形外观"></a>调整图形外观</h2><ol start="5"><li>根据美观等需要，对图形的外观进行个性化定制，如表格边框线等：</li></ol><p><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/7%E5%9B%BE%E8%A1%A8-%E6%A0%B7%E5%BC%8F%E9%80%89%E9%A1%B9.png" alt="外观选项设置"></p><ol start="6"><li>根据显示的需要，还可以修改图标的类型，如：</li></ol><p><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/9%E6%9B%B4%E6%94%B9%E5%9B%BE%E8%A1%A8%E7%B1%BB%E5%9E%8B.png" alt="修改图表类型"></p><h2 id="最终图形"><a href="#最终图形" class="headerlink" title="最终图形"></a>最终图形</h2><ol start="7"><li><p>最终图形如下</p><ul><li><p>柱形图<br><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/8%E6%97%B6%E9%95%BF%E5%88%86%E5%B8%83%E5%9B%BE%EF%BC%88%E6%9F%B1%E5%BD%A2%E5%9B%BE%EF%BC%89.png" alt="柱形图"></p></li><li><p>散点图<br><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/10%E6%97%B6%E9%95%BF%E5%88%86%E5%B8%83%E5%9B%BE%EF%BC%88%E6%95%A3%E7%82%B9%E5%9B%BE%EF%BC%89.png" alt="散点图"></p></li></ul></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在前一篇文章中，尝试了使用 &lt;a href=&quot;../202203211952&quot;&gt;Q-Q 图&lt;/a&gt; 来验证数据是否符合正态分布的特点，这一次就针对正态分布的数据，进行绘图，用于展示数据的特点。&lt;/p&gt;
+&lt;h2 id=&quot;生成数据&quot;&gt;&lt;a href=&quot;#生成数据&quot; class=
+      
+    
+    </summary>
+    
+    
+      <category term="工作中的魔法" scheme="https://faradays-studio.gitee.io/categories/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E9%AD%94%E6%B3%95/"/>
+    
+    
+      <category term="正态分布" scheme="https://faradays-studio.gitee.io/tags/%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/"/>
+    
+      <category term="Excel" scheme="https://faradays-studio.gitee.io/tags/Excel/"/>
+    
+      <category term="散点图" scheme="https://faradays-studio.gitee.io/tags/%E6%95%A3%E7%82%B9%E5%9B%BE/"/>
+    
+      <category term="NORMDIST" scheme="https://faradays-studio.gitee.io/tags/NORMDIST/"/>
+    
+      <category term="柱形图" scheme="https://faradays-studio.gitee.io/tags/%E6%9F%B1%E5%BD%A2%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用Q-Q图验证数据是否满足正态分布</title>
     <link href="https://faradays-studio.gitee.io/202203211952/"/>
     <id>https://faradays-studio.gitee.io/202203211952/</id>
     <published>2022-03-21T11:52:18.000Z</published>
-    <updated>2022-03-21T12:31:02.677Z</updated>
+    <updated>2022-03-27T01:30:15.165Z</updated>
     
-    <content type="html"><![CDATA[<p>根据大数定律，正常的采样数据达到一定数量时，就会呈现出正态分布的特性。我们之所以特别关心数据是否满足正态分布，无非是这两方面的需要：需要在特定的区间内涵盖大部分的重要数据，或者在两端进行特别的处理。</p><p>笔者最近在做一个油泵运行时长的评价工作中，就是对油泵每次运行的时长进行统计，如果运行时间太长，那么就认为该油泵运行存在一定的异常，那么应该考虑予以告警。</p><p>那么，我们怎么验证数据是否满足正态分布呢？根据网友的介绍，就是对数据进行处理后绘制 “Q-Q”图；我没有专业背景知识，自己理解就是绘制“数据”与“偏差”的双中位数之间的曲线图，如果呈现为一条直线，那么就表明数据呈现出正态分布的特性。</p><h2 id="整理数据"><a href="#整理数据" class="headerlink" title="整理数据"></a>整理数据</h2><ol><li><p>使用 RANK 函数对 <strong>数值</strong> 进行排名计算，如对 B2 求排名，有 D2=<code>RANK(B2,B:B,1)</code>，对D列双击即可获得D列结果（下同，不再赘述）；</p></li><li><p>对 B2（原始数据）、D2 （排名值） 数据进行计算，求得分位数 ，如 E2=<code>(D2-0.5)/COUNT(B:B,B2)</code>；如下：</p></li></ol><p><img src="/static/img/20220321-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE.png" alt="求数据的排名以及分位数"></p><ol start="3"><li>对分位数列进行升序处理，依次点击 Excel 中的：<code>数据</code>（选项卡）→ <code>排序</code>，对该数据列进行 <strong>升序</strong> 排序处理，如下：</li></ol><p><img src="/static/img/20220321-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/%E6%8E%92%E5%BA%8F.png" alt="数据排序"></p><blockquote><p>如果不进行排序就绘制曲线，那么曲线就会变成一条来回曲折的奇怪线条；因此必须按 <strong>分位数</strong> 进行排序。</p></blockquote><ol start="4"><li>对 数据进行Z分数计算，如 C2=<code>NORMSINV(E2)</code>；</li></ol><blockquote><p>Z 分数是标准差的倍数，参考文献[1]可以进一步了解，对应的中文版为 <a href="https://www.shuxuele.com/data/standard-normal-distribution.html。">https://www.shuxuele.com/data/standard-normal-distribution.html。</a></p></blockquote><h2 id="绘制图形"><a href="#绘制图形" class="headerlink" title="绘制图形"></a>绘制图形</h2><ol start="5"><li><p>选中上述的 B列（原始数据）、C列（Z分数），执行 Excel 的 <code>插入</code>（选项卡）→ <code>散点图</code>，即可获得拟合曲线；</p></li><li><p>对曲线进行坐标轴等进行个性化调整，并添加趋势线，最终得到效果图如下：</p></li></ol><p><img src="/static/img/20220321-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/Q-Q%E5%9B%BE.png" alt="数据排序"></p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>[1]    Rod Pierce. Normal Distribution [EB/OL]. <a href="https://mathsisfun.com/data/standard-normal-distribution.html">https://mathsisfun.com/data/standard-normal-distribution.html</a>, 2022/03/13.</p><p>[2]    博客园. 在Excel里绘制Q-Q图 [EB/OL]. <a href="https://www.cnblogs.com/jiangleads/articles/12984545.html">https://www.cnblogs.com/jiangleads/articles/12984545.html</a>, 2022/03/14.</p>]]></content>
+    <content type="html"><![CDATA[<p>根据大数定律，正常的采样数据达到一定数量时，就会呈现出正态分布的特性。我们之所以特别关心数据是否满足正态分布，无非是这两方面的需要：需要在特定的区间内涵盖大部分的重要数据，或者在两端进行特别的处理。</p><p>笔者最近在做一个油泵运行时长的评价工作中，就是对油泵每次运行的时长进行统计，如果运行时间太长，那么就认为该油泵运行存在一定的异常，那么应该考虑予以告警。</p><p>那么，我们怎么验证数据是否满足正态分布呢？根据网友的介绍，就是对数据进行处理后绘制 “Q-Q”图；我没有专业背景知识，自己理解就是绘制“数据”与“偏差”的双中位数之间的曲线图，如果呈现为一条直线，那么就表明数据呈现出正态分布的特性。</p><h2 id="整理数据"><a href="#整理数据" class="headerlink" title="整理数据"></a>整理数据</h2><ol><li><p>使用 RANK 函数对 <strong>数值</strong> 进行排名计算，如对 B2 求排名，有 D2=<code>RANK(B2,B:B,1)</code>，对D列双击即可获得D列结果（下同，不再赘述）；</p></li><li><p>对 B2（原始数据）、D2 （排名值） 数据进行计算，求得分位数 ，如 E2=<code>(D2-0.5)/COUNT(B:B,B2)</code>；如下：</p></li></ol><p><img src="/static/img/20220321-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE.png" alt="求数据的排名以及分位数"></p><ol start="3"><li>对分位数列进行升序处理，依次点击 Excel 中的：<code>数据</code>（选项卡）→ <code>排序</code>，对该数据列进行 <strong>升序</strong> 排序处理，如下：</li></ol><p><img src="/static/img/20220321-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/%E6%8E%92%E5%BA%8F.png" alt="数据排序"></p><blockquote><p>如果不进行排序就绘制曲线，那么曲线就会变成一条来回曲折的奇怪线条；因此必须按 <strong>分位数</strong> 进行排序。</p></blockquote><ol start="4"><li>对 数据进行z分数计算，如 C2=<code>NORMSINV(E2)</code>；</li></ol><blockquote><p>z 分数是标准差的倍数，参考文献[1]可以进一步了解，对应的中文版为 <a href="https://www.shuxuele.com/data/standard-normal-distribution.html。">https://www.shuxuele.com/data/standard-normal-distribution.html。</a></p></blockquote><h2 id="绘制图形"><a href="#绘制图形" class="headerlink" title="绘制图形"></a>绘制图形</h2><ol start="5"><li><p>选中上述的 B列（原始数据）、C列（Z分数），执行 Excel 的 <code>插入</code>（选项卡）→ <code>散点图</code>，即可获得拟合曲线；</p></li><li><p>对曲线进行坐标轴等进行个性化调整，并添加趋势线，最终得到效果图如下：</p></li></ol><p><img src="/static/img/20220321-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/Q-Q%E5%9B%BE.png" alt="数据排序"></p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>[1]    Rod Pierce. Normal Distribution [EB/OL]. <a href="https://mathsisfun.com/data/standard-normal-distribution.html">https://mathsisfun.com/data/standard-normal-distribution.html</a>, 2022/03/13.</p><p>[2]    博客园. 在Excel里绘制Q-Q图 [EB/OL]. <a href="https://www.cnblogs.com/jiangleads/articles/12984545.html">https://www.cnblogs.com/jiangleads/articles/12984545.html</a>, 2022/03/14.</p>]]></content>
     
     <summary type="html">
     
@@ -679,40 +714,6 @@
       <category term="编译" scheme="https://faradays-studio.gitee.io/tags/%E7%BC%96%E8%AF%91/"/>
     
       <category term="sqlite" scheme="https://faradays-studio.gitee.io/tags/sqlite/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS 6.10 编译安装 GCC4.8.5</title>
-    <link href="https://faradays-studio.gitee.io/202103072130/"/>
-    <id>https://faradays-studio.gitee.io/202103072130/</id>
-    <published>2021-03-07T13:30:40.000Z</published>
-    <updated>2021-03-07T13:59:11.729Z</updated>
-    
-    <content type="html"><![CDATA[<p>由于安装 python 3 的需要，需要升级 GCC；由于我的操作系统是 CentOS6.10，而且还需要考虑到工作软件系统的兼容，因此 GCC 版本暂时定为 4.8.5。测试表明，如果 Python 需要性能优化选项 <code>--enable-optimizations</code>，需要 GCC 8.2+ 以上的版本。</p><h2 id="源码下载"><a href="#源码下载" class="headerlink" title="源码下载"></a>源码下载</h2><h3 id="GCC-源码下载"><a href="#GCC-源码下载" class="headerlink" title="GCC 源码下载"></a>GCC 源码下载</h3><pre><code class="sh">cd /home/commonwget https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-4.8.5/gcc-4.8.5.tar.gztar xzvf gcc-4.8.5.tar.gz# 源码权限根据实际需要设定，实际上编译完成后这个文件夹用不到，因此可以不操作此步骤chmod 777 -R gcc-4.8.5/</code></pre><h3 id="依赖库源码下载"><a href="#依赖库源码下载" class="headerlink" title="依赖库源码下载"></a>依赖库源码下载</h3><pre><code class="sh"># 进入保存地址cd /home/common/gcc-4.8.5wget https://gmplib.org/download/gmp-6.1.2/gmp-6.1.2.tar.bz2tar xvf gmp-6.1.2.tar.bz2mv gmp-6.1.2 gmpwget https://ftp.gnu.org/gnu/mpfr/mpfr-3.1.6.tar.gztar xzvf mpfr-3.1.6.tar.gzmv mpfr-3.1.6 mpfrwget https://ftp.gnu.org/gnu/mpc/mpc-1.0.3.tar.gztar xzvf mpc-1.0.3.tar.gzmv mpc-1.0.3 mpcwget http://www.bastoul.net/cloog/pages/download/cloog-0.18.4.tar.gztar xzvf cloog-0.18.4.tar.gzmv cloog-0.18.4 cloogwget http://isl.gforge.inria.fr/isl-0.14.tar.gztar xzvf isl-0.14.tar.gzmv isl-0.14 isl</code></pre><h2 id="编译安装-GCC"><a href="#编译安装-GCC" class="headerlink" title="编译安装 GCC"></a>编译安装 GCC</h2><h3 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h3><pre><code class="sh">#gcc4.4.7版本开始，官方推荐使用单独的目录，而不是在解压gcc源码后的目录中进行编译mkdir /home/common/gcc-buildcd gcc-build../gcc-4.8.5/configure --enable-checking=release --enable-languages=c,c++ --disable-multilib    # --with-pkgversion=version ：指定一个标识你的包的字符串    # --enable-languages=c,c++：可以使用 all，default，ada，c，c++，fortran，go，jit，lto，objc，obj-c++。    # --disable-multilib：禁止生成多个平台的代码    # --enable-bootstrap：冗余的编译检查工作    # --enable-gather-detailed-mem-stats：允许通过 -fmem-report 选项来输出编译其它程序时的实时内存使用情况    # --with-long-double-128：指定long double类型的默认值是128位。    # --enable-threads=posix：C++ 异常能处理多线程代码    # --without-bash-malloc：禁用了 Bash 的内存分配函数(malloc)，Bash 将使用更为稳定的 Glibc 里的 malloc 函数。    # --enable-multibyte：支持使用多字节字符编码的文件    grep &quot;error&quot; config.log# 默认的make不加-j参数效率比较低，加上多线程参数 -j4 和-j8性能差距不大，-j16性能就比较差date +%T &amp;&amp; make -j4 &amp;&amp; date +%T    # make clean：清除上次的make命令所产生的object文件（后缀为“.o”的文件）及可执行文件。    # make distclean：包含make clean，同时也将configure生成的文件全部删除掉。感觉有点像在 gcc-build 中执行 rm -rf 的删减版一样。    lscpu |grep -A 1 &#39;Model name&#39;make install</code></pre><h3 id="关联系统"><a href="#关联系统" class="headerlink" title="关联系统"></a>关联系统</h3><p>如果上述安装过程中指定了 gcc 的安装路径，那么需要关联系统。当然，我上一步并没有指定安装路径，而是直接替代了系统自带的 GCC 4.4.7。</p><pre><code class="sh"># 更新环境echo &#39;/usr/local/gcc-4.8.5/lib64&#39; &gt; /etc/ld.so.conf.d/gcc4.8.5.confldconfig# 在自定义的全局配置文件中添加 PATH 变量vim /etc/profile.d/hhjos6.sh    PATH=/usr/local/gcc-4.8.5/bin:$PATHmv /usr/bin/gcc /usr/bin/gcc-4.4.7mv /usr/bin/g++ /usr/bin/g++-4.4.7mv /usr/bin/c++ /usr/bin/c++-4.4.7ln -s /usr/local/gcc/bin/gcc /usr/bin/gccln -s /usr/local/gcc/bin/c++ /usr/bin/c++ln -s /usr/local/gcc/bin/g++ /usr/bin/g++ln -s /usr/local/gcc/lib64/libstdc++.so.6.0.22 /usr/lib64/libstdc++.so.6</code></pre><h3 id="版本检查"><a href="#版本检查" class="headerlink" title="版本检查"></a>版本检查</h3><pre><code class="sh">gcc -v    gcc -dumpversion    ll /usr/bin/cc    strings /usr/lib64/libstdc++.so.6 | grep GLIBCg++ -v    g++ -dumpversion    c++ -dumpversion</code></pre><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><blockquote><p>如果还要尝试 <code>yum -y install centos-release-scl</code> 安装临时版本的 GCC ，那多数人并不会成功，毕竟 CentOS 6 在官方都是不支持的版本了。博主这次安装 GCC 4.8.5 花了很长时间，毕竟坑太多了，而且已有程序环境的兼容性也必须兼顾。因此虽然参考了以下这些文章，但是操作步骤上却有差异；就是一点点差异，我浪费了很多很多的时间！实际上，我看过的文章就不止这些了，但对我并没有提供任何的帮助。</p></blockquote><ol><li><p>TUNA.<code>清华大学开源软件镜像站（GCC）</code>[EB/OL].<a href="https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc">https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc</a>, 2021/02/20.</p></li><li><p>peterpanzsy.<code>centos 6 升级gcc</code>[EB/OL].<a href="https://www.cnblogs.com/peterpanzsy/archive/2013/04/10/3006838.html">https://www.cnblogs.com/peterpanzsy/archive/2013/04/10/3006838.html</a>, 2021/02/20.</p></li><li><p>创小新.<code>LINUX CENTOS6.8编译安装GCC-6.3.0 升级GCC</code>[EB/OL].<a href="https://chuangxiao.xin/h-nd-87.html">https://chuangxiao.xin/h-nd-87.html</a>, 2021/02/20.</p></li><li><p>ljpwinxp.<code>Centos 6.9 编译安装gcc 4.8.5</code>[EB/OL].<a href="https://blog.51cto.com/191226139/2066137">https://blog.51cto.com/191226139/2066137</a>, 2021/02/20.</p></li><li><p>Free Software Foundation.<code>GCC 4.8 Release Series: Changes, New Features, and Fixes</code>[EB/OL].<a href="https://gcc.gnu.org/gcc-4.8/changes.html">https://gcc.gnu.org/gcc-4.8/changes.html</a>, 2021/02/20.</p></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;由于安装 python 3 的需要，需要升级 GCC；由于我的操作系统是 CentOS6.10，而且还需要考虑到工作软件系统的兼容，因此 GCC 版本暂时定为 4.8.5。测试表明，如果 Python 需要性能优化选项 &lt;code&gt;--enable-optimization
-      
-    
-    </summary>
-    
-    
-      <category term="编程笔记" scheme="https://faradays-studio.gitee.io/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
-    
-      <category term="CentOS" scheme="https://faradays-studio.gitee.io/tags/CentOS/"/>
-    
-      <category term="安装" scheme="https://faradays-studio.gitee.io/tags/%E5%AE%89%E8%A3%85/"/>
-    
-      <category term="GCC" scheme="https://faradays-studio.gitee.io/tags/GCC/"/>
-    
-      <category term="编译" scheme="https://faradays-studio.gitee.io/tags/%E7%BC%96%E8%AF%91/"/>
     
   </entry>
   
