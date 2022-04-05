@@ -4920,6 +4920,52 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
       </tags>
   </entry>
   <entry>
+    <title>用DiskGenius修复坏道的硬盘</title>
+    <url>/202204051007/</url>
+    <content><![CDATA[<p>在电脑、移动硬盘使用的过程中，坏道是经常发生的事情，有些时候就是一次强制关机重启的操作，就导致硬盘无法使用、系统无法启动了。这个时候，通过 PE 或者其他环境对硬盘进行坏道修复是比较有用的方法——毕竟，对于普通人来说，也很难做更多的修复了！</p>
+<h2 id="坏道检测"><a href="#坏道检测" class="headerlink" title="坏道检测"></a>坏道检测</h2><ol>
+<li>进行坏道检测，比较好用的工具是 DiskGenius（英文版叫 PartitionGuru ），打开 DiskGenius ，点击 <code>硬盘</code> 菜单，打开 <strong>硬盘坏道检测与修复</strong> 设置窗口，并根据需要调整部分参数；</li>
+</ol>
+<p><img src="/static/img/20211205-%E7%A1%AC%E7%9B%98%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D/0%E7%A1%AC%E7%9B%98-%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D.png" alt="坏道检测菜单"></p>
+<blockquote>
+<p>一般不需要额外设置参数，如果硬盘过大或文件过多，可以考虑选中一个分区后再执行上述命令，从而较小检索的范围和时间、逐步完成硬盘的坏道检测与修复。</p>
+</blockquote>
+<ol start="2">
+<li>等待坏道检测完成，检测过程的窗口如下：</li>
+</ol>
+<p><img src="/static/img/20211205-%E7%A1%AC%E7%9B%98%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D/1%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%AD.png" alt="坏道检测菜单"></p>
+<h2 id="坏道修复"><a href="#坏道修复" class="headerlink" title="坏道修复"></a>坏道修复</h2><ol start="3">
+<li>如果存在坏道，则会出现如下检测详情窗口：</li>
+</ol>
+<p><img src="/static/img/20211205-%E7%A1%AC%E7%9B%98%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D/2%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%EF%BC%88%E8%AF%A6%E6%83%85%EF%BC%89.png" alt="坏道检测结果"></p>
+<ol start="4">
+<li>在上述第 2 步中的检测窗口中，点击 <strong>尝试修复</strong> 按钮，则自动开始修复：</li>
+</ol>
+<p><img src="/static/img/20211205-%E7%A1%AC%E7%9B%98%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D/3%E5%9D%8F%E9%81%93%E4%BF%AE%E5%A4%8D%E4%B8%AD.png" alt="坏道检测结果"></p>
+<blockquote>
+<p>如果考虑到修复时间过长且容易出现错误中断，建议先点击 <strong>保存检测信息</strong> 将检测信息保存到本地，以便于下次直接 <strong>读取检测信息</strong> 进行修复。</p>
+</blockquote>
+<ol start="5">
+<li>等待修复完成，完成后结果如下：</li>
+</ol>
+<p><img src="/static/img/20211205-%E7%A1%AC%E7%9B%98%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D/4%E5%9D%8F%E9%81%93%E4%BF%AE%E5%A4%8D%E5%AE%8C%E6%88%90.png" alt="坏道检测结果"></p>
+<blockquote>
+<p>并非所有的硬盘都能成功完成修复；笔者尝试过很多次，有些大硬盘文件过多，或者损害过重，修复时间甚至长达数天，也不能完成全部修复。</p>
+</blockquote>
+<h2 id="结后语"><a href="#结后语" class="headerlink" title="结后语"></a>结后语</h2><p>使用电脑，应该规范地关机，尽量通过开始菜单中的命令进行关机；使用移动硬盘，应该通过资源管理器中的“弹出”或“移除”等命令进行操作，避免直接拔出。在工作中，无论是本人还是同事，都遭遇了太多的直接拔出硬盘或U盘导致的数据整体丢失，甚至是硬盘整体故障不可用的情况了，宜慎重！</p>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>DiskGenius</tag>
+        <tag>硬盘</tag>
+        <tag>坏道</tag>
+        <tag>修复</tag>
+        <tag>PartitionGuru</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>用Excel绘制正态分布图</title>
     <url>/202203270925/</url>
     <content><![CDATA[<p>在前一篇文章中，尝试了使用 <a href="../202203211952">Q-Q 图</a> 来验证数据是否符合正态分布的特点，这一次就针对正态分布的数据，进行绘图，用于展示数据的特点。</p>

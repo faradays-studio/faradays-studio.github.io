@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://faradays-studio.gitee.io/"/>
-  <updated>2022-03-27T02:04:53.195Z</updated>
+  <updated>2022-04-05T02:36:32.182Z</updated>
   <id>https://faradays-studio.gitee.io/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用DiskGenius修复坏道的硬盘</title>
+    <link href="https://faradays-studio.gitee.io/202204051007/"/>
+    <id>https://faradays-studio.gitee.io/202204051007/</id>
+    <published>2022-04-05T02:07:19.000Z</published>
+    <updated>2022-04-05T02:36:32.182Z</updated>
+    
+    <content type="html"><![CDATA[<p>在电脑、移动硬盘使用的过程中，坏道是经常发生的事情，有些时候就是一次强制关机重启的操作，就导致硬盘无法使用、系统无法启动了。这个时候，通过 PE 或者其他环境对硬盘进行坏道修复是比较有用的方法——毕竟，对于普通人来说，也很难做更多的修复了！</p><h2 id="坏道检测"><a href="#坏道检测" class="headerlink" title="坏道检测"></a>坏道检测</h2><ol><li>进行坏道检测，比较好用的工具是 DiskGenius（英文版叫 PartitionGuru ），打开 DiskGenius ，点击 <code>硬盘</code> 菜单，打开 <strong>硬盘坏道检测与修复</strong> 设置窗口，并根据需要调整部分参数；</li></ol><p><img src="/static/img/20211205-%E7%A1%AC%E7%9B%98%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D/0%E7%A1%AC%E7%9B%98-%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D.png" alt="坏道检测菜单"></p><blockquote><p>一般不需要额外设置参数，如果硬盘过大或文件过多，可以考虑选中一个分区后再执行上述命令，从而较小检索的范围和时间、逐步完成硬盘的坏道检测与修复。</p></blockquote><ol start="2"><li>等待坏道检测完成，检测过程的窗口如下：</li></ol><p><img src="/static/img/20211205-%E7%A1%AC%E7%9B%98%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D/1%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%AD.png" alt="坏道检测菜单"></p><h2 id="坏道修复"><a href="#坏道修复" class="headerlink" title="坏道修复"></a>坏道修复</h2><ol start="3"><li>如果存在坏道，则会出现如下检测详情窗口：</li></ol><p><img src="/static/img/20211205-%E7%A1%AC%E7%9B%98%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D/2%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%EF%BC%88%E8%AF%A6%E6%83%85%EF%BC%89.png" alt="坏道检测结果"></p><ol start="4"><li>在上述第 2 步中的检测窗口中，点击 <strong>尝试修复</strong> 按钮，则自动开始修复：</li></ol><p><img src="/static/img/20211205-%E7%A1%AC%E7%9B%98%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D/3%E5%9D%8F%E9%81%93%E4%BF%AE%E5%A4%8D%E4%B8%AD.png" alt="坏道检测结果"></p><blockquote><p>如果考虑到修复时间过长且容易出现错误中断，建议先点击 <strong>保存检测信息</strong> 将检测信息保存到本地，以便于下次直接 <strong>读取检测信息</strong> 进行修复。</p></blockquote><ol start="5"><li>等待修复完成，完成后结果如下：</li></ol><p><img src="/static/img/20211205-%E7%A1%AC%E7%9B%98%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D/4%E5%9D%8F%E9%81%93%E4%BF%AE%E5%A4%8D%E5%AE%8C%E6%88%90.png" alt="坏道检测结果"></p><blockquote><p>并非所有的硬盘都能成功完成修复；笔者尝试过很多次，有些大硬盘文件过多，或者损害过重，修复时间甚至长达数天，也不能完成全部修复。</p></blockquote><h2 id="结后语"><a href="#结后语" class="headerlink" title="结后语"></a>结后语</h2><p>使用电脑，应该规范地关机，尽量通过开始菜单中的命令进行关机；使用移动硬盘，应该通过资源管理器中的“弹出”或“移除”等命令进行操作，避免直接拔出。在工作中，无论是本人还是同事，都遭遇了太多的直接拔出硬盘或U盘导致的数据整体丢失，甚至是硬盘整体故障不可用的情况了，宜慎重！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在电脑、移动硬盘使用的过程中，坏道是经常发生的事情，有些时候就是一次强制关机重启的操作，就导致硬盘无法使用、系统无法启动了。这个时候，通过 PE 或者其他环境对硬盘进行坏道修复是比较有用的方法——毕竟，对于普通人来说，也很难做更多的修复了！&lt;/p&gt;
+&lt;h2 id=&quot;坏道检测
+      
+    
+    </summary>
+    
+    
+      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
+    
+    
+      <category term="DiskGenius" scheme="https://faradays-studio.gitee.io/tags/DiskGenius/"/>
+    
+      <category term="硬盘" scheme="https://faradays-studio.gitee.io/tags/%E7%A1%AC%E7%9B%98/"/>
+    
+      <category term="坏道" scheme="https://faradays-studio.gitee.io/tags/%E5%9D%8F%E9%81%93/"/>
+    
+      <category term="修复" scheme="https://faradays-studio.gitee.io/tags/%E4%BF%AE%E5%A4%8D/"/>
+    
+      <category term="PartitionGuru" scheme="https://faradays-studio.gitee.io/tags/PartitionGuru/"/>
+    
+  </entry>
   
   <entry>
     <title>用Excel绘制正态分布图</title>
@@ -658,43 +693,6 @@
 &lt;li&gt;编译环境的安装（centos6 默认已具备）&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre&gt;&lt;code cla
-      
-    
-    </summary>
-    
-    
-      <category term="编程笔记" scheme="https://faradays-studio.gitee.io/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
-    
-      <category term="CentOS" scheme="https://faradays-studio.gitee.io/tags/CentOS/"/>
-    
-      <category term="Python" scheme="https://faradays-studio.gitee.io/tags/Python/"/>
-    
-      <category term="安装" scheme="https://faradays-studio.gitee.io/tags/%E5%AE%89%E8%A3%85/"/>
-    
-      <category term="编译" scheme="https://faradays-studio.gitee.io/tags/%E7%BC%96%E8%AF%91/"/>
-    
-      <category term="sqlite" scheme="https://faradays-studio.gitee.io/tags/sqlite/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS 6 编译安装 sqlite 3</title>
-    <link href="https://faradays-studio.gitee.io/202103211734/"/>
-    <id>https://faradays-studio.gitee.io/202103211734/</id>
-    <published>2021-03-21T09:34:41.000Z</published>
-    <updated>2021-03-21T09:39:58.790Z</updated>
-    
-    <content type="html"><![CDATA[<p>由于安装 Python 环境的需要，需要对 Python 进行编译安装。</p><h2 id="安装编译环境"><a href="#安装编译环境" class="headerlink" title="安装编译环境"></a>安装编译环境</h2><p>先安装必要的环境，博主的系统中默认其实已经包含了</p><pre><code class="sh">yum install sqlite-devel</code></pre><h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h2><pre><code class="sh">cd /home/common/wget https://www.sqlite.org/2020/sqlite-autoconf-3320300.tar.gztar -xvzf sqlite-autoconf-3320300.tar.gzcd sqlite-autoconf-3320300/mkdir -p /usr/local/sqlite./configure --prefix=/usr/local/sqlitemake -j4 &amp;&amp; make install</code></pre><h2 id="关联系统"><a href="#关联系统" class="headerlink" title="关联系统"></a>关联系统</h2><pre><code class="sh">vim /etc/ld.so.conf.d/sqlite3.conf    # 可选    /usr/local/sqlite/libldconfig</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;由于安装 Python 环境的需要，需要对 Python 进行编译安装。&lt;/p&gt;
-&lt;h2 id=&quot;安装编译环境&quot;&gt;&lt;a href=&quot;#安装编译环境&quot; class=&quot;headerlink&quot; title=&quot;安装编译环境&quot;&gt;&lt;/a&gt;安装编译环境&lt;/h2&gt;&lt;p&gt;先安装必要的环境，博
       
     
     </summary>
