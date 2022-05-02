@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://faradays-studio.gitee.io/"/>
-  <updated>2022-04-05T02:36:32.182Z</updated>
+  <updated>2022-05-02T15:08:47.378Z</updated>
   <id>https://faradays-studio.gitee.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 Windows BitLocker 对硬盘进行加密</title>
+    <link href="https://faradays-studio.gitee.io/202205022233/"/>
+    <id>https://faradays-studio.gitee.io/202205022233/</id>
+    <published>2022-05-02T14:33:58.000Z</published>
+    <updated>2022-05-02T15:08:47.378Z</updated>
+    
+    <content type="html"><![CDATA[<p>BitLocker 驱动器加密是一项数据保护功能，它与操作系统集成，用于解决来自丢失、被盗或销毁不当的计算机的数据被盗或泄露的威胁。因此，通过 BitLocker 来进行分区的加密，相对而言，是比较好的一种方式。</p><h2 id="启用加密"><a href="#启用加密" class="headerlink" title="启用加密"></a>启用加密</h2><ol><li>在分区右键菜单中点击 <code>启用 BitLocker(B)...</code> 命令，在弹窗中勾选 <strong>使用密码解锁驱动器</strong>，如下：</li></ol><p><img src="/static/img/20220502-bitlocker%E5%8A%A0%E5%AF%86/1-bitlocker-%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81.png" alt="BitLocker密码设置"></p><ol start="2"><li>点击 <strong>下一步</strong>，然后在新弹窗中勾选 <strong>将恢复秘钥保存到文件</strong>，如下：</li></ol><p><img src="/static/img/20220502-bitlocker%E5%8A%A0%E5%AF%86/2-bitlocker-%E5%B0%86%E6%81%A2%E5%A4%8D%E7%A7%98%E9%92%A5%E4%BF%9D%E5%AD%98%E5%88%B0%E6%96%87%E4%BB%B6.png" alt="BitLocker密码设置"></p><ol start="3"><li>点击 <strong>下一步</strong>，然后在新弹窗中点击 <strong>启动加密</strong>，如下：</li></ol><p><img src="/static/img/20220502-bitlocker%E5%8A%A0%E5%AF%86/3-bitlocker-%E5%90%AF%E5%8A%A8%E5%8A%A0%E5%AF%86.png" alt="BitLocker密码设置"></p><ol start="4"><li>进入加密状态，加密过程中内存、CPU占用率较小，可继续开展其他工作。</li></ol><p><img src="/static/img/20220502-bitlocker%E5%8A%A0%E5%AF%86/4-bitlocker-%E6%AD%A3%E5%9C%A8%E5%8A%A0%E5%AF%86.png" alt="BitLocker密码设置"></p><ol start="5"><li>经历一段时间后（我的电脑是 600GB 花了大约 1小时35分钟），加密结束。</li></ol><p><img src="/static/img/20220502-bitlocker%E5%8A%A0%E5%AF%86/5-bitlocker-%E5%8A%A0%E5%AF%86%E7%BB%93%E6%9D%9F.png" alt="BitLocker密码设置"></p><h2 id="加密功能的使用"><a href="#加密功能的使用" class="headerlink" title="加密功能的使用"></a>加密功能的使用</h2><ol><li>完成加密后，双击驱动器，提示输入密码，根据实际输入即可使用。</li></ol><p><img src="/static/img/20220502-bitlocker%E5%8A%A0%E5%AF%86/6-bitlocker-%E8%A7%A3%E9%94%81.png" alt="BitLocker密码设置"></p><blockquote><blockquote><p>重启后自动锁定，需要重新加密。</p></blockquote></blockquote><ol start="2"><li>解锁后，如果需要更改密码，在驱动器上右键，点击 <code>管理 BitLocker(B)...</code> 命令，选择以下相应菜单进行操作即可。</li></ol><p><img src="/static/img/20220502-bitlocker%E5%8A%A0%E5%AF%86/7-bitlocker-%E7%AE%A1%E7%90%86.png" alt="BitLocker密码设置"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;BitLocker 驱动器加密是一项数据保护功能，它与操作系统集成，用于解决来自丢失、被盗或销毁不当的计算机的数据被盗或泄露的威胁。因此，通过 BitLocker 来进行分区的加密，相对而言，是比较好的一种方式。&lt;/p&gt;
+&lt;h2 id=&quot;启用加密&quot;&gt;&lt;a href=&quot;#启用
+      
+    
+    </summary>
+    
+    
+      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
+    
+    
+      <category term="硬盘" scheme="https://faradays-studio.gitee.io/tags/%E7%A1%AC%E7%9B%98/"/>
+    
+      <category term="BitLocker" scheme="https://faradays-studio.gitee.io/tags/BitLocker/"/>
+    
+      <category term="加密" scheme="https://faradays-studio.gitee.io/tags/%E5%8A%A0%E5%AF%86/"/>
+    
+  </entry>
   
   <entry>
     <title>用DiskGenius修复坏道的硬盘</title>
@@ -396,9 +427,9 @@
       <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
     
     
-      <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
-    
       <category term="bash" scheme="https://faradays-studio.gitee.io/tags/bash/"/>
+    
+      <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
     
       <category term="Solaris" scheme="https://faradays-studio.gitee.io/tags/Solaris/"/>
     
@@ -673,45 +704,6 @@
     
     
       <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/tags/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS 6 编译安装 Python 3</title>
-    <link href="https://faradays-studio.gitee.io/202103291935/"/>
-    <id>https://faradays-studio.gitee.io/202103291935/</id>
-    <published>2021-03-29T11:35:26.000Z</published>
-    <updated>2021-04-10T14:13:44.441Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="依赖包的安装"><a href="#依赖包的安装" class="headerlink" title="依赖包的安装"></a>依赖包的安装</h2><ol><li>编译环境的安装（centos6 默认已具备）</li></ol><pre><code class="sh">yum -y groupinstall &quot;Development tools&quot;或yum -y install gcc gcc-c++ zlib zlib-devel    gcc-4.4.7-23    gcc-c++-4.4.7-23    zlib-devel-1.2.3-29yum install -y openssl-develyum install -y libffi-develyum install gcc gcc-c++ glibc-static</code></pre><ol start="2"><li>编译安装 openssl </li></ol><pre><code class="sh">wget http://www.openssl.org/source/openssl-1.1.1.tar.gztar -zxvf openssl-1.1.1.tar.gzcd openssl-1.1.1whereis openssl    # 系统自带版本为 1.0.1e-fips    # [root@hhjos6 lib]# whereis openssl    # openssl: /usr/bin/openssl /usr/lib64/openssl /usr/include/openssl /usr/local/openssl /usr/share/man/man1/openssl.1ssl.gzmkdir /usr/local/openssl./config --prefix=/usr/local/openssl shared zlibmake &amp;&amp; make installecho -e &quot;\nexport LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/openssl/lib&quot; &gt;&gt; /etc/profilesource /etc/profileln -s /usr/local/openssl/lib/libssl.so.1.1 /usr/lib64/libssl.so.1.1ln -s /usr/local/openssl/lib/libcrypto.so.1.1 /usr/lib64/libcrypto.so.1.1mv /usr/bin/openssl /usr/bin/openssl-1.0.1ln -s /usr/local/openssl/bin/openssl /usr/bin/opensslopenssl    version    exit    # 下个版本的说明 https://wiki.openssl.org/index.php/OpenSSL_3.0</code></pre><h2 id="程序的下载与编译"><a href="#程序的下载与编译" class="headerlink" title="程序的下载与编译"></a>程序的下载与编译</h2><ol start="3"><li>下载程序</li></ol><pre><code class="sh">mkdir -p /home/common/python3.8  &amp;&amp; cd /home/common/python3.8#测试表明，Python 并没有限制 sqlite 版本；不过关闭 --enable-loadable-sqlite-extensions 或者 --enable-optimizations 均能编译通过（虽然同样的报错还在）。wget https://www.python.org/ftp/python/3.8.7/Python-3.8.7.tgz    官方手册 https://docs.python.org/release/3.8.7    sqlite教程 https://docs.python.org/3.8/library/sqlite3.htmltar -xzvf Python-3.8.7.tgz</code></pre><ol start="4"><li>配套修改组件的编译配置（<a href="https://docs.python.org/3.8/whatsnew/changelog.html#changelog">https://docs.python.org/3.8/whatsnew/changelog.html#changelog</a> 链接中指明了 Windows、MacOS 中集成的 sqlite 版本号，但是 Linux 的 Python 3 并没有继承 sqlite，因此需要如下配置 sqlite 库）</li></ol><pre><code class="sh"># ModuleNotFoundError: No module named &#39;_sqlite3&#39;gedit /home/common/python3.8/Python-3.8.7/setup.py    sqlite_inc_paths        &#39;/usr/local/sqlite/include&#39;,        &#39;/usr/local/sqlite/include/sqlite3&#39;,#undefined symbol: __gcov_indirect_call_profiler# cd /home/common/python3.8/Python-3.8.7 &amp;&amp; ./python -E -S -m sysconfig --generate-posix-vars # 报错信息同上# 网友中有通过设置语言</code></pre><ol start="5"><li>编译</li></ol><pre><code class="sh">whereis pythonmkdir /usr/local/python3cd /home/common/python3.8/Python-3.8.7export CPPFLAGS=&quot; -Wno-error=coverage-mismatch&quot;  # 可选./configure  --prefix=/usr/local/python3 --with-openssl=/usr/local/openssl --enable-shared CFLAGS=-fPIC --enable-profiling --enable-loadable-sqlite-extensions    #LD_RUN_PATH=/usr/local/lib ./configure  --prefix=/usr/local/python3 --with-openssl=/usr/local/openssl --enable-shared CFLAGS=-fPIC --enable-optimizations --enable-profiling --enable-loadable-sqlite-extensions   |grep -v &quot;yes&quot;    LD_RUN_PATH=/usr/local/lib: 可选    --prefix 可把所有资源文件放在指定路径下，卸载软件或移植软件只需要对应的文件夹操作。        不指定的话，可执行文件默认放在/usr/local/bin，库文件默认放在/usr/local/lib，        配置文件默认放在/usr/local/etc，其它的资源文件放在/usr/local/share，比较凌乱        要卸载程序，也可以在原来的make目录下用一次make uninstall，但前提是make文件指定过uninstall，否则卸载要结合安装日志来进行逐一删除    --enable-optimizations 加上后性能有 10% 左右的优化，但会明显增加编译时间；        且 https://bugs.python.org/issue34112 提出 gcc 8.1 以下可能编译不过    --enable-shared CFLAGS=-fPIC  是使用 YCM、pyinstaller、caffe、mysqlclient 等一系列功能的需要(后者确保编译时使用相对路径)    --enable-profiling：let you profile the interpreter with gprof    --enable-loadable-sqlite-extensions：support loadable extensions in _sqlite module    # 查看帮助 ./configure --help 或  ./configure -h    # 在更改 ./configure 编译参数后必须清除生成的文件 make clean &amp;&amp; make distcleanmake -j4     #LD_RUN_PATH=/usr/local/lib make -j4     # 警告：‘/home/common/python3.8/Python-3.8.7/build/temp.linux-x86_64-3.8/home/common/python3.8/Python-3.8.7/Modules/resource.gcda’的版本是‘404R’，需要的版本‘408*’ [默认启用]    cd /home/common/python3.8/Python-3.8.7/build/lib.linux-x86_64-3.8    ls  |grep sqlitemake install &gt; py3-install-`date +%Y%m%d`.log</code></pre><h2 id="关联系统"><a href="#关联系统" class="headerlink" title="关联系统"></a>关联系统</h2><ul><li><p>添加到系统</p><pre><code class="sh"># 设置环境变量，也可以直接将 /usr/local/python3/bin 加入 /etc/profile 文件的环境变量 path 中ln -s /usr/local/python3/bin/python3 /usr/bin/python3    # 考虑到 yum 必须使用 python 2 因此，不能命名为 python，切记！    ln -s /usr/local/python3/bin/python3 /usr/bin/py3ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3ln -s /usr/local/python3/bin/python3-config /usr/bin/python3-configcp /usr/local/python3/lib/libpython3.8.so.1.0 /usr/lib64    #/usr/local/python3/bin/python3.8: error while loading shared libraries: libpython3.8.so.1.0: cannot open shared object file: No such file or directory    cd /usr/local/lib    ln -s libpython3.8.so.1.0 libpython3.8.so    cp /usr/local/python3/lib/libpython3.8.so.1.0 /usr/local/libldconfig -vpython -V    whereis python    whereis python3find / -name _sqlite*.sopython3    import sqlite3    Ctrl+ Dpip3 -V    # pip 21.0 将在 2021 年 1 月释出，将停止支持 Python 2.7（Python 2.x） 系列pip -V    #python 2</code></pre></li><li><p>修改 Python3环境变量</p><pre><code class="sh">vi ~/.bash_profile  将“PATH=$PATH:$HOME/bin”修改为“PATH=$PATH:$HOME/bin:/usr/local/python3/bin”    source ~/.bash_profile    # 关闭报警    export PIP_DISABLE_PIP_VERSION_CHECK=1</code></pre></li><li><p>修复Python2的关联</p><pre><code class="sh">vi /usr/bin/yumvi /usr/bin/yum-config-managervim /usr/libexec/urlgrabber-ext-downvi /usr/libexec/ibus-ui-gtkvi /usr/bin/ibus-setupvi /usr/libexec/ibus-engine-tablevi /usr/bin/gnome-tweak-tool</code></pre></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;依赖包的安装&quot;&gt;&lt;a href=&quot;#依赖包的安装&quot; class=&quot;headerlink&quot; title=&quot;依赖包的安装&quot;&gt;&lt;/a&gt;依赖包的安装&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;编译环境的安装（centos6 默认已具备）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code cla
-      
-    
-    </summary>
-    
-    
-      <category term="编程笔记" scheme="https://faradays-studio.gitee.io/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
-    
-      <category term="CentOS" scheme="https://faradays-studio.gitee.io/tags/CentOS/"/>
-    
-      <category term="Python" scheme="https://faradays-studio.gitee.io/tags/Python/"/>
-    
-      <category term="安装" scheme="https://faradays-studio.gitee.io/tags/%E5%AE%89%E8%A3%85/"/>
-    
-      <category term="编译" scheme="https://faradays-studio.gitee.io/tags/%E7%BC%96%E8%AF%91/"/>
-    
-      <category term="sqlite" scheme="https://faradays-studio.gitee.io/tags/sqlite/"/>
     
   </entry>
   
