@@ -2864,6 +2864,141 @@ printf 不像 echo 那样会自动换行，必须显式添加换行符 `\n` 。<
       </tags>
   </entry>
   <entry>
+    <title>CentOS 6.10 编译安装 GCC4.8.5</title>
+    <url>/202103072130/</url>
+    <content><![CDATA[<p>由于安装 python 3 的需要，需要升级 GCC；由于我的操作系统是 CentOS6.10，而且还需要考虑到工作软件系统的兼容，因此 GCC 版本暂时定为 4.8.5。测试表明，如果 Python 需要性能优化选项 <code>--enable-optimizations</code>，需要 GCC 8.2+ 以上的版本。</p>
+<h2 id="源码下载"><a href="#源码下载" class="headerlink" title="源码下载"></a>源码下载</h2><h3 id="GCC-源码下载"><a href="#GCC-源码下载" class="headerlink" title="GCC 源码下载"></a>GCC 源码下载</h3><pre><code class="sh">cd /home/common
+wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-4.8.5/gcc-4.8.5.tar.gz
+tar xzvf gcc-4.8.5.tar.gz
+
+# 源码权限根据实际需要设定，实际上编译完成后这个文件夹用不到，因此可以不操作此步骤
+chmod 777 -R gcc-4.8.5/</code></pre>
+<h3 id="依赖库源码下载"><a href="#依赖库源码下载" class="headerlink" title="依赖库源码下载"></a>依赖库源码下载</h3><pre><code class="sh"># 进入保存地址
+cd /home/common/gcc-4.8.5
+
+wget https://gmplib.org/download/gmp-6.1.2/gmp-6.1.2.tar.bz2
+tar xvf gmp-6.1.2.tar.bz2
+mv gmp-6.1.2 gmp
+
+wget https://ftp.gnu.org/gnu/mpfr/mpfr-3.1.6.tar.gz
+tar xzvf mpfr-3.1.6.tar.gz
+mv mpfr-3.1.6 mpfr
+
+wget https://ftp.gnu.org/gnu/mpc/mpc-1.0.3.tar.gz
+tar xzvf mpc-1.0.3.tar.gz
+mv mpc-1.0.3 mpc
+
+wget http://www.bastoul.net/cloog/pages/download/cloog-0.18.4.tar.gz
+tar xzvf cloog-0.18.4.tar.gz
+mv cloog-0.18.4 cloog
+
+wget http://isl.gforge.inria.fr/isl-0.14.tar.gz
+tar xzvf isl-0.14.tar.gz
+mv isl-0.14 isl</code></pre>
+<h2 id="编译安装-GCC"><a href="#编译安装-GCC" class="headerlink" title="编译安装 GCC"></a>编译安装 GCC</h2><h3 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h3><pre><code class="sh">#gcc4.4.7版本开始，官方推荐使用单独的目录，而不是在解压gcc源码后的目录中进行编译
+mkdir /home/common/gcc-build
+cd gcc-build
+
+../gcc-4.8.5/configure --enable-checking=release --enable-languages=c,c++ --disable-multilib
+    # --with-pkgversion=version ：指定一个标识你的包的字符串
+    # --enable-languages=c,c++：可以使用 all，default，ada，c，c++，fortran，go，jit，lto，objc，obj-c++。
+    # --disable-multilib：禁止生成多个平台的代码
+    # --enable-bootstrap：冗余的编译检查工作
+    # --enable-gather-detailed-mem-stats：允许通过 -fmem-report 选项来输出编译其它程序时的实时内存使用情况
+    # --with-long-double-128：指定long double类型的默认值是128位。
+    # --enable-threads=posix：C++ 异常能处理多线程代码
+    # --without-bash-malloc：禁用了 Bash 的内存分配函数(malloc)，Bash 将使用更为稳定的 Glibc 里的 malloc 函数。
+    # --enable-multibyte：支持使用多字节字符编码的文件
+
+    grep &quot;error&quot; config.log
+
+# 默认的make不加-j参数效率比较低，加上多线程参数 -j4 和-j8性能差距不大，-j16性能就比较差
+date +%T &amp;&amp; make -j4 &amp;&amp; date +%T
+    # make clean：清除上次的make命令所产生的object文件（后缀为“.o”的文件）及可执行文件。
+    # make distclean：包含make clean，同时也将configure生成的文件全部删除掉。感觉有点像在 gcc-build 中执行 rm -rf 的删减版一样。
+    lscpu |grep -A 1 &#39;Model name&#39;
+make install</code></pre>
+<h3 id="关联系统"><a href="#关联系统" class="headerlink" title="关联系统"></a>关联系统</h3><p>如果上述安装过程中指定了 gcc 的安装路径，那么需要关联系统。当然，我上一步并没有指定安装路径，而是直接替代了系统自带的 GCC 4.4.7。</p>
+<pre><code class="sh"># 更新环境
+echo &#39;/usr/local/gcc-4.8.5/lib64&#39; &gt; /etc/ld.so.conf.d/gcc4.8.5.conf
+ldconfig
+
+# 在自定义的全局配置文件中添加 PATH 变量
+vim /etc/profile.d/hhjos6.sh
+    PATH=/usr/local/gcc-4.8.5/bin:$PATH
+
+mv /usr/bin/gcc /usr/bin/gcc-4.4.7
+mv /usr/bin/g++ /usr/bin/g++-4.4.7
+mv /usr/bin/c++ /usr/bin/c++-4.4.7
+ln -s /usr/local/gcc/bin/gcc /usr/bin/gcc
+ln -s /usr/local/gcc/bin/c++ /usr/bin/c++
+ln -s /usr/local/gcc/bin/g++ /usr/bin/g++
+ln -s /usr/local/gcc/lib64/libstdc++.so.6.0.22 /usr/lib64/libstdc++.so.6</code></pre>
+<h3 id="版本检查"><a href="#版本检查" class="headerlink" title="版本检查"></a>版本检查</h3><pre><code class="sh">gcc -v
+    gcc -dumpversion
+    ll /usr/bin/cc
+    strings /usr/lib64/libstdc++.so.6 | grep GLIBC
+g++ -v
+    g++ -dumpversion
+    c++ -dumpversion</code></pre>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><blockquote>
+<p>如果还要尝试 <code>yum -y install centos-release-scl</code> 安装临时版本的 GCC ，那多数人并不会成功，毕竟 CentOS 6 在官方都是不支持的版本了。博主这次安装 GCC 4.8.5 花了很长时间，毕竟坑太多了，而且已有程序环境的兼容性也必须兼顾。因此虽然参考了以下这些文章，但是操作步骤上却有差异；就是一点点差异，我浪费了很多很多的时间！实际上，我看过的文章就不止这些了，但对我并没有提供任何的帮助。</p>
+</blockquote>
+<ol>
+<li><p>TUNA.<code>清华大学开源软件镜像站（GCC）</code>[EB/OL].<a href="https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc">https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc</a>, 2021/02/20.</p>
+</li>
+<li><p>peterpanzsy.<code>centos 6 升级gcc</code>[EB/OL].<a href="https://www.cnblogs.com/peterpanzsy/archive/2013/04/10/3006838.html">https://www.cnblogs.com/peterpanzsy/archive/2013/04/10/3006838.html</a>, 2021/02/20.</p>
+</li>
+<li><p>创小新.<code>LINUX CENTOS6.8编译安装GCC-6.3.0 升级GCC</code>[EB/OL].<a href="https://chuangxiao.xin/h-nd-87.html">https://chuangxiao.xin/h-nd-87.html</a>, 2021/02/20.</p>
+</li>
+<li><p>ljpwinxp.<code>Centos 6.9 编译安装gcc 4.8.5</code>[EB/OL].<a href="https://blog.51cto.com/191226139/2066137">https://blog.51cto.com/191226139/2066137</a>, 2021/02/20.</p>
+</li>
+<li><p>Free Software Foundation.<code>GCC 4.8 Release Series: Changes, New Features, and Fixes</code>[EB/OL].<a href="https://gcc.gnu.org/gcc-4.8/changes.html">https://gcc.gnu.org/gcc-4.8/changes.html</a>, 2021/02/20.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程笔记</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>CentOS</tag>
+        <tag>GCC</tag>
+        <tag>编译</tag>
+        <tag>安装</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS 6 编译安装 sqlite 3</title>
+    <url>/202103211734/</url>
+    <content><![CDATA[<p>由于安装 Python 环境的需要，需要对 Python 进行编译安装。</p>
+<h2 id="安装编译环境"><a href="#安装编译环境" class="headerlink" title="安装编译环境"></a>安装编译环境</h2><p>先安装必要的环境，博主的系统中默认其实已经包含了</p>
+<pre><code class="sh">yum install sqlite-devel</code></pre>
+<h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h2><pre><code class="sh">cd /home/common/
+wget https://www.sqlite.org/2020/sqlite-autoconf-3320300.tar.gz
+tar -xvzf sqlite-autoconf-3320300.tar.gz
+cd sqlite-autoconf-3320300/
+mkdir -p /usr/local/sqlite
+./configure --prefix=/usr/local/sqlite
+make -j4 &amp;&amp; make install</code></pre>
+<h2 id="关联系统"><a href="#关联系统" class="headerlink" title="关联系统"></a>关联系统</h2><pre><code class="sh">vim /etc/ld.so.conf.d/sqlite3.conf
+    # 可选
+    /usr/local/sqlite/lib
+ldconfig</code></pre>
+]]></content>
+      <categories>
+        <category>编程笔记</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Python</tag>
+        <tag>CentOS</tag>
+        <tag>编译</tag>
+        <tag>安装</tag>
+        <tag>sqlite</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CentOS 使用 yum 国内源实现加速下载</title>
     <url>/202101171156/</url>
     <content><![CDATA[<p>又是一年过去，忽然接到通知，要求更新一个之前做的展示系统，就想起来要更新一下系统。结果使用 <code>yum list kernel.x86_64</code> 提示 <code>Cannot find a valid baseurl for repo: base</code>。</p>
@@ -2924,8 +3059,8 @@ sed -e &#39;s|^mirrorlist=|#mirrorlist=|g&#39; \
         <tag>国内源</tag>
         <tag>加速</tag>
         <tag>下载</tag>
-        <tag>yum</tag>
         <tag>CentOS</tag>
+        <tag>yum</tag>
       </tags>
   </entry>
   <entry>
@@ -3248,145 +3383,10 @@ service iptables restart</code></pre>
         <tag>Linux</tag>
         <tag>国内源</tag>
         <tag>CentOS</tag>
-        <tag>MySQL</tag>
         <tag>安装</tag>
+        <tag>MySQL</tag>
         <tag>配置</tag>
         <tag>权限</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CentOS 6.10 编译安装 GCC4.8.5</title>
-    <url>/202103072130/</url>
-    <content><![CDATA[<p>由于安装 python 3 的需要，需要升级 GCC；由于我的操作系统是 CentOS6.10，而且还需要考虑到工作软件系统的兼容，因此 GCC 版本暂时定为 4.8.5。测试表明，如果 Python 需要性能优化选项 <code>--enable-optimizations</code>，需要 GCC 8.2+ 以上的版本。</p>
-<h2 id="源码下载"><a href="#源码下载" class="headerlink" title="源码下载"></a>源码下载</h2><h3 id="GCC-源码下载"><a href="#GCC-源码下载" class="headerlink" title="GCC 源码下载"></a>GCC 源码下载</h3><pre><code class="sh">cd /home/common
-wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-4.8.5/gcc-4.8.5.tar.gz
-tar xzvf gcc-4.8.5.tar.gz
-
-# 源码权限根据实际需要设定，实际上编译完成后这个文件夹用不到，因此可以不操作此步骤
-chmod 777 -R gcc-4.8.5/</code></pre>
-<h3 id="依赖库源码下载"><a href="#依赖库源码下载" class="headerlink" title="依赖库源码下载"></a>依赖库源码下载</h3><pre><code class="sh"># 进入保存地址
-cd /home/common/gcc-4.8.5
-
-wget https://gmplib.org/download/gmp-6.1.2/gmp-6.1.2.tar.bz2
-tar xvf gmp-6.1.2.tar.bz2
-mv gmp-6.1.2 gmp
-
-wget https://ftp.gnu.org/gnu/mpfr/mpfr-3.1.6.tar.gz
-tar xzvf mpfr-3.1.6.tar.gz
-mv mpfr-3.1.6 mpfr
-
-wget https://ftp.gnu.org/gnu/mpc/mpc-1.0.3.tar.gz
-tar xzvf mpc-1.0.3.tar.gz
-mv mpc-1.0.3 mpc
-
-wget http://www.bastoul.net/cloog/pages/download/cloog-0.18.4.tar.gz
-tar xzvf cloog-0.18.4.tar.gz
-mv cloog-0.18.4 cloog
-
-wget http://isl.gforge.inria.fr/isl-0.14.tar.gz
-tar xzvf isl-0.14.tar.gz
-mv isl-0.14 isl</code></pre>
-<h2 id="编译安装-GCC"><a href="#编译安装-GCC" class="headerlink" title="编译安装 GCC"></a>编译安装 GCC</h2><h3 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h3><pre><code class="sh">#gcc4.4.7版本开始，官方推荐使用单独的目录，而不是在解压gcc源码后的目录中进行编译
-mkdir /home/common/gcc-build
-cd gcc-build
-
-../gcc-4.8.5/configure --enable-checking=release --enable-languages=c,c++ --disable-multilib
-    # --with-pkgversion=version ：指定一个标识你的包的字符串
-    # --enable-languages=c,c++：可以使用 all，default，ada，c，c++，fortran，go，jit，lto，objc，obj-c++。
-    # --disable-multilib：禁止生成多个平台的代码
-    # --enable-bootstrap：冗余的编译检查工作
-    # --enable-gather-detailed-mem-stats：允许通过 -fmem-report 选项来输出编译其它程序时的实时内存使用情况
-    # --with-long-double-128：指定long double类型的默认值是128位。
-    # --enable-threads=posix：C++ 异常能处理多线程代码
-    # --without-bash-malloc：禁用了 Bash 的内存分配函数(malloc)，Bash 将使用更为稳定的 Glibc 里的 malloc 函数。
-    # --enable-multibyte：支持使用多字节字符编码的文件
-
-    grep &quot;error&quot; config.log
-
-# 默认的make不加-j参数效率比较低，加上多线程参数 -j4 和-j8性能差距不大，-j16性能就比较差
-date +%T &amp;&amp; make -j4 &amp;&amp; date +%T
-    # make clean：清除上次的make命令所产生的object文件（后缀为“.o”的文件）及可执行文件。
-    # make distclean：包含make clean，同时也将configure生成的文件全部删除掉。感觉有点像在 gcc-build 中执行 rm -rf 的删减版一样。
-    lscpu |grep -A 1 &#39;Model name&#39;
-make install</code></pre>
-<h3 id="关联系统"><a href="#关联系统" class="headerlink" title="关联系统"></a>关联系统</h3><p>如果上述安装过程中指定了 gcc 的安装路径，那么需要关联系统。当然，我上一步并没有指定安装路径，而是直接替代了系统自带的 GCC 4.4.7。</p>
-<pre><code class="sh"># 更新环境
-echo &#39;/usr/local/gcc-4.8.5/lib64&#39; &gt; /etc/ld.so.conf.d/gcc4.8.5.conf
-ldconfig
-
-# 在自定义的全局配置文件中添加 PATH 变量
-vim /etc/profile.d/hhjos6.sh
-    PATH=/usr/local/gcc-4.8.5/bin:$PATH
-
-mv /usr/bin/gcc /usr/bin/gcc-4.4.7
-mv /usr/bin/g++ /usr/bin/g++-4.4.7
-mv /usr/bin/c++ /usr/bin/c++-4.4.7
-ln -s /usr/local/gcc/bin/gcc /usr/bin/gcc
-ln -s /usr/local/gcc/bin/c++ /usr/bin/c++
-ln -s /usr/local/gcc/bin/g++ /usr/bin/g++
-ln -s /usr/local/gcc/lib64/libstdc++.so.6.0.22 /usr/lib64/libstdc++.so.6</code></pre>
-<h3 id="版本检查"><a href="#版本检查" class="headerlink" title="版本检查"></a>版本检查</h3><pre><code class="sh">gcc -v
-    gcc -dumpversion
-    ll /usr/bin/cc
-    strings /usr/lib64/libstdc++.so.6 | grep GLIBC
-g++ -v
-    g++ -dumpversion
-    c++ -dumpversion</code></pre>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><blockquote>
-<p>如果还要尝试 <code>yum -y install centos-release-scl</code> 安装临时版本的 GCC ，那多数人并不会成功，毕竟 CentOS 6 在官方都是不支持的版本了。博主这次安装 GCC 4.8.5 花了很长时间，毕竟坑太多了，而且已有程序环境的兼容性也必须兼顾。因此虽然参考了以下这些文章，但是操作步骤上却有差异；就是一点点差异，我浪费了很多很多的时间！实际上，我看过的文章就不止这些了，但对我并没有提供任何的帮助。</p>
-</blockquote>
-<ol>
-<li><p>TUNA.<code>清华大学开源软件镜像站（GCC）</code>[EB/OL].<a href="https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc">https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc</a>, 2021/02/20.</p>
-</li>
-<li><p>peterpanzsy.<code>centos 6 升级gcc</code>[EB/OL].<a href="https://www.cnblogs.com/peterpanzsy/archive/2013/04/10/3006838.html">https://www.cnblogs.com/peterpanzsy/archive/2013/04/10/3006838.html</a>, 2021/02/20.</p>
-</li>
-<li><p>创小新.<code>LINUX CENTOS6.8编译安装GCC-6.3.0 升级GCC</code>[EB/OL].<a href="https://chuangxiao.xin/h-nd-87.html">https://chuangxiao.xin/h-nd-87.html</a>, 2021/02/20.</p>
-</li>
-<li><p>ljpwinxp.<code>Centos 6.9 编译安装gcc 4.8.5</code>[EB/OL].<a href="https://blog.51cto.com/191226139/2066137">https://blog.51cto.com/191226139/2066137</a>, 2021/02/20.</p>
-</li>
-<li><p>Free Software Foundation.<code>GCC 4.8 Release Series: Changes, New Features, and Fixes</code>[EB/OL].<a href="https://gcc.gnu.org/gcc-4.8/changes.html">https://gcc.gnu.org/gcc-4.8/changes.html</a>, 2021/02/20.</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>编程笔记</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>CentOS</tag>
-        <tag>安装</tag>
-        <tag>GCC</tag>
-        <tag>编译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CentOS 6 编译安装 sqlite 3</title>
-    <url>/202103211734/</url>
-    <content><![CDATA[<p>由于安装 Python 环境的需要，需要对 Python 进行编译安装。</p>
-<h2 id="安装编译环境"><a href="#安装编译环境" class="headerlink" title="安装编译环境"></a>安装编译环境</h2><p>先安装必要的环境，博主的系统中默认其实已经包含了</p>
-<pre><code class="sh">yum install sqlite-devel</code></pre>
-<h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h2><pre><code class="sh">cd /home/common/
-wget https://www.sqlite.org/2020/sqlite-autoconf-3320300.tar.gz
-tar -xvzf sqlite-autoconf-3320300.tar.gz
-cd sqlite-autoconf-3320300/
-mkdir -p /usr/local/sqlite
-./configure --prefix=/usr/local/sqlite
-make -j4 &amp;&amp; make install</code></pre>
-<h2 id="关联系统"><a href="#关联系统" class="headerlink" title="关联系统"></a>关联系统</h2><pre><code class="sh">vim /etc/ld.so.conf.d/sqlite3.conf
-    # 可选
-    /usr/local/sqlite/lib
-ldconfig</code></pre>
-]]></content>
-      <categories>
-        <category>编程笔记</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Python</tag>
-        <tag>CentOS</tag>
-        <tag>安装</tag>
-        <tag>编译</tag>
-        <tag>sqlite</tag>
       </tags>
   </entry>
   <entry>
@@ -3532,8 +3532,8 @@ vi /usr/bin/gnome-tweak-tool</code></pre>
         <tag>Linux</tag>
         <tag>Python</tag>
         <tag>CentOS</tag>
-        <tag>安装</tag>
         <tag>编译</tag>
+        <tag>安装</tag>
         <tag>sqlite</tag>
       </tags>
   </entry>
@@ -3684,8 +3684,8 @@ make install</code></pre>
       </categories>
       <tags>
         <tag>Linux</tag>
-        <tag>安装</tag>
         <tag>编译</tag>
+        <tag>安装</tag>
         <tag>tmux</tag>
       </tags>
   </entry>
@@ -4746,6 +4746,54 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
         <tag>硬盘</tag>
         <tag>BitLocker</tag>
         <tag>加密</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Word多级编号变为黑色矩形方块的解决办法</title>
+    <url>/202207022357/</url>
+    <content><![CDATA[<p>Microsoft Office 是较为常用的办公软件，不过有些时候也会出现格式异常。最近编制制度文件时，由于在家使用的版本和公司使用的版本不同，结果同步过去后，发现多级编号看不清了，就是一个黑色矩形色块，这可麻烦了。</p>
+<h2 id="异常特征"><a href="#异常特征" class="headerlink" title="异常特征"></a>异常特征</h2><p>对黑色块进行字体格式修改，无效；修改突出显示颜色（背景色）无效，修改文字颜色无效；调整多级编号中的关联样式、字体格式无效（甚至会提示 <code>数字必须介于 1 和 600 之间</code> 或 <code>数字必须介于 1 和 1638 之间</code> 等错误而无法修改格式）。</p>
+<p><img src="/static/img/20220701-Word%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E5%BC%82%E5%B8%B8%E5%8F%98%E9%BB%91%E8%89%B2%E5%9D%97/1-%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E5%BC%82%E5%B8%B8%E5%8F%98%E9%BB%91%E8%89%B2%E5%9D%97.png" alt="异常特征"></p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
+<li>选中多级编号中出现问题的某个编号，如下图：</li>
+</ol>
+<p><img src="/static/img/20220701-Word%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E5%BC%82%E5%B8%B8%E5%8F%98%E9%BB%91%E8%89%B2%E5%9D%97/2-%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E5%BC%82%E5%B8%B8%E5%8F%98%E9%BB%91%E8%89%B2%E5%9D%97%EF%BC%88%E9%80%89%E4%B8%AD%E4%B8%8D%E5%8F%AF%E8%A7%86%EF%BC%89.png" alt="选中存在问题的编号"></p>
+<ol start="2">
+<li>点击样式框中某个<strong>字符</strong>样式，如<code>明显强调</code>，见下图：</li>
+</ol>
+<p><img src="/static/img/20220701-Word%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E5%BC%82%E5%B8%B8%E5%8F%98%E9%BB%91%E8%89%B2%E5%9D%97/3-%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E8%AE%BE%E7%BD%AE%E2%80%9C%E5%AD%97%E7%AC%A6%E2%80%9D%E7%B1%BB%E6%A0%B7%E5%BC%8F-1%EF%BC%88%E6%98%8E%E6%98%BE%E5%BC%BA%E8%B0%83%EF%BC%89.png" alt="变更样式"></p>
+<blockquote>
+<p>样式框中，对不同的样式设置的标记是不同的，如<strong>字符</strong>样式标识符号为 <code>a</code>，<strong>段落</strong>样式标识符号为 <code>𠃎</code>（回车符）。</p>
+</blockquote>
+<ol start="3">
+<li>设置后，多级列表的样式已经恢复可视，不再是黑色块了。如下：</li>
+</ol>
+<p><img src="/static/img/20220701-Word%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E5%BC%82%E5%B8%B8%E5%8F%98%E9%BB%91%E8%89%B2%E5%9D%97/4-%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E8%AE%BE%E7%BD%AE%E2%80%9C%E5%AD%97%E7%AC%A6%E2%80%9D%E7%B1%BB%E6%A0%B7%E5%BC%8F%E5%90%8E%E6%81%A2%E5%A4%8D%E6%AD%A3%E5%B8%B8.png" alt="样式恢复正常"></p>
+<ol start="4">
+<li>接下来需要重新设置多级列表样式。在选中某个编号后，右键，执行 <code>调整列表缩进</code>，如下图：</li>
+</ol>
+<p><img src="/static/img/20220701-Word%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E5%BC%82%E5%B8%B8%E5%8F%98%E9%BB%91%E8%89%B2%E5%9D%97/4-%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E9%87%8D%E6%96%B0%E8%AE%BE%E7%BD%AE%E6%A0%BC%E5%BC%8F-1%EF%BC%88%E8%B0%83%E6%95%B4%E5%88%97%E8%A1%A8%E7%BC%A9%E8%BF%9B%EF%BC%89.png" alt="调整列表缩进"></p>
+<ol start="5">
+<li>在弹窗中，找到需要调整的多级列表层级，点击编号旁边<code>字体</code>按钮，在新的弹窗中设置编号的格式，如下图：</li>
+</ol>
+<p><img src="/static/img/20220701-Word%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E5%BC%82%E5%B8%B8%E5%8F%98%E9%BB%91%E8%89%B2%E5%9D%97/4-%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E9%87%8D%E6%96%B0%E8%AE%BE%E7%BD%AE%E6%A0%BC%E5%BC%8F-4%EF%BC%88%E4%BF%AE%E6%94%B9%E4%B8%AD%EF%BC%89.png" alt="重新设置多级列表样式"></p>
+<ol start="6">
+<li>修改后，样式恢复正常，问题解决。如下图：</li>
+</ol>
+<p><img src="/static/img/20220701-Word%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E5%BC%82%E5%B8%B8%E5%8F%98%E9%BB%91%E8%89%B2%E5%9D%97/4-%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E9%87%8D%E6%96%B0%E8%AE%BE%E7%BD%AE%E6%A0%BC%E5%BC%8F-5%EF%BC%88%E4%BF%AE%E6%94%B9%E5%90%8E%EF%BC%89.png" alt="重新设置多级列表样式"></p>
+<blockquote>
+<p>查看网友的解决方法，有些是采取了样式文件替换，有些是进行多级列表重新定义，方法过于复杂。自以为我的方法要简单明了一些。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>Word</tag>
+        <tag>方法</tag>
+        <tag>多级编号</tag>
+        <tag>样式</tag>
+        <tag>矩形</tag>
       </tags>
   </entry>
   <entry>

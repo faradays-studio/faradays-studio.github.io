@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://faradays-studio.gitee.io/"/>
-  <updated>2022-05-02T15:08:47.378Z</updated>
+  <updated>2022-07-02T16:42:45.461Z</updated>
   <id>https://faradays-studio.gitee.io/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Word多级编号变为黑色矩形方块的解决办法</title>
+    <link href="https://faradays-studio.gitee.io/202207022357/"/>
+    <id>https://faradays-studio.gitee.io/202207022357/</id>
+    <published>2022-07-02T15:57:25.000Z</published>
+    <updated>2022-07-02T16:42:45.461Z</updated>
+    
+    <content type="html"><![CDATA[<p>Microsoft Office 是较为常用的办公软件，不过有些时候也会出现格式异常。最近编制制度文件时，由于在家使用的版本和公司使用的版本不同，结果同步过去后，发现多级编号看不清了，就是一个黑色矩形色块，这可麻烦了。</p><h2 id="异常特征"><a href="#异常特征" class="headerlink" title="异常特征"></a>异常特征</h2><p>对黑色块进行字体格式修改，无效；修改突出显示颜色（背景色）无效，修改文字颜色无效；调整多级编号中的关联样式、字体格式无效（甚至会提示 <code>数字必须介于 1 和 600 之间</code> 或 <code>数字必须介于 1 和 1638 之间</code> 等错误而无法修改格式）。</p><p><img src="/static/img/20220701-Word%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E5%BC%82%E5%B8%B8%E5%8F%98%E9%BB%91%E8%89%B2%E5%9D%97/1-%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E5%BC%82%E5%B8%B8%E5%8F%98%E9%BB%91%E8%89%B2%E5%9D%97.png" alt="异常特征"></p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol><li>选中多级编号中出现问题的某个编号，如下图：</li></ol><p><img src="/static/img/20220701-Word%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E5%BC%82%E5%B8%B8%E5%8F%98%E9%BB%91%E8%89%B2%E5%9D%97/2-%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E5%BC%82%E5%B8%B8%E5%8F%98%E9%BB%91%E8%89%B2%E5%9D%97%EF%BC%88%E9%80%89%E4%B8%AD%E4%B8%8D%E5%8F%AF%E8%A7%86%EF%BC%89.png" alt="选中存在问题的编号"></p><ol start="2"><li>点击样式框中某个<strong>字符</strong>样式，如<code>明显强调</code>，见下图：</li></ol><p><img src="/static/img/20220701-Word%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E5%BC%82%E5%B8%B8%E5%8F%98%E9%BB%91%E8%89%B2%E5%9D%97/3-%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E8%AE%BE%E7%BD%AE%E2%80%9C%E5%AD%97%E7%AC%A6%E2%80%9D%E7%B1%BB%E6%A0%B7%E5%BC%8F-1%EF%BC%88%E6%98%8E%E6%98%BE%E5%BC%BA%E8%B0%83%EF%BC%89.png" alt="变更样式"></p><blockquote><p>样式框中，对不同的样式设置的标记是不同的，如<strong>字符</strong>样式标识符号为 <code>a</code>，<strong>段落</strong>样式标识符号为 <code>𠃎</code>（回车符）。</p></blockquote><ol start="3"><li>设置后，多级列表的样式已经恢复可视，不再是黑色块了。如下：</li></ol><p><img src="/static/img/20220701-Word%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E5%BC%82%E5%B8%B8%E5%8F%98%E9%BB%91%E8%89%B2%E5%9D%97/4-%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E8%AE%BE%E7%BD%AE%E2%80%9C%E5%AD%97%E7%AC%A6%E2%80%9D%E7%B1%BB%E6%A0%B7%E5%BC%8F%E5%90%8E%E6%81%A2%E5%A4%8D%E6%AD%A3%E5%B8%B8.png" alt="样式恢复正常"></p><ol start="4"><li>接下来需要重新设置多级列表样式。在选中某个编号后，右键，执行 <code>调整列表缩进</code>，如下图：</li></ol><p><img src="/static/img/20220701-Word%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E5%BC%82%E5%B8%B8%E5%8F%98%E9%BB%91%E8%89%B2%E5%9D%97/4-%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E9%87%8D%E6%96%B0%E8%AE%BE%E7%BD%AE%E6%A0%BC%E5%BC%8F-1%EF%BC%88%E8%B0%83%E6%95%B4%E5%88%97%E8%A1%A8%E7%BC%A9%E8%BF%9B%EF%BC%89.png" alt="调整列表缩进"></p><ol start="5"><li>在弹窗中，找到需要调整的多级列表层级，点击编号旁边<code>字体</code>按钮，在新的弹窗中设置编号的格式，如下图：</li></ol><p><img src="/static/img/20220701-Word%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E5%BC%82%E5%B8%B8%E5%8F%98%E9%BB%91%E8%89%B2%E5%9D%97/4-%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E9%87%8D%E6%96%B0%E8%AE%BE%E7%BD%AE%E6%A0%BC%E5%BC%8F-4%EF%BC%88%E4%BF%AE%E6%94%B9%E4%B8%AD%EF%BC%89.png" alt="重新设置多级列表样式"></p><ol start="6"><li>修改后，样式恢复正常，问题解决。如下图：</li></ol><p><img src="/static/img/20220701-Word%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E5%BC%82%E5%B8%B8%E5%8F%98%E9%BB%91%E8%89%B2%E5%9D%97/4-%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7%E9%87%8D%E6%96%B0%E8%AE%BE%E7%BD%AE%E6%A0%BC%E5%BC%8F-5%EF%BC%88%E4%BF%AE%E6%94%B9%E5%90%8E%EF%BC%89.png" alt="重新设置多级列表样式"></p><blockquote><p>查看网友的解决方法，有些是采取了样式文件替换，有些是进行多级列表重新定义，方法过于复杂。自以为我的方法要简单明了一些。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Microsoft Office 是较为常用的办公软件，不过有些时候也会出现格式异常。最近编制制度文件时，由于在家使用的版本和公司使用的版本不同，结果同步过去后，发现多级编号看不清了，就是一个黑色矩形色块，这可麻烦了。&lt;/p&gt;
+&lt;h2 id=&quot;异常特征&quot;&gt;&lt;a href=&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
+    
+    
+      <category term="Word" scheme="https://faradays-studio.gitee.io/tags/Word/"/>
+    
+      <category term="方法" scheme="https://faradays-studio.gitee.io/tags/%E6%96%B9%E6%B3%95/"/>
+    
+      <category term="多级编号" scheme="https://faradays-studio.gitee.io/tags/%E5%A4%9A%E7%BA%A7%E7%BC%96%E5%8F%B7/"/>
+    
+      <category term="样式" scheme="https://faradays-studio.gitee.io/tags/%E6%A0%B7%E5%BC%8F/"/>
+    
+      <category term="矩形" scheme="https://faradays-studio.gitee.io/tags/%E7%9F%A9%E5%BD%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>使用 Windows BitLocker 对硬盘进行加密</title>
@@ -540,9 +575,9 @@
     
       <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
     
-      <category term="安装" scheme="https://faradays-studio.gitee.io/tags/%E5%AE%89%E8%A3%85/"/>
-    
       <category term="编译" scheme="https://faradays-studio.gitee.io/tags/%E7%BC%96%E8%AF%91/"/>
+    
+      <category term="安装" scheme="https://faradays-studio.gitee.io/tags/%E5%AE%89%E8%A3%85/"/>
     
       <category term="tmux" scheme="https://faradays-studio.gitee.io/tags/tmux/"/>
     
@@ -679,31 +714,6 @@
       <category term="配置" scheme="https://faradays-studio.gitee.io/tags/%E9%85%8D%E7%BD%AE/"/>
     
       <category term="zsh" scheme="https://faradays-studio.gitee.io/tags/zsh/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Powerline 插件的安装与配置</title>
-    <link href="https://faradays-studio.gitee.io/202104102207/"/>
-    <id>https://faradays-studio.gitee.io/202104102207/</id>
-    <published>2021-04-10T14:07:19.000Z</published>
-    <updated>2021-04-17T11:31:26.493Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Powerline-的安装"><a href="#Powerline-的安装" class="headerlink" title="Powerline 的安装"></a>Powerline 的安装</h2><ol><li><p>安装 <a href="https://github.com/powerline/powerline">Powerline</a></p><blockquote><p>  Powerline is a statusline plugin for vim, and provides statuslines and prompts for several other applications, including zsh, bash, fish, tmux, IPython, Awesome, i3 and Qtile.  </p><p>  进阶版本：<a href="https://github.com/b-ryan/powerline-shell">https://github.com/b-ryan/powerline-shell</a>  A beautiful and useful prompt generator for Bash, ZSH, Fish, and tcsh</p></blockquote><pre><code class="sh">pip3 install wheel powerline-status    #或 pip3 install git+git://github.com/powerline/powerline    # pip3 install git+git://gitee.com/mirrors/Powerline# 确认包路径pip3 show powerline-status    # /usr/local/python3/lib/python3.8/site-packages# 查看支持的终端ls /usr/local/python3/lib/python3.8/site-packages/powerline/bindings/    # awesome  bar  bash  config.py  fish  i3  ipython  lemonbar  pdb  qtile  rc  shell  tcsh  tmux  vim  wm  zsh# 查看本地配置gedit /usr/local/python3/lib/python3.8/site-packages/powerline/config_files/config.json</code></pre></li><li><p>安装配套字体，并修改终端界面的显示字体（才会生效）</p><pre><code class="sh">#git clone https://github.com/powerline/fonts.git --depth=1git clone https://gitee.com/efluent/fonts.git --depth=1# installcd fonts./install.sh    # 在相应的账户下安装，就安装到响应账户的文件夹中    /root/.local/share/fonts    /home/herc/.local/share/fontscp -pr fonts/ /usr/share/fonts/powerlinecd ..rm -rf fonts</code></pre><ul><li><p>以下方法测试未成功，原因不明</p><pre><code class="sh">#安装字体# cd /usr/share/fonts/SourceCodePro# chmod +x *.otfcp -pr SourceCodePro/ /usr/share/fontscd /usr/share/fontswget https://github.com/powerline/powerline/blob/develop/font/PowerlineSymbols.otfchmod +x PowerlineSymbols.otf# 下述方法无效#cd /etc/fonts/conf.d/#wget https://github.com/powerline/powerline/blob/develop/font/10-powerline-symbols.conf#wget https://github.com/justrajdeep/fonts/blob/master/10-powerline-symbols.confmkdir -p ~/.config/fontconfig/conf.dcd ~/.config/fontconfig/conf.dwget https://github.com/powerline/fonts/blob/master/fontconfig/50-enable-terminess-powerline.conf# 在各个用户下执行fc-cache -fv</code></pre></li><li><p>查看字体</p><pre><code class="sh"># 查看中文字体清单fc-list :lang=zh# 终端字体保存在find / -name  consolefontscd /lib/kbd/consolefontssetfont -h</code></pre></li><li><p>centos 6安装中文字体（不含文泉驿）</p><pre><code class="sh">yum install bitmap-fonts bitmap-fonts-cjk</code></pre></li></ul></li></ol><h2 id="Powerline-的配置"><a href="#Powerline-的配置" class="headerlink" title="Powerline 的配置"></a>Powerline 的配置</h2><ol><li><p>确认 Python 已关联到系统的各个 shell</p><pre><code class="sh"> # 添加到 Python 程序到系统中 #ln -s /usr/local/python3/bin/powerline /usr/local/bin #ln -s /usr/local/python3/bin/powerline-config /usr/local/bin #ln -s /usr/local/python3/bin/powerline-daemon /usr/local/bin echo &#39;export PATH=$PATH:/usr/local/python3/bin&#39; &gt;&gt; /etc/profile echo &#39;export PATH=$PATH:/usr/local/python3/bin&#39; &gt;&gt; /etc/zprofile</code></pre></li><li><p>bash开启 powerline（全局），参考 <a href="https://powerline.readthedocs.io/en/latest/usage/shell-prompts.html">https://powerline.readthedocs.io/en/latest/usage/shell-prompts.html</a></p><pre><code class="sh"> cd /usr/local/python3/lib/python3.8/site-packages/powerline gedit /etc/bashrc # 或 gedit /etc/profile.d/powerline.sh     # powerline，hhj-20210220     export PATH=$PATH:/usr/local/python3/bin     if [ -f &quot;`which powerline-daemon`&quot; ]; then       powerline-daemon -q       POWERLINE_BASH_CONTINUATION=1       POWERLINE_BASH_SELECT=1       . /usr/local/python3/lib/python3.8/site-packages/powerline/bindings/bash/powerline.sh     fi  . /etc/profile.d/powerline.sh     # 当前用户生效</code></pre></li><li><p>zsh 配置 powerline（全局）</p><pre><code class="sh"> cd /usr/local/python3/lib/python3.8/site-packages/powerline/bindings/zsh/ cp /etc/profile.d/powerline.sh /etc/profile.d/powerline.zsh gedit /etc/profile.d/powerline.zsh     # hhj-20210220     if [ -f &quot;`which powerline-daemon`&quot; ]; then       powerline-daemon -q       POWERLINE_BASH_CONTINUATION=1       POWERLINE_BASH_SELECT=1       . /usr/local/python3/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh     fi  . /etc/profile.d/powerline.zsh</code></pre></li><li><p>vim（全局配置）</p><pre><code class="sh"> vim /etc/vimrc     &quot; hhj-20210220     set  rtp+=/usr/local/python3/lib/python3.8/site-packages/powerline/bindings/vim/     set laststatus=2     set t_Co=256</code></pre></li><li><p>ipython 配置</p><pre><code class="sh"> gedit ~/.ipython/profile_default/ipython_config.py     from powerline.bindings.ipython.since_5 import PowerlinePrompts     c = get_config()     c.TerminalInteractiveShell.simple_prompt = False     c.TerminalInteractiveShell.prompts_class = PowerlinePrompts</code></pre></li><li><p>tmux 配置</p><pre><code class="sh"> gedit ~/.tmux.conf     source &quot;/usr/local/python3/lib/python3.8/site-packages/powerline/bindings/tmux/powerline.conf&quot;</code></pre></li></ol><ul><li><p>解决不能显示git分支问题（未配置）</p><pre><code class="sh">mkdir -p ~/.config/powerlinecat &lt;&lt;-&#39;EOF&#39; &gt; ~/.config/powerline/config.json&#123;    &quot;ext&quot;: &#123;        &quot;shell&quot;: &#123;            &quot;theme&quot;: &quot;default_leftonly&quot;        &#125;    &#125;&#125;EOFpowerline-daemon --replace</code></pre></li></ul><ul><li><p>csh 配置（<strong>不成功</strong>）</p><pre><code class="sh">gedit /etc/zprofile    export PATH=&quot;$PATH:/usr/local/python3/bin&quot;    . /usr/local/python3/lib/python3.8/site-packages/powerline/bindings/tcsh/powerline.tcsh</code></pre></li></ul><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>不记得了，之前安装的时候查阅了多个文档，改天补上来了！</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Powerline-的安装&quot;&gt;&lt;a href=&quot;#Powerline-的安装&quot; class=&quot;headerlink&quot; title=&quot;Powerline 的安装&quot;&gt;&lt;/a&gt;Powerline 的安装&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;安装 &lt;a href=&quot;https
-      
-    
-    </summary>
-    
-    
-    
-      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/tags/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
     
   </entry>
   
