@@ -49,6 +49,11 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
       </tags>
   </entry>
   <entry>
+    <title>文章导航</title>
+    <url>/202103060055/</url>
+    <content><![CDATA[<h1 id="文章导航"><a href="#文章导航" class="headerlink" title="文章导航"></a>文章导航</h1>]]></content>
+  </entry>
+  <entry>
     <title>如何使用 svg.js 创建 svg 文档</title>
     <url>/201902090951/</url>
     <content><![CDATA[<p>前段时间，我尝试了使用 svg.js 来创建 svg dom 文档时，并没有成功。经过反复多次的尝试，并网络检索了一些信息，初步确认为官方文档未及时更新，导致了编码错误。</p>
@@ -337,6 +342,22 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
       </tags>
   </entry>
   <entry>
+    <title>Hello World（世界，你好）</title>
+    <url>/202008090000/</url>
+    <content><![CDATA[<p>世界，你好！我是一名低微到尘埃里的普通人，曾经幻想过成为一名科学家，为国家科技事业贡献力量，然后我并没有这样的超凡的智商；我成为了一名普通的工程师，我克服了很多很多的困难，在不同的岗位上也取得了一些成绩，然而，我的缺点和遇到的困难，仍然很多，有些时候，差点将我打倒了！</p>
+<p>同龄的同事，不少人获得了职务上的升迁，不少人获得了名誉上的进步，我也不想就这样放弃，不想放任自我，因此我也要在这里尝试发出我自己的声音，我要进步，我要追求卓越！</p>
+<p>世界，你好。社会，你好。我一直都很期盼见到明天的太阳，愿美好的生活终将来临！</p>
+]]></content>
+      <categories>
+        <category>星星心事</category>
+      </categories>
+      <tags>
+        <tag>日志</tag>
+        <tag>你好</tag>
+        <tag>追求卓越</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Windows 批处理的字符运算（未完待续）</title>
     <url>/202008200927/</url>
     <content><![CDATA[<p>字符运算历来是编程中的重要内容，如何拼接字符，如何截取字符，如何判断字符是否存在，如何判断两个字符串是否相同，成为了编程任务中的重要环节。因此，我结合网络的资料和个人的实践经验来总结一下。</p>
@@ -588,27 +609,6 @@ $git push origin my_test:my_test
       </tags>
   </entry>
   <entry>
-    <title>文章导航</title>
-    <url>/202103060055/</url>
-    <content><![CDATA[<h1 id="文章导航"><a href="#文章导航" class="headerlink" title="文章导航"></a>文章导航</h1>]]></content>
-  </entry>
-  <entry>
-    <title>Hello World（世界，你好）</title>
-    <url>/202008090000/</url>
-    <content><![CDATA[<p>世界，你好！我是一名低微到尘埃里的普通人，曾经幻想过成为一名科学家，为国家科技事业贡献力量，然后我并没有这样的超凡的智商；我成为了一名普通的工程师，我克服了很多很多的困难，在不同的岗位上也取得了一些成绩，然而，我的缺点和遇到的困难，仍然很多，有些时候，差点将我打倒了！</p>
-<p>同龄的同事，不少人获得了职务上的升迁，不少人获得了名誉上的进步，我也不想就这样放弃，不想放任自我，因此我也要在这里尝试发出我自己的声音，我要进步，我要追求卓越！</p>
-<p>世界，你好。社会，你好。我一直都很期盼见到明天的太阳，愿美好的生活终将来临！</p>
-]]></content>
-      <categories>
-        <category>星星心事</category>
-      </categories>
-      <tags>
-        <tag>日志</tag>
-        <tag>你好</tag>
-        <tag>追求卓越</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>苹果 Macbook Pro 笔记本从 U 盘启动以及重置开机密码的方法</title>
     <url>/202008272141/</url>
     <content><![CDATA[<p>前几天，有位老领导委托我对其苹果 Macbook Pro 2018 笔记本进行优化处理。由于网上的资料比较零散、挂一漏万，因此我也来总结一下操作经验。</p>
@@ -662,6 +662,322 @@ $git push origin my_test:my_test
         <tag>操作系统</tag>
         <tag>PE</tag>
         <tag>U盘</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2020年随笔</title>
+    <url>/202009022111/</url>
+    <content><![CDATA[<h3 id="2020-09-02，明月"><a href="#2020-09-02，明月" class="headerlink" title="2020/09/02，明月"></a>2020/09/02，明月</h3><p>凌晨将寝，看见一轮明月从百叶窗的缝隙中漏了出来。江天一色无纤尘，皎皎空中孤月轮，我想起来了我的老父亲，突然好一阵心酸。</p>
+<p>这世界就这一轮明月，父亲看到的明月，和我看到的是不是一样的呢？我无从得知，但是我知道他清澈的心底，应该也和这明月一样，明朗、简洁、孤独的挂在那里！我现在正在重构的 hexo 主题，是否也能和它一样明朗呢？</p>
+<h3 id="2020-09-11，疲倦"><a href="#2020-09-11，疲倦" class="headerlink" title="2020/09/11，疲倦"></a>2020/09/11，疲倦</h3><p>今天颇为疲倦，那是种种摧残对生活热爱的力量。</p>
+<p>生活无望的摧残有之。生活压力太大，家庭收入有限，总是有种种债务要还，明明金额也不多，可是月月都是勉勉强强，总有一种秦琼卖马、穷途末路的感觉，既担不起风险去谋份新工作拼出路，也割舍不了那些缠缠绵绵的家庭责任。</p>
+<p>与人相处的困顿有之。我总以为自己是个文人，家国情怀、儿女情长；然而也不知道如何面对糟糠之妻，是勉励还是鞭策，是举案齐眉还是听之任之；也不知道如何面对幼年儿女，是宠爱还是严厉，是陪伴成长还是执鞭指导。看过不少教育理论和案例，也曾以自身做过很多试验，终究是了了，每一个方向都言之凿凿，然而都不曾看得到光明。一人独行的孤独，布满了天空。</p>
+<p>报国无门的失望有之。①得不到应有的回报：在单位里，也曾以一己之力，年年月月坚持，做了很多别人不想做、不能做的事情，但体制之下，来回调动，兜兜转转，始终只是棋子一枚。不少人长袖善舞、坑蒙拐骗，却获得了多次升迁，改善了生活，而我被所谓的工作需要等原因排除在外，常常需要为家庭的每月的账单发愁很久。②官僚主义严重。对于自己，每一次努力改变工作局面，总有领导劝你多克服一下困难，总是有人说你不知道在忙什么；对于企业，有些人，总能罔顾年年亏损，形式主义，人浮于事，人满为患的会议永远在开着，落实工作的，永远都只有那么少数的几个人；好多人都拈轻怕重、装模作样，写计划时高瞻远瞩、侃侃而谈，谈落实时左右掣肘、漠视困难，没有人关心日常应该怎么做提升效率、没有人有魄力面对上级的考核压力，更没有人具有规章制度里边要求的那些工作能力，制度永远只是规范下级、杀鸡儆猴的玩物……我甚至不知道，我10多年来孜孜不倦地工作，到底有没有意义了？！我自小家里生活困顿，多次获得了学校的贫困补助和一些周边人的帮助，曾发誓要报效祖国、造福社会；然而，在年复一年的人治环境下，我几乎丧失去了再挣扎的动力。</p>
+<p>人，活的疲惫，不是因为事情太难做，而是因为适应社会不是一个容易的事情！</p>
+<h3 id="2020-09-26，迷茫"><a href="#2020-09-26，迷茫" class="headerlink" title="2020/09/26，迷茫"></a>2020/09/26，迷茫</h3><p>昨日，在公司某部门那里被批评项目文件写的不清不楚。我的内容别人看不明白，因此需要修改；这本来也没啥，偏偏别人要告诉我他不是搞这个专业的，这让人有点难受。</p>
+<p>法国作家 John Collier 说过，If Youth Knew, If Age Could。我自己理解的意思就是，如果年轻人经验丰富，那么就不会栽在人情世故和盲目自大上；如果老年人能力充沛、能闯善干，那么就不会、也不必利用特权来设置那么多莫名其妙的规则来限制或阻挡事物的发展。</p>
+<p>就事论事而言，我也直接参与不少重要的基础事务，天天都在赶任务似的。那天的项目申请书和可行性研究报告都是一天之内匆匆写就的，而且要花费一大笔钱，涉及不少未知的研究和探索，怎么可能足够完善、足够清晰到一个非专业人员能够在几分钟内读懂、并作出投资决策呢！所以，对于这些身居要位、日常看报的中老年专家，我是有看法的：他们平时或做好好先生、或好为人师，对领导阿谀奉承，对基层装腔作势；给我这样的基层打工仔造成种种混乱也是难免的——他们作为从我这样的基础工种提拔上去的技术管理人员，平时不指导和帮助我们，不率先垂范，却要求下层人员有所作为、还要遵守一堆只有下层人员才需要遵守的规则，真可谓“何不食肉糜”的典范！</p>
+<p>我一度迷茫，想去纠正他的每一个专业术语上的错误，想引经据典，想据理力争到底…然而，一念之间，竟放弃了这个念头——我们参与日常事务，希望企业兴旺、国家繁荣，那是我们自己主动参与实现的，不是等来的；如果我们再退却了，旁观了，又何来希望？！</p>
+<p>是我自己一厢情愿的幻想罢了。我指望着的人——他们早已被生活和工作刺破了梦想、也与高官厚禄无望，我竟希望他们能够礼贤下士、推陈出新？！那也太为难人了！试想，又有几个人不曾怀揣着“仗剑走天涯”的梦想，却偏偏在现实社会中得到遍体鳞伤、至今怕蛇咬？他们不正和我现在一样吗——总以为自己技术业绩很突出就能傲视群雄，甚至学着别人的腔调说“生态就是被你们这些人搞坏的”，然后无所作为地、等待着别人来改善生态环境。可是我做的就够了吗？我低微到了尘埃里，可也有人说自己更低微，期盼着我不要在工作中给他们挑刺，帮他们协调解决哪些超出了能力的怪事吗？</p>
+<p>算了，做自己能做的事吧！希望明天会好一点，希望“日行一善，积善成德；日行一善，功满三千”，时间自有定论。</p>
+]]></content>
+      <categories>
+        <category>星星心事</category>
+      </categories>
+      <tags>
+        <tag>2020</tag>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在 Shell 中使用 printf 格式化输出语句</title>
+    <url>/202009292008/</url>
+    <content><![CDATA[<p>在使用 shell 编程的过程，难免要进行内容输出，我们一般情况下都使用 <code>echo</code> 命令进行输出，如 <code>echo &quot;Hello, World&quot;</code> ，不过功能比较有限；如果需要高级的格式化功能控制，那么应当使用 <code>printf</code> 命令。</p>
+<pre><code>printf 由 POSIX 标准所定义，是C语言 `printf()` 库函数的一个有限的变形（在语法上也有些不同），是 echo 命令的增强版。
+printf 不像 echo 那样会自动换行，必须显式添加换行符 `\n` 。</code></pre><h2 id="语法说明"><a href="#语法说明" class="headerlink" title="语法说明"></a>语法说明</h2><h3 id="printf-命令的语法"><a href="#printf-命令的语法" class="headerlink" title="printf 命令的语法"></a>printf 命令的语法</h3><pre><code>printf   &#123;format-string1 format-string2...&#125;   [arguments1 arguments2...]</code></pre><ol>
+<li><p><code>format-string</code> 为格式控制字符串（可以没有引号，但最好加上，单引号、双引号均可；多个格式字符使用空格进行分隔），按 <strong>%[标志][输出最小宽度][.精度][长度]类型</strong> 格式书写：</p>
+<ul>
+<li><p>标志：即正负号或进制符号的设定</p>
+<table>
+<thead>
+<tr>
+<th>标 志</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-</td>
+<td>结果左对齐，右边填空格</td>
+</tr>
+<tr>
+<td>+</td>
+<td>输出符号(正号或负号)</td>
+</tr>
+<tr>
+<td>空格</td>
+<td>输出值为正时冠以空格，为负时冠以负号</td>
+</tr>
+<tr>
+<td>#</td>
+<td>对c、s、d、u类无影响； 对o类，在输出时加前缀o； 对x类，在输出时加前缀0x； 对e、g、f 类当结果有小数时才给出小数点。</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>输出最小宽度：用十进制整数来表示输出的最少位数。若实际位数多于定义的宽度，则按实际位数输出，若实际位数少于定义的宽度则补以 <strong>空格</strong> 或 <code>0</code>。</p>
+</li>
+<li><p>精度：以 <code>.</code> 开头，后跟十进制整数。本项的意义是：如果输出数字，则表示小数的位数；如果输出的是字符，则表示输出字符的个数；若实际位数大于所定义的精度数，则截去超过的部分。</p>
+</li>
+<li><p>长度：格式符分为h、l两种， <code>h</code> 表示按短整型量输出，<code>l</code> 表示按长整型量输出。</p>
+</li>
+<li><p>类型：即输出数据的变量类型设定</p>
+<table>
+<thead>
+<tr>
+<th>格式字符</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>d</td>
+<td>以十进制形式输出带符号整数(正数不输出符号)</td>
+</tr>
+<tr>
+<td>o</td>
+<td>以八进制形式输出无符号整数(不输出前缀0)</td>
+</tr>
+<tr>
+<td>x,X</td>
+<td>以十六进制形式输出无符号整数(不输出前缀Ox)</td>
+</tr>
+<tr>
+<td>u</td>
+<td>以十进制形式输出无符号整数</td>
+</tr>
+<tr>
+<td>f</td>
+<td>以小数形式输出单、双精度实数</td>
+</tr>
+<tr>
+<td>e,E</td>
+<td>以指数形式输出单、双精度实数</td>
+</tr>
+<tr>
+<td>g,G</td>
+<td>以%f或%e中较短的输出宽度输出单、双精度实数</td>
+</tr>
+<tr>
+<td>c</td>
+<td>输出单个字符</td>
+</tr>
+<tr>
+<td>s</td>
+<td>输出字符串</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>举例</p>
+<ul>
+<li><code>%d</code> 表示按十进制整型输出；</li>
+<li><code>%ld</code> 表示按十进制长整型输出；</li>
+<li><code>%c</code> 表示按字符型输出等。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>arguments</code> 为参数列表（多个参数使用空格分隔，不用逗号；若 <code>arguments</code> 多于 <code>format-string</code> 时，<code>format-string</code> 将自动重用）。</p>
+<blockquote>
+<p>参数来自于前序程序段，也就是需要格式化输出的变量。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="printf-命令的转义序列"><a href="#printf-命令的转义序列" class="headerlink" title="printf 命令的转义序列"></a>printf 命令的转义序列</h3><p>由于部分控制字符并不含在变量（参数）中，也无法使用格式控制符导入，比如变量之间的连接符等等，因此需要使用转义字符来完善格式化功能。最常见的就是增加换行符和制表符等，如 <code>printf &quot;Hello, Shell\n&quot;</code> 。</p>
+<table>
+<thead>
+<tr>
+<th align="left">序列</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">\a</td>
+<td align="left">警告字符，通常为 ASCII 的 BEL 字符</td>
+</tr>
+<tr>
+<td align="left">\b</td>
+<td align="left">后退</td>
+</tr>
+<tr>
+<td align="left">\c</td>
+<td align="left">抑制（不显示）输出结果中任何结尾的换行字符（只在 %b 格式指示符控制下的参数字符串中有效），而且，任何留在参数里的字符、任何接下来的参数以及任何留在格式字符串中的字符，都被忽略</td>
+</tr>
+<tr>
+<td align="left">\f</td>
+<td align="left">换页（formfeed）</td>
+</tr>
+<tr>
+<td align="left">\n</td>
+<td align="left">换行</td>
+</tr>
+<tr>
+<td align="left">\r</td>
+<td align="left">回车（Carriage return）</td>
+</tr>
+<tr>
+<td align="left">\t</td>
+<td align="left">水平制表符</td>
+</tr>
+<tr>
+<td align="left">\v</td>
+<td align="left">垂直制表符</td>
+</tr>
+<tr>
+<td align="left">\</td>
+<td align="left">一个字面上的反斜杠字符</td>
+</tr>
+<tr>
+<td align="left">\ddd</td>
+<td align="left">表示 1 到 3 位数八进制值的字符。仅在格式字符串中有效</td>
+</tr>
+<tr>
+<td align="left">\0ddd</td>
+<td align="left">表示 1 到 3 位的八进制值字符</td>
+</tr>
+</tbody></table>
+<h2 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h2><ol>
+<li><p>示例1（shell 示例）</p>
+<pre><code class="sh"> #!/bin/bash
+ # author: david faraday
+ # created: 2020/10/05 17:05:13
+
+ # format-string为双引号
+ printf &quot;%d %s\n&quot; 1 &quot;abc&quot;
+
+ # 单引号与双引号效果一样 
+ printf &#39;%d %s\n&#39; 1 &quot;abc&quot; 
+
+ # 没有引号也可以输出
+ printf %s abcdef
+
+ # 格式只指定了一个参数，但多出的参数仍然会按照该格式输出，format-string 被重用
+ printf %s abc def
+
+ printf &quot;%s\n&quot; abc def
+
+ printf &quot;%s %s %s\n&quot; a b c d e f g h i j
+
+ # 如果没有 arguments，那么 %s 用NULL代替，%d 用 0 代替
+ printf &quot;%s and %d \n&quot; </code></pre>
+<p> 上述输出结果为：</p>
+<pre><code class="shell"> 1 abc
+ 1 abc
+ abcdefabcdefabc
+ def
+ a b c
+ d e f
+ g h i
+ j  
+ and 0</code></pre>
+</li>
+</ol>
+<ol start="2">
+<li><p>示例2：表格化输出</p>
+<pre><code class="sh"> #!/bin/bash
+ # author: david faraday
+ # created: 2020/10/05 17:15:25
+
+ printf &quot;%-10s %-8s %-4s\n&quot; 姓名 性别 体重kg  
+ printf &quot;%-10s %-8s %-4.2f\n&quot; 郭靖 男 66.1234 
+ printf &quot;%-10s %-8s %-4.2f\n&quot; 杨过 男 48.6543 
+ printf &quot;%-10s %-8s %-4.2f\n&quot; 郭芙 女 47.9876 </code></pre>
+<blockquote>
+<p><code>%-10s</code> 指一个宽度为 10 个字符（ <code>-</code> 表示左对齐，没有则表示右对齐），任何字符都会被显示在 10 个字符宽的字符内，如果不足则自动以空格填充，超过也会将内容全部显示出来。<br><code>%-4.2f</code> 指格式化为小数，其中 <code>.2</code> 指保留 2 位小数。</p>
+</blockquote>
+<p> 执行脚本，输出结果如下所示：</p>
+<pre><code class="xls"> 姓名     性别   体重kg
+ 郭靖     男      66.12
+ 杨过     男      48.65
+ 郭芙     女      47.99</code></pre>
+</li>
+</ol>
+<ol start="3">
+<li><p>示例（C 语言示例）</p>
+<pre><code class="C"> #include &lt;stdio.h&gt;
+ int main(void)&#123;
+     int i=8;
+     printf(&quot;The raw value: i=%d\n&quot;, i);
+     printf(&quot;++i=%d \n++i=%d \n--i=%d \n--i=%d\n&quot;,++i,++i,--i,--i);
+     return 0;
+ &#125;</code></pre>
+<p> 运行结果：</p>
+<pre><code> The raw value: i=8
+ ++i=8
+ ++i=7
+ --i=6
+ --i=7</code></pre></li>
+</ol>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h3><ul>
+<li>1.0.0，2020/10/05 21:51:03，初始版本。</li>
+</ul>
+<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
+<li><p>w3cschool编程狮.<code>Shell printf 命令</code>[EB/OL].<a href="https://www.w3cschool.cn/linux/linux-shell-printf.html">https://www.w3cschool.cn/linux/linux-shell-printf.html</a>, 2020/09/29.</p>
+</li>
+<li><p>C语言中文网.<code>shell printf命令：格式化输出语句</code>[EB/OL].<a href="http://c.biancheng.net/cpp/view/1499.html">http://c.biancheng.net/cpp/view/1499.html</a>, 2020/09/29.</p>
+</li>
+<li><p>C语言中文网.<code>C语言格式输出函数printf()详解</code>[EB/OL].<a href="http://c.biancheng.net/cpp/html/33.html">http://c.biancheng.net/cpp/html/33.html</a>, 2020/10/05.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程笔记</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+        <tag>printf</tag>
+        <tag>格式化</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>评《Margin Call》：高个不挑担，世上永无光</title>
+    <url>/202010021008/</url>
+    <content><![CDATA[<blockquote>
+<p>直到落幕，我才意识到 《Margin Call》（商海通牒） 已经结束，可是对它的感悟我才刚刚开始…</p>
+</blockquote>
+<ul>
+<li>剧本 ☆☆☆☆</li>
+<li>场景 ☆☆☆☆</li>
+<li>演绎 ☆☆☆☆</li>
+<li>综合 ☆☆☆☆</li>
+</ul>
+<h2 id="剧情摘要"><a href="#剧情摘要" class="headerlink" title="剧情摘要"></a>剧情摘要</h2><p>整个故事不复杂：一家公司正在大幅裁员，领导 Sam 带头鼓掌并发表了鼓舞人心的讲话，员工们纷纷加班至深夜；努力工作的新员工 Peter 在别人下班去娱乐的时候，发现了公司风险模型预测到未来走势将大幅下跌，光是一层楼 25% 的亏损将超过公司的市值，立即汇报领导 Will ，领导也汇报他的领导 Sam，最后二把手贾德·科恩也在凌晨 2 点乘坐直升机来到公司，并决策抛售公司资产、及时止损。</p>
+<p>整部电影一直都没有正面展开商业斗争的波谲云诡（bō jué yún guǐ），而是大量了使用了各种背景阐述，各种侧面语言动作渲染。电影的节奏一直比较缓慢，没有快步奔跑的员工，也没有大幅的悲伤情绪，即使大结局了，既没有看到行业动荡的场景，也没有被阴谋拖入破产骗局的投资人纷纷跳楼的场景；只见暗淡的月色底下，与会者深锁的眉头、凝重的表情，晦涩难懂、含糊不清的经营风险陈述，与员工们纸醉金迷的生活、老板来去直升机、投资人高大上言论形成鲜明的对比。</p>
+<p>Eric Dale （艾力克·戴尔）负责风险管理部门，工作了 19 年的员工，秋毫不觉就被即时辞退了。他希望在离职时将工作交接清楚，可是无论是人力资源部门主管还是自己的直属领导 Will Emerson，都没有人搭理他；在电梯门关闭之际，他将做了一半工作的资料U盘给了赶来告别的新员工 Peter，然后到了楼下工作手机就被公司关停了。</p>
+<p>发生问题后公司想请他说清楚以及对数据进行保密时，公司才发现已经联系不上他了，只能等到凌晨他妻子打来电话说他在家了，公司才决定去他家里找他、用每小时 17 万多美元的代价来要求他对公司的风险秘密予以保守一天。</p>
+<h2 id="社会感悟"><a href="#社会感悟" class="headerlink" title="社会感悟"></a>社会感悟</h2><h3 id="个人利益至上，屠龙少年终成恶龙"><a href="#个人利益至上，屠龙少年终成恶龙" class="headerlink" title="个人利益至上，屠龙少年终成恶龙"></a>个人利益至上，屠龙少年终成恶龙</h3><p>尽管行业性的经济危机将至，但只有一个镜头表现了 2008 年经济大动荡的可怕的之处——因年入 25 万美元而自豪不已的小员工 Seth （赛斯·布雷格曼）面对即将辞退的困境，在卫生间里边痛哭失声，他十多分钟前还镇定自若地说，OK！</p>
+<p>公司的领导人 Sam 尽管工作了 34 年，积累了大量的财富，作为人性未泯的领导者，他依然无法放弃对利益的追逐。</p>
+<p>他是靠公司体制成功的领导者。他入职早，高高在上，做出英明的决策，英明地裁员、果断地抛售资产，然而公司的主要利润都是那些小员工辛辛苦苦赚来的，他甚至不知道的如何看明白预示着公司未来的曲线怎么看、指标是什么，他也记不住下层员工的名字，但是不影响他拿着公司基层无法企及、难以想象的高薪。他的狗生病了，每天都要花费一千美元治病，他太过于悲伤甚至于不觉得80%的下属被辞退了能怎么样，毕竟他早已从长期的人员流动中变得麻木不仁了！</p>
+<p>他来自基层，也拼搏过，因此他同情弱者、忧心行业，良心未泯。 Sam 的手下员工，不乏能力卓著的年轻人，比如说火箭科学家 Peter（彼得·苏利文）；也有出身不凡的得力下属，比如说桥梁工程师 Eric。因此，当二把手要求他出售资产时，他考虑到了对行业的影响以及年轻人的未来，他质疑何为老板毫无选择，他拒绝聆听风险评估，他嚎叫老板让开，他一次又一次地拒绝了二把手的要求，直到杰瑞开出了天价的报酬。</p>
+<p>他是利益追逐的一员，当首席风险评估分析师 Sarah（莎拉·罗伯森）等其他部门的人员被二把手说服后，他也自甘堕落，即使明知严重违反良知与诚信，明知 3/7 的人员还将被裁决，他仍然镇定自若地完成了所有下属的工作安排——在一天之内完成风险资产的全部抛售，那么是打六五折也可以。跟他的下属 Will 一样，渴望保留人性，但无法拒绝金钱利益的侵蚀—— Will 站在楼顶做出跳楼的假动作，他颤动地看着深渊，最终还是说“not today”，并向下属员工轻描淡写地描述了去年收入的 250 万美元是如何轻而易举地全部花完的！</p>
+<h3 id="遍身罗绮者，不是养蚕人"><a href="#遍身罗绮者，不是养蚕人" class="headerlink" title="遍身罗绮者，不是养蚕人"></a>遍身罗绮者，不是养蚕人</h3><blockquote>
+<p>评估员塞斯问长官威尔，这次的危机会给平常人带来的影响？</p>
+<p>威尔这样说：这些普通人，他们想要的生活就是香车豪宅，但是他们根本负担不起。这就是为什么我们这么重要，我们是他们豪华生活的根本原因。我们用手指在他们天平的一端压了一下，我们抽走手指，那时候才是真正的公平社会，但是他们马上就会不干。他们想要我们给的东西，但是又喜欢假装不知道这些东西是怎么来的。他们装伪君子比我强多了，去他们的吧！</p>
+</blockquote>
+<p>尽管二把手很年轻，但是手段非常老到，他左右拉拢员工，用尽方法；他信口开河，满是利益，让人毫无拒绝的可能性。是的，无论是 Sam 还是 Jerry，尽管技术能力平平，但是都心狠手辣，善于言谈，洞察人心，这是他们驱动那些比他们更有技术手段的人为他们卖命赚钱！</p>
+<p>更绝的是，最后的老大 John（约翰·图尔德），更是老手中的老手，他左一句你可以 <strong>保留</strong> 股份与分红，右一句 <strong>及时止损比整年焦头烂额更好</strong> 的深入分析，直接将 Sam 说服了。将相本无种，奈何无论人数如何变化，富贵与贫贱的比例永远不变，无论时间过去多长，名利的游戏将永存不朽，历史中的一次次经济危机游戏给了我们无限的启迪：</p>
+<blockquote>
+<p>1637年、1797年、1819年、1837年、1857年、1884年、1901年、1907年、1929年、1937年、1974年、1987年、1992年、1997年、2000年、还有这次，不管我们叫它什么，一样的缘故，一次又一次，我们挡都挡不住，我们还想阻止它，控制它，甚至放慢它，我们的本性一丁点都没变，我们仅仅是随机应变，如果对了就赚一大笔，如果错了就被晾到一边，这个世界上过去会有，将来也会有，同样比例的赢家和输家，得意洋洋者和垂头丧气者，撑的撑死，饿的饿死，今天像我们这样的人也许前所未有的多，但是那个比例，原封未动。</p>
+</blockquote>
+<p>历史总是存在输家和赢家，至此， Sam 完全被征服；他已毫不在乎之前是如何如何地一次次的痛苦挣扎， 唯余 “我只是不想事情发展到如此操蛋的地步！” 的感叹给观众去慢慢品味！</p>
+<p>夜晚， Sam 回到前妻的房前，埋葬了自己深爱的狗，也埋葬了自己的良心。</p>
+<p>从来都没有屠龙的英雄，有的都是最终都会皮毛并带角的怪兽！<strong>公平</strong>、<strong>平等</strong>一直都在头部玩家的口中，从来都不曾真正广泛存在过：古今中外，资本逐利，2% 的头部资本家拥有绝对控股的资源，也许一部分人分到了羹汤成为了人上人，但始终不可能让广大底层人员享受到福利，从来如此，社会主义建设之路何其远哉！</p>
+]]></content>
+      <categories>
+        <category>坐井观天</category>
+      </categories>
+      <tags>
+        <tag>影评</tag>
+        <tag>Margin Call</tag>
+        <tag>商海通牒</tag>
       </tags>
   </entry>
   <entry>
@@ -1035,1083 +1351,6 @@ $git push origin my_test:my_test
       <tags>
         <tag>JavaScript</tag>
         <tag>jQuery</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2020年随笔</title>
-    <url>/202009022111/</url>
-    <content><![CDATA[<h3 id="2020-09-02，明月"><a href="#2020-09-02，明月" class="headerlink" title="2020/09/02，明月"></a>2020/09/02，明月</h3><p>凌晨将寝，看见一轮明月从百叶窗的缝隙中漏了出来。江天一色无纤尘，皎皎空中孤月轮，我想起来了我的老父亲，突然好一阵心酸。</p>
-<p>这世界就这一轮明月，父亲看到的明月，和我看到的是不是一样的呢？我无从得知，但是我知道他清澈的心底，应该也和这明月一样，明朗、简洁、孤独的挂在那里！我现在正在重构的 hexo 主题，是否也能和它一样明朗呢？</p>
-<h3 id="2020-09-11，疲倦"><a href="#2020-09-11，疲倦" class="headerlink" title="2020/09/11，疲倦"></a>2020/09/11，疲倦</h3><p>今天颇为疲倦，那是种种摧残对生活热爱的力量。</p>
-<p>生活无望的摧残有之。生活压力太大，家庭收入有限，总是有种种债务要还，明明金额也不多，可是月月都是勉勉强强，总有一种秦琼卖马、穷途末路的感觉，既担不起风险去谋份新工作拼出路，也割舍不了那些缠缠绵绵的家庭责任。</p>
-<p>与人相处的困顿有之。我总以为自己是个文人，家国情怀、儿女情长；然而也不知道如何面对糟糠之妻，是勉励还是鞭策，是举案齐眉还是听之任之；也不知道如何面对幼年儿女，是宠爱还是严厉，是陪伴成长还是执鞭指导。看过不少教育理论和案例，也曾以自身做过很多试验，终究是了了，每一个方向都言之凿凿，然而都不曾看得到光明。一人独行的孤独，布满了天空。</p>
-<p>报国无门的失望有之。①得不到应有的回报：在单位里，也曾以一己之力，年年月月坚持，做了很多别人不想做、不能做的事情，但体制之下，来回调动，兜兜转转，始终只是棋子一枚。不少人长袖善舞、坑蒙拐骗，却获得了多次升迁，改善了生活，而我被所谓的工作需要等原因排除在外，常常需要为家庭的每月的账单发愁很久。②官僚主义严重。对于自己，每一次努力改变工作局面，总有领导劝你多克服一下困难，总是有人说你不知道在忙什么；对于企业，有些人，总能罔顾年年亏损，形式主义，人浮于事，人满为患的会议永远在开着，落实工作的，永远都只有那么少数的几个人；好多人都拈轻怕重、装模作样，写计划时高瞻远瞩、侃侃而谈，谈落实时左右掣肘、漠视困难，没有人关心日常应该怎么做提升效率、没有人有魄力面对上级的考核压力，更没有人具有规章制度里边要求的那些工作能力，制度永远只是规范下级、杀鸡儆猴的玩物……我甚至不知道，我10多年来孜孜不倦地工作，到底有没有意义了？！我自小家里生活困顿，多次获得了学校的贫困补助和一些周边人的帮助，曾发誓要报效祖国、造福社会；然而，在年复一年的人治环境下，我几乎丧失去了再挣扎的动力。</p>
-<p>人，活的疲惫，不是因为事情太难做，而是因为适应社会不是一个容易的事情！</p>
-<h3 id="2020-09-26，迷茫"><a href="#2020-09-26，迷茫" class="headerlink" title="2020/09/26，迷茫"></a>2020/09/26，迷茫</h3><p>昨日，在公司某部门那里被批评项目文件写的不清不楚。我的内容别人看不明白，因此需要修改；这本来也没啥，偏偏别人要告诉我他不是搞这个专业的，这让人有点难受。</p>
-<p>法国作家 John Collier 说过，If Youth Knew, If Age Could。我自己理解的意思就是，如果年轻人经验丰富，那么就不会栽在人情世故和盲目自大上；如果老年人能力充沛、能闯善干，那么就不会、也不必利用特权来设置那么多莫名其妙的规则来限制或阻挡事物的发展。</p>
-<p>就事论事而言，我也直接参与不少重要的基础事务，天天都在赶任务似的。那天的项目申请书和可行性研究报告都是一天之内匆匆写就的，而且要花费一大笔钱，涉及不少未知的研究和探索，怎么可能足够完善、足够清晰到一个非专业人员能够在几分钟内读懂、并作出投资决策呢！所以，对于这些身居要位、日常看报的中老年专家，我是有看法的：他们平时或做好好先生、或好为人师，对领导阿谀奉承，对基层装腔作势；给我这样的基层打工仔造成种种混乱也是难免的——他们作为从我这样的基础工种提拔上去的技术管理人员，平时不指导和帮助我们，不率先垂范，却要求下层人员有所作为、还要遵守一堆只有下层人员才需要遵守的规则，真可谓“何不食肉糜”的典范！</p>
-<p>我一度迷茫，想去纠正他的每一个专业术语上的错误，想引经据典，想据理力争到底…然而，一念之间，竟放弃了这个念头——我们参与日常事务，希望企业兴旺、国家繁荣，那是我们自己主动参与实现的，不是等来的；如果我们再退却了，旁观了，又何来希望？！</p>
-<p>是我自己一厢情愿的幻想罢了。我指望着的人——他们早已被生活和工作刺破了梦想、也与高官厚禄无望，我竟希望他们能够礼贤下士、推陈出新？！那也太为难人了！试想，又有几个人不曾怀揣着“仗剑走天涯”的梦想，却偏偏在现实社会中得到遍体鳞伤、至今怕蛇咬？他们不正和我现在一样吗——总以为自己技术业绩很突出就能傲视群雄，甚至学着别人的腔调说“生态就是被你们这些人搞坏的”，然后无所作为地、等待着别人来改善生态环境。可是我做的就够了吗？我低微到了尘埃里，可也有人说自己更低微，期盼着我不要在工作中给他们挑刺，帮他们协调解决哪些超出了能力的怪事吗？</p>
-<p>算了，做自己能做的事吧！希望明天会好一点，希望“日行一善，积善成德；日行一善，功满三千”，时间自有定论。</p>
-]]></content>
-      <categories>
-        <category>星星心事</category>
-      </categories>
-      <tags>
-        <tag>2020</tag>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>csh 、 bash 的基础语法对照：变量</title>
-    <url>/202012201125/</url>
-    <content><![CDATA[<p>bash是现在很多Linux的发行版中默认的shell，它来自于 BSD Unix，语法非常类似于C语言，所以通常有 C/C++ 编程背景的开发人员最喜欢使用。不过我在工作中，一个主要系统的默认 shell 却是 csh 。因此我总结一下两种 shell 的语法特点。</p>
-<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="用户变量"><a href="#用户变量" class="headerlink" title="用户变量"></a>用户变量</h3><table>
-<thead>
-<tr>
-<th>项目</th>
-<th>bash</th>
-<th>csh</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>变量定义</td>
-<td><code>变量名称=&quot;变量值&quot;</code></td>
-<td><code>set var</code></td>
-</tr>
-<tr>
-<td>变量引用</td>
-<td><code>$var</code><br/><code>$&#123;var&#125;</code></td>
-<td><code>$var</code><br/><code>$&#123;var&#125;</code></td>
-</tr>
-<tr>
-<td>内置用法</td>
-<td></td>
-<td><code>$%x</code> 表示变量的值的长度<br/><code>$?x</code> 来判断变量x是否设置，如设置则为1，否则为0。</td>
-</tr>
-<tr>
-<td>示例</td>
-<td><code>a=&quot;abc&quot;</code> <br><code>echo $a</code></td>
-<td><code>set x = 7</code> <br/><code>echo $x</code></td>
-</tr>
-<tr>
-<td>注意事项</td>
-<td><code>=</code> 的两边不能有空格，否则shell解释成名称和命令参数。<br/>bash变量默认都是字符串类型的。</td>
-<td>使用 <code>setenv var value</code> 方式可以定义环境变量，所有子 shell 继承其变量值</td>
-</tr>
-</tbody></table>
-<blockquote>
-<ul>
-<li>Bash 变量名区分大小写，HOME和home是两个不同的变量。</li>
-<li>字母、数字和下划线字符组成。</li>
-<li>第一个字符必须是一个字母或一个下划线，不能是数字。</li>
-<li>不允许出现空格和标点符号。如果变量的值包含空格，则必须将值放在引号中。</li>
-<li>如果变量不存在，Bash 不会报错，而会输出空字符。</li>
-</ul>
-</blockquote>
-<p>同一行定义多个变量或执行多个语句，必须使用分号 <code>;</code> 分隔。</p>
-<h3 id="系统变量"><a href="#系统变量" class="headerlink" title="系统变量"></a>系统变量</h3><ul>
-<li><code>env</code>命令或<code>printenv</code>命令，可以显示所有环境变量；而且命令后面的变量名，不用加前缀$。如 <code>printenv PATH</code> 等同于 <code>echo $PATH</code>。</li>
-<li><code>set</code> 命令可以显示所有变量（包括环境变量和自定义变量），以及所有的 Bash 函数。</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>变量</th>
-<th>定义</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>$BASH</code></td>
-<td>Bash 程序的路径</td>
-<td></td>
-</tr>
-<tr>
-<td><code>$BASH_VERSION</code></td>
-<td>系统Bash 版本号</td>
-<td></td>
-</tr>
-<tr>
-<td><code>$EUID</code></td>
-<td>“有效” 用户 ID</td>
-<td></td>
-</tr>
-<tr>
-<td><code>$UID</code></td>
-<td>用户 ID</td>
-<td><code>$UID</code> 是一个只读变量，不能在命令行或者脚本中修改它，在 /etc/passwd 文件中定义。</td>
-</tr>
-<tr>
-<td><code>$GROUPS</code></td>
-<td>用户组名</td>
-<td>在 /etc/passwd 文件中定义。</td>
-</tr>
-<tr>
-<td><code>$HOME</code></td>
-<td>用户主目录</td>
-<td>在 /etc/passwd 文件中定义。</td>
-</tr>
-<tr>
-<td><code>$PWD</code></td>
-<td>工作目录(当前目录)</td>
-<td>这与内置命令 <code>pwd</code> 的作用相同。</td>
-</tr>
-<tr>
-<td><code>$HOSTNAME</code></td>
-<td>主机名</td>
-<td></td>
-</tr>
-<tr>
-<td><code>$IFS</code></td>
-<td>内部域分隔符</td>
-<td><code>$IFS</code> 默认为空白(空格, 制表符,和换行符)，可以通过赋值改变。 <code>$*</code> 就是使用的 <code>$IFS</code> 的第一个字符来分隔位置参数的。</td>
-</tr>
-<tr>
-<td><code>$PATH</code></td>
-<td>可执行文件的搜索路径</td>
-<td></td>
-</tr>
-<tr>
-<td><code>$PS1</code></td>
-<td>主提示符</td>
-<td>普通用户默认提示符是 <code>$</code>，超级用户（root 用户）默认提示符是 <code>#</code>。</td>
-</tr>
-<tr>
-<td><code>$PS2</code></td>
-<td>第二提示符</td>
-<td>默认值为 <code>&gt;</code></td>
-</tr>
-<tr>
-<td><code>$PS4</code></td>
-<td>第二提示符</td>
-<td>使用 <code>-x</code> 选项来调用脚本时，这个提示符会出现在每行输出的开头，默认为 <code>+</code></td>
-</tr>
-</tbody></table>
-<ul>
-<li>在 GNU 指令中，如果单独使用 <code>-</code> 符号，不加任何该加的文件名称时，代表 <strong>标准输入</strong> 的意思。<ul>
-<li><code>cat -</code>：<ul>
-<li><code>cat - &gt; test.txt</code> 表示在屏幕里输入什么，都会在test.txt中输出。</li>
-<li><code>(cd /source/directory &amp;&amp; tar cf - . ) | (cd /dest/directory &amp;&amp; tar xpvf -)</code> ：压缩/source/directory下的文件，输出作为下一个命令的输入；更改当前目录到/dest/directory，解压文件</li>
-</ul>
-</li>
-<li><code>tar xpvf -</code>：标准输入读取资料并解压</li>
-<li><code>cd -</code>：切换到上次的工作目录</li>
-</ul>
-</li>
-</ul>
-<h3 id="函数的参数变量"><a href="#函数的参数变量" class="headerlink" title="函数的参数变量"></a>函数的参数变量</h3><table>
-<thead>
-<tr>
-<th>变量</th>
-<th>定义</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>$0</code></td>
-<td>脚本的名称</td>
-<td></td>
-</tr>
-<tr>
-<td><code>$1</code>, <code>$2</code>,…,<code>$&#123;n&#125;</code></td>
-<td><strong>位置</strong> 参数</td>
-<td>当 <strong>n&gt; 9</strong> 时，必须使用花括号 <code>&#123;&#125;</code> 包围数字 n。</td>
-</tr>
-<tr>
-<td><code>$#</code></td>
-<td>位置参数的个数</td>
-<td></td>
-</tr>
-<tr>
-<td><code>$*</code>, <code>$@</code></td>
-<td>位置参数数组</td>
-<td><code>&quot;$*&quot;</code> 表示的是所有参数拼接成一个<strong>字符串</strong>，与 <code>$*</code>、<code>&quot;$@&quot;</code>、<code>$@</code> 表达的<strong>数组</strong>概念是不同的。</td>
-</tr>
-<tr>
-<td><code>$!</code></td>
-<td>运行在后台的 <strong>最后一个</strong> 作业的 PID</td>
-<td></td>
-</tr>
-<tr>
-<td><code>$$</code></td>
-<td>当前 bash 脚本的 PID</td>
-<td></td>
-</tr>
-<tr>
-<td><code>$PPID</code></td>
-<td>当前 bash 脚本父进程的 PID</td>
-<td></td>
-</tr>
-<tr>
-<td><code>$-</code></td>
-<td>当前 Shell 的启动参数</td>
-<td></td>
-</tr>
-<tr>
-<td><code>$_</code></td>
-<td>命令的 <strong>最后一个</strong> 参数的值</td>
-<td></td>
-</tr>
-<tr>
-<td><code>$?</code></td>
-<td>命令的退出状态码</td>
-<td>一般表示命令执行成功或失败： <strong>0 ** 表示成功，</strong>其它值** 表示错误。<br/>比如 cp 命令，退出状态码 <strong>1</strong> 表示文件没有找到，<strong>2</strong> 表示文件不可读，<strong>3</strong> 表示目标目录没有找到，<strong>4</strong> 表示目标目录不可写，<strong>5</strong> 表示一般性错误。</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>在为shell脚本传递的参数中如果包含空格，应该使用单引号或者双引号将该参数括起来，以便于脚本将这个参数作为整体来接收。</p>
-</blockquote>
-<h3 id="变量特性"><a href="#变量特性" class="headerlink" title="变量特性"></a>变量特性</h3><ul>
-<li><code>readonly</code>: 只读变量</li>
-<li><code>local</code>: 局部变量（仅在当前shell实例中有效，其他shell启动的程序不能访问局部变量。）。</li>
-<li><code>unset</code>：删除变量，如 <code>unset variable_name</code>。变量被删除后不能再次使用。unset 命令不能删除只读变量。</li>
-<li><code>let</code>：整数变量。</li>
-</ul>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li><p>脚本之家网.<code>csh的基本语法介绍</code>[EB/OL].<a href="https://www.jb51.net/article/57770.htm">https://www.jb51.net/article/57770.htm</a>, 2020/12/21.</p>
-</li>
-<li><p>iTech.<code>csh 语法实例参考</code>[EB/OL].<a href="https://www.cnblogs.com/itech/archive/2012/08/15/2640811.html">https://www.cnblogs.com/itech/archive/2012/08/15/2640811.html</a>, 2020/12/21.</p>
-</li>
-<li><p>菜鸟教程.<code>Shell 变量</code>[EB/OL].<a href="https://www.runoob.com/linux/linux-shell-variable.html">https://www.runoob.com/linux/linux-shell-variable.html</a>, 2020/12/24.</p>
-</li>
-<li><p>sparkdev.<code>常见 Bash 内置变量介绍</code>[EB/OL].<a href="https://www.cnblogs.com/sparkdev/p/9934595.html">https://www.cnblogs.com/sparkdev/p/9934595.html</a>, 2020/12/24.</p>
-</li>
-<li><p>361way.com.<code>ssh几个超时参数</code>[EB/OL].<a href="http://www.361way.com/ssh-autologout/4679.html">http://www.361way.com/ssh-autologout/4679.html</a>, 2020/12/24.</p>
-</li>
-<li><p>13070026王志东.<code>3种shell自动交互的方法</code>[EB/OL].<a href="https://www.cnblogs.com/evi10032/p/5455990.html">https://www.cnblogs.com/evi10032/p/5455990.html</a>, 2021/02/12.</p>
-</li>
-<li><p>Mykola Ulianytskyi.<code>Expect Download for Linux</code>[EB/OL].<a href="https://pkgs.org/download/expect">https://pkgs.org/download/expect</a>, 2021/02/12.</p>
-</li>
-</ol>
-<h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><ol>
-<li><p><a href="../202012201125">csh 、 bash 的基础语法对照：变量</a></p>
-</li>
-<li><p><a href="../202012261636">csh 、 bash 的基础语法对照：判断表达式</a></p>
-</li>
-<li><p><a href="../202012261733">csh 、 bash 的基础语法对照：循环表达式</a></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>编程笔记</category>
-      </categories>
-      <tags>
-        <tag>csh</tag>
-        <tag>bash</tag>
-        <tag>shell</tag>
-        <tag>变量</tag>
-        <tag>语法</tag>
-        <tag>Linux</tag>
-        <tag>$</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Word 2016 脚注格式问题的处理</title>
-    <url>/202012261300/</url>
-    <content><![CDATA[<blockquote>
-<p>乖乖，这几天在 CNKI、VIP和万方上看论文，有几个比较熟悉的同事，不知不觉下就发了十多篇论文了。吓死宝宝，赶紧将 2 年前的未发表的论文拿出来修改。</p>
-</blockquote>
-<p>在修改论文的过程中，居然遇到了两个奇怪的问题，捣腾了好久才给解决了。以下总结一下操作方法：</p>
-<h2 id="分栏内容从下一页起排版的问题"><a href="#分栏内容从下一页起排版的问题" class="headerlink" title="分栏内容从下一页起排版的问题"></a>分栏内容从下一页起排版的问题</h2><blockquote>
-<p>论文分栏居然从下一页开始，果断不能忍！！！<br>刚开始的时候，我以为是存在隐藏的分页符，来回删除、重新插入，无法解决；然后以为是分栏操作方法不对，来回修改各种分栏方式以及插入方式，均无法解决。偶然间，不小心删除脚注后，分页正常了；这一下才找到解决问题的思路。</p>
-</blockquote>
-<p>解决方法是：<code>Word 选项</code>》<code>高级</code>》<code>兼容性选项</code>：勾选<code>按Word 6.x/95/97的方式安排脚注</code>，如下图所示：</p>
-<p><img src="/static/img/Word%E8%84%9A%E6%B3%A8%E5%AF%BC%E8%87%B4%E5%88%86%E6%A0%8F%E5%86%85%E5%AE%B9%E4%BB%8E%E4%B8%8B%E4%B8%80%E9%A1%B5%E8%B5%B7%E6%8E%92-20201226.png" alt="按Word 6.x/95/97的方式安排脚注"></p>
-<blockquote>
-<p>注意，在“高级”选项卡中须向下拖动滚动条才能显示该项配置</p>
-</blockquote>
-<h2 id="脚注内容前存在两个空行的问题"><a href="#脚注内容前存在两个空行的问题" class="headerlink" title="脚注内容前存在两个空行的问题"></a>脚注内容前存在两个空行的问题</h2><ul>
-<li><p>脚注默认的样式如下，存在两个空行，默认情况下无法编辑：</p>
-<p>  <img src="/static/img/Word%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%9A%E6%B3%A8%E6%A0%BC%E5%BC%8F%EF%BC%88%E4%BF%AE%E6%94%B9%E5%89%8D%EF%BC%89-20201226.png" alt="Word默认的脚注格式"></p>
-</li>
-<li><p>脚注格式的修改方法</p>
-<ul>
-<li><p>进入 <code>Web 版式视图</code> （点击下方快捷工具图标，或通过上方“视图”选项卡切换），点击 <code>引用</code> 选项卡下的 <code>显示备注</code>，初始界面如下：</p>
-<p>  <img src="/static/img/Word%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%9A%E6%B3%A8%E6%A0%BC%E5%BC%8F%EF%BC%88%E4%BF%AE%E6%94%B9%E5%89%8D%EF%BC%89-20201226.png" alt="Word默认的脚注格式"></p>
-</li>
-<li><p>在 <code>脚注</code> 下拉列表中选择 <code>脚注分隔符</code> ，对下方编辑框中的空行进行删除，上述操作流程如下：</p>
-<p>  <img src="/static/img/Word%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%9A%E6%B3%A8%E6%A0%BC%E5%BC%8F-%E4%BF%AE%E6%94%B9%E8%84%9A%E6%B3%A8%E5%88%86%E9%9A%94%E7%AC%A6%E6%A0%BC%E5%BC%8F-20201226.png" alt="修改Word脚注分隔符格式"></p>
-</li>
-<li><p>切回至 <code>页面视图</code>，保存即可完成修改。最终效果图如下：</p>
-<p>  <img src="/static/img/Word%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%9A%E6%B3%A8%E6%A0%BC%E5%BC%8F%EF%BC%88%E4%BF%AE%E6%94%B9%E5%90%8E%EF%BC%89-20201226.png" alt="Word脚注分隔符格式修改"></p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li><p>飞飞.<code>WORD脚注和分栏冲突的解决办法</code>[EB/OL].<a href="http://blog.sina.com.cn/s/blog_5fe506110100f2y0.html">http://blog.sina.com.cn/s/blog_5fe506110100f2y0.html</a>, 2020/12/25.</p>
-</li>
-<li><p>赵晓锋.<code>Word教程：编辑脚注和尾注</code>[EB/OL].<a href="http://blog.sciencenet.cn/blog-285749-350946.html">http://blog.sciencenet.cn/blog-285749-350946.html</a>, 2020/12/25.</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>电脑爱好者</category>
-      </categories>
-      <tags>
-        <tag>Word</tag>
-        <tag>Office</tag>
-        <tag>脚注</tag>
-        <tag>论文</tag>
-        <tag>分栏</tag>
-        <tag>分隔符</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>csh 、 bash 的基础语法对照：循环表达式</title>
-    <url>/202012261733/</url>
-    <content><![CDATA[<h1 id="循环的中断"><a href="#循环的中断" class="headerlink" title="循环的中断"></a>循环的中断</h1><p>Bash 提供了两个内部命令<code>break</code>和<code>continue</code>，用来在循环内部跳出循环。<br>    - <code>break</code>命令立即终止循环，程序继续执行循环块之后的语句，即不再执行剩下的循环。<br>    - <code>continue</code>命令立即终止本轮循环，开始执行下一轮循环。</p>
-<table>
-<thead>
-<tr>
-<th>项目</th>
-<th>bash</th>
-<th>csh</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>break</td>
-<td>#!/bin/bash<br/>  for number in 1 2 3 4 5 6 do<br/>   echo “number is $number”<br/>   if [ “$number” = “3” ]; then<br/>    break<br/>   fi<br/> done</td>
-<td></td>
-</tr>
-<tr>
-<td>continue</td>
-<td>#!/bin/bash<br/>  while read -p “What file do you want to test?” filename do<br/>   if [ ! -e “$filename” ]; then<br/>     echo “The file does not exist.”<br/>     continue<br/>   fi<br/>    echo “You entered a valid file..”<br/> done</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="while-循环的用法"><a href="#while-循环的用法" class="headerlink" title="while 循环的用法"></a>while 循环的用法</h2><p><code>while</code>循环有一个判断条件，只要符合条件，就不断循环执行指定的语句。</p>
-<table>
-<thead>
-<tr>
-<th>项目</th>
-<th>bash</th>
-<th>csh</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>while</td>
-<td>while expression; do<br/>   commands<br/> done</td>
-<td>while(expression)<br/>  commands<br/>  continue<br/>  break<br/>end</td>
-</tr>
-<tr>
-<td>示例</td>
-<td>#关键字<code>do</code>可以跟<code>while</code>不在同一行，这时两者之间不需要使用分号分隔。<br/><code>while</code> true <br/>do<br/>   echo ‘Hi, while looping …’; <br/>done</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>#while循环写成一行，也是可以的<br/>while true; do echo ‘Hi, while looping …’; done</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="until-循环的用法"><a href="#until-循环的用法" class="headerlink" title="until 循环的用法"></a>until 循环的用法</h2><p><code>until</code>循环与<code>while</code>循环恰好相反，只要不符合判断条件（判断条件失败），就不断循环执行指定的语句。一旦符合判断条件，就退出循环。</p>
-<table>
-<thead>
-<tr>
-<th>项目</th>
-<th>bash</th>
-<th>csh</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>while</td>
-<td>until condition; do<br/>   commands<br/> done</td>
-<td></td>
-</tr>
-<tr>
-<td>示例</td>
-<td>#!/bin/bash<br/>  number=0<br/> until [ “$number” -ge 10 ]; do<br/>   echo “Number = $number”<br/>   number=$((number + 1))<br/> done</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="for…in-循环"><a href="#for…in-循环" class="headerlink" title="for…in 循环"></a>for…in 循环</h2><p><code>for...in</code>循环用于遍历列表的每一项。</p>
-<p><code>for</code>循环会依次从<code>list</code>列表中取出一项，作为变量<code>variable</code>，然后在循环体中进行处理。</p>
-<table>
-<thead>
-<tr>
-<th>项目</th>
-<th>bash</th>
-<th>csh</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>for…in</td>
-<td>for variable in list do<br/>   commands<br/> done</td>
-<td></td>
-</tr>
-<tr>
-<td>示例</td>
-<td>#!/bin/bash<br/>  for i in word1 word2 word3; do<br/>   echo $i <br/>done</td>
-<td></td>
-</tr>
-<tr>
-<td>列表由通配符产生</td>
-<td>for i in *.png; do<br/>   ls -l $i<br/> done</td>
-<td></td>
-</tr>
-<tr>
-<td>列表通过子命令产生</td>
-<td>#!/bin/bash<br/>  count=0<br/> for i in $(cat ~/.bash_profile); do<br/>   count=$((count + 1))<br/>   echo “Word $count ($i) contains $(echo -n $i | wc -c) characters”<br/> done</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="for"><a href="#for" class="headerlink" title="for"></a>for</h2><table>
-<thead>
-<tr>
-<th>项目</th>
-<th>bash</th>
-<th>csh</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>for</td>
-<td>for (( expression1; expression2; expression3 )); do<br/>   commands<br/> done</td>
-<td></td>
-</tr>
-<tr>
-<td>示例</td>
-<td>for (( i=0; i&lt;5; i=i+1 )); do<br/>   echo $i<br/> done</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>#直到用户输入了一个点（<code>.</code>）为止，才会跳出循环<br/>for ((;;)) do<br/>   read var<br/>   if [ “$var” = “.” ]; then<br/>    break<br/>   fi<br/> done</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li>阮一峰.<code>Bash 脚本教程</code>[EB/OL].<a href="https://wangdoc.com/bash">https://wangdoc.com/bash</a>, 2020/12/21.<blockquote>
-<p>该教程的部分内容是比较完善的。</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><ol>
-<li><p><a href="../202012201125">csh 、 bash 的基础语法对照：变量</a></p>
-</li>
-<li><p><a href="../202012261636">csh 、 bash 的基础语法对照：判断表达式</a></p>
-</li>
-<li><p><a href="../202012261733">csh 、 bash 的基础语法对照：循环表达式</a></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>编程笔记</category>
-      </categories>
-      <tags>
-        <tag>csh</tag>
-        <tag>bash</tag>
-        <tag>shell</tag>
-        <tag>语法</tag>
-        <tag>Linux</tag>
-        <tag>判断</tag>
-        <tag>表达式</tag>
-        <tag>while</tag>
-        <tag>for</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>csh 、 bash 的基础语法对照：判断表达式</title>
-    <url>/202012261636/</url>
-    <content><![CDATA[<h2 id="判断表达式"><a href="#判断表达式" class="headerlink" title="判断表达式"></a>判断表达式</h2><h3 id="使用-test-判断"><a href="#使用-test-判断" class="headerlink" title="使用 test 判断"></a>使用 test 判断</h3><h4 id="1-test-基本用法"><a href="#1-test-基本用法" class="headerlink" title="1. test 基本用法"></a>1. test 基本用法</h4><pre><code class="bash"># 写法一 (不支持正则判断)
-test expression
-
-# 写法二(不支持正则判断)
-[ expression ]
-
-# 写法三 (支持正则判断)
-[[ expression ]]</code></pre>
-<h4 id="2-文件判断"><a href="#2-文件判断" class="headerlink" title="2. 文件判断"></a>2. 文件判断</h4><ul>
-<li><code>[ -a file ]</code>：如果 file 存在，则为<code>true</code>。</li>
-<li><code>[ -b file ]</code>：如果 file 存在并且是一个块（设备）文件，则为<code>true</code>。</li>
-<li><code>[ -c file ]</code>：如果 file 存在并且是一个字符（设备）文件，则为<code>true</code>。</li>
-<li><code>[ -d file ]</code>：如果 file 存在并且是一个目录，则为<code>true</code>。</li>
-<li><code>[ -e file ]</code>：如果 file 存在，则为<code>true</code>。</li>
-<li><code>[ -f file ]</code>：如果 file 存在并且是一个普通文件，则为<code>true</code>。</li>
-<li><code>[ -g file ]</code>：如果 file 存在并且设置了组 ID，则为<code>true</code>。</li>
-<li><code>[ -G file ]</code>：如果 file 存在并且属于有效的组 ID，则为<code>true</code>。</li>
-<li><code>[ -h file ]</code>：如果 file 存在并且是符号链接，则为<code>true</code>。</li>
-<li><code>[ -k file ]</code>：如果 file 存在并且设置了它的“sticky bit”，则为<code>true</code>。</li>
-<li><code>[ -L file ]</code>：如果 file 存在并且是一个符号链接，则为<code>true</code>。</li>
-<li><code>[ -N file ]</code>：如果 file 存在并且自上次读取后已被修改，则为<code>true</code>。</li>
-<li><code>[ -O file ]</code>：如果 file 存在并且属于有效的用户 ID，则为<code>true</code>。</li>
-<li><code>[ -p file ]</code>：如果 file 存在并且是一个命名管道，则为<code>true</code>。</li>
-<li><code>[ -r file ]</code>：如果 file 存在并且可读（当前用户有可读权限），则为<code>true</code>。</li>
-<li><code>[ -s file ]</code>：如果 file 存在且其长度大于零，则为<code>true</code>。</li>
-<li><code>[ -S file ]</code>：如果 file 存在且是一个网络 socket，则为<code>true</code>。</li>
-<li><code>[ -t fd ]</code>：如果 fd 是一个文件描述符，并且重定向到终端，则为<code>true</code>。用于判断是否重定向了标准输入／输出／错误。</li>
-<li><code>[ -u file ]</code>：如果 file 存在并且设置了 setuid 位，则为<code>true</code>。</li>
-<li><code>[ -w file ]</code>：如果 file 存在并且可写（当前用户拥有可写权限），则为<code>true</code>。</li>
-<li><code>[ -x file ]</code>：如果 file 存在并且可执行（有效用户有执行／搜索权限），则为<code>true</code>。</li>
-<li><code>[ file1 -nt file2 ]</code>：如果 FILE1 比 FILE2 的更新时间最近，或者 FILE1 存在而 FILE2 不存在，则为<code>true</code>。</li>
-<li><code>[ file1 -ot file2 ]</code>：如果 FILE1 比 FILE2 的更新时间更旧，或者 FILE2 存在而 FILE1 不存在，则为<code>true</code>。</li>
-<li><code>[ FILE1 -ef FILE2 ]</code>：如果 FILE1 和 FILE2 引用相同的设备和 inode 编号，则为<code>true</code>。</li>
-</ul>
-<h4 id="3-字符串判断（-）"><a href="#3-字符串判断（-）" class="headerlink" title="3. 字符串判断（==）"></a>3. 字符串判断（<code>==</code>）</h4><ul>
-<li><code>[ string ]</code>：如果<code>string</code>不为空（长度大于0），则判断为真。</li>
-<li><code>[ -n string ]</code>：如果字符串<code>string</code>的长度大于零，则判断为真。</li>
-<li><code>[ -z string ]</code>：如果字符串<code>string</code>的长度为零，则判断为真。</li>
-<li><code>[ string1 = string2 ]</code>：如果<code>string1</code>和<code>string2</code>相同，则判断为真。</li>
-<li><code>[ string1 == string2 ]</code> 等同于<code>[ string1 = string2 ]</code>。</li>
-<li><code>[ string1 != string2 ]</code>：如果<code>string1</code>和<code>string2</code>不相同，则判断为真。</li>
-<li><code>[ string1 &#39;&gt;&#39; string2 ]</code>：如果按照字典顺序<code>string1</code>排列在<code>string2</code>之后，则判断为真。</li>
-<li><code>[ string1 &#39;&lt;&#39; string2 ]</code>：如果按照字典顺序<code>string1</code>排列在<code>string2</code>之前，则判断为真。</li>
-</ul>
-<blockquote>
-<p>注意，<code>test</code>命令内部的<code>&gt;</code>和<code>&lt;</code>，必须用引号引起来（或者是用反斜杠转义）。否则，它们会被 shell 解释为重定向操作符。</p>
-</blockquote>
-<h4 id="4-整数判断（-eq）"><a href="#4-整数判断（-eq）" class="headerlink" title="4. 整数判断（-eq）"></a>4. 整数判断（<code>-eq</code>）</h4><ul>
-<li><code>[ n1 -eq n2 ]</code>：如果<code>n1</code>等于<code>n2</code>，则为<code>true</code>。</li>
-<li><code>[ n1 -ne n2 ]</code>：如果<code>n1</code>不等于<code>n2</code>，则为<code>true</code>。</li>
-<li><code>[ n1 -le n2 ]</code>：如果<code>n1</code>小于或等于<code>n2</code>，则为<code>true</code>。</li>
-<li><code>[ n1 -lt n2 ]</code>：如果<code>n1</code>小于<code>n2</code>，则为<code>true</code>。</li>
-<li><code>[ n1 -ge n2 ]</code>：如果<code>n1</code>大于或等于<code>n2</code>，则为<code>true</code>。</li>
-<li><code>[ n1 -gt n2 ]</code>：如果<code>n1</code>大于<code>n2</code>，则为<code>true</code>。</li>
-</ul>
-<h4 id="5-正则判断（-）"><a href="#5-正则判断（-）" class="headerlink" title="5. 正则判断（=~）"></a>5. 正则判断（<code>=~</code>）</h4><pre><code class="bash">#!/bin/bash
-
-INT=-5
-
-if [[ &quot;$INT&quot; =~ ^-?[0-9]+$ ]]; then
-  echo &quot;INT is an integer.&quot;
-  exit 0
-else
-  echo &quot;INT is not an integer.&quot; &gt;&amp;2
-  exit 1
-fi</code></pre>
-<h3 id="多条件逻辑运算"><a href="#多条件逻辑运算" class="headerlink" title="多条件逻辑运算"></a>多条件逻辑运算</h3><ul>
-<li><code>AND</code>运算：符号<code>&amp;&amp;</code>，也可使用参数<code>-a</code>。</li>
-<li><code>OR</code>运算：符号<code>||</code>，也可使用参数<code>-o</code>。</li>
-<li><code>NOT</code>运算：符号<code>!</code>。</li>
-</ul>
-<h3 id="通过-进行算术运算判断"><a href="#通过-进行算术运算判断" class="headerlink" title="通过 ((...)) 进行算术运算判断"></a>通过 <code>((...))</code> 进行算术运算判断</h3><pre><code class="bash">if ((3 &gt; 2)); then
-  echo &quot;true&quot;
-fi</code></pre>
-<h2 id="if-配套-test-或-进行条件判断"><a href="#if-配套-test-或-进行条件判断" class="headerlink" title="if 配套 test 或 ((...)) 进行条件判断"></a>if 配套 <code>test</code> 或 <code>((...))</code> 进行条件判断</h2><table>
-<thead>
-<tr>
-<th>项目</th>
-<th>bash</th>
-<th>csh</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>if</td>
-<td>if [ -f $a ];then <br/>        echo “hello world!” <br/>fi</td>
-<td>if(expression)then<br/> commands<br/>endif</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>if {(command)} then<br/> commands<br/>endif</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>if(expression) then<br/> commands<br/>else if(expression) then<br/> commands<br/>else<br/> commands<br/>endif</td>
-</tr>
-</tbody></table>
-<h2 id="case-的条件判断"><a href="#case-的条件判断" class="headerlink" title="case 的条件判断"></a>case 的条件判断</h2><table>
-<thead>
-<tr>
-<th>项目</th>
-<th>bash</th>
-<th>csh</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>case</td>
-<td>case expression in<br/>  pattern )<br/>    commands ;;<br/>  pattern )<br/>    commands ;;<br/>  …<br/>esac</td>
-<td>switch(“$value”)<br/>case pattern1:<br/> commands<br/> breaksw<br/>case pattern2:<br/> commands<br/> breaksw<br/>default:<br/> commands<br/> breaksw<br/>endsw</td>
-</tr>
-</tbody></table>
-<ul>
-<li><p>bash 的<code>case</code>的匹配模式可以使用各种通配符，下面是一些例子。</p>
-<ul>
-<li><code>a)</code>：匹配<code>a</code>。</li>
-<li><code>a|b)</code>：匹配<code>a</code>或<code>b</code>。</li>
-<li><code>[[:alpha:]])</code>：匹配单个字母。</li>
-<li><code>???)</code>：匹配3个字符的单词。</li>
-<li><code>*.txt)</code>：匹配<code>.txt</code>结尾。</li>
-<li><code>*)</code>：匹配任意输入，通过作为<code>case</code>结构的最后一个模式。</li>
-</ul>
-</li>
-<li><p>Bash 4.0之前，case结构只能匹配一个条件，然后就会退出case结构。Bash 4.0之后，允许匹配多个条件，这时可以用 <code>;;&amp;</code> 终止每个条件块。</p>
-</li>
-</ul>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li><p>脚本之家网.<code>csh的基本语法介绍</code>[EB/OL].<a href="https://www.jb51.net/article/57770.htm">https://www.jb51.net/article/57770.htm</a>, 2020/12/21.</p>
-</li>
-<li><p>iTech.<code>csh 语法实例参考</code>[EB/OL].<a href="https://www.cnblogs.com/itech/archive/2012/08/15/2640811.html">https://www.cnblogs.com/itech/archive/2012/08/15/2640811.html</a>, 2020/12/21.</p>
-</li>
-<li><p>阮一峰.<code>Bash 脚本教程</code>[EB/OL].<a href="https://wangdoc.com/bash">https://wangdoc.com/bash</a>, 2020/12/21.</p>
-<blockquote>
-<p>该教程的部分内容是比较完善的。</p>
-</blockquote>
-</li>
-<li><p>脚本之家.<code>shell中各种括号的作用详解()、(())、[]、[[]]、&#123;&#125;</code>[EB/OL].<a href="https://www.jb51.net/article/123081.htm">https://www.jb51.net/article/123081.htm</a>, 2020/12/24.</p>
-</li>
-</ol>
-<h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><ol>
-<li><p><a href="../202012201125">csh 、 bash 的基础语法对照：变量</a></p>
-</li>
-<li><p><a href="../202012261636">csh 、 bash 的基础语法对照：判断表达式</a></p>
-</li>
-<li><p><a href="../202012261733">csh 、 bash 的基础语法对照：循环表达式</a></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>编程笔记</category>
-      </categories>
-      <tags>
-        <tag>csh</tag>
-        <tag>bash</tag>
-        <tag>shell</tag>
-        <tag>语法</tag>
-        <tag>Linux</tag>
-        <tag>判断</tag>
-        <tag>表达式</tag>
-        <tag>if</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>评《Margin Call》：高个不挑担，世上永无光</title>
-    <url>/202010021008/</url>
-    <content><![CDATA[<blockquote>
-<p>直到落幕，我才意识到 《Margin Call》（商海通牒） 已经结束，可是对它的感悟我才刚刚开始…</p>
-</blockquote>
-<ul>
-<li>剧本 ☆☆☆☆</li>
-<li>场景 ☆☆☆☆</li>
-<li>演绎 ☆☆☆☆</li>
-<li>综合 ☆☆☆☆</li>
-</ul>
-<h2 id="剧情摘要"><a href="#剧情摘要" class="headerlink" title="剧情摘要"></a>剧情摘要</h2><p>整个故事不复杂：一家公司正在大幅裁员，领导 Sam 带头鼓掌并发表了鼓舞人心的讲话，员工们纷纷加班至深夜；努力工作的新员工 Peter 在别人下班去娱乐的时候，发现了公司风险模型预测到未来走势将大幅下跌，光是一层楼 25% 的亏损将超过公司的市值，立即汇报领导 Will ，领导也汇报他的领导 Sam，最后二把手贾德·科恩也在凌晨 2 点乘坐直升机来到公司，并决策抛售公司资产、及时止损。</p>
-<p>整部电影一直都没有正面展开商业斗争的波谲云诡（bō jué yún guǐ），而是大量了使用了各种背景阐述，各种侧面语言动作渲染。电影的节奏一直比较缓慢，没有快步奔跑的员工，也没有大幅的悲伤情绪，即使大结局了，既没有看到行业动荡的场景，也没有被阴谋拖入破产骗局的投资人纷纷跳楼的场景；只见暗淡的月色底下，与会者深锁的眉头、凝重的表情，晦涩难懂、含糊不清的经营风险陈述，与员工们纸醉金迷的生活、老板来去直升机、投资人高大上言论形成鲜明的对比。</p>
-<p>Eric Dale （艾力克·戴尔）负责风险管理部门，工作了 19 年的员工，秋毫不觉就被即时辞退了。他希望在离职时将工作交接清楚，可是无论是人力资源部门主管还是自己的直属领导 Will Emerson，都没有人搭理他；在电梯门关闭之际，他将做了一半工作的资料U盘给了赶来告别的新员工 Peter，然后到了楼下工作手机就被公司关停了。</p>
-<p>发生问题后公司想请他说清楚以及对数据进行保密时，公司才发现已经联系不上他了，只能等到凌晨他妻子打来电话说他在家了，公司才决定去他家里找他、用每小时 17 万多美元的代价来要求他对公司的风险秘密予以保守一天。</p>
-<h2 id="社会感悟"><a href="#社会感悟" class="headerlink" title="社会感悟"></a>社会感悟</h2><h3 id="个人利益至上，屠龙少年终成恶龙"><a href="#个人利益至上，屠龙少年终成恶龙" class="headerlink" title="个人利益至上，屠龙少年终成恶龙"></a>个人利益至上，屠龙少年终成恶龙</h3><p>尽管行业性的经济危机将至，但只有一个镜头表现了 2008 年经济大动荡的可怕的之处——因年入 25 万美元而自豪不已的小员工 Seth （赛斯·布雷格曼）面对即将辞退的困境，在卫生间里边痛哭失声，他十多分钟前还镇定自若地说，OK！</p>
-<p>公司的领导人 Sam 尽管工作了 34 年，积累了大量的财富，作为人性未泯的领导者，他依然无法放弃对利益的追逐。</p>
-<p>他是靠公司体制成功的领导者。他入职早，高高在上，做出英明的决策，英明地裁员、果断地抛售资产，然而公司的主要利润都是那些小员工辛辛苦苦赚来的，他甚至不知道的如何看明白预示着公司未来的曲线怎么看、指标是什么，他也记不住下层员工的名字，但是不影响他拿着公司基层无法企及、难以想象的高薪。他的狗生病了，每天都要花费一千美元治病，他太过于悲伤甚至于不觉得80%的下属被辞退了能怎么样，毕竟他早已从长期的人员流动中变得麻木不仁了！</p>
-<p>他来自基层，也拼搏过，因此他同情弱者、忧心行业，良心未泯。 Sam 的手下员工，不乏能力卓著的年轻人，比如说火箭科学家 Peter（彼得·苏利文）；也有出身不凡的得力下属，比如说桥梁工程师 Eric。因此，当二把手要求他出售资产时，他考虑到了对行业的影响以及年轻人的未来，他质疑何为老板毫无选择，他拒绝聆听风险评估，他嚎叫老板让开，他一次又一次地拒绝了二把手的要求，直到杰瑞开出了天价的报酬。</p>
-<p>他是利益追逐的一员，当首席风险评估分析师 Sarah（莎拉·罗伯森）等其他部门的人员被二把手说服后，他也自甘堕落，即使明知严重违反良知与诚信，明知 3/7 的人员还将被裁决，他仍然镇定自若地完成了所有下属的工作安排——在一天之内完成风险资产的全部抛售，那么是打六五折也可以。跟他的下属 Will 一样，渴望保留人性，但无法拒绝金钱利益的侵蚀—— Will 站在楼顶做出跳楼的假动作，他颤动地看着深渊，最终还是说“not today”，并向下属员工轻描淡写地描述了去年收入的 250 万美元是如何轻而易举地全部花完的！</p>
-<h3 id="遍身罗绮者，不是养蚕人"><a href="#遍身罗绮者，不是养蚕人" class="headerlink" title="遍身罗绮者，不是养蚕人"></a>遍身罗绮者，不是养蚕人</h3><blockquote>
-<p>评估员塞斯问长官威尔，这次的危机会给平常人带来的影响？</p>
-<p>威尔这样说：这些普通人，他们想要的生活就是香车豪宅，但是他们根本负担不起。这就是为什么我们这么重要，我们是他们豪华生活的根本原因。我们用手指在他们天平的一端压了一下，我们抽走手指，那时候才是真正的公平社会，但是他们马上就会不干。他们想要我们给的东西，但是又喜欢假装不知道这些东西是怎么来的。他们装伪君子比我强多了，去他们的吧！</p>
-</blockquote>
-<p>尽管二把手很年轻，但是手段非常老到，他左右拉拢员工，用尽方法；他信口开河，满是利益，让人毫无拒绝的可能性。是的，无论是 Sam 还是 Jerry，尽管技术能力平平，但是都心狠手辣，善于言谈，洞察人心，这是他们驱动那些比他们更有技术手段的人为他们卖命赚钱！</p>
-<p>更绝的是，最后的老大 John（约翰·图尔德），更是老手中的老手，他左一句你可以 <strong>保留</strong> 股份与分红，右一句 <strong>及时止损比整年焦头烂额更好</strong> 的深入分析，直接将 Sam 说服了。将相本无种，奈何无论人数如何变化，富贵与贫贱的比例永远不变，无论时间过去多长，名利的游戏将永存不朽，历史中的一次次经济危机游戏给了我们无限的启迪：</p>
-<blockquote>
-<p>1637年、1797年、1819年、1837年、1857年、1884年、1901年、1907年、1929年、1937年、1974年、1987年、1992年、1997年、2000年、还有这次，不管我们叫它什么，一样的缘故，一次又一次，我们挡都挡不住，我们还想阻止它，控制它，甚至放慢它，我们的本性一丁点都没变，我们仅仅是随机应变，如果对了就赚一大笔，如果错了就被晾到一边，这个世界上过去会有，将来也会有，同样比例的赢家和输家，得意洋洋者和垂头丧气者，撑的撑死，饿的饿死，今天像我们这样的人也许前所未有的多，但是那个比例，原封未动。</p>
-</blockquote>
-<p>历史总是存在输家和赢家，至此， Sam 完全被征服；他已毫不在乎之前是如何如何地一次次的痛苦挣扎， 唯余 “我只是不想事情发展到如此操蛋的地步！” 的感叹给观众去慢慢品味！</p>
-<p>夜晚， Sam 回到前妻的房前，埋葬了自己深爱的狗，也埋葬了自己的良心。</p>
-<p>从来都没有屠龙的英雄，有的都是最终都会皮毛并带角的怪兽！<strong>公平</strong>、<strong>平等</strong>一直都在头部玩家的口中，从来都不曾真正广泛存在过：古今中外，资本逐利，2% 的头部资本家拥有绝对控股的资源，也许一部分人分到了羹汤成为了人上人，但始终不可能让广大底层人员享受到福利，从来如此，社会主义建设之路何其远哉！</p>
-]]></content>
-      <categories>
-        <category>坐井观天</category>
-      </categories>
-      <tags>
-        <tag>影评</tag>
-        <tag>Margin Call</tag>
-        <tag>商海通牒</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VirtualBox 虚拟机磁盘压缩方法（已验证）</title>
-    <url>/202101101604/</url>
-    <content><![CDATA[<p>VirtualBox 虚拟机的容量会随着使用自动扩容，这本来是个好事；不过在实际使用过程中，由于系统错误日志疯狂写入等原因，也可能会导致系统容量被明显扩充变大。容量变大之后，无论是转换虚拟盘格式，还是导入导出，均不能减小容量。特别是做虚拟机备份导出时，白白浪费了大量的空间。因此，进行虚拟机磁盘容量的压缩，势在必行！</p>
-<p>以下两个系统我都用了很长时间，也都测试过方法的可行性，可供参考。</p>
-<h2 id="虚拟机磁盘格式转换"><a href="#虚拟机磁盘格式转换" class="headerlink" title="虚拟机磁盘格式转换"></a>虚拟机磁盘格式转换</h2><blockquote>
-<p>需要注意的是，虽然 VirtualBox 默认的磁盘格式为 vdi，可是经过导入、导出等一系列操作后，硬盘格式往往都是 wmdk；本文所讨论的磁盘压缩方法，只对 vdi 格式的磁盘有效；因此，磁盘压缩之前，往往都需要进行磁盘格式转换！</p>
-</blockquote>
-<ol>
-<li><p>在 VirtualBox 管理界面上，还需要重新删除原有的 vmdk 磁盘（否则 uuid 冲突导致无法导入 vdi 磁盘）、然后指定系统需要使用的磁盘为新的 vdi 磁盘（否则无法使用后续的磁盘压缩功能）。</p>
-<p> <img src="/static/img/20210108-virtualbox/0-%E9%87%8A%E6%94%BE%E3%80%81%E5%88%A0%E9%99%A4%E7%A1%AC%E7%9B%98-HHJ-20210108.png" alt="释放、删除硬盘"></p>
-</li>
-<li><p>转换虚拟机磁盘文件格式为 vdi </p>
-<pre><code class="cmd"> cd &quot;C:\Program Files\Oracle\VirtualBox\&quot;
- &quot;VBoxManage.exe&quot; clonehd &quot;e:\source.vmdk&quot; &quot;e:\target.vdi&quot; --format vdi</code></pre>
-<p> <img src="/static/img/20210108-virtualbox/1-%E5%B0%86VMDK%E7%A1%AC%E7%9B%98%E8%BD%AC%E6%8D%A2%E4%B8%BAVDI%E6%A0%BC%E5%BC%8F-2-HHJ-20210108.png" alt="将VMDK硬盘转换为VDI格式"></p>
-</li>
-</ol>
-<ol start="3">
-<li><p>将新磁盘关联到虚拟机中</p>
-<p> <img src="/static/img/20210108-virtualbox/2-%E5%B0%86VDI%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD%E5%88%B0%E7%B3%BB%E7%BB%9F%E4%B8%AD-HHJ-20210108.png" alt="将VDI硬盘挂载到系统中"></p>
-<p> <img src="/static/img/20210108-virtualbox/2-%E5%B0%86VDI%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD%E5%88%B0%E7%B3%BB%E7%BB%9F%E4%B8%AD-2-HHJ-20210108.png" alt="将VDI硬盘挂载到系统中"></p>
-</li>
-</ol>
-<h2 id="Windows-虚拟机磁盘的压缩"><a href="#Windows-虚拟机磁盘的压缩" class="headerlink" title="Windows 虚拟机磁盘的压缩"></a>Windows 虚拟机磁盘的压缩</h2><p>毫无疑问，Windows 平台的磁盘压缩比较简单，在主机系统中直接执行以下命令即可。</p>
-<pre><code class="ps"> &quot;C:\Program Files\Oracle\VirtualBox\VBoxManage.exe&quot; modifyhd &quot;e:\target.vdi&quot; --compact</code></pre>
-<blockquote>
-<p>多年前，我曾进行过上述操作，并截图，可是现在找不到之前的截图了，有空再补了。</p>
-</blockquote>
-<h2 id="CentOS-虚拟机磁盘的压缩"><a href="#CentOS-虚拟机磁盘的压缩" class="headerlink" title="CentOS 虚拟机磁盘的压缩"></a>CentOS 虚拟机磁盘的压缩</h2><blockquote>
-<p>一开始，我尝试使用网上泛滥的手动将磁盘剩余空间写 0 的方法，可是，过了很久，不过没有看到磁盘空间变小，反而越来越大——我本来虚拟机才25GB，不到半个小时变成了 60 GB，本来主机硬盘容量就很小，吓得我赶紧终止了。</p>
-<blockquote>
-<pre><code class="bash">dd  if=/dev/zero   of=/empty    bs=1M
-#dd if=/dev/zero   of=/dev/sda3
-rm -f /empty</code></pre>
-</blockquote>
-</blockquote>
-<p>多天以后，做完了手上的工作，重新去外网上学习相应的处理方法，发现了有个叫做 zerofree 工作的做法没有尝试过，因此我重新导入了一个虚拟机进行尝试，结果成功了，过程如下：</p>
-<ol>
-<li><p>使用 yum 下载安装 zerofree 程序包</p>
-<pre><code class="sh"> su
- yum -y install zerofree</code></pre>
-</li>
-<li><p>重新启动系统，并在系统 GRUB 启动菜单出现时点击 <code>Enter</code> 键进入编辑模式</p>
-<ul>
-<li><p>选择含有 <code>vmlinuz</code> 字样菜单行，按 <code>e</code> 进入内容编辑状态</p>
-<p><img src="/static/img/20210108-virtualbox/4-%E5%9C%A8GRUB%E8%8F%9C%E5%8D%95%E4%B8%AD%E9%80%89%E6%8B%A9%E5%90%AB%E6%9C%89vmlinuz%E5%AD%97%E6%A0%B7%E7%9A%84%E8%8F%9C%E5%8D%95%E8%BF%9B%E8%A1%8C%E7%BC%96%E8%BE%91-HHJ-20210108.png" alt="选择含有vmlinuz字样的菜单进行编辑"></p>
-</li>
-<li><p>在菜单末尾增加 <code>init=/bin/bash</code> 后 <code>Enter</code> 返回上级菜单</p>
-<p><img src="/static/img/20210108-virtualbox/5-%E5%9C%A8vmlinuz%E5%AD%97%E6%A0%B7%E7%9A%84%E8%8F%9C%E5%8D%95%E4%B8%AD%E7%BC%96%E8%BE%91%E5%A2%9E%E5%8A%A0init%E5%8F%82%E6%95%B0%EF%BC%88%E8%BF%9B%E5%85%A5%E6%95%91%E6%8F%B4%E6%A8%A1%E5%BC%8F%EF%BC%89-HHJ-20210108.png" alt="增加init参数以进入救援模式"></p>
-<table>
-<thead>
-<tr>
-<th>内核启动参数</th>
-<th>含义</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>init=/sbin/init</td>
-<td>告诉内核用 <code>/sbin/init</code> 作为它的 init 程序</td>
-<td></td>
-</tr>
-<tr>
-<td>init=/bin/bash</td>
-<td>只启动 bash，在紧急恢复时有用</td>
-<td>救援模式</td>
-</tr>
-<tr>
-<td>root=/dev/foo</td>
-<td>告诉内核用 <code>/dev/foo</code> 作为根设备</td>
-<td></td>
-</tr>
-<tr>
-<td>single</td>
-<td>引导进入单用户模式</td>
-<td>单用户模式</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>然后按 <code>b</code> 重新启动系统</p>
-<p><img src="/static/img/20210108-virtualbox/6-%E4%BF%AE%E6%94%B9%E8%8F%9C%E5%8D%95%E5%AE%8C%E6%88%90%E5%90%8E%E6%8C%89b%E5%AD%97%E7%AC%A6%E5%90%AF%E5%8A%A8%E8%BF%9B%E5%85%A5%E7%B3%BB%E7%BB%9F-HHJ-20210108.png" alt="按b字符启动进入系统"></p>
-</li>
-<li><p>进入救援模式初始界面</p>
-<p><img src="/static/img/20210108-virtualbox/7-%E6%95%91%E6%8F%B4%E6%A8%A1%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E7%95%8C%E9%9D%A2-HHJ-20210108.png" alt="救援模式初始界面"></p>
-</li>
-</ul>
-</li>
-</ol>
-<ol start="3">
-<li><p>查看系统的磁盘名称</p>
-<pre><code class="bash"> df</code></pre>
-</li>
-<li><p>执行清理（请根据前一步的查询结果进行确定需要清理的磁盘）</p>
-<pre><code class="bash"> zerofree -v /dev/sda1
- zerofree -v /dev/sda3</code></pre>
-<p> <img src="/static/img/20210108-virtualbox/9-zerofree%E5%A1%AB%E5%85%85%E5%AE%8C%E6%AF%95-HHJ-20210108.png" alt="zerofree填充"></p>
-<p> 至此，虚拟机磁盘容量 已经明显变小。然后强制关机，重新进入系统。</p>
-<p> <img src="/static/img/20210108-virtualbox/10-%E6%95%91%E6%8F%B4%E6%A8%A1%E5%BC%8F%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E5%B8%B8%E8%A7%84%E5%85%B3%E6%9C%BA%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%8F%AA%E8%83%BD%E7%A1%AC%E4%BB%B6%E5%85%B3%E9%97%AD-HHJ-20210108.png" alt="无法使用常规关机命令，只能硬件关闭"></p>
-</li>
-<li><p>在宿主机中，打开命令行，笔者这里是Windows系统，如下执行</p>
-<pre><code class="ps"> &quot;C:\Program Files\Oracle\VirtualBox\VBoxManage.exe&quot; modifyhd &quot;e:\target.vdi&quot; --compact</code></pre>
-</li>
-</ol>
-<h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
-<li><p>mowkeeper.<code>VirtualBox压缩vdi文件</code>[EB/OL].<a href="http://mowblog.com/virtualbox%E5%8E%8B%E7%BC%A9vdi%E6%96%87%E4%BB%B6/">http://mowblog.com/virtualbox%E5%8E%8B%E7%BC%A9vdi%E6%96%87%E4%BB%B6/</a>, 2021/01/08.</p>
-</li>
-<li><p>Canonical Ltd.<code>Ubuntu Manpage: zerofree — zero free blocks from ext2, ext3 and ext4 file-systems</code>[EB/OL].<a href="http://manpages.ubuntu.com/manpages/hirsute/en/man8/zerofree.8.html">http://manpages.ubuntu.com/manpages/hirsute/en/man8/zerofree.8.html</a>, 2021/01/10.</p>
-</li>
-</ol>
-<h3 id="变更说明"><a href="#变更说明" class="headerlink" title="变更说明"></a>变更说明</h3><ul>
-<li><p>1.0.0，2021/01/19 20:55:03，初始版本。</p>
-</li>
-<li><p>1.0.1，2021/02/12 19:36:23，补充 Linux 内核启动参数表。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>电脑爱好者</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>Linux</tag>
-        <tag>VirtualBox</tag>
-        <tag>虚拟机</tag>
-        <tag>压缩</tag>
-        <tag>zerofree</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2021年随笔</title>
-    <url>/202101171157/</url>
-    <content><![CDATA[<h2 id="2021-01-28，辛苦"><a href="#2021-01-28，辛苦" class="headerlink" title="2021/01/28，辛苦"></a>2021/01/28，辛苦</h2><p>写论文，又到凌晨，身心疲惫不已的，有种长路漫漫之感。想认真去做事，可是效果却不甚了了；人生甚是困难…</p>
-<h2 id="2021-03-03，愚钝"><a href="#2021-03-03，愚钝" class="headerlink" title="2021/03/03，愚钝"></a>2021/03/03，愚钝</h2><p>最近，母亲在老家动作频频，与邻居们争论不休，好几个人都向我倾诉；然而我也无能为力，一个顽固的、生病的孤独老太婆，我又能将她怎么样呢？！</p>
-<p>工作上也是困难重重，好几天都无精打采的，总结材料怎么也写不出来，设备改造也推进不力，科技创新项目也没有开展，论文还迟迟没有动笔。心里负担太重，天空都是灰色的了！</p>
-<h2 id="2021-08-27，累并快乐着"><a href="#2021-08-27，累并快乐着" class="headerlink" title="2021/08/27，累并快乐着"></a>2021/08/27，累并快乐着</h2><p>最近 4 个月，几乎没有写什么博文，并非偷懒；而是事情实在太忙碌了，匆匆忙忙地赶完工作上的事情，然后我一直在看论文、做试验和写论文中，连考证和辅导小孩的事情都完全地丢下了。</p>
-<p>4 个月，说不尽的辛劳，道不完的心酸。很长一段时间里，心里一直盘旋着论文方方面面的事情，睡也睡不着，困得浑身乏力，累得甚至小病了一场；但是我还是一心一意地做着朴实的论文试验，反反复复地改文章，生病的时候，休息一会又回到电脑前做试验、改论文…好几个同事笑我太认真，以为我是为了评职称。其实，我评下一个等级职称的业绩和论文等各个方面都准备妥当了；我就是想好好地做一下科研而已——虽然我并非职业的科研人。我想，也许有一天，有在读研究生看了我的论文，得到了一些的启发，那我就挺满足了！</p>
-<p>前天，论文终于写完了；昨天，试验数据也基本整理好了；今天，心情终于稍稍轻松了一些。认真做事，很累，但是也很充实，有一种真切的快乐感——也许是因为前半生太苦，能够用自己的勤劳与智慧来创造有用的作品，是我的幸事！</p>
-]]></content>
-      <categories>
-        <category>星星心事</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-        <tag>2021</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在 Shell 中使用 printf 格式化输出语句</title>
-    <url>/202009292008/</url>
-    <content><![CDATA[<p>在使用 shell 编程的过程，难免要进行内容输出，我们一般情况下都使用 <code>echo</code> 命令进行输出，如 <code>echo &quot;Hello, World&quot;</code> ，不过功能比较有限；如果需要高级的格式化功能控制，那么应当使用 <code>printf</code> 命令。</p>
-<pre><code>printf 由 POSIX 标准所定义，是C语言 `printf()` 库函数的一个有限的变形（在语法上也有些不同），是 echo 命令的增强版。
-printf 不像 echo 那样会自动换行，必须显式添加换行符 `\n` 。</code></pre><h2 id="语法说明"><a href="#语法说明" class="headerlink" title="语法说明"></a>语法说明</h2><h3 id="printf-命令的语法"><a href="#printf-命令的语法" class="headerlink" title="printf 命令的语法"></a>printf 命令的语法</h3><pre><code>printf   &#123;format-string1 format-string2...&#125;   [arguments1 arguments2...]</code></pre><ol>
-<li><p><code>format-string</code> 为格式控制字符串（可以没有引号，但最好加上，单引号、双引号均可；多个格式字符使用空格进行分隔），按 <strong>%[标志][输出最小宽度][.精度][长度]类型</strong> 格式书写：</p>
-<ul>
-<li><p>标志：即正负号或进制符号的设定</p>
-<table>
-<thead>
-<tr>
-<th>标 志</th>
-<th>意义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-</td>
-<td>结果左对齐，右边填空格</td>
-</tr>
-<tr>
-<td>+</td>
-<td>输出符号(正号或负号)</td>
-</tr>
-<tr>
-<td>空格</td>
-<td>输出值为正时冠以空格，为负时冠以负号</td>
-</tr>
-<tr>
-<td>#</td>
-<td>对c、s、d、u类无影响； 对o类，在输出时加前缀o； 对x类，在输出时加前缀0x； 对e、g、f 类当结果有小数时才给出小数点。</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>输出最小宽度：用十进制整数来表示输出的最少位数。若实际位数多于定义的宽度，则按实际位数输出，若实际位数少于定义的宽度则补以 <strong>空格</strong> 或 <code>0</code>。</p>
-</li>
-<li><p>精度：以 <code>.</code> 开头，后跟十进制整数。本项的意义是：如果输出数字，则表示小数的位数；如果输出的是字符，则表示输出字符的个数；若实际位数大于所定义的精度数，则截去超过的部分。</p>
-</li>
-<li><p>长度：格式符分为h、l两种， <code>h</code> 表示按短整型量输出，<code>l</code> 表示按长整型量输出。</p>
-</li>
-<li><p>类型：即输出数据的变量类型设定</p>
-<table>
-<thead>
-<tr>
-<th>格式字符</th>
-<th>意义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>d</td>
-<td>以十进制形式输出带符号整数(正数不输出符号)</td>
-</tr>
-<tr>
-<td>o</td>
-<td>以八进制形式输出无符号整数(不输出前缀0)</td>
-</tr>
-<tr>
-<td>x,X</td>
-<td>以十六进制形式输出无符号整数(不输出前缀Ox)</td>
-</tr>
-<tr>
-<td>u</td>
-<td>以十进制形式输出无符号整数</td>
-</tr>
-<tr>
-<td>f</td>
-<td>以小数形式输出单、双精度实数</td>
-</tr>
-<tr>
-<td>e,E</td>
-<td>以指数形式输出单、双精度实数</td>
-</tr>
-<tr>
-<td>g,G</td>
-<td>以%f或%e中较短的输出宽度输出单、双精度实数</td>
-</tr>
-<tr>
-<td>c</td>
-<td>输出单个字符</td>
-</tr>
-<tr>
-<td>s</td>
-<td>输出字符串</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>举例</p>
-<ul>
-<li><code>%d</code> 表示按十进制整型输出；</li>
-<li><code>%ld</code> 表示按十进制长整型输出；</li>
-<li><code>%c</code> 表示按字符型输出等。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><code>arguments</code> 为参数列表（多个参数使用空格分隔，不用逗号；若 <code>arguments</code> 多于 <code>format-string</code> 时，<code>format-string</code> 将自动重用）。</p>
-<blockquote>
-<p>参数来自于前序程序段，也就是需要格式化输出的变量。</p>
-</blockquote>
-</li>
-</ol>
-<h3 id="printf-命令的转义序列"><a href="#printf-命令的转义序列" class="headerlink" title="printf 命令的转义序列"></a>printf 命令的转义序列</h3><p>由于部分控制字符并不含在变量（参数）中，也无法使用格式控制符导入，比如变量之间的连接符等等，因此需要使用转义字符来完善格式化功能。最常见的就是增加换行符和制表符等，如 <code>printf &quot;Hello, Shell\n&quot;</code> 。</p>
-<table>
-<thead>
-<tr>
-<th align="left">序列</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">\a</td>
-<td align="left">警告字符，通常为 ASCII 的 BEL 字符</td>
-</tr>
-<tr>
-<td align="left">\b</td>
-<td align="left">后退</td>
-</tr>
-<tr>
-<td align="left">\c</td>
-<td align="left">抑制（不显示）输出结果中任何结尾的换行字符（只在 %b 格式指示符控制下的参数字符串中有效），而且，任何留在参数里的字符、任何接下来的参数以及任何留在格式字符串中的字符，都被忽略</td>
-</tr>
-<tr>
-<td align="left">\f</td>
-<td align="left">换页（formfeed）</td>
-</tr>
-<tr>
-<td align="left">\n</td>
-<td align="left">换行</td>
-</tr>
-<tr>
-<td align="left">\r</td>
-<td align="left">回车（Carriage return）</td>
-</tr>
-<tr>
-<td align="left">\t</td>
-<td align="left">水平制表符</td>
-</tr>
-<tr>
-<td align="left">\v</td>
-<td align="left">垂直制表符</td>
-</tr>
-<tr>
-<td align="left">\</td>
-<td align="left">一个字面上的反斜杠字符</td>
-</tr>
-<tr>
-<td align="left">\ddd</td>
-<td align="left">表示 1 到 3 位数八进制值的字符。仅在格式字符串中有效</td>
-</tr>
-<tr>
-<td align="left">\0ddd</td>
-<td align="left">表示 1 到 3 位的八进制值字符</td>
-</tr>
-</tbody></table>
-<h2 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h2><ol>
-<li><p>示例1（shell 示例）</p>
-<pre><code class="sh"> #!/bin/bash
- # author: david faraday
- # created: 2020/10/05 17:05:13
-
- # format-string为双引号
- printf &quot;%d %s\n&quot; 1 &quot;abc&quot;
-
- # 单引号与双引号效果一样 
- printf &#39;%d %s\n&#39; 1 &quot;abc&quot; 
-
- # 没有引号也可以输出
- printf %s abcdef
-
- # 格式只指定了一个参数，但多出的参数仍然会按照该格式输出，format-string 被重用
- printf %s abc def
-
- printf &quot;%s\n&quot; abc def
-
- printf &quot;%s %s %s\n&quot; a b c d e f g h i j
-
- # 如果没有 arguments，那么 %s 用NULL代替，%d 用 0 代替
- printf &quot;%s and %d \n&quot; </code></pre>
-<p> 上述输出结果为：</p>
-<pre><code class="shell"> 1 abc
- 1 abc
- abcdefabcdefabc
- def
- a b c
- d e f
- g h i
- j  
- and 0</code></pre>
-</li>
-</ol>
-<ol start="2">
-<li><p>示例2：表格化输出</p>
-<pre><code class="sh"> #!/bin/bash
- # author: david faraday
- # created: 2020/10/05 17:15:25
-
- printf &quot;%-10s %-8s %-4s\n&quot; 姓名 性别 体重kg  
- printf &quot;%-10s %-8s %-4.2f\n&quot; 郭靖 男 66.1234 
- printf &quot;%-10s %-8s %-4.2f\n&quot; 杨过 男 48.6543 
- printf &quot;%-10s %-8s %-4.2f\n&quot; 郭芙 女 47.9876 </code></pre>
-<blockquote>
-<p><code>%-10s</code> 指一个宽度为 10 个字符（ <code>-</code> 表示左对齐，没有则表示右对齐），任何字符都会被显示在 10 个字符宽的字符内，如果不足则自动以空格填充，超过也会将内容全部显示出来。<br><code>%-4.2f</code> 指格式化为小数，其中 <code>.2</code> 指保留 2 位小数。</p>
-</blockquote>
-<p> 执行脚本，输出结果如下所示：</p>
-<pre><code class="xls"> 姓名     性别   体重kg
- 郭靖     男      66.12
- 杨过     男      48.65
- 郭芙     女      47.99</code></pre>
-</li>
-</ol>
-<ol start="3">
-<li><p>示例（C 语言示例）</p>
-<pre><code class="C"> #include &lt;stdio.h&gt;
- int main(void)&#123;
-     int i=8;
-     printf(&quot;The raw value: i=%d\n&quot;, i);
-     printf(&quot;++i=%d \n++i=%d \n--i=%d \n--i=%d\n&quot;,++i,++i,--i,--i);
-     return 0;
- &#125;</code></pre>
-<p> 运行结果：</p>
-<pre><code> The raw value: i=8
- ++i=8
- ++i=7
- --i=6
- --i=7</code></pre></li>
-</ol>
-<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h3><ul>
-<li>1.0.0，2020/10/05 21:51:03，初始版本。</li>
-</ul>
-<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
-<li><p>w3cschool编程狮.<code>Shell printf 命令</code>[EB/OL].<a href="https://www.w3cschool.cn/linux/linux-shell-printf.html">https://www.w3cschool.cn/linux/linux-shell-printf.html</a>, 2020/09/29.</p>
-</li>
-<li><p>C语言中文网.<code>shell printf命令：格式化输出语句</code>[EB/OL].<a href="http://c.biancheng.net/cpp/view/1499.html">http://c.biancheng.net/cpp/view/1499.html</a>, 2020/09/29.</p>
-</li>
-<li><p>C语言中文网.<code>C语言格式输出函数printf()详解</code>[EB/OL].<a href="http://c.biancheng.net/cpp/html/33.html">http://c.biancheng.net/cpp/html/33.html</a>, 2020/10/05.</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>编程笔记</category>
-      </categories>
-      <tags>
-        <tag>shell</tag>
-        <tag>Linux</tag>
-        <tag>printf</tag>
-        <tag>格式化</tag>
       </tags>
   </entry>
   <entry>
@@ -2705,34 +1944,617 @@ printf 不像 echo 那样会自动换行，必须显式添加换行符 `\n` 。<
       </tags>
   </entry>
   <entry>
-    <title>写论文的苦，你未必想尝一下</title>
-    <url>/202101301128/</url>
-    <content><![CDATA[<p>最近 3 个星期，一直在忙着写论文，走路在想，吃饭在想，睡觉也在想，总感觉某个地方有个难关需要我去跨越，我到了附近，却一直没有发现；等到论文基本写出来后，发现写论文是挺辛苦的！</p>
-<h2 id="选题的苦"><a href="#选题的苦" class="headerlink" title="选题的苦"></a>选题的苦</h2><p>如果认真去做科研论文的话，选题是很苦的，因为是很难找到合适的题目的。</p>
-<p>我都工作快 10 年了，也就最近才有些灵感和题材。一个人很难独自拥有一些高大上的项目，我的工作是搬砖的，就很难去研究烧砖技术，更多的是考虑如何搬运、如何与人协作、如何做好工期管理等等。</p>
-<p>因此，好不容易在工作中，发挥了一些重要作用，在种种压力之下，准备去写论文；拟好了粗略的提纲，感觉去找一个知识数据库的账户，将同领域、同主题的文献找出来，一看，不好了，怎么这么多人都写了，多半只能放弃，就算不放弃，题材也很难写出新意来；水论文的人很多，可是自己扪心自问，那并不是我想要的，丢掉吧！</p>
-<p>由于工作繁忙以及自己心里的这一丝丝骄傲，我好长时间都没有写出论文来，明明我业绩最多、贡献最大，可是我比不少按部就班的同事晚了 2 年。有些时日里，我焦虑得不行，不肯将就，也没有天降福利，在两个单位里边都被关心我的大领导约谈了…</p>
-<p>好不容易能够选了一个题目，能够勉强说有创新性、实用价值的，又得在诸多先行者的背影里，寻找空间，作出差异化来，不然，自己就真的是水论文了。</p>
-<h2 id="写作的苦"><a href="#写作的苦" class="headerlink" title="写作的苦"></a>写作的苦</h2><p>如果认真去做科研论文的话，写作的过程也是很苦的，因为写的东西不一定被人认可。</p>
-<p>工作的过程，事情做完就了事了；可是如果发论文，那么自己得将事情的来龙去脉、因果、主次、先后等等都弄明白。最近写的这个论文，是关于计算机技术的，在网络上、操作系统里、论文里，都有零零星星的表述，可是有些已经过期了，有些别人就写错了，有些别人提供的参数、程序、方法等等不适合实际情况，都得去一一验证，一一去比较，一一去部署，最近这两周，我的头一直很疼，因为有些试验尝试了十多次了，一次需要一两个小时；日常的工作仍然需要继续，家里儿女仍得操心，老家也有一些烦心事，新一年的工作仍然很迷茫，这一些都让我很为难。</p>
-<p>好不容易写出素材来了，还得修改文字；标题是否有吸引力，摘要是否清楚，翻译是否妥当，文章各级标题是否层次鲜明，各个段落的内容是否清楚明白、是否啰嗦繁杂、是否存在逻辑问题，得来回修改。</p>
-<p>感觉差不多了，得控制字数，不能太多，也不能太少；图片得自己去绘制，不然显示效果不好；图表得考虑，论文的相关指标能否让别人看得懂、评估得上等级。因此，各种修改也得耗好几个通宵！</p>
-<h2 id="发表的苦"><a href="#发表的苦" class="headerlink" title="发表的苦"></a>发表的苦</h2><p>如果认真去做科研论文的话，发表过程也是很辛苦的，因为得到好期刊的认可也是相当的困难的。好不容易有了内容，得开始寻找适当的杂志了。找了几个心仪的杂志，论文格式好好捯饬了一下，存了很多个版本格式，花了几天也完成了。</p>
-<p>自己一无人脉，二无平台，三无能力，核心期刊基本都很难；前一个论文我整整收了三年，投了多家期刊，有些是毫不客气的说水平不行，有些和和气气地说不符合杂志风格，有些啥也没说退稿回来。</p>
-<h2 id="成果的苦"><a href="#成果的苦" class="headerlink" title="成果的苦"></a>成果的苦</h2><p>如果认真去做科研论文的话，论文发表了也是很苦的，因为不是投入越大、回报越大。</p>
-<p>很不容易地，论文发表了，可是好些平时不做事的同事，不知不觉地就发了好几篇论文，评选职称了，自己又显得落后了，这种苦真不是滋味！</p>
-<p>看着别人那么水，和自己发在同样的杂志上，并不知道自己来回倒腾是否有价值。其实杂志里边的论文多数都是过得去的，奈何偏偏有几个相熟的人凑了一些他从来没有弄清楚过的内容上去，也发表了，心里何其翻覆！这样一对比，再也不认为那些核心期刊里侃侃而谈的大家们徒有其表了，而是自惭形秽不已。</p>
-<p>论文发表了，自己回忆起来，那个过程仍然是苦涩的，很长时间都挥之不去。可是，如果得到了认可，对别人也发挥了作用，那心里在很短的瞬间也是会有甘之如饴的愉悦的。</p>
-<p>其实，写论文不一定苦，苦的是放不下心里的结，随性一点的话，一切会好很多。春城冬暖，愿大家都能享受这美好的阳光。</p>
+    <title>csh 、 bash 的基础语法对照：变量</title>
+    <url>/202012201125/</url>
+    <content><![CDATA[<p>bash是现在很多Linux的发行版中默认的shell，它来自于 BSD Unix，语法非常类似于C语言，所以通常有 C/C++ 编程背景的开发人员最喜欢使用。不过我在工作中，一个主要系统的默认 shell 却是 csh 。因此我总结一下两种 shell 的语法特点。</p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="用户变量"><a href="#用户变量" class="headerlink" title="用户变量"></a>用户变量</h3><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>bash</th>
+<th>csh</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>变量定义</td>
+<td><code>变量名称=&quot;变量值&quot;</code></td>
+<td><code>set var</code></td>
+</tr>
+<tr>
+<td>变量引用</td>
+<td><code>$var</code><br/><code>$&#123;var&#125;</code></td>
+<td><code>$var</code><br/><code>$&#123;var&#125;</code></td>
+</tr>
+<tr>
+<td>内置用法</td>
+<td></td>
+<td><code>$%x</code> 表示变量的值的长度<br/><code>$?x</code> 来判断变量x是否设置，如设置则为1，否则为0。</td>
+</tr>
+<tr>
+<td>示例</td>
+<td><code>a=&quot;abc&quot;</code> <br><code>echo $a</code></td>
+<td><code>set x = 7</code> <br/><code>echo $x</code></td>
+</tr>
+<tr>
+<td>注意事项</td>
+<td><code>=</code> 的两边不能有空格，否则shell解释成名称和命令参数。<br/>bash变量默认都是字符串类型的。</td>
+<td>使用 <code>setenv var value</code> 方式可以定义环境变量，所有子 shell 继承其变量值</td>
+</tr>
+</tbody></table>
+<blockquote>
+<ul>
+<li>Bash 变量名区分大小写，HOME和home是两个不同的变量。</li>
+<li>字母、数字和下划线字符组成。</li>
+<li>第一个字符必须是一个字母或一个下划线，不能是数字。</li>
+<li>不允许出现空格和标点符号。如果变量的值包含空格，则必须将值放在引号中。</li>
+<li>如果变量不存在，Bash 不会报错，而会输出空字符。</li>
+</ul>
+</blockquote>
+<p>同一行定义多个变量或执行多个语句，必须使用分号 <code>;</code> 分隔。</p>
+<h3 id="系统变量"><a href="#系统变量" class="headerlink" title="系统变量"></a>系统变量</h3><ul>
+<li><code>env</code>命令或<code>printenv</code>命令，可以显示所有环境变量；而且命令后面的变量名，不用加前缀$。如 <code>printenv PATH</code> 等同于 <code>echo $PATH</code>。</li>
+<li><code>set</code> 命令可以显示所有变量（包括环境变量和自定义变量），以及所有的 Bash 函数。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>定义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>$BASH</code></td>
+<td>Bash 程序的路径</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$BASH_VERSION</code></td>
+<td>系统Bash 版本号</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$EUID</code></td>
+<td>“有效” 用户 ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$UID</code></td>
+<td>用户 ID</td>
+<td><code>$UID</code> 是一个只读变量，不能在命令行或者脚本中修改它，在 /etc/passwd 文件中定义。</td>
+</tr>
+<tr>
+<td><code>$GROUPS</code></td>
+<td>用户组名</td>
+<td>在 /etc/passwd 文件中定义。</td>
+</tr>
+<tr>
+<td><code>$HOME</code></td>
+<td>用户主目录</td>
+<td>在 /etc/passwd 文件中定义。</td>
+</tr>
+<tr>
+<td><code>$PWD</code></td>
+<td>工作目录(当前目录)</td>
+<td>这与内置命令 <code>pwd</code> 的作用相同。</td>
+</tr>
+<tr>
+<td><code>$HOSTNAME</code></td>
+<td>主机名</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$IFS</code></td>
+<td>内部域分隔符</td>
+<td><code>$IFS</code> 默认为空白(空格, 制表符,和换行符)，可以通过赋值改变。 <code>$*</code> 就是使用的 <code>$IFS</code> 的第一个字符来分隔位置参数的。</td>
+</tr>
+<tr>
+<td><code>$PATH</code></td>
+<td>可执行文件的搜索路径</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$PS1</code></td>
+<td>主提示符</td>
+<td>普通用户默认提示符是 <code>$</code>，超级用户（root 用户）默认提示符是 <code>#</code>。</td>
+</tr>
+<tr>
+<td><code>$PS2</code></td>
+<td>第二提示符</td>
+<td>默认值为 <code>&gt;</code></td>
+</tr>
+<tr>
+<td><code>$PS4</code></td>
+<td>第二提示符</td>
+<td>使用 <code>-x</code> 选项来调用脚本时，这个提示符会出现在每行输出的开头，默认为 <code>+</code></td>
+</tr>
+</tbody></table>
+<ul>
+<li>在 GNU 指令中，如果单独使用 <code>-</code> 符号，不加任何该加的文件名称时，代表 <strong>标准输入</strong> 的意思。<ul>
+<li><code>cat -</code>：<ul>
+<li><code>cat - &gt; test.txt</code> 表示在屏幕里输入什么，都会在test.txt中输出。</li>
+<li><code>(cd /source/directory &amp;&amp; tar cf - . ) | (cd /dest/directory &amp;&amp; tar xpvf -)</code> ：压缩/source/directory下的文件，输出作为下一个命令的输入；更改当前目录到/dest/directory，解压文件</li>
+</ul>
+</li>
+<li><code>tar xpvf -</code>：标准输入读取资料并解压</li>
+<li><code>cd -</code>：切换到上次的工作目录</li>
+</ul>
+</li>
+</ul>
+<h3 id="函数的参数变量"><a href="#函数的参数变量" class="headerlink" title="函数的参数变量"></a>函数的参数变量</h3><table>
+<thead>
+<tr>
+<th>变量</th>
+<th>定义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>$0</code></td>
+<td>脚本的名称</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$1</code>, <code>$2</code>,…,<code>$&#123;n&#125;</code></td>
+<td><strong>位置</strong> 参数</td>
+<td>当 <strong>n&gt; 9</strong> 时，必须使用花括号 <code>&#123;&#125;</code> 包围数字 n。</td>
+</tr>
+<tr>
+<td><code>$#</code></td>
+<td>位置参数的个数</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$*</code>, <code>$@</code></td>
+<td>位置参数数组</td>
+<td><code>&quot;$*&quot;</code> 表示的是所有参数拼接成一个<strong>字符串</strong>，与 <code>$*</code>、<code>&quot;$@&quot;</code>、<code>$@</code> 表达的<strong>数组</strong>概念是不同的。</td>
+</tr>
+<tr>
+<td><code>$!</code></td>
+<td>运行在后台的 <strong>最后一个</strong> 作业的 PID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$$</code></td>
+<td>当前 bash 脚本的 PID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$PPID</code></td>
+<td>当前 bash 脚本父进程的 PID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$-</code></td>
+<td>当前 Shell 的启动参数</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$_</code></td>
+<td>命令的 <strong>最后一个</strong> 参数的值</td>
+<td></td>
+</tr>
+<tr>
+<td><code>$?</code></td>
+<td>命令的退出状态码</td>
+<td>一般表示命令执行成功或失败： <strong>0 ** 表示成功，</strong>其它值** 表示错误。<br/>比如 cp 命令，退出状态码 <strong>1</strong> 表示文件没有找到，<strong>2</strong> 表示文件不可读，<strong>3</strong> 表示目标目录没有找到，<strong>4</strong> 表示目标目录不可写，<strong>5</strong> 表示一般性错误。</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>在为shell脚本传递的参数中如果包含空格，应该使用单引号或者双引号将该参数括起来，以便于脚本将这个参数作为整体来接收。</p>
+</blockquote>
+<h3 id="变量特性"><a href="#变量特性" class="headerlink" title="变量特性"></a>变量特性</h3><ul>
+<li><code>readonly</code>: 只读变量</li>
+<li><code>local</code>: 局部变量（仅在当前shell实例中有效，其他shell启动的程序不能访问局部变量。）。</li>
+<li><code>unset</code>：删除变量，如 <code>unset variable_name</code>。变量被删除后不能再次使用。unset 命令不能删除只读变量。</li>
+<li><code>let</code>：整数变量。</li>
+</ul>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><p>脚本之家网.<code>csh的基本语法介绍</code>[EB/OL].<a href="https://www.jb51.net/article/57770.htm">https://www.jb51.net/article/57770.htm</a>, 2020/12/21.</p>
+</li>
+<li><p>iTech.<code>csh 语法实例参考</code>[EB/OL].<a href="https://www.cnblogs.com/itech/archive/2012/08/15/2640811.html">https://www.cnblogs.com/itech/archive/2012/08/15/2640811.html</a>, 2020/12/21.</p>
+</li>
+<li><p>菜鸟教程.<code>Shell 变量</code>[EB/OL].<a href="https://www.runoob.com/linux/linux-shell-variable.html">https://www.runoob.com/linux/linux-shell-variable.html</a>, 2020/12/24.</p>
+</li>
+<li><p>sparkdev.<code>常见 Bash 内置变量介绍</code>[EB/OL].<a href="https://www.cnblogs.com/sparkdev/p/9934595.html">https://www.cnblogs.com/sparkdev/p/9934595.html</a>, 2020/12/24.</p>
+</li>
+<li><p>361way.com.<code>ssh几个超时参数</code>[EB/OL].<a href="http://www.361way.com/ssh-autologout/4679.html">http://www.361way.com/ssh-autologout/4679.html</a>, 2020/12/24.</p>
+</li>
+<li><p>13070026王志东.<code>3种shell自动交互的方法</code>[EB/OL].<a href="https://www.cnblogs.com/evi10032/p/5455990.html">https://www.cnblogs.com/evi10032/p/5455990.html</a>, 2021/02/12.</p>
+</li>
+<li><p>Mykola Ulianytskyi.<code>Expect Download for Linux</code>[EB/OL].<a href="https://pkgs.org/download/expect">https://pkgs.org/download/expect</a>, 2021/02/12.</p>
+</li>
+</ol>
+<h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><ol>
+<li><p><a href="../202012201125">csh 、 bash 的基础语法对照：变量</a></p>
+</li>
+<li><p><a href="../202012261636">csh 、 bash 的基础语法对照：判断表达式</a></p>
+</li>
+<li><p><a href="../202012261733">csh 、 bash 的基础语法对照：循环表达式</a></p>
+</li>
+</ol>
 ]]></content>
       <categories>
-        <category>坐井观天</category>
+        <category>编程笔记</category>
       </categories>
       <tags>
+        <tag>shell</tag>
+        <tag>Linux</tag>
+        <tag>csh</tag>
+        <tag>bash</tag>
+        <tag>变量</tag>
+        <tag>语法</tag>
+        <tag>$</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Word 2016 脚注格式问题的处理</title>
+    <url>/202012261300/</url>
+    <content><![CDATA[<blockquote>
+<p>乖乖，这几天在 CNKI、VIP和万方上看论文，有几个比较熟悉的同事，不知不觉下就发了十多篇论文了。吓死宝宝，赶紧将 2 年前的未发表的论文拿出来修改。</p>
+</blockquote>
+<p>在修改论文的过程中，居然遇到了两个奇怪的问题，捣腾了好久才给解决了。以下总结一下操作方法：</p>
+<h2 id="分栏内容从下一页起排版的问题"><a href="#分栏内容从下一页起排版的问题" class="headerlink" title="分栏内容从下一页起排版的问题"></a>分栏内容从下一页起排版的问题</h2><blockquote>
+<p>论文分栏居然从下一页开始，果断不能忍！！！<br>刚开始的时候，我以为是存在隐藏的分页符，来回删除、重新插入，无法解决；然后以为是分栏操作方法不对，来回修改各种分栏方式以及插入方式，均无法解决。偶然间，不小心删除脚注后，分页正常了；这一下才找到解决问题的思路。</p>
+</blockquote>
+<p>解决方法是：<code>Word 选项</code>》<code>高级</code>》<code>兼容性选项</code>：勾选<code>按Word 6.x/95/97的方式安排脚注</code>，如下图所示：</p>
+<p><img src="/static/img/Word%E8%84%9A%E6%B3%A8%E5%AF%BC%E8%87%B4%E5%88%86%E6%A0%8F%E5%86%85%E5%AE%B9%E4%BB%8E%E4%B8%8B%E4%B8%80%E9%A1%B5%E8%B5%B7%E6%8E%92-20201226.png" alt="按Word 6.x/95/97的方式安排脚注"></p>
+<blockquote>
+<p>注意，在“高级”选项卡中须向下拖动滚动条才能显示该项配置</p>
+</blockquote>
+<h2 id="脚注内容前存在两个空行的问题"><a href="#脚注内容前存在两个空行的问题" class="headerlink" title="脚注内容前存在两个空行的问题"></a>脚注内容前存在两个空行的问题</h2><ul>
+<li><p>脚注默认的样式如下，存在两个空行，默认情况下无法编辑：</p>
+<p>  <img src="/static/img/Word%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%9A%E6%B3%A8%E6%A0%BC%E5%BC%8F%EF%BC%88%E4%BF%AE%E6%94%B9%E5%89%8D%EF%BC%89-20201226.png" alt="Word默认的脚注格式"></p>
+</li>
+<li><p>脚注格式的修改方法</p>
+<ul>
+<li><p>进入 <code>Web 版式视图</code> （点击下方快捷工具图标，或通过上方“视图”选项卡切换），点击 <code>引用</code> 选项卡下的 <code>显示备注</code>，初始界面如下：</p>
+<p>  <img src="/static/img/Word%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%9A%E6%B3%A8%E6%A0%BC%E5%BC%8F%EF%BC%88%E4%BF%AE%E6%94%B9%E5%89%8D%EF%BC%89-20201226.png" alt="Word默认的脚注格式"></p>
+</li>
+<li><p>在 <code>脚注</code> 下拉列表中选择 <code>脚注分隔符</code> ，对下方编辑框中的空行进行删除，上述操作流程如下：</p>
+<p>  <img src="/static/img/Word%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%9A%E6%B3%A8%E6%A0%BC%E5%BC%8F-%E4%BF%AE%E6%94%B9%E8%84%9A%E6%B3%A8%E5%88%86%E9%9A%94%E7%AC%A6%E6%A0%BC%E5%BC%8F-20201226.png" alt="修改Word脚注分隔符格式"></p>
+</li>
+<li><p>切回至 <code>页面视图</code>，保存即可完成修改。最终效果图如下：</p>
+<p>  <img src="/static/img/Word%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%9A%E6%B3%A8%E6%A0%BC%E5%BC%8F%EF%BC%88%E4%BF%AE%E6%94%B9%E5%90%8E%EF%BC%89-20201226.png" alt="Word脚注分隔符格式修改"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><p>飞飞.<code>WORD脚注和分栏冲突的解决办法</code>[EB/OL].<a href="http://blog.sina.com.cn/s/blog_5fe506110100f2y0.html">http://blog.sina.com.cn/s/blog_5fe506110100f2y0.html</a>, 2020/12/25.</p>
+</li>
+<li><p>赵晓锋.<code>Word教程：编辑脚注和尾注</code>[EB/OL].<a href="http://blog.sciencenet.cn/blog-285749-350946.html">http://blog.sciencenet.cn/blog-285749-350946.html</a>, 2020/12/25.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>Word</tag>
+        <tag>Office</tag>
+        <tag>脚注</tag>
         <tag>论文</tag>
-        <tag>科研</tag>
-        <tag>冷板凳</tag>
-        <tag>苦</tag>
+        <tag>分栏</tag>
+        <tag>分隔符</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>csh 、 bash 的基础语法对照：循环表达式</title>
+    <url>/202012261733/</url>
+    <content><![CDATA[<h1 id="循环的中断"><a href="#循环的中断" class="headerlink" title="循环的中断"></a>循环的中断</h1><p>Bash 提供了两个内部命令<code>break</code>和<code>continue</code>，用来在循环内部跳出循环。<br>    - <code>break</code>命令立即终止循环，程序继续执行循环块之后的语句，即不再执行剩下的循环。<br>    - <code>continue</code>命令立即终止本轮循环，开始执行下一轮循环。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>bash</th>
+<th>csh</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>break</td>
+<td>#!/bin/bash<br/>  for number in 1 2 3 4 5 6 do<br/>   echo “number is $number”<br/>   if [ “$number” = “3” ]; then<br/>    break<br/>   fi<br/> done</td>
+<td></td>
+</tr>
+<tr>
+<td>continue</td>
+<td>#!/bin/bash<br/>  while read -p “What file do you want to test?” filename do<br/>   if [ ! -e “$filename” ]; then<br/>     echo “The file does not exist.”<br/>     continue<br/>   fi<br/>    echo “You entered a valid file..”<br/> done</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="while-循环的用法"><a href="#while-循环的用法" class="headerlink" title="while 循环的用法"></a>while 循环的用法</h2><p><code>while</code>循环有一个判断条件，只要符合条件，就不断循环执行指定的语句。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>bash</th>
+<th>csh</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>while</td>
+<td>while expression; do<br/>   commands<br/> done</td>
+<td>while(expression)<br/>  commands<br/>  continue<br/>  break<br/>end</td>
+</tr>
+<tr>
+<td>示例</td>
+<td>#关键字<code>do</code>可以跟<code>while</code>不在同一行，这时两者之间不需要使用分号分隔。<br/><code>while</code> true <br/>do<br/>   echo ‘Hi, while looping …’; <br/>done</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>#while循环写成一行，也是可以的<br/>while true; do echo ‘Hi, while looping …’; done</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="until-循环的用法"><a href="#until-循环的用法" class="headerlink" title="until 循环的用法"></a>until 循环的用法</h2><p><code>until</code>循环与<code>while</code>循环恰好相反，只要不符合判断条件（判断条件失败），就不断循环执行指定的语句。一旦符合判断条件，就退出循环。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>bash</th>
+<th>csh</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>while</td>
+<td>until condition; do<br/>   commands<br/> done</td>
+<td></td>
+</tr>
+<tr>
+<td>示例</td>
+<td>#!/bin/bash<br/>  number=0<br/> until [ “$number” -ge 10 ]; do<br/>   echo “Number = $number”<br/>   number=$((number + 1))<br/> done</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="for…in-循环"><a href="#for…in-循环" class="headerlink" title="for…in 循环"></a>for…in 循环</h2><p><code>for...in</code>循环用于遍历列表的每一项。</p>
+<p><code>for</code>循环会依次从<code>list</code>列表中取出一项，作为变量<code>variable</code>，然后在循环体中进行处理。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>bash</th>
+<th>csh</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>for…in</td>
+<td>for variable in list do<br/>   commands<br/> done</td>
+<td></td>
+</tr>
+<tr>
+<td>示例</td>
+<td>#!/bin/bash<br/>  for i in word1 word2 word3; do<br/>   echo $i <br/>done</td>
+<td></td>
+</tr>
+<tr>
+<td>列表由通配符产生</td>
+<td>for i in *.png; do<br/>   ls -l $i<br/> done</td>
+<td></td>
+</tr>
+<tr>
+<td>列表通过子命令产生</td>
+<td>#!/bin/bash<br/>  count=0<br/> for i in $(cat ~/.bash_profile); do<br/>   count=$((count + 1))<br/>   echo “Word $count ($i) contains $(echo -n $i | wc -c) characters”<br/> done</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="for"><a href="#for" class="headerlink" title="for"></a>for</h2><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>bash</th>
+<th>csh</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>for</td>
+<td>for (( expression1; expression2; expression3 )); do<br/>   commands<br/> done</td>
+<td></td>
+</tr>
+<tr>
+<td>示例</td>
+<td>for (( i=0; i&lt;5; i=i+1 )); do<br/>   echo $i<br/> done</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>#直到用户输入了一个点（<code>.</code>）为止，才会跳出循环<br/>for ((;;)) do<br/>   read var<br/>   if [ “$var” = “.” ]; then<br/>    break<br/>   fi<br/> done</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li>阮一峰.<code>Bash 脚本教程</code>[EB/OL].<a href="https://wangdoc.com/bash">https://wangdoc.com/bash</a>, 2020/12/21.<blockquote>
+<p>该教程的部分内容是比较完善的。</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><ol>
+<li><p><a href="../202012201125">csh 、 bash 的基础语法对照：变量</a></p>
+</li>
+<li><p><a href="../202012261636">csh 、 bash 的基础语法对照：判断表达式</a></p>
+</li>
+<li><p><a href="../202012261733">csh 、 bash 的基础语法对照：循环表达式</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程笔记</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+        <tag>Linux</tag>
+        <tag>csh</tag>
+        <tag>bash</tag>
+        <tag>语法</tag>
+        <tag>判断</tag>
+        <tag>表达式</tag>
+        <tag>while</tag>
+        <tag>for</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>csh 、 bash 的基础语法对照：判断表达式</title>
+    <url>/202012261636/</url>
+    <content><![CDATA[<h2 id="判断表达式"><a href="#判断表达式" class="headerlink" title="判断表达式"></a>判断表达式</h2><h3 id="使用-test-判断"><a href="#使用-test-判断" class="headerlink" title="使用 test 判断"></a>使用 test 判断</h3><h4 id="1-test-基本用法"><a href="#1-test-基本用法" class="headerlink" title="1. test 基本用法"></a>1. test 基本用法</h4><pre><code class="bash"># 写法一 (不支持正则判断)
+test expression
+
+# 写法二(不支持正则判断)
+[ expression ]
+
+# 写法三 (支持正则判断)
+[[ expression ]]</code></pre>
+<h4 id="2-文件判断"><a href="#2-文件判断" class="headerlink" title="2. 文件判断"></a>2. 文件判断</h4><ul>
+<li><code>[ -a file ]</code>：如果 file 存在，则为<code>true</code>。</li>
+<li><code>[ -b file ]</code>：如果 file 存在并且是一个块（设备）文件，则为<code>true</code>。</li>
+<li><code>[ -c file ]</code>：如果 file 存在并且是一个字符（设备）文件，则为<code>true</code>。</li>
+<li><code>[ -d file ]</code>：如果 file 存在并且是一个目录，则为<code>true</code>。</li>
+<li><code>[ -e file ]</code>：如果 file 存在，则为<code>true</code>。</li>
+<li><code>[ -f file ]</code>：如果 file 存在并且是一个普通文件，则为<code>true</code>。</li>
+<li><code>[ -g file ]</code>：如果 file 存在并且设置了组 ID，则为<code>true</code>。</li>
+<li><code>[ -G file ]</code>：如果 file 存在并且属于有效的组 ID，则为<code>true</code>。</li>
+<li><code>[ -h file ]</code>：如果 file 存在并且是符号链接，则为<code>true</code>。</li>
+<li><code>[ -k file ]</code>：如果 file 存在并且设置了它的“sticky bit”，则为<code>true</code>。</li>
+<li><code>[ -L file ]</code>：如果 file 存在并且是一个符号链接，则为<code>true</code>。</li>
+<li><code>[ -N file ]</code>：如果 file 存在并且自上次读取后已被修改，则为<code>true</code>。</li>
+<li><code>[ -O file ]</code>：如果 file 存在并且属于有效的用户 ID，则为<code>true</code>。</li>
+<li><code>[ -p file ]</code>：如果 file 存在并且是一个命名管道，则为<code>true</code>。</li>
+<li><code>[ -r file ]</code>：如果 file 存在并且可读（当前用户有可读权限），则为<code>true</code>。</li>
+<li><code>[ -s file ]</code>：如果 file 存在且其长度大于零，则为<code>true</code>。</li>
+<li><code>[ -S file ]</code>：如果 file 存在且是一个网络 socket，则为<code>true</code>。</li>
+<li><code>[ -t fd ]</code>：如果 fd 是一个文件描述符，并且重定向到终端，则为<code>true</code>。用于判断是否重定向了标准输入／输出／错误。</li>
+<li><code>[ -u file ]</code>：如果 file 存在并且设置了 setuid 位，则为<code>true</code>。</li>
+<li><code>[ -w file ]</code>：如果 file 存在并且可写（当前用户拥有可写权限），则为<code>true</code>。</li>
+<li><code>[ -x file ]</code>：如果 file 存在并且可执行（有效用户有执行／搜索权限），则为<code>true</code>。</li>
+<li><code>[ file1 -nt file2 ]</code>：如果 FILE1 比 FILE2 的更新时间最近，或者 FILE1 存在而 FILE2 不存在，则为<code>true</code>。</li>
+<li><code>[ file1 -ot file2 ]</code>：如果 FILE1 比 FILE2 的更新时间更旧，或者 FILE2 存在而 FILE1 不存在，则为<code>true</code>。</li>
+<li><code>[ FILE1 -ef FILE2 ]</code>：如果 FILE1 和 FILE2 引用相同的设备和 inode 编号，则为<code>true</code>。</li>
+</ul>
+<h4 id="3-字符串判断（-）"><a href="#3-字符串判断（-）" class="headerlink" title="3. 字符串判断（==）"></a>3. 字符串判断（<code>==</code>）</h4><ul>
+<li><code>[ string ]</code>：如果<code>string</code>不为空（长度大于0），则判断为真。</li>
+<li><code>[ -n string ]</code>：如果字符串<code>string</code>的长度大于零，则判断为真。</li>
+<li><code>[ -z string ]</code>：如果字符串<code>string</code>的长度为零，则判断为真。</li>
+<li><code>[ string1 = string2 ]</code>：如果<code>string1</code>和<code>string2</code>相同，则判断为真。</li>
+<li><code>[ string1 == string2 ]</code> 等同于<code>[ string1 = string2 ]</code>。</li>
+<li><code>[ string1 != string2 ]</code>：如果<code>string1</code>和<code>string2</code>不相同，则判断为真。</li>
+<li><code>[ string1 &#39;&gt;&#39; string2 ]</code>：如果按照字典顺序<code>string1</code>排列在<code>string2</code>之后，则判断为真。</li>
+<li><code>[ string1 &#39;&lt;&#39; string2 ]</code>：如果按照字典顺序<code>string1</code>排列在<code>string2</code>之前，则判断为真。</li>
+</ul>
+<blockquote>
+<p>注意，<code>test</code>命令内部的<code>&gt;</code>和<code>&lt;</code>，必须用引号引起来（或者是用反斜杠转义）。否则，它们会被 shell 解释为重定向操作符。</p>
+</blockquote>
+<h4 id="4-整数判断（-eq）"><a href="#4-整数判断（-eq）" class="headerlink" title="4. 整数判断（-eq）"></a>4. 整数判断（<code>-eq</code>）</h4><ul>
+<li><code>[ n1 -eq n2 ]</code>：如果<code>n1</code>等于<code>n2</code>，则为<code>true</code>。</li>
+<li><code>[ n1 -ne n2 ]</code>：如果<code>n1</code>不等于<code>n2</code>，则为<code>true</code>。</li>
+<li><code>[ n1 -le n2 ]</code>：如果<code>n1</code>小于或等于<code>n2</code>，则为<code>true</code>。</li>
+<li><code>[ n1 -lt n2 ]</code>：如果<code>n1</code>小于<code>n2</code>，则为<code>true</code>。</li>
+<li><code>[ n1 -ge n2 ]</code>：如果<code>n1</code>大于或等于<code>n2</code>，则为<code>true</code>。</li>
+<li><code>[ n1 -gt n2 ]</code>：如果<code>n1</code>大于<code>n2</code>，则为<code>true</code>。</li>
+</ul>
+<h4 id="5-正则判断（-）"><a href="#5-正则判断（-）" class="headerlink" title="5. 正则判断（=~）"></a>5. 正则判断（<code>=~</code>）</h4><pre><code class="bash">#!/bin/bash
+
+INT=-5
+
+if [[ &quot;$INT&quot; =~ ^-?[0-9]+$ ]]; then
+  echo &quot;INT is an integer.&quot;
+  exit 0
+else
+  echo &quot;INT is not an integer.&quot; &gt;&amp;2
+  exit 1
+fi</code></pre>
+<h3 id="多条件逻辑运算"><a href="#多条件逻辑运算" class="headerlink" title="多条件逻辑运算"></a>多条件逻辑运算</h3><ul>
+<li><code>AND</code>运算：符号<code>&amp;&amp;</code>，也可使用参数<code>-a</code>。</li>
+<li><code>OR</code>运算：符号<code>||</code>，也可使用参数<code>-o</code>。</li>
+<li><code>NOT</code>运算：符号<code>!</code>。</li>
+</ul>
+<h3 id="通过-进行算术运算判断"><a href="#通过-进行算术运算判断" class="headerlink" title="通过 ((...)) 进行算术运算判断"></a>通过 <code>((...))</code> 进行算术运算判断</h3><pre><code class="bash">if ((3 &gt; 2)); then
+  echo &quot;true&quot;
+fi</code></pre>
+<h2 id="if-配套-test-或-进行条件判断"><a href="#if-配套-test-或-进行条件判断" class="headerlink" title="if 配套 test 或 ((...)) 进行条件判断"></a>if 配套 <code>test</code> 或 <code>((...))</code> 进行条件判断</h2><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>bash</th>
+<th>csh</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>if</td>
+<td>if [ -f $a ];then <br/>        echo “hello world!” <br/>fi</td>
+<td>if(expression)then<br/> commands<br/>endif</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>if {(command)} then<br/> commands<br/>endif</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>if(expression) then<br/> commands<br/>else if(expression) then<br/> commands<br/>else<br/> commands<br/>endif</td>
+</tr>
+</tbody></table>
+<h2 id="case-的条件判断"><a href="#case-的条件判断" class="headerlink" title="case 的条件判断"></a>case 的条件判断</h2><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>bash</th>
+<th>csh</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>case</td>
+<td>case expression in<br/>  pattern )<br/>    commands ;;<br/>  pattern )<br/>    commands ;;<br/>  …<br/>esac</td>
+<td>switch(“$value”)<br/>case pattern1:<br/> commands<br/> breaksw<br/>case pattern2:<br/> commands<br/> breaksw<br/>default:<br/> commands<br/> breaksw<br/>endsw</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>bash 的<code>case</code>的匹配模式可以使用各种通配符，下面是一些例子。</p>
+<ul>
+<li><code>a)</code>：匹配<code>a</code>。</li>
+<li><code>a|b)</code>：匹配<code>a</code>或<code>b</code>。</li>
+<li><code>[[:alpha:]])</code>：匹配单个字母。</li>
+<li><code>???)</code>：匹配3个字符的单词。</li>
+<li><code>*.txt)</code>：匹配<code>.txt</code>结尾。</li>
+<li><code>*)</code>：匹配任意输入，通过作为<code>case</code>结构的最后一个模式。</li>
+</ul>
+</li>
+<li><p>Bash 4.0之前，case结构只能匹配一个条件，然后就会退出case结构。Bash 4.0之后，允许匹配多个条件，这时可以用 <code>;;&amp;</code> 终止每个条件块。</p>
+</li>
+</ul>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><p>脚本之家网.<code>csh的基本语法介绍</code>[EB/OL].<a href="https://www.jb51.net/article/57770.htm">https://www.jb51.net/article/57770.htm</a>, 2020/12/21.</p>
+</li>
+<li><p>iTech.<code>csh 语法实例参考</code>[EB/OL].<a href="https://www.cnblogs.com/itech/archive/2012/08/15/2640811.html">https://www.cnblogs.com/itech/archive/2012/08/15/2640811.html</a>, 2020/12/21.</p>
+</li>
+<li><p>阮一峰.<code>Bash 脚本教程</code>[EB/OL].<a href="https://wangdoc.com/bash">https://wangdoc.com/bash</a>, 2020/12/21.</p>
+<blockquote>
+<p>该教程的部分内容是比较完善的。</p>
+</blockquote>
+</li>
+<li><p>脚本之家.<code>shell中各种括号的作用详解()、(())、[]、[[]]、&#123;&#125;</code>[EB/OL].<a href="https://www.jb51.net/article/123081.htm">https://www.jb51.net/article/123081.htm</a>, 2020/12/24.</p>
+</li>
+</ol>
+<h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><ol>
+<li><p><a href="../202012201125">csh 、 bash 的基础语法对照：变量</a></p>
+</li>
+<li><p><a href="../202012261636">csh 、 bash 的基础语法对照：判断表达式</a></p>
+</li>
+<li><p><a href="../202012261733">csh 、 bash 的基础语法对照：循环表达式</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程笔记</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+        <tag>Linux</tag>
+        <tag>csh</tag>
+        <tag>bash</tag>
+        <tag>语法</tag>
+        <tag>判断</tag>
+        <tag>表达式</tag>
+        <tag>if</tag>
       </tags>
   </entry>
   <entry>
@@ -2762,6 +2584,218 @@ printf 不像 echo 那样会自动换行，必须显式添加换行符 `\n` 。<
         <tag>领导</tag>
         <tag>奋斗</tag>
         <tag>总结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VirtualBox 虚拟机磁盘压缩方法（已验证）</title>
+    <url>/202101101604/</url>
+    <content><![CDATA[<p>VirtualBox 虚拟机的容量会随着使用自动扩容，这本来是个好事；不过在实际使用过程中，由于系统错误日志疯狂写入等原因，也可能会导致系统容量被明显扩充变大。容量变大之后，无论是转换虚拟盘格式，还是导入导出，均不能减小容量。特别是做虚拟机备份导出时，白白浪费了大量的空间。因此，进行虚拟机磁盘容量的压缩，势在必行！</p>
+<p>以下两个系统我都用了很长时间，也都测试过方法的可行性，可供参考。</p>
+<h2 id="虚拟机磁盘格式转换"><a href="#虚拟机磁盘格式转换" class="headerlink" title="虚拟机磁盘格式转换"></a>虚拟机磁盘格式转换</h2><blockquote>
+<p>需要注意的是，虽然 VirtualBox 默认的磁盘格式为 vdi，可是经过导入、导出等一系列操作后，硬盘格式往往都是 wmdk；本文所讨论的磁盘压缩方法，只对 vdi 格式的磁盘有效；因此，磁盘压缩之前，往往都需要进行磁盘格式转换！</p>
+</blockquote>
+<ol>
+<li><p>在 VirtualBox 管理界面上，还需要重新删除原有的 vmdk 磁盘（否则 uuid 冲突导致无法导入 vdi 磁盘）、然后指定系统需要使用的磁盘为新的 vdi 磁盘（否则无法使用后续的磁盘压缩功能）。</p>
+<p> <img src="/static/img/20210108-virtualbox/0-%E9%87%8A%E6%94%BE%E3%80%81%E5%88%A0%E9%99%A4%E7%A1%AC%E7%9B%98-HHJ-20210108.png" alt="释放、删除硬盘"></p>
+</li>
+<li><p>转换虚拟机磁盘文件格式为 vdi </p>
+<pre><code class="cmd"> cd &quot;C:\Program Files\Oracle\VirtualBox\&quot;
+ &quot;VBoxManage.exe&quot; clonehd &quot;e:\source.vmdk&quot; &quot;e:\target.vdi&quot; --format vdi</code></pre>
+<p> <img src="/static/img/20210108-virtualbox/1-%E5%B0%86VMDK%E7%A1%AC%E7%9B%98%E8%BD%AC%E6%8D%A2%E4%B8%BAVDI%E6%A0%BC%E5%BC%8F-2-HHJ-20210108.png" alt="将VMDK硬盘转换为VDI格式"></p>
+</li>
+</ol>
+<ol start="3">
+<li><p>将新磁盘关联到虚拟机中</p>
+<p> <img src="/static/img/20210108-virtualbox/2-%E5%B0%86VDI%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD%E5%88%B0%E7%B3%BB%E7%BB%9F%E4%B8%AD-HHJ-20210108.png" alt="将VDI硬盘挂载到系统中"></p>
+<p> <img src="/static/img/20210108-virtualbox/2-%E5%B0%86VDI%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD%E5%88%B0%E7%B3%BB%E7%BB%9F%E4%B8%AD-2-HHJ-20210108.png" alt="将VDI硬盘挂载到系统中"></p>
+</li>
+</ol>
+<h2 id="Windows-虚拟机磁盘的压缩"><a href="#Windows-虚拟机磁盘的压缩" class="headerlink" title="Windows 虚拟机磁盘的压缩"></a>Windows 虚拟机磁盘的压缩</h2><p>毫无疑问，Windows 平台的磁盘压缩比较简单，在主机系统中直接执行以下命令即可。</p>
+<pre><code class="ps"> &quot;C:\Program Files\Oracle\VirtualBox\VBoxManage.exe&quot; modifyhd &quot;e:\target.vdi&quot; --compact</code></pre>
+<blockquote>
+<p>多年前，我曾进行过上述操作，并截图，可是现在找不到之前的截图了，有空再补了。</p>
+</blockquote>
+<h2 id="CentOS-虚拟机磁盘的压缩"><a href="#CentOS-虚拟机磁盘的压缩" class="headerlink" title="CentOS 虚拟机磁盘的压缩"></a>CentOS 虚拟机磁盘的压缩</h2><blockquote>
+<p>一开始，我尝试使用网上泛滥的手动将磁盘剩余空间写 0 的方法，可是，过了很久，不过没有看到磁盘空间变小，反而越来越大——我本来虚拟机才25GB，不到半个小时变成了 60 GB，本来主机硬盘容量就很小，吓得我赶紧终止了。</p>
+<blockquote>
+<pre><code class="bash">dd  if=/dev/zero   of=/empty    bs=1M
+#dd if=/dev/zero   of=/dev/sda3
+rm -f /empty</code></pre>
+</blockquote>
+</blockquote>
+<p>多天以后，做完了手上的工作，重新去外网上学习相应的处理方法，发现了有个叫做 zerofree 工作的做法没有尝试过，因此我重新导入了一个虚拟机进行尝试，结果成功了，过程如下：</p>
+<ol>
+<li><p>使用 yum 下载安装 zerofree 程序包</p>
+<pre><code class="sh"> su
+ yum -y install zerofree</code></pre>
+</li>
+<li><p>重新启动系统，并在系统 GRUB 启动菜单出现时点击 <code>Enter</code> 键进入编辑模式</p>
+<ul>
+<li><p>选择含有 <code>vmlinuz</code> 字样菜单行，按 <code>e</code> 进入内容编辑状态</p>
+<p><img src="/static/img/20210108-virtualbox/4-%E5%9C%A8GRUB%E8%8F%9C%E5%8D%95%E4%B8%AD%E9%80%89%E6%8B%A9%E5%90%AB%E6%9C%89vmlinuz%E5%AD%97%E6%A0%B7%E7%9A%84%E8%8F%9C%E5%8D%95%E8%BF%9B%E8%A1%8C%E7%BC%96%E8%BE%91-HHJ-20210108.png" alt="选择含有vmlinuz字样的菜单进行编辑"></p>
+</li>
+<li><p>在菜单末尾增加 <code>init=/bin/bash</code> 后 <code>Enter</code> 返回上级菜单</p>
+<p><img src="/static/img/20210108-virtualbox/5-%E5%9C%A8vmlinuz%E5%AD%97%E6%A0%B7%E7%9A%84%E8%8F%9C%E5%8D%95%E4%B8%AD%E7%BC%96%E8%BE%91%E5%A2%9E%E5%8A%A0init%E5%8F%82%E6%95%B0%EF%BC%88%E8%BF%9B%E5%85%A5%E6%95%91%E6%8F%B4%E6%A8%A1%E5%BC%8F%EF%BC%89-HHJ-20210108.png" alt="增加init参数以进入救援模式"></p>
+<table>
+<thead>
+<tr>
+<th>内核启动参数</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>init=/sbin/init</td>
+<td>告诉内核用 <code>/sbin/init</code> 作为它的 init 程序</td>
+<td></td>
+</tr>
+<tr>
+<td>init=/bin/bash</td>
+<td>只启动 bash，在紧急恢复时有用</td>
+<td>救援模式</td>
+</tr>
+<tr>
+<td>root=/dev/foo</td>
+<td>告诉内核用 <code>/dev/foo</code> 作为根设备</td>
+<td></td>
+</tr>
+<tr>
+<td>single</td>
+<td>引导进入单用户模式</td>
+<td>单用户模式</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>然后按 <code>b</code> 重新启动系统</p>
+<p><img src="/static/img/20210108-virtualbox/6-%E4%BF%AE%E6%94%B9%E8%8F%9C%E5%8D%95%E5%AE%8C%E6%88%90%E5%90%8E%E6%8C%89b%E5%AD%97%E7%AC%A6%E5%90%AF%E5%8A%A8%E8%BF%9B%E5%85%A5%E7%B3%BB%E7%BB%9F-HHJ-20210108.png" alt="按b字符启动进入系统"></p>
+</li>
+<li><p>进入救援模式初始界面</p>
+<p><img src="/static/img/20210108-virtualbox/7-%E6%95%91%E6%8F%B4%E6%A8%A1%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E7%95%8C%E9%9D%A2-HHJ-20210108.png" alt="救援模式初始界面"></p>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="3">
+<li><p>查看系统的磁盘名称</p>
+<pre><code class="bash"> df</code></pre>
+</li>
+<li><p>执行清理（请根据前一步的查询结果进行确定需要清理的磁盘）</p>
+<pre><code class="bash"> zerofree -v /dev/sda1
+ zerofree -v /dev/sda3</code></pre>
+<p> <img src="/static/img/20210108-virtualbox/9-zerofree%E5%A1%AB%E5%85%85%E5%AE%8C%E6%AF%95-HHJ-20210108.png" alt="zerofree填充"></p>
+<p> 至此，虚拟机磁盘容量 已经明显变小。然后强制关机，重新进入系统。</p>
+<p> <img src="/static/img/20210108-virtualbox/10-%E6%95%91%E6%8F%B4%E6%A8%A1%E5%BC%8F%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E5%B8%B8%E8%A7%84%E5%85%B3%E6%9C%BA%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%8F%AA%E8%83%BD%E7%A1%AC%E4%BB%B6%E5%85%B3%E9%97%AD-HHJ-20210108.png" alt="无法使用常规关机命令，只能硬件关闭"></p>
+</li>
+<li><p>在宿主机中，打开命令行，笔者这里是Windows系统，如下执行</p>
+<pre><code class="ps"> &quot;C:\Program Files\Oracle\VirtualBox\VBoxManage.exe&quot; modifyhd &quot;e:\target.vdi&quot; --compact</code></pre>
+</li>
+</ol>
+<h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
+<li><p>mowkeeper.<code>VirtualBox压缩vdi文件</code>[EB/OL].<a href="http://mowblog.com/virtualbox%E5%8E%8B%E7%BC%A9vdi%E6%96%87%E4%BB%B6/">http://mowblog.com/virtualbox%E5%8E%8B%E7%BC%A9vdi%E6%96%87%E4%BB%B6/</a>, 2021/01/08.</p>
+</li>
+<li><p>Canonical Ltd.<code>Ubuntu Manpage: zerofree — zero free blocks from ext2, ext3 and ext4 file-systems</code>[EB/OL].<a href="http://manpages.ubuntu.com/manpages/hirsute/en/man8/zerofree.8.html">http://manpages.ubuntu.com/manpages/hirsute/en/man8/zerofree.8.html</a>, 2021/01/10.</p>
+</li>
+</ol>
+<h3 id="变更说明"><a href="#变更说明" class="headerlink" title="变更说明"></a>变更说明</h3><ul>
+<li><p>1.0.0，2021/01/19 20:55:03，初始版本。</p>
+</li>
+<li><p>1.0.1，2021/02/12 19:36:23，补充 Linux 内核启动参数表。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Linux</tag>
+        <tag>VirtualBox</tag>
+        <tag>虚拟机</tag>
+        <tag>压缩</tag>
+        <tag>zerofree</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2021年随笔</title>
+    <url>/202101171157/</url>
+    <content><![CDATA[<h2 id="2021-01-28，辛苦"><a href="#2021-01-28，辛苦" class="headerlink" title="2021/01/28，辛苦"></a>2021/01/28，辛苦</h2><p>写论文，又到凌晨，身心疲惫不已的，有种长路漫漫之感。想认真去做事，可是效果却不甚了了；人生甚是困难…</p>
+<h2 id="2021-03-03，愚钝"><a href="#2021-03-03，愚钝" class="headerlink" title="2021/03/03，愚钝"></a>2021/03/03，愚钝</h2><p>最近，母亲在老家动作频频，与邻居们争论不休，好几个人都向我倾诉；然而我也无能为力，一个顽固的、生病的孤独老太婆，我又能将她怎么样呢？！</p>
+<p>工作上也是困难重重，好几天都无精打采的，总结材料怎么也写不出来，设备改造也推进不力，科技创新项目也没有开展，论文还迟迟没有动笔。心里负担太重，天空都是灰色的了！</p>
+<h2 id="2021-08-27，累并快乐着"><a href="#2021-08-27，累并快乐着" class="headerlink" title="2021/08/27，累并快乐着"></a>2021/08/27，累并快乐着</h2><p>最近 4 个月，几乎没有写什么博文，并非偷懒；而是事情实在太忙碌了，匆匆忙忙地赶完工作上的事情，然后我一直在看论文、做试验和写论文中，连考证和辅导小孩的事情都完全地丢下了。</p>
+<p>4 个月，说不尽的辛劳，道不完的心酸。很长一段时间里，心里一直盘旋着论文方方面面的事情，睡也睡不着，困得浑身乏力，累得甚至小病了一场；但是我还是一心一意地做着朴实的论文试验，反反复复地改文章，生病的时候，休息一会又回到电脑前做试验、改论文…好几个同事笑我太认真，以为我是为了评职称。其实，我评下一个等级职称的业绩和论文等各个方面都准备妥当了；我就是想好好地做一下科研而已——虽然我并非职业的科研人。我想，也许有一天，有在读研究生看了我的论文，得到了一些的启发，那我就挺满足了！</p>
+<p>前天，论文终于写完了；昨天，试验数据也基本整理好了；今天，心情终于稍稍轻松了一些。认真做事，很累，但是也很充实，有一种真切的快乐感——也许是因为前半生太苦，能够用自己的勤劳与智慧来创造有用的作品，是我的幸事！</p>
+]]></content>
+      <categories>
+        <category>星星心事</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>2021</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS 使用 yum 国内源实现加速下载</title>
+    <url>/202101171156/</url>
+    <content><![CDATA[<p>又是一年过去，忽然接到通知，要求更新一个之前做的展示系统，就想起来要更新一下系统。结果使用 <code>yum list kernel.x86_64</code> 提示 <code>Cannot find a valid baseurl for repo: base</code>。</p>
+<p>更换国内源也不行，看了<code>http://mirrors.163.com/centos/6.10/readme</code> 文件，发现官方自 2020/11/30 起就禁止 CentOS 6.x 更新了（文件被清空）。呜呜，真是后知后觉了！</p>
+<pre><code class="sh">su
+cd /etc/yum.repos.d/
+cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.original
+    # 系统是根据 Base*.repo 来判别基础源的，因此备份的时候必须修改扩展名
+
+gedit CentOS-Base.repo
+    # 国外 http://vault.centos.org/6.10
+    # 国内 http://mirrors.aliyun.com/centos-vault/6.10/；
+
+mv epel.repo epel.original
+gedit epel.repo 
+    # 网址替换为 http://archives.fedoraproject.org/pub/archive/epel/6/x86_64/ 即可
+    # 国内（好像不行了） http://mirrors.aliyun.com/epel-archive/6/
+rm -f /var/run/yum.pid
+yum clean all
+yum makecache
+yum repolist</code></pre>
+<p>网友多喜欢用 vim ，我是普通人，我就是喜欢使用 gedit ，用上边提到的网址将文件中的网址替换一下就搞定了；如果可能需要滚动升级到下一个版本的，请参考修改一下网址的表达方式就行了。</p>
+<p>你问我怎么更换国内源，方法和上边是一样的——都是更换源嘛！至于国内源有哪些，可以了解一下清华、阿里云、网易、搜狐、中科大等源。当然，如果想简单一点的话，还可以</p>
+<pre><code class="bash">su
+
+# 备份
+mv /etc/yum.repos.d/CentOS-Base.repo/etc/yum.repos.d/CentOS-Base.repo.bck
+
+# 下载替换源（依次为网易、阿里、中科大、搜狐）
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.163.com/.help/CentOS7-Base-163.repo
+# wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+# curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+# wget -O /etc/yum.repos.d/CentOS-Base.repo http://centos.ustc.edu.cn/CentOS-Base.repo
+# wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.sohu.com/help/CentOS-Base-sohu.repo
+
+# 更新系统源数据库
+yum clean all
+yum makecache
+yum repolist</code></pre>
+<p>当然，也可以用这种方法：</p>
+<pre><code class="sh">su
+sed -e &#39;s|^mirrorlist=|#mirrorlist=|g&#39; \
+         -e &#39;s|^#baseurl=http://mirror.centos.org|baseurl=https://mirrors.tuna.tsinghua.edu.cn|g&#39; \
+         -i.bak \
+         /etc/yum.repos.d/CentOS-*.repo</code></pre>
+<p>国内源是真的快，不用真的不知道！</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><p>清华大学TUNA团队.<code>CentOS 镜像使用帮助</code>[EB/OL].<a href="https://mirrors.cnnic.cn/help/centos/">https://mirrors.cnnic.cn/help/centos/</a>, 2021/02/01.</p>
+</li>
+<li><p>fogwu.<code>centos6 yum源失效，yum不可用处理方法及php环境搭建</code>[EB/OL].<a href="https://www.cnblogs.com/fogwang/p/14133970.html">https://www.cnblogs.com/fogwang/p/14133970.html</a>, 2021/02/01.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>yum</tag>
+        <tag>国内源</tag>
+        <tag>CentOS</tag>
+        <tag>加速</tag>
+        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
@@ -2856,211 +2890,42 @@ printf 不像 echo 那样会自动换行，必须显式添加换行符 `\n` 。<
         <category>编程笔记</category>
       </categories>
       <tags>
+        <tag>国内源</tag>
+        <tag>加速</tag>
+        <tag>下载</tag>
         <tag>pip</tag>
-        <tag>国内源</tag>
         <tag>Python</tag>
-        <tag>加速</tag>
-        <tag>下载</tag>
       </tags>
   </entry>
   <entry>
-    <title>CentOS 6.10 编译安装 GCC4.8.5</title>
-    <url>/202103072130/</url>
-    <content><![CDATA[<p>由于安装 python 3 的需要，需要升级 GCC；由于我的操作系统是 CentOS6.10，而且还需要考虑到工作软件系统的兼容，因此 GCC 版本暂时定为 4.8.5。测试表明，如果 Python 需要性能优化选项 <code>--enable-optimizations</code>，需要 GCC 8.2+ 以上的版本。</p>
-<h2 id="源码下载"><a href="#源码下载" class="headerlink" title="源码下载"></a>源码下载</h2><h3 id="GCC-源码下载"><a href="#GCC-源码下载" class="headerlink" title="GCC 源码下载"></a>GCC 源码下载</h3><pre><code class="sh">cd /home/common
-wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-4.8.5/gcc-4.8.5.tar.gz
-tar xzvf gcc-4.8.5.tar.gz
-
-# 源码权限根据实际需要设定，实际上编译完成后这个文件夹用不到，因此可以不操作此步骤
-chmod 777 -R gcc-4.8.5/</code></pre>
-<h3 id="依赖库源码下载"><a href="#依赖库源码下载" class="headerlink" title="依赖库源码下载"></a>依赖库源码下载</h3><pre><code class="sh"># 进入保存地址
-cd /home/common/gcc-4.8.5
-
-wget https://gmplib.org/download/gmp-6.1.2/gmp-6.1.2.tar.bz2
-tar xvf gmp-6.1.2.tar.bz2
-mv gmp-6.1.2 gmp
-
-wget https://ftp.gnu.org/gnu/mpfr/mpfr-3.1.6.tar.gz
-tar xzvf mpfr-3.1.6.tar.gz
-mv mpfr-3.1.6 mpfr
-
-wget https://ftp.gnu.org/gnu/mpc/mpc-1.0.3.tar.gz
-tar xzvf mpc-1.0.3.tar.gz
-mv mpc-1.0.3 mpc
-
-wget http://www.bastoul.net/cloog/pages/download/cloog-0.18.4.tar.gz
-tar xzvf cloog-0.18.4.tar.gz
-mv cloog-0.18.4 cloog
-
-wget http://isl.gforge.inria.fr/isl-0.14.tar.gz
-tar xzvf isl-0.14.tar.gz
-mv isl-0.14 isl</code></pre>
-<h2 id="编译安装-GCC"><a href="#编译安装-GCC" class="headerlink" title="编译安装 GCC"></a>编译安装 GCC</h2><h3 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h3><pre><code class="sh">#gcc4.4.7版本开始，官方推荐使用单独的目录，而不是在解压gcc源码后的目录中进行编译
-mkdir /home/common/gcc-build
-cd gcc-build
-
-../gcc-4.8.5/configure --enable-checking=release --enable-languages=c,c++ --disable-multilib
-    # --with-pkgversion=version ：指定一个标识你的包的字符串
-    # --enable-languages=c,c++：可以使用 all，default，ada，c，c++，fortran，go，jit，lto，objc，obj-c++。
-    # --disable-multilib：禁止生成多个平台的代码
-    # --enable-bootstrap：冗余的编译检查工作
-    # --enable-gather-detailed-mem-stats：允许通过 -fmem-report 选项来输出编译其它程序时的实时内存使用情况
-    # --with-long-double-128：指定long double类型的默认值是128位。
-    # --enable-threads=posix：C++ 异常能处理多线程代码
-    # --without-bash-malloc：禁用了 Bash 的内存分配函数(malloc)，Bash 将使用更为稳定的 Glibc 里的 malloc 函数。
-    # --enable-multibyte：支持使用多字节字符编码的文件
-
-    grep &quot;error&quot; config.log
-
-# 默认的make不加-j参数效率比较低，加上多线程参数 -j4 和-j8性能差距不大，-j16性能就比较差
-date +%T &amp;&amp; make -j4 &amp;&amp; date +%T
-    # make clean：清除上次的make命令所产生的object文件（后缀为“.o”的文件）及可执行文件。
-    # make distclean：包含make clean，同时也将configure生成的文件全部删除掉。感觉有点像在 gcc-build 中执行 rm -rf 的删减版一样。
-    lscpu |grep -A 1 &#39;Model name&#39;
-make install</code></pre>
-<h3 id="关联系统"><a href="#关联系统" class="headerlink" title="关联系统"></a>关联系统</h3><p>如果上述安装过程中指定了 gcc 的安装路径，那么需要关联系统。当然，我上一步并没有指定安装路径，而是直接替代了系统自带的 GCC 4.4.7。</p>
-<pre><code class="sh"># 更新环境
-echo &#39;/usr/local/gcc-4.8.5/lib64&#39; &gt; /etc/ld.so.conf.d/gcc4.8.5.conf
-ldconfig
-
-# 在自定义的全局配置文件中添加 PATH 变量
-vim /etc/profile.d/hhjos6.sh
-    PATH=/usr/local/gcc-4.8.5/bin:$PATH
-
-mv /usr/bin/gcc /usr/bin/gcc-4.4.7
-mv /usr/bin/g++ /usr/bin/g++-4.4.7
-mv /usr/bin/c++ /usr/bin/c++-4.4.7
-ln -s /usr/local/gcc/bin/gcc /usr/bin/gcc
-ln -s /usr/local/gcc/bin/c++ /usr/bin/c++
-ln -s /usr/local/gcc/bin/g++ /usr/bin/g++
-ln -s /usr/local/gcc/lib64/libstdc++.so.6.0.22 /usr/lib64/libstdc++.so.6</code></pre>
-<h3 id="版本检查"><a href="#版本检查" class="headerlink" title="版本检查"></a>版本检查</h3><pre><code class="sh">gcc -v
-    gcc -dumpversion
-    ll /usr/bin/cc
-    strings /usr/lib64/libstdc++.so.6 | grep GLIBC
-g++ -v
-    g++ -dumpversion
-    c++ -dumpversion</code></pre>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><blockquote>
-<p>如果还要尝试 <code>yum -y install centos-release-scl</code> 安装临时版本的 GCC ，那多数人并不会成功，毕竟 CentOS 6 在官方都是不支持的版本了。博主这次安装 GCC 4.8.5 花了很长时间，毕竟坑太多了，而且已有程序环境的兼容性也必须兼顾。因此虽然参考了以下这些文章，但是操作步骤上却有差异；就是一点点差异，我浪费了很多很多的时间！实际上，我看过的文章就不止这些了，但对我并没有提供任何的帮助。</p>
-</blockquote>
-<ol>
-<li><p>TUNA.<code>清华大学开源软件镜像站（GCC）</code>[EB/OL].<a href="https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc">https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc</a>, 2021/02/20.</p>
-</li>
-<li><p>peterpanzsy.<code>centos 6 升级gcc</code>[EB/OL].<a href="https://www.cnblogs.com/peterpanzsy/archive/2013/04/10/3006838.html">https://www.cnblogs.com/peterpanzsy/archive/2013/04/10/3006838.html</a>, 2021/02/20.</p>
-</li>
-<li><p>创小新.<code>LINUX CENTOS6.8编译安装GCC-6.3.0 升级GCC</code>[EB/OL].<a href="https://chuangxiao.xin/h-nd-87.html">https://chuangxiao.xin/h-nd-87.html</a>, 2021/02/20.</p>
-</li>
-<li><p>ljpwinxp.<code>Centos 6.9 编译安装gcc 4.8.5</code>[EB/OL].<a href="https://blog.51cto.com/191226139/2066137">https://blog.51cto.com/191226139/2066137</a>, 2021/02/20.</p>
-</li>
-<li><p>Free Software Foundation.<code>GCC 4.8 Release Series: Changes, New Features, and Fixes</code>[EB/OL].<a href="https://gcc.gnu.org/gcc-4.8/changes.html">https://gcc.gnu.org/gcc-4.8/changes.html</a>, 2021/02/20.</p>
-</li>
-</ol>
+    <title>写论文的苦，你未必想尝一下</title>
+    <url>/202101301128/</url>
+    <content><![CDATA[<p>最近 3 个星期，一直在忙着写论文，走路在想，吃饭在想，睡觉也在想，总感觉某个地方有个难关需要我去跨越，我到了附近，却一直没有发现；等到论文基本写出来后，发现写论文是挺辛苦的！</p>
+<h2 id="选题的苦"><a href="#选题的苦" class="headerlink" title="选题的苦"></a>选题的苦</h2><p>如果认真去做科研论文的话，选题是很苦的，因为是很难找到合适的题目的。</p>
+<p>我都工作快 10 年了，也就最近才有些灵感和题材。一个人很难独自拥有一些高大上的项目，我的工作是搬砖的，就很难去研究烧砖技术，更多的是考虑如何搬运、如何与人协作、如何做好工期管理等等。</p>
+<p>因此，好不容易在工作中，发挥了一些重要作用，在种种压力之下，准备去写论文；拟好了粗略的提纲，感觉去找一个知识数据库的账户，将同领域、同主题的文献找出来，一看，不好了，怎么这么多人都写了，多半只能放弃，就算不放弃，题材也很难写出新意来；水论文的人很多，可是自己扪心自问，那并不是我想要的，丢掉吧！</p>
+<p>由于工作繁忙以及自己心里的这一丝丝骄傲，我好长时间都没有写出论文来，明明我业绩最多、贡献最大，可是我比不少按部就班的同事晚了 2 年。有些时日里，我焦虑得不行，不肯将就，也没有天降福利，在两个单位里边都被关心我的大领导约谈了…</p>
+<p>好不容易能够选了一个题目，能够勉强说有创新性、实用价值的，又得在诸多先行者的背影里，寻找空间，作出差异化来，不然，自己就真的是水论文了。</p>
+<h2 id="写作的苦"><a href="#写作的苦" class="headerlink" title="写作的苦"></a>写作的苦</h2><p>如果认真去做科研论文的话，写作的过程也是很苦的，因为写的东西不一定被人认可。</p>
+<p>工作的过程，事情做完就了事了；可是如果发论文，那么自己得将事情的来龙去脉、因果、主次、先后等等都弄明白。最近写的这个论文，是关于计算机技术的，在网络上、操作系统里、论文里，都有零零星星的表述，可是有些已经过期了，有些别人就写错了，有些别人提供的参数、程序、方法等等不适合实际情况，都得去一一验证，一一去比较，一一去部署，最近这两周，我的头一直很疼，因为有些试验尝试了十多次了，一次需要一两个小时；日常的工作仍然需要继续，家里儿女仍得操心，老家也有一些烦心事，新一年的工作仍然很迷茫，这一些都让我很为难。</p>
+<p>好不容易写出素材来了，还得修改文字；标题是否有吸引力，摘要是否清楚，翻译是否妥当，文章各级标题是否层次鲜明，各个段落的内容是否清楚明白、是否啰嗦繁杂、是否存在逻辑问题，得来回修改。</p>
+<p>感觉差不多了，得控制字数，不能太多，也不能太少；图片得自己去绘制，不然显示效果不好；图表得考虑，论文的相关指标能否让别人看得懂、评估得上等级。因此，各种修改也得耗好几个通宵！</p>
+<h2 id="发表的苦"><a href="#发表的苦" class="headerlink" title="发表的苦"></a>发表的苦</h2><p>如果认真去做科研论文的话，发表过程也是很辛苦的，因为得到好期刊的认可也是相当的困难的。好不容易有了内容，得开始寻找适当的杂志了。找了几个心仪的杂志，论文格式好好捯饬了一下，存了很多个版本格式，花了几天也完成了。</p>
+<p>自己一无人脉，二无平台，三无能力，核心期刊基本都很难；前一个论文我整整收了三年，投了多家期刊，有些是毫不客气的说水平不行，有些和和气气地说不符合杂志风格，有些啥也没说退稿回来。</p>
+<h2 id="成果的苦"><a href="#成果的苦" class="headerlink" title="成果的苦"></a>成果的苦</h2><p>如果认真去做科研论文的话，论文发表了也是很苦的，因为不是投入越大、回报越大。</p>
+<p>很不容易地，论文发表了，可是好些平时不做事的同事，不知不觉地就发了好几篇论文，评选职称了，自己又显得落后了，这种苦真不是滋味！</p>
+<p>看着别人那么水，和自己发在同样的杂志上，并不知道自己来回倒腾是否有价值。其实杂志里边的论文多数都是过得去的，奈何偏偏有几个相熟的人凑了一些他从来没有弄清楚过的内容上去，也发表了，心里何其翻覆！这样一对比，再也不认为那些核心期刊里侃侃而谈的大家们徒有其表了，而是自惭形秽不已。</p>
+<p>论文发表了，自己回忆起来，那个过程仍然是苦涩的，很长时间都挥之不去。可是，如果得到了认可，对别人也发挥了作用，那心里在很短的瞬间也是会有甘之如饴的愉悦的。</p>
+<p>其实，写论文不一定苦，苦的是放不下心里的结，随性一点的话，一切会好很多。春城冬暖，愿大家都能享受这美好的阳光。</p>
 ]]></content>
       <categories>
-        <category>编程笔记</category>
+        <category>坐井观天</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
-        <tag>CentOS</tag>
-        <tag>GCC</tag>
-        <tag>编译</tag>
-        <tag>安装</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CentOS 6 编译安装 sqlite 3</title>
-    <url>/202103211734/</url>
-    <content><![CDATA[<p>由于安装 Python 环境的需要，需要对 Python 进行编译安装。</p>
-<h2 id="安装编译环境"><a href="#安装编译环境" class="headerlink" title="安装编译环境"></a>安装编译环境</h2><p>先安装必要的环境，博主的系统中默认其实已经包含了</p>
-<pre><code class="sh">yum install sqlite-devel</code></pre>
-<h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h2><pre><code class="sh">cd /home/common/
-wget https://www.sqlite.org/2020/sqlite-autoconf-3320300.tar.gz
-tar -xvzf sqlite-autoconf-3320300.tar.gz
-cd sqlite-autoconf-3320300/
-mkdir -p /usr/local/sqlite
-./configure --prefix=/usr/local/sqlite
-make -j4 &amp;&amp; make install</code></pre>
-<h2 id="关联系统"><a href="#关联系统" class="headerlink" title="关联系统"></a>关联系统</h2><pre><code class="sh">vim /etc/ld.so.conf.d/sqlite3.conf
-    # 可选
-    /usr/local/sqlite/lib
-ldconfig</code></pre>
-]]></content>
-      <categories>
-        <category>编程笔记</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Python</tag>
-        <tag>CentOS</tag>
-        <tag>编译</tag>
-        <tag>安装</tag>
-        <tag>sqlite</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CentOS 使用 yum 国内源实现加速下载</title>
-    <url>/202101171156/</url>
-    <content><![CDATA[<p>又是一年过去，忽然接到通知，要求更新一个之前做的展示系统，就想起来要更新一下系统。结果使用 <code>yum list kernel.x86_64</code> 提示 <code>Cannot find a valid baseurl for repo: base</code>。</p>
-<p>更换国内源也不行，看了<code>http://mirrors.163.com/centos/6.10/readme</code> 文件，发现官方自 2020/11/30 起就禁止 CentOS 6.x 更新了（文件被清空）。呜呜，真是后知后觉了！</p>
-<pre><code class="sh">su
-cd /etc/yum.repos.d/
-cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.original
-    # 系统是根据 Base*.repo 来判别基础源的，因此备份的时候必须修改扩展名
-
-gedit CentOS-Base.repo
-    # 国外 http://vault.centos.org/6.10
-    # 国内 http://mirrors.aliyun.com/centos-vault/6.10/；
-
-mv epel.repo epel.original
-gedit epel.repo 
-    # 网址替换为 http://archives.fedoraproject.org/pub/archive/epel/6/x86_64/ 即可
-    # 国内（好像不行了） http://mirrors.aliyun.com/epel-archive/6/
-rm -f /var/run/yum.pid
-yum clean all
-yum makecache
-yum repolist</code></pre>
-<p>网友多喜欢用 vim ，我是普通人，我就是喜欢使用 gedit ，用上边提到的网址将文件中的网址替换一下就搞定了；如果可能需要滚动升级到下一个版本的，请参考修改一下网址的表达方式就行了。</p>
-<p>你问我怎么更换国内源，方法和上边是一样的——都是更换源嘛！至于国内源有哪些，可以了解一下清华、阿里云、网易、搜狐、中科大等源。当然，如果想简单一点的话，还可以</p>
-<pre><code class="bash">su
-
-# 备份
-mv /etc/yum.repos.d/CentOS-Base.repo/etc/yum.repos.d/CentOS-Base.repo.bck
-
-# 下载替换源（依次为网易、阿里、中科大、搜狐）
-wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.163.com/.help/CentOS7-Base-163.repo
-# wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
-# curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
-# wget -O /etc/yum.repos.d/CentOS-Base.repo http://centos.ustc.edu.cn/CentOS-Base.repo
-# wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.sohu.com/help/CentOS-Base-sohu.repo
-
-# 更新系统源数据库
-yum clean all
-yum makecache
-yum repolist</code></pre>
-<p>当然，也可以用这种方法：</p>
-<pre><code class="sh">su
-sed -e &#39;s|^mirrorlist=|#mirrorlist=|g&#39; \
-         -e &#39;s|^#baseurl=http://mirror.centos.org|baseurl=https://mirrors.tuna.tsinghua.edu.cn|g&#39; \
-         -i.bak \
-         /etc/yum.repos.d/CentOS-*.repo</code></pre>
-<p>国内源是真的快，不用真的不知道！</p>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li><p>清华大学TUNA团队.<code>CentOS 镜像使用帮助</code>[EB/OL].<a href="https://mirrors.cnnic.cn/help/centos/">https://mirrors.cnnic.cn/help/centos/</a>, 2021/02/01.</p>
-</li>
-<li><p>fogwu.<code>centos6 yum源失效，yum不可用处理方法及php环境搭建</code>[EB/OL].<a href="https://www.cnblogs.com/fogwang/p/14133970.html">https://www.cnblogs.com/fogwang/p/14133970.html</a>, 2021/02/01.</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>电脑爱好者</category>
-      </categories>
-      <tags>
-        <tag>国内源</tag>
-        <tag>加速</tag>
-        <tag>下载</tag>
-        <tag>CentOS</tag>
-        <tag>yum</tag>
+        <tag>论文</tag>
+        <tag>科研</tag>
+        <tag>冷板凳</tag>
+        <tag>苦</tag>
       </tags>
   </entry>
   <entry>
@@ -3383,10 +3248,145 @@ service iptables restart</code></pre>
         <tag>Linux</tag>
         <tag>国内源</tag>
         <tag>CentOS</tag>
-        <tag>安装</tag>
         <tag>MySQL</tag>
+        <tag>安装</tag>
         <tag>配置</tag>
         <tag>权限</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS 6.10 编译安装 GCC4.8.5</title>
+    <url>/202103072130/</url>
+    <content><![CDATA[<p>由于安装 python 3 的需要，需要升级 GCC；由于我的操作系统是 CentOS6.10，而且还需要考虑到工作软件系统的兼容，因此 GCC 版本暂时定为 4.8.5。测试表明，如果 Python 需要性能优化选项 <code>--enable-optimizations</code>，需要 GCC 8.2+ 以上的版本。</p>
+<h2 id="源码下载"><a href="#源码下载" class="headerlink" title="源码下载"></a>源码下载</h2><h3 id="GCC-源码下载"><a href="#GCC-源码下载" class="headerlink" title="GCC 源码下载"></a>GCC 源码下载</h3><pre><code class="sh">cd /home/common
+wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-4.8.5/gcc-4.8.5.tar.gz
+tar xzvf gcc-4.8.5.tar.gz
+
+# 源码权限根据实际需要设定，实际上编译完成后这个文件夹用不到，因此可以不操作此步骤
+chmod 777 -R gcc-4.8.5/</code></pre>
+<h3 id="依赖库源码下载"><a href="#依赖库源码下载" class="headerlink" title="依赖库源码下载"></a>依赖库源码下载</h3><pre><code class="sh"># 进入保存地址
+cd /home/common/gcc-4.8.5
+
+wget https://gmplib.org/download/gmp-6.1.2/gmp-6.1.2.tar.bz2
+tar xvf gmp-6.1.2.tar.bz2
+mv gmp-6.1.2 gmp
+
+wget https://ftp.gnu.org/gnu/mpfr/mpfr-3.1.6.tar.gz
+tar xzvf mpfr-3.1.6.tar.gz
+mv mpfr-3.1.6 mpfr
+
+wget https://ftp.gnu.org/gnu/mpc/mpc-1.0.3.tar.gz
+tar xzvf mpc-1.0.3.tar.gz
+mv mpc-1.0.3 mpc
+
+wget http://www.bastoul.net/cloog/pages/download/cloog-0.18.4.tar.gz
+tar xzvf cloog-0.18.4.tar.gz
+mv cloog-0.18.4 cloog
+
+wget http://isl.gforge.inria.fr/isl-0.14.tar.gz
+tar xzvf isl-0.14.tar.gz
+mv isl-0.14 isl</code></pre>
+<h2 id="编译安装-GCC"><a href="#编译安装-GCC" class="headerlink" title="编译安装 GCC"></a>编译安装 GCC</h2><h3 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h3><pre><code class="sh">#gcc4.4.7版本开始，官方推荐使用单独的目录，而不是在解压gcc源码后的目录中进行编译
+mkdir /home/common/gcc-build
+cd gcc-build
+
+../gcc-4.8.5/configure --enable-checking=release --enable-languages=c,c++ --disable-multilib
+    # --with-pkgversion=version ：指定一个标识你的包的字符串
+    # --enable-languages=c,c++：可以使用 all，default，ada，c，c++，fortran，go，jit，lto，objc，obj-c++。
+    # --disable-multilib：禁止生成多个平台的代码
+    # --enable-bootstrap：冗余的编译检查工作
+    # --enable-gather-detailed-mem-stats：允许通过 -fmem-report 选项来输出编译其它程序时的实时内存使用情况
+    # --with-long-double-128：指定long double类型的默认值是128位。
+    # --enable-threads=posix：C++ 异常能处理多线程代码
+    # --without-bash-malloc：禁用了 Bash 的内存分配函数(malloc)，Bash 将使用更为稳定的 Glibc 里的 malloc 函数。
+    # --enable-multibyte：支持使用多字节字符编码的文件
+
+    grep &quot;error&quot; config.log
+
+# 默认的make不加-j参数效率比较低，加上多线程参数 -j4 和-j8性能差距不大，-j16性能就比较差
+date +%T &amp;&amp; make -j4 &amp;&amp; date +%T
+    # make clean：清除上次的make命令所产生的object文件（后缀为“.o”的文件）及可执行文件。
+    # make distclean：包含make clean，同时也将configure生成的文件全部删除掉。感觉有点像在 gcc-build 中执行 rm -rf 的删减版一样。
+    lscpu |grep -A 1 &#39;Model name&#39;
+make install</code></pre>
+<h3 id="关联系统"><a href="#关联系统" class="headerlink" title="关联系统"></a>关联系统</h3><p>如果上述安装过程中指定了 gcc 的安装路径，那么需要关联系统。当然，我上一步并没有指定安装路径，而是直接替代了系统自带的 GCC 4.4.7。</p>
+<pre><code class="sh"># 更新环境
+echo &#39;/usr/local/gcc-4.8.5/lib64&#39; &gt; /etc/ld.so.conf.d/gcc4.8.5.conf
+ldconfig
+
+# 在自定义的全局配置文件中添加 PATH 变量
+vim /etc/profile.d/hhjos6.sh
+    PATH=/usr/local/gcc-4.8.5/bin:$PATH
+
+mv /usr/bin/gcc /usr/bin/gcc-4.4.7
+mv /usr/bin/g++ /usr/bin/g++-4.4.7
+mv /usr/bin/c++ /usr/bin/c++-4.4.7
+ln -s /usr/local/gcc/bin/gcc /usr/bin/gcc
+ln -s /usr/local/gcc/bin/c++ /usr/bin/c++
+ln -s /usr/local/gcc/bin/g++ /usr/bin/g++
+ln -s /usr/local/gcc/lib64/libstdc++.so.6.0.22 /usr/lib64/libstdc++.so.6</code></pre>
+<h3 id="版本检查"><a href="#版本检查" class="headerlink" title="版本检查"></a>版本检查</h3><pre><code class="sh">gcc -v
+    gcc -dumpversion
+    ll /usr/bin/cc
+    strings /usr/lib64/libstdc++.so.6 | grep GLIBC
+g++ -v
+    g++ -dumpversion
+    c++ -dumpversion</code></pre>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><blockquote>
+<p>如果还要尝试 <code>yum -y install centos-release-scl</code> 安装临时版本的 GCC ，那多数人并不会成功，毕竟 CentOS 6 在官方都是不支持的版本了。博主这次安装 GCC 4.8.5 花了很长时间，毕竟坑太多了，而且已有程序环境的兼容性也必须兼顾。因此虽然参考了以下这些文章，但是操作步骤上却有差异；就是一点点差异，我浪费了很多很多的时间！实际上，我看过的文章就不止这些了，但对我并没有提供任何的帮助。</p>
+</blockquote>
+<ol>
+<li><p>TUNA.<code>清华大学开源软件镜像站（GCC）</code>[EB/OL].<a href="https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc">https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc</a>, 2021/02/20.</p>
+</li>
+<li><p>peterpanzsy.<code>centos 6 升级gcc</code>[EB/OL].<a href="https://www.cnblogs.com/peterpanzsy/archive/2013/04/10/3006838.html">https://www.cnblogs.com/peterpanzsy/archive/2013/04/10/3006838.html</a>, 2021/02/20.</p>
+</li>
+<li><p>创小新.<code>LINUX CENTOS6.8编译安装GCC-6.3.0 升级GCC</code>[EB/OL].<a href="https://chuangxiao.xin/h-nd-87.html">https://chuangxiao.xin/h-nd-87.html</a>, 2021/02/20.</p>
+</li>
+<li><p>ljpwinxp.<code>Centos 6.9 编译安装gcc 4.8.5</code>[EB/OL].<a href="https://blog.51cto.com/191226139/2066137">https://blog.51cto.com/191226139/2066137</a>, 2021/02/20.</p>
+</li>
+<li><p>Free Software Foundation.<code>GCC 4.8 Release Series: Changes, New Features, and Fixes</code>[EB/OL].<a href="https://gcc.gnu.org/gcc-4.8/changes.html">https://gcc.gnu.org/gcc-4.8/changes.html</a>, 2021/02/20.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程笔记</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>CentOS</tag>
+        <tag>安装</tag>
+        <tag>GCC</tag>
+        <tag>编译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS 6 编译安装 sqlite 3</title>
+    <url>/202103211734/</url>
+    <content><![CDATA[<p>由于安装 Python 环境的需要，需要对 Python 进行编译安装。</p>
+<h2 id="安装编译环境"><a href="#安装编译环境" class="headerlink" title="安装编译环境"></a>安装编译环境</h2><p>先安装必要的环境，博主的系统中默认其实已经包含了</p>
+<pre><code class="sh">yum install sqlite-devel</code></pre>
+<h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h2><pre><code class="sh">cd /home/common/
+wget https://www.sqlite.org/2020/sqlite-autoconf-3320300.tar.gz
+tar -xvzf sqlite-autoconf-3320300.tar.gz
+cd sqlite-autoconf-3320300/
+mkdir -p /usr/local/sqlite
+./configure --prefix=/usr/local/sqlite
+make -j4 &amp;&amp; make install</code></pre>
+<h2 id="关联系统"><a href="#关联系统" class="headerlink" title="关联系统"></a>关联系统</h2><pre><code class="sh">vim /etc/ld.so.conf.d/sqlite3.conf
+    # 可选
+    /usr/local/sqlite/lib
+ldconfig</code></pre>
+]]></content>
+      <categories>
+        <category>编程笔记</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>CentOS</tag>
+        <tag>Python</tag>
+        <tag>安装</tag>
+        <tag>编译</tag>
+        <tag>sqlite</tag>
       </tags>
   </entry>
   <entry>
@@ -3530,11 +3530,325 @@ vi /usr/bin/gnome-tweak-tool</code></pre>
       </categories>
       <tags>
         <tag>Linux</tag>
-        <tag>Python</tag>
         <tag>CentOS</tag>
-        <tag>编译</tag>
+        <tag>Python</tag>
         <tag>安装</tag>
+        <tag>编译</tag>
         <tag>sqlite</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Powerline 插件的安装与配置</title>
+    <url>/202104102207/</url>
+    <content><![CDATA[<h2 id="Powerline-的安装"><a href="#Powerline-的安装" class="headerlink" title="Powerline 的安装"></a>Powerline 的安装</h2><ol>
+<li><p>安装 <a href="https://github.com/powerline/powerline">Powerline</a></p>
+<blockquote>
+<p>  Powerline is a statusline plugin for vim, and provides statuslines and prompts for several other applications, including zsh, bash, fish, tmux, IPython, Awesome, i3 and Qtile.  </p>
+<p>  进阶版本：<a href="https://github.com/b-ryan/powerline-shell">https://github.com/b-ryan/powerline-shell</a>  A beautiful and useful prompt generator for Bash, ZSH, Fish, and tcsh</p>
+</blockquote>
+<pre><code class="sh">pip3 install wheel powerline-status
+    #或 pip3 install git+git://github.com/powerline/powerline
+    # pip3 install git+git://gitee.com/mirrors/Powerline
+# 确认包路径
+pip3 show powerline-status
+    # /usr/local/python3/lib/python3.8/site-packages
+# 查看支持的终端
+ls /usr/local/python3/lib/python3.8/site-packages/powerline/bindings/
+    # awesome  bar  bash  config.py  fish  i3  ipython  lemonbar  pdb  qtile  rc  shell  tcsh  tmux  vim  wm  zsh
+# 查看本地配置
+gedit /usr/local/python3/lib/python3.8/site-packages/powerline/config_files/config.json</code></pre>
+</li>
+<li><p>安装配套字体，并修改终端界面的显示字体（才会生效）</p>
+<pre><code class="sh">#git clone https://github.com/powerline/fonts.git --depth=1
+git clone https://gitee.com/efluent/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+    # 在相应的账户下安装，就安装到响应账户的文件夹中
+    /root/.local/share/fonts
+    /home/herc/.local/share/fonts
+cp -pr fonts/ /usr/share/fonts/powerline
+cd ..
+rm -rf fonts</code></pre>
+<ul>
+<li><p>以下方法测试未成功，原因不明</p>
+<pre><code class="sh">#安装字体
+# cd /usr/share/fonts/SourceCodePro
+# chmod +x *.otf
+cp -pr SourceCodePro/ /usr/share/fonts
+cd /usr/share/fonts
+wget https://github.com/powerline/powerline/blob/develop/font/PowerlineSymbols.otf
+chmod +x PowerlineSymbols.otf
+# 下述方法无效
+#cd /etc/fonts/conf.d/
+#wget https://github.com/powerline/powerline/blob/develop/font/10-powerline-symbols.conf
+#wget https://github.com/justrajdeep/fonts/blob/master/10-powerline-symbols.conf
+
+mkdir -p ~/.config/fontconfig/conf.d
+cd ~/.config/fontconfig/conf.d
+wget https://github.com/powerline/fonts/blob/master/fontconfig/50-enable-terminess-powerline.conf
+# 在各个用户下执行
+fc-cache -fv</code></pre>
+</li>
+<li><p>查看字体</p>
+<pre><code class="sh"># 查看中文字体清单
+fc-list :lang=zh
+
+# 终端字体保存在
+find / -name  consolefonts
+cd /lib/kbd/consolefonts
+setfont -h</code></pre>
+</li>
+<li><p>centos 6安装中文字体（不含文泉驿）</p>
+<pre><code class="sh">yum install bitmap-fonts bitmap-fonts-cjk</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="Powerline-的配置"><a href="#Powerline-的配置" class="headerlink" title="Powerline 的配置"></a>Powerline 的配置</h2><ol>
+<li><p>确认 Python 已关联到系统的各个 shell</p>
+<pre><code class="sh"> # 添加到 Python 程序到系统中
+ #ln -s /usr/local/python3/bin/powerline /usr/local/bin
+ #ln -s /usr/local/python3/bin/powerline-config /usr/local/bin
+ #ln -s /usr/local/python3/bin/powerline-daemon /usr/local/bin
+ echo &#39;export PATH=$PATH:/usr/local/python3/bin&#39; &gt;&gt; /etc/profile
+ echo &#39;export PATH=$PATH:/usr/local/python3/bin&#39; &gt;&gt; /etc/zprofile</code></pre>
+</li>
+<li><p>bash开启 powerline（全局），参考 <a href="https://powerline.readthedocs.io/en/latest/usage/shell-prompts.html">https://powerline.readthedocs.io/en/latest/usage/shell-prompts.html</a></p>
+<pre><code class="sh"> cd /usr/local/python3/lib/python3.8/site-packages/powerline
+ gedit /etc/bashrc # 或 gedit /etc/profile.d/powerline.sh
+     # powerline，hhj-20210220
+     export PATH=$PATH:/usr/local/python3/bin
+     if [ -f &quot;`which powerline-daemon`&quot; ]; then
+       powerline-daemon -q
+       POWERLINE_BASH_CONTINUATION=1
+       POWERLINE_BASH_SELECT=1
+       . /usr/local/python3/lib/python3.8/site-packages/powerline/bindings/bash/powerline.sh
+     fi
+  . /etc/profile.d/powerline.sh
+     # 当前用户生效</code></pre>
+</li>
+<li><p>zsh 配置 powerline（全局）</p>
+<pre><code class="sh"> cd /usr/local/python3/lib/python3.8/site-packages/powerline/bindings/zsh/
+ cp /etc/profile.d/powerline.sh /etc/profile.d/powerline.zsh
+ gedit /etc/profile.d/powerline.zsh
+     # hhj-20210220
+     if [ -f &quot;`which powerline-daemon`&quot; ]; then
+       powerline-daemon -q
+       POWERLINE_BASH_CONTINUATION=1
+       POWERLINE_BASH_SELECT=1
+       . /usr/local/python3/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
+     fi
+  . /etc/profile.d/powerline.zsh</code></pre>
+</li>
+<li><p>vim（全局配置）</p>
+<pre><code class="sh"> vim /etc/vimrc
+     &quot; hhj-20210220
+     set  rtp+=/usr/local/python3/lib/python3.8/site-packages/powerline/bindings/vim/
+     set laststatus=2
+     set t_Co=256</code></pre>
+</li>
+<li><p>ipython 配置</p>
+<pre><code class="sh"> gedit ~/.ipython/profile_default/ipython_config.py
+     from powerline.bindings.ipython.since_5 import PowerlinePrompts
+     c = get_config()
+     c.TerminalInteractiveShell.simple_prompt = False
+     c.TerminalInteractiveShell.prompts_class = PowerlinePrompts</code></pre>
+</li>
+<li><p>tmux 配置</p>
+<pre><code class="sh"> gedit ~/.tmux.conf
+     source &quot;/usr/local/python3/lib/python3.8/site-packages/powerline/bindings/tmux/powerline.conf&quot;</code></pre>
+</li>
+</ol>
+<ul>
+<li><p>解决不能显示git分支问题（未配置）</p>
+<pre><code class="sh">mkdir -p ~/.config/powerline
+cat &lt;&lt;-&#39;EOF&#39; &gt; ~/.config/powerline/config.json
+&#123;
+    &quot;ext&quot;: &#123;
+        &quot;shell&quot;: &#123;
+            &quot;theme&quot;: &quot;default_leftonly&quot;
+        &#125;
+    &#125;
+&#125;
+EOF
+powerline-daemon --replace</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>csh 配置（<strong>不成功</strong>）</p>
+<pre><code class="sh">gedit /etc/zprofile
+    export PATH=&quot;$PATH:/usr/local/python3/bin&quot;
+    . /usr/local/python3/lib/python3.8/site-packages/powerline/bindings/tcsh/powerline.tcsh</code></pre>
+</li>
+</ul>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>不记得了，之前安装的时候查阅了多个文档，改天补上来了！</p>
+]]></content>
+      <tags>
+        <tag>电脑爱好者</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>zsh 环境的安装与配置</title>
+    <url>/202104171931/</url>
+    <content><![CDATA[<blockquote>
+<p>zsh 在 Linux 系统中是自带的，因此不这里并没有讨论 zsh 自身的安装方法，而是 zsh 插件的安装与配置方法。</p>
+</blockquote>
+<h2 id="zsh-的常用快捷键"><a href="#zsh-的常用快捷键" class="headerlink" title="zsh 的常用快捷键"></a>zsh 的常用快捷键</h2><ol>
+<li><p>虽然网络上都宣称 zsh 和 bash 高度解决，不过我个人的理解，bash 的部分快捷键和 csh 倒是比较接近，而 zsh 并不接近。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>zsh</th>
+<th>bash</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>光标移动到行首</td>
+<td><code>Ctrl</code> + <code>A</code></td>
+<td><code>Home</code></td>
+<td></td>
+</tr>
+<tr>
+<td>光标移动到行尾</td>
+<td><code>Ctrl</code> + <code>E</code></td>
+<td><code>End</code></td>
+<td></td>
+</tr>
+<tr>
+<td>光标后的字符串变为大写</td>
+<td><code>Alt</code> + <code>U</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>当前字符串大写</td>
+<td><code>Alt</code> + <code>C</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>光标后的字符串变为小写</td>
+<td><code>Alt</code> + <code>L</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>删除光标<strong>后</strong>的<strong>所有</strong>字符</td>
+<td><code>Clt</code> + <code>K</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>删除光标<strong>前</strong>的<strong>所有</strong>字符</td>
+<td><code>Clt</code> + <code>H</code></td>
+<td><code>Clt</code> + <code>U</code></td>
+<td><code>Ctrl</code> + <code>U</code> 对 bash 来说是删除光标前的字符，而 zsh 是整行删除。</td>
+</tr>
+<tr>
+<td>删除光标<strong>前</strong>的<strong>一个单词</strong></td>
+<td><code>Ctrl</code> + <code>W</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>删除光标<strong>后</strong>的<strong>一个单词</strong></td>
+<td><code>Alt</code> + <code>D</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>删除光标<strong>当前</strong>的<strong>一个字符</strong></td>
+<td><code>Ctrl</code> + <code>D</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong><code>CTRL + R</code></strong>: 搜索历史</p>
+</li>
+</ol>
+<h2 id="插件的安装与配置"><a href="#插件的安装与配置" class="headerlink" title="插件的安装与配置"></a>插件的安装与配置</h2><ol>
+<li><p>安装 <a href="https://github.com/zsh-users/zsh-syntax-highlighting">zsh-syntax-highlighting</a> 语法提示插件（当用户输入正确命令时指令会绿色高亮，错误时命令红色高亮）</p>
+<pre><code class="sh">su - herc
+cd ~/.zsh
+git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+vim .zshrc
+    source /home/herc/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh</code></pre>
+</li>
+<li><p>安装 <strong><a href="https://github.com/zsh-users/zsh-autosuggestions">zsh-autosuggestions</a></strong> 命令历史自动提示插件</p>
+<pre><code class="sh">zsh
+su - herc
+cd ~/.zsh
+
+mkdir .zsh
+cd .zsh
+bash --version
+zsh --version
+git clone https://github.com/zsh-users/zsh-autosuggestions
+source zsh-autosuggestions/zsh-autosuggestions.zsh
+    #完成该步骤后，即可对历史输入命令进行自动语法提示。
+    # 如果存在过多参数时，仍然可以使用 tab 强制提示。
+    # 系统内置的命令，如 tar 不能提示参数，不过 yum 可以提示参数、ls 需要强制 tab 才能提示参数</code></pre>
+</li>
+<li><p>安装 incr 系统目录自动提示插件</p>
+<pre><code class="sh">su - herc
+cd ~/.zsh
+wget https://mimosa-pudica.net/src/incr-0.2.zsh
+source incr*.zsh
+    # 当前有效，配置到~/.zshrc则用户一直有效（ 使用时将自动以绿色表示提示词）
+    # 不过按回车就会输入绿色部分，网友说可以使用空格隔断或 delete 键删除，测试无效；建议使用 Ctrl + K 删除末尾后回车！</code></pre>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>安装</tag>
+        <tag>配置</tag>
+        <tag>zsh</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ag 的安装与配置</title>
+    <url>/202104301929/</url>
+    <content><![CDATA[<ol>
+<li><p><strong>ag</strong> （<a href="https://github.com/ggreer/the_silver_searcher）比grep、ack更快的递归搜索文件内容（速度对比：`ag`&gt;`ack`&gt;`grep`）">https://github.com/ggreer/the_silver_searcher）比grep、ack更快的递归搜索文件内容（速度对比：`ag`&gt;`ack`&gt;`grep`）</a></p>
+<pre><code class="sh"># centos 6+（epel）
+yum install the_silver_searcher</code></pre>
+</li>
+<li><p>安装到 vim</p>
+<ul>
+<li><p>安装</p>
+<pre><code class="sh">cd /usr/share/vim/vim74/plugin
+#cd ~/.vim/plugin
+git clone https://github.com/rking/ag.vim ag</code></pre>
+</li>
+<li><p>全局配置 <code>vim /etc/vimrc</code></p>
+<pre><code class="sh">&quot; 自动缩进
+set autoindent
+
+&quot; ag 插件（请注意：默认为全局搜索，因此必须指明文件路径，不过支持正则表达式）
+set runtimepath^=/usr/share/vim/vim74/plugin/ag.vim
+let g:ag_prg=&quot;/usr/bin/ag --vimgrep&quot;
+let g:ag_working_path_mode=&quot;r&quot;</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>安装</tag>
+        <tag>配置</tag>
+        <tag>ag</tag>
       </tags>
   </entry>
   <entry>
@@ -3684,8 +3998,8 @@ make install</code></pre>
       </categories>
       <tags>
         <tag>Linux</tag>
-        <tag>编译</tag>
         <tag>安装</tag>
+        <tag>编译</tag>
         <tag>tmux</tag>
       </tags>
   </entry>
@@ -3857,8 +4171,8 @@ fi
         <category>电脑爱好者</category>
       </categories>
       <tags>
-        <tag>bash</tag>
         <tag>Linux</tag>
+        <tag>bash</tag>
         <tag>Solaris</tag>
         <tag>IP</tag>
         <tag>远程</tag>
@@ -4797,317 +5111,55 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
       </tags>
   </entry>
   <entry>
-    <title>Powerline 插件的安装与配置</title>
-    <url>/202104102207/</url>
-    <content><![CDATA[<h2 id="Powerline-的安装"><a href="#Powerline-的安装" class="headerlink" title="Powerline 的安装"></a>Powerline 的安装</h2><ol>
-<li><p>安装 <a href="https://github.com/powerline/powerline">Powerline</a></p>
+    <title>微软Word文档中的随机函数</title>
+    <url>/202207161048/</url>
+    <content><![CDATA[<p>工作中，经常用到 Microsoft Word 等文档编辑程序，有时候需要设置文档样式模板，不知道填写内容的时候，就可以使用 rand()、lorem() 随机生成若干段文本。</p>
+<h2 id="rand-函数生成中文段落"><a href="#rand-函数生成中文段落" class="headerlink" title="rand() 函数生成中文段落"></a>rand() 函数生成中文段落</h2><ol>
+<li>不指定参数的形式：<code>rand()</code>：该函数用法最常见，在不指定函数的情况下，可以直接生产 2~3 句话每段、共 6 段的特定中文文本。</li>
+</ol>
 <blockquote>
-<p>  Powerline is a statusline plugin for vim, and provides statuslines and prompts for several other applications, including zsh, bash, fish, tmux, IPython, Awesome, i3 and Qtile.  </p>
-<p>  进阶版本：<a href="https://github.com/b-ryan/powerline-shell">https://github.com/b-ryan/powerline-shell</a>  A beautiful and useful prompt generator for Bash, ZSH, Fish, and tcsh</p>
+<p>操作方法：直接在文档中输入<code>=rand()</code>，然后<code>回车</code>就可以了。</p>
 </blockquote>
-<pre><code class="sh">pip3 install wheel powerline-status
-    #或 pip3 install git+git://github.com/powerline/powerline
-    # pip3 install git+git://gitee.com/mirrors/Powerline
-# 确认包路径
-pip3 show powerline-status
-    # /usr/local/python3/lib/python3.8/site-packages
-# 查看支持的终端
-ls /usr/local/python3/lib/python3.8/site-packages/powerline/bindings/
-    # awesome  bar  bash  config.py  fish  i3  ipython  lemonbar  pdb  qtile  rc  shell  tcsh  tmux  vim  wm  zsh
-# 查看本地配置
-gedit /usr/local/python3/lib/python3.8/site-packages/powerline/config_files/config.json</code></pre>
-</li>
-<li><p>安装配套字体，并修改终端界面的显示字体（才会生效）</p>
-<pre><code class="sh">#git clone https://github.com/powerline/fonts.git --depth=1
-git clone https://gitee.com/efluent/fonts.git --depth=1
-# install
-cd fonts
-./install.sh
-    # 在相应的账户下安装，就安装到响应账户的文件夹中
-    /root/.local/share/fonts
-    /home/herc/.local/share/fonts
-cp -pr fonts/ /usr/share/fonts/powerline
-cd ..
-rm -rf fonts</code></pre>
-<ul>
-<li><p>以下方法测试未成功，原因不明</p>
-<pre><code class="sh">#安装字体
-# cd /usr/share/fonts/SourceCodePro
-# chmod +x *.otf
-cp -pr SourceCodePro/ /usr/share/fonts
-cd /usr/share/fonts
-wget https://github.com/powerline/powerline/blob/develop/font/PowerlineSymbols.otf
-chmod +x PowerlineSymbols.otf
-# 下述方法无效
-#cd /etc/fonts/conf.d/
-#wget https://github.com/powerline/powerline/blob/develop/font/10-powerline-symbols.conf
-#wget https://github.com/justrajdeep/fonts/blob/master/10-powerline-symbols.conf
-
-mkdir -p ~/.config/fontconfig/conf.d
-cd ~/.config/fontconfig/conf.d
-wget https://github.com/powerline/fonts/blob/master/fontconfig/50-enable-terminess-powerline.conf
-# 在各个用户下执行
-fc-cache -fv</code></pre>
-</li>
-<li><p>查看字体</p>
-<pre><code class="sh"># 查看中文字体清单
-fc-list :lang=zh
-
-# 终端字体保存在
-find / -name  consolefonts
-cd /lib/kbd/consolefonts
-setfont -h</code></pre>
-</li>
-<li><p>centos 6安装中文字体（不含文泉驿）</p>
-<pre><code class="sh">yum install bitmap-fonts bitmap-fonts-cjk</code></pre>
-</li>
-</ul>
-</li>
+<p><img src="/static/img/20220716-Word%E9%9A%8F%E6%9C%BA%E6%96%87%E6%9C%AC/1-rand-%E6%97%A0%E5%8F%82%E6%95%B0.png" alt="无参数"></p>
+<ol start="2">
+<li>指定<strong>段落数量</strong>参数的形式：<code>rand(p)</code>：在指定一个参数 <strong>p</strong>（自然数），可以直接生产 3 句话每段、共 <strong>p</strong> 段的特定中文文本。</li>
 </ol>
-<h2 id="Powerline-的配置"><a href="#Powerline-的配置" class="headerlink" title="Powerline 的配置"></a>Powerline 的配置</h2><ol>
-<li><p>确认 Python 已关联到系统的各个 shell</p>
-<pre><code class="sh"> # 添加到 Python 程序到系统中
- #ln -s /usr/local/python3/bin/powerline /usr/local/bin
- #ln -s /usr/local/python3/bin/powerline-config /usr/local/bin
- #ln -s /usr/local/python3/bin/powerline-daemon /usr/local/bin
- echo &#39;export PATH=$PATH:/usr/local/python3/bin&#39; &gt;&gt; /etc/profile
- echo &#39;export PATH=$PATH:/usr/local/python3/bin&#39; &gt;&gt; /etc/zprofile</code></pre>
-</li>
-<li><p>bash开启 powerline（全局），参考 <a href="https://powerline.readthedocs.io/en/latest/usage/shell-prompts.html">https://powerline.readthedocs.io/en/latest/usage/shell-prompts.html</a></p>
-<pre><code class="sh"> cd /usr/local/python3/lib/python3.8/site-packages/powerline
- gedit /etc/bashrc # 或 gedit /etc/profile.d/powerline.sh
-     # powerline，hhj-20210220
-     export PATH=$PATH:/usr/local/python3/bin
-     if [ -f &quot;`which powerline-daemon`&quot; ]; then
-       powerline-daemon -q
-       POWERLINE_BASH_CONTINUATION=1
-       POWERLINE_BASH_SELECT=1
-       . /usr/local/python3/lib/python3.8/site-packages/powerline/bindings/bash/powerline.sh
-     fi
-  . /etc/profile.d/powerline.sh
-     # 当前用户生效</code></pre>
-</li>
-<li><p>zsh 配置 powerline（全局）</p>
-<pre><code class="sh"> cd /usr/local/python3/lib/python3.8/site-packages/powerline/bindings/zsh/
- cp /etc/profile.d/powerline.sh /etc/profile.d/powerline.zsh
- gedit /etc/profile.d/powerline.zsh
-     # hhj-20210220
-     if [ -f &quot;`which powerline-daemon`&quot; ]; then
-       powerline-daemon -q
-       POWERLINE_BASH_CONTINUATION=1
-       POWERLINE_BASH_SELECT=1
-       . /usr/local/python3/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
-     fi
-  . /etc/profile.d/powerline.zsh</code></pre>
-</li>
-<li><p>vim（全局配置）</p>
-<pre><code class="sh"> vim /etc/vimrc
-     &quot; hhj-20210220
-     set  rtp+=/usr/local/python3/lib/python3.8/site-packages/powerline/bindings/vim/
-     set laststatus=2
-     set t_Co=256</code></pre>
-</li>
-<li><p>ipython 配置</p>
-<pre><code class="sh"> gedit ~/.ipython/profile_default/ipython_config.py
-     from powerline.bindings.ipython.since_5 import PowerlinePrompts
-     c = get_config()
-     c.TerminalInteractiveShell.simple_prompt = False
-     c.TerminalInteractiveShell.prompts_class = PowerlinePrompts</code></pre>
-</li>
-<li><p>tmux 配置</p>
-<pre><code class="sh"> gedit ~/.tmux.conf
-     source &quot;/usr/local/python3/lib/python3.8/site-packages/powerline/bindings/tmux/powerline.conf&quot;</code></pre>
-</li>
+<p><img src="/static/img/20220716-Word%E9%9A%8F%E6%9C%BA%E6%96%87%E6%9C%AC/2-rand-%E5%8D%95%E5%8F%82%E6%95%B0.png" alt="单参数"></p>
+<ol start="3">
+<li>指定<strong>段落数量</strong>、<strong>段中句子数量</strong>参数的形式：<code>rand(p, s)</code>：在先后指定两个参数 <strong>p</strong>（自然数）、<strong>s</strong>（自然数），可以直接生产 <strong>s</strong> 句话每段、共 <strong>p</strong> 段的特定中文文本。</li>
 </ol>
-<ul>
-<li><p>解决不能显示git分支问题（未配置）</p>
-<pre><code class="sh">mkdir -p ~/.config/powerline
-cat &lt;&lt;-&#39;EOF&#39; &gt; ~/.config/powerline/config.json
-&#123;
-    &quot;ext&quot;: &#123;
-        &quot;shell&quot;: &#123;
-            &quot;theme&quot;: &quot;default_leftonly&quot;
-        &#125;
-    &#125;
-&#125;
-EOF
-powerline-daemon --replace</code></pre>
-</li>
-</ul>
-<ul>
-<li><p>csh 配置（<strong>不成功</strong>）</p>
-<pre><code class="sh">gedit /etc/zprofile
-    export PATH=&quot;$PATH:/usr/local/python3/bin&quot;
-    . /usr/local/python3/lib/python3.8/site-packages/powerline/bindings/tcsh/powerline.tcsh</code></pre>
-</li>
-</ul>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>不记得了，之前安装的时候查阅了多个文档，改天补上来了！</p>
-]]></content>
-      <tags>
-        <tag>电脑爱好者</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>zsh 环境的安装与配置</title>
-    <url>/202104171931/</url>
-    <content><![CDATA[<blockquote>
-<p>zsh 在 Linux 系统中是自带的，因此不这里并没有讨论 zsh 自身的安装方法，而是 zsh 插件的安装与配置方法。</p>
+<p><img src="/static/img/20220716-Word%E9%9A%8F%E6%9C%BA%E6%96%87%E6%9C%AC/3-rand-%E5%8F%8C%E5%8F%82%E6%95%B0.png" alt="双参数"></p>
+<h2 id="lorem-函数生产英文段落"><a href="#lorem-函数生产英文段落" class="headerlink" title="lorem() 函数生产英文段落"></a>lorem() 函数生产英文段落</h2><ol>
+<li>不指定参数的形式：<code>lorem()</code>：该函数用法最常见，在不指定函数的情况下，可以直接生产 2~3 句话每段、共 6 段的特定英文文本。</li>
+</ol>
+<p><img src="/static/img/20220716-Word%E9%9A%8F%E6%9C%BA%E6%96%87%E6%9C%AC/4-lorem-%E6%97%A0%E5%8F%82%E6%95%B0.png" alt="无参数"></p>
+<blockquote>
+<p>上述的<code>特定</code>文本也是可以选择的，具体见参考文献1。</p>
 </blockquote>
-<h2 id="zsh-的常用快捷键"><a href="#zsh-的常用快捷键" class="headerlink" title="zsh 的常用快捷键"></a>zsh 的常用快捷键</h2><ol>
-<li><p>虽然网络上都宣称 zsh 和 bash 高度解决，不过我个人的理解，bash 的部分快捷键和 csh 倒是比较接近，而 zsh 并不接近。</p>
-<table>
-<thead>
-<tr>
-<th>项目</th>
-<th>zsh</th>
-<th>bash</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>光标移动到行首</td>
-<td><code>Ctrl</code> + <code>A</code></td>
-<td><code>Home</code></td>
-<td></td>
-</tr>
-<tr>
-<td>光标移动到行尾</td>
-<td><code>Ctrl</code> + <code>E</code></td>
-<td><code>End</code></td>
-<td></td>
-</tr>
-<tr>
-<td>光标后的字符串变为大写</td>
-<td><code>Alt</code> + <code>U</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>当前字符串大写</td>
-<td><code>Alt</code> + <code>C</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>光标后的字符串变为小写</td>
-<td><code>Alt</code> + <code>L</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>删除光标<strong>后</strong>的<strong>所有</strong>字符</td>
-<td><code>Clt</code> + <code>K</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>删除光标<strong>前</strong>的<strong>所有</strong>字符</td>
-<td><code>Clt</code> + <code>H</code></td>
-<td><code>Clt</code> + <code>U</code></td>
-<td><code>Ctrl</code> + <code>U</code> 对 bash 来说是删除光标前的字符，而 zsh 是整行删除。</td>
-</tr>
-<tr>
-<td>删除光标<strong>前</strong>的<strong>一个单词</strong></td>
-<td><code>Ctrl</code> + <code>W</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>删除光标<strong>后</strong>的<strong>一个单词</strong></td>
-<td><code>Alt</code> + <code>D</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>删除光标<strong>当前</strong>的<strong>一个字符</strong></td>
-<td><code>Ctrl</code> + <code>D</code></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-</li>
-<li><p><strong><code>CTRL + R</code></strong>: 搜索历史</p>
-</li>
+<ol start="2">
+<li>指定<strong>段落数量</strong>参数的形式：<code>lorem(p)</code>：在指定一个参数 <strong>p</strong>（自然数），可以直接生产 3 句话每段、共 <strong>p</strong> 段的特定英文文本。</li>
 </ol>
-<h2 id="插件的安装与配置"><a href="#插件的安装与配置" class="headerlink" title="插件的安装与配置"></a>插件的安装与配置</h2><ol>
-<li><p>安装 <a href="https://github.com/zsh-users/zsh-syntax-highlighting">zsh-syntax-highlighting</a> 语法提示插件（当用户输入正确命令时指令会绿色高亮，错误时命令红色高亮）</p>
-<pre><code class="sh">su - herc
-cd ~/.zsh
-git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
-vim .zshrc
-    source /home/herc/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh</code></pre>
-</li>
-<li><p>安装 <strong><a href="https://github.com/zsh-users/zsh-autosuggestions">zsh-autosuggestions</a></strong> 命令历史自动提示插件</p>
-<pre><code class="sh">zsh
-su - herc
-cd ~/.zsh
-
-mkdir .zsh
-cd .zsh
-bash --version
-zsh --version
-git clone https://github.com/zsh-users/zsh-autosuggestions
-source zsh-autosuggestions/zsh-autosuggestions.zsh
-    #完成该步骤后，即可对历史输入命令进行自动语法提示。
-    # 如果存在过多参数时，仍然可以使用 tab 强制提示。
-    # 系统内置的命令，如 tar 不能提示参数，不过 yum 可以提示参数、ls 需要强制 tab 才能提示参数</code></pre>
-</li>
-<li><p>安装 incr 系统目录自动提示插件</p>
-<pre><code class="sh">su - herc
-cd ~/.zsh
-wget https://mimosa-pudica.net/src/incr-0.2.zsh
-source incr*.zsh
-    # 当前有效，配置到~/.zshrc则用户一直有效（ 使用时将自动以绿色表示提示词）
-    # 不过按回车就会输入绿色部分，网友说可以使用空格隔断或 delete 键删除，测试无效；建议使用 Ctrl + K 删除末尾后回车！</code></pre>
-</li>
+<p><img src="/static/img/20220716-Word%E9%9A%8F%E6%9C%BA%E6%96%87%E6%9C%AC/5-lorem-%E5%8D%95%E5%8F%82%E6%95%B0.png" alt="单参数"></p>
+<ol start="3">
+<li>指定<strong>段落数量</strong>、<strong>段中句子数量</strong>参数的形式：<code>lorem(p, s)</code>：在先后指定两个参数 <strong>p</strong>（自然数）、<strong>s</strong>（自然数），可以直接生产 <strong>s</strong> 句话每段、共 <strong>p</strong> 段的特定英文文本。</li>
 </ol>
+<p><img src="/static/img/20220716-Word%E9%9A%8F%E6%9C%BA%E6%96%87%E6%9C%AC/6-lorem-%E5%8F%8C%E5%8F%82%E6%95%B0.png" alt="双参数"></p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li><p>[1] Microsoft. What Is AutoText and How Do I Use It? [EB/OL]. <a href="https://wordmvp.com/FAQs/Customization/AutoText.htm">https://wordmvp.com/FAQs/Customization/AutoText.htm</a>, 2022/07/16.</p>
+</li>
+<li><p>[2] 搜狐网. 原来word里面也有函数！ [EB/OL]. <a href="https://www.sohu.com/a/302678261_825825">https://www.sohu.com/a/302678261_825825</a>, 2022/07/16.</p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>电脑爱好者</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
-        <tag>安装</tag>
-        <tag>配置</tag>
-        <tag>zsh</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ag 的安装与配置</title>
-    <url>/202104301929/</url>
-    <content><![CDATA[<ol>
-<li><p><strong>ag</strong> （<a href="https://github.com/ggreer/the_silver_searcher）比grep、ack更快的递归搜索文件内容（速度对比：`ag`&gt;`ack`&gt;`grep`）">https://github.com/ggreer/the_silver_searcher）比grep、ack更快的递归搜索文件内容（速度对比：`ag`&gt;`ack`&gt;`grep`）</a></p>
-<pre><code class="sh"># centos 6+（epel）
-yum install the_silver_searcher</code></pre>
-</li>
-<li><p>安装到 vim</p>
-<ul>
-<li><p>安装</p>
-<pre><code class="sh">cd /usr/share/vim/vim74/plugin
-#cd ~/.vim/plugin
-git clone https://github.com/rking/ag.vim ag</code></pre>
-</li>
-<li><p>全局配置 <code>vim /etc/vimrc</code></p>
-<pre><code class="sh">&quot; 自动缩进
-set autoindent
-
-&quot; ag 插件（请注意：默认为全局搜索，因此必须指明文件路径，不过支持正则表达式）
-set runtimepath^=/usr/share/vim/vim74/plugin/ag.vim
-let g:ag_prg=&quot;/usr/bin/ag --vimgrep&quot;
-let g:ag_working_path_mode=&quot;r&quot;</code></pre>
-</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>电脑爱好者</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>安装</tag>
-        <tag>配置</tag>
-        <tag>ag</tag>
+        <tag>Word</tag>
+        <tag>函数</tag>
+        <tag>随机</tag>
+        <tag>rand</tag>
+        <tag>lorem</tag>
       </tags>
   </entry>
 </search>
