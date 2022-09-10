@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://faradays-studio.gitee.io/"/>
-  <updated>2022-07-16T03:34:27.544Z</updated>
+  <updated>2022-09-10T04:35:32.205Z</updated>
   <id>https://faradays-studio.gitee.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>office邮件合并的使用方法</title>
+    <link href="https://faradays-studio.gitee.io/202208072306/"/>
+    <id>https://faradays-studio.gitee.io/202208072306/</id>
+    <published>2022-08-07T15:06:11.000Z</published>
+    <updated>2022-09-10T04:35:32.205Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近在组织一场考试，由于需要打印每个人的座位号、个人姓名和身份证信息，如果一一编辑打印的话，耗时较长；这种场景建议使用邮件合并功能。<br>邮件合并对于少数信息的分别编辑提效不明显，但是对于类似于工资条、设备标识、文件盒标识等周期性、数据量大的信息分别处理时，效果非常好！</p><blockquote><p>邮件合并不光可以通过 <strong>Excel + Word</strong> 实现，而且可以：用 <strong>Excel + Visio</strong> 形式实现画图信息自动绑定和更新、用 <strong>Excel + PT-9700PC</strong> 形式实现各类标识的批量打印，等等。</p></blockquote><h2 id="邮件合并的操作方法"><a href="#邮件合并的操作方法" class="headerlink" title="邮件合并的操作方法"></a>邮件合并的操作方法</h2><ol><li><p>整理原始数据，形成每个对象一行数据的 Excel 数据源；</p></li><li><p>在 Word 中设定好内容的排版格式（如表格、样式等）；</p></li><li><p>在 Word 中依次执行 <code>邮件</code>选项卡 → <code>选择收件人</code> → <code>使用现有列表</code>，在弹窗中选择已经编辑好的 Excel 数据源文件；</p></li><li><p>在 Word 中依次执行 <code>邮件</code>选项卡 → <code>插入合并域</code>，选择需要使用的字段信息；</p></li><li><p>重复步骤 4 完成页面中所有需要的信息的插入和编辑，必要时可以点击 <code>邮件</code>选项卡 → <code>预览结果</code> 查看最终内容和格式是否满足要求。</p></li><li><p>在 Word 中依次执行 <code>邮件</code>选项卡 → <code>完成并合并</code>，选择需要生成的记录数量，即可生成一个以分隔符进行分隔的汇总文档，此时再进行打印即可。</p></li></ol><h2 id="多条记录共页的操作技巧"><a href="#多条记录共页的操作技巧" class="headerlink" title="多条记录共页的操作技巧"></a>多条记录共页的操作技巧</h2><p>Word 中的 <code>插入合并域</code> 默认只会在一个模板中插入一行记录，如果需要同时打印多行记录，那么只需要在相关内容前插入另外一个参数就可以了：依次执行 <code>邮件</code>选项卡 → <code>规则：下一条记录</code>。</p><h2 id="重复使用-Word-模板和-Excel-数据源"><a href="#重复使用-Word-模板和-Excel-数据源" class="headerlink" title="重复使用 Word 模板和 Excel 数据源"></a>重复使用 Word 模板和 Excel 数据源</h2><p>通过上述方法完成的 Word 模板可以重复使用。</p><ul><li><p>若数据源文件没有移动位置，直接打开即可进行选择数据打印。</p></li><li><p>若数据源文件已改名或者需要更换，打开时进行数据源的指定即可。<br>  <img src="/static/img/20220807-Word%E9%82%AE%E4%BB%B6%E5%90%88%E5%B9%B6/%E9%87%8D%E6%96%B0%E6%89%93%E5%BC%80Word%E6%96%87%E6%A1%A3.png" alt="重新指定数据源"></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近在组织一场考试，由于需要打印每个人的座位号、个人姓名和身份证信息，如果一一编辑打印的话，耗时较长；这种场景建议使用邮件合并功能。&lt;br&gt;邮件合并对于少数信息的分别编辑提效不明显，但是对于类似于工资条、设备标识、文件盒标识等周期性、数据量大的信息分别处理时，效果非常好！&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
+    
+    
+      <category term="Word" scheme="https://faradays-studio.gitee.io/tags/Word/"/>
+    
+      <category term="Excel" scheme="https://faradays-studio.gitee.io/tags/Excel/"/>
+    
+      <category term="office" scheme="https://faradays-studio.gitee.io/tags/office/"/>
+    
+      <category term="邮件合并" scheme="https://faradays-studio.gitee.io/tags/%E9%82%AE%E4%BB%B6%E5%90%88%E5%B9%B6/"/>
+    
+      <category term="记录" scheme="https://faradays-studio.gitee.io/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>微软Word文档中的随机函数</title>
@@ -681,39 +715,6 @@
       <category term="配置" scheme="https://faradays-studio.gitee.io/tags/%E9%85%8D%E7%BD%AE/"/>
     
       <category term="fzf" scheme="https://faradays-studio.gitee.io/tags/fzf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ag 的安装与配置</title>
-    <link href="https://faradays-studio.gitee.io/202104301929/"/>
-    <id>https://faradays-studio.gitee.io/202104301929/</id>
-    <published>2021-04-30T11:29:34.000Z</published>
-    <updated>2021-04-30T11:31:08.962Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li><p><strong>ag</strong> （<a href="https://github.com/ggreer/the_silver_searcher）比grep、ack更快的递归搜索文件内容（速度对比：`ag`&gt;`ack`&gt;`grep`）">https://github.com/ggreer/the_silver_searcher）比grep、ack更快的递归搜索文件内容（速度对比：`ag`&gt;`ack`&gt;`grep`）</a></p><pre><code class="sh"># centos 6+（epel）yum install the_silver_searcher</code></pre></li><li><p>安装到 vim</p><ul><li><p>安装</p><pre><code class="sh">cd /usr/share/vim/vim74/plugin#cd ~/.vim/plugingit clone https://github.com/rking/ag.vim ag</code></pre></li><li><p>全局配置 <code>vim /etc/vimrc</code></p><pre><code class="sh">&quot; 自动缩进set autoindent&quot; ag 插件（请注意：默认为全局搜索，因此必须指明文件路径，不过支持正则表达式）set runtimepath^=/usr/share/vim/vim74/plugin/ag.vimlet g:ag_prg=&quot;/usr/bin/ag --vimgrep&quot;let g:ag_working_path_mode=&quot;r&quot;</code></pre></li></ul></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;ag&lt;/strong&gt; （&lt;a href=&quot;https://github.com/ggreer/the_silver_searcher）比grep、ack更快的递归搜索文件内容（速度对比：`ag`&amp;gt;`ack`&amp;gt;`grep`）&quot;&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
-    
-    
-      <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
-    
-      <category term="安装" scheme="https://faradays-studio.gitee.io/tags/%E5%AE%89%E8%A3%85/"/>
-    
-      <category term="配置" scheme="https://faradays-studio.gitee.io/tags/%E9%85%8D%E7%BD%AE/"/>
-    
-      <category term="ag" scheme="https://faradays-studio.gitee.io/tags/ag/"/>
     
   </entry>
   
