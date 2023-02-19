@@ -344,13 +344,13 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
   <entry>
     <title>Hello World</title>
     <url>/202008090000/</url>
-    <content><![CDATA[<p>你好。</p>
+    <content><![CDATA[<p>全部文本都删除了，花了一个半小时，Gitee说：可能包含违禁违规内容，请排查调整后再行重试。</p>
 ]]></content>
       <categories>
         <category>星星心事</category>
       </categories>
       <tags>
-        <tag>追求卓越</tag>
+        <tag>日志</tag>
       </tags>
   </entry>
   <entry>
@@ -5198,6 +5198,20 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
         <tag>Excel</tag>
         <tag>邮件合并</tag>
         <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>OneNote笔记本密码破解工具推荐</title>
+    <url>/202302191140/</url>
+    <content><![CDATA[<p>推荐使用 <code>OneNotePassword</code> 进行<strong>暴力破解</strong>。</p>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>密码</tag>
+        <tag>OneNote</tag>
+        <tag>OneNotePassword</tag>
       </tags>
   </entry>
   <entry>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://faradays-studio.gitee.io/"/>
-  <updated>2023-02-19T03:37:30.314Z</updated>
+  <updated>2023-02-19T04:53:56.281Z</updated>
   <id>https://faradays-studio.gitee.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OneNote笔记本密码破解工具推荐</title>
+    <link href="https://faradays-studio.gitee.io/202302191140/"/>
+    <id>https://faradays-studio.gitee.io/202302191140/</id>
+    <published>2023-02-19T03:40:01.000Z</published>
+    <updated>2023-02-19T04:53:56.281Z</updated>
+    
+    <content type="html"><![CDATA[<p>推荐使用 <code>OneNotePassword</code> 进行<strong>暴力破解</strong>。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;推荐使用 &lt;code&gt;OneNotePassword&lt;/code&gt; 进行&lt;strong&gt;暴力破解&lt;/strong&gt;。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
+    
+    
+      <category term="密码" scheme="https://faradays-studio.gitee.io/tags/%E5%AF%86%E7%A0%81/"/>
+    
+      <category term="OneNote" scheme="https://faradays-studio.gitee.io/tags/OneNote/"/>
+    
+      <category term="OneNotePassword" scheme="https://faradays-studio.gitee.io/tags/OneNotePassword/"/>
+    
+  </entry>
   
   <entry>
     <title>新组装电脑的功能测试</title>
@@ -682,39 +713,6 @@
       <category term="编译" scheme="https://faradays-studio.gitee.io/tags/%E7%BC%96%E8%AF%91/"/>
     
       <category term="tmux" scheme="https://faradays-studio.gitee.io/tags/tmux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>aria2 的安装与配置</title>
-    <link href="https://faradays-studio.gitee.io/202106132011/"/>
-    <id>https://faradays-studio.gitee.io/202106132011/</id>
-    <published>2021-06-13T12:11:05.000Z</published>
-    <updated>2021-06-13T12:13:11.980Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>下载（安装 <a href="https://github.com/aria2/aria2">aria2</a> 程序包（下载器）：aria2 is a lightweight multi-protocol &amp; multi-source, cross platform download utility operated in command-line. It supports HTTP/HTTPS, FTP, BitTorrent and Metalink ）</li></ol><pre><code>cd /usr/local/srcgit clone https://gitee.com/mirrors/aria2.git</code></pre><ol start="2"><li>安装 gettext 依赖包（不成功，暂时不开展）</li></ol><pre><code class="sh">sucd /home/commonwget https://mirrors.aliyun.com/gnu/gettext/gettext-0.18.3.2.tar.gztar -zxvf gettext-0.18.3.2.tar.gzcd gettext-0.18.3.2./configuremake -j4    # could not find libjava.so    # Could not find Java SE Runtime Environment.make installln /usr/local/bin/xgettext /bin/xgettextln /usr/local/bin/msguniq /bin/msguniqln /usr/local/bin/msgmerge /bin/msgmerge</code></pre><ol start="3"><li>编译安装</li></ol><pre><code class="sh">autoreconf -i./configure#./configure ARIA2_STATIC=yesmake</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;下载（安装 &lt;a href=&quot;https://github.com/aria2/aria2&quot;&gt;aria2&lt;/a&gt; 程序包（下载器）：aria2 is a lightweight multi-protocol &amp;amp; multi-source, cross p
-      
-    
-    </summary>
-    
-    
-      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
-    
-    
-      <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
-    
-      <category term="安装" scheme="https://faradays-studio.gitee.io/tags/%E5%AE%89%E8%A3%85/"/>
-    
-      <category term="配置" scheme="https://faradays-studio.gitee.io/tags/%E9%85%8D%E7%BD%AE/"/>
-    
-      <category term="aria2" scheme="https://faradays-studio.gitee.io/tags/aria2/"/>
     
   </entry>
   
