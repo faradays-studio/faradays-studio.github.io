@@ -342,18 +342,6 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/202008090000/</url>
-    <content><![CDATA[<p>全部文本都删除了，花了一个半小时，Gitee说：可能包含违禁违规内容，请排查调整后再行重试。</p>
-]]></content>
-      <categories>
-        <category>星星心事</category>
-      </categories>
-      <tags>
-        <tag>日志</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Windows 批处理的字符运算（未完待续）</title>
     <url>/202008200927/</url>
     <content><![CDATA[<p>字符运算历来是编程中的重要内容，如何拼接字符，如何截取字符，如何判断字符是否存在，如何判断两个字符串是否相同，成为了编程任务中的重要环节。因此，我结合网络的资料和个人的实践经验来总结一下。</p>
