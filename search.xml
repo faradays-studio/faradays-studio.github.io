@@ -342,95 +342,6 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
       </tags>
   </entry>
   <entry>
-    <title>Hello World（世界，你好）</title>
-    <url>/202008090000/</url>
-    <content><![CDATA[<p>世界，你好！我是一名低微到尘埃里的普通人，曾经幻想过成为一名科学家，为国家科技事业贡献力量，然后我并没有这样的超凡的智商；我成为了一名普通的工程师，我克服了很多很多的困难，在不同的岗位上也取得了一些成绩，然而，我的缺点和遇到的困难，仍然很多，有些时候，差点将我打倒了！</p>
-<p>同龄的同事，不少人获得了职务上的升迁，不少人获得了名誉上的进步，我也不想就这样放弃，不想放任自我，因此我也要在这里尝试发出我自己的声音，我要进步，我要追求卓越！</p>
-<p>世界，你好。社会，你好。我一直都很期盼见到明天的太阳，愿美好的生活终将来临！</p>
-]]></content>
-      <categories>
-        <category>星星心事</category>
-      </categories>
-      <tags>
-        <tag>日志</tag>
-        <tag>你好</tag>
-        <tag>追求卓越</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows 批处理的字符运算（未完待续）</title>
-    <url>/202008200927/</url>
-    <content><![CDATA[<p>字符运算历来是编程中的重要内容，如何拼接字符，如何截取字符，如何判断字符是否存在，如何判断两个字符串是否相同，成为了编程任务中的重要环节。因此，我结合网络的资料和个人的实践经验来总结一下。</p>
-<h2 id="Windows-批处理中字符的基本常识"><a href="#Windows-批处理中字符的基本常识" class="headerlink" title="Windows 批处理中字符的基本常识"></a>Windows 批处理中字符的基本常识</h2><ol>
-<li><p>批处理中变量的赋值符号两侧不能包含空格，如 <code>set str_date=&#39;20200820&#39;</code>，这与很多编程规范是相悖的。</p>
-</li>
-<li><p>批处理中的字符可以不添加双引号，但是如果包含空格的话，必须使用引号，，如 <code>set str_name=&quot;20200820 Windows 批处理的字符运算经验总结&quot;</code>。</p>
-</li>
-<li><p>自定义变量使用 % 来包围来进行引用，即 <code>%变量%</code> ；而 Windows 内置变量（含文件路径变量扩展）则使用 % 符号来引导，即 <code>%内置变量</code> 。</p>
-</li>
-</ol>
-<h2 id="截取字符串"><a href="#截取字符串" class="headerlink" title="截取字符串"></a>截取字符串</h2><h3 id="一般性的字符截取"><a href="#一般性的字符截取" class="headerlink" title="一般性的字符截取"></a>一般性的字符截取</h3><ol>
-<li>基本语法： <code>%**变量名**:~**起点位置**,**截取数量|终点位置**%</code></li>
-</ol>
-<p><strong>起点位置</strong> ：如果为正数，那么就是从左往右截取，而如果为负数，那么就是说从右向左截取；不过无论为正还是为负，截取结果都是不包含处于 <strong>起点位置</strong> 的那个字符的。</p>
-<p><strong>截取数量|终点位置</strong> ：如果为正数，那么就是单纯的 <strong>截取数量</strong> ；如果为负数，那么应当表述为 <strong>终点位置</strong> ，而且，与 <strong>起点位置</strong> 对应，截取结果也是不包含该负数所对应的字符的，即上述的 -5 对应的是终点位置为右侧第 6 个字符截止。</p>
-<p>举例说明，如下：</p>
-<pre><code class="dos">echo on
-set ifo=abcdefghijklmnopqrstuvwxyz0123456789
-echo %ifo%
-echo.
-echo 截取前4个字符：%ifo:~0,4%
-echo 截取年度：%date:~0,4%
-echo.
-echo 截取最后2个字符：%ifo:~-2%
-echo 截取星期：%date:~-2%
-echo.
-echo 截取第一个到倒数第6个字符：%ifo:~0,-5%
-echo 截取日期（含分隔符）：%date:~0,-3%
-echo.
-echo 从第5个字符开始，截取2个字符：%ifo:~4,2%
-echo 截取月份：%date:~5,2%
-echo 截取天数：%date:~8,2%
-echo.
-echo 从倒数第14个字符开始，截取5个字符：%ifo:~-14,5%
-echo 截取秒数：%time:~3,2%
-echo.
-echo 当前时间是：%time% 即 %time:~0,2%点%time:~3,2%分%time:~6,2%秒%time:~9,2%厘秒
-pause</code></pre>
-<p>当然，我最常用的就是对日期、时间等内置变量的操作。</p>
-<h3 id="文件路径字符的截取"><a href="#文件路径字符的截取" class="headerlink" title="文件路径字符的截取"></a>文件路径字符的截取</h3><p>主要依靠 Windows 内置的扩展变量用法来进行。</p>
-<p>执行 <code>for /?</code> 可以查看路径扩展的</p>
-<p>举例说明，如下（注意，需要另存为 test.bat 文件形式执行）：</p>
-<pre><code class="powershell">@echo off
-echo 当前路径的完整字符串：%0
-echo 当前路径的完整字符串（如被双引号包围，去除双引号）：%~0
-echo 当前路径的所在分区：%~d0
-echo 当前路径的目录：%~p0
-echo 文件名：%~n0
-echo 扩展名：%~x0
-echo 文件属性：%~a0
-echo 修改时间：%~t0
-echo 文件大小：%~z0
-pause</code></pre>
-<p>路径处理，往往都配合 for 函数进行操作。</p>
-<p><strong>未完待续…</strong></p>
-<h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><h3 id="变更日志"><a href="#变更日志" class="headerlink" title="变更日志"></a>变更日志</h3><ol>
-<li>2020/08/20 10:49:23，创建文章。</li>
-</ol>
-<h3 id="参考索引"><a href="#参考索引" class="headerlink" title="参考索引"></a>参考索引</h3><ol>
-<li><strong>CharyGao</strong>.<code>DOS命令（cmd）批处理：替换字符串、截取字符串、扩充字符串、获取字符串长度</code>[EB/OL].<a href="https://www.cnblogs.com/Chary/p/No0000A4.html">https://www.cnblogs.com/Chary/p/No0000A4.html</a>, 2020/08/20.</li>
-</ol>
-]]></content>
-      <categories>
-        <category>编程笔记</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>批处理</tag>
-        <tag>字符运算</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用 Git 命令来管理 hexo 博客</title>
     <url>/202008261600/</url>
     <content><![CDATA[<h2 id="Git-命令集成"><a href="#Git-命令集成" class="headerlink" title="Git 命令集成"></a>Git 命令集成</h2><p><img src="/static/img/git.jpg" alt="Git基本使用方法示意图"></p>
@@ -609,84 +520,19 @@ $git push origin my_test:my_test
       </tags>
   </entry>
   <entry>
-    <title>苹果 Macbook Pro 笔记本从 U 盘启动以及重置开机密码的方法</title>
-    <url>/202008272141/</url>
-    <content><![CDATA[<p>前几天，有位老领导委托我对其苹果 Macbook Pro 2018 笔记本进行优化处理。由于网上的资料比较零散、挂一漏万，因此我也来总结一下操作经验。</p>
-<h2 id="配置-U盘启动或者切换系统的方法"><a href="#配置-U盘启动或者切换系统的方法" class="headerlink" title="配置 U盘启动或者切换系统的方法"></a>配置 U盘启动或者切换系统的方法</h2><ul>
-<li><p>Macbook 没有 BISO 等设置，所谓的进入 U盘 PE 或者切换双系统的方法是：按住 <kbd>Option</kbd> 键，然后按电源键开机，那么就会出现一个类似于 Windows 启动项的界面，从而用于实现改变启动方式的效果。</p>
-<p>  <img src="/static/img/Macbook-%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%95%8C%E9%9D%A2-20200824.jpg" alt="Macbook启动项界面-HHJ"></p>
-</li>
-</ul>
-<blockquote>
-<p>苹果电脑安装 Windows 系统，一般都是通过 Boot Camp 等软件来实现。对于双系统的主机，也可以在 Windows 系统中输入 <strong>“恢复”</strong> 找到相应的菜单进入切换启动盘的功能，不过具体功能我没有完整测试。</p>
-</blockquote>
-<blockquote>
-<p>有意思的是，进入 MacOS 的启动方式选择界面后，如果接入 U盘 PE，那么也能很快识别出来；跟我之前在 BISO 里边配置 U盘启动需要提前接入还是有明显差别的。</p>
-</blockquote>
-<h2 id="Macbook-重置密码的方法"><a href="#Macbook-重置密码的方法" class="headerlink" title="Macbook 重置密码的方法"></a>Macbook 重置密码的方法</h2><p>结合网络资料测试了一下，操作流程如下：</p>
-<ol>
-<li><p>按住 <kbd>Option</kbd> 键，然后按电源键开机；</p>
-</li>
-<li><p>按方向键选择 Macintosh （苹果） 系统，按 <kbd>Command</kbd> + <kbd>r</kbd> 后自动进入系统恢复界面；</p>
-</li>
-<li><p>在经历进度条界面一会后，选择界面的操作语言后，出现以下界面，执行菜单命令 <code>使用工具</code>→<code>终端</code> ，弹出终端界面：</p>
-<p> <img src="/static/img/Macbook-%E7%BB%B4%E6%8A%A4%E7%BB%88%E7%AB%AF-20200824.jpg" alt="Macbook系统恢复界面-HHJ"></p>
-</li>
-<li><p>在终端中执行 <code>resetpassword</code> ，在弹窗中选择需要重置的用户名，并填入新密码，然后存储到系统即可完成修改。</p>
-<p> <img src="/static/img/Macbook-%E9%87%8D%E7%BD%AE%E5%AF%86%E7%A0%81%E7%A4%BA%E6%84%8F%E5%9B%BE-20200824.jpg" alt="Macbook重置密码示意图-HHJ"></p>
-</li>
-<li><p>完成修改后重新使用第 1 步的方法进入苹果系统，在登入后可能会提示钥匙串密码是否修改等内容，我选择了修改成一致后，重复登录检查账户使用正常。</p>
-</li>
-</ol>
-<blockquote>
-<p>需要注意的是，上述方法仅应使用在合法授权的电脑上，请勿滥用！践行社会主义核心价值观，人人有责！</p>
-</blockquote>
-<h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
-<li>学知网.<code>苹果笔记本进入BIOS设置教程</code>[EB/OL].<a href="https://www.jmqz1000.com/dnzs/23488.html">https://www.jmqz1000.com/dnzs/23488.html</a>, 2020/08/24.</li>
-</ol>
-<h3 id="变更说明"><a href="#变更说明" class="headerlink" title="变更说明"></a>变更说明</h3><ul>
-<li><p>1.0.0，2020/08/27 22:29:16，初始版本。</p>
-</li>
-<li><p>1.0.1，2020/08/28 18:11:26，重新组织语言，去除一些自以为是的废话。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>电脑爱好者</category>
-      </categories>
-      <tags>
-        <tag>Apple</tag>
-        <tag>Macbook</tag>
-        <tag>MacOS</tag>
-        <tag>密码</tag>
-        <tag>操作系统</tag>
-        <tag>PE</tag>
-        <tag>U盘</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2020年随笔</title>
-    <url>/202009022111/</url>
-    <content><![CDATA[<h3 id="2020-09-02，明月"><a href="#2020-09-02，明月" class="headerlink" title="2020/09/02，明月"></a>2020/09/02，明月</h3><p>凌晨将寝，看见一轮明月从百叶窗的缝隙中漏了出来。江天一色无纤尘，皎皎空中孤月轮，我想起来了我的老父亲，突然好一阵心酸。</p>
-<p>这世界就这一轮明月，父亲看到的明月，和我看到的是不是一样的呢？我无从得知，但是我知道他清澈的心底，应该也和这明月一样，明朗、简洁、孤独的挂在那里！我现在正在重构的 hexo 主题，是否也能和它一样明朗呢？</p>
-<h3 id="2020-09-11，疲倦"><a href="#2020-09-11，疲倦" class="headerlink" title="2020/09/11，疲倦"></a>2020/09/11，疲倦</h3><p>今天颇为疲倦，那是种种摧残对生活热爱的力量。</p>
-<p>生活无望的摧残有之。生活压力太大，家庭收入有限，总是有种种债务要还，明明金额也不多，可是月月都是勉勉强强，总有一种秦琼卖马、穷途末路的感觉，既担不起风险去谋份新工作拼出路，也割舍不了那些缠缠绵绵的家庭责任。</p>
-<p>与人相处的困顿有之。我总以为自己是个文人，家国情怀、儿女情长；然而也不知道如何面对糟糠之妻，是勉励还是鞭策，是举案齐眉还是听之任之；也不知道如何面对幼年儿女，是宠爱还是严厉，是陪伴成长还是执鞭指导。看过不少教育理论和案例，也曾以自身做过很多试验，终究是了了，每一个方向都言之凿凿，然而都不曾看得到光明。一人独行的孤独，布满了天空。</p>
-<p>报国无门的失望有之。①得不到应有的回报：在单位里，也曾以一己之力，年年月月坚持，做了很多别人不想做、不能做的事情，但体制之下，来回调动，兜兜转转，始终只是棋子一枚。不少人长袖善舞、坑蒙拐骗，却获得了多次升迁，改善了生活，而我被所谓的工作需要等原因排除在外，常常需要为家庭的每月的账单发愁很久。②官僚主义严重。对于自己，每一次努力改变工作局面，总有领导劝你多克服一下困难，总是有人说你不知道在忙什么；对于企业，有些人，总能罔顾年年亏损，形式主义，人浮于事，人满为患的会议永远在开着，落实工作的，永远都只有那么少数的几个人；好多人都拈轻怕重、装模作样，写计划时高瞻远瞩、侃侃而谈，谈落实时左右掣肘、漠视困难，没有人关心日常应该怎么做提升效率、没有人有魄力面对上级的考核压力，更没有人具有规章制度里边要求的那些工作能力，制度永远只是规范下级、杀鸡儆猴的玩物……我甚至不知道，我10多年来孜孜不倦地工作，到底有没有意义了？！我自小家里生活困顿，多次获得了学校的贫困补助和一些周边人的帮助，曾发誓要报效祖国、造福社会；然而，在年复一年的人治环境下，我几乎丧失去了再挣扎的动力。</p>
-<p>人，活的疲惫，不是因为事情太难做，而是因为适应社会不是一个容易的事情！</p>
-<h3 id="2020-09-26，迷茫"><a href="#2020-09-26，迷茫" class="headerlink" title="2020/09/26，迷茫"></a>2020/09/26，迷茫</h3><p>昨日，在公司某部门那里被批评项目文件写的不清不楚。我的内容别人看不明白，因此需要修改；这本来也没啥，偏偏别人要告诉我他不是搞这个专业的，这让人有点难受。</p>
-<p>法国作家 John Collier 说过，If Youth Knew, If Age Could。我自己理解的意思就是，如果年轻人经验丰富，那么就不会栽在人情世故和盲目自大上；如果老年人能力充沛、能闯善干，那么就不会、也不必利用特权来设置那么多莫名其妙的规则来限制或阻挡事物的发展。</p>
-<p>就事论事而言，我也直接参与不少重要的基础事务，天天都在赶任务似的。那天的项目申请书和可行性研究报告都是一天之内匆匆写就的，而且要花费一大笔钱，涉及不少未知的研究和探索，怎么可能足够完善、足够清晰到一个非专业人员能够在几分钟内读懂、并作出投资决策呢！所以，对于这些身居要位、日常看报的中老年专家，我是有看法的：他们平时或做好好先生、或好为人师，对领导阿谀奉承，对基层装腔作势；给我这样的基层打工仔造成种种混乱也是难免的——他们作为从我这样的基础工种提拔上去的技术管理人员，平时不指导和帮助我们，不率先垂范，却要求下层人员有所作为、还要遵守一堆只有下层人员才需要遵守的规则，真可谓“何不食肉糜”的典范！</p>
-<p>我一度迷茫，想去纠正他的每一个专业术语上的错误，想引经据典，想据理力争到底…然而，一念之间，竟放弃了这个念头——我们参与日常事务，希望企业兴旺、国家繁荣，那是我们自己主动参与实现的，不是等来的；如果我们再退却了，旁观了，又何来希望？！</p>
-<p>是我自己一厢情愿的幻想罢了。我指望着的人——他们早已被生活和工作刺破了梦想、也与高官厚禄无望，我竟希望他们能够礼贤下士、推陈出新？！那也太为难人了！试想，又有几个人不曾怀揣着“仗剑走天涯”的梦想，却偏偏在现实社会中得到遍体鳞伤、至今怕蛇咬？他们不正和我现在一样吗——总以为自己技术业绩很突出就能傲视群雄，甚至学着别人的腔调说“生态就是被你们这些人搞坏的”，然后无所作为地、等待着别人来改善生态环境。可是我做的就够了吗？我低微到了尘埃里，可也有人说自己更低微，期盼着我不要在工作中给他们挑刺，帮他们协调解决哪些超出了能力的怪事吗？</p>
-<p>算了，做自己能做的事吧！希望明天会好一点，希望“日行一善，积善成德；日行一善，功满三千”，时间自有定论。</p>
+    <title>Hello World（世界，你好）</title>
+    <url>/202008090000/</url>
+    <content><![CDATA[<p>世界，你好！我是一名低微到尘埃里的普通人，曾经幻想过成为一名科学家，为国家科技事业贡献力量，然后我并没有这样的超凡的智商；我成为了一名普通的工程师，我克服了很多很多的困难，在不同的岗位上也取得了一些成绩，然而，我的缺点和遇到的困难，仍然很多，有些时候，差点将我打倒了！</p>
+<p>同龄的同事，不少人获得了职务上的升迁，不少人获得了名誉上的进步，我也不想就这样放弃，不想放任自我，因此我也要在这里尝试发出我自己的声音，我要进步，我要追求卓越！</p>
+<p>世界，你好。社会，你好。我一直都很期盼见到明天的太阳，愿美好的生活终将来临！</p>
 ]]></content>
       <categories>
         <category>星星心事</category>
       </categories>
       <tags>
-        <tag>2020</tag>
-        <tag>随笔</tag>
+        <tag>日志</tag>
+        <tag>你好</tag>
+        <tag>追求卓越</tag>
       </tags>
   </entry>
   <entry>
@@ -938,46 +784,76 @@ printf 不像 echo 那样会自动换行，必须显式添加换行符 `\n` 。<
       </tags>
   </entry>
   <entry>
-    <title>评《Margin Call》：高个不挑担，世上永无光</title>
-    <url>/202010021008/</url>
-    <content><![CDATA[<blockquote>
-<p>直到落幕，我才意识到 《Margin Call》（商海通牒） 已经结束，可是对它的感悟我才刚刚开始…</p>
-</blockquote>
-<ul>
-<li>剧本 ☆☆☆☆</li>
-<li>场景 ☆☆☆☆</li>
-<li>演绎 ☆☆☆☆</li>
-<li>综合 ☆☆☆☆</li>
-</ul>
-<h2 id="剧情摘要"><a href="#剧情摘要" class="headerlink" title="剧情摘要"></a>剧情摘要</h2><p>整个故事不复杂：一家公司正在大幅裁员，领导 Sam 带头鼓掌并发表了鼓舞人心的讲话，员工们纷纷加班至深夜；努力工作的新员工 Peter 在别人下班去娱乐的时候，发现了公司风险模型预测到未来走势将大幅下跌，光是一层楼 25% 的亏损将超过公司的市值，立即汇报领导 Will ，领导也汇报他的领导 Sam，最后二把手贾德·科恩也在凌晨 2 点乘坐直升机来到公司，并决策抛售公司资产、及时止损。</p>
-<p>整部电影一直都没有正面展开商业斗争的波谲云诡（bō jué yún guǐ），而是大量了使用了各种背景阐述，各种侧面语言动作渲染。电影的节奏一直比较缓慢，没有快步奔跑的员工，也没有大幅的悲伤情绪，即使大结局了，既没有看到行业动荡的场景，也没有被阴谋拖入破产骗局的投资人纷纷跳楼的场景；只见暗淡的月色底下，与会者深锁的眉头、凝重的表情，晦涩难懂、含糊不清的经营风险陈述，与员工们纸醉金迷的生活、老板来去直升机、投资人高大上言论形成鲜明的对比。</p>
-<p>Eric Dale （艾力克·戴尔）负责风险管理部门，工作了 19 年的员工，秋毫不觉就被即时辞退了。他希望在离职时将工作交接清楚，可是无论是人力资源部门主管还是自己的直属领导 Will Emerson，都没有人搭理他；在电梯门关闭之际，他将做了一半工作的资料U盘给了赶来告别的新员工 Peter，然后到了楼下工作手机就被公司关停了。</p>
-<p>发生问题后公司想请他说清楚以及对数据进行保密时，公司才发现已经联系不上他了，只能等到凌晨他妻子打来电话说他在家了，公司才决定去他家里找他、用每小时 17 万多美元的代价来要求他对公司的风险秘密予以保守一天。</p>
-<h2 id="社会感悟"><a href="#社会感悟" class="headerlink" title="社会感悟"></a>社会感悟</h2><h3 id="个人利益至上，屠龙少年终成恶龙"><a href="#个人利益至上，屠龙少年终成恶龙" class="headerlink" title="个人利益至上，屠龙少年终成恶龙"></a>个人利益至上，屠龙少年终成恶龙</h3><p>尽管行业性的经济危机将至，但只有一个镜头表现了 2008 年经济大动荡的可怕的之处——因年入 25 万美元而自豪不已的小员工 Seth （赛斯·布雷格曼）面对即将辞退的困境，在卫生间里边痛哭失声，他十多分钟前还镇定自若地说，OK！</p>
-<p>公司的领导人 Sam 尽管工作了 34 年，积累了大量的财富，作为人性未泯的领导者，他依然无法放弃对利益的追逐。</p>
-<p>他是靠公司体制成功的领导者。他入职早，高高在上，做出英明的决策，英明地裁员、果断地抛售资产，然而公司的主要利润都是那些小员工辛辛苦苦赚来的，他甚至不知道的如何看明白预示着公司未来的曲线怎么看、指标是什么，他也记不住下层员工的名字，但是不影响他拿着公司基层无法企及、难以想象的高薪。他的狗生病了，每天都要花费一千美元治病，他太过于悲伤甚至于不觉得80%的下属被辞退了能怎么样，毕竟他早已从长期的人员流动中变得麻木不仁了！</p>
-<p>他来自基层，也拼搏过，因此他同情弱者、忧心行业，良心未泯。 Sam 的手下员工，不乏能力卓著的年轻人，比如说火箭科学家 Peter（彼得·苏利文）；也有出身不凡的得力下属，比如说桥梁工程师 Eric。因此，当二把手要求他出售资产时，他考虑到了对行业的影响以及年轻人的未来，他质疑何为老板毫无选择，他拒绝聆听风险评估，他嚎叫老板让开，他一次又一次地拒绝了二把手的要求，直到杰瑞开出了天价的报酬。</p>
-<p>他是利益追逐的一员，当首席风险评估分析师 Sarah（莎拉·罗伯森）等其他部门的人员被二把手说服后，他也自甘堕落，即使明知严重违反良知与诚信，明知 3/7 的人员还将被裁决，他仍然镇定自若地完成了所有下属的工作安排——在一天之内完成风险资产的全部抛售，那么是打六五折也可以。跟他的下属 Will 一样，渴望保留人性，但无法拒绝金钱利益的侵蚀—— Will 站在楼顶做出跳楼的假动作，他颤动地看着深渊，最终还是说“not today”，并向下属员工轻描淡写地描述了去年收入的 250 万美元是如何轻而易举地全部花完的！</p>
-<h3 id="遍身罗绮者，不是养蚕人"><a href="#遍身罗绮者，不是养蚕人" class="headerlink" title="遍身罗绮者，不是养蚕人"></a>遍身罗绮者，不是养蚕人</h3><blockquote>
-<p>评估员塞斯问长官威尔，这次的危机会给平常人带来的影响？</p>
-<p>威尔这样说：这些普通人，他们想要的生活就是香车豪宅，但是他们根本负担不起。这就是为什么我们这么重要，我们是他们豪华生活的根本原因。我们用手指在他们天平的一端压了一下，我们抽走手指，那时候才是真正的公平社会，但是他们马上就会不干。他们想要我们给的东西，但是又喜欢假装不知道这些东西是怎么来的。他们装伪君子比我强多了，去他们的吧！</p>
-</blockquote>
-<p>尽管二把手很年轻，但是手段非常老到，他左右拉拢员工，用尽方法；他信口开河，满是利益，让人毫无拒绝的可能性。是的，无论是 Sam 还是 Jerry，尽管技术能力平平，但是都心狠手辣，善于言谈，洞察人心，这是他们驱动那些比他们更有技术手段的人为他们卖命赚钱！</p>
-<p>更绝的是，最后的老大 John（约翰·图尔德），更是老手中的老手，他左一句你可以 <strong>保留</strong> 股份与分红，右一句 <strong>及时止损比整年焦头烂额更好</strong> 的深入分析，直接将 Sam 说服了。将相本无种，奈何无论人数如何变化，富贵与贫贱的比例永远不变，无论时间过去多长，名利的游戏将永存不朽，历史中的一次次经济危机游戏给了我们无限的启迪：</p>
-<blockquote>
-<p>1637年、1797年、1819年、1837年、1857年、1884年、1901年、1907年、1929年、1937年、1974年、1987年、1992年、1997年、2000年、还有这次，不管我们叫它什么，一样的缘故，一次又一次，我们挡都挡不住，我们还想阻止它，控制它，甚至放慢它，我们的本性一丁点都没变，我们仅仅是随机应变，如果对了就赚一大笔，如果错了就被晾到一边，这个世界上过去会有，将来也会有，同样比例的赢家和输家，得意洋洋者和垂头丧气者，撑的撑死，饿的饿死，今天像我们这样的人也许前所未有的多，但是那个比例，原封未动。</p>
-</blockquote>
-<p>历史总是存在输家和赢家，至此， Sam 完全被征服；他已毫不在乎之前是如何如何地一次次的痛苦挣扎， 唯余 “我只是不想事情发展到如此操蛋的地步！” 的感叹给观众去慢慢品味！</p>
-<p>夜晚， Sam 回到前妻的房前，埋葬了自己深爱的狗，也埋葬了自己的良心。</p>
-<p>从来都没有屠龙的英雄，有的都是最终都会皮毛并带角的怪兽！<strong>公平</strong>、<strong>平等</strong>一直都在头部玩家的口中，从来都不曾真正广泛存在过：古今中外，资本逐利，2% 的头部资本家拥有绝对控股的资源，也许一部分人分到了羹汤成为了人上人，但始终不可能让广大底层人员享受到福利，从来如此，社会主义建设之路何其远哉！</p>
+    <title>Windows 批处理的字符运算（未完待续）</title>
+    <url>/202008200927/</url>
+    <content><![CDATA[<p>字符运算历来是编程中的重要内容，如何拼接字符，如何截取字符，如何判断字符是否存在，如何判断两个字符串是否相同，成为了编程任务中的重要环节。因此，我结合网络的资料和个人的实践经验来总结一下。</p>
+<h2 id="Windows-批处理中字符的基本常识"><a href="#Windows-批处理中字符的基本常识" class="headerlink" title="Windows 批处理中字符的基本常识"></a>Windows 批处理中字符的基本常识</h2><ol>
+<li><p>批处理中变量的赋值符号两侧不能包含空格，如 <code>set str_date=&#39;20200820&#39;</code>，这与很多编程规范是相悖的。</p>
+</li>
+<li><p>批处理中的字符可以不添加双引号，但是如果包含空格的话，必须使用引号，，如 <code>set str_name=&quot;20200820 Windows 批处理的字符运算经验总结&quot;</code>。</p>
+</li>
+<li><p>自定义变量使用 % 来包围来进行引用，即 <code>%变量%</code> ；而 Windows 内置变量（含文件路径变量扩展）则使用 % 符号来引导，即 <code>%内置变量</code> 。</p>
+</li>
+</ol>
+<h2 id="截取字符串"><a href="#截取字符串" class="headerlink" title="截取字符串"></a>截取字符串</h2><h3 id="一般性的字符截取"><a href="#一般性的字符截取" class="headerlink" title="一般性的字符截取"></a>一般性的字符截取</h3><ol>
+<li>基本语法： <code>%**变量名**:~**起点位置**,**截取数量|终点位置**%</code></li>
+</ol>
+<p><strong>起点位置</strong> ：如果为正数，那么就是从左往右截取，而如果为负数，那么就是说从右向左截取；不过无论为正还是为负，截取结果都是不包含处于 <strong>起点位置</strong> 的那个字符的。</p>
+<p><strong>截取数量|终点位置</strong> ：如果为正数，那么就是单纯的 <strong>截取数量</strong> ；如果为负数，那么应当表述为 <strong>终点位置</strong> ，而且，与 <strong>起点位置</strong> 对应，截取结果也是不包含该负数所对应的字符的，即上述的 -5 对应的是终点位置为右侧第 6 个字符截止。</p>
+<p>举例说明，如下：</p>
+<pre><code class="dos">echo on
+set ifo=abcdefghijklmnopqrstuvwxyz0123456789
+echo %ifo%
+echo.
+echo 截取前4个字符：%ifo:~0,4%
+echo 截取年度：%date:~0,4%
+echo.
+echo 截取最后2个字符：%ifo:~-2%
+echo 截取星期：%date:~-2%
+echo.
+echo 截取第一个到倒数第6个字符：%ifo:~0,-5%
+echo 截取日期（含分隔符）：%date:~0,-3%
+echo.
+echo 从第5个字符开始，截取2个字符：%ifo:~4,2%
+echo 截取月份：%date:~5,2%
+echo 截取天数：%date:~8,2%
+echo.
+echo 从倒数第14个字符开始，截取5个字符：%ifo:~-14,5%
+echo 截取秒数：%time:~3,2%
+echo.
+echo 当前时间是：%time% 即 %time:~0,2%点%time:~3,2%分%time:~6,2%秒%time:~9,2%厘秒
+pause</code></pre>
+<p>当然，我最常用的就是对日期、时间等内置变量的操作。</p>
+<h3 id="文件路径字符的截取"><a href="#文件路径字符的截取" class="headerlink" title="文件路径字符的截取"></a>文件路径字符的截取</h3><p>主要依靠 Windows 内置的扩展变量用法来进行。</p>
+<p>执行 <code>for /?</code> 可以查看路径扩展的</p>
+<p>举例说明，如下（注意，需要另存为 test.bat 文件形式执行）：</p>
+<pre><code class="powershell">@echo off
+echo 当前路径的完整字符串：%0
+echo 当前路径的完整字符串（如被双引号包围，去除双引号）：%~0
+echo 当前路径的所在分区：%~d0
+echo 当前路径的目录：%~p0
+echo 文件名：%~n0
+echo 扩展名：%~x0
+echo 文件属性：%~a0
+echo 修改时间：%~t0
+echo 文件大小：%~z0
+pause</code></pre>
+<p>路径处理，往往都配合 for 函数进行操作。</p>
+<p><strong>未完待续…</strong></p>
+<h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><h3 id="变更日志"><a href="#变更日志" class="headerlink" title="变更日志"></a>变更日志</h3><ol>
+<li>2020/08/20 10:49:23，创建文章。</li>
+</ol>
+<h3 id="参考索引"><a href="#参考索引" class="headerlink" title="参考索引"></a>参考索引</h3><ol>
+<li><strong>CharyGao</strong>.<code>DOS命令（cmd）批处理：替换字符串、截取字符串、扩充字符串、获取字符串长度</code>[EB/OL].<a href="https://www.cnblogs.com/Chary/p/No0000A4.html">https://www.cnblogs.com/Chary/p/No0000A4.html</a>, 2020/08/20.</li>
+</ol>
 ]]></content>
       <categories>
-        <category>坐井观天</category>
+        <category>编程笔记</category>
       </categories>
       <tags>
-        <tag>影评</tag>
-        <tag>Margin Call</tag>
-        <tag>商海通牒</tag>
+        <tag>Windows</tag>
+        <tag>批处理</tag>
+        <tag>字符运算</tag>
       </tags>
   </entry>
   <entry>
@@ -1354,593 +1230,28 @@ printf 不像 echo 那样会自动换行，必须显式添加换行符 `\n` 。<
       </tags>
   </entry>
   <entry>
-    <title>pacman 包管理器的用法概述</title>
-    <url>/202011221004/</url>
-    <content><![CDATA[<p>pacman 是 Arch/Manjaro Linux 下的包管理软件。它将一个简单的二进制包格式和易用的构建系统结合了起来。不管软件包是来自官方的 Arch 库还是用户自己创建， pacman 都能方便得管理。</p>
-<h2 id="pacman-基本用法"><a href="#pacman-基本用法" class="headerlink" title="pacman 基本用法"></a><code>pacman</code> 基本用法</h2><h3 id="h-查看帮助"><a href="#h-查看帮助" class="headerlink" title="-h 查看帮助"></a><code>-h</code> 查看帮助</h3><p><strong>pacman <code>&#123;-h --help&#125;</code></strong></p>
-<h3 id="V-查看版本"><a href="#V-查看版本" class="headerlink" title="-V 查看版本"></a><code>-V</code> 查看版本</h3><p><strong>pacman <code>&#123;-V --version&#125;</code></strong></p>
-<h3 id="D-管理数据库选项"><a href="#D-管理数据库选项" class="headerlink" title="-D 管理数据库选项"></a><code>-D</code> 管理数据库选项</h3><p><strong>pacman <code>&#123;-D --database&#125;</code>    <code>&lt;选项&gt;</code>     <code>&lt;软件包&gt;</code></strong></p>
-<table>
-<thead>
-<tr>
-<th align="left">选项</th>
-<th>含义</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">–asdeps</td>
-<td>标记为非单独指定安装的软件包</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">–asexplicit</td>
-<td>标记为单独指定安装的软件包</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">–config &lt;路径&gt;</td>
-<td>指定另外的配置文件</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">–logfile &lt;路径&gt;</td>
-<td>指定另外的日志文件</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">–noconfirm</td>
-<td>不询问确认</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">–noprogressbar</td>
-<td>下载文件时不显示进度条</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">–noscriptlet</td>
-<td>不执行安装小脚本</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">-v, –verbose</td>
-<td>循环执行</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">–debug</td>
-<td>显示除错信息</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">-r, –root &lt;路径&gt;</td>
-<td>指定另外的安装根目录</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">-b, –dbpath &lt;路径&gt;</td>
-<td>指定另外的数据库位置</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">–cachedir &lt;目录&gt;</td>
-<td>指定另外的软件包缓存位置</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">–arch &lt;架构&gt;</td>
-<td>设定另外的架构</td>
-<td></td>
-</tr>
-</tbody></table>
-<h3 id="Q-查询安装包"><a href="#Q-查询安装包" class="headerlink" title="-Q 查询安装包"></a><code>-Q</code> 查询安装包</h3><p><strong>pacman <code>&#123;-Q --query&#125;</code>    <code>[选项]</code>    <code>[软件包]</code></strong></p>
-<table>
-<thead>
-<tr>
-<th>选项</th>
-<th>含义</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-c, –changelog</td>
-<td>查看某软件包的更新日志</td>
-<td></td>
-</tr>
-<tr>
-<td>-d, –deps</td>
-<td>列出所有作为依赖关系安装的软件包 [过滤器]</td>
-<td></td>
-</tr>
-<tr>
-<td>-e, –explicit</td>
-<td>列出所有单独指定安装的软件包 [过滤器]</td>
-<td></td>
-</tr>
-<tr>
-<td>-g, –groups</td>
-<td>查看某软件包组所属的所有软件包</td>
-<td></td>
-</tr>
-<tr>
-<td>-i, –info</td>
-<td>查看软件包信息</td>
-<td><code>-ii</code>查看备份文件</td>
-</tr>
-<tr>
-<td>-k, –check</td>
-<td>检查该软件包拥有的文件是否存在</td>
-<td></td>
-</tr>
-<tr>
-<td>-l, –list</td>
-<td>列出被查询软件包的内容</td>
-<td></td>
-</tr>
-<tr>
-<td>-m, –foreign</td>
-<td>列出没有在同步数据库时找到的已安装软件包 [过滤器]</td>
-<td></td>
-</tr>
-<tr>
-<td>-o, –owns &lt;文件&gt;</td>
-<td>查询哪个软件包拥有 &lt;文件&gt;</td>
-<td></td>
-</tr>
-<tr>
-<td>-p, –file &lt;软件包&gt;</td>
-<td>从某个软件包而不是数据库查询</td>
-<td></td>
-</tr>
-<tr>
-<td>-s, –search<regex></td>
-<td>搜寻符合指定字符串的已安装本地的软件包</td>
-<td></td>
-</tr>
-<tr>
-<td>-t, –unrequired</td>
-<td>列出所有不被其他软件包要求的软件包 [过滤器]</td>
-<td></td>
-</tr>
-<tr>
-<td>-u, –upgrades</td>
-<td>列出所有可升级的软件包 [过滤器]</td>
-<td></td>
-</tr>
-<tr>
-<td>-q, –quiet</td>
-<td>在查询或搜索时显示较少的信息</td>
-<td></td>
-</tr>
-<tr>
-<td>–config &lt;路径&gt;</td>
-<td>指定另外的配置文件</td>
-<td></td>
-</tr>
-<tr>
-<td>–logfile &lt;路径&gt;</td>
-<td>指定另外的日志文件</td>
-<td></td>
-</tr>
-<tr>
-<td>–noconfirm</td>
-<td>不询问确认</td>
-<td></td>
-</tr>
-<tr>
-<td>–noprogressbar</td>
-<td>下载文件时不显示进度条</td>
-<td></td>
-</tr>
-<tr>
-<td>–noscriptlet</td>
-<td>不执行安装小脚本</td>
-<td></td>
-</tr>
-<tr>
-<td>-v, –verbose</td>
-<td>循环执行</td>
-<td></td>
-</tr>
-<tr>
-<td>–debug</td>
-<td>显示除错信息</td>
-<td></td>
-</tr>
-<tr>
-<td>-r, –root &lt;路径&gt;</td>
-<td>指定另外的安装根目录</td>
-<td></td>
-</tr>
-<tr>
-<td>-b, –dbpath &lt;路径&gt;</td>
-<td>指定另外的数据库位置</td>
-<td></td>
-</tr>
-<tr>
-<td>–cachedir &lt;目录&gt;</td>
-<td>指定另外的软件包缓存位置</td>
-<td></td>
-</tr>
-<tr>
-<td>–arch &lt;架构&gt;</td>
-<td>设定另外的架构</td>
-<td></td>
-</tr>
-</tbody></table>
-<h3 id="R-删除安装包"><a href="#R-删除安装包" class="headerlink" title="-R 删除安装包"></a><code>-R</code> 删除安装包</h3><p><strong>pacman <code>&#123;-R --remove&#125;</code>   <code>[选项]</code>     <code>&lt;软件包&gt;</code></strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>选项</strong></th>
-<th><strong>定义</strong></th>
-<th><strong>备注</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-c, –cascade</td>
-<td>删除软件包及所有的依赖于此的软件包</td>
-<td></td>
-</tr>
-<tr>
-<td>-d, –nodeps</td>
-<td>略过依赖关系检查</td>
-<td></td>
-</tr>
-<tr>
-<td>-k, –dbonly</td>
-<td>只删除数据库记录，不删除文件</td>
-<td></td>
-</tr>
-<tr>
-<td>-n, –nosave</td>
-<td>同时删除配置文件</td>
-<td></td>
-</tr>
-<tr>
-<td>-s, –recursive</td>
-<td>同时删除(不会破坏其他软件包的) 依赖关系</td>
-<td><code>-ss</code>·也包括单独指定安装的依赖关系</td>
-</tr>
-<tr>
-<td>-u, –unneeded</td>
-<td>同时删除不需要的(且不会破坏其他软件包的) 依赖关系</td>
-<td></td>
-</tr>
-<tr>
-<td>–print</td>
-<td>仅打印目标而不执行操作</td>
-<td></td>
-</tr>
-<tr>
-<td>–print-format</td>
-<td>&lt;字符串&gt;指定如何打印目标</td>
-<td></td>
-</tr>
-<tr>
-<td>–config  &lt;路径&gt;</td>
-<td>指定另外的配置文件</td>
-<td></td>
-</tr>
-<tr>
-<td>–logfile  &lt;路径&gt;</td>
-<td>指定另外的日志文件</td>
-<td></td>
-</tr>
-<tr>
-<td>–noconfirm</td>
-<td>不询问确认</td>
-<td></td>
-</tr>
-<tr>
-<td>–noprogressbar</td>
-<td>下载文件时不显示进度条</td>
-<td></td>
-</tr>
-<tr>
-<td>–noscriptlet</td>
-<td>不执行安装小脚本</td>
-<td></td>
-</tr>
-<tr>
-<td>-v, –verbose</td>
-<td>循环执行</td>
-<td></td>
-</tr>
-<tr>
-<td>–debug</td>
-<td>显示除错信息</td>
-<td></td>
-</tr>
-<tr>
-<td>-r, –root  &lt;路径&gt;</td>
-<td>指定另外的安装根目录</td>
-<td></td>
-</tr>
-<tr>
-<td>-b, –dbpath  &lt;路径&gt;</td>
-<td>指定另外的数据库位置</td>
-<td></td>
-</tr>
-<tr>
-<td>–cachedir  &lt;目录&gt;</td>
-<td>指定另外的软件包缓存位置</td>
-<td></td>
-</tr>
-<tr>
-<td>–arch &lt;架构&gt;</td>
-<td>设定另外的架构</td>
-<td></td>
-</tr>
-</tbody></table>
-<h3 id="S-安装安装包"><a href="#S-安装安装包" class="headerlink" title="-S 安装安装包"></a><code>-S</code> 安装安装包</h3><p><strong>pacman <code>&#123;-S --sync&#125;</code>     <code>[选项]</code>     <code>[软件包]</code></strong></p>
-<table>
-<thead>
-<tr>
-<th>选项</th>
-<th>含义</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>–asdeps</td>
-<td>作为非单独指定安装的软件包安装</td>
-<td></td>
-</tr>
-<tr>
-<td>–asexplicit</td>
-<td>作为单独指定安装的软件包安装</td>
-<td></td>
-</tr>
-<tr>
-<td>-c, –clean</td>
-<td>从缓存目录中删除旧软件包</td>
-<td><code>-cc</code>清除所有</td>
-</tr>
-<tr>
-<td>-d, –nodeps</td>
-<td>略过依赖关系检查</td>
-<td></td>
-</tr>
-<tr>
-<td>-f,  –force</td>
-<td>强制安装，覆盖存在冲突的文件</td>
-<td></td>
-</tr>
-<tr>
-<td>-g, –groups</td>
-<td>查看某软件包组所属的所有软件包</td>
-<td></td>
-</tr>
-<tr>
-<td>-i, –info</td>
-<td>查看软件包信息</td>
-<td></td>
-</tr>
-<tr>
-<td>-l, –list &lt;软件库&gt;</td>
-<td>查看在该软件库中的软件包清单</td>
-<td></td>
-</tr>
-<tr>
-<td>-s, –search &lt;regex表达式&gt;</td>
-<td>按照指定字符串查询远端软件库</td>
-<td></td>
-</tr>
-<tr>
-<td>-u, –sysupgrade</td>
-<td>升级所有已安装的软件包</td>
-<td><code>-uu</code>可启用降级</td>
-</tr>
-<tr>
-<td>-w, –downloadonly</td>
-<td>下载但不安装/升级软件包</td>
-<td></td>
-</tr>
-<tr>
-<td>-y, –refresh</td>
-<td>从服务器下载新的软件包数据库</td>
-<td></td>
-</tr>
-<tr>
-<td>–needed</td>
-<td>不重新安装已经为最新的软件包</td>
-<td></td>
-</tr>
-<tr>
-<td>–ignore &lt;软件包&gt;</td>
-<td>升级时忽略某个软件包 (可多次使用)</td>
-<td></td>
-</tr>
-<tr>
-<td>–ignoregroup</td>
-<td>&lt;软件包组&gt;升级时忽略某个软件包组 (可多次使用)</td>
-<td></td>
-</tr>
-<tr>
-<td>–print</td>
-<td>仅打印目标而不执行操作</td>
-<td></td>
-</tr>
-<tr>
-<td>–print-format</td>
-<td>&lt;字符串&gt;指定如何打印目标</td>
-<td></td>
-</tr>
-<tr>
-<td>-q, –quiet</td>
-<td>在查询或搜索时显示较少的信息</td>
-<td></td>
-</tr>
-<tr>
-<td>–config &lt;路径&gt;</td>
-<td>指定另外的配置文件</td>
-<td></td>
-</tr>
-<tr>
-<td>–logfile &lt;路径&gt;</td>
-<td>指定另外的日志文件</td>
-<td></td>
-</tr>
-<tr>
-<td>–noconfirm</td>
-<td>不询问确认</td>
-<td></td>
-</tr>
-<tr>
-<td>–noprogressbar</td>
-<td>下载文件时不显示进度条</td>
-<td></td>
-</tr>
-<tr>
-<td>–noscriptlet</td>
-<td>不执行安装小脚本</td>
-<td></td>
-</tr>
-<tr>
-<td>-v, –verbose</td>
-<td>循环执行</td>
-<td></td>
-</tr>
-<tr>
-<td>–debug</td>
-<td>显示除错信息</td>
-<td></td>
-</tr>
-<tr>
-<td>-r, –root &lt;路径&gt;</td>
-<td>指定另外的安装根目录</td>
-<td></td>
-</tr>
-<tr>
-<td>-b, –dbpath &lt;路径&gt;</td>
-<td>指定另外的数据库位置</td>
-<td></td>
-</tr>
-<tr>
-<td>–cachedir &lt;目录&gt;</td>
-<td>指定另外的软件包缓存位置</td>
-<td></td>
-</tr>
-<tr>
-<td>–arch &lt;架构&gt;</td>
-<td>设定另外的架构</td>
-<td></td>
-</tr>
-</tbody></table>
-<h3 id="U-更新安装包"><a href="#U-更新安装包" class="headerlink" title="-U 更新安装包"></a><code>-U</code> 更新安装包</h3><p><strong>pacman <code>&#123;-U --upgrade&#125;</code>     <code>[选项]</code>     <code>&lt;文件&gt;</code></strong></p>
-<table>
-<thead>
-<tr>
-<th>选项</th>
-<th>含义</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>–asdeps</td>
-<td>作为非单独指定安装的软件包安装</td>
-<td></td>
-</tr>
-<tr>
-<td>–asexplicit</td>
-<td>作为单独指定安装的软件包安装</td>
-<td></td>
-</tr>
-<tr>
-<td>-d, –nodeps</td>
-<td>略过依赖关系检查</td>
-<td></td>
-</tr>
-<tr>
-<td>-f, –force</td>
-<td>强制安装，覆盖存在冲突的文件</td>
-<td></td>
-</tr>
-<tr>
-<td>-k, –dbonly</td>
-<td>添加数据库记录，不安装或保持现存文件</td>
-<td></td>
-</tr>
-<tr>
-<td>–print</td>
-<td>仅打印目标而不执行操作</td>
-<td></td>
-</tr>
-<tr>
-<td>–print-format &lt;字符串&gt;</td>
-<td>指定如何打印目标</td>
-<td></td>
-</tr>
-<tr>
-<td>–config &lt;路径&gt;</td>
-<td>指定另外的配置文件</td>
-<td></td>
-</tr>
-<tr>
-<td>–logfile &lt;路径&gt;</td>
-<td>指定另外的日志文件</td>
-<td></td>
-</tr>
-<tr>
-<td>–noconfirm</td>
-<td>不询问确认</td>
-<td></td>
-</tr>
-<tr>
-<td>–noprogressbar</td>
-<td>下载文件时不显示进度条</td>
-<td></td>
-</tr>
-<tr>
-<td>–noscriptlet</td>
-<td>不执行安装小脚本</td>
-<td></td>
-</tr>
-<tr>
-<td>-v, –verbose</td>
-<td>循环执行</td>
-<td></td>
-</tr>
-<tr>
-<td>–debug</td>
-<td>显示除错信息</td>
-<td></td>
-</tr>
-<tr>
-<td>-r, –root &lt;路径&gt;</td>
-<td>指定另外的安装根目录</td>
-<td></td>
-</tr>
-<tr>
-<td>-b, –dbpath &lt;路径&gt;</td>
-<td>指定另外的数据库位置</td>
-<td></td>
-</tr>
-<tr>
-<td>–cachedir &lt;目录&gt;</td>
-<td>指定另外的软件包缓存位置</td>
-<td></td>
-</tr>
-<tr>
-<td>–arch &lt;架构&gt;</td>
-<td>设定另外的架构</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li>乌托邦2号.<code>pacman用法</code>[EB/OL].<a href="https://blog.csdn.net/taiyang1987912/article/details/41253533">https://blog.csdn.net/taiyang1987912/article/details/41253533</a>, 2020/11/22.</li>
-</ol>
+    <title>2020年随笔</title>
+    <url>/202009022111/</url>
+    <content><![CDATA[<h3 id="2020-09-02，明月"><a href="#2020-09-02，明月" class="headerlink" title="2020/09/02，明月"></a>2020/09/02，明月</h3><p>凌晨将寝，看见一轮明月从百叶窗的缝隙中漏了出来。江天一色无纤尘，皎皎空中孤月轮，我想起来了我的老父亲，突然好一阵心酸。</p>
+<p>这世界就这一轮明月，父亲看到的明月，和我看到的是不是一样的呢？我无从得知，但是我知道他清澈的心底，应该也和这明月一样，明朗、简洁、孤独的挂在那里！我现在正在重构的 hexo 主题，是否也能和它一样明朗呢？</p>
+<h3 id="2020-09-11，疲倦"><a href="#2020-09-11，疲倦" class="headerlink" title="2020/09/11，疲倦"></a>2020/09/11，疲倦</h3><p>今天颇为疲倦，那是种种摧残对生活热爱的力量。</p>
+<p>生活无望的摧残有之。生活压力太大，家庭收入有限，总是有种种债务要还，明明金额也不多，可是月月都是勉勉强强，总有一种秦琼卖马、穷途末路的感觉，既担不起风险去谋份新工作拼出路，也割舍不了那些缠缠绵绵的家庭责任。</p>
+<p>与人相处的困顿有之。我总以为自己是个文人，家国情怀、儿女情长；然而也不知道如何面对糟糠之妻，是勉励还是鞭策，是举案齐眉还是听之任之；也不知道如何面对幼年儿女，是宠爱还是严厉，是陪伴成长还是执鞭指导。看过不少教育理论和案例，也曾以自身做过很多试验，终究是了了，每一个方向都言之凿凿，然而都不曾看得到光明。一人独行的孤独，布满了天空。</p>
+<p>报国无门的失望有之。①得不到应有的回报：在单位里，也曾以一己之力，年年月月坚持，做了很多别人不想做、不能做的事情，但体制之下，来回调动，兜兜转转，始终只是棋子一枚。不少人长袖善舞、坑蒙拐骗，却获得了多次升迁，改善了生活，而我被所谓的工作需要等原因排除在外，常常需要为家庭的每月的账单发愁很久。②官僚主义严重。对于自己，每一次努力改变工作局面，总有领导劝你多克服一下困难，总是有人说你不知道在忙什么；对于企业，有些人，总能罔顾年年亏损，形式主义，人浮于事，人满为患的会议永远在开着，落实工作的，永远都只有那么少数的几个人；好多人都拈轻怕重、装模作样，写计划时高瞻远瞩、侃侃而谈，谈落实时左右掣肘、漠视困难，没有人关心日常应该怎么做提升效率、没有人有魄力面对上级的考核压力，更没有人具有规章制度里边要求的那些工作能力，制度永远只是规范下级、杀鸡儆猴的玩物……我甚至不知道，我10多年来孜孜不倦地工作，到底有没有意义了？！我自小家里生活困顿，多次获得了学校的贫困补助和一些周边人的帮助，曾发誓要报效祖国、造福社会；然而，在年复一年的人治环境下，我几乎丧失去了再挣扎的动力。</p>
+<p>人，活的疲惫，不是因为事情太难做，而是因为适应社会不是一个容易的事情！</p>
+<h3 id="2020-09-26，迷茫"><a href="#2020-09-26，迷茫" class="headerlink" title="2020/09/26，迷茫"></a>2020/09/26，迷茫</h3><p>昨日，在公司某部门那里被批评项目文件写的不清不楚。我的内容别人看不明白，因此需要修改；这本来也没啥，偏偏别人要告诉我他不是搞这个专业的，这让人有点难受。</p>
+<p>法国作家 John Collier 说过，If Youth Knew, If Age Could。我自己理解的意思就是，如果年轻人经验丰富，那么就不会栽在人情世故和盲目自大上；如果老年人能力充沛、能闯善干，那么就不会、也不必利用特权来设置那么多莫名其妙的规则来限制或阻挡事物的发展。</p>
+<p>就事论事而言，我也直接参与不少重要的基础事务，天天都在赶任务似的。那天的项目申请书和可行性研究报告都是一天之内匆匆写就的，而且要花费一大笔钱，涉及不少未知的研究和探索，怎么可能足够完善、足够清晰到一个非专业人员能够在几分钟内读懂、并作出投资决策呢！所以，对于这些身居要位、日常看报的中老年专家，我是有看法的：他们平时或做好好先生、或好为人师，对领导阿谀奉承，对基层装腔作势；给我这样的基层打工仔造成种种混乱也是难免的——他们作为从我这样的基础工种提拔上去的技术管理人员，平时不指导和帮助我们，不率先垂范，却要求下层人员有所作为、还要遵守一堆只有下层人员才需要遵守的规则，真可谓“何不食肉糜”的典范！</p>
+<p>我一度迷茫，想去纠正他的每一个专业术语上的错误，想引经据典，想据理力争到底…然而，一念之间，竟放弃了这个念头——我们参与日常事务，希望企业兴旺、国家繁荣，那是我们自己主动参与实现的，不是等来的；如果我们再退却了，旁观了，又何来希望？！</p>
+<p>是我自己一厢情愿的幻想罢了。我指望着的人——他们早已被生活和工作刺破了梦想、也与高官厚禄无望，我竟希望他们能够礼贤下士、推陈出新？！那也太为难人了！试想，又有几个人不曾怀揣着“仗剑走天涯”的梦想，却偏偏在现实社会中得到遍体鳞伤、至今怕蛇咬？他们不正和我现在一样吗——总以为自己技术业绩很突出就能傲视群雄，甚至学着别人的腔调说“生态就是被你们这些人搞坏的”，然后无所作为地、等待着别人来改善生态环境。可是我做的就够了吗？我低微到了尘埃里，可也有人说自己更低微，期盼着我不要在工作中给他们挑刺，帮他们协调解决哪些超出了能力的怪事吗？</p>
+<p>算了，做自己能做的事吧！希望明天会好一点，希望“日行一善，积善成德；日行一善，功满三千”，时间自有定论。</p>
 ]]></content>
       <categories>
-        <category>电脑爱好者</category>
+        <category>星星心事</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
-        <tag>Arch</tag>
-        <tag>Manjaro</tag>
-        <tag>pacman</tag>
+        <tag>2020</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -2707,8 +2018,8 @@ rm -f /empty</code></pre>
         <category>电脑爱好者</category>
       </categories>
       <tags>
-        <tag>Windows</tag>
         <tag>Linux</tag>
+        <tag>Windows</tag>
         <tag>VirtualBox</tag>
         <tag>虚拟机</tag>
         <tag>压缩</tag>
@@ -2734,68 +2045,46 @@ rm -f /empty</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>CentOS 使用 yum 国内源实现加速下载</title>
-    <url>/202101171156/</url>
-    <content><![CDATA[<p>又是一年过去，忽然接到通知，要求更新一个之前做的展示系统，就想起来要更新一下系统。结果使用 <code>yum list kernel.x86_64</code> 提示 <code>Cannot find a valid baseurl for repo: base</code>。</p>
-<p>更换国内源也不行，看了<code>http://mirrors.163.com/centos/6.10/readme</code> 文件，发现官方自 2020/11/30 起就禁止 CentOS 6.x 更新了（文件被清空）。呜呜，真是后知后觉了！</p>
-<pre><code class="sh">su
-cd /etc/yum.repos.d/
-cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.original
-    # 系统是根据 Base*.repo 来判别基础源的，因此备份的时候必须修改扩展名
-
-gedit CentOS-Base.repo
-    # 国外 http://vault.centos.org/6.10
-    # 国内 http://mirrors.aliyun.com/centos-vault/6.10/；
-
-mv epel.repo epel.original
-gedit epel.repo 
-    # 网址替换为 http://archives.fedoraproject.org/pub/archive/epel/6/x86_64/ 即可
-    # 国内（好像不行了） http://mirrors.aliyun.com/epel-archive/6/
-rm -f /var/run/yum.pid
-yum clean all
-yum makecache
-yum repolist</code></pre>
-<p>网友多喜欢用 vim ，我是普通人，我就是喜欢使用 gedit ，用上边提到的网址将文件中的网址替换一下就搞定了；如果可能需要滚动升级到下一个版本的，请参考修改一下网址的表达方式就行了。</p>
-<p>你问我怎么更换国内源，方法和上边是一样的——都是更换源嘛！至于国内源有哪些，可以了解一下清华、阿里云、网易、搜狐、中科大等源。当然，如果想简单一点的话，还可以</p>
-<pre><code class="bash">su
-
-# 备份
-mv /etc/yum.repos.d/CentOS-Base.repo/etc/yum.repos.d/CentOS-Base.repo.bck
-
-# 下载替换源（依次为网易、阿里、中科大、搜狐）
-wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.163.com/.help/CentOS7-Base-163.repo
-# wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
-# curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
-# wget -O /etc/yum.repos.d/CentOS-Base.repo http://centos.ustc.edu.cn/CentOS-Base.repo
-# wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.sohu.com/help/CentOS-Base-sohu.repo
-
-# 更新系统源数据库
-yum clean all
-yum makecache
-yum repolist</code></pre>
-<p>当然，也可以用这种方法：</p>
-<pre><code class="sh">su
-sed -e &#39;s|^mirrorlist=|#mirrorlist=|g&#39; \
-         -e &#39;s|^#baseurl=http://mirror.centos.org|baseurl=https://mirrors.tuna.tsinghua.edu.cn|g&#39; \
-         -i.bak \
-         /etc/yum.repos.d/CentOS-*.repo</code></pre>
-<p>国内源是真的快，不用真的不知道！</p>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li><p>清华大学TUNA团队.<code>CentOS 镜像使用帮助</code>[EB/OL].<a href="https://mirrors.cnnic.cn/help/centos/">https://mirrors.cnnic.cn/help/centos/</a>, 2021/02/01.</p>
-</li>
-<li><p>fogwu.<code>centos6 yum源失效，yum不可用处理方法及php环境搭建</code>[EB/OL].<a href="https://www.cnblogs.com/fogwang/p/14133970.html">https://www.cnblogs.com/fogwang/p/14133970.html</a>, 2021/02/01.</p>
-</li>
-</ol>
+    <title>评《Margin Call》：高个不挑担，世上永无光</title>
+    <url>/202010021008/</url>
+    <content><![CDATA[<blockquote>
+<p>直到落幕，我才意识到 《Margin Call》（商海通牒） 已经结束，可是对它的感悟我才刚刚开始…</p>
+</blockquote>
+<ul>
+<li>剧本 ☆☆☆☆</li>
+<li>场景 ☆☆☆☆</li>
+<li>演绎 ☆☆☆☆</li>
+<li>综合 ☆☆☆☆</li>
+</ul>
+<h2 id="剧情摘要"><a href="#剧情摘要" class="headerlink" title="剧情摘要"></a>剧情摘要</h2><p>整个故事不复杂：一家公司正在大幅裁员，领导 Sam 带头鼓掌并发表了鼓舞人心的讲话，员工们纷纷加班至深夜；努力工作的新员工 Peter 在别人下班去娱乐的时候，发现了公司风险模型预测到未来走势将大幅下跌，光是一层楼 25% 的亏损将超过公司的市值，立即汇报领导 Will ，领导也汇报他的领导 Sam，最后二把手贾德·科恩也在凌晨 2 点乘坐直升机来到公司，并决策抛售公司资产、及时止损。</p>
+<p>整部电影一直都没有正面展开商业斗争的波谲云诡（bō jué yún guǐ），而是大量了使用了各种背景阐述，各种侧面语言动作渲染。电影的节奏一直比较缓慢，没有快步奔跑的员工，也没有大幅的悲伤情绪，即使大结局了，既没有看到行业动荡的场景，也没有被阴谋拖入破产骗局的投资人纷纷跳楼的场景；只见暗淡的月色底下，与会者深锁的眉头、凝重的表情，晦涩难懂、含糊不清的经营风险陈述，与员工们纸醉金迷的生活、老板来去直升机、投资人高大上言论形成鲜明的对比。</p>
+<p>Eric Dale （艾力克·戴尔）负责风险管理部门，工作了 19 年的员工，秋毫不觉就被即时辞退了。他希望在离职时将工作交接清楚，可是无论是人力资源部门主管还是自己的直属领导 Will Emerson，都没有人搭理他；在电梯门关闭之际，他将做了一半工作的资料U盘给了赶来告别的新员工 Peter，然后到了楼下工作手机就被公司关停了。</p>
+<p>发生问题后公司想请他说清楚以及对数据进行保密时，公司才发现已经联系不上他了，只能等到凌晨他妻子打来电话说他在家了，公司才决定去他家里找他、用每小时 17 万多美元的代价来要求他对公司的风险秘密予以保守一天。</p>
+<h2 id="社会感悟"><a href="#社会感悟" class="headerlink" title="社会感悟"></a>社会感悟</h2><h3 id="个人利益至上，屠龙少年终成恶龙"><a href="#个人利益至上，屠龙少年终成恶龙" class="headerlink" title="个人利益至上，屠龙少年终成恶龙"></a>个人利益至上，屠龙少年终成恶龙</h3><p>尽管行业性的经济危机将至，但只有一个镜头表现了 2008 年经济大动荡的可怕的之处——因年入 25 万美元而自豪不已的小员工 Seth （赛斯·布雷格曼）面对即将辞退的困境，在卫生间里边痛哭失声，他十多分钟前还镇定自若地说，OK！</p>
+<p>公司的领导人 Sam 尽管工作了 34 年，积累了大量的财富，作为人性未泯的领导者，他依然无法放弃对利益的追逐。</p>
+<p>他是靠公司体制成功的领导者。他入职早，高高在上，做出英明的决策，英明地裁员、果断地抛售资产，然而公司的主要利润都是那些小员工辛辛苦苦赚来的，他甚至不知道的如何看明白预示着公司未来的曲线怎么看、指标是什么，他也记不住下层员工的名字，但是不影响他拿着公司基层无法企及、难以想象的高薪。他的狗生病了，每天都要花费一千美元治病，他太过于悲伤甚至于不觉得80%的下属被辞退了能怎么样，毕竟他早已从长期的人员流动中变得麻木不仁了！</p>
+<p>他来自基层，也拼搏过，因此他同情弱者、忧心行业，良心未泯。 Sam 的手下员工，不乏能力卓著的年轻人，比如说火箭科学家 Peter（彼得·苏利文）；也有出身不凡的得力下属，比如说桥梁工程师 Eric。因此，当二把手要求他出售资产时，他考虑到了对行业的影响以及年轻人的未来，他质疑何为老板毫无选择，他拒绝聆听风险评估，他嚎叫老板让开，他一次又一次地拒绝了二把手的要求，直到杰瑞开出了天价的报酬。</p>
+<p>他是利益追逐的一员，当首席风险评估分析师 Sarah（莎拉·罗伯森）等其他部门的人员被二把手说服后，他也自甘堕落，即使明知严重违反良知与诚信，明知 3/7 的人员还将被裁决，他仍然镇定自若地完成了所有下属的工作安排——在一天之内完成风险资产的全部抛售，那么是打六五折也可以。跟他的下属 Will 一样，渴望保留人性，但无法拒绝金钱利益的侵蚀—— Will 站在楼顶做出跳楼的假动作，他颤动地看着深渊，最终还是说“not today”，并向下属员工轻描淡写地描述了去年收入的 250 万美元是如何轻而易举地全部花完的！</p>
+<h3 id="遍身罗绮者，不是养蚕人"><a href="#遍身罗绮者，不是养蚕人" class="headerlink" title="遍身罗绮者，不是养蚕人"></a>遍身罗绮者，不是养蚕人</h3><blockquote>
+<p>评估员塞斯问长官威尔，这次的危机会给平常人带来的影响？</p>
+<p>威尔这样说：这些普通人，他们想要的生活就是香车豪宅，但是他们根本负担不起。这就是为什么我们这么重要，我们是他们豪华生活的根本原因。我们用手指在他们天平的一端压了一下，我们抽走手指，那时候才是真正的公平社会，但是他们马上就会不干。他们想要我们给的东西，但是又喜欢假装不知道这些东西是怎么来的。他们装伪君子比我强多了，去他们的吧！</p>
+</blockquote>
+<p>尽管二把手很年轻，但是手段非常老到，他左右拉拢员工，用尽方法；他信口开河，满是利益，让人毫无拒绝的可能性。是的，无论是 Sam 还是 Jerry，尽管技术能力平平，但是都心狠手辣，善于言谈，洞察人心，这是他们驱动那些比他们更有技术手段的人为他们卖命赚钱！</p>
+<p>更绝的是，最后的老大 John（约翰·图尔德），更是老手中的老手，他左一句你可以 <strong>保留</strong> 股份与分红，右一句 <strong>及时止损比整年焦头烂额更好</strong> 的深入分析，直接将 Sam 说服了。将相本无种，奈何无论人数如何变化，富贵与贫贱的比例永远不变，无论时间过去多长，名利的游戏将永存不朽，历史中的一次次经济危机游戏给了我们无限的启迪：</p>
+<blockquote>
+<p>1637年、1797年、1819年、1837年、1857年、1884年、1901年、1907年、1929年、1937年、1974年、1987年、1992年、1997年、2000年、还有这次，不管我们叫它什么，一样的缘故，一次又一次，我们挡都挡不住，我们还想阻止它，控制它，甚至放慢它，我们的本性一丁点都没变，我们仅仅是随机应变，如果对了就赚一大笔，如果错了就被晾到一边，这个世界上过去会有，将来也会有，同样比例的赢家和输家，得意洋洋者和垂头丧气者，撑的撑死，饿的饿死，今天像我们这样的人也许前所未有的多，但是那个比例，原封未动。</p>
+</blockquote>
+<p>历史总是存在输家和赢家，至此， Sam 完全被征服；他已毫不在乎之前是如何如何地一次次的痛苦挣扎， 唯余 “我只是不想事情发展到如此操蛋的地步！” 的感叹给观众去慢慢品味！</p>
+<p>夜晚， Sam 回到前妻的房前，埋葬了自己深爱的狗，也埋葬了自己的良心。</p>
+<p>从来都没有屠龙的英雄，有的都是最终都会皮毛并带角的怪兽！<strong>公平</strong>、<strong>平等</strong>一直都在头部玩家的口中，从来都不曾真正广泛存在过：古今中外，资本逐利，2% 的头部资本家拥有绝对控股的资源，也许一部分人分到了羹汤成为了人上人，但始终不可能让广大底层人员享受到福利，从来如此，社会主义建设之路何其远哉！</p>
 ]]></content>
       <categories>
-        <category>电脑爱好者</category>
+        <category>坐井观天</category>
       </categories>
       <tags>
-        <tag>yum</tag>
-        <tag>国内源</tag>
-        <tag>CentOS</tag>
-        <tag>加速</tag>
-        <tag>下载</tag>
+        <tag>影评</tag>
+        <tag>Margin Call</tag>
+        <tag>商海通牒</tag>
       </tags>
   </entry>
   <entry>
@@ -2890,11 +2179,11 @@ sed -e &#39;s|^mirrorlist=|#mirrorlist=|g&#39; \
         <category>编程笔记</category>
       </categories>
       <tags>
+        <tag>pip</tag>
         <tag>国内源</tag>
+        <tag>Python</tag>
         <tag>加速</tag>
         <tag>下载</tag>
-        <tag>pip</tag>
-        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -3382,8 +2671,8 @@ ldconfig</code></pre>
       </categories>
       <tags>
         <tag>Linux</tag>
-        <tag>CentOS</tag>
         <tag>Python</tag>
+        <tag>CentOS</tag>
         <tag>安装</tag>
         <tag>编译</tag>
         <tag>sqlite</tag>
@@ -3530,8 +2819,8 @@ vi /usr/bin/gnome-tweak-tool</code></pre>
       </categories>
       <tags>
         <tag>Linux</tag>
-        <tag>CentOS</tag>
         <tag>Python</tag>
+        <tag>CentOS</tag>
         <tag>安装</tag>
         <tag>编译</tag>
         <tag>sqlite</tag>
@@ -5201,6 +4490,759 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
         <tag>office</tag>
         <tag>邮件合并</tag>
         <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>新组装电脑的功能测试</title>
+    <url>/202302191053/</url>
+    <content><![CDATA[<p>前一段时间，老电脑主机老是莫名其妙死机，因此在淘宝上重新组装了一台主机。可是二手机器的稳定性难以保障，网友说可以进行<code>烤机</code>测试来检验机器散热情况，以此反映机器的稳定性。</p>
+<h1 id="烤机测试方法"><a href="#烤机测试方法" class="headerlink" title="烤机测试方法"></a><code>烤机</code>测试方法</h1><ol>
+<li><p>运行<code>AIDA64 Extreme</code>程序，点击<code>工具</code>菜单下的<code>系统稳定性测试(S)</code>，如下图：</p>
+<p> <img src="/static/img/20230219-%E7%94%B5%E8%84%91%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%84/1-AIDA64%E8%8F%9C%E5%8D%95%E7%95%8C%E9%9D%A2.png" alt="打开界面"></p>
+</li>
+<li><p>在弹窗中，左上方选择需要测试的项目；<br> <img src="/static/img/20230219-%E7%94%B5%E8%84%91%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%84/2-AIDA64%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%E7%95%8C%E9%9D%A2.png" alt="选择测试项目"></p>
+</li>
+<li><p>点击弹窗下方工具栏上的<code>Preferences</code>按钮，选择最多10个温度曲线的颜色，确认后点击<code>OK</code>返回；</p>
+</li>
+<li><p>点击弹窗下方工具栏上的<code>Start</code>按钮，测试开始；</p>
+</li>
+<li><p>测试运行过程中注意观察各个部件的温度，如出现机器异响等情况立刻点击<code>Stop</code>按钮终止；或等待大约 10～15 分钟后，也可以点击<code>Stop</code>按钮终止测试。</p>
+<p> <img src="/static/img/20230219-%E7%94%B5%E8%84%91%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%84/3-AIDA64%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C.png" alt="选择测试项目"></p>
+</li>
+</ol>
+<h1 id="性能得分测试"><a href="#性能得分测试" class="headerlink" title="性能得分测试"></a>性能得分测试</h1><h2 id="鲁大师性能得分测试"><a href="#鲁大师性能得分测试" class="headerlink" title="鲁大师性能得分测试"></a>鲁大师性能得分测试</h2><ol>
+<li><p>打开鲁大师，点击顶部的<code>性能测试</code>按钮；</p>
+</li>
+<li><p>在切换出现的窗口中，默认显示为<code>电脑性能测试</code>页，点击该页面中的<code>开始测评</code>，等待结束即可。</p>
+<p> <img src="/static/img/20230219-%E7%94%B5%E8%84%91%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%84/4-%E9%B2%81%E5%A4%A7%E5%B8%88%E6%B5%8B%E8%AF%84%E5%BE%97%E5%88%86.png" alt="选择测试项目"></p>
+</li>
+</ol>
+<h2 id="Windows-自带的性能得分测试"><a href="#Windows-自带的性能得分测试" class="headerlink" title="Windows 自带的性能得分测试"></a>Windows 自带的性能得分测试</h2><ol>
+<li><p>点击<code>文件资源管理器</code>（或开始菜单中的<code>计算机</code>），检查当前鼠标选中左侧的<code>计算机</code>；</p>
+</li>
+<li><p>点击左上方工具栏的<code>系统属性</code>快捷命令，在弹窗中部找到<strong>系统</strong>栏目下的<strong>分级</strong>项，点击<code>Windows体验指数</code>即可开展得分测试。<br> <img src="/static/img/20230219-%E7%94%B5%E8%84%91%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%84/6-Windows%E6%B5%8B%E8%AF%84%E5%BE%97%E5%88%86.png" alt="选择测试项目"></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>AIDA64</tag>
+        <tag>电脑</tag>
+        <tag>烤机</tag>
+        <tag>稳定性</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pacman 包管理器的用法概述</title>
+    <url>/202011221004/</url>
+    <content><![CDATA[<p>pacman 是 Arch/Manjaro Linux 下的包管理软件。它将一个简单的二进制包格式和易用的构建系统结合了起来。不管软件包是来自官方的 Arch 库还是用户自己创建， pacman 都能方便得管理。</p>
+<h2 id="pacman-基本用法"><a href="#pacman-基本用法" class="headerlink" title="pacman 基本用法"></a><code>pacman</code> 基本用法</h2><h3 id="h-查看帮助"><a href="#h-查看帮助" class="headerlink" title="-h 查看帮助"></a><code>-h</code> 查看帮助</h3><p><strong>pacman <code>&#123;-h --help&#125;</code></strong></p>
+<h3 id="V-查看版本"><a href="#V-查看版本" class="headerlink" title="-V 查看版本"></a><code>-V</code> 查看版本</h3><p><strong>pacman <code>&#123;-V --version&#125;</code></strong></p>
+<h3 id="D-管理数据库选项"><a href="#D-管理数据库选项" class="headerlink" title="-D 管理数据库选项"></a><code>-D</code> 管理数据库选项</h3><p><strong>pacman <code>&#123;-D --database&#125;</code>    <code>&lt;选项&gt;</code>     <code>&lt;软件包&gt;</code></strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">–asdeps</td>
+<td>标记为非单独指定安装的软件包</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">–asexplicit</td>
+<td>标记为单独指定安装的软件包</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">–config &lt;路径&gt;</td>
+<td>指定另外的配置文件</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">–logfile &lt;路径&gt;</td>
+<td>指定另外的日志文件</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">–noconfirm</td>
+<td>不询问确认</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">–noprogressbar</td>
+<td>下载文件时不显示进度条</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">–noscriptlet</td>
+<td>不执行安装小脚本</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">-v, –verbose</td>
+<td>循环执行</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">–debug</td>
+<td>显示除错信息</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">-r, –root &lt;路径&gt;</td>
+<td>指定另外的安装根目录</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">-b, –dbpath &lt;路径&gt;</td>
+<td>指定另外的数据库位置</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">–cachedir &lt;目录&gt;</td>
+<td>指定另外的软件包缓存位置</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">–arch &lt;架构&gt;</td>
+<td>设定另外的架构</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="Q-查询安装包"><a href="#Q-查询安装包" class="headerlink" title="-Q 查询安装包"></a><code>-Q</code> 查询安装包</h3><p><strong>pacman <code>&#123;-Q --query&#125;</code>    <code>[选项]</code>    <code>[软件包]</code></strong></p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-c, –changelog</td>
+<td>查看某软件包的更新日志</td>
+<td></td>
+</tr>
+<tr>
+<td>-d, –deps</td>
+<td>列出所有作为依赖关系安装的软件包 [过滤器]</td>
+<td></td>
+</tr>
+<tr>
+<td>-e, –explicit</td>
+<td>列出所有单独指定安装的软件包 [过滤器]</td>
+<td></td>
+</tr>
+<tr>
+<td>-g, –groups</td>
+<td>查看某软件包组所属的所有软件包</td>
+<td></td>
+</tr>
+<tr>
+<td>-i, –info</td>
+<td>查看软件包信息</td>
+<td><code>-ii</code>查看备份文件</td>
+</tr>
+<tr>
+<td>-k, –check</td>
+<td>检查该软件包拥有的文件是否存在</td>
+<td></td>
+</tr>
+<tr>
+<td>-l, –list</td>
+<td>列出被查询软件包的内容</td>
+<td></td>
+</tr>
+<tr>
+<td>-m, –foreign</td>
+<td>列出没有在同步数据库时找到的已安装软件包 [过滤器]</td>
+<td></td>
+</tr>
+<tr>
+<td>-o, –owns &lt;文件&gt;</td>
+<td>查询哪个软件包拥有 &lt;文件&gt;</td>
+<td></td>
+</tr>
+<tr>
+<td>-p, –file &lt;软件包&gt;</td>
+<td>从某个软件包而不是数据库查询</td>
+<td></td>
+</tr>
+<tr>
+<td>-s, –search<regex></td>
+<td>搜寻符合指定字符串的已安装本地的软件包</td>
+<td></td>
+</tr>
+<tr>
+<td>-t, –unrequired</td>
+<td>列出所有不被其他软件包要求的软件包 [过滤器]</td>
+<td></td>
+</tr>
+<tr>
+<td>-u, –upgrades</td>
+<td>列出所有可升级的软件包 [过滤器]</td>
+<td></td>
+</tr>
+<tr>
+<td>-q, –quiet</td>
+<td>在查询或搜索时显示较少的信息</td>
+<td></td>
+</tr>
+<tr>
+<td>–config &lt;路径&gt;</td>
+<td>指定另外的配置文件</td>
+<td></td>
+</tr>
+<tr>
+<td>–logfile &lt;路径&gt;</td>
+<td>指定另外的日志文件</td>
+<td></td>
+</tr>
+<tr>
+<td>–noconfirm</td>
+<td>不询问确认</td>
+<td></td>
+</tr>
+<tr>
+<td>–noprogressbar</td>
+<td>下载文件时不显示进度条</td>
+<td></td>
+</tr>
+<tr>
+<td>–noscriptlet</td>
+<td>不执行安装小脚本</td>
+<td></td>
+</tr>
+<tr>
+<td>-v, –verbose</td>
+<td>循环执行</td>
+<td></td>
+</tr>
+<tr>
+<td>–debug</td>
+<td>显示除错信息</td>
+<td></td>
+</tr>
+<tr>
+<td>-r, –root &lt;路径&gt;</td>
+<td>指定另外的安装根目录</td>
+<td></td>
+</tr>
+<tr>
+<td>-b, –dbpath &lt;路径&gt;</td>
+<td>指定另外的数据库位置</td>
+<td></td>
+</tr>
+<tr>
+<td>–cachedir &lt;目录&gt;</td>
+<td>指定另外的软件包缓存位置</td>
+<td></td>
+</tr>
+<tr>
+<td>–arch &lt;架构&gt;</td>
+<td>设定另外的架构</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="R-删除安装包"><a href="#R-删除安装包" class="headerlink" title="-R 删除安装包"></a><code>-R</code> 删除安装包</h3><p><strong>pacman <code>&#123;-R --remove&#125;</code>   <code>[选项]</code>     <code>&lt;软件包&gt;</code></strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>选项</strong></th>
+<th><strong>定义</strong></th>
+<th><strong>备注</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-c, –cascade</td>
+<td>删除软件包及所有的依赖于此的软件包</td>
+<td></td>
+</tr>
+<tr>
+<td>-d, –nodeps</td>
+<td>略过依赖关系检查</td>
+<td></td>
+</tr>
+<tr>
+<td>-k, –dbonly</td>
+<td>只删除数据库记录，不删除文件</td>
+<td></td>
+</tr>
+<tr>
+<td>-n, –nosave</td>
+<td>同时删除配置文件</td>
+<td></td>
+</tr>
+<tr>
+<td>-s, –recursive</td>
+<td>同时删除(不会破坏其他软件包的) 依赖关系</td>
+<td><code>-ss</code>·也包括单独指定安装的依赖关系</td>
+</tr>
+<tr>
+<td>-u, –unneeded</td>
+<td>同时删除不需要的(且不会破坏其他软件包的) 依赖关系</td>
+<td></td>
+</tr>
+<tr>
+<td>–print</td>
+<td>仅打印目标而不执行操作</td>
+<td></td>
+</tr>
+<tr>
+<td>–print-format</td>
+<td>&lt;字符串&gt;指定如何打印目标</td>
+<td></td>
+</tr>
+<tr>
+<td>–config  &lt;路径&gt;</td>
+<td>指定另外的配置文件</td>
+<td></td>
+</tr>
+<tr>
+<td>–logfile  &lt;路径&gt;</td>
+<td>指定另外的日志文件</td>
+<td></td>
+</tr>
+<tr>
+<td>–noconfirm</td>
+<td>不询问确认</td>
+<td></td>
+</tr>
+<tr>
+<td>–noprogressbar</td>
+<td>下载文件时不显示进度条</td>
+<td></td>
+</tr>
+<tr>
+<td>–noscriptlet</td>
+<td>不执行安装小脚本</td>
+<td></td>
+</tr>
+<tr>
+<td>-v, –verbose</td>
+<td>循环执行</td>
+<td></td>
+</tr>
+<tr>
+<td>–debug</td>
+<td>显示除错信息</td>
+<td></td>
+</tr>
+<tr>
+<td>-r, –root  &lt;路径&gt;</td>
+<td>指定另外的安装根目录</td>
+<td></td>
+</tr>
+<tr>
+<td>-b, –dbpath  &lt;路径&gt;</td>
+<td>指定另外的数据库位置</td>
+<td></td>
+</tr>
+<tr>
+<td>–cachedir  &lt;目录&gt;</td>
+<td>指定另外的软件包缓存位置</td>
+<td></td>
+</tr>
+<tr>
+<td>–arch &lt;架构&gt;</td>
+<td>设定另外的架构</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="S-安装安装包"><a href="#S-安装安装包" class="headerlink" title="-S 安装安装包"></a><code>-S</code> 安装安装包</h3><p><strong>pacman <code>&#123;-S --sync&#125;</code>     <code>[选项]</code>     <code>[软件包]</code></strong></p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>–asdeps</td>
+<td>作为非单独指定安装的软件包安装</td>
+<td></td>
+</tr>
+<tr>
+<td>–asexplicit</td>
+<td>作为单独指定安装的软件包安装</td>
+<td></td>
+</tr>
+<tr>
+<td>-c, –clean</td>
+<td>从缓存目录中删除旧软件包</td>
+<td><code>-cc</code>清除所有</td>
+</tr>
+<tr>
+<td>-d, –nodeps</td>
+<td>略过依赖关系检查</td>
+<td></td>
+</tr>
+<tr>
+<td>-f,  –force</td>
+<td>强制安装，覆盖存在冲突的文件</td>
+<td></td>
+</tr>
+<tr>
+<td>-g, –groups</td>
+<td>查看某软件包组所属的所有软件包</td>
+<td></td>
+</tr>
+<tr>
+<td>-i, –info</td>
+<td>查看软件包信息</td>
+<td></td>
+</tr>
+<tr>
+<td>-l, –list &lt;软件库&gt;</td>
+<td>查看在该软件库中的软件包清单</td>
+<td></td>
+</tr>
+<tr>
+<td>-s, –search &lt;regex表达式&gt;</td>
+<td>按照指定字符串查询远端软件库</td>
+<td></td>
+</tr>
+<tr>
+<td>-u, –sysupgrade</td>
+<td>升级所有已安装的软件包</td>
+<td><code>-uu</code>可启用降级</td>
+</tr>
+<tr>
+<td>-w, –downloadonly</td>
+<td>下载但不安装/升级软件包</td>
+<td></td>
+</tr>
+<tr>
+<td>-y, –refresh</td>
+<td>从服务器下载新的软件包数据库</td>
+<td></td>
+</tr>
+<tr>
+<td>–needed</td>
+<td>不重新安装已经为最新的软件包</td>
+<td></td>
+</tr>
+<tr>
+<td>–ignore &lt;软件包&gt;</td>
+<td>升级时忽略某个软件包 (可多次使用)</td>
+<td></td>
+</tr>
+<tr>
+<td>–ignoregroup</td>
+<td>&lt;软件包组&gt;升级时忽略某个软件包组 (可多次使用)</td>
+<td></td>
+</tr>
+<tr>
+<td>–print</td>
+<td>仅打印目标而不执行操作</td>
+<td></td>
+</tr>
+<tr>
+<td>–print-format</td>
+<td>&lt;字符串&gt;指定如何打印目标</td>
+<td></td>
+</tr>
+<tr>
+<td>-q, –quiet</td>
+<td>在查询或搜索时显示较少的信息</td>
+<td></td>
+</tr>
+<tr>
+<td>–config &lt;路径&gt;</td>
+<td>指定另外的配置文件</td>
+<td></td>
+</tr>
+<tr>
+<td>–logfile &lt;路径&gt;</td>
+<td>指定另外的日志文件</td>
+<td></td>
+</tr>
+<tr>
+<td>–noconfirm</td>
+<td>不询问确认</td>
+<td></td>
+</tr>
+<tr>
+<td>–noprogressbar</td>
+<td>下载文件时不显示进度条</td>
+<td></td>
+</tr>
+<tr>
+<td>–noscriptlet</td>
+<td>不执行安装小脚本</td>
+<td></td>
+</tr>
+<tr>
+<td>-v, –verbose</td>
+<td>循环执行</td>
+<td></td>
+</tr>
+<tr>
+<td>–debug</td>
+<td>显示除错信息</td>
+<td></td>
+</tr>
+<tr>
+<td>-r, –root &lt;路径&gt;</td>
+<td>指定另外的安装根目录</td>
+<td></td>
+</tr>
+<tr>
+<td>-b, –dbpath &lt;路径&gt;</td>
+<td>指定另外的数据库位置</td>
+<td></td>
+</tr>
+<tr>
+<td>–cachedir &lt;目录&gt;</td>
+<td>指定另外的软件包缓存位置</td>
+<td></td>
+</tr>
+<tr>
+<td>–arch &lt;架构&gt;</td>
+<td>设定另外的架构</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="U-更新安装包"><a href="#U-更新安装包" class="headerlink" title="-U 更新安装包"></a><code>-U</code> 更新安装包</h3><p><strong>pacman <code>&#123;-U --upgrade&#125;</code>     <code>[选项]</code>     <code>&lt;文件&gt;</code></strong></p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>–asdeps</td>
+<td>作为非单独指定安装的软件包安装</td>
+<td></td>
+</tr>
+<tr>
+<td>–asexplicit</td>
+<td>作为单独指定安装的软件包安装</td>
+<td></td>
+</tr>
+<tr>
+<td>-d, –nodeps</td>
+<td>略过依赖关系检查</td>
+<td></td>
+</tr>
+<tr>
+<td>-f, –force</td>
+<td>强制安装，覆盖存在冲突的文件</td>
+<td></td>
+</tr>
+<tr>
+<td>-k, –dbonly</td>
+<td>添加数据库记录，不安装或保持现存文件</td>
+<td></td>
+</tr>
+<tr>
+<td>–print</td>
+<td>仅打印目标而不执行操作</td>
+<td></td>
+</tr>
+<tr>
+<td>–print-format &lt;字符串&gt;</td>
+<td>指定如何打印目标</td>
+<td></td>
+</tr>
+<tr>
+<td>–config &lt;路径&gt;</td>
+<td>指定另外的配置文件</td>
+<td></td>
+</tr>
+<tr>
+<td>–logfile &lt;路径&gt;</td>
+<td>指定另外的日志文件</td>
+<td></td>
+</tr>
+<tr>
+<td>–noconfirm</td>
+<td>不询问确认</td>
+<td></td>
+</tr>
+<tr>
+<td>–noprogressbar</td>
+<td>下载文件时不显示进度条</td>
+<td></td>
+</tr>
+<tr>
+<td>–noscriptlet</td>
+<td>不执行安装小脚本</td>
+<td></td>
+</tr>
+<tr>
+<td>-v, –verbose</td>
+<td>循环执行</td>
+<td></td>
+</tr>
+<tr>
+<td>–debug</td>
+<td>显示除错信息</td>
+<td></td>
+</tr>
+<tr>
+<td>-r, –root &lt;路径&gt;</td>
+<td>指定另外的安装根目录</td>
+<td></td>
+</tr>
+<tr>
+<td>-b, –dbpath &lt;路径&gt;</td>
+<td>指定另外的数据库位置</td>
+<td></td>
+</tr>
+<tr>
+<td>–cachedir &lt;目录&gt;</td>
+<td>指定另外的软件包缓存位置</td>
+<td></td>
+</tr>
+<tr>
+<td>–arch &lt;架构&gt;</td>
+<td>设定另外的架构</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li>乌托邦2号.<code>pacman用法</code>[EB/OL].<a href="https://blog.csdn.net/taiyang1987912/article/details/41253533">https://blog.csdn.net/taiyang1987912/article/details/41253533</a>, 2020/11/22.</li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Arch</tag>
+        <tag>Manjaro</tag>
+        <tag>pacman</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS 使用 yum 国内源实现加速下载</title>
+    <url>/202101171156/</url>
+    <content><![CDATA[<p>又是一年过去，忽然接到通知，要求更新一个之前做的展示系统，就想起来要更新一下系统。结果使用 <code>yum list kernel.x86_64</code> 提示 <code>Cannot find a valid baseurl for repo: base</code>。</p>
+<p>更换国内源也不行，看了<code>http://mirrors.163.com/centos/6.10/readme</code> 文件，发现官方自 2020/11/30 起就禁止 CentOS 6.x 更新了（文件被清空）。呜呜，真是后知后觉了！</p>
+<pre><code class="sh">su
+cd /etc/yum.repos.d/
+cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.original
+    # 系统是根据 Base*.repo 来判别基础源的，因此备份的时候必须修改扩展名
+
+gedit CentOS-Base.repo
+    # 国外 http://vault.centos.org/6.10
+    # 国内 http://mirrors.aliyun.com/centos-vault/6.10/；
+
+mv epel.repo epel.original
+gedit epel.repo 
+    # 网址替换为 http://archives.fedoraproject.org/pub/archive/epel/6/x86_64/ 即可
+    # 国内（好像不行了） http://mirrors.aliyun.com/epel-archive/6/
+rm -f /var/run/yum.pid
+yum clean all
+yum makecache
+yum repolist</code></pre>
+<p>网友多喜欢用 vim ，我是普通人，我就是喜欢使用 gedit ，用上边提到的网址将文件中的网址替换一下就搞定了；如果可能需要滚动升级到下一个版本的，请参考修改一下网址的表达方式就行了。</p>
+<p>你问我怎么更换国内源，方法和上边是一样的——都是更换源嘛！至于国内源有哪些，可以了解一下清华、阿里云、网易、搜狐、中科大等源。当然，如果想简单一点的话，还可以</p>
+<pre><code class="bash">su
+
+# 备份
+mv /etc/yum.repos.d/CentOS-Base.repo/etc/yum.repos.d/CentOS-Base.repo.bck
+
+# 下载替换源（依次为网易、阿里、中科大、搜狐）
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.163.com/.help/CentOS7-Base-163.repo
+# wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+# curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+# wget -O /etc/yum.repos.d/CentOS-Base.repo http://centos.ustc.edu.cn/CentOS-Base.repo
+# wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.sohu.com/help/CentOS-Base-sohu.repo
+
+# 更新系统源数据库
+yum clean all
+yum makecache
+yum repolist</code></pre>
+<p>当然，也可以用这种方法：</p>
+<pre><code class="sh">su
+sed -e &#39;s|^mirrorlist=|#mirrorlist=|g&#39; \
+         -e &#39;s|^#baseurl=http://mirror.centos.org|baseurl=https://mirrors.tuna.tsinghua.edu.cn|g&#39; \
+         -i.bak \
+         /etc/yum.repos.d/CentOS-*.repo</code></pre>
+<p>国内源是真的快，不用真的不知道！</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><p>清华大学TUNA团队.<code>CentOS 镜像使用帮助</code>[EB/OL].<a href="https://mirrors.cnnic.cn/help/centos/">https://mirrors.cnnic.cn/help/centos/</a>, 2021/02/01.</p>
+</li>
+<li><p>fogwu.<code>centos6 yum源失效，yum不可用处理方法及php环境搭建</code>[EB/OL].<a href="https://www.cnblogs.com/fogwang/p/14133970.html">https://www.cnblogs.com/fogwang/p/14133970.html</a>, 2021/02/01.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>国内源</tag>
+        <tag>加速</tag>
+        <tag>下载</tag>
+        <tag>CentOS</tag>
+        <tag>yum</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>苹果 Macbook Pro 笔记本从 U 盘启动以及重置开机密码的方法</title>
+    <url>/202008272141/</url>
+    <content><![CDATA[<p>前几天，有位老领导委托我对其苹果 Macbook Pro 2018 笔记本进行优化处理。由于网上的资料比较零散、挂一漏万，因此我也来总结一下操作经验。</p>
+<h2 id="配置-U盘启动或者切换系统的方法"><a href="#配置-U盘启动或者切换系统的方法" class="headerlink" title="配置 U盘启动或者切换系统的方法"></a>配置 U盘启动或者切换系统的方法</h2><ul>
+<li><p>Macbook 没有 BISO 等设置，所谓的进入 U盘 PE 或者切换双系统的方法是：按住 <kbd>Option</kbd> 键，然后按电源键开机，那么就会出现一个类似于 Windows 启动项的界面，从而用于实现改变启动方式的效果。</p>
+<p>  <img src="/static/img/Macbook-%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%95%8C%E9%9D%A2-20200824.jpg" alt="Macbook启动项界面-HHJ"></p>
+</li>
+</ul>
+<blockquote>
+<p>苹果电脑安装 Windows 系统，一般都是通过 Boot Camp 等软件来实现。对于双系统的主机，也可以在 Windows 系统中输入 <strong>“恢复”</strong> 找到相应的菜单进入切换启动盘的功能，不过具体功能我没有完整测试。</p>
+</blockquote>
+<blockquote>
+<p>有意思的是，进入 MacOS 的启动方式选择界面后，如果接入 U盘 PE，那么也能很快识别出来；跟我之前在 BISO 里边配置 U盘启动需要提前接入还是有明显差别的。</p>
+</blockquote>
+<h2 id="Macbook-重置密码的方法"><a href="#Macbook-重置密码的方法" class="headerlink" title="Macbook 重置密码的方法"></a>Macbook 重置密码的方法</h2><p>结合网络资料测试了一下，操作流程如下：</p>
+<ol>
+<li><p>按住 <kbd>Option</kbd> 键，然后按电源键开机；</p>
+</li>
+<li><p>按方向键选择 Macintosh （苹果） 系统，按 <kbd>Command</kbd> + <kbd>r</kbd> 后自动进入系统恢复界面；</p>
+</li>
+<li><p>在经历进度条界面一会后，选择界面的操作语言后，出现以下界面，执行菜单命令 <code>使用工具</code>→<code>终端</code> ，弹出终端界面：</p>
+<p> <img src="/static/img/Macbook-%E7%BB%B4%E6%8A%A4%E7%BB%88%E7%AB%AF-20200824.jpg" alt="Macbook系统恢复界面-HHJ"></p>
+</li>
+<li><p>在终端中执行 <code>resetpassword</code> ，在弹窗中选择需要重置的用户名，并填入新密码，然后存储到系统即可完成修改。</p>
+<p> <img src="/static/img/Macbook-%E9%87%8D%E7%BD%AE%E5%AF%86%E7%A0%81%E7%A4%BA%E6%84%8F%E5%9B%BE-20200824.jpg" alt="Macbook重置密码示意图-HHJ"></p>
+</li>
+<li><p>完成修改后重新使用第 1 步的方法进入苹果系统，在登入后可能会提示钥匙串密码是否修改等内容，我选择了修改成一致后，重复登录检查账户使用正常。</p>
+</li>
+</ol>
+<blockquote>
+<p>需要注意的是，上述方法仅应使用在合法授权的电脑上，请勿滥用！践行社会主义核心价值观，人人有责！</p>
+</blockquote>
+<h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
+<li>学知网.<code>苹果笔记本进入BIOS设置教程</code>[EB/OL].<a href="https://www.jmqz1000.com/dnzs/23488.html">https://www.jmqz1000.com/dnzs/23488.html</a>, 2020/08/24.</li>
+</ol>
+<h3 id="变更说明"><a href="#变更说明" class="headerlink" title="变更说明"></a>变更说明</h3><ul>
+<li><p>1.0.0，2020/08/27 22:29:16，初始版本。</p>
+</li>
+<li><p>1.0.1，2020/08/28 18:11:26，重新组织语言，去除一些自以为是的废话。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>Apple</tag>
+        <tag>Macbook</tag>
+        <tag>MacOS</tag>
+        <tag>密码</tag>
+        <tag>操作系统</tag>
+        <tag>PE</tag>
+        <tag>U盘</tag>
       </tags>
   </entry>
 </search>

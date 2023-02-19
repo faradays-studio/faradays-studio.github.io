@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://faradays-studio.gitee.io/"/>
-  <updated>2022-09-10T04:35:32.205Z</updated>
+  <updated>2023-02-19T03:37:30.314Z</updated>
   <id>https://faradays-studio.gitee.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>新组装电脑的功能测试</title>
+    <link href="https://faradays-studio.gitee.io/202302191053/"/>
+    <id>https://faradays-studio.gitee.io/202302191053/</id>
+    <published>2023-02-19T02:53:19.000Z</published>
+    <updated>2023-02-19T03:37:30.314Z</updated>
+    
+    <content type="html"><![CDATA[<p>前一段时间，老电脑主机老是莫名其妙死机，因此在淘宝上重新组装了一台主机。可是二手机器的稳定性难以保障，网友说可以进行<code>烤机</code>测试来检验机器散热情况，以此反映机器的稳定性。</p><h1 id="烤机测试方法"><a href="#烤机测试方法" class="headerlink" title="烤机测试方法"></a><code>烤机</code>测试方法</h1><ol><li><p>运行<code>AIDA64 Extreme</code>程序，点击<code>工具</code>菜单下的<code>系统稳定性测试(S)</code>，如下图：</p><p> <img src="/static/img/20230219-%E7%94%B5%E8%84%91%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%84/1-AIDA64%E8%8F%9C%E5%8D%95%E7%95%8C%E9%9D%A2.png" alt="打开界面"></p></li><li><p>在弹窗中，左上方选择需要测试的项目；<br> <img src="/static/img/20230219-%E7%94%B5%E8%84%91%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%84/2-AIDA64%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%E7%95%8C%E9%9D%A2.png" alt="选择测试项目"></p></li><li><p>点击弹窗下方工具栏上的<code>Preferences</code>按钮，选择最多10个温度曲线的颜色，确认后点击<code>OK</code>返回；</p></li><li><p>点击弹窗下方工具栏上的<code>Start</code>按钮，测试开始；</p></li><li><p>测试运行过程中注意观察各个部件的温度，如出现机器异响等情况立刻点击<code>Stop</code>按钮终止；或等待大约 10～15 分钟后，也可以点击<code>Stop</code>按钮终止测试。</p><p> <img src="/static/img/20230219-%E7%94%B5%E8%84%91%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%84/3-AIDA64%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C.png" alt="选择测试项目"></p></li></ol><h1 id="性能得分测试"><a href="#性能得分测试" class="headerlink" title="性能得分测试"></a>性能得分测试</h1><h2 id="鲁大师性能得分测试"><a href="#鲁大师性能得分测试" class="headerlink" title="鲁大师性能得分测试"></a>鲁大师性能得分测试</h2><ol><li><p>打开鲁大师，点击顶部的<code>性能测试</code>按钮；</p></li><li><p>在切换出现的窗口中，默认显示为<code>电脑性能测试</code>页，点击该页面中的<code>开始测评</code>，等待结束即可。</p><p> <img src="/static/img/20230219-%E7%94%B5%E8%84%91%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%84/4-%E9%B2%81%E5%A4%A7%E5%B8%88%E6%B5%8B%E8%AF%84%E5%BE%97%E5%88%86.png" alt="选择测试项目"></p></li></ol><h2 id="Windows-自带的性能得分测试"><a href="#Windows-自带的性能得分测试" class="headerlink" title="Windows 自带的性能得分测试"></a>Windows 自带的性能得分测试</h2><ol><li><p>点击<code>文件资源管理器</code>（或开始菜单中的<code>计算机</code>），检查当前鼠标选中左侧的<code>计算机</code>；</p></li><li><p>点击左上方工具栏的<code>系统属性</code>快捷命令，在弹窗中部找到<strong>系统</strong>栏目下的<strong>分级</strong>项，点击<code>Windows体验指数</code>即可开展得分测试。<br> <img src="/static/img/20230219-%E7%94%B5%E8%84%91%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%84/6-Windows%E6%B5%8B%E8%AF%84%E5%BE%97%E5%88%86.png" alt="选择测试项目"></p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;前一段时间，老电脑主机老是莫名其妙死机，因此在淘宝上重新组装了一台主机。可是二手机器的稳定性难以保障，网友说可以进行&lt;code&gt;烤机&lt;/code&gt;测试来检验机器散热情况，以此反映机器的稳定性。&lt;/p&gt;
+&lt;h1 id=&quot;烤机测试方法&quot;&gt;&lt;a href=&quot;#烤机测试方法&quot; cl
+      
+    
+    </summary>
+    
+    
+      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
+    
+    
+      <category term="AIDA64" scheme="https://faradays-studio.gitee.io/tags/AIDA64/"/>
+    
+      <category term="电脑" scheme="https://faradays-studio.gitee.io/tags/%E7%94%B5%E8%84%91/"/>
+    
+      <category term="烤机" scheme="https://faradays-studio.gitee.io/tags/%E7%83%A4%E6%9C%BA/"/>
+    
+      <category term="稳定性" scheme="https://faradays-studio.gitee.io/tags/%E7%A8%B3%E5%AE%9A%E6%80%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>office邮件合并的使用方法</title>
@@ -682,39 +715,6 @@
       <category term="配置" scheme="https://faradays-studio.gitee.io/tags/%E9%85%8D%E7%BD%AE/"/>
     
       <category term="aria2" scheme="https://faradays-studio.gitee.io/tags/aria2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>fzf 的安装与配置</title>
-    <link href="https://faradays-studio.gitee.io/202106072338/"/>
-    <id>https://faradays-studio.gitee.io/202106072338/</id>
-    <published>2021-06-07T15:38:59.000Z</published>
-    <updated>2021-06-07T15:46:59.026Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h2><ol><li><p>安装 <strong>fzf</strong>  （<a href="https://github.com/junegunn/fzf，输入模糊的关键词来定位文件或文件；**源代码就是安装程序**，因此需要选择好路径）">https://github.com/junegunn/fzf，输入模糊的关键词来定位文件或文件；**源代码就是安装程序**，因此需要选择好路径）</a></p><pre><code class="sh">sucd /usr/localgit clone --depth 1 https://github.com/junegunn/fzf.git./fzf/install</code></pre></li><li><p>关联系统（默认会自动关联，可以添加到个人自定义的<strong>全局设置</strong>文件 <code>vim /etc/profile.d/hhjos6.sh</code> 中）</p><pre><code class="sh"># fzf    if [[ ! &quot;$PATH&quot; == */usr/local/fzf/bin* ]]; then      export PATH=&quot;$&#123;PATH:+$&#123;PATH&#125;:&#125;/usr/local/fzf/bin&quot;    fi    # Auto-completion[[ $- == *i* ]] &amp;&amp; source &quot;/usr/local/fzf/shell/completion.bash&quot; 2&gt; /dev/null    # Key bindingssource &quot;/usr/local/fzf/shell/key-bindings.bash&quot;</code></pre></li></ol><pre><code># fzf 其实底层是调用的 Unix 系统 `find` 命令，也可以使用 fd 或 ag 来代替# export FZF_DEFAULT_COMMAND=&quot;fd --exclude=&#123;.git,.idea,.vscode,.sass-cache,node_modules,build&#125; --type f&quot;export FZF_DEFAULT_COMMAND=&#39;ag --hidden --ignore .git -l -g &quot;&quot;&#39;# 界面展示export FZF_DEFAULT_OPTS=&quot;--height 30% --layout=reverse --preview &#39;(highlight -O ansi &#123;&#125; || cat &#123;&#125;) 2&gt; /dev/null | head -100&#39;&quot;# 触发命令行补全(默认是 **，一般不用修改)# FZF_COMPLETION_TRIGGER```</code></pre><blockquote><p>更多用法见参考文献。</p></blockquote><ol start="3"><li><p>配置安装高亮插件</p><ul><li>yum install highlight</li></ul></li><li><p>配置到 vim</p><pre><code class="sh"># 裸装cp /usr/local/fzf/plugin/fzf.vim /usr/share/vim/vim74/pluginvim /etc/vimrc    set rtp+=/usr/local/fzf/# 基于 vim-plug 插件系统Plug &#39;/usr/local/fzf/bin/fzf&#39;Plug &#39;/usr/local/fzf/plugin/fzf.vim&#39;</code></pre></li></ol><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol><li><p>junegunn.<code>fzf - a command-line fuzzy finder</code>[EB/OL].<a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a>, 2021/03/03.</p></li><li><p>Ein Verne.<code>每天学习一个命令：fzf 使用笔记</code>[EB/OL].<a href="http://einverne.github.io/post/2019/08/fzf-usage.html">http://einverne.github.io/post/2019/08/fzf-usage.html</a>, 2021/03/03.</p></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;安装与配置&quot;&gt;&lt;a href=&quot;#安装与配置&quot; class=&quot;headerlink&quot; title=&quot;安装与配置&quot;&gt;&lt;/a&gt;安装与配置&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;安装 &lt;strong&gt;fzf&lt;/strong&gt;  （&lt;a href=&quot;https://github
-      
-    
-    </summary>
-    
-    
-      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
-    
-    
-      <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
-    
-      <category term="安装" scheme="https://faradays-studio.gitee.io/tags/%E5%AE%89%E8%A3%85/"/>
-    
-      <category term="配置" scheme="https://faradays-studio.gitee.io/tags/%E9%85%8D%E7%BD%AE/"/>
-    
-      <category term="fzf" scheme="https://faradays-studio.gitee.io/tags/fzf/"/>
     
   </entry>
   
