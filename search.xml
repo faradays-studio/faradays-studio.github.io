@@ -344,7 +344,7 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
   <entry>
     <title>Hello World</title>
     <url>/202008090000/</url>
-    <content><![CDATA[<p>世界，你好。</p>
+    <content><![CDATA[<p>你好。</p>
 ]]></content>
       <categories>
         <category>星星心事</category>
