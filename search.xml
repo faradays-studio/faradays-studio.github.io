@@ -342,6 +342,22 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
       </tags>
   </entry>
   <entry>
+    <title>Hello World（世界，你好）</title>
+    <url>/202008090000/</url>
+    <content><![CDATA[<p>世界，你好！我是一名低微到尘埃里的普通人，曾经幻想过成为一名科学家，为国家科技事业贡献力量，然后我并没有这样的超凡的智商；我成为了一名普通的工程师，我克服了很多很多的困难，在不同的岗位上也取得了一些成绩，然而，我的缺点和遇到的困难，仍然很多，有些时候，差点将我打倒了！</p>
+<p>同龄的同事，不少人获得了职务上的升迁，不少人获得了名誉上的进步，我也不想就这样放弃，不想放任自我，因此我也要在这里尝试发出我自己的声音，我要进步，我要追求卓越！</p>
+<p>世界，你好。社会，你好。我一直都很期盼见到明天的太阳，愿美好的生活终将来临！</p>
+]]></content>
+      <categories>
+        <category>星星心事</category>
+      </categories>
+      <tags>
+        <tag>日志</tag>
+        <tag>你好</tag>
+        <tag>追求卓越</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Windows 批处理的字符运算（未完待续）</title>
     <url>/202008200927/</url>
     <content><![CDATA[<p>字符运算历来是编程中的重要内容，如何拼接字符，如何截取字符，如何判断字符是否存在，如何判断两个字符串是否相同，成为了编程任务中的重要环节。因此，我结合网络的资料和个人的实践经验来总结一下。</p>
@@ -5242,6 +5258,36 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
         <tag>电脑</tag>
         <tag>烤机</tag>
         <tag>稳定性</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Office 邮件合并的 If 运算</title>
+    <url>/202303022313/</url>
+    <content><![CDATA[<blockquote>
+<p>去年，由于组织开展问卷星考试，有人提出希望将考卷进行存档；考虑到下载考卷点击操作繁琐、而且格式不好看。我决定将下载后的文档进行格式化处理，并使用邮件合并功能自动生成所有参考人员的考卷。</p>
+</blockquote>
+<h2 id="邮件合并的-IF-条件运算"><a href="#邮件合并的-IF-条件运算" class="headerlink" title="邮件合并的 IF 条件运算"></a>邮件合并的 IF 条件运算</h2><p>通过 IF 运算可以实现根据当前获得的数据来切换显示的效果。格式为：{ <code>IF</code> { <code>MERGEFIELD</code> <strong>字段名</strong> } = <code>条件</code> <code>&quot;满足条件时的显示值&quot;</code> <code>&quot;不满足条件时的显示值&quot;</code> }。示例如下：</p>
+<pre><code class="sh">&#123; IF &#123; MERGEFIELD M_2 &#125; = 1 &quot; ■ &quot; &quot; □ &quot; &#125;</code></pre>
+<h2 id="邮件合并的多个-IF-合并运算"><a href="#邮件合并的多个-IF-合并运算" class="headerlink" title="邮件合并的多个 IF 合并运算"></a>邮件合并的多个 IF 合并运算</h2><p>可以将多个 IF 计算的结果进行相加或者进行结果字符拼接，然后再在外部套接一层IF语句实现条件运算。格式为：{ <code>IF</code> “{ <code>IF</code> { <code>MERGEFIELD</code> <strong>字段1</strong> } = <code>条件1</code> <code>&quot;结果1-YES&quot;</code> <code>&quot;结果1-NO&quot;</code> }{ <code>IF</code> { <code>MERGEFIELD</code> <strong>字段2</strong> } = <code>条件2</code> <code>&quot;结果2-YES&quot;</code> <code>&quot;结果2-NO&quot;</code> }” = <code>&quot;条件&quot;</code> <code>&quot;满足条件时的显示值&quot;</code> <code>&quot;不满足条件时的显示值&quot;</code> }。示例如下：</p>
+<pre><code class="sh">&#123; IF &quot;&#123;IF &#123;MERGEFIELD M_15A&#125; = 1  &quot;A&quot; &quot;-&quot;&#125;&#123;IF &#123;MERGEFIELD M_15B&#125; = 1  &quot;B&quot; &quot;-&quot;&#125;&quot;= &quot;AB&quot;  &quot;回答正确（+5分）&quot; &quot;回答错误（0分）&quot; &#125;</code></pre>
+<blockquote>
+<p>为使得多个、多层 <code>IF</code> 运算结构的域代码易读，建议 Excel 表格中的标题字段尽可能简短易懂，如上述的<strong>M_15A</strong>、<strong>M_15B</strong> 分别表征第15道题目的A选项、B选项有无勾选的结果字段。</p>
+</blockquote>
+<h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><ol>
+<li><a href="../202208072306">邮件合并的基础知识</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>Word</tag>
+        <tag>Office</tag>
+        <tag>Excel</tag>
+        <tag>邮件合并</tag>
+        <tag>IF</tag>
+        <tag>条件</tag>
+        <tag>运算</tag>
       </tags>
   </entry>
 </search>

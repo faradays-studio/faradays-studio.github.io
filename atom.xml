@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://faradays-studio.gitee.io/"/>
-  <updated>2023-02-19T04:53:56.281Z</updated>
+  <updated>2023-03-02T15:42:46.786Z</updated>
   <id>https://faradays-studio.gitee.io/</id>
   
   <author>
@@ -15,6 +15,47 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Office 邮件合并的 If 运算</title>
+    <link href="https://faradays-studio.gitee.io/202303022313/"/>
+    <id>https://faradays-studio.gitee.io/202303022313/</id>
+    <published>2023-03-02T15:13:29.000Z</published>
+    <updated>2023-03-02T15:42:46.786Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>去年，由于组织开展问卷星考试，有人提出希望将考卷进行存档；考虑到下载考卷点击操作繁琐、而且格式不好看。我决定将下载后的文档进行格式化处理，并使用邮件合并功能自动生成所有参考人员的考卷。</p></blockquote><h2 id="邮件合并的-IF-条件运算"><a href="#邮件合并的-IF-条件运算" class="headerlink" title="邮件合并的 IF 条件运算"></a>邮件合并的 IF 条件运算</h2><p>通过 IF 运算可以实现根据当前获得的数据来切换显示的效果。格式为：{ <code>IF</code> { <code>MERGEFIELD</code> <strong>字段名</strong> } = <code>条件</code> <code>&quot;满足条件时的显示值&quot;</code> <code>&quot;不满足条件时的显示值&quot;</code> }。示例如下：</p><pre><code class="sh">&#123; IF &#123; MERGEFIELD M_2 &#125; = 1 &quot; ■ &quot; &quot; □ &quot; &#125;</code></pre><h2 id="邮件合并的多个-IF-合并运算"><a href="#邮件合并的多个-IF-合并运算" class="headerlink" title="邮件合并的多个 IF 合并运算"></a>邮件合并的多个 IF 合并运算</h2><p>可以将多个 IF 计算的结果进行相加或者进行结果字符拼接，然后再在外部套接一层IF语句实现条件运算。格式为：{ <code>IF</code> “{ <code>IF</code> { <code>MERGEFIELD</code> <strong>字段1</strong> } = <code>条件1</code> <code>&quot;结果1-YES&quot;</code> <code>&quot;结果1-NO&quot;</code> }{ <code>IF</code> { <code>MERGEFIELD</code> <strong>字段2</strong> } = <code>条件2</code> <code>&quot;结果2-YES&quot;</code> <code>&quot;结果2-NO&quot;</code> }” = <code>&quot;条件&quot;</code> <code>&quot;满足条件时的显示值&quot;</code> <code>&quot;不满足条件时的显示值&quot;</code> }。示例如下：</p><pre><code class="sh">&#123; IF &quot;&#123;IF &#123;MERGEFIELD M_15A&#125; = 1  &quot;A&quot; &quot;-&quot;&#125;&#123;IF &#123;MERGEFIELD M_15B&#125; = 1  &quot;B&quot; &quot;-&quot;&#125;&quot;= &quot;AB&quot;  &quot;回答正确（+5分）&quot; &quot;回答错误（0分）&quot; &#125;</code></pre><blockquote><p>为使得多个、多层 <code>IF</code> 运算结构的域代码易读，建议 Excel 表格中的标题字段尽可能简短易懂，如上述的<strong>M_15A</strong>、<strong>M_15B</strong> 分别表征第15道题目的A选项、B选项有无勾选的结果字段。</p></blockquote><h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><ol><li><a href="../202208072306">邮件合并的基础知识</a></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;去年，由于组织开展问卷星考试，有人提出希望将考卷进行存档；考虑到下载考卷点击操作繁琐、而且格式不好看。我决定将下载后的文档进行格式化处理，并使用邮件合并功能自动生成所有参考人员的考卷。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;邮件合并的
+      
+    
+    </summary>
+    
+    
+      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
+    
+    
+      <category term="Word" scheme="https://faradays-studio.gitee.io/tags/Word/"/>
+    
+      <category term="Office" scheme="https://faradays-studio.gitee.io/tags/Office/"/>
+    
+      <category term="Excel" scheme="https://faradays-studio.gitee.io/tags/Excel/"/>
+    
+      <category term="邮件合并" scheme="https://faradays-studio.gitee.io/tags/%E9%82%AE%E4%BB%B6%E5%90%88%E5%B9%B6/"/>
+    
+      <category term="IF" scheme="https://faradays-studio.gitee.io/tags/IF/"/>
+    
+      <category term="条件" scheme="https://faradays-studio.gitee.io/tags/%E6%9D%A1%E4%BB%B6/"/>
+    
+      <category term="运算" scheme="https://faradays-studio.gitee.io/tags/%E8%BF%90%E7%AE%97/"/>
+    
+  </entry>
   
   <entry>
     <title>OneNote笔记本密码破解工具推荐</title>
@@ -677,42 +718,6 @@
       <category term="双因子" scheme="https://faradays-studio.gitee.io/tags/%E5%8F%8C%E5%9B%A0%E5%AD%90/"/>
     
       <category term="网络安全" scheme="https://faradays-studio.gitee.io/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>tmux 的编译安装</title>
-    <link href="https://faradays-studio.gitee.io/202106281924/"/>
-    <id>https://faradays-studio.gitee.io/202106281924/</id>
-    <published>2021-06-28T11:24:26.000Z</published>
-    <updated>2021-06-28T11:26:22.086Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li><p>正常情况下，直接使用 <code>yum install tmux</code> 即可完成安装。</p></li><li><p>安装支持环境</p><pre><code class="shell">yum -y install libtermcap-devel ncurses-devel libevent-devel readline-devel# tmux depends on libevent 2.x(系统安装的版本为 1.4.13)git clone https://gitee.com/mirrors/libevent.gitcd libevent./configuremakemake verify   # (optional)make install</code></pre></li><li><p>下载源码</p><pre><code class="shell">cd /home/commongit clone https://gitee.com/mirrors/tmux.git#git clone https://github.com/tmux/tmux.git</code></pre></li><li><p>编译安装</p><pre><code class="sh">cd tmuxsh autogen.sh./configuremakemake install</code></pre></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;正常情况下，直接使用 &lt;code&gt;yum install tmux&lt;/code&gt; 即可完成安装。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;安装支持环境&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;shell&quot;&gt;yum -y install libtermcap-
-      
-    
-    </summary>
-    
-    
-      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
-    
-    
-      <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
-    
-      <category term="安装" scheme="https://faradays-studio.gitee.io/tags/%E5%AE%89%E8%A3%85/"/>
-    
-      <category term="编译" scheme="https://faradays-studio.gitee.io/tags/%E7%BC%96%E8%AF%91/"/>
-    
-      <category term="tmux" scheme="https://faradays-studio.gitee.io/tags/tmux/"/>
     
   </entry>
   
