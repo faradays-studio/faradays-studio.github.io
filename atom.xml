@@ -351,15 +351,15 @@
       <category term="工作中的魔法" scheme="https://faradays-studio.gitee.io/categories/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E9%AD%94%E6%B3%95/"/>
     
     
+      <category term="正态分布" scheme="https://faradays-studio.gitee.io/tags/%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/"/>
+    
       <category term="Excel" scheme="https://faradays-studio.gitee.io/tags/Excel/"/>
     
-      <category term="正态分布" scheme="https://faradays-studio.gitee.io/tags/%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/"/>
+      <category term="散点图" scheme="https://faradays-studio.gitee.io/tags/%E6%95%A3%E7%82%B9%E5%9B%BE/"/>
     
       <category term="NORMDIST" scheme="https://faradays-studio.gitee.io/tags/NORMDIST/"/>
     
       <category term="柱形图" scheme="https://faradays-studio.gitee.io/tags/%E6%9F%B1%E5%BD%A2%E5%9B%BE/"/>
-    
-      <category term="散点图" scheme="https://faradays-studio.gitee.io/tags/%E6%95%A3%E7%82%B9%E5%9B%BE/"/>
     
   </entry>
   
@@ -386,15 +386,15 @@
       <category term="工作中的魔法" scheme="https://faradays-studio.gitee.io/categories/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E9%AD%94%E6%B3%95/"/>
     
     
-      <category term="Excel" scheme="https://faradays-studio.gitee.io/tags/Excel/"/>
-    
       <category term="正态分布" scheme="https://faradays-studio.gitee.io/tags/%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/"/>
-    
-      <category term="散点图" scheme="https://faradays-studio.gitee.io/tags/%E6%95%A3%E7%82%B9%E5%9B%BE/"/>
     
       <category term="Q-Q图" scheme="https://faradays-studio.gitee.io/tags/Q-Q%E5%9B%BE/"/>
     
       <category term="中位数" scheme="https://faradays-studio.gitee.io/tags/%E4%B8%AD%E4%BD%8D%E6%95%B0/"/>
+    
+      <category term="Excel" scheme="https://faradays-studio.gitee.io/tags/Excel/"/>
+    
+      <category term="散点图" scheme="https://faradays-studio.gitee.io/tags/%E6%95%A3%E7%82%B9%E5%9B%BE/"/>
     
   </entry>
   
@@ -673,9 +673,9 @@
       <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
     
     
-      <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
-    
       <category term="bash" scheme="https://faradays-studio.gitee.io/tags/bash/"/>
+    
+      <category term="Linux" scheme="https://faradays-studio.gitee.io/tags/Linux/"/>
     
       <category term="Solaris" scheme="https://faradays-studio.gitee.io/tags/Solaris/"/>
     
