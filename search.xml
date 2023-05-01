@@ -5273,9 +5273,7 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
 <blockquote>
 <p>为使得多个、多层 <code>IF</code> 运算结构的域代码易读，建议 Excel 表格中的标题字段尽可能简短易懂，如上述的<strong>M_15A</strong>、<strong>M_15B</strong> 分别表征第15道题目的A选项、B选项有无勾选的结果字段。</p>
 </blockquote>
-<h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><ol>
-<li><a href="../202208072306">邮件合并的基础知识</a></li>
-</ol>
+<h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><p><a href="../202208072306">邮件合并的基础知识</a></p>
 ]]></content>
       <categories>
         <category>电脑爱好者</category>
@@ -5288,6 +5286,111 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
         <tag>IF</tag>
         <tag>条件</tag>
         <tag>运算</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows 7 + Python 3.8 如何部署 Stable Diffusion 环境？</title>
+    <url>/202305012051/</url>
+    <content><![CDATA[<h2 id="操作系统配置"><a href="#操作系统配置" class="headerlink" title="操作系统配置"></a>操作系统配置</h2><ol>
+<li>升级显卡驱动</li>
+</ol>
+<p>Stable Diffusion WebUI 要求 CUDA 版本为 <strong>11.4</strong>，通过查询 <a href="https://www.nvidia.cn/Download/Find.aspx?lang=cn">https://www.nvidia.cn/Download/Find.aspx?lang=cn</a> 找到本机对应的硬件驱动，安装升级。</p>
+<ol start="2">
+<li><p>安装 Python 3.8.10。可以通过官网下载 setup 包进行安装。</p>
+<ul>
+<li>建议人工下载安装 <code>torch-1.13.1+cu117-cp38-cp38-win_amd64.whl</code> 包，阿里云地址为 <a href="https://mirrors.aliyun.com/pytorch-wheels/cu117/，下载完成后人工安装到">https://mirrors.aliyun.com/pytorch-wheels/cu117/，下载完成后人工安装到</a> Python 环境中。</li>
+</ul>
+</li>
+</ol>
+<pre><code>- 安装 xformers 插件，解决 `Installation of xformers is not supported in this version of Python.` 错误。
+
+    ```
+    D:\stable-diffusion-webui\venv\Scripts\python.exe -m pip install   xformers==0.0.16
+
+    # 检查功能是否正常
+    D:\stable-diffusion-webui\venv\Scripts\python.exe  -m xformers.info
+    ```</code></pre><h2 id="Stable-Diffusion-环境配置"><a href="#Stable-Diffusion-环境配置" class="headerlink" title="Stable Diffusion 环境配置"></a>Stable Diffusion 环境配置</h2><ol>
+<li><p>下载 stable-diffusion-webui 文件，如下：</p>
+<pre><code class="shell"> cd D:\
+ git clone https://gitee.com/faradays-studio/stable-diffusion-webui</code></pre>
+</li>
+</ol>
+<blockquote>
+<p>这是假设文件的根路径为 <code>D:\</code> ，后续调用时不再赘述。</p>
+</blockquote>
+<ol start="2">
+<li>对 <code>D:\stable-diffusion-webui\webui-user.bat</code> 修改以下变量。</li>
+</ol>
+<pre><code class="shell">set PYTHON=&quot;C:\Program Files\Python38\python.exe&quot;
+set COMMANDLINE_ARGS=--xformers --lowvram</code></pre>
+<ol start="3">
+<li><p>对 <code>&quot;D:\stable-diffusion-webui\launch.py&quot;</code> 进行修改。</p>
+<ul>
+<li><p>删除 Python 版本检测：将 <strong>prepare_environment</strong> 函数中 <code>if (not is_installed(&quot;xformers&quot;) or args.reinstall_xformers) and args.xformers:</code> 下的 <strong>else</strong> 子句进行注释。</p>
+</li>
+<li><p>更改 GitHub 路径：将 <strong>prepare_environment</strong> 函数中的每个 <code>https://github.com/</code> 替换为 <code>https://ghproxy.com/https://github.com/</code> 。</p>
+</li>
+<li><p>更改 torch==1.13.1+cu117 下载路径：将 <code>torch_command = os.environ.get(&#39;TORCH_COMMAND&#39;, &quot;pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 --extra-index-url https://download.pytorch.org/whl/cu117&quot;)</code> 并修改为 <code>torch_command = os.environ.get(&#39;TORCH_COMMAND&#39;, &quot;pip install torch==1.13.1 torchvision==0.14.1&quot;)</code>。</p>
+<blockquote>
+<p>如果安装过程中出现异常，重命名 <code>D:\stable-diffusion-webui\venv</code> 文件夹，即可重新安装相关环境。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="Stable-Diffusion-模型导入"><a href="#Stable-Diffusion-模型导入" class="headerlink" title="Stable Diffusion 模型导入"></a>Stable Diffusion 模型导入</h2><ol>
+<li><p>下载基础模型文件，并拷贝到 <code>D:\stable-diffusion-webui\models\Stable-diffusion</code> 下。</p>
+<pre><code class="shell"> https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.ckpt</code></pre>
+</li>
+<li><p>添加 lora 模型</p>
+<ul>
+<li><p>下载基础模型 ChilloutMix （<code>https://www.123pan.com/s/sKd9-LkJc.html</code>） ，移动至 <code>*\stable-diffusion-webui\models\Stable-diffusion</code> 目录。</p>
+</li>
+<li><p>下载需要的角色模型，如 <code>taiwanDollLikeness_v10</code>，并移动至 <code>*\stable-diffusion-webui\models\Lora</code> 目录。</p>
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>重启Stable Diffusion WebUI主界面，然后在左上角可以加载使用基础模型 ChilloutMix ；如果没有必要使用东方人脸模型，直接使用 v1-5-pruned 基础模型也是 OK 的。</p>
+</blockquote>
+<ol start="3">
+<li>（可选）下载 <code>https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/codeformer.pth</code> 到 <code>D:\stable-diffusion-webui\models\Codeformer\codeformer-v0.1.0.pth</code> 。</li>
+</ol>
+<h2 id="Stable-Diffusion-生成图片"><a href="#Stable-Diffusion-生成图片" class="headerlink" title="Stable Diffusion 生成图片"></a>Stable Diffusion 生成图片</h2><ol>
+<li>修改  <code>webui-user.bat</code> 文件以下参数：</li>
+</ol>
+<pre><code class="shell">set PYTHON=&quot;C:\Program Files\Python38\python.exe&quot;
+set PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:32
+set COMMANDLINE_ARGS=--lowvram --xformers --force-enable-xformers --precision full  --no-half --skip-python-version-check --skip-torch-cuda-test --port 6006 --disable-safe-unpickle --opt-split-attention --always-batch-cond-uncond</code></pre>
+<blockquote>
+<p>注意，上边修改了端口为 6006，后续网页访问时注意更改。</p>
+</blockquote>
+<ol start="2">
+<li>运行 <code>webui-user.bat</code>（首次将初始化安装环境，慢慢等待若干小时即可）。</li>
+</ol>
+<p>若出现 <code>RuntimeError: PytorchStreamReader failed reading zip archive: failed finding central directory</code>错误，这是 pytorch 1.6 起 torch.save 增加了参数所致，而 torch.load 使用的是旧格式，修改函数即可。即 <strong>D:\stable-diffusion-webui\venv\lib\site-packages\torch\serialization.py</strong><br>    将 <code>_use_new_zipfile_serialization: bool = True</code> 修改为 <code>_use_new_zipfile_serialization: bool = False</code> ，并重启 webui-user.bat 。<br><code>D:\stable-diffusion-webui\venv\Lib\site-packages\torch\storage.py</code> 不需要更改。</p>
+<ol start="3">
+<li><p>访问系统 <a href="http://127.0.0.1:6006">http://127.0.0.1:6006</a> 。</p>
+<ul>
+<li><p>在提示词处输入相关语句，如 <code>masterpiece, best quality,Beautiful blonde with red eyes ,dress ,walking ,on the beach,night</code>，设置步骤数为 25~30，点击开始即可。</p>
+<p><img src="/static/img/20230501-StableDiffusion/00050-20230405115920-Dreamlike_Protogen_8.6_Infinity_3986423254.jpg" alt="演示效果1"></p>
+<p><img src="/static/img/20230501-StableDiffusion/00054-20230405131705-Dreamlike_Protogen_8.6_Infinity_969991889.jpg" alt="演示效果2"></p>
+</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Python</tag>
+        <tag>Stable Diffusion</tag>
+        <tag>AI</tag>
+        <tag>生成式</tag>
+        <tag>画图</tag>
       </tags>
   </entry>
 </search>

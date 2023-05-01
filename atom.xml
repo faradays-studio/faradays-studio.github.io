@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://faradays-studio.gitee.io/"/>
-  <updated>2023-03-02T15:42:46.786Z</updated>
+  <updated>2023-05-01T13:29:00.767Z</updated>
   <id>https://faradays-studio.gitee.io/</id>
   
   <author>
@@ -17,13 +17,52 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Windows 7 + Python 3.8 如何部署 Stable Diffusion 环境？</title>
+    <link href="https://faradays-studio.gitee.io/202305012051/"/>
+    <id>https://faradays-studio.gitee.io/202305012051/</id>
+    <published>2023-05-01T12:51:57.000Z</published>
+    <updated>2023-05-01T13:29:00.767Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="操作系统配置"><a href="#操作系统配置" class="headerlink" title="操作系统配置"></a>操作系统配置</h2><ol><li>升级显卡驱动</li></ol><p>Stable Diffusion WebUI 要求 CUDA 版本为 <strong>11.4</strong>，通过查询 <a href="https://www.nvidia.cn/Download/Find.aspx?lang=cn">https://www.nvidia.cn/Download/Find.aspx?lang=cn</a> 找到本机对应的硬件驱动，安装升级。</p><ol start="2"><li><p>安装 Python 3.8.10。可以通过官网下载 setup 包进行安装。</p><ul><li>建议人工下载安装 <code>torch-1.13.1+cu117-cp38-cp38-win_amd64.whl</code> 包，阿里云地址为 <a href="https://mirrors.aliyun.com/pytorch-wheels/cu117/，下载完成后人工安装到">https://mirrors.aliyun.com/pytorch-wheels/cu117/，下载完成后人工安装到</a> Python 环境中。</li></ul></li></ol><pre><code>- 安装 xformers 插件，解决 `Installation of xformers is not supported in this version of Python.` 错误。    ```    D:\stable-diffusion-webui\venv\Scripts\python.exe -m pip install   xformers==0.0.16    # 检查功能是否正常    D:\stable-diffusion-webui\venv\Scripts\python.exe  -m xformers.info    ```</code></pre><h2 id="Stable-Diffusion-环境配置"><a href="#Stable-Diffusion-环境配置" class="headerlink" title="Stable Diffusion 环境配置"></a>Stable Diffusion 环境配置</h2><ol><li><p>下载 stable-diffusion-webui 文件，如下：</p><pre><code class="shell"> cd D:\ git clone https://gitee.com/faradays-studio/stable-diffusion-webui</code></pre></li></ol><blockquote><p>这是假设文件的根路径为 <code>D:\</code> ，后续调用时不再赘述。</p></blockquote><ol start="2"><li>对 <code>D:\stable-diffusion-webui\webui-user.bat</code> 修改以下变量。</li></ol><pre><code class="shell">set PYTHON=&quot;C:\Program Files\Python38\python.exe&quot;set COMMANDLINE_ARGS=--xformers --lowvram</code></pre><ol start="3"><li><p>对 <code>&quot;D:\stable-diffusion-webui\launch.py&quot;</code> 进行修改。</p><ul><li><p>删除 Python 版本检测：将 <strong>prepare_environment</strong> 函数中 <code>if (not is_installed(&quot;xformers&quot;) or args.reinstall_xformers) and args.xformers:</code> 下的 <strong>else</strong> 子句进行注释。</p></li><li><p>更改 GitHub 路径：将 <strong>prepare_environment</strong> 函数中的每个 <code>https://github.com/</code> 替换为 <code>https://ghproxy.com/https://github.com/</code> 。</p></li><li><p>更改 torch==1.13.1+cu117 下载路径：将 <code>torch_command = os.environ.get(&#39;TORCH_COMMAND&#39;, &quot;pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 --extra-index-url https://download.pytorch.org/whl/cu117&quot;)</code> 并修改为 <code>torch_command = os.environ.get(&#39;TORCH_COMMAND&#39;, &quot;pip install torch==1.13.1 torchvision==0.14.1&quot;)</code>。</p><blockquote><p>如果安装过程中出现异常，重命名 <code>D:\stable-diffusion-webui\venv</code> 文件夹，即可重新安装相关环境。</p></blockquote></li></ul></li></ol><h2 id="Stable-Diffusion-模型导入"><a href="#Stable-Diffusion-模型导入" class="headerlink" title="Stable Diffusion 模型导入"></a>Stable Diffusion 模型导入</h2><ol><li><p>下载基础模型文件，并拷贝到 <code>D:\stable-diffusion-webui\models\Stable-diffusion</code> 下。</p><pre><code class="shell"> https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.ckpt</code></pre></li><li><p>添加 lora 模型</p><ul><li><p>下载基础模型 ChilloutMix （<code>https://www.123pan.com/s/sKd9-LkJc.html</code>） ，移动至 <code>*\stable-diffusion-webui\models\Stable-diffusion</code> 目录。</p></li><li><p>下载需要的角色模型，如 <code>taiwanDollLikeness_v10</code>，并移动至 <code>*\stable-diffusion-webui\models\Lora</code> 目录。</p></li></ul></li></ol><blockquote><p>重启Stable Diffusion WebUI主界面，然后在左上角可以加载使用基础模型 ChilloutMix ；如果没有必要使用东方人脸模型，直接使用 v1-5-pruned 基础模型也是 OK 的。</p></blockquote><ol start="3"><li>（可选）下载 <code>https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/codeformer.pth</code> 到 <code>D:\stable-diffusion-webui\models\Codeformer\codeformer-v0.1.0.pth</code> 。</li></ol><h2 id="Stable-Diffusion-生成图片"><a href="#Stable-Diffusion-生成图片" class="headerlink" title="Stable Diffusion 生成图片"></a>Stable Diffusion 生成图片</h2><ol><li>修改  <code>webui-user.bat</code> 文件以下参数：</li></ol><pre><code class="shell">set PYTHON=&quot;C:\Program Files\Python38\python.exe&quot;set PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:32set COMMANDLINE_ARGS=--lowvram --xformers --force-enable-xformers --precision full  --no-half --skip-python-version-check --skip-torch-cuda-test --port 6006 --disable-safe-unpickle --opt-split-attention --always-batch-cond-uncond</code></pre><blockquote><p>注意，上边修改了端口为 6006，后续网页访问时注意更改。</p></blockquote><ol start="2"><li>运行 <code>webui-user.bat</code>（首次将初始化安装环境，慢慢等待若干小时即可）。</li></ol><p>若出现 <code>RuntimeError: PytorchStreamReader failed reading zip archive: failed finding central directory</code>错误，这是 pytorch 1.6 起 torch.save 增加了参数所致，而 torch.load 使用的是旧格式，修改函数即可。即 <strong>D:\stable-diffusion-webui\venv\lib\site-packages\torch\serialization.py</strong><br>    将 <code>_use_new_zipfile_serialization: bool = True</code> 修改为 <code>_use_new_zipfile_serialization: bool = False</code> ，并重启 webui-user.bat 。<br><code>D:\stable-diffusion-webui\venv\Lib\site-packages\torch\storage.py</code> 不需要更改。</p><ol start="3"><li><p>访问系统 <a href="http://127.0.0.1:6006">http://127.0.0.1:6006</a> 。</p><ul><li><p>在提示词处输入相关语句，如 <code>masterpiece, best quality,Beautiful blonde with red eyes ,dress ,walking ,on the beach,night</code>，设置步骤数为 25~30，点击开始即可。</p><p><img src="/static/img/20230501-StableDiffusion/00050-20230405115920-Dreamlike_Protogen_8.6_Infinity_3986423254.jpg" alt="演示效果1"></p><p><img src="/static/img/20230501-StableDiffusion/00054-20230405131705-Dreamlike_Protogen_8.6_Infinity_969991889.jpg" alt="演示效果2"></p></li></ul></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;操作系统配置&quot;&gt;&lt;a href=&quot;#操作系统配置&quot; class=&quot;headerlink&quot; title=&quot;操作系统配置&quot;&gt;&lt;/a&gt;操作系统配置&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;升级显卡驱动&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Stable Diffusion WebUI 要求 C
+      
+    
+    </summary>
+    
+    
+      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
+    
+    
+      <category term="Windows" scheme="https://faradays-studio.gitee.io/tags/Windows/"/>
+    
+      <category term="Python" scheme="https://faradays-studio.gitee.io/tags/Python/"/>
+    
+      <category term="Stable Diffusion" scheme="https://faradays-studio.gitee.io/tags/Stable-Diffusion/"/>
+    
+      <category term="AI" scheme="https://faradays-studio.gitee.io/tags/AI/"/>
+    
+      <category term="生成式" scheme="https://faradays-studio.gitee.io/tags/%E7%94%9F%E6%88%90%E5%BC%8F/"/>
+    
+      <category term="画图" scheme="https://faradays-studio.gitee.io/tags/%E7%94%BB%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Office 邮件合并的 If 运算</title>
     <link href="https://faradays-studio.gitee.io/202303022313/"/>
     <id>https://faradays-studio.gitee.io/202303022313/</id>
     <published>2023-03-02T15:13:29.000Z</published>
-    <updated>2023-03-02T15:42:46.786Z</updated>
+    <updated>2023-03-02T15:45:33.060Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>去年，由于组织开展问卷星考试，有人提出希望将考卷进行存档；考虑到下载考卷点击操作繁琐、而且格式不好看。我决定将下载后的文档进行格式化处理，并使用邮件合并功能自动生成所有参考人员的考卷。</p></blockquote><h2 id="邮件合并的-IF-条件运算"><a href="#邮件合并的-IF-条件运算" class="headerlink" title="邮件合并的 IF 条件运算"></a>邮件合并的 IF 条件运算</h2><p>通过 IF 运算可以实现根据当前获得的数据来切换显示的效果。格式为：{ <code>IF</code> { <code>MERGEFIELD</code> <strong>字段名</strong> } = <code>条件</code> <code>&quot;满足条件时的显示值&quot;</code> <code>&quot;不满足条件时的显示值&quot;</code> }。示例如下：</p><pre><code class="sh">&#123; IF &#123; MERGEFIELD M_2 &#125; = 1 &quot; ■ &quot; &quot; □ &quot; &#125;</code></pre><h2 id="邮件合并的多个-IF-合并运算"><a href="#邮件合并的多个-IF-合并运算" class="headerlink" title="邮件合并的多个 IF 合并运算"></a>邮件合并的多个 IF 合并运算</h2><p>可以将多个 IF 计算的结果进行相加或者进行结果字符拼接，然后再在外部套接一层IF语句实现条件运算。格式为：{ <code>IF</code> “{ <code>IF</code> { <code>MERGEFIELD</code> <strong>字段1</strong> } = <code>条件1</code> <code>&quot;结果1-YES&quot;</code> <code>&quot;结果1-NO&quot;</code> }{ <code>IF</code> { <code>MERGEFIELD</code> <strong>字段2</strong> } = <code>条件2</code> <code>&quot;结果2-YES&quot;</code> <code>&quot;结果2-NO&quot;</code> }” = <code>&quot;条件&quot;</code> <code>&quot;满足条件时的显示值&quot;</code> <code>&quot;不满足条件时的显示值&quot;</code> }。示例如下：</p><pre><code class="sh">&#123; IF &quot;&#123;IF &#123;MERGEFIELD M_15A&#125; = 1  &quot;A&quot; &quot;-&quot;&#125;&#123;IF &#123;MERGEFIELD M_15B&#125; = 1  &quot;B&quot; &quot;-&quot;&#125;&quot;= &quot;AB&quot;  &quot;回答正确（+5分）&quot; &quot;回答错误（0分）&quot; &#125;</code></pre><blockquote><p>为使得多个、多层 <code>IF</code> 运算结构的域代码易读，建议 Excel 表格中的标题字段尽可能简短易懂，如上述的<strong>M_15A</strong>、<strong>M_15B</strong> 分别表征第15道题目的A选项、B选项有无勾选的结果字段。</p></blockquote><h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><ol><li><a href="../202208072306">邮件合并的基础知识</a></li></ol>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>去年，由于组织开展问卷星考试，有人提出希望将考卷进行存档；考虑到下载考卷点击操作繁琐、而且格式不好看。我决定将下载后的文档进行格式化处理，并使用邮件合并功能自动生成所有参考人员的考卷。</p></blockquote><h2 id="邮件合并的-IF-条件运算"><a href="#邮件合并的-IF-条件运算" class="headerlink" title="邮件合并的 IF 条件运算"></a>邮件合并的 IF 条件运算</h2><p>通过 IF 运算可以实现根据当前获得的数据来切换显示的效果。格式为：{ <code>IF</code> { <code>MERGEFIELD</code> <strong>字段名</strong> } = <code>条件</code> <code>&quot;满足条件时的显示值&quot;</code> <code>&quot;不满足条件时的显示值&quot;</code> }。示例如下：</p><pre><code class="sh">&#123; IF &#123; MERGEFIELD M_2 &#125; = 1 &quot; ■ &quot; &quot; □ &quot; &#125;</code></pre><h2 id="邮件合并的多个-IF-合并运算"><a href="#邮件合并的多个-IF-合并运算" class="headerlink" title="邮件合并的多个 IF 合并运算"></a>邮件合并的多个 IF 合并运算</h2><p>可以将多个 IF 计算的结果进行相加或者进行结果字符拼接，然后再在外部套接一层IF语句实现条件运算。格式为：{ <code>IF</code> “{ <code>IF</code> { <code>MERGEFIELD</code> <strong>字段1</strong> } = <code>条件1</code> <code>&quot;结果1-YES&quot;</code> <code>&quot;结果1-NO&quot;</code> }{ <code>IF</code> { <code>MERGEFIELD</code> <strong>字段2</strong> } = <code>条件2</code> <code>&quot;结果2-YES&quot;</code> <code>&quot;结果2-NO&quot;</code> }” = <code>&quot;条件&quot;</code> <code>&quot;满足条件时的显示值&quot;</code> <code>&quot;不满足条件时的显示值&quot;</code> }。示例如下：</p><pre><code class="sh">&#123; IF &quot;&#123;IF &#123;MERGEFIELD M_15A&#125; = 1  &quot;A&quot; &quot;-&quot;&#125;&#123;IF &#123;MERGEFIELD M_15B&#125; = 1  &quot;B&quot; &quot;-&quot;&#125;&quot;= &quot;AB&quot;  &quot;回答正确（+5分）&quot; &quot;回答错误（0分）&quot; &#125;</code></pre><blockquote><p>为使得多个、多层 <code>IF</code> 运算结构的域代码易读，建议 Excel 表格中的标题字段尽可能简短易懂，如上述的<strong>M_15A</strong>、<strong>M_15B</strong> 分别表征第15道题目的A选项、B选项有无勾选的结果字段。</p></blockquote><h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><p><a href="../202208072306">邮件合并的基础知识</a></p>]]></content>
     
     <summary type="html">
     
@@ -681,43 +720,6 @@
       <category term="查询" scheme="https://faradays-studio.gitee.io/tags/%E6%9F%A5%E8%AF%A2/"/>
     
       <category term="方法" scheme="https://faradays-studio.gitee.io/tags/%E6%96%B9%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>google-authenticator 双因子验证</title>
-    <link href="https://faradays-studio.gitee.io/202107312039/"/>
-    <id>https://faradays-studio.gitee.io/202107312039/</id>
-    <published>2021-07-31T12:39:26.000Z</published>
-    <updated>2021-07-31T14:51:50.330Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>日常工作中，经常有人问系统开启双因子验证没有；奈何人穷志短，从网上看到 google-authenticator 支持免费的双因子验证，只要电脑端安装和配置 google-authenticator，就可以通过手机端安装的 Google 身份验证器提供相应的验证码来校验登录访问行为。</p></blockquote><h3 id="程序安装"><a href="#程序安装" class="headerlink" title="程序安装"></a>程序安装</h3><pre><code class="sh">  yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm  yum list google-auth*  yum -y install google-authenticator  vim /etc/pam.d/sshd      # auth        required    pam_sepermit.so      auth required pam_google_authenticator.so  vim /etc/ssh/sshd_config      ChallengeResponseAuthentication yes      # ChallengeResponseAuthentication no      UsePAM yes      AuthenticationMethods publickey,password publickey,keyboard-interactive</code></pre><h3 id="账户验证码功能的配置"><a href="#账户验证码功能的配置" class="headerlink" title="账户验证码功能的配置"></a>账户验证码功能的配置</h3><ol><li><p>生成 root 账户验证码</p><pre><code class="sh">[root@hhjos6 herc]# google-authenticator</code></pre><blockquote><p>  <a href="https://www.google.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth://totp/root@hhjos6%3Fsecret%3D">https://www.google.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth://totp/root@hhjos6%3Fsecret%3D</a>…<br>  Your new secret key is:<br>  此处省略若干字符<br>  Do you want me to update your “~/.google_authenticator” file (y/n) <strong>y</strong></p><p>  Do you want to disallow multiple uses of the same authentication<br>  token? This restricts you to one login about every 30s, but it increases<br>  your chances to notice or even prevent man-in-the-middle attacks (y/n) <strong>y</strong></p><p>  By default, tokens are good for 30 seconds and in order to compensate for<br>  possible time-skew between the client and the server, we allow an extra<br>  token before and after the current time. If you experience problems with poor<br>  time synchronization, you can increase the window from its default<br>  size of 1:30min to about 4min. Do you want to do so (y/n) <strong>y</strong></p><p>  If the computer that you are logging into isn’t hardened against brute-force<br>  login attempts, you can enable rate-limiting for the authentication module.<br>  By default, this limits attackers to no more than 3 login attempts every 30s.<br>  Do you want to enable rate-limiting (y/n) <strong>y</strong><br>  [root@hhjos6 herc]# </p></blockquote></li><li><p>生成 herc 账户验证码</p><blockquote><p>  hhjos6:/home/herc&gt; <strong>google-authenticator</strong><br>  <a href="https://www.google.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth://totp/herc@hhjos6%3Fsecret%">https://www.google.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth://totp/herc@hhjos6%3Fsecret%</a>…<br>  Your new secret key is:<br>  此处省略若干字符<br>  ​       Do you want me to update your “/home/username/.google_authenticator” file (y/n) <strong>y</strong><br>  ​       (是否重新生成登录配置文件？)</p><p>  ​       Do you want to disallow multiple uses of the same authentication<br>  ​       token? This restricts you to one login about every 30s, but it increases<br>  ​       your chances to notice or even prevent man-in-the-middle attacks (y/n) <strong>y</strong><br>  ​       (是否拒绝多次重复使用相同的令牌？这将限制你每30s仅能登录一次，但会提醒/阻止中间人攻击。)<br>  ​<br>  ​       By default, tokens are good for 30 seconds and in order to compensate for<br>  ​       possible time-skew between the client and the server, we allow an extra<br>  ​       token before and after the current time. If you experience problems with poor<br>  ​       time synchronization, you can increase the window from its default<br>  ​       size of 1:30min to about 4min. Do you want to do so (y/n) <strong>n</strong><br>  ​       (是否将窗口时间由1分30秒增加到约4分钟？这将缓解时间同步问题。)<br>  ​<br>  ​       If the computer that you are logging into is not hardened against brute-force<br>  ​       login attempts, you can enable rate-limiting for the authentication module.<br>  ​       By default, this limits attackers to no more than 3 login attempts every 30s.<br>  ​       Do you want to enable rate-limiting (y/n) <strong>y</strong><br>  ​       (是否启用此模块的登录频率限制，登录者将会被限制为最多在30秒内登录3次。)<br>  ​    hhjos6:/home/herc&gt; </p></blockquote></li><li><p>注意事项</p><ul><li>配置问题排查： <code>tail -40f /var/log/secure</code></li><li>输入android 客户端的验证码（注意控制时间）后，再输入账户密码即可登录。</li></ul></li></ol><h3 id="重启进程生效"><a href="#重启进程生效" class="headerlink" title="重启进程生效"></a>重启进程生效</h3><pre><code class="sh">service sshd restart</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;日常工作中，经常有人问系统开启双因子验证没有；奈何人穷志短，从网上看到 google-authenticator 支持免费的双因子验证，只要电脑端安装和配置 google-authenticator，就可以通过手机端安装的 Google 身份验证器
-      
-    
-    </summary>
-    
-    
-      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
-    
-    
-      <category term="安装" scheme="https://faradays-studio.gitee.io/tags/%E5%AE%89%E8%A3%85/"/>
-    
-      <category term="配置" scheme="https://faradays-studio.gitee.io/tags/%E9%85%8D%E7%BD%AE/"/>
-    
-      <category term="authenticator" scheme="https://faradays-studio.gitee.io/tags/authenticator/"/>
-    
-      <category term="google" scheme="https://faradays-studio.gitee.io/tags/google/"/>
-    
-      <category term="双因子" scheme="https://faradays-studio.gitee.io/tags/%E5%8F%8C%E5%9B%A0%E5%AD%90/"/>
-    
-      <category term="网络安全" scheme="https://faradays-studio.gitee.io/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
