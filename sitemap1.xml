@@ -367,54 +367,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/2020/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/Word/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/Office/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E8%84%9A%E6%B3%A8/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E8%AE%BA%E6%96%87/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E5%88%86%E6%A0%8F/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E5%88%86%E9%9A%94%E7%AC%A6/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://faradays-studio.gitee.io/tags/csh/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
@@ -457,6 +409,54 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://faradays-studio.gitee.io/tags/Word/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/Office/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/%E8%84%9A%E6%B3%A8/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/%E8%AE%BA%E6%96%87/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/%E5%88%86%E6%A0%8F/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/%E5%88%86%E9%9A%94%E7%AC%A6/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/2020/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://faradays-studio.gitee.io/tags/Arch/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
@@ -470,42 +470,6 @@
   </url>
   <url>
     <loc>https://faradays-studio.gitee.io/tags/pacman/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/printf/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/VirtualBox/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E5%8E%8B%E7%BC%A9/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/zerofree/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -535,37 +499,49 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://faradays-studio.gitee.io/tags/VirtualBox/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/%E5%8E%8B%E7%BC%A9/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/zerofree/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/printf/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://faradays-studio.gitee.io/tags/if/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E6%88%90%E5%8A%9F/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E5%85%B3%E9%94%AE/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E9%A2%86%E5%AF%BC/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E5%A5%8B%E6%96%97/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E6%80%BB%E7%BB%93/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/2021/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -584,12 +560,6 @@
   </url>
   <url>
     <loc>https://faradays-studio.gitee.io/tags/%E8%8B%A6/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/2021/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -625,6 +595,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://faradays-studio.gitee.io/tags/pip/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/Python/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://faradays-studio.gitee.io/tags/GCC/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
@@ -643,13 +625,31 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/pip/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/%E6%88%90%E5%8A%9F/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/Python/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/%E5%85%B3%E9%94%AE/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/%E9%A2%86%E5%AF%BC/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/%E5%A5%8B%E6%96%97/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -673,6 +673,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://faradays-studio.gitee.io/tags/sqlite/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://faradays-studio.gitee.io/tags/MySQL/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
@@ -691,19 +703,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/sqlite/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/ag/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/zsh/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -721,7 +721,31 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/zsh/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/authenticator/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/google/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/%E5%8F%8C%E5%9B%A0%E5%AD%90/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/ag/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -745,31 +769,37 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/tmux/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/WordCloud/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/Solaris/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/%E8%AF%8D%E4%BA%91%E5%9B%BE/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/IP/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/pandas/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E8%BF%9C%E7%A8%8B/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/Jieba/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E9%99%90%E5%88%B6/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/%E8%AF%8D%E9%A2%91/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/%E5%88%86%E8%AF%8D/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -805,6 +835,36 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://faradays-studio.gitee.io/tags/Solaris/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/IP/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/%E8%BF%9C%E7%A8%8B/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/%E9%99%90%E5%88%B6/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/tmux/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://faradays-studio.gitee.io/tags/bat/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
@@ -824,42 +884,6 @@
   </url>
   <url>
     <loc>https://faradays-studio.gitee.io/tags/%E4%BB%A3%E7%A0%81/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/authenticator/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/google/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E5%8F%8C%E5%9B%A0%E5%AD%90/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/chattr/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E9%94%81%E5%AE%9A/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -907,37 +931,31 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E5%8D%8E%E4%B8%BA/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E6%89%8B%E6%9C%BA/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/Excel/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E5%85%8B%E9%9A%86/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/NORMDIST/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E5%AF%BC%E5%85%A5/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/%E6%9F%B1%E5%BD%A2%E5%9B%BE/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E5%AF%BC%E5%87%BA/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/QQ%E5%90%8C%E6%AD%A5%E5%8A%A9%E6%89%8B/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/%E6%95%A3%E7%82%B9%E5%9B%BE/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -973,7 +991,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/chattr/</loc>
+    <lastmod>2023/5/1</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://faradays-studio.gitee.io/tags/%E9%94%81%E5%AE%9A/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -986,18 +1010,6 @@
   </url>
   <url>
     <loc>https://faradays-studio.gitee.io/tags/%E4%B8%AD%E4%BD%8D%E6%95%B0/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/Excel/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E6%95%A3%E7%82%B9%E5%9B%BE/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1027,37 +1039,37 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/WordCloud/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/%E5%8D%8E%E4%B8%BA/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E8%AF%8D%E4%BA%91%E5%9B%BE/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/%E6%89%8B%E6%9C%BA/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/pandas/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/%E5%85%8B%E9%9A%86/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/Jieba/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/%E5%AF%BC%E5%85%A5/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E8%AF%8D%E9%A2%91/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/%E5%AF%BC%E5%87%BA/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E5%88%86%E8%AF%8D/</loc>
+    <loc>https://faradays-studio.gitee.io/tags/QQ%E5%90%8C%E6%AD%A5%E5%8A%A9%E6%89%8B/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1106,18 +1118,6 @@
   </url>
   <url>
     <loc>https://faradays-studio.gitee.io/tags/%E7%A8%B3%E5%AE%9A%E6%80%A7/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/NORMDIST/</loc>
-    <lastmod>2023/5/1</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faradays-studio.gitee.io/tags/%E6%9F%B1%E5%BD%A2%E5%9B%BE/</loc>
     <lastmod>2023/5/1</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
