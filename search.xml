@@ -49,11 +49,6 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
       </tags>
   </entry>
   <entry>
-    <title>文章导航</title>
-    <url>/202103060055/</url>
-    <content><![CDATA[<h1 id="文章导航"><a href="#文章导航" class="headerlink" title="文章导航"></a>文章导航</h1>]]></content>
-  </entry>
-  <entry>
     <title>如何使用 svg.js 创建 svg 文档</title>
     <url>/201902090951/</url>
     <content><![CDATA[<p>前段时间，我尝试了使用 svg.js 来创建 svg dom 文档时，并没有成功。经过反复多次的尝试，并网络检索了一些信息，初步确认为官方文档未及时更新，导致了编码错误。</p>
@@ -342,22 +337,6 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
       </tags>
   </entry>
   <entry>
-    <title>Hello World（世界，你好）</title>
-    <url>/202008090000/</url>
-    <content><![CDATA[<p>世界，你好！我是一名低微到尘埃里的普通人，曾经幻想过成为一名科学家，为国家科技事业贡献力量，然后我并没有这样的超凡的智商；我成为了一名普通的工程师，我克服了很多很多的困难，在不同的岗位上也取得了一些成绩，然而，我的缺点和遇到的困难，仍然很多，有些时候，差点将我打倒了！</p>
-<p>同龄的同事，不少人获得了职务上的升迁，不少人获得了名誉上的进步，我也不想就这样放弃，不想放任自我，因此我也要在这里尝试发出我自己的声音，我要进步，我要追求卓越！</p>
-<p>世界，你好。社会，你好。我一直都很期盼见到明天的太阳，愿美好的生活终将来临！</p>
-]]></content>
-      <categories>
-        <category>星星心事</category>
-      </categories>
-      <tags>
-        <tag>日志</tag>
-        <tag>你好</tag>
-        <tag>追求卓越</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Windows 批处理的字符运算（未完待续）</title>
     <url>/202008200927/</url>
     <content><![CDATA[<p>字符运算历来是编程中的重要内容，如何拼接字符，如何截取字符，如何判断字符是否存在，如何判断两个字符串是否相同，成为了编程任务中的重要环节。因此，我结合网络的资料和个人的实践经验来总结一下。</p>
@@ -609,6 +588,11 @@ $git push origin my_test:my_test
       </tags>
   </entry>
   <entry>
+    <title>文章导航</title>
+    <url>/202103060055/</url>
+    <content><![CDATA[<h1 id="文章导航"><a href="#文章导航" class="headerlink" title="文章导航"></a>文章导航</h1>]]></content>
+  </entry>
+  <entry>
     <title>苹果 Macbook Pro 笔记本从 U 盘启动以及重置开机密码的方法</title>
     <url>/202008272141/</url>
     <content><![CDATA[<p>前几天，有位老领导委托我对其苹果 Macbook Pro 2018 笔记本进行优化处理。由于网上的资料比较零散、挂一漏万，因此我也来总结一下操作经验。</p>
@@ -687,6 +671,22 @@ $git push origin my_test:my_test
       <tags>
         <tag>2020</tag>
         <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World（世界，你好）</title>
+    <url>/202008090000/</url>
+    <content><![CDATA[<p>世界，你好！我是一名低微到尘埃里的普通人，曾经幻想过成为一名科学家，为国家科技事业贡献力量，然后我并没有这样的超凡的智商；我成为了一名普通的工程师，我克服了很多很多的困难，在不同的岗位上也取得了一些成绩，然而，我的缺点和遇到的困难，仍然很多，有些时候，差点将我打倒了！</p>
+<p>同龄的同事，不少人获得了职务上的升迁，不少人获得了名誉上的进步，我也不想就这样放弃，不想放任自我，因此我也要在这里尝试发出我自己的声音，我要进步，我要追求卓越！</p>
+<p>世界，你好。社会，你好。我一直都很期盼见到明天的太阳，愿美好的生活终将来临！</p>
+]]></content>
+      <categories>
+        <category>星星心事</category>
+      </categories>
+      <tags>
+        <tag>日志</tag>
+        <tag>你好</tag>
+        <tag>追求卓越</tag>
       </tags>
   </entry>
   <entry>
@@ -978,6 +978,58 @@ printf 不像 echo 那样会自动换行，必须显式添加换行符 `\n` 。<
         <tag>影评</tag>
         <tag>Margin Call</tag>
         <tag>商海通牒</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Word 2016 脚注格式问题的处理</title>
+    <url>/202012261300/</url>
+    <content><![CDATA[<blockquote>
+<p>乖乖，这几天在 CNKI、VIP和万方上看论文，有几个比较熟悉的同事，不知不觉下就发了十多篇论文了。吓死宝宝，赶紧将 2 年前的未发表的论文拿出来修改。</p>
+</blockquote>
+<p>在修改论文的过程中，居然遇到了两个奇怪的问题，捣腾了好久才给解决了。以下总结一下操作方法：</p>
+<h2 id="分栏内容从下一页起排版的问题"><a href="#分栏内容从下一页起排版的问题" class="headerlink" title="分栏内容从下一页起排版的问题"></a>分栏内容从下一页起排版的问题</h2><blockquote>
+<p>论文分栏居然从下一页开始，果断不能忍！！！<br>刚开始的时候，我以为是存在隐藏的分页符，来回删除、重新插入，无法解决；然后以为是分栏操作方法不对，来回修改各种分栏方式以及插入方式，均无法解决。偶然间，不小心删除脚注后，分页正常了；这一下才找到解决问题的思路。</p>
+</blockquote>
+<p>解决方法是：<code>Word 选项</code>》<code>高级</code>》<code>兼容性选项</code>：勾选<code>按Word 6.x/95/97的方式安排脚注</code>，如下图所示：</p>
+<p><img src="/static/img/Word%E8%84%9A%E6%B3%A8%E5%AF%BC%E8%87%B4%E5%88%86%E6%A0%8F%E5%86%85%E5%AE%B9%E4%BB%8E%E4%B8%8B%E4%B8%80%E9%A1%B5%E8%B5%B7%E6%8E%92-20201226.png" alt="按Word 6.x/95/97的方式安排脚注"></p>
+<blockquote>
+<p>注意，在“高级”选项卡中须向下拖动滚动条才能显示该项配置</p>
+</blockquote>
+<h2 id="脚注内容前存在两个空行的问题"><a href="#脚注内容前存在两个空行的问题" class="headerlink" title="脚注内容前存在两个空行的问题"></a>脚注内容前存在两个空行的问题</h2><ul>
+<li><p>脚注默认的样式如下，存在两个空行，默认情况下无法编辑：</p>
+<p>  <img src="/static/img/Word%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%9A%E6%B3%A8%E6%A0%BC%E5%BC%8F%EF%BC%88%E4%BF%AE%E6%94%B9%E5%89%8D%EF%BC%89-20201226.png" alt="Word默认的脚注格式"></p>
+</li>
+<li><p>脚注格式的修改方法</p>
+<ul>
+<li><p>进入 <code>Web 版式视图</code> （点击下方快捷工具图标，或通过上方“视图”选项卡切换），点击 <code>引用</code> 选项卡下的 <code>显示备注</code>，初始界面如下：</p>
+<p>  <img src="/static/img/Word%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%9A%E6%B3%A8%E6%A0%BC%E5%BC%8F%EF%BC%88%E4%BF%AE%E6%94%B9%E5%89%8D%EF%BC%89-20201226.png" alt="Word默认的脚注格式"></p>
+</li>
+<li><p>在 <code>脚注</code> 下拉列表中选择 <code>脚注分隔符</code> ，对下方编辑框中的空行进行删除，上述操作流程如下：</p>
+<p>  <img src="/static/img/Word%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%9A%E6%B3%A8%E6%A0%BC%E5%BC%8F-%E4%BF%AE%E6%94%B9%E8%84%9A%E6%B3%A8%E5%88%86%E9%9A%94%E7%AC%A6%E6%A0%BC%E5%BC%8F-20201226.png" alt="修改Word脚注分隔符格式"></p>
+</li>
+<li><p>切回至 <code>页面视图</code>，保存即可完成修改。最终效果图如下：</p>
+<p>  <img src="/static/img/Word%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%9A%E6%B3%A8%E6%A0%BC%E5%BC%8F%EF%BC%88%E4%BF%AE%E6%94%B9%E5%90%8E%EF%BC%89-20201226.png" alt="Word脚注分隔符格式修改"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><p>飞飞.<code>WORD脚注和分栏冲突的解决办法</code>[EB/OL].<a href="http://blog.sina.com.cn/s/blog_5fe506110100f2y0.html">http://blog.sina.com.cn/s/blog_5fe506110100f2y0.html</a>, 2020/12/25.</p>
+</li>
+<li><p>赵晓锋.<code>Word教程：编辑脚注和尾注</code>[EB/OL].<a href="http://blog.sciencenet.cn/blog-285749-350946.html">http://blog.sciencenet.cn/blog-285749-350946.html</a>, 2020/12/25.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>Word</tag>
+        <tag>Office</tag>
+        <tag>脚注</tag>
+        <tag>论文</tag>
+        <tag>分栏</tag>
+        <tag>分隔符</tag>
       </tags>
   </entry>
   <entry>
@@ -2188,55 +2240,132 @@ printf 不像 echo 那样会自动换行，必须显式添加换行符 `\n` 。<
       </tags>
   </entry>
   <entry>
-    <title>Word 2016 脚注格式问题的处理</title>
-    <url>/202012261300/</url>
-    <content><![CDATA[<blockquote>
-<p>乖乖，这几天在 CNKI、VIP和万方上看论文，有几个比较熟悉的同事，不知不觉下就发了十多篇论文了。吓死宝宝，赶紧将 2 年前的未发表的论文拿出来修改。</p>
+    <title>VirtualBox 虚拟机磁盘压缩方法（已验证）</title>
+    <url>/202101101604/</url>
+    <content><![CDATA[<p>VirtualBox 虚拟机的容量会随着使用自动扩容，这本来是个好事；不过在实际使用过程中，由于系统错误日志疯狂写入等原因，也可能会导致系统容量被明显扩充变大。容量变大之后，无论是转换虚拟盘格式，还是导入导出，均不能减小容量。特别是做虚拟机备份导出时，白白浪费了大量的空间。因此，进行虚拟机磁盘容量的压缩，势在必行！</p>
+<p>以下两个系统我都用了很长时间，也都测试过方法的可行性，可供参考。</p>
+<h2 id="虚拟机磁盘格式转换"><a href="#虚拟机磁盘格式转换" class="headerlink" title="虚拟机磁盘格式转换"></a>虚拟机磁盘格式转换</h2><blockquote>
+<p>需要注意的是，虽然 VirtualBox 默认的磁盘格式为 vdi，可是经过导入、导出等一系列操作后，硬盘格式往往都是 wmdk；本文所讨论的磁盘压缩方法，只对 vdi 格式的磁盘有效；因此，磁盘压缩之前，往往都需要进行磁盘格式转换！</p>
 </blockquote>
-<p>在修改论文的过程中，居然遇到了两个奇怪的问题，捣腾了好久才给解决了。以下总结一下操作方法：</p>
-<h2 id="分栏内容从下一页起排版的问题"><a href="#分栏内容从下一页起排版的问题" class="headerlink" title="分栏内容从下一页起排版的问题"></a>分栏内容从下一页起排版的问题</h2><blockquote>
-<p>论文分栏居然从下一页开始，果断不能忍！！！<br>刚开始的时候，我以为是存在隐藏的分页符，来回删除、重新插入，无法解决；然后以为是分栏操作方法不对，来回修改各种分栏方式以及插入方式，均无法解决。偶然间，不小心删除脚注后，分页正常了；这一下才找到解决问题的思路。</p>
-</blockquote>
-<p>解决方法是：<code>Word 选项</code>》<code>高级</code>》<code>兼容性选项</code>：勾选<code>按Word 6.x/95/97的方式安排脚注</code>，如下图所示：</p>
-<p><img src="/static/img/Word%E8%84%9A%E6%B3%A8%E5%AF%BC%E8%87%B4%E5%88%86%E6%A0%8F%E5%86%85%E5%AE%B9%E4%BB%8E%E4%B8%8B%E4%B8%80%E9%A1%B5%E8%B5%B7%E6%8E%92-20201226.png" alt="按Word 6.x/95/97的方式安排脚注"></p>
-<blockquote>
-<p>注意，在“高级”选项卡中须向下拖动滚动条才能显示该项配置</p>
-</blockquote>
-<h2 id="脚注内容前存在两个空行的问题"><a href="#脚注内容前存在两个空行的问题" class="headerlink" title="脚注内容前存在两个空行的问题"></a>脚注内容前存在两个空行的问题</h2><ul>
-<li><p>脚注默认的样式如下，存在两个空行，默认情况下无法编辑：</p>
-<p>  <img src="/static/img/Word%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%9A%E6%B3%A8%E6%A0%BC%E5%BC%8F%EF%BC%88%E4%BF%AE%E6%94%B9%E5%89%8D%EF%BC%89-20201226.png" alt="Word默认的脚注格式"></p>
+<ol>
+<li><p>在 VirtualBox 管理界面上，还需要重新删除原有的 vmdk 磁盘（否则 uuid 冲突导致无法导入 vdi 磁盘）、然后指定系统需要使用的磁盘为新的 vdi 磁盘（否则无法使用后续的磁盘压缩功能）。</p>
+<p> <img src="/static/img/20210108-virtualbox/0-%E9%87%8A%E6%94%BE%E3%80%81%E5%88%A0%E9%99%A4%E7%A1%AC%E7%9B%98-HHJ-20210108.png" alt="释放、删除硬盘"></p>
 </li>
-<li><p>脚注格式的修改方法</p>
-<ul>
-<li><p>进入 <code>Web 版式视图</code> （点击下方快捷工具图标，或通过上方“视图”选项卡切换），点击 <code>引用</code> 选项卡下的 <code>显示备注</code>，初始界面如下：</p>
-<p>  <img src="/static/img/Word%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%9A%E6%B3%A8%E6%A0%BC%E5%BC%8F%EF%BC%88%E4%BF%AE%E6%94%B9%E5%89%8D%EF%BC%89-20201226.png" alt="Word默认的脚注格式"></p>
-</li>
-<li><p>在 <code>脚注</code> 下拉列表中选择 <code>脚注分隔符</code> ，对下方编辑框中的空行进行删除，上述操作流程如下：</p>
-<p>  <img src="/static/img/Word%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%9A%E6%B3%A8%E6%A0%BC%E5%BC%8F-%E4%BF%AE%E6%94%B9%E8%84%9A%E6%B3%A8%E5%88%86%E9%9A%94%E7%AC%A6%E6%A0%BC%E5%BC%8F-20201226.png" alt="修改Word脚注分隔符格式"></p>
-</li>
-<li><p>切回至 <code>页面视图</code>，保存即可完成修改。最终效果图如下：</p>
-<p>  <img src="/static/img/Word%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%9A%E6%B3%A8%E6%A0%BC%E5%BC%8F%EF%BC%88%E4%BF%AE%E6%94%B9%E5%90%8E%EF%BC%89-20201226.png" alt="Word脚注分隔符格式修改"></p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li><p>飞飞.<code>WORD脚注和分栏冲突的解决办法</code>[EB/OL].<a href="http://blog.sina.com.cn/s/blog_5fe506110100f2y0.html">http://blog.sina.com.cn/s/blog_5fe506110100f2y0.html</a>, 2020/12/25.</p>
-</li>
-<li><p>赵晓锋.<code>Word教程：编辑脚注和尾注</code>[EB/OL].<a href="http://blog.sciencenet.cn/blog-285749-350946.html">http://blog.sciencenet.cn/blog-285749-350946.html</a>, 2020/12/25.</p>
+<li><p>转换虚拟机磁盘文件格式为 vdi </p>
+<pre><code class="cmd"> cd &quot;C:\Program Files\Oracle\VirtualBox\&quot;
+ &quot;VBoxManage.exe&quot; clonehd &quot;e:\source.vmdk&quot; &quot;e:\target.vdi&quot; --format vdi</code></pre>
+<p> <img src="/static/img/20210108-virtualbox/1-%E5%B0%86VMDK%E7%A1%AC%E7%9B%98%E8%BD%AC%E6%8D%A2%E4%B8%BAVDI%E6%A0%BC%E5%BC%8F-2-HHJ-20210108.png" alt="将VMDK硬盘转换为VDI格式"></p>
 </li>
 </ol>
+<ol start="3">
+<li><p>将新磁盘关联到虚拟机中</p>
+<p> <img src="/static/img/20210108-virtualbox/2-%E5%B0%86VDI%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD%E5%88%B0%E7%B3%BB%E7%BB%9F%E4%B8%AD-HHJ-20210108.png" alt="将VDI硬盘挂载到系统中"></p>
+<p> <img src="/static/img/20210108-virtualbox/2-%E5%B0%86VDI%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD%E5%88%B0%E7%B3%BB%E7%BB%9F%E4%B8%AD-2-HHJ-20210108.png" alt="将VDI硬盘挂载到系统中"></p>
+</li>
+</ol>
+<h2 id="Windows-虚拟机磁盘的压缩"><a href="#Windows-虚拟机磁盘的压缩" class="headerlink" title="Windows 虚拟机磁盘的压缩"></a>Windows 虚拟机磁盘的压缩</h2><p>毫无疑问，Windows 平台的磁盘压缩比较简单，在主机系统中直接执行以下命令即可。</p>
+<pre><code class="ps"> &quot;C:\Program Files\Oracle\VirtualBox\VBoxManage.exe&quot; modifyhd &quot;e:\target.vdi&quot; --compact</code></pre>
+<blockquote>
+<p>多年前，我曾进行过上述操作，并截图，可是现在找不到之前的截图了，有空再补了。</p>
+</blockquote>
+<h2 id="CentOS-虚拟机磁盘的压缩"><a href="#CentOS-虚拟机磁盘的压缩" class="headerlink" title="CentOS 虚拟机磁盘的压缩"></a>CentOS 虚拟机磁盘的压缩</h2><blockquote>
+<p>一开始，我尝试使用网上泛滥的手动将磁盘剩余空间写 0 的方法，可是，过了很久，不过没有看到磁盘空间变小，反而越来越大——我本来虚拟机才25GB，不到半个小时变成了 60 GB，本来主机硬盘容量就很小，吓得我赶紧终止了。</p>
+<blockquote>
+<pre><code class="bash">dd  if=/dev/zero   of=/empty    bs=1M
+#dd if=/dev/zero   of=/dev/sda3
+rm -f /empty</code></pre>
+</blockquote>
+</blockquote>
+<p>多天以后，做完了手上的工作，重新去外网上学习相应的处理方法，发现了有个叫做 zerofree 工作的做法没有尝试过，因此我重新导入了一个虚拟机进行尝试，结果成功了，过程如下：</p>
+<ol>
+<li><p>使用 yum 下载安装 zerofree 程序包</p>
+<pre><code class="sh"> su
+ yum -y install zerofree</code></pre>
+</li>
+<li><p>重新启动系统，并在系统 GRUB 启动菜单出现时点击 <code>Enter</code> 键进入编辑模式</p>
+<ul>
+<li><p>选择含有 <code>vmlinuz</code> 字样菜单行，按 <code>e</code> 进入内容编辑状态</p>
+<p><img src="/static/img/20210108-virtualbox/4-%E5%9C%A8GRUB%E8%8F%9C%E5%8D%95%E4%B8%AD%E9%80%89%E6%8B%A9%E5%90%AB%E6%9C%89vmlinuz%E5%AD%97%E6%A0%B7%E7%9A%84%E8%8F%9C%E5%8D%95%E8%BF%9B%E8%A1%8C%E7%BC%96%E8%BE%91-HHJ-20210108.png" alt="选择含有vmlinuz字样的菜单进行编辑"></p>
+</li>
+<li><p>在菜单末尾增加 <code>init=/bin/bash</code> 后 <code>Enter</code> 返回上级菜单</p>
+<p><img src="/static/img/20210108-virtualbox/5-%E5%9C%A8vmlinuz%E5%AD%97%E6%A0%B7%E7%9A%84%E8%8F%9C%E5%8D%95%E4%B8%AD%E7%BC%96%E8%BE%91%E5%A2%9E%E5%8A%A0init%E5%8F%82%E6%95%B0%EF%BC%88%E8%BF%9B%E5%85%A5%E6%95%91%E6%8F%B4%E6%A8%A1%E5%BC%8F%EF%BC%89-HHJ-20210108.png" alt="增加init参数以进入救援模式"></p>
+<table>
+<thead>
+<tr>
+<th>内核启动参数</th>
+<th>含义</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>init=/sbin/init</td>
+<td>告诉内核用 <code>/sbin/init</code> 作为它的 init 程序</td>
+<td></td>
+</tr>
+<tr>
+<td>init=/bin/bash</td>
+<td>只启动 bash，在紧急恢复时有用</td>
+<td>救援模式</td>
+</tr>
+<tr>
+<td>root=/dev/foo</td>
+<td>告诉内核用 <code>/dev/foo</code> 作为根设备</td>
+<td></td>
+</tr>
+<tr>
+<td>single</td>
+<td>引导进入单用户模式</td>
+<td>单用户模式</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>然后按 <code>b</code> 重新启动系统</p>
+<p><img src="/static/img/20210108-virtualbox/6-%E4%BF%AE%E6%94%B9%E8%8F%9C%E5%8D%95%E5%AE%8C%E6%88%90%E5%90%8E%E6%8C%89b%E5%AD%97%E7%AC%A6%E5%90%AF%E5%8A%A8%E8%BF%9B%E5%85%A5%E7%B3%BB%E7%BB%9F-HHJ-20210108.png" alt="按b字符启动进入系统"></p>
+</li>
+<li><p>进入救援模式初始界面</p>
+<p><img src="/static/img/20210108-virtualbox/7-%E6%95%91%E6%8F%B4%E6%A8%A1%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E7%95%8C%E9%9D%A2-HHJ-20210108.png" alt="救援模式初始界面"></p>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="3">
+<li><p>查看系统的磁盘名称</p>
+<pre><code class="bash"> df</code></pre>
+</li>
+<li><p>执行清理（请根据前一步的查询结果进行确定需要清理的磁盘）</p>
+<pre><code class="bash"> zerofree -v /dev/sda1
+ zerofree -v /dev/sda3</code></pre>
+<p> <img src="/static/img/20210108-virtualbox/9-zerofree%E5%A1%AB%E5%85%85%E5%AE%8C%E6%AF%95-HHJ-20210108.png" alt="zerofree填充"></p>
+<p> 至此，虚拟机磁盘容量 已经明显变小。然后强制关机，重新进入系统。</p>
+<p> <img src="/static/img/20210108-virtualbox/10-%E6%95%91%E6%8F%B4%E6%A8%A1%E5%BC%8F%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E5%B8%B8%E8%A7%84%E5%85%B3%E6%9C%BA%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%8F%AA%E8%83%BD%E7%A1%AC%E4%BB%B6%E5%85%B3%E9%97%AD-HHJ-20210108.png" alt="无法使用常规关机命令，只能硬件关闭"></p>
+</li>
+<li><p>在宿主机中，打开命令行，笔者这里是Windows系统，如下执行</p>
+<pre><code class="ps"> &quot;C:\Program Files\Oracle\VirtualBox\VBoxManage.exe&quot; modifyhd &quot;e:\target.vdi&quot; --compact</code></pre>
+</li>
+</ol>
+<h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
+<li><p>mowkeeper.<code>VirtualBox压缩vdi文件</code>[EB/OL].<a href="http://mowblog.com/virtualbox%E5%8E%8B%E7%BC%A9vdi%E6%96%87%E4%BB%B6/">http://mowblog.com/virtualbox%E5%8E%8B%E7%BC%A9vdi%E6%96%87%E4%BB%B6/</a>, 2021/01/08.</p>
+</li>
+<li><p>Canonical Ltd.<code>Ubuntu Manpage: zerofree — zero free blocks from ext2, ext3 and ext4 file-systems</code>[EB/OL].<a href="http://manpages.ubuntu.com/manpages/hirsute/en/man8/zerofree.8.html">http://manpages.ubuntu.com/manpages/hirsute/en/man8/zerofree.8.html</a>, 2021/01/10.</p>
+</li>
+</ol>
+<h3 id="变更说明"><a href="#变更说明" class="headerlink" title="变更说明"></a>变更说明</h3><ul>
+<li><p>1.0.0，2021/01/19 20:55:03，初始版本。</p>
+</li>
+<li><p>1.0.1，2021/02/12 19:36:23，补充 Linux 内核启动参数表。</p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>电脑爱好者</category>
       </categories>
       <tags>
-        <tag>Word</tag>
-        <tag>Office</tag>
-        <tag>脚注</tag>
-        <tag>论文</tag>
-        <tag>分栏</tag>
-        <tag>分隔符</tag>
+        <tag>Windows</tag>
+        <tag>Linux</tag>
+        <tag>VirtualBox</tag>
+        <tag>虚拟机</tag>
+        <tag>压缩</tag>
+        <tag>zerofree</tag>
       </tags>
   </entry>
   <entry>
@@ -2558,164 +2687,6 @@ fi</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>什么才是事业成功的关键？</title>
-    <url>/202101031051/</url>
-    <content><![CDATA[<p>2021 年元旦，休假在家。偶然间，会想起自己2020年里工作上的点点滴滴：这一年，我投入了不少精力，取得了一定的业绩，有点骄傲、有点遗憾、也有点不满。</p>
-<p>2020年里，我除了有一两个月因为一些特别重大的事情低沉了好几个星期，从年初到年底，我实际上在工作上投入的时间并不比别人少。没错，我就是那种人——明明没人安排我，回到家里还在研究工作中的事情，去探索如何能够将工作做得效果更好、操作更智能化……</p>
-<p>2020年，也看着不少的同事，慢慢地领先到了前方，有些人成为了处级领导，有些人从副科转为了正科，甚至也有个别年轻人超到前方去成了副科级的领导了。我回想自己的这些年，工作付出不少，荣誉很多，业绩丰富，能力也不错，可是目前并未看到向上升迁的机会；心里不免是着急的，会盲目去比较，也会突然地爆出几句怨言来！</p>
-<p>工作中，看过太多的事情没做成——哪怕是高层领导牵头的事，没做成的也是一抓一大把。因此，我对自己“每一次都将别人没做成的事情做成了，将别人不愿意做的事情默默做出来了”这一点颇为骄傲，甚至有些得意忘形了！年终评选的时候，我常常列入上级荣誉的候选人，然而很多年里都止步于候选；不知道今年结果如何，反正公司推荐到集团的名单里，我也是排名靠后的——我都已经尽力地吹嘘自己了，可是也不见得每个领导都喜欢我！</p>
-<blockquote>
-<p>有意思的是，2020年的评选我魔幻般的拿了大满贯，所在部门的、区域的、集团的先进我全拿了！感谢领导！</p>
-</blockquote>
-<p>看着别人的宣传材料，都是将普通而平凡的事情做成了。我和别人的区别，无非是我的业绩更多是与计算机相关的，不容易可视化评估；而别人的业绩往往都是加了什么设备、修好了什么东西、帮助了多少穷人，即使是外行人也能评价出一二三来。所以，我还是挺无奈的：酒再香，也怕巷子太深！</p>
-<p>噢，不再说这些事情了，我还是向前看看吧，因为这些社会环境可不会自动适应我：工作上的岗位，不是我自己能定的；而我也不愿意去做一条咸鱼，哪怕可能会被一些人毫无底线地利用。因此，我，需要调整自我，不断去提升自我，与时俱进，开拓创新。</p>
-<p><strong>2020年，我是做了不少工作的。我自以为：我是一些工作成功开展的关键，因为我有决心、有能力、有行动去突破困难，让我的同事没有后顾之忧！可是，我也不是成功唯一的关键，我明白，我再厉害，如果厂家不配合、使用者不接纳，那么我做的成果，也只是一堆空洞的二进制符号的集合；厂家、用户都是靠我的上上级以及上上级的上上级去驱动的——没有领导的支持，就没有相应的硬件资源，就没有实施的基础，更没有应用、推广、完善的可能性！因此，关键领导的支持，也毫无疑问是成功的最关键。</strong></p>
-<p>《荀子·劝学》中提出：<code>君子生非异也，善假于物也</code>。我认为，一个事情不是我一个人做成的，并不丢人。我分析，事业成功的关键，在于<strong>资源完备</strong>、<strong>方法完整</strong>、<strong>执行到位</strong> 都落实到位了。一个人是做不成大事业的，需要集体的支持；集团未必就能长期稳健，需要个人的奋斗创新；两者相辅相成、缺一不可。</p>
-<p>春城经冬，乍暖还寒。2020年已经过去，我感激领导的支持和信任，感谢同事和陌生人的帮助和支援，感恩妻子儿女默默的支撑，也点赞自己，栉风沐雨，永不放弃！</p>
-<p>2021年，你好！文字前的读者，也祝你未来一切越来越好！</p>
-]]></content>
-      <categories>
-        <category>坐井观天</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-        <tag>成功</tag>
-        <tag>关键</tag>
-        <tag>领导</tag>
-        <tag>奋斗</tag>
-        <tag>总结</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VirtualBox 虚拟机磁盘压缩方法（已验证）</title>
-    <url>/202101101604/</url>
-    <content><![CDATA[<p>VirtualBox 虚拟机的容量会随着使用自动扩容，这本来是个好事；不过在实际使用过程中，由于系统错误日志疯狂写入等原因，也可能会导致系统容量被明显扩充变大。容量变大之后，无论是转换虚拟盘格式，还是导入导出，均不能减小容量。特别是做虚拟机备份导出时，白白浪费了大量的空间。因此，进行虚拟机磁盘容量的压缩，势在必行！</p>
-<p>以下两个系统我都用了很长时间，也都测试过方法的可行性，可供参考。</p>
-<h2 id="虚拟机磁盘格式转换"><a href="#虚拟机磁盘格式转换" class="headerlink" title="虚拟机磁盘格式转换"></a>虚拟机磁盘格式转换</h2><blockquote>
-<p>需要注意的是，虽然 VirtualBox 默认的磁盘格式为 vdi，可是经过导入、导出等一系列操作后，硬盘格式往往都是 wmdk；本文所讨论的磁盘压缩方法，只对 vdi 格式的磁盘有效；因此，磁盘压缩之前，往往都需要进行磁盘格式转换！</p>
-</blockquote>
-<ol>
-<li><p>在 VirtualBox 管理界面上，还需要重新删除原有的 vmdk 磁盘（否则 uuid 冲突导致无法导入 vdi 磁盘）、然后指定系统需要使用的磁盘为新的 vdi 磁盘（否则无法使用后续的磁盘压缩功能）。</p>
-<p> <img src="/static/img/20210108-virtualbox/0-%E9%87%8A%E6%94%BE%E3%80%81%E5%88%A0%E9%99%A4%E7%A1%AC%E7%9B%98-HHJ-20210108.png" alt="释放、删除硬盘"></p>
-</li>
-<li><p>转换虚拟机磁盘文件格式为 vdi </p>
-<pre><code class="cmd"> cd &quot;C:\Program Files\Oracle\VirtualBox\&quot;
- &quot;VBoxManage.exe&quot; clonehd &quot;e:\source.vmdk&quot; &quot;e:\target.vdi&quot; --format vdi</code></pre>
-<p> <img src="/static/img/20210108-virtualbox/1-%E5%B0%86VMDK%E7%A1%AC%E7%9B%98%E8%BD%AC%E6%8D%A2%E4%B8%BAVDI%E6%A0%BC%E5%BC%8F-2-HHJ-20210108.png" alt="将VMDK硬盘转换为VDI格式"></p>
-</li>
-</ol>
-<ol start="3">
-<li><p>将新磁盘关联到虚拟机中</p>
-<p> <img src="/static/img/20210108-virtualbox/2-%E5%B0%86VDI%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD%E5%88%B0%E7%B3%BB%E7%BB%9F%E4%B8%AD-HHJ-20210108.png" alt="将VDI硬盘挂载到系统中"></p>
-<p> <img src="/static/img/20210108-virtualbox/2-%E5%B0%86VDI%E7%A1%AC%E7%9B%98%E6%8C%82%E8%BD%BD%E5%88%B0%E7%B3%BB%E7%BB%9F%E4%B8%AD-2-HHJ-20210108.png" alt="将VDI硬盘挂载到系统中"></p>
-</li>
-</ol>
-<h2 id="Windows-虚拟机磁盘的压缩"><a href="#Windows-虚拟机磁盘的压缩" class="headerlink" title="Windows 虚拟机磁盘的压缩"></a>Windows 虚拟机磁盘的压缩</h2><p>毫无疑问，Windows 平台的磁盘压缩比较简单，在主机系统中直接执行以下命令即可。</p>
-<pre><code class="ps"> &quot;C:\Program Files\Oracle\VirtualBox\VBoxManage.exe&quot; modifyhd &quot;e:\target.vdi&quot; --compact</code></pre>
-<blockquote>
-<p>多年前，我曾进行过上述操作，并截图，可是现在找不到之前的截图了，有空再补了。</p>
-</blockquote>
-<h2 id="CentOS-虚拟机磁盘的压缩"><a href="#CentOS-虚拟机磁盘的压缩" class="headerlink" title="CentOS 虚拟机磁盘的压缩"></a>CentOS 虚拟机磁盘的压缩</h2><blockquote>
-<p>一开始，我尝试使用网上泛滥的手动将磁盘剩余空间写 0 的方法，可是，过了很久，不过没有看到磁盘空间变小，反而越来越大——我本来虚拟机才25GB，不到半个小时变成了 60 GB，本来主机硬盘容量就很小，吓得我赶紧终止了。</p>
-<blockquote>
-<pre><code class="bash">dd  if=/dev/zero   of=/empty    bs=1M
-#dd if=/dev/zero   of=/dev/sda3
-rm -f /empty</code></pre>
-</blockquote>
-</blockquote>
-<p>多天以后，做完了手上的工作，重新去外网上学习相应的处理方法，发现了有个叫做 zerofree 工作的做法没有尝试过，因此我重新导入了一个虚拟机进行尝试，结果成功了，过程如下：</p>
-<ol>
-<li><p>使用 yum 下载安装 zerofree 程序包</p>
-<pre><code class="sh"> su
- yum -y install zerofree</code></pre>
-</li>
-<li><p>重新启动系统，并在系统 GRUB 启动菜单出现时点击 <code>Enter</code> 键进入编辑模式</p>
-<ul>
-<li><p>选择含有 <code>vmlinuz</code> 字样菜单行，按 <code>e</code> 进入内容编辑状态</p>
-<p><img src="/static/img/20210108-virtualbox/4-%E5%9C%A8GRUB%E8%8F%9C%E5%8D%95%E4%B8%AD%E9%80%89%E6%8B%A9%E5%90%AB%E6%9C%89vmlinuz%E5%AD%97%E6%A0%B7%E7%9A%84%E8%8F%9C%E5%8D%95%E8%BF%9B%E8%A1%8C%E7%BC%96%E8%BE%91-HHJ-20210108.png" alt="选择含有vmlinuz字样的菜单进行编辑"></p>
-</li>
-<li><p>在菜单末尾增加 <code>init=/bin/bash</code> 后 <code>Enter</code> 返回上级菜单</p>
-<p><img src="/static/img/20210108-virtualbox/5-%E5%9C%A8vmlinuz%E5%AD%97%E6%A0%B7%E7%9A%84%E8%8F%9C%E5%8D%95%E4%B8%AD%E7%BC%96%E8%BE%91%E5%A2%9E%E5%8A%A0init%E5%8F%82%E6%95%B0%EF%BC%88%E8%BF%9B%E5%85%A5%E6%95%91%E6%8F%B4%E6%A8%A1%E5%BC%8F%EF%BC%89-HHJ-20210108.png" alt="增加init参数以进入救援模式"></p>
-<table>
-<thead>
-<tr>
-<th>内核启动参数</th>
-<th>含义</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>init=/sbin/init</td>
-<td>告诉内核用 <code>/sbin/init</code> 作为它的 init 程序</td>
-<td></td>
-</tr>
-<tr>
-<td>init=/bin/bash</td>
-<td>只启动 bash，在紧急恢复时有用</td>
-<td>救援模式</td>
-</tr>
-<tr>
-<td>root=/dev/foo</td>
-<td>告诉内核用 <code>/dev/foo</code> 作为根设备</td>
-<td></td>
-</tr>
-<tr>
-<td>single</td>
-<td>引导进入单用户模式</td>
-<td>单用户模式</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>然后按 <code>b</code> 重新启动系统</p>
-<p><img src="/static/img/20210108-virtualbox/6-%E4%BF%AE%E6%94%B9%E8%8F%9C%E5%8D%95%E5%AE%8C%E6%88%90%E5%90%8E%E6%8C%89b%E5%AD%97%E7%AC%A6%E5%90%AF%E5%8A%A8%E8%BF%9B%E5%85%A5%E7%B3%BB%E7%BB%9F-HHJ-20210108.png" alt="按b字符启动进入系统"></p>
-</li>
-<li><p>进入救援模式初始界面</p>
-<p><img src="/static/img/20210108-virtualbox/7-%E6%95%91%E6%8F%B4%E6%A8%A1%E5%BC%8F%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E7%95%8C%E9%9D%A2-HHJ-20210108.png" alt="救援模式初始界面"></p>
-</li>
-</ul>
-</li>
-</ol>
-<ol start="3">
-<li><p>查看系统的磁盘名称</p>
-<pre><code class="bash"> df</code></pre>
-</li>
-<li><p>执行清理（请根据前一步的查询结果进行确定需要清理的磁盘）</p>
-<pre><code class="bash"> zerofree -v /dev/sda1
- zerofree -v /dev/sda3</code></pre>
-<p> <img src="/static/img/20210108-virtualbox/9-zerofree%E5%A1%AB%E5%85%85%E5%AE%8C%E6%AF%95-HHJ-20210108.png" alt="zerofree填充"></p>
-<p> 至此，虚拟机磁盘容量 已经明显变小。然后强制关机，重新进入系统。</p>
-<p> <img src="/static/img/20210108-virtualbox/10-%E6%95%91%E6%8F%B4%E6%A8%A1%E5%BC%8F%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E5%B8%B8%E8%A7%84%E5%85%B3%E6%9C%BA%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%8F%AA%E8%83%BD%E7%A1%AC%E4%BB%B6%E5%85%B3%E9%97%AD-HHJ-20210108.png" alt="无法使用常规关机命令，只能硬件关闭"></p>
-</li>
-<li><p>在宿主机中，打开命令行，笔者这里是Windows系统，如下执行</p>
-<pre><code class="ps"> &quot;C:\Program Files\Oracle\VirtualBox\VBoxManage.exe&quot; modifyhd &quot;e:\target.vdi&quot; --compact</code></pre>
-</li>
-</ol>
-<h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
-<li><p>mowkeeper.<code>VirtualBox压缩vdi文件</code>[EB/OL].<a href="http://mowblog.com/virtualbox%E5%8E%8B%E7%BC%A9vdi%E6%96%87%E4%BB%B6/">http://mowblog.com/virtualbox%E5%8E%8B%E7%BC%A9vdi%E6%96%87%E4%BB%B6/</a>, 2021/01/08.</p>
-</li>
-<li><p>Canonical Ltd.<code>Ubuntu Manpage: zerofree — zero free blocks from ext2, ext3 and ext4 file-systems</code>[EB/OL].<a href="http://manpages.ubuntu.com/manpages/hirsute/en/man8/zerofree.8.html">http://manpages.ubuntu.com/manpages/hirsute/en/man8/zerofree.8.html</a>, 2021/01/10.</p>
-</li>
-</ol>
-<h3 id="变更说明"><a href="#变更说明" class="headerlink" title="变更说明"></a>变更说明</h3><ul>
-<li><p>1.0.0，2021/01/19 20:55:03，初始版本。</p>
-</li>
-<li><p>1.0.1，2021/02/12 19:36:23，补充 Linux 内核启动参数表。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>电脑爱好者</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>Linux</tag>
-        <tag>VirtualBox</tag>
-        <tag>虚拟机</tag>
-        <tag>压缩</tag>
-        <tag>zerofree</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2021年随笔</title>
     <url>/202101171157/</url>
     <content><![CDATA[<h2 id="2021-01-28，辛苦"><a href="#2021-01-28，辛苦" class="headerlink" title="2021/01/28，辛苦"></a>2021/01/28，辛苦</h2><p>写论文，又到凌晨，身心疲惫不已的，有种长路漫漫之感。想认真去做事，可是效果却不甚了了；人生甚是困难…</p>
@@ -2731,6 +2702,37 @@ rm -f /empty</code></pre>
       <tags>
         <tag>随笔</tag>
         <tag>2021</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>写论文的苦，你未必想尝一下</title>
+    <url>/202101301128/</url>
+    <content><![CDATA[<p>最近 3 个星期，一直在忙着写论文，走路在想，吃饭在想，睡觉也在想，总感觉某个地方有个难关需要我去跨越，我到了附近，却一直没有发现；等到论文基本写出来后，发现写论文是挺辛苦的！</p>
+<h2 id="选题的苦"><a href="#选题的苦" class="headerlink" title="选题的苦"></a>选题的苦</h2><p>如果认真去做科研论文的话，选题是很苦的，因为是很难找到合适的题目的。</p>
+<p>我都工作快 10 年了，也就最近才有些灵感和题材。一个人很难独自拥有一些高大上的项目，我的工作是搬砖的，就很难去研究烧砖技术，更多的是考虑如何搬运、如何与人协作、如何做好工期管理等等。</p>
+<p>因此，好不容易在工作中，发挥了一些重要作用，在种种压力之下，准备去写论文；拟好了粗略的提纲，感觉去找一个知识数据库的账户，将同领域、同主题的文献找出来，一看，不好了，怎么这么多人都写了，多半只能放弃，就算不放弃，题材也很难写出新意来；水论文的人很多，可是自己扪心自问，那并不是我想要的，丢掉吧！</p>
+<p>由于工作繁忙以及自己心里的这一丝丝骄傲，我好长时间都没有写出论文来，明明我业绩最多、贡献最大，可是我比不少按部就班的同事晚了 2 年。有些时日里，我焦虑得不行，不肯将就，也没有天降福利，在两个单位里边都被关心我的大领导约谈了…</p>
+<p>好不容易能够选了一个题目，能够勉强说有创新性、实用价值的，又得在诸多先行者的背影里，寻找空间，作出差异化来，不然，自己就真的是水论文了。</p>
+<h2 id="写作的苦"><a href="#写作的苦" class="headerlink" title="写作的苦"></a>写作的苦</h2><p>如果认真去做科研论文的话，写作的过程也是很苦的，因为写的东西不一定被人认可。</p>
+<p>工作的过程，事情做完就了事了；可是如果发论文，那么自己得将事情的来龙去脉、因果、主次、先后等等都弄明白。最近写的这个论文，是关于计算机技术的，在网络上、操作系统里、论文里，都有零零星星的表述，可是有些已经过期了，有些别人就写错了，有些别人提供的参数、程序、方法等等不适合实际情况，都得去一一验证，一一去比较，一一去部署，最近这两周，我的头一直很疼，因为有些试验尝试了十多次了，一次需要一两个小时；日常的工作仍然需要继续，家里儿女仍得操心，老家也有一些烦心事，新一年的工作仍然很迷茫，这一些都让我很为难。</p>
+<p>好不容易写出素材来了，还得修改文字；标题是否有吸引力，摘要是否清楚，翻译是否妥当，文章各级标题是否层次鲜明，各个段落的内容是否清楚明白、是否啰嗦繁杂、是否存在逻辑问题，得来回修改。</p>
+<p>感觉差不多了，得控制字数，不能太多，也不能太少；图片得自己去绘制，不然显示效果不好；图表得考虑，论文的相关指标能否让别人看得懂、评估得上等级。因此，各种修改也得耗好几个通宵！</p>
+<h2 id="发表的苦"><a href="#发表的苦" class="headerlink" title="发表的苦"></a>发表的苦</h2><p>如果认真去做科研论文的话，发表过程也是很辛苦的，因为得到好期刊的认可也是相当的困难的。好不容易有了内容，得开始寻找适当的杂志了。找了几个心仪的杂志，论文格式好好捯饬了一下，存了很多个版本格式，花了几天也完成了。</p>
+<p>自己一无人脉，二无平台，三无能力，核心期刊基本都很难；前一个论文我整整收了三年，投了多家期刊，有些是毫不客气的说水平不行，有些和和气气地说不符合杂志风格，有些啥也没说退稿回来。</p>
+<h2 id="成果的苦"><a href="#成果的苦" class="headerlink" title="成果的苦"></a>成果的苦</h2><p>如果认真去做科研论文的话，论文发表了也是很苦的，因为不是投入越大、回报越大。</p>
+<p>很不容易地，论文发表了，可是好些平时不做事的同事，不知不觉地就发了好几篇论文，评选职称了，自己又显得落后了，这种苦真不是滋味！</p>
+<p>看着别人那么水，和自己发在同样的杂志上，并不知道自己来回倒腾是否有价值。其实杂志里边的论文多数都是过得去的，奈何偏偏有几个相熟的人凑了一些他从来没有弄清楚过的内容上去，也发表了，心里何其翻覆！这样一对比，再也不认为那些核心期刊里侃侃而谈的大家们徒有其表了，而是自惭形秽不已。</p>
+<p>论文发表了，自己回忆起来，那个过程仍然是苦涩的，很长时间都挥之不去。可是，如果得到了认可，对别人也发挥了作用，那心里在很短的瞬间也是会有甘之如饴的愉悦的。</p>
+<p>其实，写论文不一定苦，苦的是放不下心里的结，随性一点的话，一切会好很多。春城冬暖，愿大家都能享受这美好的阳光。</p>
+]]></content>
+      <categories>
+        <category>坐井观天</category>
+      </categories>
+      <tags>
+        <tag>论文</tag>
+        <tag>科研</tag>
+        <tag>冷板凳</tag>
+        <tag>苦</tag>
       </tags>
   </entry>
   <entry>
@@ -2799,133 +2801,137 @@ sed -e &#39;s|^mirrorlist=|#mirrorlist=|g&#39; \
       </tags>
   </entry>
   <entry>
-    <title>Python 使用 pip 国内源实现百倍加速下载</title>
-    <url>/202101171117/</url>
-    <content><![CDATA[<blockquote>
-<p>pip 是一个现代的，通用的 Python 包管理工具。提供了对 Python 包的查找、下载、安装、卸载的功能。</p>
-</blockquote>
-<p>使用 Python 多年了，一直都坚持使用官方源的做法，结果被现实打脸了，下载一个包往往一个小时都不一定能够成功，不得不放弃了使用 Python 的念头。后来，偶尔知道了 pip 有国内源，大大加快了组件的下载速度，必须严重推荐。</p>
-<p>听说曾经有以下这些国内源——</p>
+    <title>什么才是事业成功的关键？</title>
+    <url>/202101031051/</url>
+    <content><![CDATA[<p>2021 年元旦，休假在家。偶然间，会想起自己2020年里工作上的点点滴滴：这一年，我投入了不少精力，取得了一定的业绩，有点骄傲、有点遗憾、也有点不满。</p>
+<p>2020年里，我除了有一两个月因为一些特别重大的事情低沉了好几个星期，从年初到年底，我实际上在工作上投入的时间并不比别人少。没错，我就是那种人——明明没人安排我，回到家里还在研究工作中的事情，去探索如何能够将工作做得效果更好、操作更智能化……</p>
+<p>2020年，也看着不少的同事，慢慢地领先到了前方，有些人成为了处级领导，有些人从副科转为了正科，甚至也有个别年轻人超到前方去成了副科级的领导了。我回想自己的这些年，工作付出不少，荣誉很多，业绩丰富，能力也不错，可是目前并未看到向上升迁的机会；心里不免是着急的，会盲目去比较，也会突然地爆出几句怨言来！</p>
+<p>工作中，看过太多的事情没做成——哪怕是高层领导牵头的事，没做成的也是一抓一大把。因此，我对自己“每一次都将别人没做成的事情做成了，将别人不愿意做的事情默默做出来了”这一点颇为骄傲，甚至有些得意忘形了！年终评选的时候，我常常列入上级荣誉的候选人，然而很多年里都止步于候选；不知道今年结果如何，反正公司推荐到集团的名单里，我也是排名靠后的——我都已经尽力地吹嘘自己了，可是也不见得每个领导都喜欢我！</p>
 <blockquote>
-<p>清华  <a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a><br>阿里  <a href="https://mirrors.aliyun.com/pypi/simple/">https://mirrors.aliyun.com/pypi/simple/</a><br>豆瓣  <a href="https://pypi.doubanio.com/simple/">https://pypi.doubanio.com/simple/</a><br>中科大    <a href="https://mirrors.ustc.edu.cn/pypi/web/simple/">https://mirrors.ustc.edu.cn/pypi/web/simple/</a><br>官网  <a href="https://pypi.org/simple">https://pypi.org/simple</a><br>华中理工  <a href="http://pypi.hustunique.com/">http://pypi.hustunique.com/</a><br>山东理工  <a href="http://pypi.sdutlinux.org/">http://pypi.sdutlinux.org/</a></p>
+<p>有意思的是，2020年的评选我魔幻般的拿了大满贯，所在部门的、区域的、集团的先进我全拿了！感谢领导！</p>
 </blockquote>
-<p>2021年了，一些国内源已经不运营了，我也不习惯照抄网上的文章，所以这里是我的实践结果。</p>
-<h2 id="国内源的测评"><a href="#国内源的测评" class="headerlink" title="国内源的测评"></a>国内源的测评</h2><table>
-<thead>
-<tr>
-<th>源</th>
-<th>地址</th>
-<th>测试</th>
-<th>速度</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>清华大学</td>
-<td><a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></td>
-<td>ping pypi.tuna.tsinghua.edu.cn</td>
-<td>62ms</td>
-</tr>
-<tr>
-<td>阿里云</td>
-<td><a href="https://mirrors.aliyun.com/pypi/simple/">https://mirrors.aliyun.com/pypi/simple/</a></td>
-<td>ping mirrors.aliyun.com</td>
-<td>8ms</td>
-</tr>
-<tr>
-<td>豆瓣</td>
-<td><a href="https://pypi.douban.com/simple/">https://pypi.douban.com/simple/</a></td>
-<td>ping pypi.douban.com</td>
-<td>52ms</td>
-</tr>
-</tbody></table>
-<p>综上，推荐选择阿里云，不是网友清一色的推荐清华大学源和豆瓣源。</p>
-<h2 id="临时源配置"><a href="#临时源配置" class="headerlink" title="临时源配置"></a>临时源配置</h2><ol>
-<li><p>普通环境下操作示例：</p>
-<pre><code class="cmd"> pipenv install &lt;package&gt;           -i &lt;URL&gt;
- pip install Django          -i https://pypi.doubanio.com/simple/</code></pre>
-</li>
-<li><p>虚拟环境下的操作示例</p>
-<pre><code class="doc"> pipenv install &lt;package&gt;           --pypi-mirror &lt;URL&gt;
- pip install Django          --pypi-mirror https://mirrors.aliyun.com/pypi/simple/</code></pre>
-</li>
-</ol>
-<h2 id="永久源配置"><a href="#永久源配置" class="headerlink" title="永久源配置"></a>永久源配置</h2><ol>
-<li><p>Windows 平台：在 <code>%HOMEPATH%</code> 路径下创建 <strong>pip</strong> 文件夹，再创建 <code>pip.ini</code> 文件，内容如下：</p>
-<pre><code class="ini"> [global]
- timeout = 6000
- index-url = https://mirrors.aliyun.com/pypi/simple/
- ;清华大学：https://pypi.tuna.tsinghua.edu.cn/simple
- ;阿里云：https://mirrors.aliyun.com/pypi/simple/
- ;豆瓣：https://pypi.douban.com/simple/
+<p>看着别人的宣传材料，都是将普通而平凡的事情做成了。我和别人的区别，无非是我的业绩更多是与计算机相关的，不容易可视化评估；而别人的业绩往往都是加了什么设备、修好了什么东西、帮助了多少穷人，即使是外行人也能评价出一二三来。所以，我还是挺无奈的：酒再香，也怕巷子太深！</p>
+<p>噢，不再说这些事情了，我还是向前看看吧，因为这些社会环境可不会自动适应我：工作上的岗位，不是我自己能定的；而我也不愿意去做一条咸鱼，哪怕可能会被一些人毫无底线地利用。因此，我，需要调整自我，不断去提升自我，与时俱进，开拓创新。</p>
+<p><strong>2020年，我是做了不少工作的。我自以为：我是一些工作成功开展的关键，因为我有决心、有能力、有行动去突破困难，让我的同事没有后顾之忧！可是，我也不是成功唯一的关键，我明白，我再厉害，如果厂家不配合、使用者不接纳，那么我做的成果，也只是一堆空洞的二进制符号的集合；厂家、用户都是靠我的上上级以及上上级的上上级去驱动的——没有领导的支持，就没有相应的硬件资源，就没有实施的基础，更没有应用、推广、完善的可能性！因此，关键领导的支持，也毫无疑问是成功的最关键。</strong></p>
+<p>《荀子·劝学》中提出：<code>君子生非异也，善假于物也</code>。我认为，一个事情不是我一个人做成的，并不丢人。我分析，事业成功的关键，在于<strong>资源完备</strong>、<strong>方法完整</strong>、<strong>执行到位</strong> 都落实到位了。一个人是做不成大事业的，需要集体的支持；集团未必就能长期稳健，需要个人的奋斗创新；两者相辅相成、缺一不可。</p>
+<p>春城经冬，乍暖还寒。2020年已经过去，我感激领导的支持和信任，感谢同事和陌生人的帮助和支援，感恩妻子儿女默默的支撑，也点赞自己，栉风沐雨，永不放弃！</p>
+<p>2021年，你好！文字前的读者，也祝你未来一切越来越好！</p>
+]]></content>
+      <categories>
+        <category>坐井观天</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>成功</tag>
+        <tag>关键</tag>
+        <tag>领导</tag>
+        <tag>奋斗</tag>
+        <tag>总结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS 6.10 编译安装 GCC4.8.5</title>
+    <url>/202103072130/</url>
+    <content><![CDATA[<p>由于安装 python 3 的需要，需要升级 GCC；由于我的操作系统是 CentOS6.10，而且还需要考虑到工作软件系统的兼容，因此 GCC 版本暂时定为 4.8.5。测试表明，如果 Python 需要性能优化选项 <code>--enable-optimizations</code>，需要 GCC 8.2+ 以上的版本。</p>
+<h2 id="源码下载"><a href="#源码下载" class="headerlink" title="源码下载"></a>源码下载</h2><h3 id="GCC-源码下载"><a href="#GCC-源码下载" class="headerlink" title="GCC 源码下载"></a>GCC 源码下载</h3><pre><code class="sh">cd /home/common
+wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-4.8.5/gcc-4.8.5.tar.gz
+tar xzvf gcc-4.8.5.tar.gz
 
- [install]
- ;use-mirrors = true
- ;mirrors = https://pypi.tuna.tsinghua.edu.cn/simple
- trusted-host = https://mirrors.aliyun.com</code></pre>
-</li>
-<li><p>Linux 平台：在 <code>~/.pip/pip.conf</code> 文件中增加上述内容。</p>
-</li>
-<li><p>pipenv 等虚拟环境，只需要在相应的 <code>Pipfile</code> 中修改相应的 URL 内容即可，举例如下：</p>
-<pre><code class="ini"> [[source]]
- name = &quot;pypi&quot;
- #修改源提高锁定速度
- url = &quot;https://mirrors.aliyun.com/pypi/simple&quot;
+# 源码权限根据实际需要设定，实际上编译完成后这个文件夹用不到，因此可以不操作此步骤
+chmod 777 -R gcc-4.8.5/</code></pre>
+<h3 id="依赖库源码下载"><a href="#依赖库源码下载" class="headerlink" title="依赖库源码下载"></a>依赖库源码下载</h3><pre><code class="sh"># 进入保存地址
+cd /home/common/gcc-4.8.5
 
- [[source]]
- name = &quot;aliyun&quot;
- url = &quot;https://mirrors.aliyun.com/pypi/simple&quot;
- verify_ssl = true</code></pre>
-</li>
-</ol>
-<p>测试下载 <code>pip install pandas</code> 速度从 12kb/s 提升到 3Mb/s，妥妥地提升百倍以上速度不是梦！</p>
-<p>致敬阿里云、清华大学、豆瓣这些为开源共享力量的单位！</p>
-<blockquote>
-<p>上述内容，有些是三四年前梳理的，早忘了是参考了哪些文章了，有空再找找，然后补上来。<br>不过尴尬的是，天下文章一大抄，多数人都是乱写一通，不成体系，不辨真伪，实在是不堪入目！</p>
+wget https://gmplib.org/download/gmp-6.1.2/gmp-6.1.2.tar.bz2
+tar xvf gmp-6.1.2.tar.bz2
+mv gmp-6.1.2 gmp
+
+wget https://ftp.gnu.org/gnu/mpfr/mpfr-3.1.6.tar.gz
+tar xzvf mpfr-3.1.6.tar.gz
+mv mpfr-3.1.6 mpfr
+
+wget https://ftp.gnu.org/gnu/mpc/mpc-1.0.3.tar.gz
+tar xzvf mpc-1.0.3.tar.gz
+mv mpc-1.0.3 mpc
+
+wget http://www.bastoul.net/cloog/pages/download/cloog-0.18.4.tar.gz
+tar xzvf cloog-0.18.4.tar.gz
+mv cloog-0.18.4 cloog
+
+wget http://isl.gforge.inria.fr/isl-0.14.tar.gz
+tar xzvf isl-0.14.tar.gz
+mv isl-0.14 isl</code></pre>
+<h2 id="编译安装-GCC"><a href="#编译安装-GCC" class="headerlink" title="编译安装 GCC"></a>编译安装 GCC</h2><h3 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h3><pre><code class="sh">#gcc4.4.7版本开始，官方推荐使用单独的目录，而不是在解压gcc源码后的目录中进行编译
+mkdir /home/common/gcc-build
+cd gcc-build
+
+../gcc-4.8.5/configure --enable-checking=release --enable-languages=c,c++ --disable-multilib
+    # --with-pkgversion=version ：指定一个标识你的包的字符串
+    # --enable-languages=c,c++：可以使用 all，default，ada，c，c++，fortran，go，jit，lto，objc，obj-c++。
+    # --disable-multilib：禁止生成多个平台的代码
+    # --enable-bootstrap：冗余的编译检查工作
+    # --enable-gather-detailed-mem-stats：允许通过 -fmem-report 选项来输出编译其它程序时的实时内存使用情况
+    # --with-long-double-128：指定long double类型的默认值是128位。
+    # --enable-threads=posix：C++ 异常能处理多线程代码
+    # --without-bash-malloc：禁用了 Bash 的内存分配函数(malloc)，Bash 将使用更为稳定的 Glibc 里的 malloc 函数。
+    # --enable-multibyte：支持使用多字节字符编码的文件
+
+    grep &quot;error&quot; config.log
+
+# 默认的make不加-j参数效率比较低，加上多线程参数 -j4 和-j8性能差距不大，-j16性能就比较差
+date +%T &amp;&amp; make -j4 &amp;&amp; date +%T
+    # make clean：清除上次的make命令所产生的object文件（后缀为“.o”的文件）及可执行文件。
+    # make distclean：包含make clean，同时也将configure生成的文件全部删除掉。感觉有点像在 gcc-build 中执行 rm -rf 的删减版一样。
+    lscpu |grep -A 1 &#39;Model name&#39;
+make install</code></pre>
+<h3 id="关联系统"><a href="#关联系统" class="headerlink" title="关联系统"></a>关联系统</h3><p>如果上述安装过程中指定了 gcc 的安装路径，那么需要关联系统。当然，我上一步并没有指定安装路径，而是直接替代了系统自带的 GCC 4.4.7。</p>
+<pre><code class="sh"># 更新环境
+echo &#39;/usr/local/gcc-4.8.5/lib64&#39; &gt; /etc/ld.so.conf.d/gcc4.8.5.conf
+ldconfig
+
+# 在自定义的全局配置文件中添加 PATH 变量
+vim /etc/profile.d/hhjos6.sh
+    PATH=/usr/local/gcc-4.8.5/bin:$PATH
+
+mv /usr/bin/gcc /usr/bin/gcc-4.4.7
+mv /usr/bin/g++ /usr/bin/g++-4.4.7
+mv /usr/bin/c++ /usr/bin/c++-4.4.7
+ln -s /usr/local/gcc/bin/gcc /usr/bin/gcc
+ln -s /usr/local/gcc/bin/c++ /usr/bin/c++
+ln -s /usr/local/gcc/bin/g++ /usr/bin/g++
+ln -s /usr/local/gcc/lib64/libstdc++.so.6.0.22 /usr/lib64/libstdc++.so.6</code></pre>
+<h3 id="版本检查"><a href="#版本检查" class="headerlink" title="版本检查"></a>版本检查</h3><pre><code class="sh">gcc -v
+    gcc -dumpversion
+    ll /usr/bin/cc
+    strings /usr/lib64/libstdc++.so.6 | grep GLIBC
+g++ -v
+    g++ -dumpversion
+    c++ -dumpversion</code></pre>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><blockquote>
+<p>如果还要尝试 <code>yum -y install centos-release-scl</code> 安装临时版本的 GCC ，那多数人并不会成功，毕竟 CentOS 6 在官方都是不支持的版本了。博主这次安装 GCC 4.8.5 花了很长时间，毕竟坑太多了，而且已有程序环境的兼容性也必须兼顾。因此虽然参考了以下这些文章，但是操作步骤上却有差异；就是一点点差异，我浪费了很多很多的时间！实际上，我看过的文章就不止这些了，但对我并没有提供任何的帮助。</p>
 </blockquote>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li>PyPA.<code>Installing Packages</code>[EB/OL].<a href="https://packaging.python.org/tutorials/installing-packages/">https://packaging.python.org/tutorials/installing-packages/</a>, 2021/01/17.</li>
+<ol>
+<li><p>TUNA.<code>清华大学开源软件镜像站（GCC）</code>[EB/OL].<a href="https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc">https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc</a>, 2021/02/20.</p>
+</li>
+<li><p>peterpanzsy.<code>centos 6 升级gcc</code>[EB/OL].<a href="https://www.cnblogs.com/peterpanzsy/archive/2013/04/10/3006838.html">https://www.cnblogs.com/peterpanzsy/archive/2013/04/10/3006838.html</a>, 2021/02/20.</p>
+</li>
+<li><p>创小新.<code>LINUX CENTOS6.8编译安装GCC-6.3.0 升级GCC</code>[EB/OL].<a href="https://chuangxiao.xin/h-nd-87.html">https://chuangxiao.xin/h-nd-87.html</a>, 2021/02/20.</p>
+</li>
+<li><p>ljpwinxp.<code>Centos 6.9 编译安装gcc 4.8.5</code>[EB/OL].<a href="https://blog.51cto.com/191226139/2066137">https://blog.51cto.com/191226139/2066137</a>, 2021/02/20.</p>
+</li>
+<li><p>Free Software Foundation.<code>GCC 4.8 Release Series: Changes, New Features, and Fixes</code>[EB/OL].<a href="https://gcc.gnu.org/gcc-4.8/changes.html">https://gcc.gnu.org/gcc-4.8/changes.html</a>, 2021/02/20.</p>
+</li>
 </ol>
 ]]></content>
       <categories>
         <category>编程笔记</category>
       </categories>
       <tags>
-        <tag>国内源</tag>
-        <tag>加速</tag>
-        <tag>下载</tag>
-        <tag>pip</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>写论文的苦，你未必想尝一下</title>
-    <url>/202101301128/</url>
-    <content><![CDATA[<p>最近 3 个星期，一直在忙着写论文，走路在想，吃饭在想，睡觉也在想，总感觉某个地方有个难关需要我去跨越，我到了附近，却一直没有发现；等到论文基本写出来后，发现写论文是挺辛苦的！</p>
-<h2 id="选题的苦"><a href="#选题的苦" class="headerlink" title="选题的苦"></a>选题的苦</h2><p>如果认真去做科研论文的话，选题是很苦的，因为是很难找到合适的题目的。</p>
-<p>我都工作快 10 年了，也就最近才有些灵感和题材。一个人很难独自拥有一些高大上的项目，我的工作是搬砖的，就很难去研究烧砖技术，更多的是考虑如何搬运、如何与人协作、如何做好工期管理等等。</p>
-<p>因此，好不容易在工作中，发挥了一些重要作用，在种种压力之下，准备去写论文；拟好了粗略的提纲，感觉去找一个知识数据库的账户，将同领域、同主题的文献找出来，一看，不好了，怎么这么多人都写了，多半只能放弃，就算不放弃，题材也很难写出新意来；水论文的人很多，可是自己扪心自问，那并不是我想要的，丢掉吧！</p>
-<p>由于工作繁忙以及自己心里的这一丝丝骄傲，我好长时间都没有写出论文来，明明我业绩最多、贡献最大，可是我比不少按部就班的同事晚了 2 年。有些时日里，我焦虑得不行，不肯将就，也没有天降福利，在两个单位里边都被关心我的大领导约谈了…</p>
-<p>好不容易能够选了一个题目，能够勉强说有创新性、实用价值的，又得在诸多先行者的背影里，寻找空间，作出差异化来，不然，自己就真的是水论文了。</p>
-<h2 id="写作的苦"><a href="#写作的苦" class="headerlink" title="写作的苦"></a>写作的苦</h2><p>如果认真去做科研论文的话，写作的过程也是很苦的，因为写的东西不一定被人认可。</p>
-<p>工作的过程，事情做完就了事了；可是如果发论文，那么自己得将事情的来龙去脉、因果、主次、先后等等都弄明白。最近写的这个论文，是关于计算机技术的，在网络上、操作系统里、论文里，都有零零星星的表述，可是有些已经过期了，有些别人就写错了，有些别人提供的参数、程序、方法等等不适合实际情况，都得去一一验证，一一去比较，一一去部署，最近这两周，我的头一直很疼，因为有些试验尝试了十多次了，一次需要一两个小时；日常的工作仍然需要继续，家里儿女仍得操心，老家也有一些烦心事，新一年的工作仍然很迷茫，这一些都让我很为难。</p>
-<p>好不容易写出素材来了，还得修改文字；标题是否有吸引力，摘要是否清楚，翻译是否妥当，文章各级标题是否层次鲜明，各个段落的内容是否清楚明白、是否啰嗦繁杂、是否存在逻辑问题，得来回修改。</p>
-<p>感觉差不多了，得控制字数，不能太多，也不能太少；图片得自己去绘制，不然显示效果不好；图表得考虑，论文的相关指标能否让别人看得懂、评估得上等级。因此，各种修改也得耗好几个通宵！</p>
-<h2 id="发表的苦"><a href="#发表的苦" class="headerlink" title="发表的苦"></a>发表的苦</h2><p>如果认真去做科研论文的话，发表过程也是很辛苦的，因为得到好期刊的认可也是相当的困难的。好不容易有了内容，得开始寻找适当的杂志了。找了几个心仪的杂志，论文格式好好捯饬了一下，存了很多个版本格式，花了几天也完成了。</p>
-<p>自己一无人脉，二无平台，三无能力，核心期刊基本都很难；前一个论文我整整收了三年，投了多家期刊，有些是毫不客气的说水平不行，有些和和气气地说不符合杂志风格，有些啥也没说退稿回来。</p>
-<h2 id="成果的苦"><a href="#成果的苦" class="headerlink" title="成果的苦"></a>成果的苦</h2><p>如果认真去做科研论文的话，论文发表了也是很苦的，因为不是投入越大、回报越大。</p>
-<p>很不容易地，论文发表了，可是好些平时不做事的同事，不知不觉地就发了好几篇论文，评选职称了，自己又显得落后了，这种苦真不是滋味！</p>
-<p>看着别人那么水，和自己发在同样的杂志上，并不知道自己来回倒腾是否有价值。其实杂志里边的论文多数都是过得去的，奈何偏偏有几个相熟的人凑了一些他从来没有弄清楚过的内容上去，也发表了，心里何其翻覆！这样一对比，再也不认为那些核心期刊里侃侃而谈的大家们徒有其表了，而是自惭形秽不已。</p>
-<p>论文发表了，自己回忆起来，那个过程仍然是苦涩的，很长时间都挥之不去。可是，如果得到了认可，对别人也发挥了作用，那心里在很短的瞬间也是会有甘之如饴的愉悦的。</p>
-<p>其实，写论文不一定苦，苦的是放不下心里的结，随性一点的话，一切会好很多。春城冬暖，愿大家都能享受这美好的阳光。</p>
-]]></content>
-      <categories>
-        <category>坐井观天</category>
-      </categories>
-      <tags>
-        <tag>论文</tag>
-        <tag>科研</tag>
-        <tag>冷板凳</tag>
-        <tag>苦</tag>
+        <tag>Linux</tag>
+        <tag>CentOS</tag>
+        <tag>GCC</tag>
+        <tag>编译</tag>
+        <tag>安装</tag>
       </tags>
   </entry>
   <entry>
@@ -3248,145 +3254,10 @@ service iptables restart</code></pre>
         <tag>Linux</tag>
         <tag>国内源</tag>
         <tag>CentOS</tag>
-        <tag>MySQL</tag>
         <tag>安装</tag>
+        <tag>MySQL</tag>
         <tag>配置</tag>
         <tag>权限</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CentOS 6.10 编译安装 GCC4.8.5</title>
-    <url>/202103072130/</url>
-    <content><![CDATA[<p>由于安装 python 3 的需要，需要升级 GCC；由于我的操作系统是 CentOS6.10，而且还需要考虑到工作软件系统的兼容，因此 GCC 版本暂时定为 4.8.5。测试表明，如果 Python 需要性能优化选项 <code>--enable-optimizations</code>，需要 GCC 8.2+ 以上的版本。</p>
-<h2 id="源码下载"><a href="#源码下载" class="headerlink" title="源码下载"></a>源码下载</h2><h3 id="GCC-源码下载"><a href="#GCC-源码下载" class="headerlink" title="GCC 源码下载"></a>GCC 源码下载</h3><pre><code class="sh">cd /home/common
-wget https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-4.8.5/gcc-4.8.5.tar.gz
-tar xzvf gcc-4.8.5.tar.gz
-
-# 源码权限根据实际需要设定，实际上编译完成后这个文件夹用不到，因此可以不操作此步骤
-chmod 777 -R gcc-4.8.5/</code></pre>
-<h3 id="依赖库源码下载"><a href="#依赖库源码下载" class="headerlink" title="依赖库源码下载"></a>依赖库源码下载</h3><pre><code class="sh"># 进入保存地址
-cd /home/common/gcc-4.8.5
-
-wget https://gmplib.org/download/gmp-6.1.2/gmp-6.1.2.tar.bz2
-tar xvf gmp-6.1.2.tar.bz2
-mv gmp-6.1.2 gmp
-
-wget https://ftp.gnu.org/gnu/mpfr/mpfr-3.1.6.tar.gz
-tar xzvf mpfr-3.1.6.tar.gz
-mv mpfr-3.1.6 mpfr
-
-wget https://ftp.gnu.org/gnu/mpc/mpc-1.0.3.tar.gz
-tar xzvf mpc-1.0.3.tar.gz
-mv mpc-1.0.3 mpc
-
-wget http://www.bastoul.net/cloog/pages/download/cloog-0.18.4.tar.gz
-tar xzvf cloog-0.18.4.tar.gz
-mv cloog-0.18.4 cloog
-
-wget http://isl.gforge.inria.fr/isl-0.14.tar.gz
-tar xzvf isl-0.14.tar.gz
-mv isl-0.14 isl</code></pre>
-<h2 id="编译安装-GCC"><a href="#编译安装-GCC" class="headerlink" title="编译安装 GCC"></a>编译安装 GCC</h2><h3 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h3><pre><code class="sh">#gcc4.4.7版本开始，官方推荐使用单独的目录，而不是在解压gcc源码后的目录中进行编译
-mkdir /home/common/gcc-build
-cd gcc-build
-
-../gcc-4.8.5/configure --enable-checking=release --enable-languages=c,c++ --disable-multilib
-    # --with-pkgversion=version ：指定一个标识你的包的字符串
-    # --enable-languages=c,c++：可以使用 all，default，ada，c，c++，fortran，go，jit，lto，objc，obj-c++。
-    # --disable-multilib：禁止生成多个平台的代码
-    # --enable-bootstrap：冗余的编译检查工作
-    # --enable-gather-detailed-mem-stats：允许通过 -fmem-report 选项来输出编译其它程序时的实时内存使用情况
-    # --with-long-double-128：指定long double类型的默认值是128位。
-    # --enable-threads=posix：C++ 异常能处理多线程代码
-    # --without-bash-malloc：禁用了 Bash 的内存分配函数(malloc)，Bash 将使用更为稳定的 Glibc 里的 malloc 函数。
-    # --enable-multibyte：支持使用多字节字符编码的文件
-
-    grep &quot;error&quot; config.log
-
-# 默认的make不加-j参数效率比较低，加上多线程参数 -j4 和-j8性能差距不大，-j16性能就比较差
-date +%T &amp;&amp; make -j4 &amp;&amp; date +%T
-    # make clean：清除上次的make命令所产生的object文件（后缀为“.o”的文件）及可执行文件。
-    # make distclean：包含make clean，同时也将configure生成的文件全部删除掉。感觉有点像在 gcc-build 中执行 rm -rf 的删减版一样。
-    lscpu |grep -A 1 &#39;Model name&#39;
-make install</code></pre>
-<h3 id="关联系统"><a href="#关联系统" class="headerlink" title="关联系统"></a>关联系统</h3><p>如果上述安装过程中指定了 gcc 的安装路径，那么需要关联系统。当然，我上一步并没有指定安装路径，而是直接替代了系统自带的 GCC 4.4.7。</p>
-<pre><code class="sh"># 更新环境
-echo &#39;/usr/local/gcc-4.8.5/lib64&#39; &gt; /etc/ld.so.conf.d/gcc4.8.5.conf
-ldconfig
-
-# 在自定义的全局配置文件中添加 PATH 变量
-vim /etc/profile.d/hhjos6.sh
-    PATH=/usr/local/gcc-4.8.5/bin:$PATH
-
-mv /usr/bin/gcc /usr/bin/gcc-4.4.7
-mv /usr/bin/g++ /usr/bin/g++-4.4.7
-mv /usr/bin/c++ /usr/bin/c++-4.4.7
-ln -s /usr/local/gcc/bin/gcc /usr/bin/gcc
-ln -s /usr/local/gcc/bin/c++ /usr/bin/c++
-ln -s /usr/local/gcc/bin/g++ /usr/bin/g++
-ln -s /usr/local/gcc/lib64/libstdc++.so.6.0.22 /usr/lib64/libstdc++.so.6</code></pre>
-<h3 id="版本检查"><a href="#版本检查" class="headerlink" title="版本检查"></a>版本检查</h3><pre><code class="sh">gcc -v
-    gcc -dumpversion
-    ll /usr/bin/cc
-    strings /usr/lib64/libstdc++.so.6 | grep GLIBC
-g++ -v
-    g++ -dumpversion
-    c++ -dumpversion</code></pre>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><blockquote>
-<p>如果还要尝试 <code>yum -y install centos-release-scl</code> 安装临时版本的 GCC ，那多数人并不会成功，毕竟 CentOS 6 在官方都是不支持的版本了。博主这次安装 GCC 4.8.5 花了很长时间，毕竟坑太多了，而且已有程序环境的兼容性也必须兼顾。因此虽然参考了以下这些文章，但是操作步骤上却有差异；就是一点点差异，我浪费了很多很多的时间！实际上，我看过的文章就不止这些了，但对我并没有提供任何的帮助。</p>
-</blockquote>
-<ol>
-<li><p>TUNA.<code>清华大学开源软件镜像站（GCC）</code>[EB/OL].<a href="https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc">https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc</a>, 2021/02/20.</p>
-</li>
-<li><p>peterpanzsy.<code>centos 6 升级gcc</code>[EB/OL].<a href="https://www.cnblogs.com/peterpanzsy/archive/2013/04/10/3006838.html">https://www.cnblogs.com/peterpanzsy/archive/2013/04/10/3006838.html</a>, 2021/02/20.</p>
-</li>
-<li><p>创小新.<code>LINUX CENTOS6.8编译安装GCC-6.3.0 升级GCC</code>[EB/OL].<a href="https://chuangxiao.xin/h-nd-87.html">https://chuangxiao.xin/h-nd-87.html</a>, 2021/02/20.</p>
-</li>
-<li><p>ljpwinxp.<code>Centos 6.9 编译安装gcc 4.8.5</code>[EB/OL].<a href="https://blog.51cto.com/191226139/2066137">https://blog.51cto.com/191226139/2066137</a>, 2021/02/20.</p>
-</li>
-<li><p>Free Software Foundation.<code>GCC 4.8 Release Series: Changes, New Features, and Fixes</code>[EB/OL].<a href="https://gcc.gnu.org/gcc-4.8/changes.html">https://gcc.gnu.org/gcc-4.8/changes.html</a>, 2021/02/20.</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>编程笔记</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>CentOS</tag>
-        <tag>安装</tag>
-        <tag>GCC</tag>
-        <tag>编译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CentOS 6 编译安装 sqlite 3</title>
-    <url>/202103211734/</url>
-    <content><![CDATA[<p>由于安装 Python 环境的需要，需要对 Python 进行编译安装。</p>
-<h2 id="安装编译环境"><a href="#安装编译环境" class="headerlink" title="安装编译环境"></a>安装编译环境</h2><p>先安装必要的环境，博主的系统中默认其实已经包含了</p>
-<pre><code class="sh">yum install sqlite-devel</code></pre>
-<h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h2><pre><code class="sh">cd /home/common/
-wget https://www.sqlite.org/2020/sqlite-autoconf-3320300.tar.gz
-tar -xvzf sqlite-autoconf-3320300.tar.gz
-cd sqlite-autoconf-3320300/
-mkdir -p /usr/local/sqlite
-./configure --prefix=/usr/local/sqlite
-make -j4 &amp;&amp; make install</code></pre>
-<h2 id="关联系统"><a href="#关联系统" class="headerlink" title="关联系统"></a>关联系统</h2><pre><code class="sh">vim /etc/ld.so.conf.d/sqlite3.conf
-    # 可选
-    /usr/local/sqlite/lib
-ldconfig</code></pre>
-]]></content>
-      <categories>
-        <category>编程笔记</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>CentOS</tag>
-        <tag>Python</tag>
-        <tag>安装</tag>
-        <tag>编译</tag>
-        <tag>sqlite</tag>
       </tags>
   </entry>
   <entry>
@@ -3531,10 +3402,109 @@ vi /usr/bin/gnome-tweak-tool</code></pre>
       <tags>
         <tag>Linux</tag>
         <tag>CentOS</tag>
-        <tag>Python</tag>
-        <tag>安装</tag>
         <tag>编译</tag>
+        <tag>安装</tag>
+        <tag>Python</tag>
         <tag>sqlite</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 使用 pip 国内源实现百倍加速下载</title>
+    <url>/202101171117/</url>
+    <content><![CDATA[<blockquote>
+<p>pip 是一个现代的，通用的 Python 包管理工具。提供了对 Python 包的查找、下载、安装、卸载的功能。</p>
+</blockquote>
+<p>使用 Python 多年了，一直都坚持使用官方源的做法，结果被现实打脸了，下载一个包往往一个小时都不一定能够成功，不得不放弃了使用 Python 的念头。后来，偶尔知道了 pip 有国内源，大大加快了组件的下载速度，必须严重推荐。</p>
+<p>听说曾经有以下这些国内源——</p>
+<blockquote>
+<p>清华  <a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a><br>阿里  <a href="https://mirrors.aliyun.com/pypi/simple/">https://mirrors.aliyun.com/pypi/simple/</a><br>豆瓣  <a href="https://pypi.doubanio.com/simple/">https://pypi.doubanio.com/simple/</a><br>中科大    <a href="https://mirrors.ustc.edu.cn/pypi/web/simple/">https://mirrors.ustc.edu.cn/pypi/web/simple/</a><br>官网  <a href="https://pypi.org/simple">https://pypi.org/simple</a><br>华中理工  <a href="http://pypi.hustunique.com/">http://pypi.hustunique.com/</a><br>山东理工  <a href="http://pypi.sdutlinux.org/">http://pypi.sdutlinux.org/</a></p>
+</blockquote>
+<p>2021年了，一些国内源已经不运营了，我也不习惯照抄网上的文章，所以这里是我的实践结果。</p>
+<h2 id="国内源的测评"><a href="#国内源的测评" class="headerlink" title="国内源的测评"></a>国内源的测评</h2><table>
+<thead>
+<tr>
+<th>源</th>
+<th>地址</th>
+<th>测试</th>
+<th>速度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>清华大学</td>
+<td><a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></td>
+<td>ping pypi.tuna.tsinghua.edu.cn</td>
+<td>62ms</td>
+</tr>
+<tr>
+<td>阿里云</td>
+<td><a href="https://mirrors.aliyun.com/pypi/simple/">https://mirrors.aliyun.com/pypi/simple/</a></td>
+<td>ping mirrors.aliyun.com</td>
+<td>8ms</td>
+</tr>
+<tr>
+<td>豆瓣</td>
+<td><a href="https://pypi.douban.com/simple/">https://pypi.douban.com/simple/</a></td>
+<td>ping pypi.douban.com</td>
+<td>52ms</td>
+</tr>
+</tbody></table>
+<p>综上，推荐选择阿里云，不是网友清一色的推荐清华大学源和豆瓣源。</p>
+<h2 id="临时源配置"><a href="#临时源配置" class="headerlink" title="临时源配置"></a>临时源配置</h2><ol>
+<li><p>普通环境下操作示例：</p>
+<pre><code class="cmd"> pipenv install &lt;package&gt;           -i &lt;URL&gt;
+ pip install Django          -i https://pypi.doubanio.com/simple/</code></pre>
+</li>
+<li><p>虚拟环境下的操作示例</p>
+<pre><code class="doc"> pipenv install &lt;package&gt;           --pypi-mirror &lt;URL&gt;
+ pip install Django          --pypi-mirror https://mirrors.aliyun.com/pypi/simple/</code></pre>
+</li>
+</ol>
+<h2 id="永久源配置"><a href="#永久源配置" class="headerlink" title="永久源配置"></a>永久源配置</h2><ol>
+<li><p>Windows 平台：在 <code>%HOMEPATH%</code> 路径下创建 <strong>pip</strong> 文件夹，再创建 <code>pip.ini</code> 文件，内容如下：</p>
+<pre><code class="ini"> [global]
+ timeout = 6000
+ index-url = https://mirrors.aliyun.com/pypi/simple/
+ ;清华大学：https://pypi.tuna.tsinghua.edu.cn/simple
+ ;阿里云：https://mirrors.aliyun.com/pypi/simple/
+ ;豆瓣：https://pypi.douban.com/simple/
+
+ [install]
+ ;use-mirrors = true
+ ;mirrors = https://pypi.tuna.tsinghua.edu.cn/simple
+ trusted-host = https://mirrors.aliyun.com</code></pre>
+</li>
+<li><p>Linux 平台：在 <code>~/.pip/pip.conf</code> 文件中增加上述内容。</p>
+</li>
+<li><p>pipenv 等虚拟环境，只需要在相应的 <code>Pipfile</code> 中修改相应的 URL 内容即可，举例如下：</p>
+<pre><code class="ini"> [[source]]
+ name = &quot;pypi&quot;
+ #修改源提高锁定速度
+ url = &quot;https://mirrors.aliyun.com/pypi/simple&quot;
+
+ [[source]]
+ name = &quot;aliyun&quot;
+ url = &quot;https://mirrors.aliyun.com/pypi/simple&quot;
+ verify_ssl = true</code></pre>
+</li>
+</ol>
+<p>测试下载 <code>pip install pandas</code> 速度从 12kb/s 提升到 3Mb/s，妥妥地提升百倍以上速度不是梦！</p>
+<p>致敬阿里云、清华大学、豆瓣这些为开源共享力量的单位！</p>
+<blockquote>
+<p>上述内容，有些是三四年前梳理的，早忘了是参考了哪些文章了，有空再找找，然后补上来。<br>不过尴尬的是，天下文章一大抄，多数人都是乱写一通，不成体系，不辨真伪，实在是不堪入目！</p>
+</blockquote>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li>PyPA.<code>Installing Packages</code>[EB/OL].<a href="https://packaging.python.org/tutorials/installing-packages/">https://packaging.python.org/tutorials/installing-packages/</a>, 2021/01/17.</li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程笔记</category>
+      </categories>
+      <tags>
+        <tag>国内源</tag>
+        <tag>加速</tag>
+        <tag>下载</tag>
+        <tag>Python</tag>
+        <tag>pip</tag>
       </tags>
   </entry>
   <entry>
@@ -3689,6 +3659,36 @@ powerline-daemon --replace</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>CentOS 6 编译安装 sqlite 3</title>
+    <url>/202103211734/</url>
+    <content><![CDATA[<p>由于安装 Python 环境的需要，需要对 Python 进行编译安装。</p>
+<h2 id="安装编译环境"><a href="#安装编译环境" class="headerlink" title="安装编译环境"></a>安装编译环境</h2><p>先安装必要的环境，博主的系统中默认其实已经包含了</p>
+<pre><code class="sh">yum install sqlite-devel</code></pre>
+<h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h2><pre><code class="sh">cd /home/common/
+wget https://www.sqlite.org/2020/sqlite-autoconf-3320300.tar.gz
+tar -xvzf sqlite-autoconf-3320300.tar.gz
+cd sqlite-autoconf-3320300/
+mkdir -p /usr/local/sqlite
+./configure --prefix=/usr/local/sqlite
+make -j4 &amp;&amp; make install</code></pre>
+<h2 id="关联系统"><a href="#关联系统" class="headerlink" title="关联系统"></a>关联系统</h2><pre><code class="sh">vim /etc/ld.so.conf.d/sqlite3.conf
+    # 可选
+    /usr/local/sqlite/lib
+ldconfig</code></pre>
+]]></content>
+      <categories>
+        <category>编程笔记</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>CentOS</tag>
+        <tag>编译</tag>
+        <tag>安装</tag>
+        <tag>Python</tag>
+        <tag>sqlite</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>zsh 环境的安装与配置</title>
     <url>/202104171931/</url>
     <content><![CDATA[<blockquote>
@@ -3814,44 +3814,6 @@ source incr*.zsh
       </tags>
   </entry>
   <entry>
-    <title>ag 的安装与配置</title>
-    <url>/202104301929/</url>
-    <content><![CDATA[<ol>
-<li><p><strong>ag</strong> （<a href="https://github.com/ggreer/the_silver_searcher）比grep、ack更快的递归搜索文件内容（速度对比：`ag`&gt;`ack`&gt;`grep`）">https://github.com/ggreer/the_silver_searcher）比grep、ack更快的递归搜索文件内容（速度对比：`ag`&gt;`ack`&gt;`grep`）</a></p>
-<pre><code class="sh"># centos 6+（epel）
-yum install the_silver_searcher</code></pre>
-</li>
-<li><p>安装到 vim</p>
-<ul>
-<li><p>安装</p>
-<pre><code class="sh">cd /usr/share/vim/vim74/plugin
-#cd ~/.vim/plugin
-git clone https://github.com/rking/ag.vim ag</code></pre>
-</li>
-<li><p>全局配置 <code>vim /etc/vimrc</code></p>
-<pre><code class="sh">&quot; 自动缩进
-set autoindent
-
-&quot; ag 插件（请注意：默认为全局搜索，因此必须指明文件路径，不过支持正则表达式）
-set runtimepath^=/usr/share/vim/vim74/plugin/ag.vim
-let g:ag_prg=&quot;/usr/bin/ag --vimgrep&quot;
-let g:ag_working_path_mode=&quot;r&quot;</code></pre>
-</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>电脑爱好者</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>安装</tag>
-        <tag>配置</tag>
-        <tag>ag</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>fzf 的安装与配置</title>
     <url>/202106072338/</url>
     <content><![CDATA[<h2 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h2><ol>
@@ -3963,33 +3925,30 @@ make</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>tmux 的编译安装</title>
-    <url>/202106281924/</url>
+    <title>ag 的安装与配置</title>
+    <url>/202104301929/</url>
     <content><![CDATA[<ol>
-<li><p>正常情况下，直接使用 <code>yum install tmux</code> 即可完成安装。</p>
+<li><p><strong>ag</strong> （<a href="https://github.com/ggreer/the_silver_searcher）比grep、ack更快的递归搜索文件内容（速度对比：`ag`&gt;`ack`&gt;`grep`）">https://github.com/ggreer/the_silver_searcher）比grep、ack更快的递归搜索文件内容（速度对比：`ag`&gt;`ack`&gt;`grep`）</a></p>
+<pre><code class="sh"># centos 6+（epel）
+yum install the_silver_searcher</code></pre>
 </li>
-<li><p>安装支持环境</p>
-<pre><code class="shell">yum -y install libtermcap-devel ncurses-devel libevent-devel readline-devel
+<li><p>安装到 vim</p>
+<ul>
+<li><p>安装</p>
+<pre><code class="sh">cd /usr/share/vim/vim74/plugin
+#cd ~/.vim/plugin
+git clone https://github.com/rking/ag.vim ag</code></pre>
+</li>
+<li><p>全局配置 <code>vim /etc/vimrc</code></p>
+<pre><code class="sh">&quot; 自动缩进
+set autoindent
 
-# tmux depends on libevent 2.x(系统安装的版本为 1.4.13)
-git clone https://gitee.com/mirrors/libevent.git
-cd libevent
-./configure
-make
-make verify   # (optional)
-make install</code></pre>
+&quot; ag 插件（请注意：默认为全局搜索，因此必须指明文件路径，不过支持正则表达式）
+set runtimepath^=/usr/share/vim/vim74/plugin/ag.vim
+let g:ag_prg=&quot;/usr/bin/ag --vimgrep&quot;
+let g:ag_working_path_mode=&quot;r&quot;</code></pre>
 </li>
-<li><p>下载源码</p>
-<pre><code class="shell">cd /home/common
-git clone https://gitee.com/mirrors/tmux.git
-#git clone https://github.com/tmux/tmux.git</code></pre>
-</li>
-<li><p>编译安装</p>
-<pre><code class="sh">cd tmux
-sh autogen.sh
-./configure
-make
-make install</code></pre>
+</ul>
 </li>
 </ol>
 ]]></content>
@@ -3999,63 +3958,8 @@ make install</code></pre>
       <tags>
         <tag>Linux</tag>
         <tag>安装</tag>
-        <tag>编译</tag>
-        <tag>tmux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>google-authenticator 双因子验证</title>
-    <url>/202107312039/</url>
-    <content><![CDATA[<blockquote>
-<p>日常工作中，经常有人问系统开启双因子验证没有；奈何人穷志短，从网上看到 google-authenticator 支持免费的双因子验证，只要电脑端安装和配置 google-authenticator，就可以通过手机端安装的 Google 身份验证器提供相应的验证码来校验登录访问行为。</p>
-</blockquote>
-<h3 id="程序安装"><a href="#程序安装" class="headerlink" title="程序安装"></a>程序安装</h3><pre><code class="sh">  yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
-  yum list google-auth*
-  yum -y install google-authenticator
-  vim /etc/pam.d/sshd
-      # auth        required    pam_sepermit.so
-      auth required pam_google_authenticator.so
-  vim /etc/ssh/sshd_config
-      ChallengeResponseAuthentication yes
-      # ChallengeResponseAuthentication no
-      UsePAM yes
-
-      AuthenticationMethods publickey,password publickey,keyboard-interactive</code></pre>
-<h3 id="账户验证码功能的配置"><a href="#账户验证码功能的配置" class="headerlink" title="账户验证码功能的配置"></a>账户验证码功能的配置</h3><ol>
-<li><p>生成 root 账户验证码</p>
-<pre><code class="sh">[root@hhjos6 herc]# google-authenticator</code></pre>
-<blockquote>
-<p>  <a href="https://www.google.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth://totp/root@hhjos6%3Fsecret%3D">https://www.google.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth://totp/root@hhjos6%3Fsecret%3D</a>…<br>  Your new secret key is:<br>  此处省略若干字符<br>  Do you want me to update your “~/.google_authenticator” file (y/n) <strong>y</strong></p>
-<p>  Do you want to disallow multiple uses of the same authentication<br>  token? This restricts you to one login about every 30s, but it increases<br>  your chances to notice or even prevent man-in-the-middle attacks (y/n) <strong>y</strong></p>
-<p>  By default, tokens are good for 30 seconds and in order to compensate for<br>  possible time-skew between the client and the server, we allow an extra<br>  token before and after the current time. If you experience problems with poor<br>  time synchronization, you can increase the window from its default<br>  size of 1:30min to about 4min. Do you want to do so (y/n) <strong>y</strong></p>
-<p>  If the computer that you are logging into isn’t hardened against brute-force<br>  login attempts, you can enable rate-limiting for the authentication module.<br>  By default, this limits attackers to no more than 3 login attempts every 30s.<br>  Do you want to enable rate-limiting (y/n) <strong>y</strong><br>  [root@hhjos6 herc]# </p>
-</blockquote>
-</li>
-<li><p>生成 herc 账户验证码</p>
-<blockquote>
-<p>  hhjos6:/home/herc&gt; <strong>google-authenticator</strong><br>  <a href="https://www.google.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth://totp/herc@hhjos6%3Fsecret%">https://www.google.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth://totp/herc@hhjos6%3Fsecret%</a>…<br>  Your new secret key is:<br>  此处省略若干字符<br>  ​       Do you want me to update your “/home/username/.google_authenticator” file (y/n) <strong>y</strong><br>  ​       (是否重新生成登录配置文件？)</p>
-<p>  ​       Do you want to disallow multiple uses of the same authentication<br>  ​       token? This restricts you to one login about every 30s, but it increases<br>  ​       your chances to notice or even prevent man-in-the-middle attacks (y/n) <strong>y</strong><br>  ​       (是否拒绝多次重复使用相同的令牌？这将限制你每30s仅能登录一次，但会提醒/阻止中间人攻击。)<br>  ​<br>  ​       By default, tokens are good for 30 seconds and in order to compensate for<br>  ​       possible time-skew between the client and the server, we allow an extra<br>  ​       token before and after the current time. If you experience problems with poor<br>  ​       time synchronization, you can increase the window from its default<br>  ​       size of 1:30min to about 4min. Do you want to do so (y/n) <strong>n</strong><br>  ​       (是否将窗口时间由1分30秒增加到约4分钟？这将缓解时间同步问题。)<br>  ​<br>  ​       If the computer that you are logging into is not hardened against brute-force<br>  ​       login attempts, you can enable rate-limiting for the authentication module.<br>  ​       By default, this limits attackers to no more than 3 login attempts every 30s.<br>  ​       Do you want to enable rate-limiting (y/n) <strong>y</strong><br>  ​       (是否启用此模块的登录频率限制，登录者将会被限制为最多在30秒内登录3次。)<br>  ​    hhjos6:/home/herc&gt; </p>
-</blockquote>
-</li>
-<li><p>注意事项</p>
-<ul>
-<li>配置问题排查： <code>tail -40f /var/log/secure</code></li>
-<li>输入android 客户端的验证码（注意控制时间）后，再输入账户密码即可登录。</li>
-</ul>
-</li>
-</ol>
-<h3 id="重启进程生效"><a href="#重启进程生效" class="headerlink" title="重启进程生效"></a>重启进程生效</h3><pre><code class="sh">service sshd restart</code></pre>
-]]></content>
-      <categories>
-        <category>电脑爱好者</category>
-      </categories>
-      <tags>
-        <tag>安装</tag>
         <tag>配置</tag>
-        <tag>authenticator</tag>
-        <tag>google</tag>
-        <tag>双因子</tag>
-        <tag>网络安全</tag>
+        <tag>ag</tag>
       </tags>
   </entry>
   <entry>
@@ -4099,6 +4003,47 @@ make install</code></pre>
         <tag>专利</tag>
         <tag>查询</tag>
         <tag>方法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>tmux 的编译安装</title>
+    <url>/202106281924/</url>
+    <content><![CDATA[<ol>
+<li><p>正常情况下，直接使用 <code>yum install tmux</code> 即可完成安装。</p>
+</li>
+<li><p>安装支持环境</p>
+<pre><code class="shell">yum -y install libtermcap-devel ncurses-devel libevent-devel readline-devel
+
+# tmux depends on libevent 2.x(系统安装的版本为 1.4.13)
+git clone https://gitee.com/mirrors/libevent.git
+cd libevent
+./configure
+make
+make verify   # (optional)
+make install</code></pre>
+</li>
+<li><p>下载源码</p>
+<pre><code class="shell">cd /home/common
+git clone https://gitee.com/mirrors/tmux.git
+#git clone https://github.com/tmux/tmux.git</code></pre>
+</li>
+<li><p>编译安装</p>
+<pre><code class="sh">cd tmux
+sh autogen.sh
+./configure
+make
+make install</code></pre>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>编译</tag>
+        <tag>安装</tag>
+        <tag>tmux</tag>
       </tags>
   </entry>
   <entry>
@@ -4177,230 +4122,6 @@ fi
         <tag>IP</tag>
         <tag>远程</tag>
         <tag>限制</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一种软件著作权代码合并的批处理脚本</title>
-    <url>/202110011009/</url>
-    <content><![CDATA[<p>最近在忙着工作上的事情，很长一段时间没有写过文章了。前几周申请了一项软件著作权，涉及到代码需要合并的事情，要求前1500行 + 后1500行组成鉴定材料。因此我花了一点时间写了一个批处理的脚本，如下：</p>
-<pre><code class="bat">REM 指定需要处理的文件类型
-set /p file_filter=&quot;输入代码文件扩展名，空格分隔，如 *.aspx *.cs *.js *.css *.master *.config *.asax &quot;
-IF not defined file_filter set file_filter=*.aspx *.cs hhj.js *.master
-
-REM 指定输出文件
-SET current_date=%date:~0,4%%date:~5,2%%date:~8,2%_%time:~0,2%%time:~3,2%%time:~6,2%
-    :: 0 点是出现兼容性问题（时的第一位不会补零）
-    SET current_date=%date:~0,4%%date:~5,2%%date:~8,2%.%time:~3,2%%time:~6,2%
-set output_file=_codes-%current_date%-%computername%.txt
-set file_list=_files-%current_date%-%computername%.txt
-
-REM 指定代码目录，并切换过去（使用 /d 参数）
-set /p src_dir=&quot;输入代码根目录，如 I:\VirtualBox\vb_share\WebSites\Sis-1.0 ：&quot;
-    :: 设定初始值，不能带双引号
-    IF &quot;%src_dir%&quot;==&quot;&quot; set src_dir=I:\VirtualBox\vb_share\WebSites\Sis-1.0
-
-:: 跨驱动器切换路径
-cd /d &quot;%src_dir%&quot;
-
-
-
-REM 先清空文件，然后后将代码目录中的所有相关文件导入
-:: 首个代码文件
-set /p first_file=&quot;输入首个代码文件的相对路径，不区分大小写（如 Default.aspx ）： &quot;
-    :: 设定初始值，不能带双引号
-    IF &quot;%first_file%&quot;==&quot;&quot; set first_file=Default.aspx
-
-:: 添加根目录
-set first_file=%src_dir%\%first_file%
-    :: 不需要双引号扩住，否则会原样输出双引号；末尾也不能添加空格，否则也原样输出
-    echo %first_file% &gt; %file_list%
-    :: 将首个代码文件内容添加到目标文件中
-    echo.&gt; %output_file%
-type %first_file%&gt;&gt; %output_file%
-
-:: 合并当前路径中的代码
-for /F %%i in (&#39;dir /b/s/a:-d %file_filter%&#39;) do (
-
-    :: 追加代码文本内容（比较可以使用 equ 或 == 符号，i 参数表示不区分大小写）
-    IF /i &quot;%%i&quot;==&quot;%first_file%&quot; (
-        :: 首个代码文件（切记，括号中不允许只有一个语句、且不支持使用语句与注释交差，即只能第一行为注释！）
-        echo.&gt;&gt; %output_file%
-        echo.&gt;&gt; %output_file%
-        echo.&gt;&gt; %file_list%
-    ) ELSE (
-        :: 写入文件清单
-        echo %%i&gt;&gt; %file_list%
-        :: 其他代码文件
-        echo.&gt;&gt; %output_file%
-        type %%i &gt;&gt; %output_file%
-    )
-)
-
-echo finish！
-REM 打开目标文件夹，以便直接拷贝合成文本
-start explorer %src_dir%
-::pause</code></pre>
-<p>上述代码是按 ASP.NET 来选择代码文件的，在实际应用时 file_filter 的具体值应该根据你的代码文件的扩展名来设定。</p>
-]]></content>
-      <categories>
-        <category>电脑爱好者</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>批处理</tag>
-        <tag>bat</tag>
-        <tag>脚本</tag>
-        <tag>软著</tag>
-        <tag>代码</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用词云图探析设备故障的分布与频率等特性</title>
-    <url>/202110071856/</url>
-    <content><![CDATA[<p>近 2 年多来，在系统精益化治理中，通过对设备故障文本的词频及分布规律缝隙，以及深耕多年的系统认识，做了一些比较复杂的系统改造工作，取得了一些别人没有实现的业绩。</p>
-<p>不过，在业绩展示时，多数人员一看数据就翻过去，看都不看一样，囧！因此，用词云图来展示业绩是非常必要的。这里用自己的案例来做个演示。</p>
-<h2 id="导入函数库"><a href="#导入函数库" class="headerlink" title="导入函数库"></a>导入函数库</h2><pre><code class="sh"># -*- coding: utf-8 -*-
-
-import numpy as np              # numpy数据处理库
-import pandas as pd
-
-import codecs
-import re                       # 正则表达式库
-import jieba                    # 结巴分词
-import jieba.posseg             # 词性获取
-import jieba.analyse
-
-# 设置时间变量，便于对存储的文件进行版本管理
-import time
-import datetime</code></pre>
-<h2 id="对相关文本内容进行分词处理"><a href="#对相关文本内容进行分词处理" class="headerlink" title="对相关文本内容进行分词处理"></a>对相关文本内容进行分词处理</h2><p>本案例以某一文件的特定列内容进行分词处理为例；但在实际工作中，则可能是上千个包含5w+的文件，由于一般的办公电脑内存都不超过 4GB ，加载太多文件就需要考虑内存优化等一系列问题了，否则系统崩溃不说，还丢了中间版本的成果。网友说，一般地，pandas一次处理的文件不建议大于 100MB，特别是不建议大于 1GB。因此，内存管理、版本管理、数据清洗等复杂的操作，这里就不展开了。</p>
-<p>这里演示的日志文件为 txt 格式，读取特定列内容进行分词，并连同原始数据一并保存为 csv 格式（方便调试过程中比对分词是否正确等）。</p>
-<pre><code class="sh"># 记录开始时间
-tx1 = time.time()
-tx2 = str(int(round(tx1 * 1000)))  # 时间戳字符串
-
-# 开启并行分词模式（仅支持非 Windows 系统），参数为并行进程数
-jieba.enable_parallel(3)
-
-# 设定自定义词语组合
-jieba.load_userdict(&quot;jieba_segmenter_dict.txt&quot;)
-
-# 读取停用词数据（包括去除：区域名、常用调节词、无意义的编号/特殊符号等）
-stopwords = pd.read_csv(&#39;jieba_stopword_dict.txt&#39;, encoding=&#39;utf8&#39;, names=[&#39;stopword&#39;], index_col=False)
-# 转化停用词列表
-stop_list = stopwords[&#39;stopword&#39;].tolist()
-
-# TXT文件特征：事先已由 ANSI 转换为 UTF-8 格式,分隔符是 \t，默认无标题
-# 加载TXT文件（header=None, names 表示添加标题、数量与 tab 数量相当；设置index_col=0避免首列被当做索引）；read_table、read_csv 等效
-f1=pd.read_csv(&#39;./EventTxt/EVENT20200627.txt&#39;, sep=&#39;\t&#39;, encoding=&#39;utf_8_sig&#39;, \
-                index_col=0, header=None, \
-                names=[&#39;序号&#39;,&#39;时间&#39;,&#39;路径&#39;,&#39;描述&#39;,&#39;操作信息&#39;,&#39;补充信息&#39;,&#39;主机&#39;,&#39;备注&#39;])
-
-# 生成分词
-f1[&#39;分词&#39;] =  f1[&#39;描述&#39;].apply(lambda x : [i for i in jieba.cut(x) if i not in stop_list])  # 去除停用词
-# print(stop_list[10])
-
-# 保存处理后的文件
-f1.to_csv(&quot;./t4-EventCsv/t4_&quot; + str(count) + &quot;_&quot; + EVENT20200627 + &quot;.csv&quot;, encoding=&#39;utf_8_sig&#39;)
-
-# 显示行列数量
-rowNum=f1.shape[0] #不包括表头
-colNum=f1.columns.size
-print(&quot;\n表&quot; + str(count-1) + &quot;\t&quot; +str(rowNum) + &quot; 行\t&quot; + str(colNum)+ &quot; 列&quot;)
-
-# 抽样查看数据情况
-print(f1[&#39;分词&#39;].loc[20])
-
-# 显示耗时时间
-tx3 = time.time()
-tm_cost = tx3 - tx1
-print(&#39;&#123;:.2f&#125;&#39;.format(tm_cost) + &quot; s.&quot;)   # str(round(tm_cost,3))</code></pre>
-<p>上述涉及的分词、停用词字典内容暂时不分享，因为相关论文还没有发表，得等到论文发表了再公开吧。毕竟做词云图并不复杂，复杂的是数据如何清洗、权重识别等等，这绝对是考验基层工作经验的。<br>毫无疑问，那些比我会编程的厂家，为啥做不了我做的技改，最核心一点，就是因为我拥有他们从未拥有过的大量实际生产数据！</p>
-<h2 id="词频分析"><a href="#词频分析" class="headerlink" title="词频分析"></a>词频分析</h2><ol>
-<li>导入相应的函数库</li>
-</ol>
-<pre><code class="sh">from PIL import Image               # 图像处理库       
-import matplotlib.pyplot as plt     # 图像展示库（这里以plt代表库的全称）
-from wordcloud import WordCloud     # 词云展示库
-from imageio import imread
-
-import collections                  # 词频统计库
-import ast                          # 解决 pandas 读取的列的内容需要转换为 子列表的问题
-
-# 重复调用
-import time
-import pandas as pd</code></pre>
-<ol start="2">
-<li>进行词频分析</li>
-</ol>
-<pre><code class="sh">tx4 = time.time()   # 时间戳，计算耗时情况
-tx4s = str(int(round(tx4 * 1000)))  # 时间戳字符串，文件标记，版本管理用
-
-# 读入表格第 8 列(首行为标题)，得到  DataFrame
-fq1 = pd.read_csv(&#39;./t4-EventCsv/t4_1_EVENT20200628.csv&#39;, header=0, usecols=[8])
-# print(fq1.dtypes)
-
-# 将所有的分词合并
-words = []
-for content in fq1[&#39;分词&#39;]:
-    words.extend(ast.literal_eval(content))   # 字符转列表，然后列表追加到新列表末尾
-
-# 对汇总后的分词进行词频统计
-fq2 = pd.DataFrame(words, columns=[&#39;分词汇总&#39;])
-result = pd.value_counts(fq2[&#39;分词汇总&#39;]) 
-
-result.head(20)  # 不指明参数显示前 5 行，否则按指定参数显示
-
-# 创建词频文件
-result.to_csv(&quot;./t4-WordCloud/t4_wordcloud_&quot; + tx4s + &quot;_1_input.txt&quot;, header=0)
-print(&quot;词频分析文件已保存。&quot;)</code></pre>
-<h2 id="词云图绘制"><a href="#词云图绘制" class="headerlink" title="词云图绘制"></a>词云图绘制</h2><ol>
-<li>上传相关的资源文件到代码可以访问的目录</li>
-</ol>
-<p>背景图 China-map.jpg，去国家统计局官网下载的。<br>字体文件 simhei.ttf，在 Windows 系统目录中拷贝出来的。</p>
-<ol start="2">
-<li>词云图绘制</li>
-</ol>
-<pre><code class="sh"># 背景图
-bg1=imread(&quot;../resource/China-map.jpg&quot;)
-
-# 读取词频文件
-with open(&quot;./t4-WordCloud/t4_wordcloud_&quot; + tx4s + &quot;_1_input.txt&quot;,&quot;r&quot;) as file:
-    txt=file.read()
-
-# 生成词云
-wc_pic1=WordCloud(background_color=&quot;white&quot;,font_path=&#39;../resource/simhei.ttf&#39;,width=1800,height=1500,mask=bg1).generate(txt)
-
-# 保存词云图到本地
-wc_pic1.to_file(&#39;./t4-WordCloud/t4_wordcloud_&#39; + tx4s + &#39;_2_output.png&#39;)
-print(&quot;词云图片文件已保存。&quot;)
-
-# 使用plt库显示图片
-plt.imshow(wc_pic1)
-plt.axis(&quot;off&quot;)
-plt.show()
-
-# 显示耗时时间
-tx5 = time.time()
-tm_cost = tx5 - tx4
-print(str(round(tm_cost,3)) + &quot; s.&quot;)</code></pre>
-<p>最终效果如下：</p>
-<p><img src="/static/img/20211007-t6_EVENT20200630.jpg" alt="词云图效果演示"></p>
-<blockquote>
-<p>上仅做效果演示用，并非笔者的技改项目的最终成果；但未经许可，请勿使用，谢谢！</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>工作中的魔法</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>WordCloud</tag>
-        <tag>词云图</tag>
-        <tag>pandas</tag>
-        <tag>Jieba</tag>
-        <tag>词频</tag>
-        <tag>分词</tag>
       </tags>
   </entry>
   <entry>
@@ -4630,6 +4351,136 @@ endif
       </tags>
   </entry>
   <entry>
+    <title>一种软件著作权代码合并的批处理脚本</title>
+    <url>/202110011009/</url>
+    <content><![CDATA[<p>最近在忙着工作上的事情，很长一段时间没有写过文章了。前几周申请了一项软件著作权，涉及到代码需要合并的事情，要求前1500行 + 后1500行组成鉴定材料。因此我花了一点时间写了一个批处理的脚本，如下：</p>
+<pre><code class="bat">REM 指定需要处理的文件类型
+set /p file_filter=&quot;输入代码文件扩展名，空格分隔，如 *.aspx *.cs *.js *.css *.master *.config *.asax &quot;
+IF not defined file_filter set file_filter=*.aspx *.cs hhj.js *.master
+
+REM 指定输出文件
+SET current_date=%date:~0,4%%date:~5,2%%date:~8,2%_%time:~0,2%%time:~3,2%%time:~6,2%
+    :: 0 点是出现兼容性问题（时的第一位不会补零）
+    SET current_date=%date:~0,4%%date:~5,2%%date:~8,2%.%time:~3,2%%time:~6,2%
+set output_file=_codes-%current_date%-%computername%.txt
+set file_list=_files-%current_date%-%computername%.txt
+
+REM 指定代码目录，并切换过去（使用 /d 参数）
+set /p src_dir=&quot;输入代码根目录，如 I:\VirtualBox\vb_share\WebSites\Sis-1.0 ：&quot;
+    :: 设定初始值，不能带双引号
+    IF &quot;%src_dir%&quot;==&quot;&quot; set src_dir=I:\VirtualBox\vb_share\WebSites\Sis-1.0
+
+:: 跨驱动器切换路径
+cd /d &quot;%src_dir%&quot;
+
+
+
+REM 先清空文件，然后后将代码目录中的所有相关文件导入
+:: 首个代码文件
+set /p first_file=&quot;输入首个代码文件的相对路径，不区分大小写（如 Default.aspx ）： &quot;
+    :: 设定初始值，不能带双引号
+    IF &quot;%first_file%&quot;==&quot;&quot; set first_file=Default.aspx
+
+:: 添加根目录
+set first_file=%src_dir%\%first_file%
+    :: 不需要双引号扩住，否则会原样输出双引号；末尾也不能添加空格，否则也原样输出
+    echo %first_file% &gt; %file_list%
+    :: 将首个代码文件内容添加到目标文件中
+    echo.&gt; %output_file%
+type %first_file%&gt;&gt; %output_file%
+
+:: 合并当前路径中的代码
+for /F %%i in (&#39;dir /b/s/a:-d %file_filter%&#39;) do (
+
+    :: 追加代码文本内容（比较可以使用 equ 或 == 符号，i 参数表示不区分大小写）
+    IF /i &quot;%%i&quot;==&quot;%first_file%&quot; (
+        :: 首个代码文件（切记，括号中不允许只有一个语句、且不支持使用语句与注释交差，即只能第一行为注释！）
+        echo.&gt;&gt; %output_file%
+        echo.&gt;&gt; %output_file%
+        echo.&gt;&gt; %file_list%
+    ) ELSE (
+        :: 写入文件清单
+        echo %%i&gt;&gt; %file_list%
+        :: 其他代码文件
+        echo.&gt;&gt; %output_file%
+        type %%i &gt;&gt; %output_file%
+    )
+)
+
+echo finish！
+REM 打开目标文件夹，以便直接拷贝合成文本
+start explorer %src_dir%
+::pause</code></pre>
+<p>上述代码是按 ASP.NET 来选择代码文件的，在实际应用时 file_filter 的具体值应该根据你的代码文件的扩展名来设定。</p>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>批处理</tag>
+        <tag>bat</tag>
+        <tag>脚本</tag>
+        <tag>软著</tag>
+        <tag>代码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>google-authenticator 双因子验证</title>
+    <url>/202107312039/</url>
+    <content><![CDATA[<blockquote>
+<p>日常工作中，经常有人问系统开启双因子验证没有；奈何人穷志短，从网上看到 google-authenticator 支持免费的双因子验证，只要电脑端安装和配置 google-authenticator，就可以通过手机端安装的 Google 身份验证器提供相应的验证码来校验登录访问行为。</p>
+</blockquote>
+<h3 id="程序安装"><a href="#程序安装" class="headerlink" title="程序安装"></a>程序安装</h3><pre><code class="sh">  yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+  yum list google-auth*
+  yum -y install google-authenticator
+  vim /etc/pam.d/sshd
+      # auth        required    pam_sepermit.so
+      auth required pam_google_authenticator.so
+  vim /etc/ssh/sshd_config
+      ChallengeResponseAuthentication yes
+      # ChallengeResponseAuthentication no
+      UsePAM yes
+
+      AuthenticationMethods publickey,password publickey,keyboard-interactive</code></pre>
+<h3 id="账户验证码功能的配置"><a href="#账户验证码功能的配置" class="headerlink" title="账户验证码功能的配置"></a>账户验证码功能的配置</h3><ol>
+<li><p>生成 root 账户验证码</p>
+<pre><code class="sh">[root@hhjos6 herc]# google-authenticator</code></pre>
+<blockquote>
+<p>  <a href="https://www.google.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth://totp/root@hhjos6%3Fsecret%3D">https://www.google.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth://totp/root@hhjos6%3Fsecret%3D</a>…<br>  Your new secret key is:<br>  此处省略若干字符<br>  Do you want me to update your “~/.google_authenticator” file (y/n) <strong>y</strong></p>
+<p>  Do you want to disallow multiple uses of the same authentication<br>  token? This restricts you to one login about every 30s, but it increases<br>  your chances to notice or even prevent man-in-the-middle attacks (y/n) <strong>y</strong></p>
+<p>  By default, tokens are good for 30 seconds and in order to compensate for<br>  possible time-skew between the client and the server, we allow an extra<br>  token before and after the current time. If you experience problems with poor<br>  time synchronization, you can increase the window from its default<br>  size of 1:30min to about 4min. Do you want to do so (y/n) <strong>y</strong></p>
+<p>  If the computer that you are logging into isn’t hardened against brute-force<br>  login attempts, you can enable rate-limiting for the authentication module.<br>  By default, this limits attackers to no more than 3 login attempts every 30s.<br>  Do you want to enable rate-limiting (y/n) <strong>y</strong><br>  [root@hhjos6 herc]# </p>
+</blockquote>
+</li>
+<li><p>生成 herc 账户验证码</p>
+<blockquote>
+<p>  hhjos6:/home/herc&gt; <strong>google-authenticator</strong><br>  <a href="https://www.google.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth://totp/herc@hhjos6%3Fsecret%">https://www.google.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth://totp/herc@hhjos6%3Fsecret%</a>…<br>  Your new secret key is:<br>  此处省略若干字符<br>  ​       Do you want me to update your “/home/username/.google_authenticator” file (y/n) <strong>y</strong><br>  ​       (是否重新生成登录配置文件？)</p>
+<p>  ​       Do you want to disallow multiple uses of the same authentication<br>  ​       token? This restricts you to one login about every 30s, but it increases<br>  ​       your chances to notice or even prevent man-in-the-middle attacks (y/n) <strong>y</strong><br>  ​       (是否拒绝多次重复使用相同的令牌？这将限制你每30s仅能登录一次，但会提醒/阻止中间人攻击。)<br>  ​<br>  ​       By default, tokens are good for 30 seconds and in order to compensate for<br>  ​       possible time-skew between the client and the server, we allow an extra<br>  ​       token before and after the current time. If you experience problems with poor<br>  ​       time synchronization, you can increase the window from its default<br>  ​       size of 1:30min to about 4min. Do you want to do so (y/n) <strong>n</strong><br>  ​       (是否将窗口时间由1分30秒增加到约4分钟？这将缓解时间同步问题。)<br>  ​<br>  ​       If the computer that you are logging into is not hardened against brute-force<br>  ​       login attempts, you can enable rate-limiting for the authentication module.<br>  ​       By default, this limits attackers to no more than 3 login attempts every 30s.<br>  ​       Do you want to enable rate-limiting (y/n) <strong>y</strong><br>  ​       (是否启用此模块的登录频率限制，登录者将会被限制为最多在30秒内登录3次。)<br>  ​    hhjos6:/home/herc&gt; </p>
+</blockquote>
+</li>
+<li><p>注意事项</p>
+<ul>
+<li>配置问题排查： <code>tail -40f /var/log/secure</code></li>
+<li>输入android 客户端的验证码（注意控制时间）后，再输入账户密码即可登录。</li>
+</ul>
+</li>
+</ol>
+<h3 id="重启进程生效"><a href="#重启进程生效" class="headerlink" title="重启进程生效"></a>重启进程生效</h3><pre><code class="sh">service sshd restart</code></pre>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>安装</tag>
+        <tag>配置</tag>
+        <tag>authenticator</tag>
+        <tag>google</tag>
+        <tag>双因子</tag>
+        <tag>网络安全</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>chattr 的用法</title>
     <url>/202202202033/</url>
     <content><![CDATA[<p>在网络安全的管理中，需要对一些重要的系统文件进行锁定，比如说 <code>/etc/resolv.conf</code>、<code>/etc/hosts</code>，通过锁定，可以避免文件被误修改或者入侵者滥用。</p>
@@ -4661,6 +4512,134 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
         <tag>shell</tag>
         <tag>chattr</tag>
         <tag>锁定</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用华为手机克隆快速实现数据的导入导出</title>
+    <url>/202202272118/</url>
+    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>华为的手机克隆功能非常强大，通过该功能，可以实现两部手机之间包括通信录、通话记录、短信、APP等功能的快速迁移。</p>
+<p>最近10多年中，我用了多种手机操作系统的手机，更换手机的时候，最困难的事情就是各种资料的同步：</p>
+<ol>
+<li>通讯录同步：我用过 QQ同步助手、豌豆荚、SIM卡信息导出+Excel整理、刷机软件等各种工具，QQ同步助手、QQ邮箱同步等功能在一些版本的手机上出现了重大兼容性问题，SIM卡信息导入导出非常费精神，豌豆荚也一般般。综合比较下来，还是华为手机克隆功能最稳定，基本无须再进行更多的干预，特别是华为手机之间的信息同步，比手机自身携带的导入导出 VCard 功能还好用。</li>
+<li>程序配置同步：目前我并不了解程序配置同步的方法；只能盲目地整体拷贝手机整个目录。</li>
+<li>系统配置同步：华为等多家手机系统具备账户同步功能。</li>
+</ol>
+<p>因此，一个“华为手机克隆”功能完成上述诉求，还是挺不错的。</p>
+<p>操作过程如下：</p>
+<h2 id="打开-WIFI"><a href="#打开-WIFI" class="headerlink" title="打开 WIFI"></a>打开 WIFI</h2><ol>
+<li>分别开启 2 台手机的 WiFi 功能和定位功能；</li>
+</ol>
+<h2 id="打开应用"><a href="#打开应用" class="headerlink" title="打开应用"></a>打开应用</h2><ol start="2">
+<li><p>通过搜索功能，快速找到 <code>手机克隆</code> 应用，对于非华为手机，可能需要人为安装该应用程序；</p>
+ <center><img src="/static/img/20220227-手机克隆/1搜索应用.jpg" width="30%"></center>
+
+</li>
+</ol>
+<h2 id="选择设备类型"><a href="#选择设备类型" class="headerlink" title="选择设备类型"></a>选择设备类型</h2><ol start="3">
+<li><p>搜索打开“手机克隆”，根据实际情况选择 <code>这是新设备</code>、<code>这是旧设备</code>，如左图；</p>
+<ul>
+<li><p>对于新设备，根据实际选择手机品牌，并出现一个二维码界面，如右图：</p>
+</li>
+<li><p>对于老设备，选择后进入扫描窗口，用该扫描窗口去扫描新设备的二维码，等待1分钟左右完成系统关联。</p>
+<center><img src="/static/img/20220227-手机克隆/2选择设备.jpg" width="30%">
+  &emsp;→&emsp;<img src="/static/img/20220227-手机克隆/2.1新设备-（选择手机类型后）.jpg" width="30%">
+</center>
+
+
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="选择数据"><a href="#选择数据" class="headerlink" title="选择数据"></a>选择数据</h2><ol start="4">
+<li>选择需要同步的数据；</li>
+</ol>
+<h2 id="执行同步"><a href="#执行同步" class="headerlink" title="执行同步"></a>执行同步</h2><ol start="5">
+<li>等待同步同步完成，如下（同步速度是非常快的，打到了42MB/s，比我的手机专用U盘快多了！）：</li>
+</ol>
+<center><figure>
+    <img src="/static/img/20220227-手机克隆/3发送数据中.jpg" width="30%">
+    &emsp;&emsp;<img src="/static/img/20220227-手机克隆/4接收数据中.jpg" width="30%">
+</figure></center>
+
+<h2 id="同步后自动导入"><a href="#同步后自动导入" class="headerlink" title="同步后自动导入"></a>同步后自动导入</h2><ol start="6">
+<li><p>同步完成，新手机会自动执行导入操作（比如通话录音、照片等等）：</p>
+<ul>
+<li><p>旧设备显示完成，如左图</p>
+</li>
+<li><p>新设备文件拷贝完成后，自动进行导入操作，如右图：</p>
+  <center>
+      <img src="/static/img/20220227-手机克隆/5发送完成.jpg" width="30%">
+      &emsp;&emsp;<img src="/static/img/20220227-手机克隆/6迁移完成.jpg" width="30%">
+  </center>
+
+</li>
+</ul>
+</li>
+</ol>
+<p>同步完成后，新手机就可以直接使用了，除了微信、QQ、网银等部分账户需要重新登录外，部分应用甚至都不需要重新登录… 克隆至此完成。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><p>点亮～黑夜. <a href="https://blog.csdn.net/weixin_41010198/article/details/86639739">Markdwon中多张图片的并排显示</a> [EB/OL]. <a href="https://blog.csdn.net/weixin_41010198/article/details/86639739">https://blog.csdn.net/weixin_41010198/article/details/86639739</a>, 2022/03/07.</p>
+</li>
+<li><p>jerry谁便看看. <a href="https://www.jianshu.com/p/c37f200c0d9c">markdown技巧-图片并排</a> [EB/OL]. <a href="https://www.jianshu.com/p/c37f200c0d9c">https://www.jianshu.com/p/c37f200c0d9c</a>, 2022/03/07.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>华为</tag>
+        <tag>手机</tag>
+        <tag>克隆</tag>
+        <tag>导入</tag>
+        <tag>导出</tag>
+        <tag>QQ同步助手</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用DiskGenius修复坏道的硬盘</title>
+    <url>/202204051007/</url>
+    <content><![CDATA[<p>在电脑、移动硬盘使用的过程中，坏道是经常发生的事情，有些时候就是一次强制关机重启的操作，就导致硬盘无法使用、系统无法启动了。这个时候，通过 PE 或者其他环境对硬盘进行坏道修复是比较有用的方法——毕竟，对于普通人来说，也很难做更多的修复了！</p>
+<h2 id="坏道检测"><a href="#坏道检测" class="headerlink" title="坏道检测"></a>坏道检测</h2><ol>
+<li>进行坏道检测，比较好用的工具是 DiskGenius（英文版叫 PartitionGuru ），打开 DiskGenius ，点击 <code>硬盘</code> 菜单，打开 <strong>硬盘坏道检测与修复</strong> 设置窗口，并根据需要调整部分参数；</li>
+</ol>
+<p><img src="/static/img/20211205-%E7%A1%AC%E7%9B%98%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D/0%E7%A1%AC%E7%9B%98-%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D.png" alt="坏道检测菜单"></p>
+<blockquote>
+<p>一般不需要额外设置参数，如果硬盘过大或文件过多，可以考虑选中一个分区后再执行上述命令，从而较小检索的范围和时间、逐步完成硬盘的坏道检测与修复。</p>
+</blockquote>
+<ol start="2">
+<li>等待坏道检测完成，检测过程的窗口如下：</li>
+</ol>
+<p><img src="/static/img/20211205-%E7%A1%AC%E7%9B%98%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D/1%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%AD.png" alt="坏道检测菜单"></p>
+<h2 id="坏道修复"><a href="#坏道修复" class="headerlink" title="坏道修复"></a>坏道修复</h2><ol start="3">
+<li>如果存在坏道，则会出现如下检测详情窗口：</li>
+</ol>
+<p><img src="/static/img/20211205-%E7%A1%AC%E7%9B%98%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D/2%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%EF%BC%88%E8%AF%A6%E6%83%85%EF%BC%89.png" alt="坏道检测结果"></p>
+<ol start="4">
+<li>在上述第 2 步中的检测窗口中，点击 <strong>尝试修复</strong> 按钮，则自动开始修复：</li>
+</ol>
+<p><img src="/static/img/20211205-%E7%A1%AC%E7%9B%98%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D/3%E5%9D%8F%E9%81%93%E4%BF%AE%E5%A4%8D%E4%B8%AD.png" alt="坏道检测结果"></p>
+<blockquote>
+<p>如果考虑到修复时间过长且容易出现错误中断，建议先点击 <strong>保存检测信息</strong> 将检测信息保存到本地，以便于下次直接 <strong>读取检测信息</strong> 进行修复。</p>
+</blockquote>
+<ol start="5">
+<li>等待修复完成，完成后结果如下：</li>
+</ol>
+<p><img src="/static/img/20211205-%E7%A1%AC%E7%9B%98%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D/4%E5%9D%8F%E9%81%93%E4%BF%AE%E5%A4%8D%E5%AE%8C%E6%88%90.png" alt="坏道检测结果"></p>
+<blockquote>
+<p>并非所有的硬盘都能成功完成修复；笔者尝试过很多次，有些大硬盘文件过多，或者损害过重，修复时间甚至长达数天，也不能完成全部修复。</p>
+</blockquote>
+<h2 id="结后语"><a href="#结后语" class="headerlink" title="结后语"></a>结后语</h2><p>使用电脑，应该规范地关机，尽量通过开始菜单中的命令进行关机；使用移动硬盘，应该通过资源管理器中的“弹出”或“移除”等命令进行操作，避免直接拔出。在工作中，无论是本人还是同事，都遭遇了太多的直接拔出硬盘或U盘导致的数据整体丢失，甚至是硬盘整体故障不可用的情况了，宜慎重！</p>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>DiskGenius</tag>
+        <tag>硬盘</tag>
+        <tag>坏道</tag>
+        <tag>修复</tag>
+        <tag>PartitionGuru</tag>
       </tags>
   </entry>
   <entry>
@@ -4791,231 +4770,6 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
       </tags>
   </entry>
   <entry>
-    <title>用华为手机克隆快速实现数据的导入导出</title>
-    <url>/202202272118/</url>
-    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>华为的手机克隆功能非常强大，通过该功能，可以实现两部手机之间包括通信录、通话记录、短信、APP等功能的快速迁移。</p>
-<p>最近10多年中，我用了多种手机操作系统的手机，更换手机的时候，最困难的事情就是各种资料的同步：</p>
-<ol>
-<li>通讯录同步：我用过 QQ同步助手、豌豆荚、SIM卡信息导出+Excel整理、刷机软件等各种工具，QQ同步助手、QQ邮箱同步等功能在一些版本的手机上出现了重大兼容性问题，SIM卡信息导入导出非常费精神，豌豆荚也一般般。综合比较下来，还是华为手机克隆功能最稳定，基本无须再进行更多的干预，特别是华为手机之间的信息同步，比手机自身携带的导入导出 VCard 功能还好用。</li>
-<li>程序配置同步：目前我并不了解程序配置同步的方法；只能盲目地整体拷贝手机整个目录。</li>
-<li>系统配置同步：华为等多家手机系统具备账户同步功能。</li>
-</ol>
-<p>因此，一个“华为手机克隆”功能完成上述诉求，还是挺不错的。</p>
-<p>操作过程如下：</p>
-<h2 id="打开-WIFI"><a href="#打开-WIFI" class="headerlink" title="打开 WIFI"></a>打开 WIFI</h2><ol>
-<li>分别开启 2 台手机的 WiFi 功能和定位功能；</li>
-</ol>
-<h2 id="打开应用"><a href="#打开应用" class="headerlink" title="打开应用"></a>打开应用</h2><ol start="2">
-<li><p>通过搜索功能，快速找到 <code>手机克隆</code> 应用，对于非华为手机，可能需要人为安装该应用程序；</p>
- <center><img src="/static/img/20220227-手机克隆/1搜索应用.jpg" width="30%"></center>
-
-</li>
-</ol>
-<h2 id="选择设备类型"><a href="#选择设备类型" class="headerlink" title="选择设备类型"></a>选择设备类型</h2><ol start="3">
-<li><p>搜索打开“手机克隆”，根据实际情况选择 <code>这是新设备</code>、<code>这是旧设备</code>，如左图；</p>
-<ul>
-<li><p>对于新设备，根据实际选择手机品牌，并出现一个二维码界面，如右图：</p>
-</li>
-<li><p>对于老设备，选择后进入扫描窗口，用该扫描窗口去扫描新设备的二维码，等待1分钟左右完成系统关联。</p>
-<center><img src="/static/img/20220227-手机克隆/2选择设备.jpg" width="30%">
-  &emsp;→&emsp;<img src="/static/img/20220227-手机克隆/2.1新设备-（选择手机类型后）.jpg" width="30%">
-</center>
-
-
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="选择数据"><a href="#选择数据" class="headerlink" title="选择数据"></a>选择数据</h2><ol start="4">
-<li>选择需要同步的数据；</li>
-</ol>
-<h2 id="执行同步"><a href="#执行同步" class="headerlink" title="执行同步"></a>执行同步</h2><ol start="5">
-<li>等待同步同步完成，如下（同步速度是非常快的，打到了42MB/s，比我的手机专用U盘快多了！）：</li>
-</ol>
-<center><figure>
-    <img src="/static/img/20220227-手机克隆/3发送数据中.jpg" width="30%">
-    &emsp;&emsp;<img src="/static/img/20220227-手机克隆/4接收数据中.jpg" width="30%">
-</figure></center>
-
-<h2 id="同步后自动导入"><a href="#同步后自动导入" class="headerlink" title="同步后自动导入"></a>同步后自动导入</h2><ol start="6">
-<li><p>同步完成，新手机会自动执行导入操作（比如通话录音、照片等等）：</p>
-<ul>
-<li><p>旧设备显示完成，如左图</p>
-</li>
-<li><p>新设备文件拷贝完成后，自动进行导入操作，如右图：</p>
-  <center>
-      <img src="/static/img/20220227-手机克隆/5发送完成.jpg" width="30%">
-      &emsp;&emsp;<img src="/static/img/20220227-手机克隆/6迁移完成.jpg" width="30%">
-  </center>
-
-</li>
-</ul>
-</li>
-</ol>
-<p>同步完成后，新手机就可以直接使用了，除了微信、QQ、网银等部分账户需要重新登录外，部分应用甚至都不需要重新登录… 克隆至此完成。</p>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li><p>点亮～黑夜. <a href="https://blog.csdn.net/weixin_41010198/article/details/86639739">Markdwon中多张图片的并排显示</a> [EB/OL]. <a href="https://blog.csdn.net/weixin_41010198/article/details/86639739">https://blog.csdn.net/weixin_41010198/article/details/86639739</a>, 2022/03/07.</p>
-</li>
-<li><p>jerry谁便看看. <a href="https://www.jianshu.com/p/c37f200c0d9c">markdown技巧-图片并排</a> [EB/OL]. <a href="https://www.jianshu.com/p/c37f200c0d9c">https://www.jianshu.com/p/c37f200c0d9c</a>, 2022/03/07.</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>电脑爱好者</category>
-      </categories>
-      <tags>
-        <tag>华为</tag>
-        <tag>手机</tag>
-        <tag>克隆</tag>
-        <tag>导入</tag>
-        <tag>导出</tag>
-        <tag>QQ同步助手</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用Q-Q图验证数据是否满足正态分布</title>
-    <url>/202203211952/</url>
-    <content><![CDATA[<p>根据大数定律，正常的采样数据达到一定数量时，就会呈现出正态分布的特性。我们之所以特别关心数据是否满足正态分布，无非是这两方面的需要：需要在特定的区间内涵盖大部分的重要数据，或者在两端进行特别的处理。</p>
-<p>笔者最近在做一个油泵运行时长的评价工作中，就是对油泵每次运行的时长进行统计，如果运行时间太长，那么就认为该油泵运行存在一定的异常，那么应该考虑予以告警。</p>
-<p>那么，我们怎么验证数据是否满足正态分布呢？根据网友的介绍，就是对数据进行处理后绘制 “Q-Q”图；我没有专业背景知识，自己理解就是绘制“数据”与“偏差”的双中位数之间的曲线图，如果呈现为一条直线，那么就表明数据呈现出正态分布的特性。</p>
-<h2 id="整理数据"><a href="#整理数据" class="headerlink" title="整理数据"></a>整理数据</h2><ol>
-<li><p>使用 RANK 函数对 <strong>数值</strong> 进行排名计算，如对 B2 求排名，有 D2=<code>RANK(B2,B:B,1)</code>，对D列双击即可获得D列结果（下同，不再赘述）；</p>
-</li>
-<li><p>对 B2（原始数据）、D2 （排名值） 数据进行计算，求得分位数 ，如 E2=<code>(D2-0.5)/COUNT(B:B,B2)</code>；如下：</p>
-</li>
-</ol>
-<p><img src="/static/img/20220321-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE.png" alt="求数据的排名以及分位数"></p>
-<ol start="3">
-<li>对分位数列进行升序处理，依次点击 Excel 中的：<code>数据</code>（选项卡）→ <code>排序</code>，对该数据列进行 <strong>升序</strong> 排序处理，如下：</li>
-</ol>
-<p><img src="/static/img/20220321-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/%E6%8E%92%E5%BA%8F.png" alt="数据排序"></p>
-<blockquote>
-<p>如果不进行排序就绘制曲线，那么曲线就会变成一条来回曲折的奇怪线条；因此必须按 <strong>分位数</strong> 进行排序。</p>
-</blockquote>
-<ol start="4">
-<li>对 数据进行z分数计算，如 C2=<code>NORMSINV(E2)</code>；</li>
-</ol>
-<blockquote>
-<p>z 分数是标准差的倍数，参考文献[1]可以进一步了解，对应的中文版为 <a href="https://www.shuxuele.com/data/standard-normal-distribution.html。">https://www.shuxuele.com/data/standard-normal-distribution.html。</a></p>
-</blockquote>
-<h2 id="绘制图形"><a href="#绘制图形" class="headerlink" title="绘制图形"></a>绘制图形</h2><ol start="5">
-<li><p>选中上述的 B列（原始数据）、C列（Z分数），执行 Excel 的 <code>插入</code>（选项卡）→ <code>散点图</code>，即可获得拟合曲线；</p>
-</li>
-<li><p>对曲线进行坐标轴等进行个性化调整，并添加趋势线，最终得到效果图如下：</p>
-</li>
-</ol>
-<p><img src="/static/img/20220321-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/Q-Q%E5%9B%BE.png" alt="数据排序"></p>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>[1]    Rod Pierce. Normal Distribution [EB/OL]. <a href="https://mathsisfun.com/data/standard-normal-distribution.html">https://mathsisfun.com/data/standard-normal-distribution.html</a>, 2022/03/13.</p>
-<p>[2]    博客园. 在Excel里绘制Q-Q图 [EB/OL]. <a href="https://www.cnblogs.com/jiangleads/articles/12984545.html">https://www.cnblogs.com/jiangleads/articles/12984545.html</a>, 2022/03/14.</p>
-]]></content>
-      <categories>
-        <category>工作中的魔法</category>
-      </categories>
-      <tags>
-        <tag>正态分布</tag>
-        <tag>Q-Q图</tag>
-        <tag>中位数</tag>
-        <tag>Excel</tag>
-        <tag>散点图</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用DiskGenius修复坏道的硬盘</title>
-    <url>/202204051007/</url>
-    <content><![CDATA[<p>在电脑、移动硬盘使用的过程中，坏道是经常发生的事情，有些时候就是一次强制关机重启的操作，就导致硬盘无法使用、系统无法启动了。这个时候，通过 PE 或者其他环境对硬盘进行坏道修复是比较有用的方法——毕竟，对于普通人来说，也很难做更多的修复了！</p>
-<h2 id="坏道检测"><a href="#坏道检测" class="headerlink" title="坏道检测"></a>坏道检测</h2><ol>
-<li>进行坏道检测，比较好用的工具是 DiskGenius（英文版叫 PartitionGuru ），打开 DiskGenius ，点击 <code>硬盘</code> 菜单，打开 <strong>硬盘坏道检测与修复</strong> 设置窗口，并根据需要调整部分参数；</li>
-</ol>
-<p><img src="/static/img/20211205-%E7%A1%AC%E7%9B%98%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D/0%E7%A1%AC%E7%9B%98-%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D.png" alt="坏道检测菜单"></p>
-<blockquote>
-<p>一般不需要额外设置参数，如果硬盘过大或文件过多，可以考虑选中一个分区后再执行上述命令，从而较小检索的范围和时间、逐步完成硬盘的坏道检测与修复。</p>
-</blockquote>
-<ol start="2">
-<li>等待坏道检测完成，检测过程的窗口如下：</li>
-</ol>
-<p><img src="/static/img/20211205-%E7%A1%AC%E7%9B%98%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D/1%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%AD.png" alt="坏道检测菜单"></p>
-<h2 id="坏道修复"><a href="#坏道修复" class="headerlink" title="坏道修复"></a>坏道修复</h2><ol start="3">
-<li>如果存在坏道，则会出现如下检测详情窗口：</li>
-</ol>
-<p><img src="/static/img/20211205-%E7%A1%AC%E7%9B%98%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D/2%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%EF%BC%88%E8%AF%A6%E6%83%85%EF%BC%89.png" alt="坏道检测结果"></p>
-<ol start="4">
-<li>在上述第 2 步中的检测窗口中，点击 <strong>尝试修复</strong> 按钮，则自动开始修复：</li>
-</ol>
-<p><img src="/static/img/20211205-%E7%A1%AC%E7%9B%98%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D/3%E5%9D%8F%E9%81%93%E4%BF%AE%E5%A4%8D%E4%B8%AD.png" alt="坏道检测结果"></p>
-<blockquote>
-<p>如果考虑到修复时间过长且容易出现错误中断，建议先点击 <strong>保存检测信息</strong> 将检测信息保存到本地，以便于下次直接 <strong>读取检测信息</strong> 进行修复。</p>
-</blockquote>
-<ol start="5">
-<li>等待修复完成，完成后结果如下：</li>
-</ol>
-<p><img src="/static/img/20211205-%E7%A1%AC%E7%9B%98%E5%9D%8F%E9%81%93%E6%A3%80%E6%B5%8B%E4%B8%8E%E4%BF%AE%E5%A4%8D/4%E5%9D%8F%E9%81%93%E4%BF%AE%E5%A4%8D%E5%AE%8C%E6%88%90.png" alt="坏道检测结果"></p>
-<blockquote>
-<p>并非所有的硬盘都能成功完成修复；笔者尝试过很多次，有些大硬盘文件过多，或者损害过重，修复时间甚至长达数天，也不能完成全部修复。</p>
-</blockquote>
-<h2 id="结后语"><a href="#结后语" class="headerlink" title="结后语"></a>结后语</h2><p>使用电脑，应该规范地关机，尽量通过开始菜单中的命令进行关机；使用移动硬盘，应该通过资源管理器中的“弹出”或“移除”等命令进行操作，避免直接拔出。在工作中，无论是本人还是同事，都遭遇了太多的直接拔出硬盘或U盘导致的数据整体丢失，甚至是硬盘整体故障不可用的情况了，宜慎重！</p>
-]]></content>
-      <categories>
-        <category>电脑爱好者</category>
-      </categories>
-      <tags>
-        <tag>DiskGenius</tag>
-        <tag>硬盘</tag>
-        <tag>坏道</tag>
-        <tag>修复</tag>
-        <tag>PartitionGuru</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用Excel绘制正态分布图</title>
-    <url>/202203270925/</url>
-    <content><![CDATA[<p>在前一篇文章中，尝试了使用 <a href="../202203211952">Q-Q 图</a> 来验证数据是否符合正态分布的特点，这一次就针对正态分布的数据，进行绘图，用于展示数据的特点。</p>
-<h2 id="生成数据"><a href="#生成数据" class="headerlink" title="生成数据"></a>生成数据</h2><ol>
-<li>首先对原始数据进行排序，如下：</li>
-</ol>
-<p><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/1%E6%8C%89%E6%95%B0%E5%80%BC%E6%8E%92%E5%BA%8F.png" alt="原始数据排序"></p>
-<ol start="2">
-<li>增加正态分布密度计算列，如 F2=<code>=NORMDIST(B2,AVERAGE(B:B),STDEV(B:B),0)</code>：</li>
-</ol>
-<p><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/2%E8%AE%A1%E7%AE%97%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E5%AF%86%E5%BA%A6.png" alt="密度计算"></p>
-<h2 id="插入图形"><a href="#插入图形" class="headerlink" title="插入图形"></a>插入图形</h2><ol start="3">
-<li>选中正态密度数据列，选择 <code>插入</code>（选项卡）→<code>插入柱形图或条形图</code>，如下：</li>
-</ol>
-<p><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/3%E6%8F%92%E5%85%A5%E5%9B%BE%E5%BD%A2.png" alt="插入图形"></p>
-<ol start="4">
-<li>根据需要可以添加 <strong>趋势线</strong> 等元素，并进行外观选项的定制，如：</li>
-</ol>
-<p><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/5%E5%9B%BE%E8%A1%A8-%E8%B6%8B%E5%8A%BF%E7%BA%BF-%E9%80%89%E9%A1%B9.png" alt="添加辅助元素"></p>
-<h2 id="调整图形外观"><a href="#调整图形外观" class="headerlink" title="调整图形外观"></a>调整图形外观</h2><ol start="5">
-<li>根据美观等需要，对图形的外观进行个性化定制，如表格边框线等：</li>
-</ol>
-<p><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/7%E5%9B%BE%E8%A1%A8-%E6%A0%B7%E5%BC%8F%E9%80%89%E9%A1%B9.png" alt="外观选项设置"></p>
-<ol start="6">
-<li>根据显示的需要，还可以修改图标的类型，如：</li>
-</ol>
-<p><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/9%E6%9B%B4%E6%94%B9%E5%9B%BE%E8%A1%A8%E7%B1%BB%E5%9E%8B.png" alt="修改图表类型"></p>
-<h2 id="最终图形"><a href="#最终图形" class="headerlink" title="最终图形"></a>最终图形</h2><ol start="7">
-<li><p>最终图形如下</p>
-<ul>
-<li><p>柱形图<br><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/8%E6%97%B6%E9%95%BF%E5%88%86%E5%B8%83%E5%9B%BE%EF%BC%88%E6%9F%B1%E5%BD%A2%E5%9B%BE%EF%BC%89.png" alt="柱形图"></p>
-</li>
-<li><p>散点图<br><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/10%E6%97%B6%E9%95%BF%E5%88%86%E5%B8%83%E5%9B%BE%EF%BC%88%E6%95%A3%E7%82%B9%E5%9B%BE%EF%BC%89.png" alt="散点图"></p>
-</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>工作中的魔法</category>
-      </categories>
-      <tags>
-        <tag>正态分布</tag>
-        <tag>Excel</tag>
-        <tag>散点图</tag>
-        <tag>NORMDIST</tag>
-        <tag>柱形图</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用 Windows BitLocker 对硬盘进行加密</title>
     <url>/202205022233/</url>
     <content><![CDATA[<p>BitLocker 驱动器加密是一项数据保护功能，它与操作系统集成，用于解决来自丢失、被盗或销毁不当的计算机的数据被盗或泄露的威胁。因此，通过 BitLocker 来进行分区的加密，相对而言，是比较好的一种方式。</p>
@@ -5108,6 +4862,155 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
         <tag>多级编号</tag>
         <tag>样式</tag>
         <tag>矩形</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用词云图探析设备故障的分布与频率等特性</title>
+    <url>/202110071856/</url>
+    <content><![CDATA[<p>近 2 年多来，在系统精益化治理中，通过对设备故障文本的词频及分布规律缝隙，以及深耕多年的系统认识，做了一些比较复杂的系统改造工作，取得了一些别人没有实现的业绩。</p>
+<p>不过，在业绩展示时，多数人员一看数据就翻过去，看都不看一样，囧！因此，用词云图来展示业绩是非常必要的。这里用自己的案例来做个演示。</p>
+<h2 id="导入函数库"><a href="#导入函数库" class="headerlink" title="导入函数库"></a>导入函数库</h2><pre><code class="sh"># -*- coding: utf-8 -*-
+
+import numpy as np              # numpy数据处理库
+import pandas as pd
+
+import codecs
+import re                       # 正则表达式库
+import jieba                    # 结巴分词
+import jieba.posseg             # 词性获取
+import jieba.analyse
+
+# 设置时间变量，便于对存储的文件进行版本管理
+import time
+import datetime</code></pre>
+<h2 id="对相关文本内容进行分词处理"><a href="#对相关文本内容进行分词处理" class="headerlink" title="对相关文本内容进行分词处理"></a>对相关文本内容进行分词处理</h2><p>本案例以某一文件的特定列内容进行分词处理为例；但在实际工作中，则可能是上千个包含5w+的文件，由于一般的办公电脑内存都不超过 4GB ，加载太多文件就需要考虑内存优化等一系列问题了，否则系统崩溃不说，还丢了中间版本的成果。网友说，一般地，pandas一次处理的文件不建议大于 100MB，特别是不建议大于 1GB。因此，内存管理、版本管理、数据清洗等复杂的操作，这里就不展开了。</p>
+<p>这里演示的日志文件为 txt 格式，读取特定列内容进行分词，并连同原始数据一并保存为 csv 格式（方便调试过程中比对分词是否正确等）。</p>
+<pre><code class="sh"># 记录开始时间
+tx1 = time.time()
+tx2 = str(int(round(tx1 * 1000)))  # 时间戳字符串
+
+# 开启并行分词模式（仅支持非 Windows 系统），参数为并行进程数
+jieba.enable_parallel(3)
+
+# 设定自定义词语组合
+jieba.load_userdict(&quot;jieba_segmenter_dict.txt&quot;)
+
+# 读取停用词数据（包括去除：区域名、常用调节词、无意义的编号/特殊符号等）
+stopwords = pd.read_csv(&#39;jieba_stopword_dict.txt&#39;, encoding=&#39;utf8&#39;, names=[&#39;stopword&#39;], index_col=False)
+# 转化停用词列表
+stop_list = stopwords[&#39;stopword&#39;].tolist()
+
+# TXT文件特征：事先已由 ANSI 转换为 UTF-8 格式,分隔符是 \t，默认无标题
+# 加载TXT文件（header=None, names 表示添加标题、数量与 tab 数量相当；设置index_col=0避免首列被当做索引）；read_table、read_csv 等效
+f1=pd.read_csv(&#39;./EventTxt/EVENT20200627.txt&#39;, sep=&#39;\t&#39;, encoding=&#39;utf_8_sig&#39;, \
+                index_col=0, header=None, \
+                names=[&#39;序号&#39;,&#39;时间&#39;,&#39;路径&#39;,&#39;描述&#39;,&#39;操作信息&#39;,&#39;补充信息&#39;,&#39;主机&#39;,&#39;备注&#39;])
+
+# 生成分词
+f1[&#39;分词&#39;] =  f1[&#39;描述&#39;].apply(lambda x : [i for i in jieba.cut(x) if i not in stop_list])  # 去除停用词
+# print(stop_list[10])
+
+# 保存处理后的文件
+f1.to_csv(&quot;./t4-EventCsv/t4_&quot; + str(count) + &quot;_&quot; + EVENT20200627 + &quot;.csv&quot;, encoding=&#39;utf_8_sig&#39;)
+
+# 显示行列数量
+rowNum=f1.shape[0] #不包括表头
+colNum=f1.columns.size
+print(&quot;\n表&quot; + str(count-1) + &quot;\t&quot; +str(rowNum) + &quot; 行\t&quot; + str(colNum)+ &quot; 列&quot;)
+
+# 抽样查看数据情况
+print(f1[&#39;分词&#39;].loc[20])
+
+# 显示耗时时间
+tx3 = time.time()
+tm_cost = tx3 - tx1
+print(&#39;&#123;:.2f&#125;&#39;.format(tm_cost) + &quot; s.&quot;)   # str(round(tm_cost,3))</code></pre>
+<p>上述涉及的分词、停用词字典内容暂时不分享，因为相关论文还没有发表，得等到论文发表了再公开吧。毕竟做词云图并不复杂，复杂的是数据如何清洗、权重识别等等，这绝对是考验基层工作经验的。<br>毫无疑问，那些比我会编程的厂家，为啥做不了我做的技改，最核心一点，就是因为我拥有他们从未拥有过的大量实际生产数据！</p>
+<h2 id="词频分析"><a href="#词频分析" class="headerlink" title="词频分析"></a>词频分析</h2><ol>
+<li>导入相应的函数库</li>
+</ol>
+<pre><code class="sh">from PIL import Image               # 图像处理库       
+import matplotlib.pyplot as plt     # 图像展示库（这里以plt代表库的全称）
+from wordcloud import WordCloud     # 词云展示库
+from imageio import imread
+
+import collections                  # 词频统计库
+import ast                          # 解决 pandas 读取的列的内容需要转换为 子列表的问题
+
+# 重复调用
+import time
+import pandas as pd</code></pre>
+<ol start="2">
+<li>进行词频分析</li>
+</ol>
+<pre><code class="sh">tx4 = time.time()   # 时间戳，计算耗时情况
+tx4s = str(int(round(tx4 * 1000)))  # 时间戳字符串，文件标记，版本管理用
+
+# 读入表格第 8 列(首行为标题)，得到  DataFrame
+fq1 = pd.read_csv(&#39;./t4-EventCsv/t4_1_EVENT20200628.csv&#39;, header=0, usecols=[8])
+# print(fq1.dtypes)
+
+# 将所有的分词合并
+words = []
+for content in fq1[&#39;分词&#39;]:
+    words.extend(ast.literal_eval(content))   # 字符转列表，然后列表追加到新列表末尾
+
+# 对汇总后的分词进行词频统计
+fq2 = pd.DataFrame(words, columns=[&#39;分词汇总&#39;])
+result = pd.value_counts(fq2[&#39;分词汇总&#39;]) 
+
+result.head(20)  # 不指明参数显示前 5 行，否则按指定参数显示
+
+# 创建词频文件
+result.to_csv(&quot;./t4-WordCloud/t4_wordcloud_&quot; + tx4s + &quot;_1_input.txt&quot;, header=0)
+print(&quot;词频分析文件已保存。&quot;)</code></pre>
+<h2 id="词云图绘制"><a href="#词云图绘制" class="headerlink" title="词云图绘制"></a>词云图绘制</h2><ol>
+<li>上传相关的资源文件到代码可以访问的目录</li>
+</ol>
+<p>背景图 China-map.jpg，去国家统计局官网下载的。<br>字体文件 simhei.ttf，在 Windows 系统目录中拷贝出来的。</p>
+<ol start="2">
+<li>词云图绘制</li>
+</ol>
+<pre><code class="sh"># 背景图
+bg1=imread(&quot;../resource/China-map.jpg&quot;)
+
+# 读取词频文件
+with open(&quot;./t4-WordCloud/t4_wordcloud_&quot; + tx4s + &quot;_1_input.txt&quot;,&quot;r&quot;) as file:
+    txt=file.read()
+
+# 生成词云
+wc_pic1=WordCloud(background_color=&quot;white&quot;,font_path=&#39;../resource/simhei.ttf&#39;,width=1800,height=1500,mask=bg1).generate(txt)
+
+# 保存词云图到本地
+wc_pic1.to_file(&#39;./t4-WordCloud/t4_wordcloud_&#39; + tx4s + &#39;_2_output.png&#39;)
+print(&quot;词云图片文件已保存。&quot;)
+
+# 使用plt库显示图片
+plt.imshow(wc_pic1)
+plt.axis(&quot;off&quot;)
+plt.show()
+
+# 显示耗时时间
+tx5 = time.time()
+tm_cost = tx5 - tx4
+print(str(round(tm_cost,3)) + &quot; s.&quot;)</code></pre>
+<p>最终效果如下：</p>
+<p><img src="/static/img/20211007-t6_EVENT20200630.jpg" alt="词云图效果演示"></p>
+<blockquote>
+<p>上仅做效果演示用，并非笔者的技改项目的最终成果；但未经许可，请勿使用，谢谢！</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>工作中的魔法</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>WordCloud</tag>
+        <tag>词云图</tag>
+        <tag>pandas</tag>
+        <tag>Jieba</tag>
+        <tag>词频</tag>
+        <tag>分词</tag>
       </tags>
   </entry>
   <entry>
@@ -5205,6 +5108,56 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
       </tags>
   </entry>
   <entry>
+    <title>用Excel绘制正态分布图</title>
+    <url>/202203270925/</url>
+    <content><![CDATA[<p>在前一篇文章中，尝试了使用 <a href="../202203211952">Q-Q 图</a> 来验证数据是否符合正态分布的特点，这一次就针对正态分布的数据，进行绘图，用于展示数据的特点。</p>
+<h2 id="生成数据"><a href="#生成数据" class="headerlink" title="生成数据"></a>生成数据</h2><ol>
+<li>首先对原始数据进行排序，如下：</li>
+</ol>
+<p><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/1%E6%8C%89%E6%95%B0%E5%80%BC%E6%8E%92%E5%BA%8F.png" alt="原始数据排序"></p>
+<ol start="2">
+<li>增加正态分布密度计算列，如 F2=<code>=NORMDIST(B2,AVERAGE(B:B),STDEV(B:B),0)</code>：</li>
+</ol>
+<p><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/2%E8%AE%A1%E7%AE%97%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E5%AF%86%E5%BA%A6.png" alt="密度计算"></p>
+<h2 id="插入图形"><a href="#插入图形" class="headerlink" title="插入图形"></a>插入图形</h2><ol start="3">
+<li>选中正态密度数据列，选择 <code>插入</code>（选项卡）→<code>插入柱形图或条形图</code>，如下：</li>
+</ol>
+<p><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/3%E6%8F%92%E5%85%A5%E5%9B%BE%E5%BD%A2.png" alt="插入图形"></p>
+<ol start="4">
+<li>根据需要可以添加 <strong>趋势线</strong> 等元素，并进行外观选项的定制，如：</li>
+</ol>
+<p><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/5%E5%9B%BE%E8%A1%A8-%E8%B6%8B%E5%8A%BF%E7%BA%BF-%E9%80%89%E9%A1%B9.png" alt="添加辅助元素"></p>
+<h2 id="调整图形外观"><a href="#调整图形外观" class="headerlink" title="调整图形外观"></a>调整图形外观</h2><ol start="5">
+<li>根据美观等需要，对图形的外观进行个性化定制，如表格边框线等：</li>
+</ol>
+<p><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/7%E5%9B%BE%E8%A1%A8-%E6%A0%B7%E5%BC%8F%E9%80%89%E9%A1%B9.png" alt="外观选项设置"></p>
+<ol start="6">
+<li>根据显示的需要，还可以修改图标的类型，如：</li>
+</ol>
+<p><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/9%E6%9B%B4%E6%94%B9%E5%9B%BE%E8%A1%A8%E7%B1%BB%E5%9E%8B.png" alt="修改图表类型"></p>
+<h2 id="最终图形"><a href="#最终图形" class="headerlink" title="最终图形"></a>最终图形</h2><ol start="7">
+<li><p>最终图形如下</p>
+<ul>
+<li><p>柱形图<br><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/8%E6%97%B6%E9%95%BF%E5%88%86%E5%B8%83%E5%9B%BE%EF%BC%88%E6%9F%B1%E5%BD%A2%E5%9B%BE%EF%BC%89.png" alt="柱形图"></p>
+</li>
+<li><p>散点图<br><img src="/static/img/20220327-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/10%E6%97%B6%E9%95%BF%E5%88%86%E5%B8%83%E5%9B%BE%EF%BC%88%E6%95%A3%E7%82%B9%E5%9B%BE%EF%BC%89.png" alt="散点图"></p>
+</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>工作中的魔法</category>
+      </categories>
+      <tags>
+        <tag>Excel</tag>
+        <tag>正态分布</tag>
+        <tag>NORMDIST</tag>
+        <tag>柱形图</tag>
+        <tag>散点图</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>OneNote笔记本密码破解工具推荐</title>
     <url>/202302191140/</url>
     <content><![CDATA[<p>推荐使用 <code>OneNotePassword</code> 进行<strong>暴力破解</strong>。</p>
@@ -5261,6 +5214,53 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
       </tags>
   </entry>
   <entry>
+    <title>使用Q-Q图验证数据是否满足正态分布</title>
+    <url>/202203211952/</url>
+    <content><![CDATA[<p>根据大数定律，正常的采样数据达到一定数量时，就会呈现出正态分布的特性。我们之所以特别关心数据是否满足正态分布，无非是这两方面的需要：需要在特定的区间内涵盖大部分的重要数据，或者在两端进行特别的处理。</p>
+<p>笔者最近在做一个油泵运行时长的评价工作中，就是对油泵每次运行的时长进行统计，如果运行时间太长，那么就认为该油泵运行存在一定的异常，那么应该考虑予以告警。</p>
+<p>那么，我们怎么验证数据是否满足正态分布呢？根据网友的介绍，就是对数据进行处理后绘制 “Q-Q”图；我没有专业背景知识，自己理解就是绘制“数据”与“偏差”的双中位数之间的曲线图，如果呈现为一条直线，那么就表明数据呈现出正态分布的特性。</p>
+<h2 id="整理数据"><a href="#整理数据" class="headerlink" title="整理数据"></a>整理数据</h2><ol>
+<li><p>使用 RANK 函数对 <strong>数值</strong> 进行排名计算，如对 B2 求排名，有 D2=<code>RANK(B2,B:B,1)</code>，对D列双击即可获得D列结果（下同，不再赘述）；</p>
+</li>
+<li><p>对 B2（原始数据）、D2 （排名值） 数据进行计算，求得分位数 ，如 E2=<code>(D2-0.5)/COUNT(B:B,B2)</code>；如下：</p>
+</li>
+</ol>
+<p><img src="/static/img/20220321-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE.png" alt="求数据的排名以及分位数"></p>
+<ol start="3">
+<li>对分位数列进行升序处理，依次点击 Excel 中的：<code>数据</code>（选项卡）→ <code>排序</code>，对该数据列进行 <strong>升序</strong> 排序处理，如下：</li>
+</ol>
+<p><img src="/static/img/20220321-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/%E6%8E%92%E5%BA%8F.png" alt="数据排序"></p>
+<blockquote>
+<p>如果不进行排序就绘制曲线，那么曲线就会变成一条来回曲折的奇怪线条；因此必须按 <strong>分位数</strong> 进行排序。</p>
+</blockquote>
+<ol start="4">
+<li>对 数据进行z分数计算，如 C2=<code>NORMSINV(E2)</code>；</li>
+</ol>
+<blockquote>
+<p>z 分数是标准差的倍数，参考文献[1]可以进一步了解，对应的中文版为 <a href="https://www.shuxuele.com/data/standard-normal-distribution.html。">https://www.shuxuele.com/data/standard-normal-distribution.html。</a></p>
+</blockquote>
+<h2 id="绘制图形"><a href="#绘制图形" class="headerlink" title="绘制图形"></a>绘制图形</h2><ol start="5">
+<li><p>选中上述的 B列（原始数据）、C列（Z分数），执行 Excel 的 <code>插入</code>（选项卡）→ <code>散点图</code>，即可获得拟合曲线；</p>
+</li>
+<li><p>对曲线进行坐标轴等进行个性化调整，并添加趋势线，最终得到效果图如下：</p>
+</li>
+</ol>
+<p><img src="/static/img/20220321-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/Q-Q%E5%9B%BE.png" alt="数据排序"></p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>[1]    Rod Pierce. Normal Distribution [EB/OL]. <a href="https://mathsisfun.com/data/standard-normal-distribution.html">https://mathsisfun.com/data/standard-normal-distribution.html</a>, 2022/03/13.</p>
+<p>[2]    博客园. 在Excel里绘制Q-Q图 [EB/OL]. <a href="https://www.cnblogs.com/jiangleads/articles/12984545.html">https://www.cnblogs.com/jiangleads/articles/12984545.html</a>, 2022/03/14.</p>
+]]></content>
+      <categories>
+        <category>工作中的魔法</category>
+      </categories>
+      <tags>
+        <tag>Excel</tag>
+        <tag>正态分布</tag>
+        <tag>散点图</tag>
+        <tag>Q-Q图</tag>
+        <tag>中位数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Office 邮件合并的 If 运算</title>
     <url>/202303022313/</url>
     <content><![CDATA[<blockquote>
@@ -5292,45 +5292,39 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
     <title>Windows 7 + Python 3.8 如何部署 Stable Diffusion 环境？</title>
     <url>/202305012051/</url>
     <content><![CDATA[<h2 id="操作系统配置"><a href="#操作系统配置" class="headerlink" title="操作系统配置"></a>操作系统配置</h2><ol>
-<li>升级显卡驱动</li>
-</ol>
-<p>Stable Diffusion WebUI 要求 CUDA 版本为 <strong>11.4</strong>，通过查询 <a href="https://www.nvidia.cn/Download/Find.aspx?lang=cn">https://www.nvidia.cn/Download/Find.aspx?lang=cn</a> 找到本机对应的硬件驱动，安装升级。</p>
-<ol start="2">
+<li><p>升级显卡驱动：Stable Diffusion WebUI 要求 CUDA 版本为 <strong>11.4</strong>，通过查询 <a href="https://www.nvidia.cn/Download/Find.aspx?lang=cn">https://www.nvidia.cn/Download/Find.aspx?lang=cn</a> 找到本机对应的硬件驱动，安装升级。</p>
+</li>
 <li><p>安装 Python 3.8.10。可以通过官网下载 setup 包进行安装。</p>
 <ul>
-<li>建议人工下载安装 <code>torch-1.13.1+cu117-cp38-cp38-win_amd64.whl</code> 包，阿里云地址为 <a href="https://mirrors.aliyun.com/pytorch-wheels/cu117/，下载完成后人工安装到">https://mirrors.aliyun.com/pytorch-wheels/cu117/，下载完成后人工安装到</a> Python 环境中。</li>
+<li><p>建议人工下载安装 <code>torch-1.13.1+cu117-cp38-cp38-win_amd64.whl</code> 包，阿里云地址为 <a href="https://mirrors.aliyun.com/pytorch-wheels/cu117/，下载完成后人工安装到">https://mirrors.aliyun.com/pytorch-wheels/cu117/，下载完成后人工安装到</a> Python 环境中。</p>
+</li>
+<li><p>安装 xformers 插件，解决 <code>Installation of xformers is not supported in this version of Python.</code> 错误。</p>
+<pre><code>  D:\stable-diffusion-webui\venv\Scripts\python.exe -m pip install   xformers==0.0.16
+
+  # 检查功能是否正常
+  D:\stable-diffusion-webui\venv\Scripts\python.exe  -m xformers.info</code></pre></li>
 </ul>
 </li>
 </ol>
-<pre><code>- 安装 xformers 插件，解决 `Installation of xformers is not supported in this version of Python.` 错误。
-
-    ```
-    D:\stable-diffusion-webui\venv\Scripts\python.exe -m pip install   xformers==0.0.16
-
-    # 检查功能是否正常
-    D:\stable-diffusion-webui\venv\Scripts\python.exe  -m xformers.info
-    ```</code></pre><h2 id="Stable-Diffusion-环境配置"><a href="#Stable-Diffusion-环境配置" class="headerlink" title="Stable Diffusion 环境配置"></a>Stable Diffusion 环境配置</h2><ol>
+<h2 id="Stable-Diffusion-环境配置"><a href="#Stable-Diffusion-环境配置" class="headerlink" title="Stable Diffusion 环境配置"></a>Stable Diffusion 环境配置</h2><ol>
 <li><p>下载 stable-diffusion-webui 文件，如下：</p>
 <pre><code class="shell"> cd D:\
  git clone https://gitee.com/faradays-studio/stable-diffusion-webui</code></pre>
-</li>
-</ol>
 <blockquote>
 <p>这是假设文件的根路径为 <code>D:\</code> ，后续调用时不再赘述。</p>
 </blockquote>
-<ol start="2">
-<li>对 <code>D:\stable-diffusion-webui\webui-user.bat</code> 修改以下变量。</li>
-</ol>
-<pre><code class="shell">set PYTHON=&quot;C:\Program Files\Python38\python.exe&quot;
-set COMMANDLINE_ARGS=--xformers --lowvram</code></pre>
-<ol start="3">
+</li>
+<li><p>对 <code>D:\stable-diffusion-webui\webui-user.bat</code> 修改以下变量。</p>
+<pre><code class="shell"> set PYTHON=&quot;C:\Program Files\Python38\python.exe&quot;
+ set COMMANDLINE_ARGS=--xformers --lowvram</code></pre>
+</li>
 <li><p>对 <code>&quot;D:\stable-diffusion-webui\launch.py&quot;</code> 进行修改。</p>
 <ul>
 <li><p>删除 Python 版本检测：将 <strong>prepare_environment</strong> 函数中 <code>if (not is_installed(&quot;xformers&quot;) or args.reinstall_xformers) and args.xformers:</code> 下的 <strong>else</strong> 子句进行注释。</p>
 </li>
 <li><p>更改 GitHub 路径：将 <strong>prepare_environment</strong> 函数中的每个 <code>https://github.com/</code> 替换为 <code>https://ghproxy.com/https://github.com/</code> 。</p>
 </li>
-<li><p>更改 torch==1.13.1+cu117 下载路径：将 <code>torch_command = os.environ.get(&#39;TORCH_COMMAND&#39;, &quot;pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 --extra-index-url https://download.pytorch.org/whl/cu117&quot;)</code> 并修改为 <code>torch_command = os.environ.get(&#39;TORCH_COMMAND&#39;, &quot;pip install torch==1.13.1 torchvision==0.14.1&quot;)</code>。</p>
+<li><p>更改 torch==1.13.1+cu117 下载路径：将 <code>torch_command = os.environ.get(&#39;TORCH_COMMAND&#39;, &quot;pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 --extra-index-url https://download.pytorch.org/whl/cu117&quot;)</code> 修改为 <code>torch_command = os.environ.get(&#39;TORCH_COMMAND&#39;, &quot;pip install torch==1.13.1 torchvision==0.14.1&quot;)</code>。</p>
 <blockquote>
 <p>如果安装过程中出现异常，重命名 <code>D:\stable-diffusion-webui\venv</code> 文件夹，即可重新安装相关环境。</p>
 </blockquote>
@@ -5339,38 +5333,36 @@ set COMMANDLINE_ARGS=--xformers --lowvram</code></pre>
 </li>
 </ol>
 <h2 id="Stable-Diffusion-模型导入"><a href="#Stable-Diffusion-模型导入" class="headerlink" title="Stable Diffusion 模型导入"></a>Stable Diffusion 模型导入</h2><ol>
-<li><p>下载基础模型文件，并拷贝到 <code>D:\stable-diffusion-webui\models\Stable-diffusion</code> 下。</p>
-<pre><code class="shell"> https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.ckpt</code></pre>
+<li><p>下载基础模型文件 <a href="https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.ckpt" title="基础模型v1.5">基础模型</a> ，并拷贝到 <code>D:\stable-diffusion-webui\models\Stable-diffusion</code> 下。</p>
 </li>
 <li><p>添加 lora 模型</p>
 <ul>
 <li><p>下载基础模型 ChilloutMix （<code>https://www.123pan.com/s/sKd9-LkJc.html</code>） ，移动至 <code>*\stable-diffusion-webui\models\Stable-diffusion</code> 目录。</p>
 </li>
 <li><p>下载需要的角色模型，如 <code>taiwanDollLikeness_v10</code>，并移动至 <code>*\stable-diffusion-webui\models\Lora</code> 目录。</p>
-</li>
-</ul>
-</li>
-</ol>
 <blockquote>
 <p>重启Stable Diffusion WebUI主界面，然后在左上角可以加载使用基础模型 ChilloutMix ；如果没有必要使用东方人脸模型，直接使用 v1-5-pruned 基础模型也是 OK 的。</p>
 </blockquote>
-<ol start="3">
-<li>（可选）下载 <code>https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/codeformer.pth</code> 到 <code>D:\stable-diffusion-webui\models\Codeformer\codeformer-v0.1.0.pth</code> 。</li>
+</li>
+</ul>
+</li>
+<li><p>（可选）下载 <code>https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/codeformer.pth</code> 到 <code>D:\stable-diffusion-webui\models\Codeformer\codeformer-v0.1.0.pth</code> 。</p>
+</li>
 </ol>
 <h2 id="Stable-Diffusion-生成图片"><a href="#Stable-Diffusion-生成图片" class="headerlink" title="Stable Diffusion 生成图片"></a>Stable Diffusion 生成图片</h2><ol>
-<li>修改  <code>webui-user.bat</code> 文件以下参数：</li>
-</ol>
-<pre><code class="shell">set PYTHON=&quot;C:\Program Files\Python38\python.exe&quot;
-set PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:32
-set COMMANDLINE_ARGS=--lowvram --xformers --force-enable-xformers --precision full  --no-half --skip-python-version-check --skip-torch-cuda-test --port 6006 --disable-safe-unpickle --opt-split-attention --always-batch-cond-uncond</code></pre>
+<li><p>修改  <code>webui-user.bat</code> 文件以下参数：</p>
+<pre><code class="shell"> set PYTHON=&quot;C:\Program Files\Python38\python.exe&quot;
+ set PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:32
+ set COMMANDLINE_ARGS=--lowvram --xformers --force-enable-xformers --skip-python-version-check --skip-torch-cuda-test --port 6006 --opt-split-attention --always-batch-cond-uncond</code></pre>
 <blockquote>
 <p>注意，上边修改了端口为 6006，后续网页访问时注意更改。</p>
 </blockquote>
-<ol start="2">
-<li>运行 <code>webui-user.bat</code>（首次将初始化安装环境，慢慢等待若干小时即可）。</li>
-</ol>
-<p>若出现 <code>RuntimeError: PytorchStreamReader failed reading zip archive: failed finding central directory</code>错误，这是 pytorch 1.6 起 torch.save 增加了参数所致，而 torch.load 使用的是旧格式，修改函数即可。即 <strong>D:\stable-diffusion-webui\venv\lib\site-packages\torch\serialization.py</strong><br>    将 <code>_use_new_zipfile_serialization: bool = True</code> 修改为 <code>_use_new_zipfile_serialization: bool = False</code> ，并重启 webui-user.bat 。<br><code>D:\stable-diffusion-webui\venv\Lib\site-packages\torch\storage.py</code> 不需要更改。</p>
-<ol start="3">
+</li>
+<li><p>运行 <code>webui-user.bat</code>（首次将初始化安装环境，慢慢等待若干小时即可）。</p>
+<blockquote>
+<p>若出现 <code>RuntimeError: PytorchStreamReader failed reading zip archive: failed finding central directory</code>错误，这是 pytorch 1.6 起 torch.save 增加了参数所致，而 torch.load 使用的是旧格式，修改函数即可。即 <strong>D:\stable-diffusion-webui\venv\lib\site-packages\torch\serialization.py</strong><br>将 <code>_use_new_zipfile_serialization: bool = True</code> 修改为 <code>_use_new_zipfile_serialization: bool = False</code> ，并重启 webui-user.bat 。</p>
+</blockquote>
+</li>
 <li><p>访问系统 <a href="http://127.0.0.1:6006">http://127.0.0.1:6006</a> 。</p>
 <ul>
 <li><p>在提示词处输入相关语句，如 <code>masterpiece, best quality,Beautiful blonde with red eyes ,dress ,walking ,on the beach,night</code>，设置步骤数为 25~30，点击开始即可。</p>
