@@ -5380,6 +5380,16 @@ set COMMANDLINE_ARGS=--lowvram --xformers --force-enable-xformers --precision fu
 </ul>
 </li>
 </ol>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li>月咏幻 . <code>Stable Difussion显存不够用的拯救者插件</code> [EB/OL]. <a href="https://zhuanlan.zhihu.com/p/617905470">https://zhuanlan.zhihu.com/p/617905470</a>, 2023/04/01.</li>
+<li>知乎公众号 . <code>全网配置最低的2G显卡运行AI绘画Stable diffusion WebUI是什么体验？教你在超低显存笔记本电脑上安装AI绘画工具</code> [EB/OL]. <a href="https://zhuanlan.zhihu.com/p/611377617">https://zhuanlan.zhihu.com/p/611377617</a>, 2023/04/01.</li>
+<li>GitHub . <code>[Bug]: cudart64_110.dll shipped with PyTorch 1.13.1 fails to load on Windows 7</code> [EB/OL]. <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/7379">https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/7379</a>, 2023/04/01.</li>
+<li>PandaCrib . <code>pytorch安装报错：OSError: [WinError 127]，c10_cuda.dll缺失</code> [EB/OL]. <a href="https://blog.csdn.net/weixin_43889609/article/details/127274884">https://blog.csdn.net/weixin_43889609/article/details/127274884</a>, 2023/04/02.</li>
+<li>橘法师成前 . <code>自力更生：Stable Diffusion webui本地部署遇到的坑及解决</code> [EB/OL]. <a href="https://www.bilibili.com/read/cv21987039">https://www.bilibili.com/read/cv21987039</a>, 2023/04/02.</li>
+<li>梦音Yune . <code>设置PYTORCH_CUDA_ALLOC_CONF中的max_split_size_mb</code> [EB/OL]. <a href="https://blog.csdn.net/MirageTanker/article/details/127998036">https://blog.csdn.net/MirageTanker/article/details/127998036</a>, 2023/04/02.</li>
+<li>知乎 . <code>有没有人能详细介绍一下Stable Diffusion AI绘画？</code> [EB/OL]. <a href="https://www.zhihu.com/question/585008573/answer/2943576893">https://www.zhihu.com/question/585008573/answer/2943576893</a>, 2023/04/02.</li>
+<li>稀土掘金 . <code>【AI绘画】你会选择哪个模型？</code> [EB/OL]. <a href="https://juejin.cn/post/7216153056282509349">https://juejin.cn/post/7216153056282509349</a>, 2023/04/03.</li>
+</ul>
 ]]></content>
       <categories>
         <category>电脑爱好者</category>
