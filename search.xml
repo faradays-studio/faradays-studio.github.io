@@ -5303,13 +5303,13 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
 <li><p>安装 Python 3.8.10：通过官网下载 setup 包进行安装。</p>
 <ul>
 <li><p>建议人工下载安装 <code>torch-1.13.1+cu117-cp38-cp38-win_amd64.whl</code> 包，阿里云地址为 <a href="https://mirrors.aliyun.com/pytorch-wheels/cu117/">https://mirrors.aliyun.com/pytorch-wheels/cu117/</a> ，下载完成后人工安装到 Python 环境中。</p>
-</li>
+<pre><code>  D:\stable-diffusion-webui\venv\Scripts\python.exe -m pip install   torch-1.13.0+cu117-cp38-cp38-win_amd64.whl</code></pre></li>
 <li><p>安装 xformers 插件，解决 <code>Installation of xformers is not supported in this version of Python.</code> 错误。</p>
 <pre><code>  D:\stable-diffusion-webui\venv\Scripts\python.exe -m pip install   xformers==0.0.16
 
   # 检查功能是否正常
   D:\stable-diffusion-webui\venv\Scripts\python.exe  -m xformers.info</code></pre><blockquote>
-<p>上述插件版本适用于 stable-diffusion-webui v1.0及以下版本，1.1.0 版本需要 torch 2.0 、xformers 0.0.18。</p>
+<p>上述插件版本适用于 stable-diffusion-webui v1.0及以下版本。1.1.0 版本需要 torch 2.0 、CUDA 11.8、xformers 0.0.18，插件地址见 <a href="https://mirrors.aliyun.com/pytorch-wheels/cu118/">https://mirrors.aliyun.com/pytorch-wheels/cu118/</a> 。</p>
 </blockquote>
 </li>
 </ul>
@@ -5380,7 +5380,7 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
 <li><p>在提示词处输入相关语句，如 <code>masterpiece, best quality,Beautiful blonde with red eyes ,dress ,walking ,on the beach,night</code>，设置步骤数为 25~30，点击开始即可。</p>
 <p>  <img src="/static/img/20230501-StableDiffusion/03-%E4%BD%BF%E7%94%A8StableDiffusion%E7%94%9F%E6%88%90%E7%9A%84%E9%A6%96%E5%B9%85%E5%9B%BE%E7%89%87.png" alt="演示效果1"></p>
 </li>
-<li><p><code>Chiri-jiang Mountain View, Blue Sky, White Cloud, Oil Painting Style, skillful,serene pastoral scenes, light green and orange</code>。</p>
+<li><p>采用 Protogen 8.6（Infinity） 模型，提示词输入 <code>Chiri-jiang Mountain View, Blue Sky, White Cloud, Oil Painting Style, skillful,serene pastoral scenes, light green and orange</code>，效果如下：</p>
 <p><img src="/static/img/20230501-StableDiffusion/00050-20230405115920-Dreamlike_Protogen_8.6_Infinity_3986423254.jpg" alt="演示效果2"></p>
 <p><img src="/static/img/20230501-StableDiffusion/00054-20230405131705-Dreamlike_Protogen_8.6_Infinity_969991889.jpg" alt="演示效果3"></p>
 </li>
