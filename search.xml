@@ -5291,25 +5291,34 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
   <entry>
     <title>Windows 7 + Python 3.8 如何部署 Stable Diffusion 环境？</title>
     <url>/202305012051/</url>
-    <content><![CDATA[<h2 id="操作系统配置"><a href="#操作系统配置" class="headerlink" title="操作系统配置"></a>操作系统配置</h2><ol>
+    <content><![CDATA[<blockquote>
+<p>最近生成式 AI 非常火爆，特别是 Stable Diffusion、Midjourney 等工具涌现，让互联网圈子话题不断。一个疲倦的周末，我决心在自己的电脑上尝尝鲜，因此有了这个文章。网上很多文章都说 Stable Diffusion 需要 Windows 10 + Python 3.10 环境才能使用，测试后才发现 Windows 7 + Python 3.8 也不是不可能，咱们唯一需要的是升级显存和内存！</p>
+</blockquote>
+<h2 id="操作系统配置"><a href="#操作系统配置" class="headerlink" title="操作系统配置"></a>操作系统配置</h2><ol>
 <li><p>升级显卡驱动：Stable Diffusion WebUI 要求 CUDA 版本为 <strong>11.4</strong>，通过查询 <a href="https://www.nvidia.cn/Download/Find.aspx?lang=cn">https://www.nvidia.cn/Download/Find.aspx?lang=cn</a> 找到本机对应的硬件驱动，安装升级。</p>
+<p> <img src="/static/img/20230501-StableDiffusion/01-NVIDIA%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F%E4%B8%8B%E8%BD%BD%E9%A1%B5%E9%9D%A2.png" alt="驱动下载页"></p>
 </li>
-<li><p>安装 Python 3.8.10。可以通过官网下载 setup 包进行安装。</p>
+</ol>
+<ol start="2">
+<li><p>安装 Python 3.8.10：通过官网下载 setup 包进行安装。</p>
 <ul>
-<li><p>建议人工下载安装 <code>torch-1.13.1+cu117-cp38-cp38-win_amd64.whl</code> 包，阿里云地址为 <a href="https://mirrors.aliyun.com/pytorch-wheels/cu117/，下载完成后人工安装到">https://mirrors.aliyun.com/pytorch-wheels/cu117/，下载完成后人工安装到</a> Python 环境中。</p>
+<li><p>建议人工下载安装 <code>torch-1.13.1+cu117-cp38-cp38-win_amd64.whl</code> 包，阿里云地址为 <a href="https://mirrors.aliyun.com/pytorch-wheels/cu117/">https://mirrors.aliyun.com/pytorch-wheels/cu117/</a> ，下载完成后人工安装到 Python 环境中。</p>
 </li>
 <li><p>安装 xformers 插件，解决 <code>Installation of xformers is not supported in this version of Python.</code> 错误。</p>
 <pre><code>  D:\stable-diffusion-webui\venv\Scripts\python.exe -m pip install   xformers==0.0.16
 
   # 检查功能是否正常
-  D:\stable-diffusion-webui\venv\Scripts\python.exe  -m xformers.info</code></pre></li>
+  D:\stable-diffusion-webui\venv\Scripts\python.exe  -m xformers.info</code></pre><blockquote>
+<p>上述插件版本适用于 stable-diffusion-webui v1.0及以下版本，1.1.0 版本需要 torch 2.0 、xformers 0.0.18。</p>
+</blockquote>
+</li>
 </ul>
 </li>
 </ol>
 <h2 id="Stable-Diffusion-环境配置"><a href="#Stable-Diffusion-环境配置" class="headerlink" title="Stable Diffusion 环境配置"></a>Stable Diffusion 环境配置</h2><ol>
 <li><p>下载 stable-diffusion-webui 文件，如下：</p>
 <pre><code class="shell"> cd D:\
- git clone https://gitee.com/faradays-studio/stable-diffusion-webui</code></pre>
+ git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui</code></pre>
 <blockquote>
 <p>这是假设文件的根路径为 <code>D:\</code> ，后续调用时不再赘述。</p>
 </blockquote>
@@ -5331,13 +5340,27 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
 </li>
 </ul>
 </li>
+<li><p>修改  <code>webui-user.bat</code> 文件以下参数：</p>
+<pre><code class="shell"> set PYTHON=&quot;C:\Program Files\Python38\python.exe&quot;
+ set PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:32
+ set COMMANDLINE_ARGS=--lowvram --xformers --skip-python-version-check --skip-torch-cuda-test --port 6006 --opt-split-attention --always-batch-cond-uncond</code></pre>
+<blockquote>
+<p>注意，上边修改了端口为 6006，后续网页访问时注意更改。</p>
+</blockquote>
+</li>
+<li><p>运行 <code>webui-user.bat</code>（首次将初始化安装环境，慢慢等待若干小时即可）。</p>
+<p> <img src="/static/img/20230501-StableDiffusion/02-%E9%A6%96%E6%AC%A1%E5%90%AF%E5%8A%A8%E6%97%B6%E8%81%94%E7%BD%91%E5%AE%89%E8%A3%85torch+torchvision+cu117%E6%8F%92%E4%BB%B6.png" alt="stable diffusion webui 初始化示意图"></p>
+<blockquote>
+<p>若出现 <code>RuntimeError: PytorchStreamReader failed reading zip archive: failed finding central directory</code>错误，这是 pytorch 1.6 起 torch.save 增加了参数所致，而 torch.load 使用的是旧格式，修改函数即可。即 <strong>D:\stable-diffusion-webui\venv\lib\site-packages\torch\serialization.py</strong><br>将 <code>_use_new_zipfile_serialization: bool = True</code> 修改为 <code>_use_new_zipfile_serialization: bool = False</code> ，并重启 webui-user.bat 。</p>
+</blockquote>
+</li>
 </ol>
 <h2 id="Stable-Diffusion-模型导入"><a href="#Stable-Diffusion-模型导入" class="headerlink" title="Stable Diffusion 模型导入"></a>Stable Diffusion 模型导入</h2><ol>
-<li><p>下载基础模型文件 <a href="https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.ckpt" title="基础模型v1.5">基础模型</a> ，并拷贝到 <code>D:\stable-diffusion-webui\models\Stable-diffusion</code> 下。</p>
+<li><p>下载 <a href="https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.ckpt" title="基础模型v1.5">基础模型</a> ，并拷贝到 <code>D:\stable-diffusion-webui\models\Stable-diffusion</code> 下。</p>
 </li>
 <li><p>添加 lora 模型</p>
 <ul>
-<li><p>下载基础模型 ChilloutMix （<code>https://www.123pan.com/s/sKd9-LkJc.html</code>） ，移动至 <code>*\stable-diffusion-webui\models\Stable-diffusion</code> 目录。</p>
+<li><p>下载基础模型 <a href="https://www.123pan.com/s/sKd9-LkJc.html">ChilloutMix</a> ，移动至 <code>*\stable-diffusion-webui\models\Stable-diffusion</code> 目录。</p>
 </li>
 <li><p>下载需要的角色模型，如 <code>taiwanDollLikeness_v10</code>，并移动至 <code>*\stable-diffusion-webui\models\Lora</code> 目录。</p>
 <blockquote>
@@ -5346,28 +5369,20 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
 </li>
 </ul>
 </li>
-<li><p>（可选）下载 <code>https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/codeformer.pth</code> 到 <code>D:\stable-diffusion-webui\models\Codeformer\codeformer-v0.1.0.pth</code> 。</p>
+<li><p>（可选）下载 <a href="https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/codeformer.pth">codeformer</a> 到 <code>D:\stable-diffusion-webui\models\Codeformer\codeformer-v0.1.0.pth</code> 。</p>
 </li>
 </ol>
 <h2 id="Stable-Diffusion-生成图片"><a href="#Stable-Diffusion-生成图片" class="headerlink" title="Stable Diffusion 生成图片"></a>Stable Diffusion 生成图片</h2><ol>
-<li><p>修改  <code>webui-user.bat</code> 文件以下参数：</p>
-<pre><code class="shell"> set PYTHON=&quot;C:\Program Files\Python38\python.exe&quot;
- set PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:32
- set COMMANDLINE_ARGS=--lowvram --xformers --force-enable-xformers --skip-python-version-check --skip-torch-cuda-test --port 6006 --opt-split-attention --always-batch-cond-uncond</code></pre>
-<blockquote>
-<p>注意，上边修改了端口为 6006，后续网页访问时注意更改。</p>
-</blockquote>
-</li>
-<li><p>运行 <code>webui-user.bat</code>（首次将初始化安装环境，慢慢等待若干小时即可）。</p>
-<blockquote>
-<p>若出现 <code>RuntimeError: PytorchStreamReader failed reading zip archive: failed finding central directory</code>错误，这是 pytorch 1.6 起 torch.save 增加了参数所致，而 torch.load 使用的是旧格式，修改函数即可。即 <strong>D:\stable-diffusion-webui\venv\lib\site-packages\torch\serialization.py</strong><br>将 <code>_use_new_zipfile_serialization: bool = True</code> 修改为 <code>_use_new_zipfile_serialization: bool = False</code> ，并重启 webui-user.bat 。</p>
-</blockquote>
+<li><p>运行 <code>webui-user.bat</code> 启动 Stable Diffusion 系统。</p>
 </li>
 <li><p>访问系统 <a href="http://127.0.0.1:6006">http://127.0.0.1:6006</a> 。</p>
 <ul>
 <li><p>在提示词处输入相关语句，如 <code>masterpiece, best quality,Beautiful blonde with red eyes ,dress ,walking ,on the beach,night</code>，设置步骤数为 25~30，点击开始即可。</p>
-<p><img src="/static/img/20230501-StableDiffusion/00050-20230405115920-Dreamlike_Protogen_8.6_Infinity_3986423254.jpg" alt="演示效果1"></p>
-<p><img src="/static/img/20230501-StableDiffusion/00054-20230405131705-Dreamlike_Protogen_8.6_Infinity_969991889.jpg" alt="演示效果2"></p>
+<p>  <img src="/static/img/20230501-StableDiffusion/03-%E4%BD%BF%E7%94%A8StableDiffusion%E7%94%9F%E6%88%90%E7%9A%84%E9%A6%96%E5%B9%85%E5%9B%BE%E7%89%87.png" alt="演示效果1"></p>
+</li>
+<li><p><code>Chiri-jiang Mountain View, Blue Sky, White Cloud, Oil Painting Style, skillful,serene pastoral scenes, light green and orange</code>。</p>
+<p><img src="/static/img/20230501-StableDiffusion/00050-20230405115920-Dreamlike_Protogen_8.6_Infinity_3986423254.jpg" alt="演示效果2"></p>
+<p><img src="/static/img/20230501-StableDiffusion/00054-20230405131705-Dreamlike_Protogen_8.6_Infinity_969991889.jpg" alt="演示效果3"></p>
 </li>
 </ul>
 </li>
