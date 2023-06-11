@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://faradays-studio.gitee.io/"/>
-  <updated>2023-05-03T03:05:59.548Z</updated>
+  <updated>2023-06-11T02:56:23.251Z</updated>
   <id>https://faradays-studio.gitee.io/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Shell for批量同步文件</title>
+    <link href="https://faradays-studio.gitee.io/202306111038/"/>
+    <id>https://faradays-studio.gitee.io/202306111038/</id>
+    <published>2023-06-11T02:38:57.000Z</published>
+    <updated>2023-06-11T02:56:23.251Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>近期，在更新某个系统的过程中，需要将多个文件同步到远程服务器的多个路径下，操作较为繁琐，因此有了这个探索。</p></blockquote><h2 id="for-进行数值计算"><a href="#for-进行数值计算" class="headerlink" title="for 进行数值计算"></a>for 进行数值计算</h2><p>参考公式：【 for i in <code>echo 数字序列</code>;do echo $(( 数值计算式 )); done 】，如下：</p><pre><code class="shell">for i in `echo 1 2 3 4`;do echo $(( $i * $i )); done</code></pre><p><img src="/static/img/20230611-shell-for/for-echo.png" alt="数值计算"></p><h2 id="for-进行本地文件复制"><a href="#for-进行本地文件复制" class="headerlink" title="for 进行本地文件复制"></a>for 进行本地文件复制</h2><ol><li><p>如果源文件在一个目录下，可采用：【 for <strong>i</strong> in `ls <code>源目录路径</code>`;do cp <code>源目录路径/$i</code> <code>目标目录路径</code>; done 】</p><pre><code class="shell"> for i in `ls /home/herc/exe-`;do cp /home/herc/exe-/$i /home/herc/下载/20230611/; done</code></pre><p> <img src="/static/img/20230611-shell-for/for-cp.png" alt="文件复制"></p></li><li><p>如果上述源文件不在一个目录下，也可以将源文件路径写入 <strong>list.txt</strong> 文件，并采取以下方式来进行复制处理：</p><pre><code class="shell"> for i in `cat list.txt`;do cp $i 目标目录路径; done</code></pre></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;近期，在更新某个系统的过程中，需要将多个文件同步到远程服务器的多个路径下，操作较为繁琐，因此有了这个探索。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;for-进行数值计算&quot;&gt;&lt;a href=&quot;#for-进行数值计算&quot; class=&quot;hea
+      
+    
+    </summary>
+    
+    
+      <category term="电脑爱好者" scheme="https://faradays-studio.gitee.io/categories/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85/"/>
+    
+    
+      <category term="for" scheme="https://faradays-studio.gitee.io/tags/for/"/>
+    
+      <category term="Shell" scheme="https://faradays-studio.gitee.io/tags/Shell/"/>
+    
+      <category term="scp" scheme="https://faradays-studio.gitee.io/tags/scp/"/>
+    
+      <category term="同步" scheme="https://faradays-studio.gitee.io/tags/%E5%90%8C%E6%AD%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows 7 + Python 3.8 如何部署 Stable Diffusion 环境？</title>
@@ -684,40 +719,6 @@
       <category term="远程" scheme="https://faradays-studio.gitee.io/tags/%E8%BF%9C%E7%A8%8B/"/>
     
       <category term="限制" scheme="https://faradays-studio.gitee.io/tags/%E9%99%90%E5%88%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>中国专利信息的查询方法</title>
-    <link href="https://faradays-studio.gitee.io/202108082250/"/>
-    <id>https://faradays-studio.gitee.io/202108082250/</id>
-    <published>2021-08-08T14:50:18.000Z</published>
-    <updated>2022-02-12T04:44:37.679Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>最近，由于工作的需要，委托代理公司开展专利申报工作；可是又很关心专利申报流程执行得怎么样了，因此就学习一下如何查询专利。</p></blockquote><ol><li><p>首先，在 <a href="http://cpquery.cnipa.gov.cn/">http://cpquery.cnipa.gov.cn/</a> 网站上注册一个账户（注册公众查询账户就行；我考虑到以后工作的需要，申请了电子申请账户，它也具有公众查询功能）</p><p> <img src="/static/img/20210827-%E4%B8%93%E5%88%A9/CHIPA-%E4%B8%93%E5%88%A9%E5%AE%A1%E6%9F%A5%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2%E7%B3%BB%E7%BB%9F-%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2.png" alt="专利查询系统的登录界面"></p></li><li><p>登陆系统后，输入相关信息就可以查询专利喽！（当然，系统很奇葩，专利号中的点号需要删除；如 <code>202110465388.2</code> 的查询值为 <code>2021104653882</code> ）</p><p> <img src="/static/img/20210827-%E4%B8%93%E5%88%A9/CHIPA-%E4%B8%93%E5%88%A9%E6%A3%80%E7%B4%A2-1-%E6%9F%A5%E8%AF%A2%E6%9D%A1%E4%BB%B6%E8%BE%93%E5%85%A5.png" alt="专利查询系统的查询内容输入"></p><p> <img src="/static/img/20210827-%E4%B8%93%E5%88%A9/CHIPA-%E4%B8%93%E5%88%A9%E6%A3%80%E7%B4%A2-2-%E7%94%B3%E8%AF%B7%E5%86%85%E5%AE%B9%E8%AF%A6%E6%83%85.png" alt="专利查询系统的专利详情示意"></p></li></ol><blockquote><ul><li>上述系统也可以申请专利，不过很多单位都是委托第三方去处理，也许流程太复杂了吧。</li></ul></blockquote><blockquote><ul><li>从专利检索的角度来说，使用 <a href="http://www.soopat.com/Home/Index">http://www.soopat.com/Home/Index</a> 来检索更为便利一些，毕竟，很多时候，你不知道你要找到的是什么专利！</li></ul></blockquote><blockquote><p>   <img src="/static/img/20210827-%E4%B8%93%E5%88%A9/soopat-%E4%B8%93%E5%88%A9%E6%A3%80%E7%B4%A2%EF%BC%88%E7%A4%BA%E4%BE%8B%EF%BC%89.png" alt="soopat专利查询系统"></p></blockquote><blockquote><ul><li>悄悄地告诉你，如果需要下载专利，可以从这里下载 <a href="https://www.drugfuture.com/cnpat/cn_patent.asp">https://www.drugfuture.com/cnpat/cn_patent.asp</a> 或者 <a href="https://www.patent9.com/">https://www.patent9.com/</a> 。</li></ul></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;最近，由于工作的需要，委托代理公司开展专利申报工作；可是又很关心专利申报流程执行得怎么样了，因此就学习一下如何查询专利。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;首先，在 &lt;a href=&quot;http://cpquery.cnip
-      
-    
-    </summary>
-    
-    
-      <category term="办事指南" scheme="https://faradays-studio.gitee.io/categories/%E5%8A%9E%E4%BA%8B%E6%8C%87%E5%8D%97/"/>
-    
-    
-      <category term="专利" scheme="https://faradays-studio.gitee.io/tags/%E4%B8%93%E5%88%A9/"/>
-    
-      <category term="查询" scheme="https://faradays-studio.gitee.io/tags/%E6%9F%A5%E8%AF%A2/"/>
-    
-      <category term="方法" scheme="https://faradays-studio.gitee.io/tags/%E6%96%B9%E6%B3%95/"/>
     
   </entry>
   

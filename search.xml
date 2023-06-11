@@ -5410,4 +5410,33 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
         <tag>画图</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Shell for批量同步文件</title>
+    <url>/202306111038/</url>
+    <content><![CDATA[<blockquote>
+<p>近期，在更新某个系统的过程中，需要将多个文件同步到远程服务器的多个路径下，操作较为繁琐，因此有了这个探索。</p>
+</blockquote>
+<h2 id="for-进行数值计算"><a href="#for-进行数值计算" class="headerlink" title="for 进行数值计算"></a>for 进行数值计算</h2><p>参考公式：【 for i in <code>echo 数字序列</code>;do echo $(( 数值计算式 )); done 】，如下：</p>
+<pre><code class="shell">for i in `echo 1 2 3 4`;do echo $(( $i * $i )); done</code></pre>
+<p><img src="/static/img/20230611-shell-for/for-echo.png" alt="数值计算"></p>
+<h2 id="for-进行本地文件复制"><a href="#for-进行本地文件复制" class="headerlink" title="for 进行本地文件复制"></a>for 进行本地文件复制</h2><ol>
+<li><p>如果源文件在一个目录下，可采用：【 for <strong>i</strong> in `ls <code>源目录路径</code>`;do cp <code>源目录路径/$i</code> <code>目标目录路径</code>; done 】</p>
+<pre><code class="shell"> for i in `ls /home/herc/exe-`;do cp /home/herc/exe-/$i /home/herc/下载/20230611/; done</code></pre>
+<p> <img src="/static/img/20230611-shell-for/for-cp.png" alt="文件复制"></p>
+</li>
+<li><p>如果上述源文件不在一个目录下，也可以将源文件路径写入 <strong>list.txt</strong> 文件，并采取以下方式来进行复制处理：</p>
+<pre><code class="shell"> for i in `cat list.txt`;do cp $i 目标目录路径; done</code></pre>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>for</tag>
+        <tag>Shell</tag>
+        <tag>scp</tag>
+        <tag>同步</tag>
+      </tags>
+  </entry>
 </search>
