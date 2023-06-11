@@ -5411,14 +5411,25 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
       </tags>
   </entry>
   <entry>
-    <title>Shell for批量同步文件</title>
+    <title>Bash 中 for 的批量处理</title>
     <url>/202306111038/</url>
     <content><![CDATA[<blockquote>
 <p>近期，在更新某个系统的过程中，需要将多个文件同步到远程服务器的多个路径下，操作较为繁琐，因此有了这个探索。</p>
 </blockquote>
-<h2 id="for-进行数值计算"><a href="#for-进行数值计算" class="headerlink" title="for 进行数值计算"></a>for 进行数值计算</h2><p>参考公式：【 for i in <code>echo 数字序列</code>;do echo $(( 数值计算式 )); done 】，如下：</p>
+<h2 id="for-进行数值计算"><a href="#for-进行数值计算" class="headerlink" title="for 进行数值计算"></a>for 进行数值计算</h2><ol>
+<li>参考公式：【 for i in <code>echo 数字序列</code>;do echo $(( 数值计算式 )); done 】，如下：</li>
+</ol>
 <pre><code class="shell">for i in `echo 1 2 3 4`;do echo $(( $i * $i )); done</code></pre>
 <p><img src="/static/img/20230611-shell-for/for-echo.png" alt="数值计算"></p>
+<ol start="2">
+<li>如果存在多个变量，可以模仿以下方式</li>
+</ol>
+<pre><code class="shell">s=(`echo 1 2 3 4`);
+d=(`echo 2 3 4 5`);
+for i in `echo 0 1 2 3`;do echo $(( $&#123;s[$i]&#125; * $&#123;d[$i]&#125; )); done</code></pre>
+<blockquote>
+<p>注意，上述s、d 两个数组调用时，下标从 0 开始。</p>
+</blockquote>
 <h2 id="for-进行本地文件复制"><a href="#for-进行本地文件复制" class="headerlink" title="for 进行本地文件复制"></a>for 进行本地文件复制</h2><ol>
 <li><p>如果源文件在一个目录下，可采用：【 for <strong>i</strong> in `ls <code>源目录路径</code>`;do cp <code>源目录路径/$i</code> <code>目标目录路径</code>; done 】</p>
 <pre><code class="shell"> for i in `ls /home/herc/exe-`;do cp /home/herc/exe-/$i /home/herc/下载/20230611/; done</code></pre>
@@ -5428,12 +5439,21 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
 <pre><code class="shell"> for i in `cat list.txt`;do cp $i 目标目录路径; done</code></pre>
 </li>
 </ol>
+<h2 id="姊妹篇"><a href="#姊妹篇" class="headerlink" title="姊妹篇"></a>姊妹篇</h2><ol>
+<li><p><a href="../202012201125">csh 、 bash 的基础语法对照：变量</a></p>
+</li>
+<li><p><a href="../202012261636">csh 、 bash 的基础语法对照：判断表达式</a></p>
+</li>
+<li><p><a href="../202012261733">csh 、 bash 的基础语法对照：循环表达式</a></p>
+</li>
+</ol>
 ]]></content>
       <categories>
         <category>电脑爱好者</category>
       </categories>
       <tags>
         <tag>for</tag>
+        <tag>运算</tag>
         <tag>Shell</tag>
         <tag>scp</tag>
         <tag>同步</tag>
