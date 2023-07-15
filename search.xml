@@ -168,7 +168,7 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
 </li>
 <li><p>2021/10/07 22:46:06，升级至 v0.2.13，首页的最后3篇文章增加超链接，修复网站初次切换夜间模式失效、页面横幅中日期转换受本地格式影响失0而失效等问题。</p>
 </li>
-<li><p>升级 typed 到 2.0.12版本，修复 <strong>isSite1</strong> 定义位置不当的问题。</p>
+<li><p>2023/07/15 18:23:08，升级至 v0.2.14，优化时间轴页面，升级 typed 到 2.0.12版本，修复 <strong>isSite1</strong> 定义位置不当的问题。</p>
 </li>
 </ol>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
@@ -5417,7 +5417,7 @@ rm: 无法删除&quot;/etc/resolv.conf&quot;: 不允许的操作
 <p>近期，在更新某个系统的过程中，需要将多个文件同步到远程服务器的多个路径下，操作较为繁琐，因此有了这个探索。</p>
 </blockquote>
 <h2 id="for-进行数值计算"><a href="#for-进行数值计算" class="headerlink" title="for 进行数值计算"></a>for 进行数值计算</h2><ol>
-<li>参考公式：【 for i in <code>echo 数字序列</code>;do echo $(( 数值计算式 )); done 】，如下：</li>
+<li>参考公式：【 for i in `echo 数字序列`;do echo $(( 数值计算式 )); done 】，如下：</li>
 </ol>
 <pre><code class="shell">for i in `echo 1 2 3 4`;do echo $(( $i * $i )); done</code></pre>
 <p><img src="/static/img/20230611-shell-for/for-echo.png" alt="数值计算"></p>

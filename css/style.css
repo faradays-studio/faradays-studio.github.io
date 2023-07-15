@@ -220,6 +220,9 @@ a:hover {
   margin: 0;
   padding: 0;
 }
+.timeline_x .timeline_x-num {
+  color: #5c6b72;
+}
 html,
 body,
 div,

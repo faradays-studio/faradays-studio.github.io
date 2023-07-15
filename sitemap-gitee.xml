@@ -2,8 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	
 	<url>
+		<loc>https://faradays-studio.gitee.io202006071600/</loc>
+		<lastmod>2023-07-15</lastmod>
+		
+	</url>
+	
+	<url>
+		<loc>https://faradays-studio.gitee.ioabout/hidden-change_log%E3%80%90hexo-theme-faradays%E3%80%91.html</loc>
+		<lastmod>2023-07-15</lastmod>
+		
+	</url>
+	
+	<url>
 		<loc>https://faradays-studio.gitee.io202306111038/</loc>
-		<lastmod>2023-06-11</lastmod>
+		<lastmod>2023-07-15</lastmod>
 		
 	</url>
 	
@@ -56,12 +68,6 @@
 	</url>
 	
 	<url>
-		<loc>https://faradays-studio.gitee.ioabout/hidden-change_log%E3%80%90hexo-theme-faradays%E3%80%91.html</loc>
-		<lastmod>2022-05-02</lastmod>
-		
-	</url>
-	
-	<url>
 		<loc>https://faradays-studio.gitee.io202205022233/</loc>
 		<lastmod>2022-05-02</lastmod>
 		
@@ -87,12 +93,6 @@
 	
 	<url>
 		<loc>https://faradays-studio.gitee.io202202272118/</loc>
-		<lastmod>2022-03-07</lastmod>
-		
-	</url>
-	
-	<url>
-		<loc>https://faradays-studio.gitee.io202006071600/</loc>
 		<lastmod>2022-03-07</lastmod>
 		
 	</url>
@@ -387,7 +387,7 @@
 	
 	<url>
 		<loc>https://faradays-studio.gitee.io/</loc>
-		<lastmod>2023-06-11</lastmod>
+		<lastmod>2023-07-15</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
