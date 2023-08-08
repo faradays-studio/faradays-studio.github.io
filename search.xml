@@ -5459,4 +5459,150 @@ for i in `echo 0 1 2 3`;do echo $(( $&#123;s[$i]&#125; * $&#123;d[$i]&#125; )); 
         <tag>同步</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Windows 批处理的 for 循环用法示例</title>
+    <url>/202308082235/</url>
+    <content><![CDATA[<blockquote>
+<p>最近有同事说，搜狗输入法老是偷偷联网，导致网络后台有异常报警，因此我考虑用批处理的方法来设置一个 Windows 防火墙，以便实现屏蔽联网的功能。当然，并非说软件联网一定会有问题，这里主要是侧重于演示批处理的用法罢了。</p>
+</blockquote>
+<h2 id="for-循环的用法"><a href="#for-循环的用法" class="headerlink" title="for 循环的用法"></a>for 循环的用法</h2><ol>
+<li><p>最简单的形式就是 <code>SET 列表变量=数据1,数据2,...,数据n</code>，即多个数据之间使用逗号分隔；然后使用 <code>FOR %%i IN ( %列表变量% ) DO ( 相关引用语句 )</code> 实现循环计算，如下：</p>
+<pre><code class="shell"> @ECHO OFF
+
+ SET sg_pro=SogouToolkits,SGTool,PinyinUp,SGDownload,ShowInfo,SGMyInput,SGKaomoji,userNetSchedule
+ @echo %sg_pro%
+ echo.
+
+ for %%a in ( %sg_pro% ) do (
+     echo %%a
+ )
+
+ echo 执行完毕！
+ echo.
+ pause</code></pre>
+</li>
+<li><p>如果要在 <code>for</code> 外部套接 <code>if</code> 语句，那么可能就需要使用 <strong>延迟变量扩展</strong> 来处理了，相关变量的引用形式将从<code>%变量%</code>变为<code>!变量!</code>，如下：</p>
+<pre><code class="shell"> @SETLOCAL ENABLEDELAYEDEXPANSION
+ @ECHO OFF
+
+ @SET sg_dir=%ProgramFiles% (x86)\SogouInput
+ if not exist &quot;%sg_dir%&quot; (
+     echo 您的搜狗输入法路径为自定义，需要人工核查更正！
+ ) else (
+     @echo.
+     SET sg_pro=SogouToolkits,SGTool,PinyinUp,SGDownload,ShowInfo,SGMyInput,SGKaomoji,userNetSchedule
+     @echo !sg_pro!
+
+     for %%a in ( !sg_pro! ) do (
+         echo.
+         echo %%a
+     )
+
+     echo 执行完毕！请直接关闭窗口...
+ )
+ echo.
+ pause</code></pre>
+</li>
+<li><p>在上述基础上，一个完整的循环脚本可以如下：</p>
+<pre><code class="shell"> @SETLOCAL ENABLEDELAYEDEXPANSION
+ @ECHO OFF
+
+ @SET sg_dir=%ProgramFiles% (x86)\SogouInput
+ if not exist &quot;!sg_dir!&quot; (
+     echo 您的搜狗输入法路径为自定义，需要人工核查更正！
+ ) else (
+     echo 切换至程序路径
+     echo.
+     c: &amp;&amp; cd !sg_dir!
+
+     echo 确定搜狗拼音版本
+     for /d %%p in (*) do (
+         echo %%p | findstr &quot;^[0-9]&quot; &gt; NUL &amp;&amp; ( set sg_ver=%%p )
+     )
+     echo !sg_ver!
+     echo.
+
+     @set sg_pro=SogouToolkits,SGTool,PinyinUp,SGDownload,ShowInfo,SGMyInput,SGKaomoji,userNetSchedule
+     @SET sg_path=!sg_dir!\!sg_ver!
+
+     echo 逐项循环处理
+     for %%a in ( !sg_pro! ) do (
+         echo %%a
+         echo.
+     )
+
+     echo 执行完毕！请直接关闭窗口...
+ )
+ echo.
+ pause</code></pre>
+</li>
+<li><p>除了使用 <code>SET</code> 命令指令 <strong>for</strong> 循环使用的列表外，还可以通过 <strong>for /f</strong> 指定文件循环、<strong>for /d</strong> 指定目录循环等方式来构建循环的列表。如下：</p>
+<pre><code class="shell"> @SETLOCAL ENABLEDELAYEDEXPANSION
+ @ECHO OFF
+
+ @SET sg_dir=%ProgramFiles% (x86)\SogouInput
+ if not exist &quot;!sg_dir!&quot; (
+     echo 您的搜狗输入法路径为自定义，需要人工核查更正！
+ ) else (
+     echo.
+     c: &amp;&amp; cd !sg_dir!
+
+     echo 确定搜狗拼音版本
+     for /d %%p in (*) do (
+         echo %%p | findstr &quot;^[0-9]&quot; &gt; NUL &amp;&amp; ( set sg_ver=%%p )
+     )
+     echo !sg_ver!
+     echo.
+
+     echo 当前搜狗拼音的路径
+     @set sg_pro=SogouToolkits,SGTool,PinyinUp,SGDownload,ShowInfo,SGMyInput,SGKaomoji,userNetSchedule
+     @SET sg_path=!sg_dir!\!sg_ver!
+     echo !sg_path!
+     echo.
+
+     echo 逐项循环处理
+     for /r  %%a in (&quot;%sg_path%\*.exe&quot;) do (
+         echo %%a
+         echo.
+     )
+
+     echo 执行完毕！请直接关闭窗口...
+ )
+ echo.
+ pause</code></pre>
+<blockquote>
+<p>注意：上述 <code>for /f</code> 中使用 <code>%变量%</code> 来引用变量，而使用 <code>!变量!</code> 则不成功，相关变量的延迟扩展原理我还不是很清晰，欢迎网友交流！</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="以管理员权限运行"><a href="#以管理员权限运行" class="headerlink" title="以管理员权限运行"></a>以管理员权限运行</h2><p>为了使得脚本可以在 Windows 10 等平台上直接运行，可以给脚本叫上管理员权限功能，直接在脚本头部增加以下内容即可：</p>
+<pre><code class="shell">:: 获取管理员权限
+@echo off
+%1 mshta vbscript:CreateObject(&quot;Shell.Application&quot;).ShellExecute(&quot;cmd.exe&quot;,&quot;/c %~s0 ::&quot;,&quot;&quot;,&quot;runas&quot;,1)(window.close)&amp;&amp;exit
+cd /d &quot;%~dp0&quot;</code></pre>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><p>zhanglintc.<code>Batch 批处理中的 EnableDelayedExpansion 详解</code>[EB/OL].<a href="https://imlane.zhanglintc.co/post/batchpi-chu-li-zhong-de-enabledelayedexpansion">https://imlane.zhanglintc.co/post/batchpi-chu-li-zhong-de-enabledelayedexpansion</a>, 2023/08/08.</p>
+<blockquote>
+<p>延迟变量扩展用法</p>
+</blockquote>
+</li>
+<li><p>凉城.<code>批处理脚本遍历指定文件夹下的文件</code>[EB/OL].<a href="https://www.cnblogs.com/liangblog/p/9835940.html">https://www.cnblogs.com/liangblog/p/9835940.html</a>, 2023/08/08.</p>
+</li>
+<li><p>云上科技电脑工作室.<code>浅谈批处理获取管理员运行权限的几种方法</code>[EB/OL].<a href="https://www.cnblogs.com/conducer/p/10591614.html">https://www.cnblogs.com/conducer/p/10591614.html</a>, 2023/08/08.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>电脑爱好者</category>
+      </categories>
+      <tags>
+        <tag>for</tag>
+        <tag>if</tag>
+        <tag>bat</tag>
+        <tag>cmd</tag>
+        <tag>EnableDelayedExpansion</tag>
+        <tag>列表，防火墙</tag>
+        <tag>以管理员身份运行</tag>
+      </tags>
+  </entry>
 </search>
