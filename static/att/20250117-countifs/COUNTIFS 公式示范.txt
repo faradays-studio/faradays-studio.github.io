@@ -1,0 +1,30 @@
+多条件与的统计（在 COUNTIFS 外套 SUM，并使用 {"*受理","授权"} 进行多条件查询）
+=SUM(COUNTIFS(INDIRECT($B9&"!$B:$B"),"*"&$B9&"*",INDIRECT($B9&"!$F:$F"),AD$3,INDIRECT($B9&"!$H:$H"),{"*受理","授权"},INDIRECT($B9&"!$M:$M"),"是",INDIRECT($B9&"!$G:$G"),""))
+
+研发人员统计
+方法1（SUM 普通公式，未进行去重）：
+=SUM(COUNTIFS(INDIRECT($C8&"!$C:$C"),M$2,INDIRECT($C8&"!$A:$A"),$C8,INDIRECT($C8&"!$G:$G"),{"研究人员","技术人员","辅助人员"}))
+
+方法2：数组公式 SUM + IFERROR + COUNTIFS（去重，防止非匹配行数据，重点推荐）
+=SUM(IFERROR(1/COUNTIFS(INDIRECT($C8&"!$C1:$C"&$G8),M$2,INDIRECT($C8&"!$A1:$A"&$G8),$C8,INDIRECT($C8&"!$B1:$B"&$G8),INDIRECT($C8&"!$B1:$B"&$G8)),0))
+
+方法3：数组公式 IFERROR + SUM + COUNTIFS（有去重功能，但使用 1/COUNTIFS 导致无法在空行、非匹配行上使用）
+=IFERROR(SUM(1/COUNTIFS(INDIRECT($C8&"!$C$6:$C"&$G8),$R$2,INDIRECT($C8&"!$A$6:$A"&$G8),$C8,INDIRECT($C8&"!$B$6:$B$"&$G8),INDIRECT($C8&"!$B$6:$B$"&$G8))),"")
+
+方法4（SUMPRODUCT，有去重功能，但使用 1/COUNTIFS 导致无法在空行、非匹配行上使用）
+=SUMPRODUCT(1/COUNTIFS(INDIRECT($C8&"!$C6:$C"&$G8),M$2,INDIRECT($C8&"!$A6:$A"&$G8),$C8,INDIRECT($C8&"!$B6:$B"&$G8),INDIRECT($C8&"!$B6:$B"&$G8)))
+以下无法通过，得到 0
+=IFERROR(SUMPRODUCT(1/COUNTIFS(INDIRECT($C8&"!$C:$C"),M$2,INDIRECT($C8&"!$A:$A"),$C8,INDIRECT($C8&"!$B:$B"),INDIRECT($C8&"!$B:$B"))),"")
+=SUMPRODUCT(IFERROR(1/COUNTIFS(INDIRECT($C8&"!$C:$C"),M$2,INDIRECT($C8&"!$A:$A"),$C8,INDIRECT($C8&"!$B:$B"),INDIRECT($C8&"!$B:$B")),0))
+
+方法5（MATCH，有去重功能，未完成公式测试）
+依次选择年度、单位（找到匹配的设置为 TRUE，不匹配则默认为 FALSE，最后通过 N 转换为数量；人名为需要去重的数列）
+=SUM(N(MATCH(IF((INDIRECT($C8&"!$C:$C")=M$2)*(INDIRECT($C8&"!$A:$A")=$C8),INDIRECT($C8&"!$B:$B")),IF((INDIRECT($C8&"!$C:$C")=M$2)*(INDIRECT($C8&"!$A:$A")=$C8),INDIRECT($C8&"!$B:$B")),0)=ROW(INDIRECT($C8&"!$B:$B"))-1))-1
+=SUM(N(MATCH(IF((INDIRECT($C8&"!$C6:$C"&$G8)=M$2)*(INDIRECT($C8&"!$A6:$A"&$G8)=$C8),INDIRECT($C8&"!$B6:$B"&$G8)),  IF((INDIRECT($C8&"!$C6:$C"&$G8)=M$2)*(INDIRECT($C8&"!$A6:$A"&$G8)=$C8),INDIRECT($C8&"!$B6:$B"&$G8)),  0)=ROW(INDIRECT($C8&"!$B6:$B"&$G8))-1))-1
+
+=SUM(N(MATCH(IF((A2:A8="北京")*(B2:B8="A"),C2:C8),IF((A2:A8="北京")*(B2:B8="A"),C2:C8),0)=ROW(C2:C8)-1))-1
+公式原理：先用IF和条件将不符合条件的数值，转换为FALSE，其他的保留为原值，之后再套用Match函数，计算不重复个数。-1 是因数组包含FALSE项，除去它之后才是真正的不重复个数。
+
+计算日期是否在特定范围以内（注意：中文版日期格式和英文版不同）
+=COUNTIFS(INDIRECT($C8&"!$C1:$C"&$G8),$R$2,INDIRECT($C8&"!$A1:$A"&$G8),$C8,INDIRECT($C8&"!$G1:$G"&$G8),"研究人员",INDIRECT($C8&"!$K1:$K"&$G8),">="&($R$2-40)&"/12/31")
+https://support.microsoft.com/zh-cn/office/%E5%9F%BA%E4%BA%8E%E6%9D%A1%E4%BB%B6%E5%AF%B9%E6%95%B0%E5%AD%97%E6%88%96%E6%97%A5%E6%9C%9F%E8%BF%9B%E8%A1%8C%E8%AE%A1%E6%95%B0-976d0074-245d-49e6-bf5f-1207983f82ed
