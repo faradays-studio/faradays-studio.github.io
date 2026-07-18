@@ -1,0 +1,25 @@
+
+/* HHJ@20260718 */
+/* ����������������� */
+.giscus {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+/* �޸�����򱳾�ɫ */
+.giscus .gsc-reply-box {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+/* �޸����ۿ�Ƭ��ʽ */
+.giscus .gsc-comment {
+  border-bottom: 1px solid #eaecef;
+  padding: 16px 0;
+}
+
+/* �������ִ�С */
+.giscus .gsc-comment-content {
+  font-size: 15px;
+  line-height: 1.7;
+}
