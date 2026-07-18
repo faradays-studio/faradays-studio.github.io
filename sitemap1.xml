@@ -234,6 +234,7 @@
   </url>
 
 
+
   <url>
     <loc>https://faradays-studio.gitee.io/tags/JavaScript/</loc>
     <lastmod>2026/7/18</lastmod>
@@ -1236,6 +1237,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://faradays-studio.gitee.io/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2026/7/18</lastmod>
@@ -1278,4 +1280,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+
+
 </urlset> 
