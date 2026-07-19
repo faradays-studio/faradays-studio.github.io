@@ -536,6 +536,7 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
     
     
         <link rel="stylesheet" href="/css/giscus.css">
+        <link rel="stylesheet" href="/css/giscus_client.css">
         <script src="/js/giscus_client.js"></script>
     
 
@@ -547,21 +548,17 @@ var rect = draw.rect(100, 100).attr(&#123; fill: &#39;#f06&#39; &#125;)</code></
 
     
 
-      <script src="https://giscus.app/client.js"
-              data-repo="faradays-studio/faradays-studio.github.io"
-              data-repo-id="MDEwOlJlcG9zaXRvcnkyODU5NTU2NzU="
-              data-category="Comments"
-              data-category-id="DIC_kwDOEQtWW84DBdSg"
-              data-mapping="pathname"
-              data-strict="0"
-              data-reactions-enabled="1"
-              data-emit-metadata="0"
-              data-input-position="top"
-              data-theme="light"
-              data-lang="zh-CN"
-              data-loading="lazy"
-              crossorigin="anonymous"
-              async>
+      <script>
+        const giscus = new giscus({
+            repo: 'https://github.com/faradays-studio/faradays-studio.github.io',
+            repo-id: 'MDEwOlJlcG9zaXRvcnkyODU5NTU2NzU=',
+            category: 'Comments',
+            category-id: 'DIC_kwDOEQtWW84DBdSg',
+            mapping: 'pathname',
+            input-position: 'bottom'
+            });
+        giscus.render('giscus-faradays');
+
       </script>
 
     
